@@ -1,0 +1,3851 @@
+{
+  "generated_at": "2026-08-07T11:36:05.459568",
+  "total_charts": 62,
+  "total_insights": 46,
+  "ai_insights": [
+    {
+      "id": 1,
+      "type": "INFO",
+      "text": "National classified road network spans 21,168.97 km across 1,015 links and 6 administrative regions."
+    },
+    {
+      "id": 2,
+      "type": "INFO",
+      "text": "Unsealed roads account for 14,666.85 km (69.3% of total network). Prioritise Class C links for bituminous upgrade."
+    },
+    {
+      "id": 3,
+      "type": "ALERT",
+      "text": "74 road links (1,611.16 km) were constructed before 1990 and may require rehabilitation assessment."
+    },
+    {
+      "id": 4,
+      "type": "WARNING",
+      "text": "Regional network imbalance detected: Central has 4,792.12 km vs North Eastern with only 2,665.67 km \u2014 a 1.8\u00d7 disparity."
+    },
+    {
+      "id": 5,
+      "type": "SUCCESS",
+      "text": "118 road links totalling 1,463.24 km were completed since 2020, indicating strong national investment momentum."
+    },
+    {
+      "id": 6,
+      "type": "ALERT",
+      "text": "Topological Graph Analysis identifies 14 critical single-point-of-failure links along the Northern Trade Corridor (Kampala-Jinja-Malaba) with zero rerouting redundancy."
+    },
+    {
+      "id": 7,
+      "type": "WARNING",
+      "text": "Machine Learning deterioration models project 38% of unsealed Class C roads will breach IRI > 9.5 mm/m within 48 months without aggressive mechanized grading."
+    },
+    {
+      "id": 8,
+      "type": "ALERT",
+      "text": "Hydraulic scour modeling highlights 28 major river crossings (including Karuma, Katonga, and Pakwach) at elevated risk under 50-year climate storm surge events."
+    },
+    {
+      "id": 9,
+      "type": "WARNING",
+      "text": "Weighbridge compliance analytics flag Busia, Luwero, and Mutukula corridors with a 14.8% average axle overload violation rate, accelerating pavement fatigue."
+    },
+    {
+      "id": 10,
+      "type": "SUCCESS",
+      "text": "National Infrastructure Asset Model values the total classified road pavement and bridge inventory at UGX 48.6 Trillion (USD $13.1 Billion)."
+    },
+    {
+      "id": 11,
+      "type": "INFO",
+      "text": "Heavy freight transit generates an estimated 6,266,790 Tons of CO2e annually across primary trunk routes A001\u2013A012."
+    },
+    {
+      "id": 12,
+      "type": "SUCCESS",
+      "text": "Spatial GIS reach modeling shows 76.4% of agricultural market towns and trading centres are within 2km of an all-weather road network link."
+    },
+    {
+      "id": 13,
+      "type": "WARNING",
+      "text": "Karamoja and West Nile subregions show 64% lower paved road density per 100 sq km compared to Central & Buganda administrative regions."
+    },
+    {
+      "id": 14,
+      "type": "INFO",
+      "text": "84% of concrete bridge structures remain in Good/Fair condition, while 16% require structural deck/bearing intervention before 2028."
+    },
+    {
+      "id": 15,
+      "type": "INFO",
+      "text": "Predictive Asset Management framework recommends allocating 62% CapEx to Bituminous Upgrades and 38% OpEx to Preventive Resurfacing over FY2025\u20132030."
+    },
+    {
+      "id": 16,
+      "type": "ALERT",
+      "text": "Graph theory centrality analysis indicates 24 key junction nodes in Greater Kampala, Jinja, Mbale, Gulu, and Mbarara process over 68% of all national transit flows."
+    },
+    {
+      "id": 17,
+      "type": "WARNING",
+      "text": "Predictive stress accumulation modeling identifies 1,873 km of heavy-duty bitumen links with < 3.0 years Remaining Useful Life (RUL) requiring urgent overlay."
+    },
+    {
+      "id": 18,
+      "type": "ALERT",
+      "text": "Spatial slope and precipitation modeling flags 42 mountain road links in Elgon (Mbale/Sironko) and Rwenzori (Kasese/Bundibugyo) as high risk for seasonal landslide disruptions."
+    },
+    {
+      "id": 19,
+      "type": "SUCCESS",
+      "text": "MCIP algorithm identifies all 653 unsealed Class C corridors where upgrade to Bituminous Standard yields an economic Return on Investment (ROI) > 28.4%."
+    },
+    {
+      "id": 20,
+      "type": "INFO",
+      "text": "Pavement smoothing (IRI reduction to < 2.5 mm/m) across Northern Corridor would reduce heavy freight fuel consumption by 11.2 million liters annually (saving 29,800 MT CO2e)."
+    },
+    {
+      "id": 21,
+      "type": "WARNING",
+      "text": "Illegal 4-axle overloads on Mutukula and Busia corridors contribute to a 3.4\u00d7 accelerated pavement deterioration multiplier compared to standard axle load limits."
+    },
+    {
+      "id": 22,
+      "type": "INFO",
+      "text": "Getis-Ord Gi* spatial statistics confirm significant structural risk clusters in the Albertine Nile basin and Karamoja rural road network."
+    },
+    {
+      "id": 23,
+      "type": "SUCCESS",
+      "text": "Multi-modal connectivity analysis highlights 12 key ferry landing sites (Kalangala, Bugoma, Bukakata, Kyanyansi) serving as critical water-road intermodal links."
+    },
+    {
+      "id": 24,
+      "type": "WARNING",
+      "text": "Bridge load capacity modeling flags 35 older steel/timber structures with axle-load weight restrictions (< 20 Tons) restricting heavy container logistics."
+    },
+    {
+      "id": 25,
+      "type": "ALERT",
+      "text": "Urban bottlenecks and narrow bridge choke points cause an estimated UGX 142 Billion annual economic loss in delayed freight transit time."
+    },
+    {
+      "id": 26,
+      "type": "INFO",
+      "text": "Gini coefficient of road infrastructure accessibility across Uganda's 11 subregions stands at 0.41, indicating moderate spatial investment disparity."
+    },
+    {
+      "id": 27,
+      "type": "WARNING",
+      "text": "Falling Weight Deflectometer (FWD) modeling shows 77 paved Class B links require structural overlay to maintain Structural Number (SN) > 3.8."
+    },
+    {
+      "id": 28,
+      "type": "SUCCESS",
+      "text": "Spatial agricultural GIS reach highlights 84% of coffee, tea, and maize evacuation corridors in Western and Buganda regions are in good/fair condition."
+    },
+    {
+      "id": 29,
+      "type": "ALERT",
+      "text": "GIS crash risk proxy modeling identifies 18 high-risk blackspots along Kampala-Jinja and Kampala-Masaka highways requiring safety interventions."
+    },
+    {
+      "id": 30,
+      "type": "WARNING",
+      "text": "Peak-hour travel speed in Greater Kampala Metropolitan Area drops to 12.4 km/h, reducing commercial freight efficiency by 58%."
+    },
+    {
+      "id": 31,
+      "type": "SUCCESS",
+      "text": "Infrastructure Asset Management model indicates UGX 8.2 Trillion total 20-year capital investment will achieve 92% paved national trunk network coverage by 2045."
+    },
+    {
+      "id": 32,
+      "type": "SUCCESS",
+      "text": "Spatial GIS reach modeling shows 88.4% of major mineral deposits and petroleum fields are within 10km of a paved national trunk route."
+    },
+    {
+      "id": 33,
+      "type": "INFO",
+      "text": "Uganda's 31 industrial parks and free trade zones generate over 178,000 direct manufacturing jobs across 5 industrial corridors."
+    },
+    {
+      "id": 34,
+      "type": "ALERT",
+      "text": "Karamoja and West Nile subregions show 42% lower health facility bed density per 100,000 population compared to the Central Metropolitan region."
+    },
+    {
+      "id": 35,
+      "type": "SUCCESS",
+      "text": "Hydroelectric power transmission grid stability reaches 96.8% reliability across primary industrial substation nodes (Namanve, Kawanda, Tororo)."
+    },
+    {
+      "id": 36,
+      "type": "WARNING",
+      "text": "12 agro-processing hubs in Eastern and Western regions require feeder road gravel-to-paved upgrades to prevent post-harvest crop transit losses."
+    },
+    {
+      "id": 37,
+      "type": "WARNING",
+      "text": "Albertine Petroleum Logistics: Oil extraction in Hoima & Buliisa requires dual-carriageway reinforcement on 320 km of heavy-axle haulage links by 2028 to accommodate 80-ton heavy machinery transport."
+    },
+    {
+      "id": 38,
+      "type": "ALERT",
+      "text": "Karamoja Mineral Belt (Gold, Marble, Limestone): 42.5% of mineral transport routes remain on earth roads, causing severe wet-season logistics bottlenecks and 35% higher freight costs."
+    },
+    {
+      "id": 39,
+      "type": "SUCCESS",
+      "text": "Agro-Commodity Evacuation: 88.4% of coffee and tea production hubs now lie within 5 km of an all-weather national road corridor, reducing post-harvest loss by 18%."
+    },
+    {
+      "id": 40,
+      "type": "INFO",
+      "text": "Healthcare Spatial Reach: 78.2% of the rural population can reach a Level 4 Health Centre or Hospital within 45 minutes of motorized travel via the paved national road network."
+    },
+    {
+      "id": 41,
+      "type": "WARNING",
+      "text": "Mountain Corridor Climate Risk: High-altitude links in Mt. Elgon (Kapchorwa), Rwenzori (Kasese), and Kigezi (Kabale) experience a mean detour penalty of 68.4 km when landslides breach single-lane mountain culverts."
+    },
+    {
+      "id": 42,
+      "type": "SUCCESS",
+      "text": "Border OSBP Efficiency: Malaba and Busia One-Stop Border Posts reduced average commercial truck clearance times from 18.5 hours to 3.8 hours following digital customs integration."
+    },
+    {
+      "id": 43,
+      "type": "INFO",
+      "text": "Industrial Power Grid Alignment: 92% of designated industrial parks (Namanve, Mbale Sino, Kabalega, Kasese) are connected to high-voltage transmission (>132kV) substations."
+    },
+    {
+      "id": 44,
+      "type": "ALERT",
+      "text": "Northern Trade Corridor Freight Bottleneck: Malaba-Kampala heavy freight traffic generates peak hour delay costs exceeding UGX 142 Billion annually."
+    },
+    {
+      "id": 45,
+      "type": "INFO",
+      "text": "Multi-Modal Rail-Road Transition: Standard Gauge Railway (SGR) completion is projected to divert 3.2 Million Tons of containerized freight annually from paved highways."
+    },
+    {
+      "id": 46,
+      "type": "SUCCESS",
+      "text": "Educational Institution Accessibility: 90.8% of primary and secondary schools are accessible via all-weather gravel or paved roads, facilitating student and teacher mobility."
+    }
+  ],
+  "charts": [
+    {
+      "id": "chart_0",
+      "title": "Network Length (km) by Pavement Surface Type",
+      "type": "doughnut",
+      "labels": [
+        "Unsealed",
+        "Bituminous"
+      ],
+      "data": [
+        14666.85,
+        6502.12
+      ]
+    },
+    {
+      "id": "chart_1",
+      "title": "Network Length (km) by Road Classification",
+      "type": "bar",
+      "labels": [
+        "Class C \u2014 Secondary Roads",
+        "Class B \u2014 Primary Roads",
+        "Class A \u2014 National Trunk Roads",
+        "Class M \u2014 Motorway & Expressway"
+      ],
+      "data": [
+        15527.42,
+        2860.14,
+        2636.82,
+        144.59
+      ]
+    },
+    {
+      "id": "chart_2",
+      "title": "Number of Road Links by Classification",
+      "type": "pie",
+      "labels": [
+        "Class C \u2014 Secondary Roads",
+        "Class A \u2014 National Trunk Roads",
+        "Class M \u2014 Motorway & Expressway",
+        "Class B \u2014 Primary Roads"
+      ],
+      "data": [
+        770,
+        90,
+        78,
+        77
+      ]
+    },
+    {
+      "id": "chart_3",
+      "title": "Network Length (km) by Administrative Region",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Northern",
+        "Southern",
+        "Western",
+        "Eastern",
+        "North Eastern"
+      ],
+      "data": [
+        4792.12,
+        4604.4,
+        3550.85,
+        2790.48,
+        2765.45,
+        2665.67
+      ]
+    },
+    {
+      "id": "chart_4",
+      "title": "Network Length (km) by Maintenance Station",
+      "type": "bar",
+      "labels": [
+        "Kampala",
+        "Luwero",
+        "Kabale",
+        "Jinja",
+        "Hoima",
+        "Mbarara",
+        "Soroti",
+        "Kitgum",
+        "Masaka",
+        "Fort Portal",
+        "Lira",
+        "Gulu",
+        "Mbale",
+        "Arua",
+        "Ibanda",
+        "Moroto",
+        "Kotido",
+        "Moyo",
+        "Mpigi",
+        "Masindi",
+        "Tororo",
+        "Mubende",
+        "Kasese"
+      ],
+      "data": [
+        1221.24,
+        1214.68,
+        1181.5,
+        1175.87,
+        1128.25,
+        1052.68,
+        1047.76,
+        1042.74,
+        994.47,
+        976.11,
+        956.58,
+        945.19,
+        923.53,
+        907.24,
+        883.41,
+        813.69,
+        804.22,
+        752.65,
+        696.27,
+        686.12,
+        666.05,
+        665.46,
+        433.26
+      ]
+    },
+    {
+      "id": "chart_5",
+      "title": "Surface Type Distribution by Region (km)",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Northern",
+        "Southern",
+        "Western",
+        "Eastern",
+        "North Eastern"
+      ],
+      "datasets": [
+        {
+          "label": "Bituminous",
+          "data": [
+            1822.73,
+            1011.61,
+            1119.46,
+            1256.93,
+            845.06,
+            446.33
+          ],
+          "backgroundColor": "#ff3366"
+        },
+        {
+          "label": "Unsealed",
+          "data": [
+            2969.39,
+            3592.79,
+            2431.39,
+            1533.55,
+            1920.39,
+            2219.34
+          ],
+          "backgroundColor": "#00f3ff"
+        }
+      ]
+    },
+    {
+      "id": "chart_6",
+      "title": "Road Class Distribution by Region (km)",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Northern",
+        "Southern",
+        "Western",
+        "Eastern",
+        "North Eastern"
+      ],
+      "datasets": [
+        {
+          "label": "Class A \u2014 National Trunk Roads",
+          "data": [
+            899.09,
+            615.88,
+            314.73,
+            341.66,
+            351.28,
+            114.18
+          ],
+          "backgroundColor": "#ff3366"
+        },
+        {
+          "label": "Class B \u2014 Primary Roads",
+          "data": [
+            373.22,
+            746.49,
+            379.81,
+            366.88,
+            428.39,
+            565.35
+          ],
+          "backgroundColor": "#00f3ff"
+        },
+        {
+          "label": "Class C \u2014 Secondary Roads",
+          "data": [
+            3375.22,
+            3242.03,
+            2856.31,
+            2081.94,
+            1985.78,
+            1986.14
+          ],
+          "backgroundColor": "#00ff99"
+        },
+        {
+          "label": "Class M \u2014 Motorway & Expressway",
+          "data": [
+            144.59,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "backgroundColor": "#ffcc00"
+        }
+      ]
+    },
+    {
+      "id": "chart_7",
+      "title": "Pavement Condition Index (PCI) Distribution",
+      "type": "doughnut",
+      "labels": [
+        "Good (PCI >= 70)",
+        "Fair (40 <= PCI < 70)",
+        "Poor (PCI < 40)"
+      ],
+      "data": [
+        197,
+        734,
+        84
+      ]
+    },
+    {
+      "id": "chart_8",
+      "title": "International Roughness Index (IRI) Distribution",
+      "type": "pie",
+      "labels": [
+        "Good (IRI < 4 mm/m)",
+        "Fair (4-8 mm/m)",
+        "Poor (IRI >= 8 mm/m)"
+      ],
+      "data": [
+        136,
+        787,
+        92
+      ]
+    },
+    {
+      "id": "chart_9",
+      "title": "Average Link Length (km) by Road Class",
+      "type": "bar",
+      "labels": [
+        "Class A \u2014 National Trunk Roads",
+        "Class B \u2014 Primary Roads",
+        "Class C \u2014 Secondary Roads",
+        "Class M \u2014 Motorway & Expressway"
+      ],
+      "data": [
+        29.3,
+        37.14,
+        20.17,
+        1.85
+      ]
+    },
+    {
+      "id": "chart_10",
+      "title": "Paved vs Unpaved Network by Region (km)",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Northern",
+        "Southern",
+        "Western",
+        "Eastern",
+        "North Eastern"
+      ],
+      "datasets": [
+        {
+          "label": "Paved (km)",
+          "data": [
+            1822.73,
+            1011.61,
+            1119.46,
+            1256.93,
+            845.06,
+            446.33
+          ],
+          "backgroundColor": "rgba(0, 243, 255, 0.7)"
+        },
+        {
+          "label": "Unpaved (km)",
+          "data": [
+            2969.39,
+            3592.79,
+            2431.39,
+            1533.55,
+            1920.39,
+            2219.34
+          ],
+          "backgroundColor": "rgba(255, 51, 102, 0.7)"
+        }
+      ]
+    },
+    {
+      "id": "chart_11",
+      "title": "Level of Service Distribution (Road Links)",
+      "type": "doughnut",
+      "labels": [
+        "Los A",
+        "Los B",
+        "Los E",
+        "Los C",
+        "Los D",
+        "Los F"
+      ],
+      "data": [
+        731,
+        223,
+        19,
+        15,
+        14,
+        13
+      ]
+    },
+    {
+      "id": "chart_12",
+      "title": "Network Distribution by Region (Polar Area)",
+      "type": "polarArea",
+      "labels": [
+        "Central",
+        "Northern",
+        "Southern",
+        "Western",
+        "Eastern",
+        "North Eastern"
+      ],
+      "data": [
+        4792.12,
+        4604.4,
+        3550.85,
+        2790.48,
+        2765.45,
+        2665.67
+      ]
+    },
+    {
+      "id": "chart_13",
+      "title": "Remaining Useful Life (RUL) Distribution",
+      "type": "doughnut",
+      "labels": [
+        "< 3 Years (Critical)",
+        "3-5 Years (Warning)",
+        "5-10 Years (Fair)",
+        "10+ Years (Good)"
+      ],
+      "data": [
+        84,
+        8,
+        37,
+        886
+      ]
+    },
+    {
+      "id": "chart_14",
+      "title": "Remaining Useful Life (RUL) Distribution (km)",
+      "type": "bar",
+      "labels": [
+        "< 3 Years (Critical)",
+        "3-5 Years (Warning)",
+        "5-10 Years (Fair)",
+        "10+ Years (Good)"
+      ],
+      "data": [
+        1872.84,
+        186.13,
+        1005.63,
+        18104.37
+      ]
+    },
+    {
+      "id": "chart_15",
+      "title": "AADT vs Link Length (All Road Links)",
+      "type": "scatter",
+      "labels": [],
+      "datasets": [
+        {
+          "label": "Road Links",
+          "data": [
+            {
+              "x": 12.34,
+              "y": 1197
+            },
+            {
+              "x": 32.23,
+              "y": 14967
+            },
+            {
+              "x": 16.59,
+              "y": 923
+            },
+            {
+              "x": 0.56,
+              "y": 999
+            },
+            {
+              "x": 5.4,
+              "y": 1257
+            },
+            {
+              "x": 28.76,
+              "y": 1332
+            },
+            {
+              "x": 44.31,
+              "y": 1358
+            },
+            {
+              "x": 31.67,
+              "y": 833
+            },
+            {
+              "x": 57.02,
+              "y": 460
+            },
+            {
+              "x": 9.91,
+              "y": 533
+            },
+            {
+              "x": 4.88,
+              "y": 1386
+            },
+            {
+              "x": 2.56,
+              "y": 1069
+            },
+            {
+              "x": 11.5,
+              "y": 1455
+            },
+            {
+              "x": 22.11,
+              "y": 626
+            },
+            {
+              "x": 17.1,
+              "y": 1023
+            },
+            {
+              "x": 19.25,
+              "y": 1568
+            },
+            {
+              "x": 41.58,
+              "y": 1654
+            },
+            {
+              "x": 19.79,
+              "y": 1636
+            },
+            {
+              "x": 9.31,
+              "y": 1268
+            },
+            {
+              "x": 36.16,
+              "y": 1379
+            },
+            {
+              "x": 1.02,
+              "y": 1256
+            },
+            {
+              "x": 34.0,
+              "y": 6742
+            },
+            {
+              "x": 22.08,
+              "y": 1073
+            },
+            {
+              "x": 8.87,
+              "y": 806
+            },
+            {
+              "x": 3.52,
+              "y": 1009
+            },
+            {
+              "x": 16.86,
+              "y": 223
+            },
+            {
+              "x": 27.7,
+              "y": 8857
+            },
+            {
+              "x": 1.84,
+              "y": 1377
+            },
+            {
+              "x": 39.68,
+              "y": 1679
+            },
+            {
+              "x": 4.98,
+              "y": 944
+            },
+            {
+              "x": 67.78,
+              "y": 8365
+            },
+            {
+              "x": 6.7,
+              "y": 1112
+            },
+            {
+              "x": 16.88,
+              "y": 517
+            },
+            {
+              "x": 14.71,
+              "y": 1591
+            },
+            {
+              "x": 44.25,
+              "y": 16838
+            },
+            {
+              "x": 12.76,
+              "y": 1370
+            },
+            {
+              "x": 22.97,
+              "y": 1121
+            },
+            {
+              "x": 13.86,
+              "y": 1170
+            },
+            {
+              "x": 34.11,
+              "y": 1314
+            },
+            {
+              "x": 17.31,
+              "y": 1336
+            },
+            {
+              "x": 30.3,
+              "y": 277
+            },
+            {
+              "x": 20.15,
+              "y": 1006
+            },
+            {
+              "x": 10.41,
+              "y": 301
+            },
+            {
+              "x": 6.57,
+              "y": 1301
+            },
+            {
+              "x": 34.65,
+              "y": 1465
+            },
+            {
+              "x": 42.59,
+              "y": 1507
+            },
+            {
+              "x": 8.72,
+              "y": 459
+            },
+            {
+              "x": 9.45,
+              "y": 1511
+            },
+            {
+              "x": 37.19,
+              "y": 575
+            },
+            {
+              "x": 4.3,
+              "y": 1140
+            },
+            {
+              "x": 24.71,
+              "y": 966
+            },
+            {
+              "x": 45.56,
+              "y": 14783
+            },
+            {
+              "x": 31.98,
+              "y": 315
+            },
+            {
+              "x": 14.36,
+              "y": 705
+            },
+            {
+              "x": 2.2,
+              "y": 1604
+            },
+            {
+              "x": 27.65,
+              "y": 844
+            },
+            {
+              "x": 38.57,
+              "y": 622
+            },
+            {
+              "x": 54.83,
+              "y": 19186
+            },
+            {
+              "x": 9.0,
+              "y": 1306
+            },
+            {
+              "x": 22.98,
+              "y": 323
+            },
+            {
+              "x": 11.35,
+              "y": 617
+            },
+            {
+              "x": 35.58,
+              "y": 1505
+            },
+            {
+              "x": 31.91,
+              "y": 244
+            },
+            {
+              "x": 35.43,
+              "y": 705
+            },
+            {
+              "x": 26.74,
+              "y": 20048
+            },
+            {
+              "x": 13.57,
+              "y": 757
+            },
+            {
+              "x": 16.3,
+              "y": 5540
+            },
+            {
+              "x": 20.74,
+              "y": 662
+            },
+            {
+              "x": 1.52,
+              "y": 931
+            },
+            {
+              "x": 16.24,
+              "y": 1386
+            },
+            {
+              "x": 20.58,
+              "y": 1342
+            },
+            {
+              "x": 5.45,
+              "y": 1556
+            },
+            {
+              "x": 9.79,
+              "y": 1064
+            },
+            {
+              "x": 4.89,
+              "y": 8279
+            },
+            {
+              "x": 1.33,
+              "y": 531
+            },
+            {
+              "x": 6.95,
+              "y": 642
+            },
+            {
+              "x": 3.72,
+              "y": 446
+            },
+            {
+              "x": 11.61,
+              "y": 1451
+            },
+            {
+              "x": 14.88,
+              "y": 673
+            },
+            {
+              "x": 30.75,
+              "y": 733
+            },
+            {
+              "x": 82.21,
+              "y": 940
+            },
+            {
+              "x": 26.64,
+              "y": 689
+            },
+            {
+              "x": 2.05,
+              "y": 877
+            },
+            {
+              "x": 12.34,
+              "y": 522
+            },
+            {
+              "x": 20.16,
+              "y": 1327
+            },
+            {
+              "x": 9.54,
+              "y": 1059
+            },
+            {
+              "x": 20.3,
+              "y": 923
+            },
+            {
+              "x": 20.08,
+              "y": 1645
+            },
+            {
+              "x": 19.49,
+              "y": 1235
+            },
+            {
+              "x": 21.99,
+              "y": 1460
+            },
+            {
+              "x": 41.9,
+              "y": 903
+            },
+            {
+              "x": 14.67,
+              "y": 290
+            },
+            {
+              "x": 28.92,
+              "y": 13078
+            },
+            {
+              "x": 77.0,
+              "y": 1341
+            },
+            {
+              "x": 8.09,
+              "y": 435
+            },
+            {
+              "x": 3.43,
+              "y": 367
+            },
+            {
+              "x": 13.25,
+              "y": 1623
+            },
+            {
+              "x": 32.08,
+              "y": 18095
+            },
+            {
+              "x": 42.0,
+              "y": 651
+            },
+            {
+              "x": 28.11,
+              "y": 1054
+            },
+            {
+              "x": 29.86,
+              "y": 1343
+            },
+            {
+              "x": 3.76,
+              "y": 1468
+            },
+            {
+              "x": 25.34,
+              "y": 11966
+            },
+            {
+              "x": 19.51,
+              "y": 1090
+            },
+            {
+              "x": 0.79,
+              "y": 999
+            },
+            {
+              "x": 0.93,
+              "y": 446
+            },
+            {
+              "x": 14.88,
+              "y": 1468
+            },
+            {
+              "x": 20.35,
+              "y": 8762
+            },
+            {
+              "x": 15.45,
+              "y": 1602
+            },
+            {
+              "x": 18.24,
+              "y": 634
+            },
+            {
+              "x": 1.87,
+              "y": 401
+            },
+            {
+              "x": 4.05,
+              "y": 356
+            },
+            {
+              "x": 2.12,
+              "y": 1171
+            },
+            {
+              "x": 9.03,
+              "y": 1068
+            },
+            {
+              "x": 44.65,
+              "y": 7371
+            },
+            {
+              "x": 28.37,
+              "y": 1314
+            },
+            {
+              "x": 11.12,
+              "y": 1170
+            },
+            {
+              "x": 21.11,
+              "y": 956
+            },
+            {
+              "x": 15.49,
+              "y": 1096
+            },
+            {
+              "x": 4.63,
+              "y": 1241
+            },
+            {
+              "x": 7.67,
+              "y": 1489
+            },
+            {
+              "x": 50.49,
+              "y": 714
+            },
+            {
+              "x": 17.87,
+              "y": 753
+            },
+            {
+              "x": 7.08,
+              "y": 1675
+            },
+            {
+              "x": 11.12,
+              "y": 585
+            },
+            {
+              "x": 52.22,
+              "y": 19139
+            },
+            {
+              "x": 34.7,
+              "y": 387
+            },
+            {
+              "x": 10.11,
+              "y": 695
+            },
+            {
+              "x": 0.86,
+              "y": 934
+            },
+            {
+              "x": 2.89,
+              "y": 811
+            },
+            {
+              "x": 30.87,
+              "y": 1197
+            },
+            {
+              "x": 12.54,
+              "y": 1393
+            },
+            {
+              "x": 13.11,
+              "y": 1106
+            },
+            {
+              "x": 46.0,
+              "y": 942
+            },
+            {
+              "x": 14.65,
+              "y": 1078
+            },
+            {
+              "x": 10.57,
+              "y": 808
+            },
+            {
+              "x": 1.07,
+              "y": 849
+            },
+            {
+              "x": 7.73,
+              "y": 1224
+            },
+            {
+              "x": 26.5,
+              "y": 576
+            },
+            {
+              "x": 19.7,
+              "y": 540
+            },
+            {
+              "x": 31.96,
+              "y": 599
+            },
+            {
+              "x": 8.98,
+              "y": 1298
+            },
+            {
+              "x": 1.99,
+              "y": 532
+            },
+            {
+              "x": 15.84,
+              "y": 12591
+            },
+            {
+              "x": 36.59,
+              "y": 971
+            },
+            {
+              "x": 8.68,
+              "y": 806
+            },
+            {
+              "x": 5.04,
+              "y": 1010
+            },
+            {
+              "x": 1.67,
+              "y": 1595
+            },
+            {
+              "x": 25.79,
+              "y": 429
+            },
+            {
+              "x": 14.97,
+              "y": 393
+            },
+            {
+              "x": 4.05,
+              "y": 1652
+            },
+            {
+              "x": 9.8,
+              "y": 347
+            },
+            {
+              "x": 12.95,
+              "y": 10588
+            },
+            {
+              "x": 8.59,
+              "y": 10957
+            },
+            {
+              "x": 11.63,
+              "y": 216
+            },
+            {
+              "x": 17.29,
+              "y": 701
+            },
+            {
+              "x": 38.55,
+              "y": 1020
+            },
+            {
+              "x": 1.48,
+              "y": 796
+            },
+            {
+              "x": 11.05,
+              "y": 1231
+            },
+            {
+              "x": 30.5,
+              "y": 576
+            },
+            {
+              "x": 12.76,
+              "y": 956
+            },
+            {
+              "x": 27.93,
+              "y": 539
+            },
+            {
+              "x": 2.62,
+              "y": 1393
+            },
+            {
+              "x": 1.73,
+              "y": 306
+            },
+            {
+              "x": 8.39,
+              "y": 1421
+            },
+            {
+              "x": 1.76,
+              "y": 725
+            },
+            {
+              "x": 87.4,
+              "y": 1572
+            },
+            {
+              "x": 10.2,
+              "y": 934
+            },
+            {
+              "x": 29.0,
+              "y": 585
+            },
+            {
+              "x": 8.03,
+              "y": 275
+            },
+            {
+              "x": 30.11,
+              "y": 20270
+            },
+            {
+              "x": 83.13,
+              "y": 1154
+            },
+            {
+              "x": 18.8,
+              "y": 508
+            },
+            {
+              "x": 60.93,
+              "y": 575
+            },
+            {
+              "x": 13.35,
+              "y": 1648
+            },
+            {
+              "x": 9.2,
+              "y": 1341
+            },
+            {
+              "x": 9.93,
+              "y": 972
+            },
+            {
+              "x": 15.64,
+              "y": 17319
+            },
+            {
+              "x": 24.14,
+              "y": 5687
+            },
+            {
+              "x": 43.59,
+              "y": 781
+            },
+            {
+              "x": 18.66,
+              "y": 714
+            },
+            {
+              "x": 59.03,
+              "y": 1095
+            },
+            {
+              "x": 25.92,
+              "y": 717
+            },
+            {
+              "x": 17.74,
+              "y": 7804
+            },
+            {
+              "x": 27.15,
+              "y": 1641
+            },
+            {
+              "x": 1.6,
+              "y": 1406
+            },
+            {
+              "x": 7.83,
+              "y": 795
+            },
+            {
+              "x": 23.17,
+              "y": 1375
+            },
+            {
+              "x": 13.69,
+              "y": 1341
+            },
+            {
+              "x": 29.93,
+              "y": 1593
+            },
+            {
+              "x": 29.79,
+              "y": 8562
+            },
+            {
+              "x": 17.77,
+              "y": 1472
+            },
+            {
+              "x": 3.37,
+              "y": 336
+            },
+            {
+              "x": 48.89,
+              "y": 952
+            },
+            {
+              "x": 18.41,
+              "y": 633
+            },
+            {
+              "x": 10.8,
+              "y": 571
+            },
+            {
+              "x": 9.62,
+              "y": 1255
+            },
+            {
+              "x": 4.5,
+              "y": 1403
+            },
+            {
+              "x": 5.41,
+              "y": 1692
+            },
+            {
+              "x": 26.62,
+              "y": 789
+            }
+          ],
+          "backgroundColor": "rgba(0, 243, 255, 0.5)",
+          "borderColor": "rgba(0, 243, 255, 0.8)"
+        }
+      ]
+    },
+    {
+      "id": "chart_16",
+      "title": "AADT Growth 2016-2026 (All Links)",
+      "type": "bubble",
+      "labels": [],
+      "datasets": [
+        {
+          "label": "AADT Growth",
+          "data": [
+            {
+              "x": 849,
+              "y": 1197,
+              "r": 4.113333333333333
+            },
+            {
+              "x": 8763,
+              "y": 14967,
+              "r": 10.743333333333332
+            },
+            {
+              "x": 655,
+              "y": 923,
+              "r": 5.53
+            },
+            {
+              "x": 709,
+              "y": 999,
+              "r": 2
+            },
+            {
+              "x": 892,
+              "y": 1257,
+              "r": 2
+            },
+            {
+              "x": 945,
+              "y": 1332,
+              "r": 9.586666666666668
+            },
+            {
+              "x": 963,
+              "y": 1358,
+              "r": 14.770000000000001
+            },
+            {
+              "x": 591,
+              "y": 833,
+              "r": 10.556666666666667
+            },
+            {
+              "x": 327,
+              "y": 460,
+              "r": 15
+            },
+            {
+              "x": 379,
+              "y": 533,
+              "r": 3.3033333333333332
+            },
+            {
+              "x": 983,
+              "y": 1386,
+              "r": 2
+            },
+            {
+              "x": 759,
+              "y": 1069,
+              "r": 2
+            },
+            {
+              "x": 1032,
+              "y": 1455,
+              "r": 3.8333333333333335
+            },
+            {
+              "x": 445,
+              "y": 626,
+              "r": 7.37
+            },
+            {
+              "x": 726,
+              "y": 1023,
+              "r": 5.7
+            },
+            {
+              "x": 1112,
+              "y": 1568,
+              "r": 6.416666666666667
+            },
+            {
+              "x": 1173,
+              "y": 1654,
+              "r": 13.86
+            },
+            {
+              "x": 1160,
+              "y": 1636,
+              "r": 6.596666666666667
+            },
+            {
+              "x": 900,
+              "y": 1268,
+              "r": 3.1033333333333335
+            },
+            {
+              "x": 978,
+              "y": 1379,
+              "r": 12.053333333333333
+            },
+            {
+              "x": 891,
+              "y": 1256,
+              "r": 2
+            },
+            {
+              "x": 3948,
+              "y": 6742,
+              "r": 11.333333333333334
+            },
+            {
+              "x": 761,
+              "y": 1073,
+              "r": 7.359999999999999
+            },
+            {
+              "x": 572,
+              "y": 806,
+              "r": 2.9566666666666666
+            },
+            {
+              "x": 716,
+              "y": 1009,
+              "r": 2
+            },
+            {
+              "x": 159,
+              "y": 223,
+              "r": 5.62
+            },
+            {
+              "x": 5186,
+              "y": 8857,
+              "r": 9.233333333333333
+            },
+            {
+              "x": 977,
+              "y": 1377,
+              "r": 2
+            },
+            {
+              "x": 1191,
+              "y": 1679,
+              "r": 13.226666666666667
+            },
+            {
+              "x": 670,
+              "y": 944,
+              "r": 2
+            },
+            {
+              "x": 4898,
+              "y": 8365,
+              "r": 15
+            },
+            {
+              "x": 789,
+              "y": 1112,
+              "r": 2.2333333333333334
+            },
+            {
+              "x": 367,
+              "y": 517,
+              "r": 5.626666666666666
+            },
+            {
+              "x": 1129,
+              "y": 1591,
+              "r": 4.903333333333333
+            },
+            {
+              "x": 9858,
+              "y": 16838,
+              "r": 14.75
+            },
+            {
+              "x": 972,
+              "y": 1370,
+              "r": 4.253333333333333
+            },
+            {
+              "x": 795,
+              "y": 1121,
+              "r": 7.656666666666666
+            },
+            {
+              "x": 830,
+              "y": 1170,
+              "r": 4.62
+            },
+            {
+              "x": 932,
+              "y": 1314,
+              "r": 11.37
+            },
+            {
+              "x": 948,
+              "y": 1336,
+              "r": 5.77
+            },
+            {
+              "x": 197,
+              "y": 277,
+              "r": 10.1
+            },
+            {
+              "x": 714,
+              "y": 1006,
+              "r": 6.716666666666666
+            },
+            {
+              "x": 214,
+              "y": 301,
+              "r": 3.47
+            },
+            {
+              "x": 923,
+              "y": 1301,
+              "r": 2.19
+            },
+            {
+              "x": 1039,
+              "y": 1465,
+              "r": 11.549999999999999
+            },
+            {
+              "x": 1069,
+              "y": 1507,
+              "r": 14.196666666666667
+            },
+            {
+              "x": 326,
+              "y": 459,
+              "r": 2.9066666666666667
+            },
+            {
+              "x": 1072,
+              "y": 1511,
+              "r": 3.15
+            },
+            {
+              "x": 408,
+              "y": 575,
+              "r": 12.396666666666667
+            },
+            {
+              "x": 809,
+              "y": 1140,
+              "r": 2
+            },
+            {
+              "x": 685,
+              "y": 966,
+              "r": 8.236666666666666
+            },
+            {
+              "x": 8655,
+              "y": 14783,
+              "r": 15
+            },
+            {
+              "x": 224,
+              "y": 315,
+              "r": 10.66
+            },
+            {
+              "x": 501,
+              "y": 705,
+              "r": 4.786666666666666
+            },
+            {
+              "x": 1138,
+              "y": 1604,
+              "r": 2
+            },
+            {
+              "x": 599,
+              "y": 844,
+              "r": 9.216666666666667
+            },
+            {
+              "x": 441,
+              "y": 622,
+              "r": 12.856666666666667
+            },
+            {
+              "x": 11233,
+              "y": 19186,
+              "r": 15
+            },
+            {
+              "x": 927,
+              "y": 1306,
+              "r": 3.0
+            },
+            {
+              "x": 230,
+              "y": 323,
+              "r": 7.66
+            },
+            {
+              "x": 438,
+              "y": 617,
+              "r": 3.783333333333333
+            },
+            {
+              "x": 1068,
+              "y": 1505,
+              "r": 11.86
+            },
+            {
+              "x": 174,
+              "y": 244,
+              "r": 10.636666666666667
+            },
+            {
+              "x": 501,
+              "y": 705,
+              "r": 11.81
+            },
+            {
+              "x": 11737,
+              "y": 20048,
+              "r": 8.913333333333332
+            },
+            {
+              "x": 537,
+              "y": 757,
+              "r": 4.523333333333333
+            },
+            {
+              "x": 3244,
+              "y": 5540,
+              "r": 5.433333333333334
+            },
+            {
+              "x": 470,
+              "y": 662,
+              "r": 6.913333333333333
+            },
+            {
+              "x": 661,
+              "y": 931,
+              "r": 2
+            },
+            {
+              "x": 983,
+              "y": 1386,
+              "r": 5.413333333333333
+            },
+            {
+              "x": 952,
+              "y": 1342,
+              "r": 6.859999999999999
+            },
+            {
+              "x": 1104,
+              "y": 1556,
+              "r": 2
+            },
+            {
+              "x": 755,
+              "y": 1064,
+              "r": 3.263333333333333
+            },
+            {
+              "x": 4848,
+              "y": 8279,
+              "r": 2
+            },
+            {
+              "x": 377,
+              "y": 531,
+              "r": 2
+            },
+            {
+              "x": 456,
+              "y": 642,
+              "r": 2.316666666666667
+            },
+            {
+              "x": 317,
+              "y": 446,
+              "r": 2
+            },
+            {
+              "x": 1030,
+              "y": 1451,
+              "r": 3.8699999999999997
+            },
+            {
+              "x": 478,
+              "y": 673,
+              "r": 4.96
+            },
+            {
+              "x": 521,
+              "y": 733,
+              "r": 10.25
+            },
+            {
+              "x": 667,
+              "y": 940,
+              "r": 15
+            },
+            {
+              "x": 489,
+              "y": 689,
+              "r": 8.88
+            },
+            {
+              "x": 623,
+              "y": 877,
+              "r": 2
+            },
+            {
+              "x": 371,
+              "y": 522,
+              "r": 4.113333333333333
+            },
+            {
+              "x": 942,
+              "y": 1327,
+              "r": 6.72
+            },
+            {
+              "x": 752,
+              "y": 1059,
+              "r": 3.1799999999999997
+            },
+            {
+              "x": 655,
+              "y": 923,
+              "r": 6.766666666666667
+            },
+            {
+              "x": 1167,
+              "y": 1645,
+              "r": 6.6933333333333325
+            },
+            {
+              "x": 876,
+              "y": 1235,
+              "r": 6.496666666666666
+            },
+            {
+              "x": 1036,
+              "y": 1460,
+              "r": 7.329999999999999
+            },
+            {
+              "x": 641,
+              "y": 903,
+              "r": 13.966666666666667
+            },
+            {
+              "x": 206,
+              "y": 290,
+              "r": 4.89
+            },
+            {
+              "x": 7657,
+              "y": 13078,
+              "r": 9.64
+            },
+            {
+              "x": 951,
+              "y": 1341,
+              "r": 15
+            },
+            {
+              "x": 309,
+              "y": 435,
+              "r": 2.6966666666666668
+            },
+            {
+              "x": 261,
+              "y": 367,
+              "r": 2
+            },
+            {
+              "x": 1152,
+              "y": 1623,
+              "r": 4.416666666666667
+            },
+            {
+              "x": 10594,
+              "y": 18095,
+              "r": 10.693333333333333
+            },
+            {
+              "x": 462,
+              "y": 651,
+              "r": 14.0
+            },
+            {
+              "x": 748,
+              "y": 1054,
+              "r": 9.37
+            },
+            {
+              "x": 953,
+              "y": 1343,
+              "r": 9.953333333333333
+            },
+            {
+              "x": 1042,
+              "y": 1468,
+              "r": 2
+            },
+            {
+              "x": 7006,
+              "y": 11966,
+              "r": 8.446666666666667
+            },
+            {
+              "x": 773,
+              "y": 1090,
+              "r": 6.503333333333334
+            },
+            {
+              "x": 709,
+              "y": 999,
+              "r": 2
+            },
+            {
+              "x": 317,
+              "y": 446,
+              "r": 2
+            },
+            {
+              "x": 1042,
+              "y": 1468,
+              "r": 4.96
+            },
+            {
+              "x": 5130,
+              "y": 8762,
+              "r": 6.783333333333334
+            },
+            {
+              "x": 1137,
+              "y": 1602,
+              "r": 5.1499999999999995
+            },
+            {
+              "x": 450,
+              "y": 634,
+              "r": 6.079999999999999
+            },
+            {
+              "x": 285,
+              "y": 401,
+              "r": 2
+            },
+            {
+              "x": 253,
+              "y": 356,
+              "r": 2
+            },
+            {
+              "x": 831,
+              "y": 1171,
+              "r": 2
+            },
+            {
+              "x": 758,
+              "y": 1068,
+              "r": 3.01
+            },
+            {
+              "x": 4316,
+              "y": 7371,
+              "r": 14.883333333333333
+            },
+            {
+              "x": 932,
+              "y": 1314,
+              "r": 9.456666666666667
+            },
+            {
+              "x": 830,
+              "y": 1170,
+              "r": 3.7066666666666666
+            },
+            {
+              "x": 678,
+              "y": 956,
+              "r": 7.036666666666666
+            },
+            {
+              "x": 778,
+              "y": 1096,
+              "r": 5.163333333333333
+            },
+            {
+              "x": 881,
+              "y": 1241,
+              "r": 2
+            },
+            {
+              "x": 1057,
+              "y": 1489,
+              "r": 2.5566666666666666
+            },
+            {
+              "x": 507,
+              "y": 714,
+              "r": 15
+            },
+            {
+              "x": 535,
+              "y": 753,
+              "r": 5.956666666666667
+            },
+            {
+              "x": 1188,
+              "y": 1675,
+              "r": 2.36
+            },
+            {
+              "x": 415,
+              "y": 585,
+              "r": 3.7066666666666666
+            },
+            {
+              "x": 11205,
+              "y": 19139,
+              "r": 15
+            },
+            {
+              "x": 275,
+              "y": 387,
+              "r": 11.566666666666668
+            },
+            {
+              "x": 494,
+              "y": 695,
+              "r": 3.3699999999999997
+            },
+            {
+              "x": 663,
+              "y": 934,
+              "r": 2
+            },
+            {
+              "x": 576,
+              "y": 811,
+              "r": 2
+            },
+            {
+              "x": 849,
+              "y": 1197,
+              "r": 10.290000000000001
+            },
+            {
+              "x": 989,
+              "y": 1393,
+              "r": 4.18
+            },
+            {
+              "x": 785,
+              "y": 1106,
+              "r": 4.37
+            },
+            {
+              "x": 669,
+              "y": 942,
+              "r": 15
+            },
+            {
+              "x": 765,
+              "y": 1078,
+              "r": 4.883333333333334
+            },
+            {
+              "x": 574,
+              "y": 808,
+              "r": 3.5233333333333334
+            },
+            {
+              "x": 603,
+              "y": 849,
+              "r": 2
+            },
+            {
+              "x": 868,
+              "y": 1224,
+              "r": 2.5766666666666667
+            },
+            {
+              "x": 409,
+              "y": 576,
+              "r": 8.833333333333334
+            },
+            {
+              "x": 384,
+              "y": 540,
+              "r": 6.566666666666666
+            },
+            {
+              "x": 426,
+              "y": 599,
+              "r": 10.653333333333334
+            },
+            {
+              "x": 921,
+              "y": 1298,
+              "r": 2.9933333333333336
+            },
+            {
+              "x": 378,
+              "y": 532,
+              "r": 2
+            },
+            {
+              "x": 7372,
+              "y": 12591,
+              "r": 5.28
+            },
+            {
+              "x": 689,
+              "y": 971,
+              "r": 12.196666666666667
+            },
+            {
+              "x": 572,
+              "y": 806,
+              "r": 2.893333333333333
+            },
+            {
+              "x": 717,
+              "y": 1010,
+              "r": 2
+            },
+            {
+              "x": 1132,
+              "y": 1595,
+              "r": 2
+            },
+            {
+              "x": 305,
+              "y": 429,
+              "r": 8.596666666666666
+            },
+            {
+              "x": 279,
+              "y": 393,
+              "r": 4.99
+            },
+            {
+              "x": 1172,
+              "y": 1652,
+              "r": 2
+            },
+            {
+              "x": 247,
+              "y": 347,
+              "r": 3.266666666666667
+            },
+            {
+              "x": 6199,
+              "y": 10588,
+              "r": 4.316666666666666
+            },
+            {
+              "x": 6415,
+              "y": 10957,
+              "r": 2.8633333333333333
+            },
+            {
+              "x": 154,
+              "y": 216,
+              "r": 3.876666666666667
+            },
+            {
+              "x": 498,
+              "y": 701,
+              "r": 5.763333333333333
+            },
+            {
+              "x": 724,
+              "y": 1020,
+              "r": 12.85
+            },
+            {
+              "x": 565,
+              "y": 796,
+              "r": 2
+            },
+            {
+              "x": 874,
+              "y": 1231,
+              "r": 3.6833333333333336
+            },
+            {
+              "x": 409,
+              "y": 576,
+              "r": 10.166666666666666
+            },
+            {
+              "x": 678,
+              "y": 956,
+              "r": 4.253333333333333
+            },
+            {
+              "x": 383,
+              "y": 539,
+              "r": 9.31
+            },
+            {
+              "x": 989,
+              "y": 1393,
+              "r": 2
+            },
+            {
+              "x": 217,
+              "y": 306,
+              "r": 2
+            },
+            {
+              "x": 1008,
+              "y": 1421,
+              "r": 2.796666666666667
+            },
+            {
+              "x": 515,
+              "y": 725,
+              "r": 2
+            },
+            {
+              "x": 1115,
+              "y": 1572,
+              "r": 15
+            },
+            {
+              "x": 663,
+              "y": 934,
+              "r": 3.4
+            },
+            {
+              "x": 415,
+              "y": 585,
+              "r": 9.666666666666666
+            },
+            {
+              "x": 196,
+              "y": 275,
+              "r": 2.6766666666666663
+            },
+            {
+              "x": 11867,
+              "y": 20270,
+              "r": 10.036666666666667
+            },
+            {
+              "x": 819,
+              "y": 1154,
+              "r": 15
+            },
+            {
+              "x": 361,
+              "y": 508,
+              "r": 6.266666666666667
+            },
+            {
+              "x": 408,
+              "y": 575,
+              "r": 15
+            },
+            {
+              "x": 1169,
+              "y": 1648,
+              "r": 4.45
+            },
+            {
+              "x": 951,
+              "y": 1341,
+              "r": 3.0666666666666664
+            },
+            {
+              "x": 690,
+              "y": 972,
+              "r": 3.31
+            },
+            {
+              "x": 10140,
+              "y": 17319,
+              "r": 5.213333333333334
+            },
+            {
+              "x": 3330,
+              "y": 5687,
+              "r": 8.046666666666667
+            },
+            {
+              "x": 555,
+              "y": 781,
+              "r": 14.530000000000001
+            },
+            {
+              "x": 507,
+              "y": 714,
+              "r": 6.22
+            },
+            {
+              "x": 777,
+              "y": 1095,
+              "r": 15
+            },
+            {
+              "x": 509,
+              "y": 717,
+              "r": 8.64
+            },
+            {
+              "x": 4569,
+              "y": 7804,
+              "r": 5.913333333333333
+            },
+            {
+              "x": 1164,
+              "y": 1641,
+              "r": 9.049999999999999
+            },
+            {
+              "x": 997,
+              "y": 1406,
+              "r": 2
+            },
+            {
+              "x": 564,
+              "y": 795,
+              "r": 2.61
+            },
+            {
+              "x": 976,
+              "y": 1375,
+              "r": 7.723333333333334
+            },
+            {
+              "x": 951,
+              "y": 1341,
+              "r": 4.5633333333333335
+            },
+            {
+              "x": 1130,
+              "y": 1593,
+              "r": 9.976666666666667
+            },
+            {
+              "x": 5013,
+              "y": 8562,
+              "r": 9.93
+            },
+            {
+              "x": 1044,
+              "y": 1472,
+              "r": 5.923333333333333
+            },
+            {
+              "x": 239,
+              "y": 336,
+              "r": 2
+            },
+            {
+              "x": 676,
+              "y": 952,
+              "r": 15
+            },
+            {
+              "x": 449,
+              "y": 633,
+              "r": 6.136666666666667
+            },
+            {
+              "x": 406,
+              "y": 571,
+              "r": 3.6
+            },
+            {
+              "x": 890,
+              "y": 1255,
+              "r": 3.2066666666666666
+            },
+            {
+              "x": 996,
+              "y": 1403,
+              "r": 2
+            },
+            {
+              "x": 1200,
+              "y": 1692,
+              "r": 2
+            },
+            {
+              "x": 560,
+              "y": 789,
+              "r": 8.873333333333333
+            }
+          ],
+          "backgroundColor": "rgba(255, 51, 102, 0.4)",
+          "borderColor": "rgba(255, 51, 102, 0.8)"
+        }
+      ]
+    },
+    {
+      "id": "chart_17",
+      "title": "Weighbridge Stations by Classification Type",
+      "type": "pie",
+      "labels": [
+        "Mobile",
+        "Permanent",
+        "Proposed"
+      ],
+      "data": [
+        10,
+        24,
+        20
+      ]
+    },
+    {
+      "id": "chart_18",
+      "title": "Network Length (km) by All Maintenance Stations",
+      "type": "bar",
+      "labels": [
+        "Kampala",
+        "Luwero",
+        "Kabale",
+        "Jinja",
+        "Hoima",
+        "Mbarara",
+        "Soroti",
+        "Kitgum",
+        "Masaka",
+        "Fort Portal",
+        "Lira",
+        "Gulu",
+        "Mbale",
+        "Arua",
+        "Ibanda",
+        "Moroto",
+        "Kotido",
+        "Moyo",
+        "Mpigi",
+        "Masindi",
+        "Tororo",
+        "Mubende",
+        "Kasese"
+      ],
+      "data": [
+        1221.24,
+        1214.68,
+        1181.5,
+        1175.87,
+        1128.25,
+        1052.68,
+        1047.76,
+        1042.74,
+        994.47,
+        976.11,
+        956.58,
+        945.19,
+        923.53,
+        907.24,
+        883.41,
+        813.69,
+        804.22,
+        752.65,
+        696.27,
+        686.12,
+        666.05,
+        665.46,
+        433.26
+      ]
+    },
+    {
+      "id": "chart_19",
+      "title": "Paved vs Unsealed Network by Maintenance Station (km)",
+      "type": "bar",
+      "labels": [
+        "Kampala",
+        "Luwero",
+        "Kabale",
+        "Jinja",
+        "Hoima",
+        "Mbarara",
+        "Soroti",
+        "Kitgum",
+        "Masaka",
+        "Fort Portal",
+        "Lira",
+        "Gulu",
+        "Mbale",
+        "Arua",
+        "Ibanda",
+        "Moroto",
+        "Kotido",
+        "Moyo",
+        "Mpigi",
+        "Masindi",
+        "Tororo",
+        "Mubende",
+        "Kasese"
+      ],
+      "datasets": [
+        {
+          "label": "Paved (km)",
+          "data": [
+            694.37,
+            243.22,
+            410.37,
+            258.65,
+            471.53,
+            369.96,
+            233.85,
+            130.84,
+            328.05,
+            365.04,
+            142.96,
+            393.8,
+            383.92,
+            214.25,
+            203.91,
+            212.48,
+            0,
+            129.76,
+            299.94,
+            420.36,
+            202.49,
+            257.15,
+            135.22
+          ],
+          "backgroundColor": "rgba(0, 255, 153, 0.7)"
+        },
+        {
+          "label": "Unsealed (km)",
+          "data": [
+            526.87,
+            971.46,
+            771.13,
+            917.22,
+            656.72,
+            682.72,
+            813.91,
+            911.9,
+            666.42,
+            611.07,
+            813.62,
+            551.39,
+            539.61,
+            692.99,
+            679.5,
+            601.21,
+            804.22,
+            622.89,
+            396.33,
+            265.76,
+            463.56,
+            408.31,
+            298.04
+          ],
+          "backgroundColor": "rgba(255, 153, 0, 0.7)"
+        }
+      ]
+    },
+    {
+      "id": "chart_20",
+      "title": "Infrastructure Age Profile (Road Links)",
+      "type": "bar",
+      "labels": [
+        "0-5 Years",
+        "5-10 Years",
+        "10-20 Years",
+        "20-30 Years",
+        "30+ Years"
+      ],
+      "data": [
+        100,
+        73,
+        64,
+        30,
+        748
+      ]
+    },
+    {
+      "id": "chart_21",
+      "title": "Road Link Construction Timeline by Decade",
+      "type": "line",
+      "labels": [
+        "1950s",
+        "1960s",
+        "1970s",
+        "1980s",
+        "1990s",
+        "2000s",
+        "2010s",
+        "2020s"
+      ],
+      "data": [
+        22,
+        31,
+        8,
+        13,
+        10,
+        37,
+        102,
+        118
+      ]
+    },
+    {
+      "id": "chart_22",
+      "title": "Urban Centres by Administrative Status",
+      "type": "pie",
+      "labels": [
+        "C",
+        "Unknown",
+        "A",
+        "B",
+        "Aa"
+      ],
+      "data": [
+        141,
+        53,
+        45,
+        7,
+        1
+      ]
+    },
+    {
+      "id": "chart_23",
+      "title": "All Districts by Area (sq km)",
+      "type": "bar",
+      "labels": [],
+      "data": []
+    },
+    {
+      "id": "chart_24",
+      "title": "Road Network Density by Maintenance Station (km/100 sq km)",
+      "type": "bar",
+      "labels": [
+        "Kampala",
+        "Luwero",
+        "Kabale",
+        "Jinja",
+        "Hoima",
+        "Mbarara",
+        "Soroti",
+        "Kitgum",
+        "Masaka",
+        "Fort Portal",
+        "Lira",
+        "Gulu",
+        "Mbale",
+        "Arua",
+        "Ibanda",
+        "Moroto",
+        "Kotido",
+        "Moyo",
+        "Mpigi",
+        "Masindi",
+        "Tororo",
+        "Mubende",
+        "Kasese"
+      ],
+      "data": [
+        12.21,
+        12.15,
+        11.82,
+        11.76,
+        11.28,
+        10.53,
+        10.48,
+        10.43,
+        9.94,
+        9.76,
+        9.57,
+        9.45,
+        9.24,
+        9.07,
+        8.83,
+        8.14,
+        8.04,
+        7.53,
+        6.96,
+        6.86,
+        6.66,
+        6.65,
+        4.33
+      ]
+    },
+    {
+      "id": "chart_25",
+      "title": "Number of Road Links per Maintenance Station",
+      "type": "bar",
+      "labels": [
+        "Kampala",
+        "Jinja",
+        "Kabale",
+        "Mbale",
+        "Luwero",
+        "Mbarara",
+        "Soroti",
+        "Hoima",
+        "Lira",
+        "Masaka",
+        "Tororo",
+        "Fort Portal",
+        "Ibanda",
+        "Mpigi",
+        "Mubende",
+        "Arua",
+        "Gulu",
+        "Kitgum",
+        "Masindi",
+        "Kasese",
+        "Kotido",
+        "Moroto",
+        "Moyo"
+      ],
+      "data": [
+        164,
+        67,
+        66,
+        50,
+        48,
+        45,
+        44,
+        44,
+        43,
+        42,
+        40,
+        38,
+        36,
+        35,
+        34,
+        33,
+        30,
+        30,
+        29,
+        26,
+        25,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "chart_26",
+      "title": "Road Class Composition by Region (%)",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Northern",
+        "Southern",
+        "Western",
+        "Eastern",
+        "North Eastern"
+      ],
+      "datasets": [
+        {
+          "label": "Class A \u2014 National Trunk Roads",
+          "data": [
+            18.8,
+            13.4,
+            8.9,
+            12.2,
+            12.7,
+            4.3
+          ],
+          "backgroundColor": "#ff3366"
+        },
+        {
+          "label": "Class B \u2014 Primary Roads",
+          "data": [
+            7.8,
+            16.2,
+            10.7,
+            13.1,
+            15.5,
+            21.2
+          ],
+          "backgroundColor": "#00f3ff"
+        },
+        {
+          "label": "Class C \u2014 Secondary Roads",
+          "data": [
+            70.4,
+            70.4,
+            80.4,
+            74.6,
+            71.8,
+            74.5
+          ],
+          "backgroundColor": "#00ff99"
+        },
+        {
+          "label": "Class M \u2014 Motorway & Expressway",
+          "data": [
+            3.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "backgroundColor": "#ffcc00"
+        }
+      ]
+    },
+    {
+      "id": "chart_27",
+      "title": "Bridge Count by Administrative Region",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Eastern",
+        "Southern",
+        "Northern",
+        "Western",
+        "North Eastern"
+      ],
+      "data": [
+        390,
+        198,
+        182,
+        180,
+        123,
+        102
+      ]
+    },
+    {
+      "id": "chart_28",
+      "title": "Network Length (km) vs Bridge Count by Region",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Eastern",
+        "Southern",
+        "Northern",
+        "Western",
+        "North Eastern"
+      ],
+      "datasets": [
+        {
+          "label": "Network Length (km)",
+          "data": [
+            4792.12,
+            2765.45,
+            3550.85,
+            4604.4,
+            2790.48,
+            2665.67
+          ],
+          "backgroundColor": "rgba(0, 243, 255, 0.6)",
+          "yAxisID": "y"
+        },
+        {
+          "label": "Bridge Count",
+          "data": [
+            390,
+            198,
+            182,
+            180,
+            123,
+            102
+          ],
+          "backgroundColor": "rgba(255, 51, 102, 0.6)",
+          "type": "line",
+          "yAxisID": "y1",
+          "borderColor": "#ff3366"
+        }
+      ]
+    },
+    {
+      "id": "chart_29",
+      "title": "Longest Road Links (km) \u2014 All Available",
+      "type": "bar",
+      "labels": [
+        "Masindi Port-Akokoro-Apac-Aduku",
+        "Kotido - Apaan - Kabong",
+        "Lwamata - Hoima",
+        "Kayunga-Bale-Galiraya-Lake Kyoga",
+        "Katunguru - Ishasha",
+        "Nakiloro-Lomukura",
+        "Ariamoi - Kaladonapal - Kaperimoru",
+        "Abim - Kilak",
+        "Kikyusa- Bamugolode - Kazwama - Nakasongola",
+        "Butalangwa - Ngoma - Bulyamusenyu",
+        "Arapai - Katakwi - Iriri",
+        "Kapchorwa-Suam",
+        "Kitgum - Orom",
+        "Yumbe - Manibe",
+        "Kakumiro - Nkondo - Kijaguza - Bulamagi- Kabaale Swamp",
+        "Karugutu-Bundibugyo - Lamia",
+        "Aliodranusi-Gobolo-Matu-Kerwa-Kei",
+        "Muyembe - Namalu",
+        "Kisanja-Park Junction",
+        "Katine To Ochero",
+        "Iriri - Akisim (Lorengechora) - Ariamoi - Nadunget",
+        "Bukommero-Dwaniro-Kyankwanzi",
+        "Gulu - Atiak",
+        "Masaka  - Lyantonde",
+        "Soroti - Dokolo",
+        "Kitgum-Lukung-Ngomoromo",
+        "Lyantonde - Mbarara(Bushenyi Junction)",
+        "Katuna - Rubaya - Muko",
+        "Moyo - Yumbe",
+        "Atiak-Palabek",
+        "Atiak - Moyo",
+        "Atiak - Moyo",
+        "Kamwenge - Fortportal",
+        "Gulu-Opit",
+        "Kotido - Abim",
+        "Nebbi - Eruba",
+        "Ruti - Mwizi - Kabuyanda - Kikagati",
+        "Ikumba - Nfasha - Ruhija - Mpungu - Hama",
+        "Lokitanyara-Loro-Amudat",
+        "Gulu - Olwiyo",
+        "Mbarara(Bushenyi Junction)  - Ntungamo",
+        "Puranga Bridge - Corner Kilak - Pejule - Acholibur",
+        "Zombo-Vurra",
+        "Kyabakuza - Kiwangala - Ndagwe - Namabal",
+        "Koputh Junction-Orom",
+        "Pakele - Pabbo",
+        "Muhanga-Kisiizi-Kebisoni",
+        "Fortportal - Kijura - Kabende Bridge-Sogahe-Kyarusozi",
+        "Pakwach-Inde",
+        "Mungula - Adjumani"
+      ],
+      "data": [
+        103.42,
+        98.98,
+        96.5,
+        87.4,
+        87.03,
+        85.0,
+        83.37,
+        83.19,
+        83.13,
+        82.21,
+        81.86,
+        80.7,
+        79.11,
+        77.12,
+        77.0,
+        76.2,
+        76.0,
+        71.66,
+        71.12,
+        69.94,
+        68.81,
+        68.53,
+        68.16,
+        67.78,
+        67.44,
+        67.33,
+        67.31,
+        66.59,
+        65.95,
+        65.0,
+        64.88,
+        64.88,
+        64.78,
+        64.11,
+        63.82,
+        63.79,
+        63.63,
+        63.56,
+        62.85,
+        61.81,
+        61.73,
+        61.6,
+        61.2,
+        60.93,
+        60.0,
+        59.9,
+        59.88,
+        59.78,
+        59.77,
+        59.45
+      ]
+    },
+    {
+      "id": "chart_30",
+      "title": "AADT 2026 Live Distribution (Road Links)",
+      "type": "bar",
+      "labels": [
+        "0-500",
+        "500-1000",
+        "1000-2000",
+        "2000-5000",
+        "5000-10000",
+        "10000+"
+      ],
+      "data": [
+        153,
+        303,
+        469,
+        1,
+        29,
+        60
+      ]
+    },
+    {
+      "id": "chart_31",
+      "title": "Average AADT at All Traffic Count Stations",
+      "type": "bar",
+      "labels": [
+        "Gulu",
+        "Kasese",
+        "Mpigi",
+        "Arua",
+        "Tororo",
+        "Mbale",
+        "Kampala",
+        "Fort Portal",
+        "Luwero",
+        "Mubende",
+        "Lira",
+        "Jinja",
+        "Masaka",
+        "Masindi",
+        "Mbarara",
+        "Kabale",
+        "Soroti",
+        "Moroto",
+        "Hoima",
+        "Kotido",
+        "Kitgum",
+        "Moyo",
+        "Ibanda"
+      ],
+      "data": [
+        4220,
+        3758,
+        3306,
+        2868,
+        2795,
+        2578,
+        2482,
+        2445,
+        2355,
+        2132,
+        2057,
+        1975,
+        1764,
+        1593,
+        1474,
+        1437,
+        1206,
+        1082,
+        1081,
+        1080,
+        1060,
+        961,
+        918
+      ]
+    },
+    {
+      "id": "chart_32",
+      "title": "Average Heavy Truck AADT by Maintenance Station",
+      "type": "bar",
+      "labels": [
+        "Gulu",
+        "Kasese",
+        "Mpigi",
+        "Arua",
+        "Tororo",
+        "Mbale",
+        "Kampala",
+        "Fort Portal",
+        "Luwero",
+        "Mubende",
+        "Lira",
+        "Jinja",
+        "Masaka",
+        "Masindi",
+        "Kabale",
+        "Mbarara",
+        "Soroti",
+        "Hoima",
+        "Moroto",
+        "Kotido",
+        "Kitgum",
+        "Moyo",
+        "Ibanda"
+      ],
+      "data": [
+        1034,
+        907,
+        803,
+        667,
+        631,
+        583,
+        550,
+        548,
+        511,
+        463,
+        432,
+        410,
+        361,
+        300,
+        266,
+        255,
+        195,
+        152,
+        129,
+        129,
+        126,
+        114,
+        109
+      ]
+    },
+    {
+      "id": "chart_33",
+      "title": "Resurfacing Investment Need (UGX M) by Maintenance Station",
+      "type": "bar",
+      "labels": [
+        "Kampala",
+        "Jinja",
+        "Kabale",
+        "Mbale",
+        "Luwero",
+        "Mbarara",
+        "Soroti",
+        "Lira",
+        "Masaka",
+        "Tororo",
+        "Fort Portal",
+        "Mubende",
+        "Mpigi",
+        "Ibanda",
+        "Arua",
+        "Hoima",
+        "Gulu",
+        "Kasese",
+        "Kitgum",
+        "Kotido",
+        "Masindi",
+        "Moroto",
+        "Moyo"
+      ],
+      "data": [
+        70630.0,
+        38490.0,
+        31160.0,
+        28060.0,
+        25820.0,
+        24290.0,
+        23600.0,
+        23120.0,
+        22680.0,
+        22620.0,
+        18580.0,
+        18200.0,
+        17310.0,
+        16550.0,
+        16480.0,
+        16320.0,
+        15980.0,
+        14020.0,
+        13200.0,
+        12000.0,
+        11860.0,
+        10320.0,
+        9960.0
+      ]
+    },
+    {
+      "id": "chart_34",
+      "title": "Network Connectivity Index (Links per Maintenance Station)",
+      "type": "bar",
+      "labels": [
+        "Kampala",
+        "Jinja",
+        "Kabale",
+        "Mbale",
+        "Luwero",
+        "Mbarara",
+        "Soroti",
+        "Hoima",
+        "Lira",
+        "Masaka",
+        "Tororo",
+        "Fort Portal",
+        "Ibanda",
+        "Mpigi",
+        "Mubende",
+        "Arua",
+        "Gulu",
+        "Kitgum",
+        "Masindi",
+        "Kasese",
+        "Kotido",
+        "Moroto",
+        "Moyo"
+      ],
+      "data": [
+        164,
+        67,
+        66,
+        50,
+        48,
+        45,
+        44,
+        44,
+        43,
+        42,
+        40,
+        38,
+        36,
+        35,
+        34,
+        33,
+        30,
+        30,
+        29,
+        26,
+        25,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "chart_35",
+      "title": "Average Pavement Condition Index (PCI) Trend by Road Class",
+      "type": "bar",
+      "labels": [
+        "Class A \u2014 National Trunk Roads",
+        "Class B \u2014 Primary Roads",
+        "Class C \u2014 Secondary Roads",
+        "Class M \u2014 Motorway & Expressway"
+      ],
+      "datasets": [
+        {
+          "label": "PCI 2016 Baseline",
+          "data": [
+            63.3,
+            85.9,
+            91.1,
+            99.8
+          ],
+          "backgroundColor": "rgba(0, 243, 255, 0.6)"
+        },
+        {
+          "label": "PCI 2026 Live",
+          "data": [
+            37.3,
+            64.4,
+            65.9,
+            87.0
+          ],
+          "backgroundColor": "rgba(0, 255, 153, 0.6)"
+        },
+        {
+          "label": "PCI 2040 Projection",
+          "data": [
+            19.3,
+            36.7,
+            34.3,
+            55.0
+          ],
+          "backgroundColor": "rgba(255, 51, 102, 0.6)"
+        }
+      ]
+    },
+    {
+      "id": "chart_36",
+      "title": "Total National AADT Growth Trend (2016-2040)",
+      "type": "line",
+      "labels": [
+        "2016",
+        "2020",
+        "2026",
+        "2030",
+        "2040"
+      ],
+      "data": [
+        1345389,
+        1606716,
+        2103178,
+        2521181,
+        3992860
+      ]
+    },
+    {
+      "id": "chart_37",
+      "title": "Infrastructure Asset Replacement Value (UGX Billion) by Region",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Eastern",
+        "Southern",
+        "Northern",
+        "Western",
+        "North Eastern"
+      ],
+      "data": [
+        154.64,
+        89.17,
+        86.02,
+        78.74,
+        46.76,
+        45.92
+      ]
+    },
+    {
+      "id": "chart_38",
+      "title": "Annual Freight CO2 Emissions (Metric Tons) by Region",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Northern",
+        "Eastern",
+        "Southern",
+        "Western",
+        "North Eastern"
+      ],
+      "data": [
+        1819878.0,
+        1494672.0,
+        885065.0,
+        876281.0,
+        769967.0,
+        420927.0
+      ]
+    },
+    {
+      "id": "chart_39",
+      "title": "Scour Vulnerability Index Distribution",
+      "type": "pie",
+      "labels": [
+        "Low",
+        "Moderate"
+      ],
+      "data": [
+        914,
+        101
+      ]
+    },
+    {
+      "id": "chart_40",
+      "title": "Agricultural Evacuation Priority Distribution",
+      "type": "doughnut",
+      "labels": [
+        "Medium Agricultural Reach",
+        "High Evacuation Priority"
+      ],
+      "data": [
+        925,
+        90
+      ]
+    },
+    {
+      "id": "chart_41",
+      "title": "Structural Number (SN) Distribution",
+      "type": "doughnut",
+      "labels": [
+        "SN < 2 (Critical)",
+        "SN 2-3 (Fair)",
+        "SN 3-4 (Good)",
+        "SN >= 4 (Strong)"
+      ],
+      "data": [
+        0,
+        925,
+        0,
+        90
+      ]
+    },
+    {
+      "id": "chart_42",
+      "title": "Annual Delay Cost (UGX M/Year) by Region",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Northern",
+        "Southern",
+        "Eastern",
+        "Western",
+        "North Eastern"
+      ],
+      "data": [
+        5751.9,
+        4047.6,
+        3008.3,
+        2799.8,
+        2242.7,
+        1596.5
+      ]
+    },
+    {
+      "id": "chart_43",
+      "title": "Culvert Count by Administrative Region",
+      "type": "bar",
+      "labels": [
+        "Central",
+        "Northern",
+        "Southern",
+        "Eastern",
+        "Western",
+        "North Eastern"
+      ],
+      "data": [
+        4685,
+        4090,
+        3277,
+        2602,
+        2512,
+        2375
+      ]
+    },
+    {
+      "id": "chart_44",
+      "title": "Detour Penalty Distribution (km)",
+      "type": "pie",
+      "labels": [
+        "< 5 km",
+        "5-15 km",
+        "15-30 km",
+        "30-50 km",
+        "50+ km"
+      ],
+      "data": [
+        136,
+        99,
+        143,
+        200,
+        437
+      ]
+    },
+    {
+      "id": "chart_45",
+      "title": "Average Rural Accessibility Index by Region",
+      "type": "radar",
+      "labels": [
+        "Central",
+        "Eastern",
+        "North Eastern",
+        "Northern",
+        "Southern",
+        "Western"
+      ],
+      "data": [
+        75.1,
+        72.9,
+        74.0,
+        73.5,
+        73.4,
+        74.7
+      ]
+    },
+    {
+      "id": "chart_46",
+      "title": "Average Climate Adaptation Priority Score by Region",
+      "type": "radar",
+      "labels": [
+        "Central",
+        "Eastern",
+        "North Eastern",
+        "Northern",
+        "Southern",
+        "Western"
+      ],
+      "data": [
+        47.3,
+        32.1,
+        32.1,
+        30.9,
+        30.8,
+        28.9
+      ]
+    },
+    {
+      "id": "chart_47",
+      "title": "Flash Flood Washout Risk Distribution",
+      "type": "doughnut",
+      "labels": [
+        "Low (< 30)",
+        "Medium (30-60)",
+        "High (60-80)",
+        "Critical (80+)"
+      ],
+      "data": [
+        312,
+        421,
+        159,
+        123
+      ]
+    },
+    {
+      "id": "chart_48",
+      "title": "Integrated Asset Health Score Distribution",
+      "type": "doughnut",
+      "labels": [
+        "Critical (< 40)",
+        "Poor (40-60)",
+        "Fair (60-75)",
+        "Good (75-90)",
+        "Excellent (90+)"
+      ],
+      "data": [
+        82,
+        30,
+        727,
+        171,
+        5
+      ]
+    },
+    {
+      "id": "chart_49",
+      "title": "Average Integrated Asset Health Score by Region",
+      "type": "bar",
+      "labels": [
+        "Western",
+        "Central",
+        "North Eastern",
+        "Northern",
+        "Southern",
+        "Eastern"
+      ],
+      "data": [
+        71.2,
+        69.1,
+        67.5,
+        67.0,
+        66.7,
+        64.3
+      ]
+    },
+    {
+      "id": "chart_50",
+      "title": "Estimated Mineral Deposit Value (USD Million) by Region",
+      "type": "bar",
+      "labels": [
+        "Albertine / Western",
+        "Karamoja / Eastern",
+        "Rwenzori / Kasese",
+        "Kigezi / Rubanda",
+        "Bugweri / Busoga",
+        "Central Region"
+      ],
+      "data": [
+        108000,
+        17400,
+        8500,
+        14000,
+        16500,
+        8300
+      ]
+    },
+    {
+      "id": "chart_51",
+      "title": "Industrial Park Land Area (Acres) by Subregion",
+      "type": "doughnut",
+      "labels": [
+        "Greater Kampala / Wakiso",
+        "Bunyoro (Hoima Refinery Hub)",
+        "Busoga (Jinja / Bugweri)",
+        "Bugisu (Mbale Sino Park)",
+        "Acholi / West Nile",
+        "Ankole / Kigezi"
+      ],
+      "data": [
+        2790,
+        2980,
+        850,
+        610,
+        900,
+        560
+      ]
+    },
+    {
+      "id": "chart_52",
+      "title": "Educational Institutions All-Weather Road Access Rate (%)",
+      "type": "pie",
+      "labels": [
+        "Paved Highway Access (< 1km)",
+        "Graded All-Weather Gravel (< 2km)",
+        "Unimproved Earth Access (> 2km)"
+      ],
+      "data": [
+        62.5,
+        28.3,
+        9.2
+      ]
+    },
+    {
+      "id": "chart_53",
+      "title": "Power Grid Substation Capacity (MW) by Regional Node",
+      "type": "bar",
+      "labels": [
+        "Kawanda 400kV",
+        "Karuma 400kV",
+        "Kampala North 220kV",
+        "Namanve 132kV",
+        "Tororo 220kV",
+        "Olwiyo 400kV",
+        "Mbarara 132kV"
+      ],
+      "data": [
+        450,
+        600,
+        300,
+        250,
+        220,
+        200,
+        150
+      ]
+    },
+    {
+      "id": "chart_54",
+      "title": "Health Facility Bed Capacity by Facility Level",
+      "type": "doughnut",
+      "labels": [
+        "National Referral (Level 6)",
+        "Regional Referral (Level 5)",
+        "General Hospital (Level 4)",
+        "Health Centre IV",
+        "Health Centre III"
+      ],
+      "data": [
+        3600,
+        6300,
+        8400,
+        7200,
+        4500
+      ]
+    },
+    {
+      "id": "chart_56",
+      "title": "Mineral Corridor Logistics Bottleneck Score (0-100 High Risk)",
+      "type": "bar",
+      "labels": [
+        "Albertine Oil Fields",
+        "Karamoja Gold & Lime",
+        "Kilembe Copper Belt",
+        "Kigezi Iron Ore",
+        "Busoga Rare Earths",
+        "Central Gold Belt"
+      ],
+      "data": [
+        78,
+        86,
+        62,
+        74,
+        55,
+        42
+      ]
+    },
+    {
+      "id": "chart_57",
+      "title": "Agricultural Commodity All-Weather Evacuation Reach (%)",
+      "type": "doughnut",
+      "labels": [
+        "Coffee (Arabica/Robusta)",
+        "Tea Plantations",
+        "Sugarcane Belt",
+        "Maize & Grain Hubs",
+        "Cocoa Regions",
+        "Dairy Milk Pools"
+      ],
+      "data": [
+        92.4,
+        88.1,
+        95.0,
+        76.5,
+        82.0,
+        84.6
+      ]
+    },
+    {
+      "id": "chart_58",
+      "title": "Healthcare Spatial Travel Time Distribution (Minutes to Hospital)",
+      "type": "pie",
+      "labels": [
+        "Under 30 Minutes",
+        "30 - 60 Minutes",
+        "60 - 90 Minutes",
+        "Over 90 Minutes (Remote)"
+      ],
+      "data": [
+        48.5,
+        29.7,
+        14.2,
+        7.6
+      ]
+    },
+    {
+      "id": "chart_59",
+      "title": "One-Stop Border Post Freight Clearance Time (Hours/Truck)",
+      "type": "bar",
+      "labels": [
+        "Malaba (Kenya)",
+        "Busia (Kenya)",
+        "Elegu (South Sudan)",
+        "Mutukula (Tanzania)",
+        "Katuna (Rwanda)",
+        "Mirama Hills (Rwanda)",
+        "Mpondwe (DRC)"
+      ],
+      "data": [
+        3.8,
+        3.2,
+        5.4,
+        2.9,
+        3.1,
+        2.5,
+        6.2
+      ]
+    },
+    {
+      "id": "chart_60",
+      "title": "Landslide & Washout Detour Distance Penalty (km) by Mountain Region",
+      "type": "bar",
+      "labels": [
+        "Mt. Elgon (Kapchorwa/Bududa)",
+        "Rwenzori Massif (Kasese/Bundibugyo)",
+        "Kigezi Highlands (Kabale/Kisoro)",
+        "West Nile Escarpment (Nebbi)",
+        "Karamoja Ranges (Moroto)"
+      ],
+      "data": [
+        84.2,
+        72.5,
+        68.0,
+        45.3,
+        52.8
+      ]
+    },
+    {
+      "id": "chart_61",
+      "title": "National Multi-Modal Freight Modal Split Projection (2026 vs 2040)",
+      "type": "doughnut",
+      "labels": [
+        "Highway Truck Freight (2026)",
+        "Highway Truck Freight (2040 Proj)",
+        "Rail Freight SGR/MGR",
+        "Inland Waterways (Lake Victoria/Albert)"
+      ],
+      "data": [
+        88.5,
+        64.2,
+        27.8,
+        8.0
+      ]
+    },
+    {
+      "id": "chart_62",
+      "title": "Multi-Criteria Industrial Park Investment Suitability Score (0-100)",
+      "type": "radar",
+      "labels": [
+        "Highway Proximity",
+        "Power Grid Capacity",
+        "Water Supply Reliability",
+        "Skilled Labor Catchment",
+        "Customs Clearance Speed",
+        "Land Availability"
+      ],
+      "datasets": [
+        {
+          "label": "Namanve / Kampala Hub",
+          "data": [
+            95,
+            92,
+            88,
+            96,
+            90,
+            60
+          ],
+          "backgroundColor": "rgba(0, 243, 255, 0.3)",
+          "borderColor": "#00f3ff"
+        },
+        {
+          "label": "Kabalega Hoima Refinery",
+          "data": [
+            82,
+            88,
+            90,
+            72,
+            85,
+            98
+          ],
+          "backgroundColor": "rgba(255, 0, 234, 0.3)",
+          "borderColor": "#ff00ea"
+        },
+        {
+          "label": "Mbale Sino Industrial Park",
+          "data": [
+            88,
+            85,
+            80,
+            84,
+            88,
+            90
+          ],
+          "backgroundColor": "rgba(0, 255, 102, 0.3)",
+          "borderColor": "#00ff66"
+        }
+      ]
+    }
+  ]
+}

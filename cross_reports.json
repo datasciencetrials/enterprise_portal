@@ -1,0 +1,640 @@
+{
+  "tables": [
+    {
+      "title": "Surface Type vs Road Classification \u2014 Network Length (km)",
+      "columns": [
+        "Surface Type",
+        "Class A \u2014 National Trunk Roads",
+        "Class B \u2014 Primary Roads",
+        "Class C \u2014 Secondary Roads",
+        "Class M \u2014 Motorway & Expressway",
+        "Total (km)"
+      ],
+      "rows": [
+        [
+          "Bituminous",
+          2636.82,
+          1869.7,
+          1851.01,
+          144.59,
+          6502.12
+        ],
+        [
+          "Unsealed",
+          0,
+          990.44,
+          13676.41,
+          0,
+          14666.85
+        ]
+      ]
+    },
+    {
+      "title": "Administrative Region vs Surface Type \u2014 Network Length (km)",
+      "columns": [
+        "Region",
+        "Bituminous",
+        "Unsealed",
+        "Total (km)"
+      ],
+      "rows": [
+        [
+          "Central",
+          1822.73,
+          2969.39,
+          4792.12
+        ],
+        [
+          "Eastern",
+          845.06,
+          1920.39,
+          2765.45
+        ],
+        [
+          "North Eastern",
+          446.33,
+          2219.34,
+          2665.67
+        ],
+        [
+          "Northern",
+          1011.61,
+          3592.79,
+          4604.4
+        ],
+        [
+          "Southern",
+          1119.46,
+          2431.39,
+          3550.85
+        ],
+        [
+          "Western",
+          1256.93,
+          1533.55,
+          2790.48
+        ]
+      ]
+    },
+    {
+      "title": "Administrative Region vs Road Classification \u2014 Network Length (km)",
+      "columns": [
+        "Region",
+        "Class A \u2014 National Trunk Roads",
+        "Class B \u2014 Primary Roads",
+        "Class C \u2014 Secondary Roads",
+        "Class M \u2014 Motorway & Expressway",
+        "Total (km)"
+      ],
+      "rows": [
+        [
+          "Central",
+          899.09,
+          373.22,
+          3375.22,
+          144.59,
+          4792.12
+        ],
+        [
+          "Eastern",
+          351.28,
+          428.39,
+          1985.78,
+          0,
+          2765.45
+        ],
+        [
+          "North Eastern",
+          114.18,
+          565.35,
+          1986.14,
+          0,
+          2665.67
+        ],
+        [
+          "Northern",
+          615.88,
+          746.49,
+          3242.03,
+          0,
+          4604.4
+        ],
+        [
+          "Southern",
+          314.73,
+          379.81,
+          2856.31,
+          0,
+          3550.85
+        ],
+        [
+          "Western",
+          341.66,
+          366.88,
+          2081.94,
+          0,
+          2790.48
+        ]
+      ]
+    },
+    {
+      "title": "Maintenance Station vs Surface Type \u2014 Network Length (km)",
+      "columns": [
+        "Maintenance Station",
+        "Bituminous",
+        "Unsealed",
+        "Total (km)"
+      ],
+      "rows": [
+        [
+          "Arua",
+          214.25,
+          692.99,
+          907.24
+        ],
+        [
+          "Fort Portal",
+          365.04,
+          611.07,
+          976.11
+        ],
+        [
+          "Gulu",
+          393.8,
+          551.39,
+          945.19
+        ],
+        [
+          "Hoima",
+          471.53,
+          656.72,
+          1128.25
+        ],
+        [
+          "Ibanda",
+          203.91,
+          679.5,
+          883.41
+        ],
+        [
+          "Jinja",
+          258.65,
+          917.22,
+          1175.87
+        ],
+        [
+          "Kabale",
+          410.37,
+          771.13,
+          1181.5
+        ],
+        [
+          "Kampala",
+          694.37,
+          526.87,
+          1221.24
+        ],
+        [
+          "Kasese",
+          135.22,
+          298.04,
+          433.26
+        ],
+        [
+          "Kitgum",
+          130.84,
+          911.9,
+          1042.74
+        ],
+        [
+          "Kotido",
+          0,
+          804.22,
+          804.22
+        ],
+        [
+          "Lira",
+          142.96,
+          813.62,
+          956.58
+        ],
+        [
+          "Luwero",
+          243.22,
+          971.46,
+          1214.68
+        ],
+        [
+          "Masaka",
+          328.05,
+          666.42,
+          994.47
+        ],
+        [
+          "Masindi",
+          420.36,
+          265.76,
+          686.12
+        ],
+        [
+          "Mbale",
+          383.92,
+          539.61,
+          923.53
+        ],
+        [
+          "Mbarara",
+          369.96,
+          682.72,
+          1052.68
+        ],
+        [
+          "Moroto",
+          212.48,
+          601.21,
+          813.69
+        ],
+        [
+          "Moyo",
+          129.76,
+          622.89,
+          752.65
+        ],
+        [
+          "Mpigi",
+          299.94,
+          396.33,
+          696.27
+        ],
+        [
+          "Mubende",
+          257.15,
+          408.31,
+          665.46
+        ],
+        [
+          "Soroti",
+          233.85,
+          813.91,
+          1047.76
+        ],
+        [
+          "Tororo",
+          202.49,
+          463.56,
+          666.05
+        ]
+      ]
+    },
+    {
+      "title": "Maintenance Station vs Road Classification \u2014 Network Length (km)",
+      "columns": [
+        "Maintenance Station",
+        "Class A \u2014 National Trunk Roads",
+        "Class B \u2014 Primary Roads",
+        "Class C \u2014 Secondary Roads",
+        "Class M \u2014 Motorway & Expressway",
+        "Total (km)"
+      ],
+      "rows": [
+        [
+          "Arua",
+          204.84,
+          77.12,
+          625.28,
+          0,
+          907.24
+        ],
+        [
+          "Fort Portal",
+          158.75,
+          102.68,
+          714.68,
+          0,
+          976.11
+        ],
+        [
+          "Gulu",
+          285.36,
+          61.81,
+          598.02,
+          0,
+          945.19
+        ],
+        [
+          "Hoima",
+          96.5,
+          143.07,
+          888.68,
+          0,
+          1128.25
+        ],
+        [
+          "Ibanda",
+          0,
+          90.27,
+          793.14,
+          0,
+          883.41
+        ],
+        [
+          "Jinja",
+          130.23,
+          136.5,
+          909.14,
+          0,
+          1175.87
+        ],
+        [
+          "Kabale",
+          96.06,
+          139.01,
+          946.43,
+          0,
+          1181.5
+        ],
+        [
+          "Kampala",
+          267.7,
+          147.52,
+          661.43,
+          144.59,
+          1221.24
+        ],
+        [
+          "Kasese",
+          89.63,
+          33.1,
+          310.53,
+          0,
+          433.26
+        ],
+        [
+          "Kitgum",
+          0,
+          230.51,
+          812.23,
+          0,
+          1042.74
+        ],
+        [
+          "Kotido",
+          0,
+          265.21,
+          539.01,
+          0,
+          804.22
+        ],
+        [
+          "Lira",
+          125.68,
+          181.34,
+          649.56,
+          0,
+          956.58
+        ],
+        [
+          "Luwero",
+          151.61,
+          0,
+          1063.07,
+          0,
+          1214.68
+        ],
+        [
+          "Masaka",
+          190.68,
+          82.11,
+          721.68,
+          0,
+          994.47
+        ],
+        [
+          "Masindi",
+          86.41,
+          121.13,
+          478.58,
+          0,
+          686.12
+        ],
+        [
+          "Mbale",
+          118.67,
+          250.75,
+          554.11,
+          0,
+          923.53
+        ],
+        [
+          "Mbarara",
+          129.04,
+          117.43,
+          806.21,
+          0,
+          1052.68
+        ],
+        [
+          "Moroto",
+          0,
+          184.4,
+          629.29,
+          0,
+          813.69
+        ],
+        [
+          "Moyo",
+          0,
+          195.71,
+          556.94,
+          0,
+          752.65
+        ],
+        [
+          "Mpigi",
+          179.12,
+          0,
+          517.15,
+          0,
+          696.27
+        ],
+        [
+          "Mubende",
+          109.98,
+          143.59,
+          411.89,
+          0,
+          665.46
+        ],
+        [
+          "Soroti",
+          114.18,
+          115.74,
+          817.84,
+          0,
+          1047.76
+        ],
+        [
+          "Tororo",
+          102.38,
+          41.14,
+          522.53,
+          0,
+          666.05
+        ]
+      ]
+    },
+    {
+      "title": "Pavement Condition vs Road Classification (Link Count)",
+      "columns": [
+        "PCI Category",
+        "Class A \u2014 National Trunk Roads",
+        "Class B \u2014 Primary Roads",
+        "Class C \u2014 Secondary Roads",
+        "Class M \u2014 Motorway & Expressway",
+        "Total"
+      ],
+      "rows": [
+        [
+          "Good (PCI >= 70)",
+          7,
+          32,
+          81,
+          77,
+          197
+        ],
+        [
+          "Fair (40 <= PCI < 70)",
+          28,
+          31,
+          674,
+          1,
+          734
+        ],
+        [
+          "Poor (PCI < 40)",
+          55,
+          14,
+          15,
+          0,
+          84
+        ]
+      ]
+    },
+    {
+      "title": "Remaining Useful Life vs Administrative Region \u2014 Network Length (km)",
+      "columns": [
+        "RUL Category",
+        "Central",
+        "Eastern",
+        "North Eastern",
+        "Northern",
+        "Southern",
+        "Western",
+        "Total (km)"
+      ],
+      "rows": [
+        [
+          "< 3 Years (Critical)",
+          679.53,
+          488.27,
+          58.67,
+          152.71,
+          357.44,
+          136.22,
+          1872.84
+        ],
+        [
+          "3-5 Years (Warning)",
+          94.14,
+          0,
+          0,
+          0,
+          79.99,
+          12.0,
+          186.13
+        ],
+        [
+          "5-10 Years (Fair)",
+          238.73,
+          24.68,
+          67.44,
+          302.18,
+          135.9,
+          236.7,
+          1005.63
+        ],
+        [
+          "10+ Years (Good)",
+          3779.72,
+          2252.5,
+          2539.56,
+          4149.51,
+          2977.52,
+          2405.56,
+          18104.37
+        ]
+      ]
+    },
+    {
+      "title": "Level of Service vs Road Classification (Link Count)",
+      "columns": [
+        "Level of Service",
+        "Class A \u2014 National Trunk Roads",
+        "Class B \u2014 Primary Roads",
+        "Class C \u2014 Secondary Roads",
+        "Class M \u2014 Motorway & Expressway",
+        "Total"
+      ],
+      "rows": [
+        [
+          "Los A",
+          9,
+          57,
+          603,
+          62,
+          731
+        ],
+        [
+          "Los B",
+          20,
+          20,
+          167,
+          16,
+          223
+        ],
+        [
+          "Los C",
+          15,
+          0,
+          0,
+          0,
+          15
+        ],
+        [
+          "Los D",
+          14,
+          0,
+          0,
+          0,
+          14
+        ],
+        [
+          "Los E",
+          19,
+          0,
+          0,
+          0,
+          19
+        ],
+        [
+          "Los F",
+          13,
+          0,
+          0,
+          0,
+          13
+        ]
+      ]
+    }
+  ]
+}

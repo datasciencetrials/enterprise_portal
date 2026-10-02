@@ -1,0 +1,4952 @@
+{
+  "type": "FeatureCollection",
+  "name": "towns",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 1.0,
+        "Place Name": "Adilang",
+        "Status": "C",
+        "Point X": 33.47,
+        "Point Y": 2.75,
+        "Country": "Uganda",
+        "X Utm": 552548.95,
+        "Y Utm200K": 503509.77
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.472777999636435,
+          2.745833000026287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 2.0,
+        "Place Name": "Adjumani",
+        "Status": "A",
+        "Point X": 31.78,
+        "Point Y": 3.38,
+        "Country": "Uganda",
+        "X Utm": 364808.62,
+        "Y Utm200K": 573834.13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.783055999846688,
+          3.381388999895476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 3.0,
+        "Place Name": "Akokoro",
+        "Status": "C",
+        "Point X": 32.38,
+        "Point Y": 1.71,
+        "Country": "Uganda",
+        "X Utm": 431594.81,
+        "Y Utm200K": 388895.09
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.38500000040012,
+          1.708889000026994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 4.0,
+        "Place Name": "Aloi",
+        "Status": "C",
+        "Point X": 33.16,
+        "Point Y": 2.29,
+        "Country": "Uganda",
+        "X Utm": 517388.45,
+        "Y Utm200K": 452655.52
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.15638899988287,
+          2.285833000092949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 5.0,
+        "Place Name": "Amudat",
+        "Status": "C",
+        "Point X": 34.93,
+        "Point Y": 1.95,
+        "Country": "Uganda",
+        "X Utm": 714369.08,
+        "Y Utm200K": 415411.4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.92722199986779,
+          1.947778000197596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 6.0,
+        "Place Name": "Amuria",
+        "Status": "C",
+        "Point X": 33.63,
+        "Point Y": 2.03,
+        "Country": "Uganda",
+        "X Utm": 570339.0,
+        "Y Utm200K": 424329.23
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.63249999993197,
+          2.029444000200314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 7.0,
+        "Place Name": "Aru",
+        "Status": "C",
+        "Point X": 30.84,
+        "Point Y": 2.87,
+        "Country": "Uganda",
+        "X Utm": 259827.36,
+        "Y Utm200K": 517788.74
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.839443999927457,
+          2.873056000302927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 8.0,
+        "Place Name": "Atanga",
+        "Status": "C",
+        "Point X": 32.75,
+        "Point Y": 3.03,
+        "Country": "Uganda",
+        "X Utm": 472189.02,
+        "Y Utm200K": 535372.98
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.749722000122695,
+          3.034167000447852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 9.0,
+        "Place Name": "Atiak",
+        "Status": "C",
+        "Point X": 32.11,
+        "Point Y": 3.26,
+        "Country": "Uganda",
+        "X Utm": 401120.58,
+        "Y Utm200K": 560467.61
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.10999999981063,
+          3.260832999957352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 10.0,
+        "Place Name": "Barabili",
+        "Status": "C",
+        "Point X": 32.31,
+        "Point Y": 2.7,
+        "Country": "Uganda",
+        "X Utm": 423488.54,
+        "Y Utm200K": 498731.34
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.31166700005745,
+          2.702499999818921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 11.0,
+        "Place Name": "Biso",
+        "Status": "C",
+        "Point X": 31.41,
+        "Point Y": 1.76,
+        "Country": "Uganda",
+        "X Utm": 323318.67,
+        "Y Utm200K": 394946.64
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.41166699957038,
+          1.76305600013632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 12.0,
+        "Place Name": "Budaka",
+        "Status": "C",
+        "Point X": 33.92,
+        "Point Y": 1.02,
+        "Country": "Uganda",
+        "X Utm": 602145.1,
+        "Y Utm200K": 312294.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.91805599975352,
+          1.015832999806998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 13.0,
+        "Place Name": "Bugaya",
+        "Status": "C",
+        "Point X": 33.24,
+        "Point Y": 1.1,
+        "Country": "Uganda",
+        "X Utm": 526268.46,
+        "Y Utm200K": 322136.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.236110999768876,
+          1.105000000118983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 14.0,
+        "Place Name": "Bugiri",
+        "Status": "A",
+        "Point X": 33.74,
+        "Point Y": 0.58,
+        "Country": "Uganda",
+        "X Utm": 582094.34,
+        "Y Utm200K": 263989.99
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.73777799993788,
+          0.578889000207178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 15.0,
+        "Place Name": "Buhuka",
+        "Status": "C",
+        "Point X": 30.76,
+        "Point Y": 1.23,
+        "Country": "Uganda",
+        "X Utm": 250737.52,
+        "Y Utm200K": 336364.09
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.76000000019013,
+          1.232777999936341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 16.0,
+        "Place Name": "Bukedea",
+        "Status": "C",
+        "Point X": 34.04,
+        "Point Y": 1.35,
+        "Country": "Uganda",
+        "X Utm": 615453.22,
+        "Y Utm200K": 349240.47
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.037778000427885,
+          1.349999999962556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 17.0,
+        "Place Name": "Bukuya",
+        "Status": "C",
+        "Point X": 31.83,
+        "Point Y": 0.68,
+        "Country": "Uganda",
+        "X Utm": 369344.49,
+        "Y Utm200K": 274930.71
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.825833000118106,
+          0.677778000103785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 18.0,
+        "Place Name": "Bulisa",
+        "Status": "C",
+        "Point X": 31.39,
+        "Point Y": 2.19,
+        "Country": "Uganda",
+        "X Utm": 320644.02,
+        "Y Utm200K": 441605.59
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.387222000135118,
+          2.185000000255708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 19.0,
+        "Place Name": "Bundibugyo",
+        "Status": "A",
+        "Point X": 30.05,
+        "Point Y": 0.72,
+        "Country": "Uganda",
+        "X Utm": 172051.51,
+        "Y Utm200K": 279165.08
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.053889000438915,
+          0.715278000242319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 20.0,
+        "Place Name": "Busembatia",
+        "Status": "B",
+        "Point X": 33.61,
+        "Point Y": 0.78,
+        "Country": "Uganda",
+        "X Utm": 568305.48,
+        "Y Utm200K": 286402.74
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.61388900019734,
+          0.781667000307379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 21.0,
+        "Place Name": "Bushenyi",
+        "Status": "A",
+        "Point X": 30.18,
+        "Point Y": -0.54,
+        "Country": "Uganda",
+        "X Utm": 186523.88,
+        "Y Utm200K": 140732.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.18388900002744,
+          -0.535556000335246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 22.0,
+        "Place Name": "Busia",
+        "Status": "A",
+        "Point X": 34.02,
+        "Point Y": 0.46,
+        "Country": "Uganda",
+        "X Utm": 613348.36,
+        "Y Utm200K": 250329.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.01861099972792,
+          0.455277999996546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 23.0,
+        "Place Name": "Busiu",
+        "Status": "C",
+        "Point X": 34.15,
+        "Point Y": 0.93,
+        "Country": "Uganda",
+        "X Utm": 627989.03,
+        "Y Utm200K": 302875.36
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.15027799956613,
+          0.930556000114693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 24.0,
+        "Place Name": "Busolwe",
+        "Status": "C",
+        "Point X": 33.92,
+        "Point Y": 0.85,
+        "Country": "Uganda",
+        "X Utm": 602087.92,
+        "Y Utm200K": 294331.18
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.917499999585644,
+          0.853332999663512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 25.0,
+        "Place Name": "Butiaba",
+        "Status": "C",
+        "Point X": 31.32,
+        "Point Y": 1.81,
+        "Country": "Uganda",
+        "X Utm": 313093.36,
+        "Y Utm200K": 400668.79
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.31972199959813,
+          1.814722000428971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 26.0,
+        "Place Name": "Butiru",
+        "Status": "C",
+        "Point X": 34.35,
+        "Point Y": 0.83,
+        "Country": "Uganda",
+        "X Utm": 649972.14,
+        "Y Utm200K": 292041.96
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.347778000059556,
+          0.832500000197663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 27.0,
+        "Place Name": "Butiti",
+        "Status": "C",
+        "Point X": 30.52,
+        "Point Y": 0.66,
+        "Country": "Uganda",
+        "X Utm": 224526.33,
+        "Y Utm200K": 272926.27
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.52500000029164,
+          0.659166999576505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 28.0,
+        "Place Name": "Bwambara",
+        "Status": "C",
+        "Point X": 29.8,
+        "Point Y": -0.6,
+        "Country": "Uganda",
+        "X Utm": 144279.32,
+        "Y Utm200K": 133516.45
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.804722000453157,
+          -0.600556000063348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 29.0,
+        "Place Name": "Gayaza",
+        "Status": "C",
+        "Point X": 30.78,
+        "Point Y": -0.76,
+        "Country": "Uganda",
+        "X Utm": 252743.11,
+        "Y Utm200K": 116363.68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.778332999853298,
+          -0.756111000247843
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 30.0,
+        "Place Name": "Goli",
+        "Status": "C",
+        "Point X": 31.02,
+        "Point Y": 2.4,
+        "Country": "Uganda",
+        "X Utm": 280287.31,
+        "Y Utm200K": 465555.23
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.024166999753614,
+          2.401110999971726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 31.0,
+        "Place Name": "Ibanda",
+        "Status": "C",
+        "Point X": 30.5,
+        "Point Y": -0.12,
+        "Country": "Uganda",
+        "X Utm": 221600.54,
+        "Y Utm200K": 186785.17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.498888999625237,
+          -0.119443999723391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 32.0,
+        "Place Name": "Ibuje",
+        "Status": "C",
+        "Point X": 32.37,
+        "Point Y": 1.91,
+        "Country": "Uganda",
+        "X Utm": 430088.36,
+        "Y Utm200K": 410665.34
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.37138900036355,
+          1.905833000413242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 33.0,
+        "Place Name": "Iganga",
+        "Status": "A",
+        "Point X": 33.47,
+        "Point Y": 0.62,
+        "Country": "Uganda",
+        "X Utm": 552142.22,
+        "Y Utm200K": 268530.96
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.46861099982411,
+          0.619999999836651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 34.0,
+        "Place Name": "Inde",
+        "Status": "C",
+        "Point X": 31.22,
+        "Point Y": 2.88,
+        "Country": "Uganda",
+        "X Utm": 302672.74,
+        "Y Utm200K": 518820.81
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.224721999784848,
+          2.883055999601511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 35.0,
+        "Place Name": "Kakumiro",
+        "Status": "C",
+        "Point X": 31.32,
+        "Point Y": 0.79,
+        "Country": "Uganda",
+        "X Utm": 312708.41,
+        "Y Utm200K": 286926.69
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.316944000053745,
+          0.786111000363052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 36.0,
+        "Place Name": "Kaabong",
+        "Status": "C",
+        "Point X": 34.12,
+        "Point Y": 3.52,
+        "Country": "Uganda",
+        "X Utm": 624742.25,
+        "Y Utm200K": 588777.26
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.12305600020042,
+          3.516667000313924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 37.0,
+        "Place Name": "Kabasanda",
+        "Status": "C",
+        "Point X": 32.21,
+        "Point Y": 0.28,
+        "Country": "Uganda",
+        "X Utm": 412461.9,
+        "Y Utm200K": 230460.11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.21333300006477,
+          0.275555999667527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 38.0,
+        "Place Name": "Kachumbala",
+        "Status": "C",
+        "Point X": 34.1,
+        "Point Y": 1.23,
+        "Country": "Uganda",
+        "X Utm": 621949.18,
+        "Y Utm200K": 336222.85
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.09611100003231,
+          1.232221999839203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 39.0,
+        "Place Name": "Kagulu",
+        "Status": "C",
+        "Point X": 33.3,
+        "Point Y": 1.25,
+        "Country": "Uganda",
+        "X Utm": 532880.3,
+        "Y Utm200K": 338655.83
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.29555600019034,
+          1.254443999833968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 40.0,
+        "Place Name": "Kakabara",
+        "Status": "C",
+        "Point X": 30.95,
+        "Point Y": 0.54,
+        "Country": "Uganda",
+        "X Utm": 271507.01,
+        "Y Utm200K": 259386.84
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.946944000045214,
+          0.536944000101648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 41.0,
+        "Place Name": "Kakitumba",
+        "Status": "C",
+        "Point X": 30.44,
+        "Point Y": -1.06,
+        "Country": "Uganda",
+        "X Utm": 215058.37,
+        "Y Utm200K": 82474.34
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.43972199982265,
+          -1.06222200024896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 42.0,
+        "Place Name": "Kakoro",
+        "Status": "C",
+        "Point X": 34.03,
+        "Point Y": 1.18,
+        "Country": "Uganda",
+        "X Utm": 615120.68,
+        "Y Utm200K": 330477.78
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.03472200033595,
+          1.180277999755919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 43.0,
+        "Place Name": "Kalaki",
+        "Status": "C",
+        "Point X": 33.33,
+        "Point Y": 1.82,
+        "Country": "Uganda",
+        "X Utm": 536300.98,
+        "Y Utm200K": 400861.59
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.326388999976956,
+          1.817221999639122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 44.0,
+        "Place Name": "Kalangalo",
+        "Status": "C",
+        "Point X": 31.95,
+        "Point Y": 0.57,
+        "Country": "Uganda",
+        "X Utm": 383315.06,
+        "Y Utm200K": 263166.32
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.951388999845776,
+          0.571388999940072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 45.0,
+        "Place Name": "Kaliro",
+        "Status": "C",
+        "Point X": 33.5,
+        "Point Y": 0.9,
+        "Country": "Uganda",
+        "X Utm": 555167.72,
+        "Y Utm200K": 299542.33
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.49583300031061,
+          0.900556000287267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 46.0,
+        "Place Name": "Kamengo",
+        "Status": "C",
+        "Point X": 32.21,
+        "Point Y": 0.15,
+        "Country": "Uganda",
+        "X Utm": 412306.6,
+        "Y Utm200K": 216366.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.21194400000783,
+          0.148055999721501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 47.0,
+        "Place Name": "Kamuge",
+        "Status": "C",
+        "Point X": 33.8,
+        "Point Y": 1.17,
+        "Country": "Uganda",
+        "X Utm": 589406.22,
+        "Y Utm200K": 329302.41
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.80361099967253,
+          1.169721999745653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 48.0,
+        "Place Name": "Kamuli",
+        "Status": "A",
+        "Point X": 33.11,
+        "Point Y": 0.95,
+        "Country": "Uganda",
+        "X Utm": 512393.12,
+        "Y Utm200K": 305065.29
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.11138900003566,
+          0.950556000443427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 49.0,
+        "Place Name": "Kangole",
+        "Status": "C",
+        "Point X": 34.47,
+        "Point Y": 2.48,
+        "Country": "Uganda",
+        "X Utm": 663069.95,
+        "Y Utm200K": 473653.72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.46666699957007,
+          2.475000000092387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 50.0,
+        "Place Name": "Kanoni",
+        "Status": "C",
+        "Point X": 31.89,
+        "Point Y": 0.18,
+        "Country": "Uganda",
+        "X Utm": 376972.22,
+        "Y Utm200K": 220052.69
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.894443999573554,
+          0.181388999691507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 51.0,
+        "Place Name": "Kapchorwa",
+        "Status": "A",
+        "Point X": 34.44,
+        "Point Y": 1.4,
+        "Country": "Uganda",
+        "X Utm": 660730.52,
+        "Y Utm200K": 355313.98
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.444722000023354,
+          1.40472200024353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 52.0,
+        "Place Name": "Kasanda",
+        "Status": "C",
+        "Point X": 31.81,
+        "Point Y": 0.55,
+        "Country": "Uganda",
+        "X Utm": 367270.18,
+        "Y Utm200K": 261204.02
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.80722199980055,
+          0.55361099988265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 53.0,
+        "Place Name": "Kasese",
+        "Status": "A",
+        "Point X": 30.01,
+        "Point Y": 0.21,
+        "Country": "Uganda",
+        "X Utm": 167385.56,
+        "Y Utm200K": 223366.09
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.01222200036439,
+          0.211110999783812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 54.0,
+        "Place Name": "Katakwi",
+        "Status": "A",
+        "Point X": 33.95,
+        "Point Y": 1.92,
+        "Country": "Uganda",
+        "X Utm": 605904.31,
+        "Y Utm200K": 412186.51
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.952222000230776,
+          1.919443999621042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 55.0,
+        "Place Name": "Kayunga",
+        "Status": "A",
+        "Point X": 32.89,
+        "Point Y": 0.71,
+        "Country": "Uganda",
+        "X Utm": 487729.74,
+        "Y Utm200K": 278230.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.88972199994722,
+          0.707778000004498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 56.0,
+        "Place Name": "Kiboga",
+        "Status": "A",
+        "Point X": 31.77,
+        "Point Y": 0.91,
+        "Country": "Uganda",
+        "X Utm": 363169.3,
+        "Y Utm200K": 300605.75
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.770277999691263,
+          0.909999999658384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 57.0,
+        "Place Name": "Kidera",
+        "Status": "C",
+        "Point X": 32.8,
+        "Point Y": 1.36,
+        "Country": "Uganda",
+        "X Utm": 478121.94,
+        "Y Utm200K": 349953.64
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.80333299990013,
+          1.356666999650809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 58.0,
+        "Place Name": "Kilak",
+        "Status": "C",
+        "Point X": 32.16,
+        "Point Y": 2.85,
+        "Country": "Uganda",
+        "X Utm": 406702.05,
+        "Y Utm200K": 514678.78
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.160555999945814,
+          2.846667000042848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 59.0,
+        "Place Name": "Kiriri",
+        "Status": "C",
+        "Point X": 32.05,
+        "Point Y": 0.21,
+        "Country": "Uganda",
+        "X Utm": 393759.1,
+        "Y Utm200K": 223214.55
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.045277999709,
+          0.210000000122713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 60.0,
+        "Place Name": "Kiruhura",
+        "Status": "C",
+        "Point X": 30.84,
+        "Point Y": -0.2,
+        "Country": "Uganda",
+        "X Utm": 260054.16,
+        "Y Utm200K": 178277.64
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.844166999679175,
+          -0.196389000343344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 61.0,
+        "Place Name": "Kiryandongo",
+        "Status": "C",
+        "Point X": 32.03,
+        "Point Y": 1.86,
+        "Country": "Uganda",
+        "X Utm": 392300.26,
+        "Y Utm200K": 406046.07
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.03166700000182,
+          1.863888999591242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 62.0,
+        "Place Name": "Kisomoro",
+        "Status": "C",
+        "Point X": 30.15,
+        "Point Y": 0.54,
+        "Country": "Uganda",
+        "X Utm": 182810.63,
+        "Y Utm200K": 259883.58
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.15055599992866,
+          0.541111000382764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 63.0,
+        "Place Name": "Kisoro",
+        "Status": "A",
+        "Point X": 29.68,
+        "Point Y": -1.28,
+        "Country": "Uganda",
+        "X Utm": 130574.61,
+        "Y Utm200K": 58159.08
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.681111000425727,
+          -1.281111000399612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 64.0,
+        "Place Name": "Kitembo",
+        "Status": "C",
+        "Point X": 31.41,
+        "Point Y": -0.22,
+        "Country": "Uganda",
+        "X Utm": 323422.3,
+        "Y Utm200K": 175305.46
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.413332999616415,
+          -0.223332999855347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 65.0,
+        "Place Name": "Kitgum Matidi",
+        "Status": "C",
+        "Point X": 33.07,
+        "Point Y": 3.26,
+        "Country": "Uganda",
+        "X Utm": 507560.77,
+        "Y Utm200K": 560209.31
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0680560001597,
+          3.258889000160297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 66.0,
+        "Place Name": "Kitoba",
+        "Status": "C",
+        "Point X": 31.32,
+        "Point Y": 1.56,
+        "Country": "Uganda",
+        "X Utm": 313100.26,
+        "Y Utm200K": 372870.47
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.31999999963811,
+          1.56333299960616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 67.0,
+        "Place Name": "Kitoma",
+        "Status": "C",
+        "Point X": 30.96,
+        "Point Y": 1.11,
+        "Country": "Uganda",
+        "X Utm": 273178.4,
+        "Y Utm200K": 322305.82
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.961667000020192,
+          1.105832999785977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 68.0,
+        "Place Name": "Koboko",
+        "Status": "C",
+        "Point X": 30.95,
+        "Point Y": 3.42,
+        "Country": "Uganda",
+        "X Utm": 272427.3,
+        "Y Utm200K": 578598.02
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.951667000287323,
+          3.423056000289973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 69.0,
+        "Place Name": "Kotido",
+        "Status": "A",
+        "Point X": 34.11,
+        "Point Y": 3.01,
+        "Country": "Uganda",
+        "X Utm": 623199.64,
+        "Y Utm200K": 532423.25
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.108610999625654,
+          3.006943999917012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 70.0,
+        "Place Name": "Kumi",
+        "Status": "A",
+        "Point X": 33.92,
+        "Point Y": 1.49,
+        "Country": "Uganda",
+        "X Utm": 602497.43,
+        "Y Utm200K": 364957.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.92138899997959,
+          1.492221999600632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 71.0,
+        "Place Name": "Kyenjojo",
+        "Status": "A",
+        "Point X": 30.63,
+        "Point Y": 0.62,
+        "Country": "Uganda",
+        "X Utm": 236588.98,
+        "Y Utm200K": 268249.48
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.633332999560118,
+          0.616943999608568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 72.0,
+        "Place Name": "Laropi",
+        "Status": "C",
+        "Point X": 31.81,
+        "Point Y": 3.56,
+        "Country": "Uganda",
+        "X Utm": 368074.58,
+        "Y Utm200K": 594068.29
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.812221999582274,
+          3.564443999595279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 73.0,
+        "Place Name": "Lodonga",
+        "Status": "C",
+        "Point X": 31.11,
+        "Point Y": 3.41,
+        "Country": "Uganda",
+        "X Utm": 289498.35,
+        "Y Utm200K": 577641.23
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.105278000225386,
+          3.414722000016797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 74.0,
+        "Place Name": "Lugazi",
+        "Status": "B",
+        "Point X": 32.92,
+        "Point Y": 0.38,
+        "Country": "Uganda",
+        "X Utm": 491623.63,
+        "Y Utm200K": 242400.58
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.92472200001048,
+          0.383610999799905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 75.0,
+        "Place Name": "Luwero",
+        "Status": "A",
+        "Point X": 32.48,
+        "Point Y": 0.85,
+        "Country": "Uganda",
+        "X Utm": 441771.74,
+        "Y Utm200K": 294353.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.476667000317605,
+          0.853611000369796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 76.0,
+        "Place Name": "Madi Opei",
+        "Status": "C",
+        "Point X": 33.08,
+        "Point Y": 3.62,
+        "Country": "Uganda",
+        "X Utm": 508606.75,
+        "Y Utm200K": 599817.41
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.07750000041538,
+          3.617221999957208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 77.0,
+        "Place Name": "Madudu",
+        "Status": "C",
+        "Point X": 31.47,
+        "Point Y": 0.69,
+        "Country": "Uganda",
+        "X Utm": 329400.97,
+        "Y Utm200K": 276047.57
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.46694399989901,
+          0.687777999709862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 78.0,
+        "Place Name": "Magabbi",
+        "Status": "C",
+        "Point X": 31.27,
+        "Point Y": -0.9,
+        "Country": "Uganda",
+        "X Utm": 307674.26,
+        "Y Utm200K": 99985.88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.271667000267964,
+          -0.904443999583567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 79.0,
+        "Place Name": "Magoro",
+        "Status": "C",
+        "Point X": 34.09,
+        "Point Y": 1.73,
+        "Country": "Uganda",
+        "X Utm": 621056.86,
+        "Y Utm200K": 390975.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.08833299980173,
+          1.727500000090385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 80.0,
+        "Place Name": "Mahagi-Port",
+        "Status": "C",
+        "Point X": 31.23,
+        "Point Y": 2.16,
+        "Country": "Uganda",
+        "X Utm": 302717.81,
+        "Y Utm200K": 438492.59
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.226110999564984,
+          2.156666999708488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 81.0,
+        "Place Name": "Namayingo",
+        "Status": "C",
+        "Point X": 33.89,
+        "Point Y": 0.33,
+        "Country": "Uganda",
+        "X Utm": 599377.15,
+        "Y Utm200K": 236878.55
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.893055999776,
+          0.333611000266224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 82.0,
+        "Place Name": "Makando",
+        "Status": "C",
+        "Point X": 31.51,
+        "Point Y": -0.47,
+        "Country": "Uganda",
+        "X Utm": 334403.4,
+        "Y Utm200K": 148094.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.511944000205904,
+          -0.46944400032416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 83.0,
+        "Place Name": "Maracha",
+        "Status": "C",
+        "Point X": 30.95,
+        "Point Y": 3.28,
+        "Country": "Uganda",
+        "X Utm": 272054.11,
+        "Y Utm200K": 562591.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.948610999767826,
+          3.278333000092069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 84.0,
+        "Place Name": "Masaka",
+        "Status": "A",
+        "Point X": 31.73,
+        "Point Y": -0.34,
+        "Country": "Uganda",
+        "X Utm": 359104.39,
+        "Y Utm200K": 162963.33
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.733888999856024,
+          -0.334999999981939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 85.0,
+        "Place Name": "Masindi Port",
+        "Status": "C",
+        "Point X": 32.07,
+        "Point Y": 1.7,
+        "Country": "Uganda",
+        "X Utm": 396894.89,
+        "Y Utm200K": 387864.91
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.073056000341055,
+          1.699444000119766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 86.0,
+        "Place Name": "Mayenze",
+        "Status": "C",
+        "Point X": 34.27,
+        "Point Y": 0.96,
+        "Country": "Uganda",
+        "X Utm": 640754.84,
+        "Y Utm200K": 305766.49
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.264999999895764,
+          0.956666999598595
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 87.0,
+        "Place Name": "Mazimasa",
+        "Status": "C",
+        "Point X": 34.04,
+        "Point Y": 0.97,
+        "Country": "Uganda",
+        "X Utm": 615283.04,
+        "Y Utm200K": 307508.27
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.036111000091445,
+          0.972500000162209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 88.0,
+        "Place Name": "Molo",
+        "Status": "C",
+        "Point X": 34.17,
+        "Point Y": 0.85,
+        "Country": "Uganda",
+        "X Utm": 629722.97,
+        "Y Utm200K": 293570.98
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.16583300038441,
+          0.846389000190608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 89.0,
+        "Place Name": "Moroto",
+        "Status": "A",
+        "Point X": 34.65,
+        "Point Y": 2.53,
+        "Country": "Uganda",
+        "X Utm": 682987.45,
+        "Y Utm200K": 480127.44
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.645832999587505,
+          2.533333000417463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 90.0,
+        "Place Name": "Moyo",
+        "Status": "A",
+        "Point X": 31.72,
+        "Point Y": 3.65,
+        "Country": "Uganda",
+        "X Utm": 358244.24,
+        "Y Utm200K": 603479.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7236109995721,
+          3.649443999621104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 91.0,
+        "Place Name": "Mubende",
+        "Status": "A",
+        "Point X": 31.37,
+        "Point Y": 0.58,
+        "Country": "Uganda",
+        "X Utm": 318482.8,
+        "Y Utm200K": 264348.57
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.368888999674272,
+          0.581943999663101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 92.0,
+        "Place Name": "Muntu",
+        "Status": "C",
+        "Point X": 32.88,
+        "Point Y": 1.57,
+        "Country": "Uganda",
+        "X Utm": 487022.73,
+        "Y Utm200K": 373840.03
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.883332999716515,
+          1.572778000174618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 93.0,
+        "Place Name": "Mutoke",
+        "Status": "C",
+        "Point X": 31.29,
+        "Point Y": -0.16,
+        "Country": "Uganda",
+        "X Utm": 309723.1,
+        "Y Utm200K": 181815.85
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.290277999857874,
+          -0.164444000016444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 94.0,
+        "Place Name": "Myanzi",
+        "Status": "C",
+        "Point X": 31.91,
+        "Point Y": 0.44,
+        "Country": "Uganda",
+        "X Utm": 378799.18,
+        "Y Utm200K": 248611.34
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.910832999576197,
+          0.439722000229705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 95.0,
+        "Place Name": "Naam Okora",
+        "Status": "C",
+        "Point X": 33.32,
+        "Point Y": 3.36,
+        "Country": "Uganda",
+        "X Utm": 535670.75,
+        "Y Utm200K": 571513.89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.321111000233245,
+          3.361111000119651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 96.0,
+        "Place Name": "Nabilatuk",
+        "Status": "C",
+        "Point X": 34.57,
+        "Point Y": 2.05,
+        "Country": "Uganda",
+        "X Utm": 674117.74,
+        "Y Utm200K": 427133.43
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.565555999912135,
+          2.054166999932069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 97.0,
+        "Place Name": "Nabiswera",
+        "Status": "C",
+        "Point X": 32.26,
+        "Point Y": 1.47,
+        "Country": "Uganda",
+        "X Utm": 417557.71,
+        "Y Utm200K": 362984.45
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.258889000184745,
+          1.474444000077776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 98.0,
+        "Place Name": "Naboa",
+        "Status": "C",
+        "Point X": 34.01,
+        "Point Y": 1.05,
+        "Country": "Uganda",
+        "X Utm": 612498.54,
+        "Y Utm200K": 315798.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.01111100001922,
+          1.047500000271029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 99.0,
+        "Place Name": "Nabubare",
+        "Status": "C",
+        "Point X": 31.09,
+        "Point Y": -0.74,
+        "Country": "Uganda",
+        "X Utm": 287844.64,
+        "Y Utm200K": 118561.47
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.09361099976041,
+          -0.736389000038083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 100.0,
+        "Place Name": "Nabusanke",
+        "Status": "C",
+        "Point X": 32.04,
+        "Point Y": 0.02,
+        "Country": "Uganda",
+        "X Utm": 392861.84,
+        "Y Utm200K": 202118.83
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.037222000340556,
+          0.019166999612296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 101.0,
+        "Place Name": "Nabyeso",
+        "Status": "C",
+        "Point X": 32.78,
+        "Point Y": 1.87,
+        "Country": "Uganda",
+        "X Utm": 475872.32,
+        "Y Utm200K": 407000.47
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.78305599966452,
+          1.872778000229836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 102.0,
+        "Place Name": "Nagongera",
+        "Status": "C",
+        "Point X": 34.01,
+        "Point Y": 0.78,
+        "Country": "Uganda",
+        "X Utm": 612877.88,
+        "Y Utm200K": 285735.82
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.01444399963747,
+          0.775555999589473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 103.0,
+        "Place Name": "Naigobia",
+        "Status": "C",
+        "Point X": 33.35,
+        "Point Y": 0.83,
+        "Country": "Uganda",
+        "X Utm": 538726.08,
+        "Y Utm200K": 292202.29
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.348056000092804,
+          0.834166999626575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 104.0,
+        "Place Name": "Nakasongola",
+        "Status": "A",
+        "Point X": 32.45,
+        "Point Y": 1.33,
+        "Country": "Uganda",
+        "X Utm": 439339.41,
+        "Y Utm200K": 346489.98
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.454721999574325,
+          1.325277999829168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 105.0,
+        "Place Name": "Nakitoma",
+        "Status": "C",
+        "Point X": 32.08,
+        "Point Y": 1.53,
+        "Country": "Uganda",
+        "X Utm": 397813.52,
+        "Y Utm200K": 369440.34
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.08138900008309,
+          1.532778000093268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 106.0,
+        "Place Name": "Namasale",
+        "Status": "C",
+        "Point X": 32.62,
+        "Point Y": 1.51,
+        "Country": "Uganda",
+        "X Utm": 457266.24,
+        "Y Utm200K": 366812.46
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.61583300016916,
+          1.509166999980461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 107.0,
+        "Place Name": "Namwiwa",
+        "Status": "C",
+        "Point X": 33.54,
+        "Point Y": 1.09,
+        "Country": "Uganda",
+        "X Utm": 559893.02,
+        "Y Utm200K": 320943.85
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5383329996534,
+          1.094166999947902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 108.0,
+        "Place Name": "Ndolwa",
+        "Status": "C",
+        "Point X": 33.07,
+        "Point Y": 1.22,
+        "Country": "Uganda",
+        "X Utm": 508189.22,
+        "Y Utm200K": 334632.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.07361100042138,
+          1.218055999818081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 109.0,
+        "Place Name": "Ngora",
+        "Status": "C",
+        "Point X": 33.77,
+        "Point Y": 1.46,
+        "Country": "Uganda",
+        "X Utm": 585192.99,
+        "Y Utm200K": 361726.54
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.76583299963984,
+          1.463056000441953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 110.0,
+        "Place Name": "Nimule",
+        "Status": "C",
+        "Point X": 32.05,
+        "Point Y": 3.6,
+        "Country": "Uganda",
+        "X Utm": 394337.3,
+        "Y Utm200K": 598367.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.048611000343584,
+          3.603611000032782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 111.0,
+        "Place Name": "Nkoko",
+        "Status": "C",
+        "Point X": 31.42,
+        "Point Y": 0.96,
+        "Country": "Uganda",
+        "X Utm": 324033.15,
+        "Y Utm200K": 306364.59
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.418611000392318,
+          0.961944000217677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 112.0,
+        "Place Name": "Ntungamo",
+        "Status": "A",
+        "Point X": 30.26,
+        "Point Y": -0.87,
+        "Country": "Uganda",
+        "X Utm": 195488.5,
+        "Y Utm200K": 103974.21
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.264166999819665,
+          -0.867778000447726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 113.0,
+        "Place Name": "Ntusi",
+        "Status": "C",
+        "Point X": 31.19,
+        "Point Y": 0.06,
+        "Country": "Uganda",
+        "X Utm": 298249.41,
+        "Y Utm200K": 206543.03
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.187221999967733,
+          0.059166999810934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 114.0,
+        "Place Name": "Ntwetwe",
+        "Status": "C",
+        "Point X": 31.58,
+        "Point Y": 0.96,
+        "Country": "Uganda",
+        "X Utm": 341562.43,
+        "Y Utm200K": 306019.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.576111000211014,
+          0.95888899960449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 115.0,
+        "Place Name": "Okollo",
+        "Status": "C",
+        "Point X": 31.14,
+        "Point Y": 2.68,
+        "Country": "Uganda",
+        "X Utm": 292722.32,
+        "Y Utm200K": 496073.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.13555600027528,
+          2.677221999822781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 116.0,
+        "Place Name": "Omugo",
+        "Status": "C",
+        "Point X": 31.11,
+        "Point Y": 3.27,
+        "Country": "Uganda",
+        "X Utm": 290425.45,
+        "Y Utm200K": 562064.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.113889000249706,
+          3.273889000041999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 117.0,
+        "Place Name": "Orungo",
+        "Status": "C",
+        "Point X": 33.44,
+        "Point Y": 2.04,
+        "Country": "Uganda",
+        "X Utm": 549455.74,
+        "Y Utm200K": 425581.16
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.44472199975567,
+          2.040832999862023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 118.0,
+        "Place Name": "Otuboi",
+        "Status": "C",
+        "Point X": 33.28,
+        "Point Y": 1.92,
+        "Country": "Uganda",
+        "X Utm": 531572.3,
+        "Y Utm200K": 411944.78
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.28388899959654,
+          1.917500000063954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 119.0,
+        "Place Name": "Padibe",
+        "Status": "C",
+        "Point X": 32.82,
+        "Point Y": 3.47,
+        "Country": "Uganda",
+        "X Utm": 480222.87,
+        "Y Utm200K": 583515.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.821943999678076,
+          3.469721999778299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 120.0,
+        "Place Name": "Pajule",
+        "Status": "C",
+        "Point X": 32.92,
+        "Point Y": 2.97,
+        "Country": "Uganda",
+        "X Utm": 491264.2,
+        "Y Utm200K": 527755.56
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.92138899986732,
+          2.965278000372672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 121.0,
+        "Place Name": "Pakwach",
+        "Status": "B",
+        "Point X": 31.48,
+        "Point Y": 2.47,
+        "Country": "Uganda",
+        "X Utm": 331276.43,
+        "Y Utm200K": 473230.07
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.482500000030758,
+          2.471111000352312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 122.0,
+        "Place Name": "Pallisa",
+        "Status": "A",
+        "Point X": 33.7,
+        "Point Y": 1.17,
+        "Country": "Uganda",
+        "X Utm": 577661.94,
+        "Y Utm200K": 329575.61
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.69805600021803,
+          1.172222000231825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 123.0,
+        "Place Name": "Panyimur",
+        "Status": "C",
+        "Point X": 31.33,
+        "Point Y": 2.3,
+        "Country": "Uganda",
+        "X Utm": 314108.1,
+        "Y Utm200K": 454667.26
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.328332999716935,
+          2.303056000400089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 124.0,
+        "Place Name": "Paraa",
+        "Status": "C",
+        "Point X": 31.56,
+        "Point Y": 2.3,
+        "Country": "Uganda",
+        "X Utm": 340030.0,
+        "Y Utm200K": 454454.66
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.561388999826168,
+          2.301389000053021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 125.0,
+        "Place Name": "Parombo",
+        "Status": "C",
+        "Point X": 31.19,
+        "Point Y": 2.31,
+        "Country": "Uganda",
+        "X Utm": 299185.42,
+        "Y Utm200K": 455914.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.194166999607635,
+          2.314167000041936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 126.0,
+        "Place Name": "Patongo",
+        "Status": "C",
+        "Point X": 33.3,
+        "Point Y": 2.77,
+        "Country": "Uganda",
+        "X Utm": 533405.64,
+        "Y Utm200K": 506389.73
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.30055599976857,
+          2.771943999557085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 127.0,
+        "Place Name": "Petete",
+        "Status": "C",
+        "Point X": 33.92,
+        "Point Y": 1.18,
+        "Country": "Uganda",
+        "X Utm": 602757.69,
+        "Y Utm200K": 330197.07
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.923611000163724,
+          1.177778000402123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 128.0,
+        "Place Name": "Puranga",
+        "Status": "C",
+        "Point X": 32.93,
+        "Point Y": 2.63,
+        "Country": "Uganda",
+        "X Utm": 491879.17,
+        "Y Utm200K": 490266.45
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.92694400013884,
+          2.626111000386853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 129.0,
+        "Place Name": "Rhino Camp",
+        "Status": "C",
+        "Point X": 31.38,
+        "Point Y": 2.98,
+        "Country": "Uganda",
+        "X Utm": 320384.38,
+        "Y Utm200K": 529084.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3838890002076,
+          2.97611100023766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 130.0,
+        "Place Name": "Rubirizi",
+        "Status": "C",
+        "Point X": 30.11,
+        "Point Y": -0.26,
+        "Country": "Uganda",
+        "X Utm": 177786.2,
+        "Y Utm200K": 171010.08
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.105555999710006,
+          -0.261944000383016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 131.0,
+        "Place Name": "Sironko",
+        "Status": "A",
+        "Point X": 34.24,
+        "Point Y": 1.24,
+        "Country": "Uganda",
+        "X Utm": 637805.33,
+        "Y Utm200K": 336659.76
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.23861099964475,
+          1.236110999588829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 132.0,
+        "Place Name": "Terego",
+        "Status": "C",
+        "Point X": 30.99,
+        "Point Y": 3.15,
+        "Country": "Uganda",
+        "X Utm": 277028.19,
+        "Y Utm200K": 548172.75
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.99361099956459,
+          3.148055999715687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 133.0,
+        "Place Name": "Uleppi",
+        "Status": "C",
+        "Point X": 31.03,
+        "Point Y": 2.78,
+        "Country": "Uganda",
+        "X Utm": 280599.14,
+        "Y Utm200K": 507090.65
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.02638900033992,
+          2.776667000045244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 134.0,
+        "Place Name": "War",
+        "Status": "C",
+        "Point X": 30.88,
+        "Point Y": 2.6,
+        "Country": "Uganda",
+        "X Utm": 264069.05,
+        "Y Utm200K": 488131.4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.878056000258635,
+          2.605000000325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 135.0,
+        "Place Name": "Wera",
+        "Status": "C",
+        "Point X": 33.75,
+        "Point Y": 1.87,
+        "Country": "Uganda",
+        "X Utm": 583198.2,
+        "Y Utm200K": 406801.73
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.748055999661865,
+          1.870832999963139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 136.0,
+        "Place Name": "Wobulenzi",
+        "Status": "B",
+        "Point X": 32.52,
+        "Point Y": 0.73,
+        "Country": "Uganda",
+        "X Utm": 446406.19,
+        "Y Utm200K": 280536.32
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.518332999721174,
+          0.728610999907496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 137.0,
+        "Place Name": "Yumbe",
+        "Status": "A",
+        "Point X": 31.24,
+        "Point Y": 3.46,
+        "Country": "Uganda",
+        "X Utm": 304511.4,
+        "Y Utm200K": 582927.05
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.240278000395772,
+          3.462778000002503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 138.0,
+        "Place Name": "Kabatoro",
+        "Status": "C",
+        "Point X": 29.92,
+        "Point Y": -0.13,
+        "Country": "Uganda",
+        "X Utm": 156952.9,
+        "Y Utm200K": 185702.35
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.918611000058707,
+          -0.129166999751711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 141.0,
+        "Place Name": "Kikungiri",
+        "Status": "C",
+        "Point X": 29.98,
+        "Point Y": -1.27,
+        "Country": "Uganda",
+        "X Utm": 163627.64,
+        "Y Utm200K": 59306.88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.97777799983954,
+          -1.271111000309999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 142.0,
+        "Place Name": "Makiro",
+        "Status": "C",
+        "Point X": 29.77,
+        "Point Y": -0.9,
+        "Country": "Uganda",
+        "X Utm": 140341.17,
+        "Y Utm200K": 100609.46
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.769166999979365,
+          -0.897778000324023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 143.0,
+        "Place Name": "Lwampanga",
+        "Status": "C",
+        "Point X": 32.52,
+        "Point Y": 1.5,
+        "Country": "Uganda",
+        "X Utm": 446264.15,
+        "Y Utm200K": 366213.78
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.516930000194485,
+          1.503731000197045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 144.0,
+        "Place Name": "Muhororo",
+        "Status": "C",
+        "Point X": 30.75,
+        "Point Y": 0.92,
+        "Country": "Uganda",
+        "X Utm": 249440.71,
+        "Y Utm200K": 302256.39
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.748579000371617,
+          0.924426000009741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 145.0,
+        "Place Name": "Munteme",
+        "Status": "C",
+        "Point X": 31.19,
+        "Point Y": 1.33,
+        "Country": "Uganda",
+        "X Utm": 298147.92,
+        "Y Utm200K": 346722.78
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.18582800020312,
+          1.326775000181043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 146.0,
+        "Place Name": "Kigumba",
+        "Status": "C",
+        "Point X": 31.98,
+        "Point Y": 1.86,
+        "Country": "Uganda",
+        "X Utm": 386191.53,
+        "Y Utm200K": 405443.72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.97675199977581,
+          1.858408999599098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 147.0,
+        "Place Name": "Anaka",
+        "Status": "C",
+        "Point X": 31.92,
+        "Point Y": 2.59,
+        "Country": "Uganda",
+        "X Utm": 380121.88,
+        "Y Utm200K": 485827.06
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.921659000317806,
+          2.585489000315487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 148.0,
+        "Place Name": "Apoka",
+        "Status": "C",
+        "Point X": 33.74,
+        "Point Y": 3.74,
+        "Country": "Uganda",
+        "X Utm": 582333.14,
+        "Y Utm200K": 613548.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7414560000934,
+          3.741139000126231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 149.0,
+        "Place Name": "Loyoro",
+        "Status": "C",
+        "Point X": 34.21,
+        "Point Y": 3.35,
+        "Country": "Uganda",
+        "X Utm": 634535.62,
+        "Y Utm200K": 570527.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2110049997525,
+          3.351488999741717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 150.0,
+        "Place Name": "Obongi",
+        "Status": "C",
+        "Point X": 31.5,
+        "Point Y": 3.34,
+        "Country": "Uganda",
+        "X Utm": 333099.52,
+        "Y Utm200K": 569785.14
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.497737999577996,
+          3.34436900016314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 151.0,
+        "Place Name": "Amola",
+        "Status": "C",
+        "Point X": 33.19,
+        "Point Y": 2.22,
+        "Country": "Uganda",
+        "X Utm": 521246.61,
+        "Y Utm200K": 445319.84
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.19108000031739,
+          2.219461999747046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 152.0,
+        "Place Name": "Ishasha",
+        "Status": "C",
+        "Point X": 29.62,
+        "Point Y": -0.72,
+        "Country": "Uganda",
+        "X Utm": 123708.47,
+        "Y Utm200K": 120363.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.620073000311592,
+          -0.719238000386957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 153.0,
+        "Place Name": "Kafunzo",
+        "Status": "C",
+        "Point X": 30.41,
+        "Point Y": -1.03,
+        "Country": "Uganda",
+        "X Utm": 211349.14,
+        "Y Utm200K": 86076.93
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.406442999818324,
+          -1.02963399986165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 154.0,
+        "Place Name": "Nsongezi",
+        "Status": "C",
+        "Point X": 30.74,
+        "Point Y": -0.98,
+        "Country": "Uganda",
+        "X Utm": 248454.36,
+        "Y Utm200K": 91685.04
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.739684999894358,
+          -0.97919100021184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 155.0,
+        "Place Name": "Rukoma",
+        "Status": "C",
+        "Point X": 30.56,
+        "Point Y": -0.43,
+        "Country": "Uganda",
+        "X Utm": 228612.72,
+        "Y Utm200K": 152108.11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.56178300011956,
+          -0.432898000059019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 156.0,
+        "Place Name": "Lyantonde",
+        "Status": "C",
+        "Point X": 31.15,
+        "Point Y": -0.4,
+        "Country": "Uganda",
+        "X Utm": 294101.01,
+        "Y Utm200K": 155908.97
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.14991699969351,
+          -0.398696000127191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 157.0,
+        "Place Name": "Kabulasoke",
+        "Status": "C",
+        "Point X": 31.8,
+        "Point Y": 0.15,
+        "Country": "Uganda",
+        "X Utm": 366617.6,
+        "Y Utm200K": 216630.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.801410000132048,
+          0.150432000364704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 158.0,
+        "Place Name": "Kiwumulo",
+        "Status": "C",
+        "Point X": 31.51,
+        "Point Y": 0.48,
+        "Country": "Uganda",
+        "X Utm": 334307.91,
+        "Y Utm200K": 253480.14
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.51108299963442,
+          0.483686999784725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 159.0,
+        "Place Name": "Kiini",
+        "Status": "C",
+        "Point X": 32.05,
+        "Point Y": 0.21,
+        "Country": "Uganda",
+        "X Utm": 393771.69,
+        "Y Utm200K": 223448.36
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.04539099975435,
+          0.212115000309748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 160.0,
+        "Place Name": "Kinoni",
+        "Status": "C",
+        "Point X": 30.41,
+        "Point Y": -0.68,
+        "Country": "Uganda",
+        "X Utm": 211439.95,
+        "Y Utm200K": 124533.87
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.40749200040777,
+          -0.682062000257771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 161.0,
+        "Place Name": "Nagalama",
+        "Status": "B",
+        "Point X": 32.78,
+        "Point Y": 0.53,
+        "Country": "Uganda",
+        "X Utm": 475345.47,
+        "Y Utm200K": 259020.52
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.77842699983947,
+          0.533972999582183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 162.0,
+        "Place Name": "Rukungiri",
+        "Status": "A",
+        "Point X": 29.83,
+        "Point Y": -0.8,
+        "Country": "Uganda",
+        "X Utm": 146828.59,
+        "Y Utm200K": 111573.67
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.827464000341923,
+          -0.798785999938439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 163.0,
+        "Place Name": "Mpigi",
+        "Status": "A",
+        "Point X": 32.33,
+        "Point Y": 0.21,
+        "Country": "Uganda",
+        "X Utm": 425041.05,
+        "Y Utm200K": 223089.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.32637400006733,
+          0.208886999875051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 164.0,
+        "Place Name": "Mukono",
+        "Status": "A",
+        "Point X": 32.75,
+        "Point Y": 0.36,
+        "Country": "Uganda",
+        "X Utm": 471711.91,
+        "Y Utm200K": 239486.15
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.74577799998302,
+          0.357239999975129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 166.0,
+        "Place Name": "Bwera",
+        "Status": "C",
+        "Point X": 29.74,
+        "Point Y": 0.02,
+        "Country": "Uganda",
+        "X Utm": 137163.02,
+        "Y Utm200K": 202509.58
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.741045999611607,
+          0.022668000372917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 167.0,
+        "Place Name": "Sango",
+        "Status": "C",
+        "Point X": 30.89,
+        "Point Y": -0.51,
+        "Country": "Uganda",
+        "X Utm": 265427.17,
+        "Y Utm200K": 143977.48
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.892349999889838,
+          -0.506507999719036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 168.0,
+        "Place Name": "Kisozi",
+        "Status": "C",
+        "Point X": 31.59,
+        "Point Y": 0.36,
+        "Country": "Uganda",
+        "X Utm": 343233.38,
+        "Y Utm200K": 239979.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.591293000206093,
+          0.361596999766914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 169.0,
+        "Place Name": "Mbulamuti",
+        "Status": "C",
+        "Point X": 32.12,
+        "Point Y": 0.07,
+        "Country": "Uganda",
+        "X Utm": 402538.2,
+        "Y Utm200K": 208054.17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.12416899975531,
+          0.072859999836609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 170.0,
+        "Place Name": "Mityana",
+        "Status": "B",
+        "Point X": 32.04,
+        "Point Y": 0.39,
+        "Country": "Uganda",
+        "X Utm": 393009.04,
+        "Y Utm200K": 242661.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.03852299968377,
+          0.38592100035905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 171.0,
+        "Place Name": "Bondo",
+        "Status": "C",
+        "Point X": 30.96,
+        "Point Y": 2.89,
+        "Country": "Uganda",
+        "X Utm": 273570.68,
+        "Y Utm200K": 519565.77
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.96299400034316,
+          2.88935099960867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 172.0,
+        "Place Name": "Lalem",
+        "Status": "C",
+        "Point X": 31.85,
+        "Point Y": 2.56,
+        "Country": "Uganda",
+        "X Utm": 372390.91,
+        "Y Utm200K": 483307.66
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.852146000331043,
+          2.562639000224904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 173.0,
+        "Place Name": "Kakooge",
+        "Status": "C",
+        "Point X": 32.43,
+        "Point Y": 1.16,
+        "Country": "Uganda",
+        "X Utm": 437135.72,
+        "Y Utm200K": 328113.09
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.434949000142105,
+          1.159020999726907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 174.0,
+        "Place Name": "Pakuba",
+        "Status": "C",
+        "Point X": 31.45,
+        "Point Y": 2.4,
+        "Country": "Uganda",
+        "X Utm": 327524.8,
+        "Y Utm200K": 465116.14
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.44884999959996,
+          2.397690999884983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 175.0,
+        "Place Name": "Lolim",
+        "Status": "C",
+        "Point X": 31.64,
+        "Point Y": 2.6,
+        "Country": "Uganda",
+        "X Utm": 348319.77,
+        "Y Utm200K": 487879.86
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.635618000330187,
+          2.603779000110927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 176.0,
+        "Place Name": "Wanseko",
+        "Status": "C",
+        "Point X": 31.36,
+        "Point Y": 2.25,
+        "Country": "Uganda",
+        "X Utm": 318084.65,
+        "Y Utm200K": 448387.17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.364147000156215,
+          2.246303999733485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 177.0,
+        "Place Name": "Apac",
+        "Status": "A",
+        "Point X": 32.54,
+        "Point Y": 1.97,
+        "Country": "Uganda",
+        "X Utm": 448585.26,
+        "Y Utm200K": 417875.87
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.53768200010201,
+          1.971118999620685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 178.0,
+        "Place Name": "Atura",
+        "Status": "C",
+        "Point X": 32.34,
+        "Point Y": 2.12,
+        "Country": "Uganda",
+        "X Utm": 426798.99,
+        "Y Utm200K": 434855.55
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.341726000313976,
+          2.124661000345956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 179.0,
+        "Place Name": "Kachung",
+        "Status": "C",
+        "Point X": 32.97,
+        "Point Y": 1.91,
+        "Country": "Uganda",
+        "X Utm": 496773.25,
+        "Y Utm200K": 410890.81
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.97098600033657,
+          1.90798799966687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 180.0,
+        "Place Name": "Kaberamaido",
+        "Status": "A",
+        "Point X": 33.16,
+        "Point Y": 1.75,
+        "Country": "Uganda",
+        "X Utm": 517709.66,
+        "Y Utm200K": 393705.71
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.15922600031199,
+          1.752504000311478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 181.0,
+        "Place Name": "Pader",
+        "Status": "A",
+        "Point X": 33.04,
+        "Point Y": 2.82,
+        "Country": "Uganda",
+        "X Utm": 504446.75,
+        "Y Utm200K": 511752.82
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.040010000402106,
+          2.820501999944983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 182.0,
+        "Place Name": "Arua",
+        "Status": "A",
+        "Point X": 30.9,
+        "Point Y": 3.02,
+        "Country": "Uganda",
+        "X Utm": 266408.08,
+        "Y Utm200K": 534459.78
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.898333000330037,
+          3.023889000050159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 183.0,
+        "Place Name": "Entebbe",
+        "Status": "B",
+        "Point X": 32.47,
+        "Point Y": 0.05,
+        "Country": "Uganda",
+        "X Utm": 440467.05,
+        "Y Utm200K": 205833.81
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.464999999596444,
+          0.052777999776663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 184.0,
+        "Place Name": "Fort Portal",
+        "Status": "A",
+        "Point X": 30.27,
+        "Point Y": 0.67,
+        "Country": "Uganda",
+        "X Utm": 196681.28,
+        "Y Utm200K": 274262.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.275000000002212,
+          0.671111000132328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 185.0,
+        "Place Name": "Gulu",
+        "Status": "A",
+        "Point X": 32.28,
+        "Point Y": 2.78,
+        "Country": "Uganda",
+        "X Utm": 420498.39,
+        "Y Utm200K": 507207.94
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.28472199999607,
+          2.779167000207353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 186.0,
+        "Place Name": "Hoima",
+        "Status": "A",
+        "Point X": 31.34,
+        "Point Y": 1.44,
+        "Country": "Uganda",
+        "X Utm": 315191.93,
+        "Y Utm200K": 359292.42
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.338888999799956,
+          1.440556000331743
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 187.0,
+        "Place Name": "Jinja",
+        "Status": "A",
+        "Point X": 33.2,
+        "Point Y": 0.44,
+        "Country": "Uganda",
+        "X Utm": 522594.44,
+        "Y Utm200K": 248357.21
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.20305600000241,
+          0.437499999761339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 188.0,
+        "Place Name": "Kikagati",
+        "Status": "C",
+        "Point X": 30.66,
+        "Point Y": -1.04,
+        "Country": "Uganda",
+        "X Utm": 239957.34,
+        "Y Utm200K": 85136.75
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.663332999651157,
+          -1.038332999907043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 189.0,
+        "Place Name": "Kitgum",
+        "Status": "A",
+        "Point X": 32.87,
+        "Point Y": 3.29,
+        "Country": "Uganda",
+        "X Utm": 485434.57,
+        "Y Utm200K": 564140.03
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.86888900008794,
+          3.294443999675184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 190.0,
+        "Place Name": "Lira",
+        "Status": "A",
+        "Point X": 32.9,
+        "Point Y": 2.26,
+        "Country": "Uganda",
+        "X Utm": 488881.07,
+        "Y Utm200K": 449369.73
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.89999999988337,
+          2.25611099969518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 191.0,
+        "Place Name": "Masindi",
+        "Status": "A",
+        "Point X": 31.71,
+        "Point Y": 1.68,
+        "Country": "Uganda",
+        "X Utm": 356442.65,
+        "Y Utm200K": 385891.98
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.70944399969262,
+          1.681388999706724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 192.0,
+        "Place Name": "Mbale",
+        "Status": "A",
+        "Point X": 34.17,
+        "Point Y": 1.08,
+        "Country": "Uganda",
+        "X Utm": 629868.68,
+        "Y Utm200K": 319458.99
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.16722199967922,
+          1.080556000023843
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 193.0,
+        "Place Name": "Mbarara",
+        "Status": "A",
+        "Point X": 30.65,
+        "Point Y": -0.61,
+        "Country": "Uganda",
+        "X Utm": 238258.88,
+        "Y Utm200K": 133011.05
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.648332999905914,
+          -0.605555999930453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 194.0,
+        "Place Name": "Soroti",
+        "Status": "A",
+        "Point X": 33.61,
+        "Point Y": 1.71,
+        "Country": "Uganda",
+        "X Utm": 567787.15,
+        "Y Utm200K": 388986.97
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.60944399994095,
+          1.709721999567808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 195.0,
+        "Place Name": "Tororo",
+        "Status": "A",
+        "Point X": 34.17,
+        "Point Y": 0.7,
+        "Country": "Uganda",
+        "X Utm": 630500.2,
+        "Y Utm200K": 277878.69
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.172778000412805,
+          0.704444000191632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 196.0,
+        "Place Name": "Kampala",
+        "Status": "Aa",
+        "Point X": 32.57,
+        "Point Y": 0.32,
+        "Country": "Uganda",
+        "X Utm": 452538.41,
+        "Y Utm200K": 235506.01
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.573471999979795,
+          0.321224999669761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 197.0,
+        "Place Name": "Kabale",
+        "Status": "A",
+        "Point X": 29.98,
+        "Point Y": -1.25,
+        "Country": "Uganda",
+        "X Utm": 164089.15,
+        "Y Utm200K": 61551.89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.981943999944328,
+          -1.250832999657352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 198.0,
+        "Place Name": "Bududa",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 647576.27,
+        "Y Utm200K": 311297.54
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.32631481785552,
+          1.006671175448711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 199.0,
+        "Place Name": "Bulucheke",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 652652.45,
+        "Y Utm200K": 313009.96
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.37193397119563,
+          1.022140468655582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 200.0,
+        "Place Name": "Angutum",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.529278914094895,
+          1.571908289861834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 201.0,
+        "Place Name": "Muyembe",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.29593545136494,
+          1.333663583333585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 202.0,
+        "Place Name": "Nakapiripirit",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.723668441683145,
+          1.8650078586309
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 204.0,
+        "Place Name": "Lokitanyala",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.81709706846162,
+          2.380975537284717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 211.0,
+        "Place Name": "Nadunget",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.547763051573234,
+          2.516134391317411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 212.0,
+        "Place Name": "Akisim",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.21963254368691,
+          2.181554821508345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 213.0,
+        "Place Name": "Bubulo",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.29312096111631,
+          0.945020757878858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 214.0,
+        "Place Name": "Busumbu",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.27795264504362,
+          0.840877734007698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 215.0,
+        "Place Name": "Lwakhakha",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.383471076908705,
+          0.792933934809645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 216.0,
+        "Place Name": "Bumbobi",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.16684436256906,
+          0.994666228654237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 217.0,
+        "Place Name": "Namagumba",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.199617410256025,
+          1.148974795586767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 218.0,
+        "Place Name": "Budadiri",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.325491190849945,
+          1.174645888268764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 219.0,
+        "Place Name": "Nalugugu",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.27224995415684,
+          1.248018724840204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 220.0,
+        "Place Name": "Mutufu",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.369946471054696,
+          1.151095627087741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 221.0,
+        "Place Name": "Lopei",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.36516197771484,
+          2.548152001909601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 222.0,
+        "Place Name": "Lokichar",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.30336536649918,
+          2.610523183107449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 223.0,
+        "Place Name": "Nariwo",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.22283493023667,
+          2.971051799871382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 224.0,
+        "Place Name": "Bukungu",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.86857757016102,
+          1.437075443891507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 225.0,
+        "Place Name": "Tirinyi",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.76238233013381,
+          1.002715949969084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 226.0,
+        "Place Name": "Kamonkoli",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Uganda",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0956912765984,
+          1.071931178682545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 227.0,
+        "Place Name": "Namanve",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.69500964370613,
+          0.361169519230069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 228.0,
+        "Place Name": "Standard Unspecified",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.69472921737362,
+          0.360889098716414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 229.0,
+        "Place Name": "Ssonde",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.68756794265375,
+          0.394328976314434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 230.0,
+        "Place Name": "Bweyogere",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.66319805188638,
+          0.352390082770572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 231.0,
+        "Place Name": "Kakajo",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.66574783100106,
+          0.371790042350782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 232.0,
+        "Place Name": "Kamuli",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.64846140285454,
+          0.36551295038001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 233.0,
+        "Place Name": "Standard Unspecified",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.633158598429944,
+          0.362659422526479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 234.0,
+        "Place Name": "Kyaliwajala",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.64619373360799,
+          0.379777439687835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 235.0,
+        "Place Name": "Kira",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.63882490852785,
+          0.397179904419875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 236.0,
+        "Place Name": "Seeta",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.714490834921875,
+          0.368938829590082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 238.0,
+        "Place Name": "Matuuga",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.52843626071385,
+          0.460157544414367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 239.0,
+        "Place Name": "Kireka",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6490196866775,
+          0.346587616293591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 240.0,
+        "Place Name": "Nambole",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.65378693835113,
+          0.347428880580625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 241.0,
+        "Place Name": "Kasangati",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60274930218769,
+          0.438004526260725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 242.0,
+        "Place Name": "Ssembabule",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.461940684250752,
+          -0.082040557393231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 243.0,
+        "Place Name": "Bukakata",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.02673907036065,
+          -0.273537092851565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 244.0,
+        "Place Name": "Lambu",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.03856572973293,
+          -0.304146882537567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 245.0,
+        "Place Name": "Tonya",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.984672188763657,
+          1.53923211423488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 246.0,
+        "Place Name": "Lamia",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.949020427098496,
+          0.627412904017401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 247.0,
+        "Place Name": "Musingo",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.19509311474081,
+          3.785724383592323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 248.0,
+        "Place Name": "Acholibur",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.91406198370074,
+          3.140412474773124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 249.0,
+        "Place Name": "Kamdini",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.33634804150313,
+          2.248136997992048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 250.0,
+        "Place Name": "Busunju",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.20527008845609,
+          0.568965034800288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 251.0,
+        "Place Name": "Malaba",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.27338890511254,
+          0.632073172039665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 252.0,
+        "Place Name": "Katunguru",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.044911231547903,
+          -0.115543735685965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 253.0,
+        "Place Name": "Kazo",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.75370312638275,
+          -0.0475774625617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 254.0,
+        "Place Name": "Katuna",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.015782797884057,
+          -1.435882499367843
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 0.0,
+        "Place Name": "Mutukula",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.417952012451202,
+          -1.001739345856005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 0.0,
+        "Place Name": "Bunagana",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.590170322392893,
+          -1.295995221665772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 0.0,
+        "Place Name": "Mpondwe",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.710419117862617,
+          0.046547211838837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Objectid": 0.0,
+        "Place Name": "Oraba",
+        "Status": "Standard Unspecified",
+        "Point X": 0.0,
+        "Point Y": 0.0,
+        "Country": "Standard Unspecified",
+        "X Utm": 0.0,
+        "Y Utm200K": 0.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.879692707600107,
+          3.542026390674824
+        ]
+      }
+    }
+  ]
+}

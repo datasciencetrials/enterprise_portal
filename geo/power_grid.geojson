@@ -1,0 +1,405 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.24,
+          2.24
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-001",
+        "Power Facility Name": "Karuma Hydroelectric Power Station",
+        "Generation / Capacity (MW)": 600,
+        "Transmission Voltage (kV)": "400kV",
+        "Energy Plant Classification": "Hydroelectric Dam",
+        "Administrative Territory": "Kiryandongo / Nwoya",
+        "Grid Stability Index (%)": 93.7,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.96,
+          0.83
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-002",
+        "Power Facility Name": "Isimba Hydroelectric Power Station",
+        "Generation / Capacity (MW)": 183,
+        "Transmission Voltage (kV)": "132kV",
+        "Energy Plant Classification": "Hydroelectric Dam",
+        "Administrative Territory": "Kayunga / Kamuli",
+        "Grid Stability Index (%)": 92.5,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.14,
+          0.49
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-003",
+        "Power Facility Name": "Bujagali Hydroelectric Power Station",
+        "Generation / Capacity (MW)": 250,
+        "Transmission Voltage (kV)": "132kV",
+        "Energy Plant Classification": "Hydroelectric Dam",
+        "Administrative Territory": "Jinja",
+        "Grid Stability Index (%)": 98.4,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.19,
+          0.44
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-004",
+        "Power Facility Name": "Nalubaale (Owen Falls) Hydroelectric Station",
+        "Generation / Capacity (MW)": 180,
+        "Transmission Voltage (kV)": "132kV",
+        "Energy Plant Classification": "Hydroelectric Dam",
+        "Administrative Territory": "Jinja",
+        "Grid Stability Index (%)": 99.1,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.18,
+          0.45
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-005",
+        "Power Facility Name": "Kiira Hydroelectric Power Station",
+        "Generation / Capacity (MW)": 200,
+        "Transmission Voltage (kV)": "132kV",
+        "Energy Plant Classification": "Hydroelectric Dam",
+        "Administrative Territory": "Jinja",
+        "Grid Stability Index (%)": 94.4,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.67,
+          -0.95
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-006",
+        "Power Facility Name": "Kikagati Mini-Hydro Power Station",
+        "Generation / Capacity (MW)": 16,
+        "Transmission Voltage (kV)": "33kV",
+        "Energy Plant Classification": "Mini-Hydro",
+        "Administrative Territory": "Isingiro",
+        "Grid Stability Index (%)": 95.2,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.45,
+          0.12
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-007",
+        "Power Facility Name": "Mpanga Hydroelectric Power Station",
+        "Generation / Capacity (MW)": 18,
+        "Transmission Voltage (kV)": "33kV",
+        "Energy Plant Classification": "Mini-Hydro",
+        "Administrative Territory": "Kamwenge",
+        "Grid Stability Index (%)": 93.1,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.05,
+          0.22
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-008",
+        "Power Facility Name": "Nyamwamba Mini-Hydro Station",
+        "Generation / Capacity (MW)": 14,
+        "Transmission Voltage (kV)": "33kV",
+        "Energy Plant Classification": "Mini-Hydro",
+        "Administrative Territory": "Kasese",
+        "Grid Stability Index (%)": 99.4,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.18,
+          1.45
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-009",
+        "Power Facility Name": "Buseruka Thermal / Solar Hybrid Station",
+        "Generation / Capacity (MW)": 50,
+        "Transmission Voltage (kV)": "132kV",
+        "Energy Plant Classification": "Solar / Thermal",
+        "Administrative Territory": "Hoima",
+        "Grid Stability Index (%)": 94.4,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.19,
+          0.68
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-010",
+        "Power Facility Name": "Tororo Solar Power Plant",
+        "Generation / Capacity (MW)": 10,
+        "Transmission Voltage (kV)": "33kV",
+        "Energy Plant Classification": "Solar PV",
+        "Administrative Territory": "Tororo",
+        "Grid Stability Index (%)": 95.8,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.62,
+          1.72
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-011",
+        "Power Facility Name": "Soroti Solar Power Station",
+        "Generation / Capacity (MW)": 10,
+        "Transmission Voltage (kV)": "33kV",
+        "Energy Plant Classification": "Solar PV",
+        "Administrative Territory": "Soroti",
+        "Grid Stability Index (%)": 92.8,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.48,
+          0.46
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-012",
+        "Power Facility Name": "Mayuge Solar Power Plant",
+        "Generation / Capacity (MW)": 10,
+        "Transmission Voltage (kV)": "33kV",
+        "Energy Plant Classification": "Solar PV",
+        "Administrative Territory": "Mayuge",
+        "Grid Stability Index (%)": 98.9,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.56,
+          0.38
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-013",
+        "Power Facility Name": "Kampala North Main Substation Node",
+        "Generation / Capacity (MW)": 300,
+        "Transmission Voltage (kV)": "220kV",
+        "Energy Plant Classification": "Grid Substation Terminal",
+        "Administrative Territory": "Kawempe / Kampala",
+        "Grid Stability Index (%)": 93.1,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.54,
+          0.43
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-014",
+        "Power Facility Name": "Kawanda High Voltage Substation Node",
+        "Generation / Capacity (MW)": 450,
+        "Transmission Voltage (kV)": "400kV",
+        "Energy Plant Classification": "Interconnector Substation",
+        "Administrative Territory": "Wakiso",
+        "Grid Stability Index (%)": 95.5,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7,
+          0.36
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-015",
+        "Power Facility Name": "Namanve Power Substation Node",
+        "Generation / Capacity (MW)": 250,
+        "Transmission Voltage (kV)": "132kV",
+        "Energy Plant Classification": "Industrial Substation",
+        "Administrative Territory": "Mukono",
+        "Grid Stability Index (%)": 97.2,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.66,
+          -0.6
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-016",
+        "Power Facility Name": "Mbarara Main Substation Node",
+        "Generation / Capacity (MW)": 150,
+        "Transmission Voltage (kV)": "132kV",
+        "Energy Plant Classification": "Regional Grid Hub",
+        "Administrative Territory": "Mbarara",
+        "Grid Stability Index (%)": 97.8,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.9,
+          2.25
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-017",
+        "Power Facility Name": "Lira Main Grid Substation Node",
+        "Generation / Capacity (MW)": 180,
+        "Transmission Voltage (kV)": "132kV",
+        "Energy Plant Classification": "Regional Grid Hub",
+        "Administrative Territory": "Lira",
+        "Grid Stability Index (%)": 99.4,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.17,
+          0.67
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-018",
+        "Power Facility Name": "Tororo Interconnector Substation Node",
+        "Generation / Capacity (MW)": 220,
+        "Transmission Voltage (kV)": "220kV",
+        "Energy Plant Classification": "East Africa Interconnector",
+        "Administrative Territory": "Tororo",
+        "Grid Stability Index (%)": 95.3,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.42,
+          -1.02
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-019",
+        "Power Facility Name": "Mirama Hills Grid Substation Node",
+        "Generation / Capacity (MW)": 120,
+        "Transmission Voltage (kV)": "220kV",
+        "Energy Plant Classification": "Rwanda Interconnector Hub",
+        "Administrative Territory": "Ntungamo",
+        "Grid Stability Index (%)": 97.8,
+        "Operational Status": "Active Grid Connection"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.95,
+          2.58
+        ]
+      },
+      "properties": {
+        "Grid Node ID": "PWR-020",
+        "Power Facility Name": "Olwiyo Grid Substation Terminal",
+        "Generation / Capacity (MW)": 200,
+        "Transmission Voltage (kV)": "400kV",
+        "Energy Plant Classification": "Grid Transmission Hub",
+        "Administrative Territory": "Nwoya",
+        "Grid Stability Index (%)": 93.2,
+        "Operational Status": "Active Grid Connection"
+      }
+    }
+  ]
+}
