@@ -1,0 +1,13 @@
+{
+  "last_updated": "2026-09-21T10:49:00Z",
+  "total_network_length_km": 248616,
+  "total_national_roads_km": 21302,
+  "total_ducar_roads_km": 227314,
+  "total_road_links_analyzed": 404047,
+  "data_fullness_percentage": 100.0,
+  "gpu_training": {
+    "hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
+    "pci_r2_score": 0.5048,
+    "classifier_accuracy_pct": 70.23
+  }
+}
