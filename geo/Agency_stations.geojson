@@ -1,0 +1,348 @@
+{
+  "type": "FeatureCollection",
+  "name": "unra_stations",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 1.0,
+        "Lat": 0.22,
+        "Long": 32.33,
+        "Station Na": "Mpigi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3340287594766,
+          0.217193870743763
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 2.0,
+        "Lat": 0.32,
+        "Long": 32.6,
+        "Station Na": "Kampala"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.599728962461995,
+          0.313963122192266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 3.0,
+        "Lat": 0.34,
+        "Long": 31.73,
+        "Station Na": "Masaka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.73121008574931,
+          0.334128080467045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 4.0,
+        "Lat": 0.82,
+        "Long": 32.5,
+        "Station Na": "Luwero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.50422695805789,
+          0.815974665604252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 5.0,
+        "Lat": 0.42,
+        "Long": 33.21,
+        "Station Na": "Jinja"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.21490891174126,
+          0.416870686658096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 6.0,
+        "Lat": 0.34,
+        "Long": 32.63,
+        "Station Na": "Kyambogo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.628062907196394,
+          0.337044424487412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 7.0,
+        "Lat": 0.69,
+        "Long": 34.19,
+        "Station Na": "Tororo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.187346408792216,
+          0.687846724775344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 8.0,
+        "Lat": 1.07,
+        "Long": 34.18,
+        "Station Na": "Mbale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.18154081180831,
+          1.066619033894912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 9.0,
+        "Lat": 1.71,
+        "Long": 33.62,
+        "Station Na": "Soroti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.61589004974242,
+          1.711979607044396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 10.0,
+        "Lat": 3.01,
+        "Long": 34.11,
+        "Station Na": "Kotido"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.11501252509748,
+          3.002340413835086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 11.0,
+        "Lat": 2.53,
+        "Long": 34.66,
+        "Station Na": "Moroto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.66288497551372,
+          2.527852983234556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 12.0,
+        "Lat": 2.25,
+        "Long": 32.9,
+        "Station Na": "Lira"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.903680522596524,
+          2.247266998760904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 13.0,
+        "Lat": 2.78,
+        "Long": 32.3,
+        "Station Na": "Gulu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.29580653918365,
+          2.776305349311563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 14.0,
+        "Lat": 3.3,
+        "Long": 32.88,
+        "Station Na": "Kitgum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.884041864672206,
+          3.292733253875338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 15.0,
+        "Lat": 3.65,
+        "Long": 31.73,
+        "Station Na": "Moyo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.72854478250471,
+          3.650870571603836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 16.0,
+        "Lat": 3.02,
+        "Long": 30.91,
+        "Station Na": "Arua"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.90647073376561,
+          3.018841162534752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 17.0,
+        "Lat": 1.69,
+        "Long": 31.72,
+        "Station Na": "Masindi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.71632116478688,
+          1.683732775860006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 18.0,
+        "Lat": 1.43,
+        "Long": 31.36,
+        "Station Na": "Hoima"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.35628542069216,
+          1.425394132151808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 19.0,
+        "Lat": 0.56,
+        "Long": 31.39,
+        "Station Na": "Mubende"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.391508239014986,
+          0.557747415519681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 20.0,
+        "Lat": 0.66,
+        "Long": 30.29,
+        "Station Na": "Fort Portal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.28615056963336,
+          0.656572264088714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No ": 21.0,
+        "Lat": 0.17,
+        "Long": 30.02,
+        "Station Na": "Kasese"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.023478046684968,
+          0.171225778097046
+        ]
+      }
+    }
+  ]
+}
