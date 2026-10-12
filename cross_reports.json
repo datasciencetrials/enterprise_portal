@@ -1,6 +1,35 @@
 {
   "tables": [
     {
+      "title": "National Road Network Baseline",
+      "columns": [
+        "Metric",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Total Network",
+          "248,616.14 km"
+        ],
+        [
+          "National Roads",
+          "21,302 km"
+        ],
+        [
+          "Total Paved",
+          "11,762.8 km"
+        ],
+        [
+          "Authoritative Bridges",
+          "546"
+        ],
+        [
+          "Analysed Links",
+          "404,047"
+        ]
+      ]
+    },
+    {
       "title": "Surface Type vs Road Classification \u2014 Network Length (km)",
       "columns": [
         "Surface Type",
