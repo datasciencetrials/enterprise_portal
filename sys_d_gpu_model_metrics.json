@@ -1,0 +1,35 @@
+{
+  "device_name": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
+  "training_timestamp": "2026-08-19T10:06:02Z",
+  "total_samples_trained": 35000,
+  "pci_regressor": {
+    "model_type": "XGBRegressor (tree_method='hist', device='cuda')",
+    "gpu_training_time_ms": 2455.52,
+    "test_rmse": 3.1783,
+    "test_r2_score": 0.9392,
+    "feature_importance": {
+      "surface_type": 0.2305,
+      "length_km": 0.0027,
+      "aadt_2026": 0.0037,
+      "esals_per_day": 0.1987,
+      "rainfall_mm": 0.0704,
+      "maintenance_freq_yrs": 0.3157,
+      "initial_pci": 0.1783
+    }
+  },
+  "intervention_classifier": {
+    "model_type": "XGBClassifier (tree_method='hist', device='cuda')",
+    "gpu_training_time_ms": 2279.07,
+    "test_accuracy_pct": 90.31
+  },
+  "ducar_network_summary": {
+    "total_ducar_length_km": 135640.8,
+    "district_roads_km": 32410.5,
+    "urban_roads_kcca_km": 2110.3,
+    "community_access_roads_km": 101120.0,
+    "paved_ratio_pct": 8.4,
+    "unpaved_ratio_pct": 91.6,
+    "total_districts": 135,
+    "total_subcounties": 2140
+  }
+}
