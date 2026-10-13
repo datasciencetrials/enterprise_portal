@@ -1,0 +1,984 @@
+{
+  "type": "FeatureCollection",
+  "name": "weighbridges",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 2,
+        "Eng Name": "Tunduma",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            32.77436903996738,
+            -9.305445959561686
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 3,
+        "Eng Name": "Kibaha",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            38.745449640168665,
+            -6.753870359817347
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 5,
+        "Eng Name": "Mariakani",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            39.475005840266796,
+            -3.856689989642277
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 6,
+        "Eng Name": "Nyakahura",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            30.97516391988699,
+            -2.82342996021152
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 7,
+        "Eng Name": "Namanga",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            36.80416188040594,
+            -2.547260010328936
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 8,
+        "Eng Name": "Isinya",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            36.85569803960967,
+            -1.664003969837013
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 9,
+        "Eng Name": "Athi River",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            36.96943104009124,
+            -1.451799990167894
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 10,
+        "Eng Name": "Kisumu",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.75887299992755,
+            -0.098803980060852
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 12,
+        "Eng Name": "Mbarara",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            30.622541157060166,
+            -0.640356593653363
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 13,
+        "Eng Name": "Gilgil",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            36.309548880403554,
+            -0.488982959961631
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 14,
+        "Eng Name": "Busia",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.099999919595135,
+            0.466700039882151
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 15,
+        "Eng Name": "Mubende",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            31.36890600034078,
+            0.582069959696278
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 16,
+        "Eng Name": "Webuye",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.77872016042259,
+            0.594506969658327
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 17,
+        "Eng Name": "Eldoret",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            35.2663610399592,
+            0.515240009930244
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 18,
+        "Eng Name": "Iganga",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            33.463684012154054,
+            0.601510234126812
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 19,
+        "Eng Name": "Mbale",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.17267493941735,
+            1.058750873356985
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 20,
+        "Eng Name": "Chalinze",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            38.349534599721274,
+            -6.620883480042849
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 21,
+        "Eng Name": "Makambako",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.81894655984365,
+            -8.83830285035993
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 22,
+        "Eng Name": "Kibaigwa",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            36.76294584027403,
+            -6.107318369945869
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 23,
+        "Eng Name": "Mtwapa",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            39.64855788009672,
+            -4.032459990127628
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 24,
+        "Eng Name": "Juja",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            37.04928912007931,
+            -1.071075960113242
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 25,
+        "Eng Name": "Mai Mahiu",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            36.58082795996816,
+            -0.987219000137761
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 26,
+        "Eng Name": "Isebania",
+        "Type": "Mobile",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.47794916011163,
+            -1.220779979718643
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 27,
+        "Eng Name": "Sirari",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.251741360196654,
+            -1.42504020035328
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 28,
+        "Eng Name": "Lukaya",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            31.79832844343094,
+            -0.294947302145538
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 29,
+        "Eng Name": "Horohoro",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            39.357538920441556,
+            -4.540291020045395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 30,
+        "Eng Name": "Himo",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            37.54793483975013,
+            -3.388278960394165
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 31,
+        "Eng Name": "Nala",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            35.63633807997714,
+            -6.097694039808906
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 32,
+        "Eng Name": "Kange",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            38.978174159616124,
+            -5.121343979831466
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 33,
+        "Eng Name": "Mikese",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            37.89309887999312,
+            -6.764559030344743
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 34,
+        "Eng Name": "Kurisani",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            39.26966184042359,
+            -6.822919979949295
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 35,
+        "Eng Name": "Lindi",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            39.7079229603078,
+            -9.997498529568777
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 36,
+        "Eng Name": "Tinde",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            33.316636680340466,
+            -3.81629060956229
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 37,
+        "Eng Name": "Kanyani",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            30.12724080033835,
+            -4.558487040357394
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 38,
+        "Eng Name": "Mutukula",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            31.41742499967784,
+            -0.984261960226266
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 39,
+        "Eng Name": "Makutano",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            33.923519280310835,
+            -1.602715589861229
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 40,
+        "Eng Name": "Usagara",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            32.987963160193424,
+            -2.678412779847901
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 41,
+        "Eng Name": "Isaka",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            32.48076815959061,
+            -3.776831370097971
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 42,
+        "Eng Name": "Nzega",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            33.18214211974456,
+            -4.218100020239612
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 43,
+        "Eng Name": "Ipole",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            32.735162160121824,
+            -5.796669959564149
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 44,
+        "Eng Name": "Mpanda",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            31.059245880137613,
+            -6.367618979987133
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 45,
+        "Eng Name": "Rungwa",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            33.52729104044301,
+            -6.949659960093573
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 46,
+        "Eng Name": "Sumbawanga",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            31.616944919700174,
+            -7.967111039834819
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 47,
+        "Eng Name": "Babati",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            35.738175600246194,
+            -4.202572500079437
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 48,
+        "Eng Name": "Makuyuni",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            36.10665791998816,
+            -3.544390979878882
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 49,
+        "Eng Name": "Mombo",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            38.29716216019202,
+            -4.887659970161244
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 50,
+        "Eng Name": "Singida",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.74354888024425,
+            -4.817439990142423
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 51,
+        "Eng Name": "Segera",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            38.55050208026379,
+            -5.324207040279559
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 52,
+        "Eng Name": "Ubungo",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            39.0242692797378,
+            -6.771334139797577
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 53,
+        "Eng Name": "Mkuranga",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            39.20273460021697,
+            -7.125417539601952
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 54,
+        "Eng Name": "Njombe",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            34.766844840201664,
+            -9.335665980171862
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 55,
+        "Eng Name": "Tunduru",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            37.37129903985668,
+            -11.095062029834489
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 56,
+        "Eng Name": "Masasi",
+        "Type": "Proposed",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            38.80062684010219,
+            -10.727232029676653
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Recno": 1,
+        "Eng Name": "Uyole",
+        "Type": "Permanent",
+        "Show": "Yes"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            33.55751699976086,
+            -8.921500019730951
+          ]
+        ]
+      }
+    }
+  ]
+}

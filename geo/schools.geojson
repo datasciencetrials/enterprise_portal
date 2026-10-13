@@ -1,0 +1,3805 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4821,
+          2.7659
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-001",
+        "Institution Name": "Centre 1 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1505,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7661,
+          3.3781
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-002",
+        "Institution Name": "Centre 2 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1368,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3877,
+          1.7376
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-003",
+        "Institution Name": "Centre 3 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1643,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1833,
+          2.3053
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-004",
+        "Institution Name": "Centre 4 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 8960,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.9003,
+          1.9378
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-005",
+        "Institution Name": "Centre 5 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 26185,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.6149,
+          2.0124
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-006",
+        "Institution Name": "Centre 6 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1692,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8096,
+          2.8946
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-007",
+        "Institution Name": "Centre 7 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 706,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7263,
+          3.0562
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-008",
+        "Institution Name": "Centre 8 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2270,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0994,
+          3.2413
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-009",
+        "Institution Name": "Centre 9 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 581,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3102,
+          2.7192
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-010",
+        "Institution Name": "Centre 10 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 17054,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3843,
+          1.78
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-011",
+        "Institution Name": "Centre 11 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1689,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8917,
+          1.0146
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-012",
+        "Institution Name": "Centre 12 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 14911,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.2105,
+          1.0798
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-013",
+        "Institution Name": "Centre 13 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1494,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7407,
+          0.5684
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-014",
+        "Institution Name": "Centre 14 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1862,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7558,
+          1.2504
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-015",
+        "Institution Name": "Centre 15 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 665,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.051,
+          1.3329
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-016",
+        "Institution Name": "Centre 16 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1124,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8198,
+          0.6916
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-017",
+        "Institution Name": "Centre 17 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1045,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3984,
+          2.1835
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-018",
+        "Institution Name": "Centre 18 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2088,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0726,
+          0.7187
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-019",
+        "Institution Name": "Centre 19 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2153,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.6085,
+          0.8041
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-020",
+        "Institution Name": "Centre 20 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 25269,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.212,
+          -0.5295
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-021",
+        "Institution Name": "Centre 21 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 13951,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0021,
+          0.4318
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-022",
+        "Institution Name": "Centre 22 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1854,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1338,
+          0.9263
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-023",
+        "Institution Name": "Centre 23 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1272,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8891,
+          0.8791
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-024",
+        "Institution Name": "Centre 24 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1638,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.345,
+          1.8058
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-025",
+        "Institution Name": "Centre 25 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1246,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3263,
+          0.8405
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-026",
+        "Institution Name": "Centre 26 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 7788,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5222,
+          0.6386
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-027",
+        "Institution Name": "Centre 27 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1043,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.7798,
+          -0.6274
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-028",
+        "Institution Name": "Centre 28 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 724,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7749,
+          -0.7607
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-029",
+        "Institution Name": "Centre 29 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2199,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.001,
+          2.3969
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-030",
+        "Institution Name": "Centre 30 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 895,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4716,
+          -0.1257
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-031",
+        "Institution Name": "Centre 31 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2182,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3874,
+          1.9217
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-032",
+        "Institution Name": "Centre 32 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2976,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4492,
+          0.6128
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-033",
+        "Institution Name": "Centre 33 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1639,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.199,
+          2.9048
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-034",
+        "Institution Name": "Centre 34 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 934,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3215,
+          0.7905
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-035",
+        "Institution Name": "Centre 35 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2429,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.151,
+          3.497
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-036",
+        "Institution Name": "Centre 36 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 25394,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1886,
+          0.2962
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-037",
+        "Institution Name": "Centre 37 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1385,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1183,
+          1.247
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-038",
+        "Institution Name": "Centre 38 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 906,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.2974,
+          1.2361
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-039",
+        "Institution Name": "Centre 39 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 22103,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9311,
+          0.5157
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-040",
+        "Institution Name": "Centre 40 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2563,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4204,
+          -1.0459
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-041",
+        "Institution Name": "Centre 41 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 16687,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0456,
+          1.2032
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-042",
+        "Institution Name": "Centre 42 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1547,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3054,
+          1.7913
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-043",
+        "Institution Name": "Centre 43 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1830,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9425,
+          0.5458
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-044",
+        "Institution Name": "Centre 44 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 16065,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4704,
+          0.9224
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-045",
+        "Institution Name": "Centre 45 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2755,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2168,
+          0.1753
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-046",
+        "Institution Name": "Centre 46 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1693,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8127,
+          1.159
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-047",
+        "Institution Name": "Centre 47 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1156,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.13,
+          0.9708
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-048",
+        "Institution Name": "Centre 48 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 26061,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.4515,
+          2.4713
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-049",
+        "Institution Name": "Centre 49 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 15636,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9195,
+          0.1746
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-050",
+        "Institution Name": "Centre 50 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2574,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.4187,
+          1.3804
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-051",
+        "Institution Name": "Centre 51 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2359,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8296,
+          0.5436
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-052",
+        "Institution Name": "Centre 52 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1302,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.99,
+          0.2236
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-053",
+        "Institution Name": "Centre 53 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 698,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.971,
+          1.9297
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-054",
+        "Institution Name": "Centre 54 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2696,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8653,
+          0.718
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-055",
+        "Institution Name": "Centre 55 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1201,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7608,
+          0.926
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-056",
+        "Institution Name": "Centre 56 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2540,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.824,
+          1.3327
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-057",
+        "Institution Name": "Centre 57 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2566,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1703,
+          2.8693
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-058",
+        "Institution Name": "Centre 58 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 19066,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0652,
+          0.2263
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-059",
+        "Institution Name": "Centre 59 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 5304,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.836,
+          -0.1832
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-060",
+        "Institution Name": "Centre 60 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2043,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0157,
+          1.8482
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-061",
+        "Institution Name": "Centre 61 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2037,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1426,
+          0.5679
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-062",
+        "Institution Name": "Centre 62 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 6090,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.6813,
+          -1.286
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-063",
+        "Institution Name": "Centre 63 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 816,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3865,
+          -0.2245
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-064",
+        "Institution Name": "Centre 64 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1671,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0891,
+          3.246
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-065",
+        "Institution Name": "Centre 65 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1547,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3399,
+          1.5388
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-066",
+        "Institution Name": "Centre 66 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 5759,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9566,
+          1.0996
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-067",
+        "Institution Name": "Centre 67 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 14380,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9234,
+          3.4489
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-068",
+        "Institution Name": "Centre 68 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 5439,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0809,
+          3.032
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-069",
+        "Institution Name": "Centre 69 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3796,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9183,
+          1.4625
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-070",
+        "Institution Name": "Centre 70 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 690,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.6597,
+          0.6235
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-071",
+        "Institution Name": "Centre 71 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1085,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7851,
+          3.5596
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-072",
+        "Institution Name": "Centre 72 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 22442,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1111,
+          3.3857
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-073",
+        "Institution Name": "Centre 73 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1353,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8948,
+          0.3748
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-074",
+        "Institution Name": "Centre 74 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1437,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5051,
+          0.8277
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-075",
+        "Institution Name": "Centre 75 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1225,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0487,
+          3.6396
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-076",
+        "Institution Name": "Centre 76 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 569,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4584,
+          0.6618
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-077",
+        "Institution Name": "Centre 77 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 11829,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2858,
+          -0.9145
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-078",
+        "Institution Name": "Centre 78 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 570,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1082,
+          1.7386
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-079",
+        "Institution Name": "Centre 79 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 6074,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1999,
+          2.1732
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-080",
+        "Institution Name": "Centre 80 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3730,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9162,
+          0.3225
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-081",
+        "Institution Name": "Centre 81 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3069,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4971,
+          -0.4542
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-082",
+        "Institution Name": "Centre 82 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 860,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.935,
+          3.2963
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-083",
+        "Institution Name": "Centre 83 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1818,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7242,
+          -0.3538
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-084",
+        "Institution Name": "Centre 84 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1621,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0911,
+          1.7131
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-085",
+        "Institution Name": "Centre 85 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1016,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2526,
+          0.9328
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-086",
+        "Institution Name": "Centre 86 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 955,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0161,
+          0.9691
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-087",
+        "Institution Name": "Centre 87 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1249,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1957,
+          0.8329
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-088",
+        "Institution Name": "Centre 88 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1842,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.6376,
+          2.5514
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-089",
+        "Institution Name": "Centre 89 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1602,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7343,
+          3.6457
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-090",
+        "Institution Name": "Centre 90 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 681,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3619,
+          0.586
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-091",
+        "Institution Name": "Centre 91 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2195,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.88,
+          1.5474
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-092",
+        "Institution Name": "Centre 92 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1148,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2753,
+          -0.1876
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-093",
+        "Institution Name": "Centre 93 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2487,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8879,
+          0.4562
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-094",
+        "Institution Name": "Centre 94 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1467,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3031,
+          3.3393
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-095",
+        "Institution Name": "Centre 95 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 682,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.5842,
+          2.0822
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-096",
+        "Institution Name": "Centre 96 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 26142,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2614,
+          1.4979
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-097",
+        "Institution Name": "Centre 97 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1667,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0287,
+          1.048
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-098",
+        "Institution Name": "Centre 98 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2223,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0652,
+          -0.7331
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-099",
+        "Institution Name": "Centre 99 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1130,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0603,
+          -0.0069
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-100",
+        "Institution Name": "Centre 100 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1051,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7992,
+          1.8922
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-101",
+        "Institution Name": "Centre 101 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 682,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0124,
+          0.7766
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-102",
+        "Institution Name": "Centre 102 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 765,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.329,
+          0.8621
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-103",
+        "Institution Name": "Centre 103 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1098,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4558,
+          1.3135
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-104",
+        "Institution Name": "Centre 104 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 10309,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1051,
+          1.5535
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-105",
+        "Institution Name": "Centre 105 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 850,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6233,
+          1.516
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-106",
+        "Institution Name": "Centre 106 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2098,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5176,
+          1.1037
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-107",
+        "Institution Name": "Centre 107 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1490,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0461,
+          1.2399
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-108",
+        "Institution Name": "Centre 108 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 620,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7749,
+          1.4791
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-109",
+        "Institution Name": "Centre 109 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1773,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.036,
+          3.631
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-110",
+        "Institution Name": "Centre 110 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1166,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4158,
+          0.9733
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-111",
+        "Institution Name": "Centre 111 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1194,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2706,
+          -0.879
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-112",
+        "Institution Name": "Centre 112 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2449,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1651,
+          0.0514
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-113",
+        "Institution Name": "Centre 113 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1423,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5731,
+          0.9373
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-114",
+        "Institution Name": "Centre 114 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 953,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1205,
+          2.6991
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-115",
+        "Institution Name": "Centre 115 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 812,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0953,
+          3.2534
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-116",
+        "Institution Name": "Centre 116 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3070,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4161,
+          2.0675
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-117",
+        "Institution Name": "Centre 117 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1338,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.2568,
+          1.9044
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-118",
+        "Institution Name": "Centre 118 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2178,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8241,
+          3.4906
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-119",
+        "Institution Name": "Centre 119 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1805,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.9133,
+          2.9593
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-120",
+        "Institution Name": "Centre 120 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1436,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4757,
+          2.4681
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-121",
+        "Institution Name": "Centre 121 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 17757,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.6752,
+          1.2007
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-122",
+        "Institution Name": "Centre 122 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1045,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3436,
+          2.285
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-123",
+        "Institution Name": "Centre 123 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1980,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5742,
+          2.3196
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-124",
+        "Institution Name": "Centre 124 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 4006,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1838,
+          2.321
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-125",
+        "Institution Name": "Centre 125 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2408,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3062,
+          2.7724
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-126",
+        "Institution Name": "Centre 126 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1981,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9426,
+          1.1699
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-127",
+        "Institution Name": "Centre 127 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1594,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.9328,
+          2.612
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-128",
+        "Institution Name": "Centre 128 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 19787,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3972,
+          2.9811
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-129",
+        "Institution Name": "Centre 129 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2443,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0844,
+          -0.2511
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-130",
+        "Institution Name": "Centre 130 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 617,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2351,
+          1.2312
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-131",
+        "Institution Name": "Centre 131 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 15128,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0188,
+          3.1704
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-132",
+        "Institution Name": "Centre 132 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1510,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.03,
+          2.8066
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-133",
+        "Institution Name": "Centre 133 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3823,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9028,
+          2.5955
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-134",
+        "Institution Name": "Centre 134 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1108,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7547,
+          1.8524
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-135",
+        "Institution Name": "Centre 135 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1392,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5346,
+          0.7409
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-136",
+        "Institution Name": "Centre 136 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2386,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2663,
+          3.4805
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-137",
+        "Institution Name": "Centre 137 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 881,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.9424,
+          -0.1355
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-138",
+        "Institution Name": "Centre 138 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1094,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.965,
+          -1.2583
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-139",
+        "Institution Name": "Centre 139 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 13850,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.752,
+          -0.8781
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-140",
+        "Institution Name": "Centre 140 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 982,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5239,
+          1.5089
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-141",
+        "Institution Name": "Centre 141 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 11855,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7217,
+          0.9192
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-142",
+        "Institution Name": "Centre 142 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 4893,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2137,
+          1.3554
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-143",
+        "Institution Name": "Centre 143 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 10232,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9754,
+          1.8404
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-144",
+        "Institution Name": "Centre 144 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2035,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9308,
+          2.5694
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-145",
+        "Institution Name": "Centre 145 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 21382,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7365,
+          3.7614
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-146",
+        "Institution Name": "Centre 146 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 5863,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1922,
+          3.3664
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-147",
+        "Institution Name": "Centre 147 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1895,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5018,
+          3.3208
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-148",
+        "Institution Name": "Centre 148 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3041,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1925,
+          2.2428
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-149",
+        "Institution Name": "Centre 149 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 692,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.6099,
+          -0.7054
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-150",
+        "Institution Name": "Centre 150 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 19647,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4239,
+          -1.0256
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-151",
+        "Institution Name": "Centre 151 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2536,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7593,
+          -0.9783
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-152",
+        "Institution Name": "Centre 152 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 701,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5604,
+          -0.4067
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-153",
+        "Institution Name": "Centre 153 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1710,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1772,
+          -0.4106
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-154",
+        "Institution Name": "Centre 154 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2459,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7751,
+          0.1275
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-155",
+        "Institution Name": "Centre 155 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3054,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5225,
+          0.492
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-156",
+        "Institution Name": "Centre 156 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2947,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0441,
+          0.2094
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-157",
+        "Institution Name": "Centre 157 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 6109,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4229,
+          -0.6639
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-158",
+        "Institution Name": "Centre 158 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1824,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8008,
+          0.5089
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-159",
+        "Institution Name": "Centre 159 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1117,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.8042,
+          -0.7791
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-160",
+        "Institution Name": "Centre 160 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1737,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3161,
+          0.2101
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-161",
+        "Institution Name": "Centre 161 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2200,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7697,
+          0.354
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-162",
+        "Institution Name": "Centre 162 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 8268,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.7145,
+          0.0204
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-163",
+        "Institution Name": "Centre 163 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1607,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9071,
+          -0.5018
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-164",
+        "Institution Name": "Centre 164 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 8069,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.6174,
+          0.3357
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-165",
+        "Institution Name": "Centre 165 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 25128,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1401,
+          0.1016
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-166",
+        "Institution Name": "Centre 166 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 4573,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0354,
+          0.4109
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-167",
+        "Institution Name": "Centre 167 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1143,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.941,
+          2.911
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-168",
+        "Institution Name": "Centre 168 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 671,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8658,
+          2.546
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-169",
+        "Institution Name": "Centre 169 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1695,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4304,
+          1.1518
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-170",
+        "Institution Name": "Centre 170 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 822,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4751,
+          2.4112
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-171",
+        "Institution Name": "Centre 171 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2185,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.6201,
+          2.5778
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-172",
+        "Institution Name": "Centre 172 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 18603,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3488,
+          2.219
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-173",
+        "Institution Name": "Centre 173 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 15628,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5161,
+          2.0007
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-174",
+        "Institution Name": "Centre 174 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 11695,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3476,
+          2.135
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-175",
+        "Institution Name": "Centre 175 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 946,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.9542,
+          1.896
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-176",
+        "Institution Name": "Centre 176 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 592,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1668,
+          1.7481
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-177",
+        "Institution Name": "Centre 177 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3900,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0572,
+          2.8096
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-178",
+        "Institution Name": "Centre 178 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1202,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8967,
+          3.0448
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-179",
+        "Institution Name": "Centre 179 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 919,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4687,
+          0.0808
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-180",
+        "Institution Name": "Centre 180 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 17899,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2648,
+          0.6459
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-181",
+        "Institution Name": "Centre 181 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3695,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2578,
+          2.7718
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-182",
+        "Institution Name": "Centre 182 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 4390,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3523,
+          1.4441
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-183",
+        "Institution Name": "Centre 183 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1161,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1858,
+          0.4189
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-184",
+        "Institution Name": "Centre 184 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 21436,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.6751,
+          -1.0261
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-185",
+        "Institution Name": "Centre 185 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3456,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8617,
+          3.2965
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-186",
+        "Institution Name": "Centre 186 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1644,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.898,
+          2.2743
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-187",
+        "Institution Name": "Centre 187 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1668,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7017,
+          1.6762
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-188",
+        "Institution Name": "Centre 188 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 4200,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1704,
+          1.0856
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-189",
+        "Institution Name": "Centre 189 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2452,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.6411,
+          -0.5856
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-190",
+        "Institution Name": "Centre 190 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 3916,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.6252,
+          1.709
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-191",
+        "Institution Name": "Centre 191 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2460,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1529,
+          0.7177
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-192",
+        "Institution Name": "Centre 192 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1933,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5749,
+          0.3416
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-193",
+        "Institution Name": "Centre 193 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 8627,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.9767,
+          -1.2303
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-194",
+        "Institution Name": "Centre 194 National University Campus",
+        "Educational Category": "Tertiary / Higher Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 11643,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Solar PV System"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3237,
+          0.9803
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-195",
+        "Institution Name": "Centre 195 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1377,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3429,
+          1.0241
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-196",
+        "Institution Name": "Centre 196 Model Primary School Complex",
+        "Educational Category": "Primary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1195,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.5579,
+          1.5429
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-197",
+        "Institution Name": "Centre 197 Agricultural Training Institute",
+        "Educational Category": "Specialized Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1615,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2724,
+          1.3094
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-198",
+        "Institution Name": "Centre 198 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2347,
+        "All-Weather Road Reach (<2km)": "Yes (Graded Gravel Access)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.7097,
+          1.8588
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-199",
+        "Institution Name": "Centre 199 Senior Secondary School",
+        "Educational Category": "Secondary Education",
+        "District Location": "District Sector District",
+        "Student Enrollment": 1675,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.8051,
+          2.4007
+        ]
+      },
+      "properties": {
+        "School ID": "SCH-200",
+        "Institution Name": "Centre 200 Regional Technical & Vocational College",
+        "Educational Category": "Vocational / TVET",
+        "District Location": "District Sector District",
+        "Student Enrollment": 2041,
+        "All-Weather Road Reach (<2km)": "Yes (Paved Access Link)",
+        "Electrification Status": "Grid Connected"
+      }
+    }
+  ]
+}

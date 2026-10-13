@@ -1,0 +1,3425 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4484,
+          2.7386
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-001",
+        "Health Facility Name": "Clinic 1 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1569,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7913,
+          3.3936
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-002",
+        "Health Facility Name": "Clinic 2 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 949,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3937,
+          1.6988
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-003",
+        "Health Facility Name": "Clinic 3 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 106,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1801,
+          2.311
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-004",
+        "Health Facility Name": "Clinic 4 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1143,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.9258,
+          1.9206
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-005",
+        "Health Facility Name": "Clinic 5 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 19,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.6565,
+          2.0333
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-006",
+        "Health Facility Name": "Clinic 6 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 147,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8104,
+          2.8555
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-007",
+        "Health Facility Name": "Clinic 7 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 171,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7755,
+          3.0221
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-008",
+        "Health Facility Name": "Clinic 8 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 79,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1301,
+          3.2542
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-009",
+        "Health Facility Name": "Clinic 9 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 42,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3047,
+          2.7169
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-010",
+        "Health Facility Name": "Clinic 10 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 313,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4117,
+          1.7915
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-011",
+        "Health Facility Name": "Clinic 11 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 910,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.902,
+          0.9904
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-012",
+        "Health Facility Name": "Clinic 12 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 81,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.2634,
+          1.0988
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-013",
+        "Health Facility Name": "Clinic 13 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 38,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7458,
+          0.5959
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-014",
+        "Health Facility Name": "Clinic 14 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1434,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7513,
+          1.2592
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-015",
+        "Health Facility Name": "Clinic 15 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 528,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0474,
+          1.3251
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-016",
+        "Health Facility Name": "Clinic 16 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 34,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8386,
+          0.6527
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-017",
+        "Health Facility Name": "Clinic 17 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 391,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4016,
+          2.174
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-018",
+        "Health Facility Name": "Clinic 18 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 367,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0805,
+          0.712
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-019",
+        "Health Facility Name": "Clinic 19 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1844,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5918,
+          0.7629
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-020",
+        "Health Facility Name": "Clinic 20 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1432,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1846,
+          -0.5594
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-021",
+        "Health Facility Name": "Clinic 21 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 19,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9942,
+          0.4612
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-022",
+        "Health Facility Name": "Clinic 22 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 26,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.121,
+          0.9254
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-023",
+        "Health Facility Name": "Clinic 23 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 93,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9418,
+          0.882
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-024",
+        "Health Facility Name": "Clinic 24 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 33,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3308,
+          1.7949
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-025",
+        "Health Facility Name": "Clinic 25 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 448,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3474,
+          0.8063
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-026",
+        "Health Facility Name": "Clinic 26 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 235,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.513,
+          0.6761
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-027",
+        "Health Facility Name": "Clinic 27 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 65,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.818,
+          -0.6008
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-028",
+        "Health Facility Name": "Clinic 28 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 620,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7548,
+          -0.7678
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-029",
+        "Health Facility Name": "Clinic 29 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 104,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0447,
+          2.3939
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-030",
+        "Health Facility Name": "Clinic 30 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 329,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.489,
+          -0.1005
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-031",
+        "Health Facility Name": "Clinic 31 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 98,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3496,
+          1.8951
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-032",
+        "Health Facility Name": "Clinic 32 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 43,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4674,
+          0.6007
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-033",
+        "Health Facility Name": "Clinic 33 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 512,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2122,
+          2.8948
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-034",
+        "Health Facility Name": "Clinic 34 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 248,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3339,
+          0.7757
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-035",
+        "Health Facility Name": "Clinic 35 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 25,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.115,
+          3.5426
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-036",
+        "Health Facility Name": "Clinic 36 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 55,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1941,
+          0.2916
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-037",
+        "Health Facility Name": "Clinic 37 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 18,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1227,
+          1.2148
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-038",
+        "Health Facility Name": "Clinic 38 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 94,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3147,
+          1.2722
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-039",
+        "Health Facility Name": "Clinic 39 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1380,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9253,
+          0.5251
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-040",
+        "Health Facility Name": "Clinic 40 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 58,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4526,
+          -1.0449
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-041",
+        "Health Facility Name": "Clinic 41 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 351,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0335,
+          1.1743
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-042",
+        "Health Facility Name": "Clinic 42 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 31,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.329,
+          1.8347
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-043",
+        "Health Facility Name": "Clinic 43 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 65,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.957,
+          0.5963
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-044",
+        "Health Facility Name": "Clinic 44 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 20,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5053,
+          0.8919
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-045",
+        "Health Facility Name": "Clinic 45 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 635,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2157,
+          0.1568
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-046",
+        "Health Facility Name": "Clinic 46 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1693,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8316,
+          1.1655
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-047",
+        "Health Facility Name": "Clinic 47 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 142,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0947,
+          0.9654
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-048",
+        "Health Facility Name": "Clinic 48 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 262,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.4499,
+          2.4674
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-049",
+        "Health Facility Name": "Clinic 49 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 30,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9059,
+          0.1604
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-050",
+        "Health Facility Name": "Clinic 50 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 44,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.421,
+          1.3997
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-051",
+        "Health Facility Name": "Clinic 51 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 105,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8271,
+          0.5674
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-052",
+        "Health Facility Name": "Clinic 52 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1299,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0095,
+          0.1935
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-053",
+        "Health Facility Name": "Clinic 53 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 246,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9281,
+          1.9328
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-054",
+        "Health Facility Name": "Clinic 54 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 71,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8777,
+          0.7264
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-055",
+        "Health Facility Name": "Clinic 55 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 991,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7792,
+          0.9206
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-056",
+        "Health Facility Name": "Clinic 56 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 176,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8043,
+          1.3598
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-057",
+        "Health Facility Name": "Clinic 57 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 478,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1881,
+          2.8306
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-058",
+        "Health Facility Name": "Clinic 58 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 68,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0265,
+          0.2194
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-059",
+        "Health Facility Name": "Clinic 59 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 510,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8672,
+          -0.1994
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-060",
+        "Health Facility Name": "Clinic 60 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 29,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.044,
+          1.8462
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-061",
+        "Health Facility Name": "Clinic 61 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1833,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1552,
+          0.5591
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-062",
+        "Health Facility Name": "Clinic 62 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1548,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.6707,
+          -1.2837
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-063",
+        "Health Facility Name": "Clinic 63 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 197,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.415,
+          -0.215
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-064",
+        "Health Facility Name": "Clinic 64 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 81,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0616,
+          3.2357
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-065",
+        "Health Facility Name": "Clinic 65 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 27,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.327,
+          1.5822
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-066",
+        "Health Facility Name": "Clinic 66 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 88,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9868,
+          1.1112
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-067",
+        "Health Facility Name": "Clinic 67 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 287,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9287,
+          3.4114
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-068",
+        "Health Facility Name": "Clinic 68 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 180,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1093,
+          3.002
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-069",
+        "Health Facility Name": "Clinic 69 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 383,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9168,
+          1.4914
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-070",
+        "Health Facility Name": "Clinic 70 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 77,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.6366,
+          0.6163
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-071",
+        "Health Facility Name": "Clinic 71 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 384,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8327,
+          3.5716
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-072",
+        "Health Facility Name": "Clinic 72 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 330,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1044,
+          3.3964
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-073",
+        "Health Facility Name": "Clinic 73 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1346,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.925,
+          0.3833
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-074",
+        "Health Facility Name": "Clinic 74 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 36,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4893,
+          0.8502
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-075",
+        "Health Facility Name": "Clinic 75 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 53,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0494,
+          3.6329
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-076",
+        "Health Facility Name": "Clinic 76 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 25,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4504,
+          0.6751
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-077",
+        "Health Facility Name": "Clinic 77 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 311,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2862,
+          -0.8885
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-078",
+        "Health Facility Name": "Clinic 78 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 32,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0927,
+          1.7136
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-079",
+        "Health Facility Name": "Clinic 79 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1556,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2286,
+          2.1721
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-080",
+        "Health Facility Name": "Clinic 80 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 307,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8958,
+          0.363
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-081",
+        "Health Facility Name": "Clinic 81 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 48,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4998,
+          -0.4395
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-082",
+        "Health Facility Name": "Clinic 82 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 537,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9703,
+          3.2536
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-083",
+        "Health Facility Name": "Clinic 83 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 330,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7504,
+          -0.3508
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-084",
+        "Health Facility Name": "Clinic 84 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1910,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0844,
+          1.7211
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-085",
+        "Health Facility Name": "Clinic 85 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 34,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.245,
+          0.935
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-086",
+        "Health Facility Name": "Clinic 86 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 55,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0544,
+          0.9767
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-087",
+        "Health Facility Name": "Clinic 87 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 578,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1682,
+          0.8358
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-088",
+        "Health Facility Name": "Clinic 88 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 36,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.6502,
+          2.5605
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-089",
+        "Health Facility Name": "Clinic 89 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 253,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7017,
+          3.6644
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-090",
+        "Health Facility Name": "Clinic 90 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1383,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3984,
+          0.604
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-091",
+        "Health Facility Name": "Clinic 91 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1007,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8683,
+          1.5855
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-092",
+        "Health Facility Name": "Clinic 92 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 725,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2896,
+          -0.1598
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-093",
+        "Health Facility Name": "Clinic 93 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 59,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9033,
+          0.4143
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-094",
+        "Health Facility Name": "Clinic 94 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 94,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3153,
+          3.3761
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-095",
+        "Health Facility Name": "Clinic 95 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1757,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.5628,
+          2.0534
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-096",
+        "Health Facility Name": "Clinic 96 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 268,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2727,
+          1.472
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-097",
+        "Health Facility Name": "Clinic 97 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1716,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0321,
+          1.0652
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-098",
+        "Health Facility Name": "Clinic 98 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 227,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1131,
+          -0.7367
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-099",
+        "Health Facility Name": "Clinic 99 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 63,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0275,
+          0.0238
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-100",
+        "Health Facility Name": "Clinic 100 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 264,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8004,
+          1.8964
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-101",
+        "Health Facility Name": "Clinic 101 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 92,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9904,
+          0.7926
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-102",
+        "Health Facility Name": "Clinic 102 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1446,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3738,
+          0.8136
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-103",
+        "Health Facility Name": "Clinic 103 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1442,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4369,
+          1.3366
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-104",
+        "Health Facility Name": "Clinic 104 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 50,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0609,
+          1.5587
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-105",
+        "Health Facility Name": "Clinic 105 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 200,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6009,
+          1.5015
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-106",
+        "Health Facility Name": "Clinic 106 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 338,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5114,
+          1.1017
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-107",
+        "Health Facility Name": "Clinic 107 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 674,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0694,
+          1.1935
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-108",
+        "Health Facility Name": "Clinic 108 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 362,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7644,
+          1.441
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-109",
+        "Health Facility Name": "Clinic 109 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 426,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0192,
+          3.6153
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-110",
+        "Health Facility Name": "Clinic 110 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 95,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4303,
+          0.9606
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-111",
+        "Health Facility Name": "Clinic 111 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 57,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.278,
+          -0.8916
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-112",
+        "Health Facility Name": "Clinic 112 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1253,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1654,
+          0.0756
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-113",
+        "Health Facility Name": "Clinic 113 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 305,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5846,
+          0.9695
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-114",
+        "Health Facility Name": "Clinic 114 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 348,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1061,
+          2.6862
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-115",
+        "Health Facility Name": "Clinic 115 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 29,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1216,
+          3.253
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-116",
+        "Health Facility Name": "Clinic 116 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 518,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4663,
+          2.016
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-117",
+        "Health Facility Name": "Clinic 117 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 48,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.2893,
+          1.9105
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-118",
+        "Health Facility Name": "Clinic 118 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 2111,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8394,
+          3.4546
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-119",
+        "Health Facility Name": "Clinic 119 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 281,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.9246,
+          2.9713
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-120",
+        "Health Facility Name": "Clinic 120 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 615,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5034,
+          2.4806
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-121",
+        "Health Facility Name": "Clinic 121 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1238,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7045,
+          1.1535
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-122",
+        "Health Facility Name": "Clinic 122 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 28,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3454,
+          2.3207
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-123",
+        "Health Facility Name": "Clinic 123 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1155,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5382,
+          2.3014
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-124",
+        "Health Facility Name": "Clinic 124 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 81,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2175,
+          2.2849
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-125",
+        "Health Facility Name": "Clinic 125 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 27,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.2785,
+          2.7936
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-126",
+        "Health Facility Name": "Clinic 126 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 265,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9264,
+          1.1581
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-127",
+        "Health Facility Name": "Clinic 127 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 243,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8979,
+          2.6002
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-128",
+        "Health Facility Name": "Clinic 128 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1186,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4092,
+          3.003
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-129",
+        "Health Facility Name": "Clinic 129 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1365,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1133,
+          -0.2619
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-130",
+        "Health Facility Name": "Clinic 130 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 231,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2136,
+          1.2383
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-131",
+        "Health Facility Name": "Clinic 131 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 82,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9686,
+          3.1228
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-132",
+        "Health Facility Name": "Clinic 132 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 342,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0286,
+          2.7701
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-133",
+        "Health Facility Name": "Clinic 133 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 628,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8667,
+          2.6012
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-134",
+        "Health Facility Name": "Clinic 134 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 2098,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7215,
+          1.846
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-135",
+        "Health Facility Name": "Clinic 135 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 530,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5251,
+          0.7019
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-136",
+        "Health Facility Name": "Clinic 136 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 85,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2174,
+          3.4753
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-137",
+        "Health Facility Name": "Clinic 137 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 662,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.9184,
+          -0.1384
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-138",
+        "Health Facility Name": "Clinic 138 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 571,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.9578,
+          -1.2935
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-139",
+        "Health Facility Name": "Clinic 139 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 311,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.7831,
+          -0.9207
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-140",
+        "Health Facility Name": "Clinic 140 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 337,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5354,
+          1.49
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-141",
+        "Health Facility Name": "Clinic 141 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 154,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7562,
+          0.9242
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-142",
+        "Health Facility Name": "Clinic 142 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 31,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1858,
+          1.3308
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-143",
+        "Health Facility Name": "Clinic 143 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1325,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9932,
+          1.8821
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-144",
+        "Health Facility Name": "Clinic 144 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 288,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9054,
+          2.586
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-145",
+        "Health Facility Name": "Clinic 145 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 898,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7261,
+          3.7394
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-146",
+        "Health Facility Name": "Clinic 146 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1345,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1917,
+          3.3791
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-147",
+        "Health Facility Name": "Clinic 147 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 332,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4812,
+          3.3293
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-148",
+        "Health Facility Name": "Clinic 148 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 102,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1774,
+          2.1941
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-149",
+        "Health Facility Name": "Clinic 149 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 222,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.6305,
+          -0.7461
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-150",
+        "Health Facility Name": "Clinic 150 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 23,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4353,
+          -1.0024
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-151",
+        "Health Facility Name": "Clinic 151 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 19,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7616,
+          -0.9628
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-152",
+        "Health Facility Name": "Clinic 152 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 62,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.565,
+          -0.4624
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-153",
+        "Health Facility Name": "Clinic 153 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1104,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.167,
+          -0.3843
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-154",
+        "Health Facility Name": "Clinic 154 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 24,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8069,
+          0.15
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-155",
+        "Health Facility Name": "Clinic 155 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 309,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.525,
+          0.4865
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-156",
+        "Health Facility Name": "Clinic 156 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 709,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0158,
+          0.2067
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-157",
+        "Health Facility Name": "Clinic 157 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 430,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4156,
+          -0.6705
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-158",
+        "Health Facility Name": "Clinic 158 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 142,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7485,
+          0.5434
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-159",
+        "Health Facility Name": "Clinic 159 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 326,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.8037,
+          -0.797
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-160",
+        "Health Facility Name": "Clinic 160 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 192,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.354,
+          0.2372
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-161",
+        "Health Facility Name": "Clinic 161 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 51,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7214,
+          0.3825
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-162",
+        "Health Facility Name": "Clinic 162 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 337,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.7358,
+          0.0464
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-163",
+        "Health Facility Name": "Clinic 163 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 30,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8972,
+          -0.5062
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-164",
+        "Health Facility Name": "Clinic 164 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1681,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5658,
+          0.3657
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-165",
+        "Health Facility Name": "Clinic 165 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 70,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1084,
+          0.0585
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-166",
+        "Health Facility Name": "Clinic 166 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 470,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0506,
+          0.4
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-167",
+        "Health Facility Name": "Clinic 167 Health Centre IV (County Hospital)",
+        "Facility Care Level": "Level 4 Primary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 62,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.947,
+          2.916
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-168",
+        "Health Facility Name": "Clinic 168 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 169,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8287,
+          2.539
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-169",
+        "Health Facility Name": "Clinic 169 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 29,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4293,
+          1.1612
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-170",
+        "Health Facility Name": "Clinic 170 General District Hospital",
+        "Facility Care Level": "Level 4 District",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 352,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.446,
+          2.3955
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-171",
+        "Health Facility Name": "Clinic 171 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 736,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.6151,
+          2.6149
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-172",
+        "Health Facility Name": "Clinic 172 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1930,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3366,
+          2.2665
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-173",
+        "Health Facility Name": "Clinic 173 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 26,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5504,
+          1.9992
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-174",
+        "Health Facility Name": "Clinic 174 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1363,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3524,
+          2.1103
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-175",
+        "Health Facility Name": "Clinic 175 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 2147,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.9981,
+          1.9293
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-176",
+        "Health Facility Name": "Clinic 176 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1573,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1442,
+          1.7502
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-177",
+        "Health Facility Name": "Clinic 177 Health Centre III (Sub-County Clinic)",
+        "Facility Care Level": "Level 3 Community",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 39,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0173,
+          2.7942
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-178",
+        "Health Facility Name": "Clinic 178 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 701,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8762,
+          3.0433
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-179",
+        "Health Facility Name": "Clinic 179 Regional Referral Hospital",
+        "Facility Care Level": "Level 5 Regional",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 499,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4699,
+          0.0383
+        ]
+      },
+      "properties": {
+        "Facility ID": "HLT-180",
+        "Health Facility Name": "Clinic 180 National Referral Hospital",
+        "Facility Care Level": "Level 6 Tertiary",
+        "District Location": "District Zone District",
+        "Inpatient Bed Capacity": 1912,
+        "Ambulance Road Reach": "All-Weather Access Corridor",
+        "Emergency Backup Power": "Dedicated Diesel + Solar Grid"
+      }
+    }
+  ]
+}

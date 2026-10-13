@@ -1,0 +1,2405 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5015,
+          2.7236
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-001",
+        "Agro Processing Unit Name": "Hub 1 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2554.0,
+        "Smallholder Farmers Served": 16583,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8087,
+          3.4111
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-002",
+        "Agro Processing Unit Name": "Hub 2 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1051.0,
+        "Smallholder Farmers Served": 23127,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3713,
+          1.738
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-003",
+        "Agro Processing Unit Name": "Hub 3 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1057.0,
+        "Smallholder Farmers Served": 10646,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1708,
+          2.3133
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-004",
+        "Agro Processing Unit Name": "Hub 4 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 525.0,
+        "Smallholder Farmers Served": 2404,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.9015,
+          1.9848
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-005",
+        "Agro Processing Unit Name": "Hub 5 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1138.0,
+        "Smallholder Farmers Served": 5052,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.6202,
+          2.0524
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-006",
+        "Agro Processing Unit Name": "Hub 6 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 613.0,
+        "Smallholder Farmers Served": 18258,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8714,
+          2.8483
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-007",
+        "Agro Processing Unit Name": "Hub 7 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 285.0,
+        "Smallholder Farmers Served": 15788,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7389,
+          2.9998
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-008",
+        "Agro Processing Unit Name": "Hub 8 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2542.0,
+        "Smallholder Farmers Served": 12319,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1231,
+          3.2308
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-009",
+        "Agro Processing Unit Name": "Hub 9 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1389.0,
+        "Smallholder Farmers Served": 18117,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2978,
+          2.7183
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-010",
+        "Agro Processing Unit Name": "Hub 10 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 712.0,
+        "Smallholder Farmers Served": 7786,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4259,
+          1.7953
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-011",
+        "Agro Processing Unit Name": "Hub 11 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 763.0,
+        "Smallholder Farmers Served": 11361,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9024,
+          0.9926
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-012",
+        "Agro Processing Unit Name": "Hub 12 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2483.0,
+        "Smallholder Farmers Served": 21379,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.2333,
+          1.1004
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-013",
+        "Agro Processing Unit Name": "Hub 13 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 592.0,
+        "Smallholder Farmers Served": 17005,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7505,
+          0.5616
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-014",
+        "Agro Processing Unit Name": "Hub 14 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 3629.0,
+        "Smallholder Farmers Served": 21791,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7855,
+          1.2529
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-015",
+        "Agro Processing Unit Name": "Hub 15 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1622.0,
+        "Smallholder Farmers Served": 8861,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9997,
+          1.3296
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-016",
+        "Agro Processing Unit Name": "Hub 16 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2916.0,
+        "Smallholder Farmers Served": 26681,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.819,
+          0.6882
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-017",
+        "Agro Processing Unit Name": "Hub 17 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 384.0,
+        "Smallholder Farmers Served": 24318,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3792,
+          2.1568
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-018",
+        "Agro Processing Unit Name": "Hub 18 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 770.0,
+        "Smallholder Farmers Served": 26107,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0314,
+          0.7396
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-019",
+        "Agro Processing Unit Name": "Hub 19 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 830.0,
+        "Smallholder Farmers Served": 16722,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.6473,
+          0.7514
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-020",
+        "Agro Processing Unit Name": "Hub 20 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1137.0,
+        "Smallholder Farmers Served": 16725,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2199,
+          -0.5042
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-021",
+        "Agro Processing Unit Name": "Hub 21 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1055.0,
+        "Smallholder Farmers Served": 25069,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0451,
+          0.4591
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-022",
+        "Agro Processing Unit Name": "Hub 22 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 999.0,
+        "Smallholder Farmers Served": 25868,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.131,
+          0.9103
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-023",
+        "Agro Processing Unit Name": "Hub 23 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 731.0,
+        "Smallholder Farmers Served": 26594,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9276,
+          0.8353
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-024",
+        "Agro Processing Unit Name": "Hub 24 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 293.0,
+        "Smallholder Farmers Served": 10862,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3066,
+          1.8462
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-025",
+        "Agro Processing Unit Name": "Hub 25 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 763.0,
+        "Smallholder Farmers Served": 6442,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3633,
+          0.849
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-026",
+        "Agro Processing Unit Name": "Hub 26 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 302.0,
+        "Smallholder Farmers Served": 14856,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5183,
+          0.6357
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-027",
+        "Agro Processing Unit Name": "Hub 27 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 561.0,
+        "Smallholder Farmers Served": 26724,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.8333,
+          -0.5793
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-028",
+        "Agro Processing Unit Name": "Hub 28 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1553.0,
+        "Smallholder Farmers Served": 1693,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7986,
+          -0.7278
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-029",
+        "Agro Processing Unit Name": "Hub 29 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2531.0,
+        "Smallholder Farmers Served": 15230,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0232,
+          2.3829
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-030",
+        "Agro Processing Unit Name": "Hub 30 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2069.0,
+        "Smallholder Farmers Served": 14242,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5168,
+          -0.0922
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-031",
+        "Agro Processing Unit Name": "Hub 31 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1018.0,
+        "Smallholder Farmers Served": 21890,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4039,
+          1.9132
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-032",
+        "Agro Processing Unit Name": "Hub 32 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2202.0,
+        "Smallholder Farmers Served": 4250,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4395,
+          0.6169
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-033",
+        "Agro Processing Unit Name": "Hub 33 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 290.0,
+        "Smallholder Farmers Served": 13922,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2211,
+          2.8701
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-034",
+        "Agro Processing Unit Name": "Hub 34 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 3112.0,
+        "Smallholder Farmers Served": 10617,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3437,
+          0.7837
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-035",
+        "Agro Processing Unit Name": "Hub 35 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2117.0,
+        "Smallholder Farmers Served": 3206,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1351,
+          3.5392
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-036",
+        "Agro Processing Unit Name": "Hub 36 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2509.0,
+        "Smallholder Farmers Served": 26214,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1893,
+          0.2372
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-037",
+        "Agro Processing Unit Name": "Hub 37 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1187.0,
+        "Smallholder Farmers Served": 5636,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1012,
+          1.2097
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-038",
+        "Agro Processing Unit Name": "Hub 38 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1667.0,
+        "Smallholder Farmers Served": 26629,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.304,
+          1.2915
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-039",
+        "Agro Processing Unit Name": "Hub 39 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 3835.0,
+        "Smallholder Farmers Served": 26986,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9156,
+          0.499
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-040",
+        "Agro Processing Unit Name": "Hub 40 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1232.0,
+        "Smallholder Farmers Served": 23695,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.475,
+          -1.0864
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-041",
+        "Agro Processing Unit Name": "Hub 41 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 744.0,
+        "Smallholder Farmers Served": 22053,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0505,
+          1.1644
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-042",
+        "Agro Processing Unit Name": "Hub 42 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1641.0,
+        "Smallholder Farmers Served": 27895,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3142,
+          1.8115
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-043",
+        "Agro Processing Unit Name": "Hub 43 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1530.0,
+        "Smallholder Farmers Served": 18079,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.9124,
+          0.565
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-044",
+        "Agro Processing Unit Name": "Hub 44 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 913.0,
+        "Smallholder Farmers Served": 15705,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5124,
+          0.8954
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-045",
+        "Agro Processing Unit Name": "Hub 45 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 807.0,
+        "Smallholder Farmers Served": 22814,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2091,
+          0.1741
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-046",
+        "Agro Processing Unit Name": "Hub 46 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 696.0,
+        "Smallholder Farmers Served": 12061,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7859,
+          1.1658
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-047",
+        "Agro Processing Unit Name": "Hub 47 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1752.0,
+        "Smallholder Farmers Served": 20172,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0983,
+          0.9501
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-048",
+        "Agro Processing Unit Name": "Hub 48 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 520.0,
+        "Smallholder Farmers Served": 17476,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.4905,
+          2.4622
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-049",
+        "Agro Processing Unit Name": "Hub 49 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1366.0,
+        "Smallholder Farmers Served": 24476,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8958,
+          0.1567
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-050",
+        "Agro Processing Unit Name": "Hub 50 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1234.0,
+        "Smallholder Farmers Served": 14817,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.46,
+          1.4164
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-051",
+        "Agro Processing Unit Name": "Hub 51 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2083.0,
+        "Smallholder Farmers Served": 27482,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7908,
+          0.546
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-052",
+        "Agro Processing Unit Name": "Hub 52 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 903.0,
+        "Smallholder Farmers Served": 23256,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0101,
+          0.2136
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-053",
+        "Agro Processing Unit Name": "Hub 53 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 838.0,
+        "Smallholder Farmers Served": 25942,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9404,
+          1.9157
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-054",
+        "Agro Processing Unit Name": "Hub 54 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 700.0,
+        "Smallholder Farmers Served": 9054,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.875,
+          0.7272
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-055",
+        "Agro Processing Unit Name": "Hub 55 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 3300.0,
+        "Smallholder Farmers Served": 24115,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7476,
+          0.9087
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-056",
+        "Agro Processing Unit Name": "Hub 56 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2701.0,
+        "Smallholder Farmers Served": 26410,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8418,
+          1.3833
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-057",
+        "Agro Processing Unit Name": "Hub 57 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1200.0,
+        "Smallholder Farmers Served": 13325,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1217,
+          2.8494
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-058",
+        "Agro Processing Unit Name": "Hub 58 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1155.0,
+        "Smallholder Farmers Served": 3286,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0611,
+          0.1801
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-059",
+        "Agro Processing Unit Name": "Hub 59 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2359.0,
+        "Smallholder Farmers Served": 17585,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8501,
+          -0.1988
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-060",
+        "Agro Processing Unit Name": "Hub 60 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1691.0,
+        "Smallholder Farmers Served": 7541,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.067,
+          1.8621
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-061",
+        "Agro Processing Unit Name": "Hub 61 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2265.0,
+        "Smallholder Farmers Served": 14630,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1567,
+          0.556
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-062",
+        "Agro Processing Unit Name": "Hub 62 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 750.0,
+        "Smallholder Farmers Served": 19943,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.7206,
+          -1.3116
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-063",
+        "Agro Processing Unit Name": "Hub 63 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1776.0,
+        "Smallholder Farmers Served": 21367,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4354,
+          -0.2329
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-064",
+        "Agro Processing Unit Name": "Hub 64 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 3188.0,
+        "Smallholder Farmers Served": 11243,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0525,
+          3.2686
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-065",
+        "Agro Processing Unit Name": "Hub 65 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 758.0,
+        "Smallholder Farmers Served": 25751,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.33,
+          1.5445
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-066",
+        "Agro Processing Unit Name": "Hub 66 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 999.0,
+        "Smallholder Farmers Served": 9359,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9342,
+          1.0985
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-067",
+        "Agro Processing Unit Name": "Hub 67 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1650.0,
+        "Smallholder Farmers Served": 16898,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9302,
+          3.4396
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-068",
+        "Agro Processing Unit Name": "Hub 68 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2293.0,
+        "Smallholder Farmers Served": 16377,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1425,
+          3.03
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-069",
+        "Agro Processing Unit Name": "Hub 69 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2438.0,
+        "Smallholder Farmers Served": 23165,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8906,
+          1.4702
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-070",
+        "Agro Processing Unit Name": "Hub 70 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 373.0,
+        "Smallholder Farmers Served": 10204,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5981,
+          0.6404
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-071",
+        "Agro Processing Unit Name": "Hub 71 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1492.0,
+        "Smallholder Farmers Served": 20151,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7822,
+          3.5795
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-072",
+        "Agro Processing Unit Name": "Hub 72 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 780.0,
+        "Smallholder Farmers Served": 10420,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1003,
+          3.4226
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-073",
+        "Agro Processing Unit Name": "Hub 73 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 928.0,
+        "Smallholder Farmers Served": 25569,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8868,
+          0.3619
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-074",
+        "Agro Processing Unit Name": "Hub 74 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1965.0,
+        "Smallholder Farmers Served": 20348,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5166,
+          0.8674
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-075",
+        "Agro Processing Unit Name": "Hub 75 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1299.0,
+        "Smallholder Farmers Served": 2818,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.079,
+          3.6126
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-076",
+        "Agro Processing Unit Name": "Hub 76 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 450.0,
+        "Smallholder Farmers Served": 20680,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5045,
+          0.6854
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-077",
+        "Agro Processing Unit Name": "Hub 77 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 552.0,
+        "Smallholder Farmers Served": 12020,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3003,
+          -0.9181
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-078",
+        "Agro Processing Unit Name": "Hub 78 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1657.0,
+        "Smallholder Farmers Served": 10944,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1134,
+          1.7315
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-079",
+        "Agro Processing Unit Name": "Hub 79 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 629.0,
+        "Smallholder Farmers Served": 11806,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1954,
+          2.1785
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-080",
+        "Agro Processing Unit Name": "Hub 80 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1348.0,
+        "Smallholder Farmers Served": 1537,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8861,
+          0.3086
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-081",
+        "Agro Processing Unit Name": "Hub 81 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 515.0,
+        "Smallholder Farmers Served": 26287,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5327,
+          -0.4932
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-082",
+        "Agro Processing Unit Name": "Hub 82 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 662.0,
+        "Smallholder Farmers Served": 10938,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9183,
+          3.3162
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-083",
+        "Agro Processing Unit Name": "Hub 83 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 709.0,
+        "Smallholder Farmers Served": 9341,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7187,
+          -0.3739
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-084",
+        "Agro Processing Unit Name": "Hub 84 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2662.0,
+        "Smallholder Farmers Served": 8862,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1088,
+          1.7113
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-085",
+        "Agro Processing Unit Name": "Hub 85 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 353.0,
+        "Smallholder Farmers Served": 24981,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2582,
+          0.9553
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-086",
+        "Agro Processing Unit Name": "Hub 86 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1556.0,
+        "Smallholder Farmers Served": 16467,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0268,
+          1.0062
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-087",
+        "Agro Processing Unit Name": "Hub 87 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 3041.0,
+        "Smallholder Farmers Served": 5973,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1876,
+          0.8747
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-088",
+        "Agro Processing Unit Name": "Hub 88 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1288.0,
+        "Smallholder Farmers Served": 27311,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.6715,
+          2.516
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-089",
+        "Agro Processing Unit Name": "Hub 89 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1205.0,
+        "Smallholder Farmers Served": 20732,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7528,
+          3.6452
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-090",
+        "Agro Processing Unit Name": "Hub 90 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 611.0,
+        "Smallholder Farmers Served": 12393,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3653,
+          0.5677
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-091",
+        "Agro Processing Unit Name": "Hub 91 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 406.0,
+        "Smallholder Farmers Served": 24355,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.862,
+          1.5948
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-092",
+        "Agro Processing Unit Name": "Hub 92 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 285.0,
+        "Smallholder Farmers Served": 25902,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2812,
+          -0.1513
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-093",
+        "Agro Processing Unit Name": "Hub 93 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 935.0,
+        "Smallholder Farmers Served": 6484,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8809,
+          0.477
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-094",
+        "Agro Processing Unit Name": "Hub 94 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1442.0,
+        "Smallholder Farmers Served": 4788,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3232,
+          3.3577
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-095",
+        "Agro Processing Unit Name": "Hub 95 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1705.0,
+        "Smallholder Farmers Served": 14934,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.5315,
+          2.0767
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-096",
+        "Agro Processing Unit Name": "Hub 96 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2122.0,
+        "Smallholder Farmers Served": 21922,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2709,
+          1.5026
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-097",
+        "Agro Processing Unit Name": "Hub 97 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 961.0,
+        "Smallholder Farmers Served": 18985,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0213,
+          1.0785
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-098",
+        "Agro Processing Unit Name": "Hub 98 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 911.0,
+        "Smallholder Farmers Served": 19228,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0724,
+          -0.7216
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-099",
+        "Agro Processing Unit Name": "Hub 99 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 977.0,
+        "Smallholder Farmers Served": 8954,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0319,
+          -0.013
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-100",
+        "Agro Processing Unit Name": "Hub 100 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1557.0,
+        "Smallholder Farmers Served": 4793,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7986,
+          1.9051
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-101",
+        "Agro Processing Unit Name": "Hub 101 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1294.0,
+        "Smallholder Farmers Served": 27588,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0031,
+          0.77
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-102",
+        "Agro Processing Unit Name": "Hub 102 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1094.0,
+        "Smallholder Farmers Served": 15002,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3217,
+          0.8005
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-103",
+        "Agro Processing Unit Name": "Hub 103 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 4412.0,
+        "Smallholder Farmers Served": 21806,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4545,
+          1.3319
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-104",
+        "Agro Processing Unit Name": "Hub 104 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1398.0,
+        "Smallholder Farmers Served": 22402,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0618,
+          1.4935
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-105",
+        "Agro Processing Unit Name": "Hub 105 Cassava Starch Factory",
+        "Commodity Category": "Cassava Industrialization",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 862.0,
+        "Smallholder Farmers Served": 10925,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5817,
+          1.5448
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-106",
+        "Agro Processing Unit Name": "Hub 106 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 4853.0,
+        "Smallholder Farmers Served": 11302,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5536,
+          1.0907
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-107",
+        "Agro Processing Unit Name": "Hub 107 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 501.0,
+        "Smallholder Farmers Served": 14105,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.0526,
+          1.2238
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-108",
+        "Agro Processing Unit Name": "Hub 108 Tea Factory & Packing Complex",
+        "Commodity Category": "Tea Export Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1458.0,
+        "Smallholder Farmers Served": 24413,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8041,
+          1.4757
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-109",
+        "Agro Processing Unit Name": "Hub 109 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1310.0,
+        "Smallholder Farmers Served": 20044,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0815,
+          3.6232
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-110",
+        "Agro Processing Unit Name": "Hub 110 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2591.0,
+        "Smallholder Farmers Served": 10878,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3961,
+          0.9372
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-111",
+        "Agro Processing Unit Name": "Hub 111 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 635.0,
+        "Smallholder Farmers Served": 26258,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2744,
+          -0.8355
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-112",
+        "Agro Processing Unit Name": "Hub 112 Sugar Refining Complex",
+        "Commodity Category": "Sugar Industry",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 3563.0,
+        "Smallholder Farmers Served": 11623,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1936,
+          0.0778
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-113",
+        "Agro Processing Unit Name": "Hub 113 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 887.0,
+        "Smallholder Farmers Served": 11170,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.5502,
+          0.9295
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-114",
+        "Agro Processing Unit Name": "Hub 114 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 699.0,
+        "Smallholder Farmers Served": 13488,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.162,
+          2.6578
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-115",
+        "Agro Processing Unit Name": "Hub 115 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2270.0,
+        "Smallholder Farmers Served": 17289,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1382,
+          3.2714
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-116",
+        "Agro Processing Unit Name": "Hub 116 Cotton Ginning & Textile Hub",
+        "Commodity Category": "Cotton Value Addition",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 431.0,
+        "Smallholder Farmers Served": 26212,
+        "Feeder Road Condition": "Good (Paved / Class A-B)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4821,
+          2.0652
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-117",
+        "Agro Processing Unit Name": "Hub 117 Cocoa Fermentation & Export Terminal",
+        "Commodity Category": "Cocoa Export",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 554.0,
+        "Smallholder Farmers Served": 27409,
+        "Feeder Road Condition": "Fair (Graded Gravel)",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.265,
+          1.8874
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-118",
+        "Agro Processing Unit Name": "Hub 118 Coffee Processing & Milling Hub",
+        "Commodity Category": "Coffee Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 1526.0,
+        "Smallholder Farmers Served": 26043,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8287,
+          3.4955
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-119",
+        "Agro Processing Unit Name": "Hub 119 Grain Silo & Storage Terminal",
+        "Commodity Category": "Maize & Grain Evacuation",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 2504.0,
+        "Smallholder Farmers Served": 5050,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.9191,
+          2.9748
+        ]
+      },
+      "properties": {
+        "Hub ID": "AGRI-120",
+        "Agro Processing Unit Name": "Hub 120 Dairy & Milk Processing Factory",
+        "Commodity Category": "Dairy / Livestock Corridor",
+        "District Location": "Agricultural Zone District",
+        "Annual Processing Capacity (Metric Tons)": 3280.0,
+        "Smallholder Farmers Served": 12248,
+        "Feeder Road Condition": "Paved Highway Link",
+        "Export Route Clearance": "Direct Truck Route to Malaba / Busia Border"
+      }
+    }
+  ]
+}

@@ -1,0 +1,905 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.42,
+          1.83
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-001",
+        "Mineral Deposit Name": "Crude Oil (Petroleum)",
+        "Resource Category": "Energy / Hydrocarbons",
+        "Subregion Location": "Albertine Graben / Western",
+        "Estimated Reserve Value (USD Million)": 45000,
+        "Operational Status": "Development / Extraction",
+        "Proximity to Bitumen Road (km)": 2.5,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98,
+          1.25
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-002",
+        "Mineral Deposit Name": "Crude Oil (Kingfisher Field)",
+        "Resource Category": "Energy / Hydrocarbons",
+        "Subregion Location": "Kikuube / Albertine",
+        "Estimated Reserve Value (USD Million)": 28000,
+        "Operational Status": "Development",
+        "Proximity to Bitumen Road (km)": 5.4,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.35,
+          2.12
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-003",
+        "Mineral Deposit Name": "Tilenga Oil Field",
+        "Resource Category": "Energy / Hydrocarbons",
+        "Subregion Location": "Buliisa / Nwoya",
+        "Estimated Reserve Value (USD Million)": 35000,
+        "Operational Status": "Active Drilling",
+        "Proximity to Bitumen Road (km)": 4.0,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.67,
+          2.53
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-004",
+        "Mineral Deposit Name": "Gold Deposit (Karamoja Basin)",
+        "Resource Category": "Precious Metals",
+        "Subregion Location": "Moroto / Karamoja",
+        "Estimated Reserve Value (USD Million)": 12000,
+        "Operational Status": "Artisanal / Exploration",
+        "Proximity to Bitumen Road (km)": 1.8,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.34,
+          -0.35
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-005",
+        "Mineral Deposit Name": "Gold Deposit (Buhweju Field)",
+        "Resource Category": "Precious Metals",
+        "Subregion Location": "Buhweju / Western",
+        "Estimated Reserve Value (USD Million)": 4500,
+        "Operational Status": "Commercial / Small-Scale",
+        "Proximity to Bitumen Road (km)": 3.9,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.82,
+          0.58
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-006",
+        "Mineral Deposit Name": "Gold Deposit (Kassanda / Mubende)",
+        "Resource Category": "Precious Metals",
+        "Subregion Location": "Kassanda / Central",
+        "Estimated Reserve Value (USD Million)": 3800,
+        "Operational Status": "Active Mining",
+        "Proximity to Bitumen Road (km)": 12.6,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.01,
+          0.18
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-007",
+        "Mineral Deposit Name": "Kilembe Copper & Cobalt Complex",
+        "Resource Category": "Base / Strategic Metals",
+        "Subregion Location": "Kasese / Rwenzori",
+        "Estimated Reserve Value (USD Million)": 8500,
+        "Operational Status": "Rehabilitation / Concession",
+        "Proximity to Bitumen Road (km)": 4.1,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.16,
+          0.64
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-008",
+        "Mineral Deposit Name": "Sukulu Phosphate Complex",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "Tororo / Eastern",
+        "Estimated Reserve Value (USD Million)": 9200,
+        "Operational Status": "Active Fertilizer Plant",
+        "Proximity to Bitumen Road (km)": 3.7,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.72,
+          2.61
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-009",
+        "Mineral Deposit Name": "Limestone Deposit (Katikekile / Moroto)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "Moroto / Karamoja",
+        "Estimated Reserve Value (USD Million)": 5400,
+        "Operational Status": "Active Cement Supply",
+        "Proximity to Bitumen Road (km)": 13.6,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.17,
+          0.28
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-010",
+        "Mineral Deposit Name": "Limestone Deposit (Hima / Kasese)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "Kasese / Western",
+        "Estimated Reserve Value (USD Million)": 6800,
+        "Operational Status": "Active Cement Extraction",
+        "Proximity to Bitumen Road (km)": 7.3,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.82,
+          -1.22
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-011",
+        "Mineral Deposit Name": "Iron Ore Deposit (Muko / Kabale)",
+        "Resource Category": "Ferrous Metals",
+        "Subregion Location": "Rubanda / Kigezi",
+        "Estimated Reserve Value (USD Million)": 14000,
+        "Operational Status": "Feasibility / Extraction",
+        "Proximity to Bitumen Road (km)": 11.9,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.58,
+          0.62
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-012",
+        "Mineral Deposit Name": "Rare Earth Elements (Makuutu REE Project)",
+        "Resource Category": "Critical Minerals",
+        "Subregion Location": "Bugweri / Mayuge",
+        "Estimated Reserve Value (USD Million)": 16500,
+        "Operational Status": "Advanced Exploration",
+        "Proximity to Bitumen Road (km)": 2.1,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.27,
+          -0.88
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-013",
+        "Mineral Deposit Name": "Lithium Deposit (Ntungamo Pegmatite)",
+        "Resource Category": "Critical Metals / EV Tech",
+        "Subregion Location": "Ntungamo / Western",
+        "Estimated Reserve Value (USD Million)": 3200,
+        "Operational Status": "Exploration",
+        "Proximity to Bitumen Road (km)": 6.6,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.42,
+          3.48
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-014",
+        "Mineral Deposit Name": "Graphite Deposit (Orom Cross)",
+        "Resource Category": "Critical Minerals",
+        "Subregion Location": "Kitgum / Northern",
+        "Estimated Reserve Value (USD Million)": 2900,
+        "Operational Status": "Exploration / Pilot",
+        "Proximity to Bitumen Road (km)": 10.8,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.88,
+          -0.14
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-015",
+        "Mineral Deposit Name": "Salt Deposit (Lake Katwe Extraction)",
+        "Resource Category": "Industrial Salts",
+        "Subregion Location": "Kasese / Western",
+        "Estimated Reserve Value (USD Million)": 1100,
+        "Operational Status": "Traditional & Industrial",
+        "Proximity to Bitumen Road (km)": 14.3,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.33,
+          0.84
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-016",
+        "Mineral Deposit Name": "Vermiculite Mining Site (Namekara)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "Manafwa / Eastern",
+        "Estimated Reserve Value (USD Million)": 2200,
+        "Operational Status": "Commercial Export",
+        "Proximity to Bitumen Road (km)": 6.3,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.68,
+          -0.92
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-017",
+        "Mineral Deposit Name": "Tin Deposit (Rwampara / Kikagati)",
+        "Resource Category": "Base Metals",
+        "Subregion Location": "Isingiro / Western",
+        "Estimated Reserve Value (USD Million)": 1800,
+        "Operational Status": "Active Smelting",
+        "Proximity to Bitumen Road (km)": 12.6,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.6358,
+          -0.8236
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-018",
+        "Mineral Deposit Name": "Silica Sand (Region 18 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 2174.1,
+        "Operational Status": "Exploration",
+        "Proximity to Bitumen Road (km)": 3.4,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.766,
+          -0.7295
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-019",
+        "Mineral Deposit Name": "Silica Sand (Region 19 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 3664.4,
+        "Operational Status": "Exploration",
+        "Proximity to Bitumen Road (km)": 6.6,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.6901,
+          0.9406
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-020",
+        "Mineral Deposit Name": "Gold Deposit (Region 20 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 4709.3,
+        "Operational Status": "Active Extraction",
+        "Proximity to Bitumen Road (km)": 4.2,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1623,
+          2.7701
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-021",
+        "Mineral Deposit Name": "Iron Ore Deposit (Region 21 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 548.7,
+        "Operational Status": "Small-Scale Mining",
+        "Proximity to Bitumen Road (km)": 6.9,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7179,
+          1.3597
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-022",
+        "Mineral Deposit Name": "Silica Sand (Region 22 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 7679.1,
+        "Operational Status": "Feasibility Study",
+        "Proximity to Bitumen Road (km)": 8.3,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.8815,
+          0.811
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-023",
+        "Mineral Deposit Name": "Gold Deposit (Region 23 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 3079.7,
+        "Operational Status": "Feasibility Study",
+        "Proximity to Bitumen Road (km)": 14.5,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8878,
+          2.1436
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-024",
+        "Mineral Deposit Name": "Gold Deposit (Region 24 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 7417.2,
+        "Operational Status": "Exploration",
+        "Proximity to Bitumen Road (km)": 14.1,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.1763,
+          3.6528
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-025",
+        "Mineral Deposit Name": "Clay & Kaolin Deposit (Region 25 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 6962.8,
+        "Operational Status": "Small-Scale Mining",
+        "Proximity to Bitumen Road (km)": 12.4,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.251,
+          2.1034
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-026",
+        "Mineral Deposit Name": "Silica Sand (Region 26 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 2670.4,
+        "Operational Status": "Exploration",
+        "Proximity to Bitumen Road (km)": 7.5,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5288,
+          0.2989
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-027",
+        "Mineral Deposit Name": "Iron Ore Deposit (Region 27 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 5267.6,
+        "Operational Status": "Feasibility Study",
+        "Proximity to Bitumen Road (km)": 6.3,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.2777,
+          3.4122
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-028",
+        "Mineral Deposit Name": "Iron Ore Deposit (Region 28 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 5763.7,
+        "Operational Status": "Exploration",
+        "Proximity to Bitumen Road (km)": 6.0,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.6424,
+          0.0914
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-029",
+        "Mineral Deposit Name": "Clay & Kaolin Deposit (Region 29 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 1725.5,
+        "Operational Status": "Active Extraction",
+        "Proximity to Bitumen Road (km)": 4.4,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.9561,
+          3.1575
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-030",
+        "Mineral Deposit Name": "Limestone Deposit (Region 30 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 5634.6,
+        "Operational Status": "Exploration",
+        "Proximity to Bitumen Road (km)": 7.0,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2248,
+          2.4928
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-031",
+        "Mineral Deposit Name": "Iron Ore Deposit (Region 31 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 2508.1,
+        "Operational Status": "Small-Scale Mining",
+        "Proximity to Bitumen Road (km)": 13.9,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7042,
+          0.311
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-032",
+        "Mineral Deposit Name": "Clay & Kaolin Deposit (Region 32 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 4244.2,
+        "Operational Status": "Active Extraction",
+        "Proximity to Bitumen Road (km)": 8.4,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8436,
+          3.4966
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-033",
+        "Mineral Deposit Name": "Iron Ore Deposit (Region 33 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 4542.3,
+        "Operational Status": "Active Extraction",
+        "Proximity to Bitumen Road (km)": 2.9,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3067,
+          0.9834
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-034",
+        "Mineral Deposit Name": "Clay & Kaolin Deposit (Region 34 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 1537.5,
+        "Operational Status": "Active Extraction",
+        "Proximity to Bitumen Road (km)": 14.1,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.8461,
+          -1.3679
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-035",
+        "Mineral Deposit Name": "Gold Deposit (Region 35 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 5205.8,
+        "Operational Status": "Active Extraction",
+        "Proximity to Bitumen Road (km)": 8.2,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.7913,
+          0.7065
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-036",
+        "Mineral Deposit Name": "Clay & Kaolin Deposit (Region 36 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 4010.4,
+        "Operational Status": "Feasibility Study",
+        "Proximity to Bitumen Road (km)": 1.6,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7985,
+          0.4259
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-037",
+        "Mineral Deposit Name": "Clay & Kaolin Deposit (Region 37 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 1359.1,
+        "Operational Status": "Feasibility Study",
+        "Proximity to Bitumen Road (km)": 7.7,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0493,
+          0.8268
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-038",
+        "Mineral Deposit Name": "Silica Sand (Region 38 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 3902.9,
+        "Operational Status": "Feasibility Study",
+        "Proximity to Bitumen Road (km)": 3.0,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2755,
+          1.1459
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-039",
+        "Mineral Deposit Name": "Clay & Kaolin Deposit (Region 39 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 7028.9,
+        "Operational Status": "Feasibility Study",
+        "Proximity to Bitumen Road (km)": 1.9,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1382,
+          -0.3661
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-040",
+        "Mineral Deposit Name": "Silica Sand (Region 40 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 6218.8,
+        "Operational Status": "Exploration",
+        "Proximity to Bitumen Road (km)": 9.0,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9452,
+          3.1619
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-041",
+        "Mineral Deposit Name": "Clay & Kaolin Deposit (Region 41 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 3222.4,
+        "Operational Status": "Feasibility Study",
+        "Proximity to Bitumen Road (km)": 4.0,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.6823,
+          1.253
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-042",
+        "Mineral Deposit Name": "Iron Ore Deposit (Region 42 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 1090.7,
+        "Operational Status": "Active Extraction",
+        "Proximity to Bitumen Road (km)": 13.0,
+        "Transport Logistics Feasibility": "Medium (Gravel Upgrade Required)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3361,
+          0.8944
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-043",
+        "Mineral Deposit Name": "Gold Deposit (Region 43 Sector)",
+        "Resource Category": "Precious / Base Metals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 5448.1,
+        "Operational Status": "Small-Scale Mining",
+        "Proximity to Bitumen Road (km)": 8.9,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6301,
+          0.7056
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-044",
+        "Mineral Deposit Name": "Limestone Deposit (Region 44 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 2088.5,
+        "Operational Status": "Small-Scale Mining",
+        "Proximity to Bitumen Road (km)": 6.5,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1958,
+          2.2082
+        ]
+      },
+      "properties": {
+        "Deposit ID": "MIN-045",
+        "Mineral Deposit Name": "Silica Sand (Region 45 Sector)",
+        "Resource Category": "Industrial Minerals",
+        "Subregion Location": "National Zone District",
+        "Estimated Reserve Value (USD Million)": 3300.7,
+        "Operational Status": "Active Extraction",
+        "Proximity to Bitumen Road (km)": 8.0,
+        "Transport Logistics Feasibility": "High (Paved Corridor)"
+      }
+    }
+  ]
+}

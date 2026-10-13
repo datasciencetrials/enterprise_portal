@@ -1,0 +1,635 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.69,
+          0.35
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-001",
+        "Industrial Park Name": "Kampala Industrial & Business Park (Namanve)",
+        "Park Land Area (Acres)": 2200,
+        "Active Industrial Investors": 185,
+        "Direct Employment (Jobs Created)": 45000,
+        "Primary Industrial Sector": "Multi-Sector Manufacturing",
+        "Administrative Territory": "Wakiso / Mukono",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.64,
+          0.3
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-002",
+        "Industrial Park Name": "Luzira Industrial & Business Park",
+        "Park Land Area (Acres)": 320,
+        "Active Industrial Investors": 42,
+        "Direct Employment (Jobs Created)": 12000,
+        "Primary Industrial Sector": "Pharmaceuticals & Food Processing",
+        "Administrative Territory": "Kampala Metropolitan",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.66,
+          0.37
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-003",
+        "Industrial Park Name": "Bweyogerere Industrial Estate",
+        "Park Land Area (Acres)": 120,
+        "Active Industrial Investors": 28,
+        "Direct Employment (Jobs Created)": 6500,
+        "Primary Industrial Sector": "Light Industry & Logistics",
+        "Administrative Territory": "Wakiso",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.21,
+          0.44
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-004",
+        "Industrial Park Name": "Jinja Industrial Park",
+        "Park Land Area (Acres)": 850,
+        "Active Industrial Investors": 64,
+        "Direct Employment (Jobs Created)": 22000,
+        "Primary Industrial Sector": "Steel, Textiles & Agri-Processing",
+        "Administrative Territory": "Jinja / Busoga",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.17,
+          1.05
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-005",
+        "Industrial Park Name": "Sino-Uganda Mbale Industrial Park",
+        "Park Land Area (Acres)": 610,
+        "Active Industrial Investors": 38,
+        "Direct Employment (Jobs Created)": 14000,
+        "Primary Industrial Sector": "Electronics, Textiles & Heavy Mfg",
+        "Administrative Territory": "Mbale / Bugisu",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.61,
+          1.71
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-006",
+        "Industrial Park Name": "Soroti Industrial Park",
+        "Park Land Area (Acres)": 220,
+        "Active Industrial Investors": 15,
+        "Direct Employment (Jobs Created)": 3800,
+        "Primary Industrial Sector": "Fruit Processing & Leather",
+        "Administrative Territory": "Soroti / Teso",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.08,
+          0.17
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-007",
+        "Industrial Park Name": "Kasese Industrial Park",
+        "Park Land Area (Acres)": 217,
+        "Active Industrial Investors": 18,
+        "Direct Employment (Jobs Created)": 4200,
+        "Primary Industrial Sector": "Lime, Mining Support & Coffee Processing",
+        "Administrative Territory": "Kasese / Rwenzori",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3,
+          2.77
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-008",
+        "Industrial Park Name": "Gulu Industrial Park",
+        "Park Land Area (Acres)": 500,
+        "Active Industrial Investors": 22,
+        "Direct Employment (Jobs Created)": 5800,
+        "Primary Industrial Sector": "Agro-Logistics & Grains",
+        "Administrative Territory": "Gulu / Acholi",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.91,
+          3.03
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-009",
+        "Industrial Park Name": "Arua Industrial Park",
+        "Park Land Area (Acres)": 400,
+        "Active Industrial Investors": 19,
+        "Direct Employment (Jobs Created)": 4900,
+        "Primary Industrial Sector": "Cross-Border Trade & Tobacco/Agro",
+        "Administrative Territory": "Arua / West Nile",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.66,
+          2.52
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-010",
+        "Industrial Park Name": "Moroto Industrial Park",
+        "Park Land Area (Acres)": 350,
+        "Active Industrial Investors": 8,
+        "Direct Employment (Jobs Created)": 1800,
+        "Primary Industrial Sector": "Mineral Processing & Cement",
+        "Administrative Territory": "Moroto / Karamoja",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.65,
+          -0.61
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-011",
+        "Industrial Park Name": "Mbarara Industrial & Business Park",
+        "Park Land Area (Acres)": 380,
+        "Active Industrial Investors": 35,
+        "Direct Employment (Jobs Created)": 9500,
+        "Primary Industrial Sector": "Dairy, Beef & Milk Processing",
+        "Administrative Territory": "Mbarara / Ankole",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.98,
+          -1.25
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-012",
+        "Industrial Park Name": "Kabale Industrial Hub",
+        "Park Land Area (Acres)": 180,
+        "Active Industrial Investors": 12,
+        "Direct Employment (Jobs Created)": 2900,
+        "Primary Industrial Sector": "Tea & Horticulture Export",
+        "Administrative Territory": "Kabale / Kigezi",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.45,
+          0.05
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-013",
+        "Industrial Park Name": "Entebbe Free Trade Zone",
+        "Park Land Area (Acres)": 150,
+        "Active Industrial Investors": 24,
+        "Direct Employment (Jobs Created)": 5200,
+        "Primary Industrial Sector": "Air Cargo, Pharma & High-Tech Export",
+        "Administrative Territory": "Wakiso / Entebbe",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.18,
+          0.69
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-014",
+        "Industrial Park Name": "Tororo Industrial & Logistics Park",
+        "Park Land Area (Acres)": 450,
+        "Active Industrial Investors": 26,
+        "Direct Employment (Jobs Created)": 8100,
+        "Primary Industrial Sector": "Cement, Fertilizers & Rail Cargo",
+        "Administrative Territory": "Tororo / Eastern",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.25,
+          1.43
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-015",
+        "Industrial Park Name": "Hoima Oil & Industrial Hub (Kabalega)",
+        "Park Land Area (Acres)": 2980,
+        "Active Industrial Investors": 45,
+        "Direct Employment (Jobs Created)": 18500,
+        "Primary Industrial Sector": "Petrochemical Refinery & Logistics",
+        "Administrative Territory": "Hoima / Bunyoro",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0018,
+          0.2283
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-016",
+        "Industrial Park Name": "District Hub 16 Agro-Industrial Park",
+        "Park Land Area (Acres)": 261.0,
+        "Active Industrial Investors": 15,
+        "Direct Employment (Jobs Created)": 3155,
+        "Primary Industrial Sector": "Light Manufacturing",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4791,
+          0.6941
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-017",
+        "Industrial Park Name": "District Hub 17 Agro-Industrial Park",
+        "Park Land Area (Acres)": 203.0,
+        "Active Industrial Investors": 7,
+        "Direct Employment (Jobs Created)": 1276,
+        "Primary Industrial Sector": "Livestock & Dairy Logistics",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.311,
+          0.8174
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-018",
+        "Industrial Park Name": "District Hub 18 Agro-Industrial Park",
+        "Park Land Area (Acres)": 100.0,
+        "Active Industrial Investors": 11,
+        "Direct Employment (Jobs Created)": 5344,
+        "Primary Industrial Sector": "Light Manufacturing",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.381,
+          2.1893
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-019",
+        "Industrial Park Name": "District Hub 19 Agro-Industrial Park",
+        "Park Land Area (Acres)": 317.0,
+        "Active Industrial Investors": 16,
+        "Direct Employment (Jobs Created)": 3534,
+        "Primary Industrial Sector": "Horticulture Export",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2885,
+          -0.899
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-020",
+        "Industrial Park Name": "District Hub 20 Agro-Industrial Park",
+        "Park Land Area (Acres)": 245.0,
+        "Active Industrial Investors": 25,
+        "Direct Employment (Jobs Created)": 5533,
+        "Primary Industrial Sector": "Agro-Processing & Grains",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2442,
+          0.5932
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-021",
+        "Industrial Park Name": "District Hub 21 Agro-Industrial Park",
+        "Park Land Area (Acres)": 259.0,
+        "Active Industrial Investors": 9,
+        "Direct Employment (Jobs Created)": 3366,
+        "Primary Industrial Sector": "Agro-Processing & Grains",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9173,
+          0.5504
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-022",
+        "Industrial Park Name": "District Hub 22 Agro-Industrial Park",
+        "Park Land Area (Acres)": 154.0,
+        "Active Industrial Investors": 24,
+        "Direct Employment (Jobs Created)": 2925,
+        "Primary Industrial Sector": "Light Manufacturing",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9651,
+          3.456
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-023",
+        "Industrial Park Name": "District Hub 23 Agro-Industrial Park",
+        "Park Land Area (Acres)": 216.0,
+        "Active Industrial Investors": 13,
+        "Direct Employment (Jobs Created)": 1616,
+        "Primary Industrial Sector": "Agro-Processing & Grains",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.9422,
+          1.021
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-024",
+        "Industrial Park Name": "District Hub 24 Agro-Industrial Park",
+        "Park Land Area (Acres)": 81.0,
+        "Active Industrial Investors": 9,
+        "Direct Employment (Jobs Created)": 3345,
+        "Primary Industrial Sector": "Horticulture Export",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0532,
+          3.6371
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-025",
+        "Industrial Park Name": "District Hub 25 Agro-Industrial Park",
+        "Park Land Area (Acres)": 231.0,
+        "Active Industrial Investors": 8,
+        "Direct Employment (Jobs Created)": 1816,
+        "Primary Industrial Sector": "Horticulture Export",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.6009,
+          -0.6793
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-026",
+        "Industrial Park Name": "District Hub 26 Agro-Industrial Park",
+        "Park Land Area (Acres)": 229.0,
+        "Active Industrial Investors": 18,
+        "Direct Employment (Jobs Created)": 2244,
+        "Primary Industrial Sector": "Agro-Processing & Grains",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2962,
+          0.8576
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-027",
+        "Industrial Park Name": "District Hub 27 Agro-Industrial Park",
+        "Park Land Area (Acres)": 342.0,
+        "Active Industrial Investors": 6,
+        "Direct Employment (Jobs Created)": 4131,
+        "Primary Industrial Sector": "Horticulture Export",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4053,
+          0.6296
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-028",
+        "Industrial Park Name": "District Hub 28 Agro-Industrial Park",
+        "Park Land Area (Acres)": 291.0,
+        "Active Industrial Investors": 18,
+        "Direct Employment (Jobs Created)": 2466,
+        "Primary Industrial Sector": "Horticulture Export",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3491,
+          1.1579
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-029",
+        "Industrial Park Name": "District Hub 29 Agro-Industrial Park",
+        "Park Land Area (Acres)": 128.0,
+        "Active Industrial Investors": 18,
+        "Direct Employment (Jobs Created)": 1403,
+        "Primary Industrial Sector": "Horticulture Export",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.234,
+          0.5298
+        ]
+      },
+      "properties": {
+        "Park ID": "IND-030",
+        "Industrial Park Name": "District Hub 30 Agro-Industrial Park",
+        "Park Land Area (Acres)": 191.0,
+        "Active Industrial Investors": 12,
+        "Direct Employment (Jobs Created)": 3385,
+        "Primary Industrial Sector": "Horticulture Export",
+        "Administrative Territory": "Regional Sector District",
+        "Power Substation Connection": "132kV Dedicated Grid Line",
+        "Logistics Trunk Access": "Direct Bitumen Highway Link"
+      }
+    }
+  ]
+}
