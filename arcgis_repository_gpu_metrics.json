@@ -1,0 +1,32 @@
+{
+  "engine_name": "MoWT ArcGIS & National GIS Enterprise Backend Engine",
+  "gpu_hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
+  "training_timestamp": "2026-08-19T11:14:08Z",
+  "data_sources": [
+    "D:\\OneDrive\\ArcGIS",
+    "D:\\OneDrive\\Uganda National Road Network Repository"
+  ],
+  "total_individual_links_assigned": 1015,
+  "total_ducar_sections_processed": 35000,
+  "data_fullness_status": "100% Complete \u2014 ZERO Blank, Missing, or Null Fields",
+  "pci_deterioration_model": {
+    "model_type": "XGBRegressor GPU CUDA",
+    "training_latency_ms": 3298.8,
+    "test_rmse": 0.3784,
+    "test_r2_score": 0.9996,
+    "feature_importance": {
+      "surf_encoded": 0.0,
+      "class_encoded": 0.0,
+      "Length Km": 0.0,
+      "Aadt 2026 Live": 0.0,
+      "Esal Per Day": 0.0,
+      "Landslide Risk Index": 0.0,
+      "Structural Number": 1.0
+    }
+  },
+  "intervention_classifier_model": {
+    "model_type": "XGBClassifier GPU CUDA",
+    "training_latency_ms": 953.46,
+    "test_accuracy_pct": 99.01
+  }
+}

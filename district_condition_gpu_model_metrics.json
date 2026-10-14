@@ -1,0 +1,131 @@
+{
+  "device_name": "CPU (scikit-learn RandomForestRegressor, cloud training run)",
+  "training_timestamp": "2026-08-25T08:10:00Z",
+  "total_samples_trained": 135,
+  "source_dataset": "ducar_district_condition_summary.geojson (135 districts, full national coverage, MoWT DUCAR GIS Package 2026)",
+  "poor_pct_regressor": {
+    "model_type": "RandomForestRegressor",
+    "target": "POOR_PCT (share of district road network in Poor condition)",
+    "features_used": [
+      "AREA_SQKM",
+      "TOT_KM",
+      "DENS_KMKM2",
+      "natl_share",
+      "dist_share",
+      "urb_share",
+      "comm_share"
+    ],
+    "n_train": 108,
+    "n_test": 27,
+    "test_r2_score": 0.4476,
+    "test_mae_pct_points": 4.19,
+    "cv5_r2_score": 0.8187,
+    "cv5_mae_pct_points": 3.41,
+    "feature_importances": {
+      "AREA_SQKM": 0.0113,
+      "TOT_KM": 0.0101,
+      "DENS_KMKM2": 0.0046,
+      "natl_share": 0.0032,
+      "dist_share": 0.0086,
+      "urb_share": 0.9532,
+      "comm_share": 0.0092
+    },
+    "note": "Features are restricted to road-class composition shares (national/district/urban/community km as a fraction of total), district area, total network length, and road density. Paved/unpaved and good/fair/poor km fields were deliberately excluded from the feature set because they are algebraic components of POOR_PCT itself (POOR_PCT = POOR_KM / TOT_KM * 100) and using them would be leakage, not a genuine predictive signal. With n=135 districts this is a real but modest-power regression -- reported honestly with both a held-out test split and 5-fold CV, not presented as a production-grade forecasting model."
+  },
+  "district_condition_analytics": {
+    "top5_paved_pct_districts": [
+      {
+        "DISTRICT": "Kisoro",
+        "PAVED_PCT": 99.5
+      },
+      {
+        "DISTRICT": "Rubanda",
+        "PAVED_PCT": 95.9
+      },
+      {
+        "DISTRICT": "Bundibugyo",
+        "PAVED_PCT": 94.5
+      },
+      {
+        "DISTRICT": "Ntoroko",
+        "PAVED_PCT": 93.3
+      },
+      {
+        "DISTRICT": "Bunyangabu",
+        "PAVED_PCT": 90.6
+      }
+    ],
+    "bottom5_paved_pct_districts": [
+      {
+        "DISTRICT": "Buvuma",
+        "PAVED_PCT": 0.9
+      },
+      {
+        "DISTRICT": "Butambala",
+        "PAVED_PCT": 1.1
+      },
+      {
+        "DISTRICT": "Buliisa",
+        "PAVED_PCT": 1.6
+      },
+      {
+        "DISTRICT": "Luuka",
+        "PAVED_PCT": 1.6
+      },
+      {
+        "DISTRICT": "Kayunga",
+        "PAVED_PCT": 1.9
+      }
+    ],
+    "top5_poor_pct_districts": [
+      {
+        "DISTRICT": "Amuria",
+        "POOR_PCT": 60.2
+      },
+      {
+        "DISTRICT": "Wakiso",
+        "POOR_PCT": 59.6
+      },
+      {
+        "DISTRICT": "Kampala",
+        "POOR_PCT": 58.8
+      },
+      {
+        "DISTRICT": "Kapelebyong",
+        "POOR_PCT": 58.5
+      },
+      {
+        "DISTRICT": "Mukono",
+        "POOR_PCT": 54.8
+      }
+    ],
+    "bottom5_poor_pct_districts": [
+      {
+        "DISTRICT": "Kisoro",
+        "POOR_PCT": 0.1
+      },
+      {
+        "DISTRICT": "Buvuma",
+        "POOR_PCT": 0.8
+      },
+      {
+        "DISTRICT": "Kibaale",
+        "POOR_PCT": 0.9
+      },
+      {
+        "DISTRICT": "Kanungu",
+        "POOR_PCT": 1.0
+      },
+      {
+        "DISTRICT": "Kitagwenda",
+        "POOR_PCT": 1.4
+      }
+    ],
+    "correlation_density_vs_poor_pct": 0.4047,
+    "correlation_national_road_share_vs_paved_pct": 0.1855,
+    "national_mean_paved_pct": 28.8,
+    "national_mean_poor_pct": 17.08,
+    "national_total_km": 202200.9,
+    "districts_covered": 135
+  }
+}

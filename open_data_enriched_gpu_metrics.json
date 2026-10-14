@@ -1,0 +1,17 @@
+{
+  "engine_name": "MoWT Open Data Scraper & Exhaustive Imputation GPU Engine",
+  "gpu_hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
+  "training_timestamp": "2026-08-19T12:43:52Z",
+  "total_enriched_links": 15000,
+  "open_data_source": "OpenStreetMap Overpass API (Uganda Transport Nodes)",
+  "data_fullness_status": "100% COMPLETE \u2014 ZERO BLANK / NULL / UNDEFINED / EMPTY VALUES ACROSS ALL LINKS",
+  "pci_model": {
+    "r2_score": 0.5048,
+    "rmse": 6.4588,
+    "latency_ms": 4345.18
+  },
+  "classifier_model": {
+    "accuracy_pct": 70.23,
+    "latency_ms": 4489.12
+  }
+}

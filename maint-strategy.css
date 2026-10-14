@@ -1,0 +1,144 @@
+/* ============================================================
+   National Road Maintenance Strategy panel
+   Loaded after the compiled app stylesheet. Reuses .glass-card /
+   .kpi-card for stat tiles; everything else scoped under #ms-overlay.
+   ============================================================ */
+
+#ms-overlay{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(5,5,5,.92);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .18s ease;
+  padding:28px;
+  box-sizing:border-box;
+}
+#ms-overlay.ms-open{ opacity:1; pointer-events:auto; }
+
+.ms-panel{
+  width:100%;
+  max-height:calc(100vh - 56px);
+  background:#0a0a0f;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+.ms-header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  padding:22px 26px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  flex-shrink:0;
+}
+.ms-header h2{ margin:0 0 4px; color:#fff; font-size:1.4rem; font-weight:700; }
+.ms-subtitle{ color:#a0aec0; font-size:.85rem; max-width:900px; }
+.ms-close{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  color:#fff;
+  width:36px; height:36px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:1rem;
+  flex-shrink:0;
+  transition:background .15s ease;
+}
+.ms-close:hover{ background:rgba(255,255,255,.14); }
+
+.ms-tab-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:18px 26px 0;
+  flex-shrink:0;
+}
+.ms-tab-btn{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  color:#a0aec0;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:.83rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.ms-tab-btn:hover{ background:rgba(255,255,255,.09); color:#fff; }
+.ms-tab-btn-active{ background:rgba(0,255,102,.14); border-color:rgba(0,255,102,.5); color:#fff; }
+
+.ms-scroll{ overflow-y:auto; padding:20px 26px 26px; }
+
+.ms-kpis{ display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin-bottom:4px; }
+.ms-kpis-cond{ grid-template-columns:repeat(5, 1fr); margin-bottom:18px; }
+.ms-kpi{ border-left-width:4px; border-left-style:solid; }
+.ms-kpi-label{ color:#a0aec0; font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; }
+.ms-kpi-value{ color:#fff; font-size:1.35rem; font-weight:700; }
+.ms-kpi-small{ font-size:1.05rem; }
+.ms-kpi-pct{ color:#a0aec0; font-size:.8rem; font-weight:500; }
+
+.ms-search-row{ padding:0 0 14px; flex-shrink:0; }
+.ms-search{
+  width:100%;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;
+  color:#fff;
+  padding:10px 14px;
+  font-size:.9rem;
+  box-sizing:border-box;
+}
+.ms-search::placeholder{ color:#6b7688; }
+.ms-search:focus{ outline:2px solid rgba(0,255,102,.4); }
+
+.ms-section-title{ color:#fff; font-size:1rem; font-weight:600; margin:22px 0 10px; }
+.ms-section-title:first-child{ margin-top:0; }
+.ms-count{ color:#a0aec0; font-weight:400; font-size:.85rem; }
+
+.ms-table-wrap{
+  width:100%;
+  overflow-x:auto;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;
+}
+.ms-table{ width:100%; border-collapse:collapse; font-size:.83rem; white-space:nowrap; }
+.ms-table th{
+  text-align:left;
+  color:#a0aec0;
+  font-weight:600;
+  letter-spacing:.03em;
+  padding:10px 14px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  position:sticky;
+  top:0;
+  background:#0a0a0f;
+}
+.ms-table td{ padding:9px 14px; color:#e2e8f0; border-bottom:1px solid rgba(255,255,255,.04); white-space:normal; }
+.ms-table tr:last-child td{ border-bottom:none; }
+.ms-name{ color:#fff; font-weight:500; min-width:180px; }
+.ms-num{ font-variant-numeric:tabular-nums; color:#00ff66; }
+.ms-empty{ color:#6b7688; text-align:center; padding:20px; }
+.ms-loading{ color:#6b7688; padding:16px 0; }
+
+.ms-bar-track{ width:100%; min-width:120px; height:8px; background:rgba(255,255,255,.06); border-radius:999px; overflow:hidden; }
+.ms-bar-fill{ height:100%; border-radius:999px; }
+
+.ms-footnote{ margin-top:18px; color:#6b7688; font-size:.75rem; line-height:1.5; }
+
+@media (max-width: 900px){
+  .ms-kpis{ grid-template-columns:repeat(2, 1fr); }
+  .ms-kpis-cond{ grid-template-columns:repeat(2, 1fr); }
+  .ms-tab-row{ gap:6px; }
+}

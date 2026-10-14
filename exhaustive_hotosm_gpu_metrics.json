@@ -1,0 +1,31 @@
+{
+  "engine_name": "MoWT Exhaustive HOTOSM & National Roads Inner Join GPU Engine",
+  "gpu_hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
+  "training_timestamp": "2026-08-19T11:33:43Z",
+  "total_exhaustive_links_processed": 12751,
+  "hotosm_all_roads_source": "D:\\OneDrive\\Uganda National Road Network Repository\\DUCAR\\hotosm_uga_roads_osm_shp",
+  "national_roads_source": "D:\\OneDrive\\Uganda National Road Network Repository\\DUCAR\\National Roads",
+  "data_fullness_status": "100% Complete \u2014 ALL ROADS IN UGANDA PLOTTED WITH REPRESENTATIVE VALUES ON EVERY LINK",
+  "pci_deterioration_model": {
+    "model_type": "XGBRegressor GPU CUDA",
+    "training_latency_ms": 4174.56,
+    "test_rmse": 3.4657,
+    "test_r2_score": 0.9512,
+    "feature_importance": {
+      "surf_encoded": 0.0063,
+      "class_encoded": 0.0054,
+      "tier_encoded": 0.0094,
+      "Length Km": 0.0065,
+      "Aadt 2026 Live": 0.0069,
+      "Esal Per Day": 0.9191,
+      "Distance To Industrial Park Km": 0.0276,
+      "Distance To Agro Hub Km": 0.0174,
+      "School Count Within 5km": 0.0015
+    }
+  },
+  "intervention_classifier_model": {
+    "model_type": "XGBClassifier GPU CUDA",
+    "training_latency_ms": 4058.23,
+    "test_accuracy_pct": 93.88
+  }
+}

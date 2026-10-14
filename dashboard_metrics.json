@@ -9,6 +9,5 @@
     "hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
     "pci_r2_score": 0.5048,
     "classifier_accuracy_pct": 70.23
-  },
-  "kpis": {}
+  }
 }

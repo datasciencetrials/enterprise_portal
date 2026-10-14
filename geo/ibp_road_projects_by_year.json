@@ -1,0 +1,2629 @@
+{
+  "meta": {
+    "title": "IBP Uganda \u2014 National Road & Bridge Investment Projects",
+    "source": "Ministry of Finance, Planning and Economic Development (Uganda) \u2014 Integrated Bank of Projects (IBP)",
+    "document_series": "Public Investment Plan (PIP)",
+    "years": [
+      "FY2015/16",
+      "FY2019/20",
+      "FY2020/21",
+      "FY2023/24",
+      "FY2024/25",
+      "FY2025/26"
+    ],
+    "note": "Each fiscal year shows the road and bridge/major-culvert projects and figures as published in that year\u2019s Public Investment Plan. The same project can appear in more than one year with updated figures."
+  },
+  "years": [
+    "FY2015/16",
+    "FY2019/20",
+    "FY2020/21",
+    "FY2023/24",
+    "FY2024/25",
+    "FY2025/26"
+  ],
+  "summary_by_year": {
+    "FY2015/16": {
+      "road_projects": 37,
+      "bridge_major_culvert_projects": 4,
+      "road_value_bn_ushs": 10157.2,
+      "bridge_value_bn_ushs": 398.0,
+      "combined_value_bn_ushs": 10555.2,
+      "unra_projects": 34,
+      "mowt_projects": 5
+    },
+    "FY2019/20": {
+      "road_projects": 51,
+      "bridge_major_culvert_projects": 2,
+      "road_value_bn_ushs": 16983.0,
+      "bridge_value_bn_ushs": 37.0,
+      "combined_value_bn_ushs": 17020.0,
+      "unra_projects": 47,
+      "mowt_projects": 4
+    },
+    "FY2020/21": {
+      "road_projects": 53,
+      "bridge_major_culvert_projects": 2,
+      "road_value_bn_ushs": 32475.5,
+      "bridge_value_bn_ushs": 534.3,
+      "combined_value_bn_ushs": 33009.8,
+      "unra_projects": 50,
+      "mowt_projects": 3
+    },
+    "FY2023/24": {
+      "road_projects": 39,
+      "bridge_major_culvert_projects": 2,
+      "road_value_bn_ushs": 20346.7,
+      "bridge_value_bn_ushs": 234.8,
+      "combined_value_bn_ushs": 20581.5,
+      "unra_projects": 36,
+      "mowt_projects": 4
+    },
+    "FY2024/25": {
+      "road_projects": 45,
+      "bridge_major_culvert_projects": 3,
+      "road_value_bn_ushs": 31208.8,
+      "bridge_value_bn_ushs": 288.9,
+      "combined_value_bn_ushs": 31497.7,
+      "unra_projects": 43,
+      "mowt_projects": 4
+    },
+    "FY2025/26": {
+      "road_projects": 38,
+      "bridge_major_culvert_projects": 3,
+      "road_value_bn_ushs": 14838.4,
+      "bridge_value_bn_ushs": 289.0,
+      "combined_value_bn_ushs": 15127.4,
+      "unra_projects": 0,
+      "mowt_projects": 40
+    }
+  },
+  "by_year": {
+    "FY2015/16": {
+      "roads": [
+        {
+          "code": "1310",
+          "name": "Albertine Region Sustainable Development Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kibaale and Kyenjojo districts",
+          "value_bn_ushs": 250.0,
+          "start_date": "01/07/2014",
+          "end_date": "453"
+        },
+        {
+          "code": "0293",
+          "name": "Construction of RD Agency HQs",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kyambogo, Kampala",
+          "value_bn_ushs": 31.0,
+          "start_date": "31/01/2014",
+          "end_date": "31/01/2017"
+        },
+        {
+          "code": "1033",
+          "name": "Design Hoima - Kaiso -Tonya (85km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Hoima District \u2013 Western Uganda",
+          "value_bn_ushs": 369.0,
+          "start_date": "14/12/2011",
+          "end_date": "13/12/2016"
+        },
+        {
+          "code": "1044",
+          "name": "Design Ishaka-Kagamba (35km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Bushenyi, Sheema and Ntungamo Districts \u2013 Western Uganda",
+          "value_bn_ushs": 97.48,
+          "start_date": "06/02/2012",
+          "end_date": "31/12/2016"
+        },
+        {
+          "code": "1040",
+          "name": "Design Kapchorwa-Suam road (77km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kapchorwa and Bukwo districts.",
+          "value_bn_ushs": 392.0,
+          "start_date": "31/01/2013",
+          "end_date": "30/03/2018"
+        },
+        {
+          "code": "1041",
+          "name": "Design Kyenjojo-Hoima-Masindi-Kigumba (238km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kiryandongo, Masindi, Hoima, Kibale and Kyenjojo",
+          "value_bn_ushs": 350.0,
+          "start_date": "31/01/2014",
+          "end_date": "31/01/2017"
+        },
+        {
+          "code": "0952",
+          "name": "Design Masaka-Bukakata road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka",
+          "value_bn_ushs": 80.0,
+          "start_date": "31/03/2014",
+          "end_date": "30/09/2016"
+        },
+        {
+          "code": "1035",
+          "name": "Design Mpigi-Kabulasoka-Maddu (135 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mpigi District",
+          "value_bn_ushs": 300.0,
+          "start_date": "01/11/2010",
+          "end_date": "31/03/2017"
+        },
+        {
+          "code": "0954",
+          "name": "Design Muyembe-Moroto - Kotido (290km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Moroto & Nakapiripirit Districts \u2013 North Eastern Uganda",
+          "value_bn_ushs": 184.0,
+          "start_date": "01/02/2013",
+          "end_date": "01/02/2016"
+        },
+        {
+          "code": "1038",
+          "name": "Design Ntungamo-Mirama Hills (37km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Ntungamo district",
+          "value_bn_ushs": 100.0,
+          "start_date": "01/11/2010",
+          "end_date": "29/01/2016"
+        },
+        {
+          "code": "1042",
+          "name": "Design Nyendo - Sembabule (48km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka district",
+          "value_bn_ushs": 80.0,
+          "start_date": "31/01/2014",
+          "end_date": "31/03/2016"
+        },
+        {
+          "code": "1034",
+          "name": "Design of Mukono-Katosi-Nyenga (72km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mukono District",
+          "value_bn_ushs": 185.0,
+          "start_date": "31/01/2014",
+          "end_date": "31/01/2017"
+        },
+        {
+          "code": "1176",
+          "name": "Hoima-Wanseko Road (83Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Hoima and Bulisa districts",
+          "value_bn_ushs": 3.0,
+          "start_date": "30/11/2011",
+          "end_date": "30/01/2018"
+        },
+        {
+          "code": "1375",
+          "name": "Improvement of Gulu Municipal Council Roads (Preparatory Survey)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Gulu",
+          "value_bn_ushs": 1.0,
+          "start_date": "",
+          "end_date": ""
+        },
+        {
+          "code": "1180",
+          "name": "Kampala Entebbe Express Highway",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala",
+          "value_bn_ushs": 1200.0,
+          "start_date": "19/11/2012",
+          "end_date": "18/11/2017"
+        },
+        {
+          "code": "1277",
+          "name": "Kampala Northern Bypass Phase 2",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala City",
+          "value_bn_ushs": 200.0,
+          "start_date": "31/03/2014",
+          "end_date": "23/09/2016"
+        },
+        {
+          "code": "1253",
+          "name": "Kampala Road Rehabilitation",
+          "agency": "Kampala Capital City Authority (KCCA)",
+          "location": "Roads in five Divisions of Kampala",
+          "value_bn_ushs": 300.0,
+          "start_date": "01/07/2011",
+          "end_date": "28/06/2015"
+        },
+        {
+          "code": "1278",
+          "name": "Kampala-Jinja Expressway",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala, Wakiso, Mukono and Buyukwe districts",
+          "value_bn_ushs": 2300.0,
+          "start_date": "31/01/2014",
+          "end_date": "31/12/2016"
+        },
+        {
+          "code": "1276",
+          "name": "Mubende-Kakumiro-Kagadi Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mubende and Kibaale districts",
+          "value_bn_ushs": 278.0,
+          "start_date": "31/03/2014",
+          "end_date": "31/03/2017"
+        },
+        {
+          "code": "1274",
+          "name": "Musita-Lumino-Busia/Majanji Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mayuge, Nankoma and Busia districts.",
+          "value_bn_ushs": 377.0,
+          "start_date": "01/03/2014",
+          "end_date": "01/03/2017"
+        },
+        {
+          "code": "1280",
+          "name": "Najjanankumbi-Busabala Road and Nambole-Namilyango-Seeta",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala City, Wakiso and Mukono districts",
+          "value_bn_ushs": 80.0,
+          "start_date": "31/03/2014",
+          "end_date": "30/03/2018"
+        },
+        {
+          "code": "1313",
+          "name": "North Eastern Road-Corridor Asset Management Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Tororo, Mbale, Kumi, Soroti, Dokolo, Lira and Apac districts.",
+          "value_bn_ushs": 607.0,
+          "start_date": "01/07/2014",
+          "end_date": "30/06/2019"
+        },
+        {
+          "code": "1275",
+          "name": "Olwiyo-Gulu-Kitgum Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Nwoya, Amuru, Gulu and Kitgum districts",
+          "value_bn_ushs": 348.0,
+          "start_date": "31/03/2014",
+          "end_date": "31/03/2017"
+        },
+        {
+          "code": "1158",
+          "name": "Reconstruction of Mbarara-Katuna road (155 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbarara, Ntungamo and Kabale Districts \u2013 South Western Uganda",
+          "value_bn_ushs": 409.0,
+          "start_date": "03/08/2011",
+          "end_date": "31/12/2014"
+        },
+        {
+          "code": "0307",
+          "name": "Rehab. Of Districts Roads",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Countrywide",
+          "value_bn_ushs": 4.06,
+          "start_date": "30/06/2013",
+          "end_date": "30/06/2018"
+        },
+        {
+          "code": "0308",
+          "name": "Road Equipment for District Units",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Countrywide",
+          "value_bn_ushs": 5.15,
+          "start_date": "01/07/2013",
+          "end_date": "30/06/2015"
+        },
+        {
+          "code": "1105",
+          "name": "Road Sector Institu. Capacity Dev. Proj.",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "UNRA Headquarters",
+          "value_bn_ushs": 60.0,
+          "start_date": "31/10/2011",
+          "end_date": "31/01/2018"
+        },
+        {
+          "code": "1279",
+          "name": "Seeta-Kyaliwajjala-Matugga-Wakiso-Buloba-Nsangi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso District \u2013 Central Uganda",
+          "value_bn_ushs": 120.0,
+          "start_date": "31/03/2014",
+          "end_date": "01/06/2017"
+        },
+        {
+          "code": "1281",
+          "name": "Tirinyi-Pallisa-Kumi/Kamonkoli Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Pallisa, Kumi and Budaka districts",
+          "value_bn_ushs": 200.0,
+          "start_date": "31/03/2014",
+          "end_date": "29/12/2017"
+        },
+        {
+          "code": "0265",
+          "name": "Upgrade Atiak - Moyo-Afoji (104km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Atiak-Adjunani-Moyo-Afoji",
+          "value_bn_ushs": 2.0,
+          "start_date": "31/12/2010",
+          "end_date": "30/06/2016"
+        },
+        {
+          "code": "0321",
+          "name": "Upgrade Fort Portal - Budibugyo - Lamia (104km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kabarole, Ntoroko and Bundibugyo Districts \u2013 Western",
+          "value_bn_ushs": 227.0,
+          "start_date": "03/01/2010",
+          "end_date": "30/06/2016"
+        },
+        {
+          "code": "1031",
+          "name": "Upgrade Gulu - Atiak - Bibia/ Nimule (104km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Gulu & Amuru District \u2013 Northern Uganda",
+          "value_bn_ushs": 140.0,
+          "start_date": "28/02/2011",
+          "end_date": "29/07/2016"
+        },
+        {
+          "code": "1037",
+          "name": "Upgrade Mbarara-Kikagata (70km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbarara and Isingiro districts",
+          "value_bn_ushs": 135.0,
+          "start_date": "06/08/2012",
+          "end_date": "30/06/2016"
+        },
+        {
+          "code": "0955",
+          "name": "Upgrade Nyakahita-Ibanda-Fort Portal (208km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Western Region",
+          "value_bn_ushs": 420.0,
+          "start_date": "02/08/2010",
+          "end_date": "02/08/2016"
+        },
+        {
+          "code": "1311",
+          "name": "Upgrading Rukungiri-Kihihi-Ishasha/Kanungu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Rukungiri and Kanungu districts",
+          "value_bn_ushs": 192.0,
+          "start_date": "01/07/2014",
+          "end_date": "30/06/2019"
+        },
+        {
+          "code": "1312",
+          "name": "Upgrading mbale-Bubulo-Lwakhakha Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbale and Manafwa districts",
+          "value_bn_ushs": 126.0,
+          "start_date": "01/07/2014",
+          "end_date": "30/06/2019"
+        },
+        {
+          "code": "0306",
+          "name": "Urban Roads Re-sealing",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "KAMPALA",
+          "value_bn_ushs": 4.52,
+          "start_date": "30/06/2011",
+          "end_date": "30/06/2020"
+        }
+      ],
+      "bridges": [
+        {
+          "code": "1104",
+          "name": "Construct Selected Bridges (BADEA)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kasese, Nakaseke, Kotido, Lira, Nebbi, Arua, Yumbe, Moroto, Nakapiripirit,",
+          "value_bn_ushs": 60.0,
+          "start_date": "30/07/2012",
+          "end_date": "30/06/2017"
+        },
+        {
+          "code": "1320",
+          "name": "Construction of 66 Selected Bridges",
+          "agency": "Responsible Officer:",
+          "location": "Total Expenditure (UGX bn):",
+          "value_bn_ushs": null,
+          "start_date": "01/07/2015",
+          "end_date": "30/12/2020"
+        },
+        {
+          "code": "0269",
+          "name": "Construction of Selected Bridges",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Entebbe",
+          "value_bn_ushs": 38.0,
+          "start_date": "01/07/2011",
+          "end_date": "30/06/2016"
+        },
+        {
+          "code": "0957",
+          "name": "Design the New Nile Bridge at Jinja",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Eastern region (Jinja)",
+          "value_bn_ushs": 300.0,
+          "start_date": "30/09/2013",
+          "end_date": "28/09/2018"
+        }
+      ]
+    },
+    "FY2019/20": {
+      "roads": [
+        {
+          "code": "1310",
+          "name": "Albertine Region Sustainable Development Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kibaale and Kyenjojo districts",
+          "value_bn_ushs": 214.56,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2019"
+        },
+        {
+          "code": "1040",
+          "name": "Design Kapchorwa-Suam road (77km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kapchorwa, Kween and Bukwo districts",
+          "value_bn_ushs": 268.46,
+          "start_date": "1/31/2013",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1041",
+          "name": "Design Kyenjojo-Hoima-Masindi-Kigumba (238km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kiryandongo, Masindi, Hoima, Kibale and Kyenjojo",
+          "value_bn_ushs": 560.0,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "0952",
+          "name": "Design Masaka-Bukakata road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka",
+          "value_bn_ushs": 195.08,
+          "start_date": "3/31/2014",
+          "end_date": "9/30/2019"
+        },
+        {
+          "code": "1035",
+          "name": "Design Mpigi-Kabulasoka-Maddu (135 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mpigi District",
+          "value_bn_ushs": 300.0,
+          "start_date": "11/1/2010",
+          "end_date": "3/31/2019"
+        },
+        {
+          "code": "1042",
+          "name": "Design Nyendo - Sembabule (48km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka district",
+          "value_bn_ushs": 80.0,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1034",
+          "name": "Design of Mukono-Katosi-Nyenga (72km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mukono and Buikwe Districts",
+          "value_bn_ushs": 253.94,
+          "start_date": "1/31/2014",
+          "end_date": "1/31/2019"
+        },
+        {
+          "code": "1538",
+          "name": "Development of Nakaseke-Ssingo-Kituma road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Luwero, Nakaseko and Wakiso districts",
+          "value_bn_ushs": 180.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1555",
+          "name": "Fortportal Hoima Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kabarole, Bunyangabu and Kasese districts",
+          "value_bn_ushs": 98.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1551",
+          "name": "Fortportal Kyenjojo Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kyenjojo and Kabarole districts",
+          "value_bn_ushs": 73.47,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1552",
+          "name": "Hoima-Katunguru Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kasese and Rubirizi districts",
+          "value_bn_ushs": 89.56,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1176",
+          "name": "Hoima-Wanseko Road (83Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Hoima and Bulisa districts",
+          "value_bn_ushs": 250.0,
+          "start_date": "11/30/2011",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1375",
+          "name": "Improvement of Gulu Municipal Council Roads (Preparatory Survey)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Gulu",
+          "value_bn_ushs": 64.0,
+          "start_date": "7/4/2013",
+          "end_date": "6/30/2019"
+        },
+        {
+          "code": "1553",
+          "name": "Ishaka-Rugazi-Katunguru Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Bushenyi and Rubirizi districts",
+          "value_bn_ushs": 105.01,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1180",
+          "name": "Kampala Entebbe Express Highway",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala",
+          "value_bn_ushs": 1200.0,
+          "start_date": "11/19/2012",
+          "end_date": "6/30/2020"
+        },
+        {
+          "code": "1319",
+          "name": "Kampala Flyover",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala",
+          "value_bn_ushs": 900.0,
+          "start_date": "7/1/2015",
+          "end_date": "12/30/2019"
+        },
+        {
+          "code": "1277",
+          "name": "Kampala Northern Bypass Phase 2",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala City",
+          "value_bn_ushs": 447.29,
+          "start_date": "3/31/2014",
+          "end_date": "9/23/2019"
+        },
+        {
+          "code": "1253",
+          "name": "Kampala Road Rehabilitation",
+          "agency": "Kampala Capital City Authority (KCCA)",
+          "location": "All Division in Kampala City",
+          "value_bn_ushs": 500.0,
+          "start_date": "7/1/2011",
+          "end_date": "6/30/2020"
+        },
+        {
+          "code": "1278",
+          "name": "Kampala-Jinja Expressway",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala, Wakiso, Mukono and Buikwe districts",
+          "value_bn_ushs": 2300.0,
+          "start_date": "1/31/2014",
+          "end_date": "12/31/2021"
+        },
+        {
+          "code": "1503",
+          "name": "Karugutu-Ntoroko Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mid-Western Uganda",
+          "value_bn_ushs": 124.0,
+          "start_date": "7/1/2017",
+          "end_date": "6/30/2020"
+        },
+        {
+          "code": "1547",
+          "name": "Kebisoni-Kisizi-Muhanga road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Rukungiri and Kabale",
+          "value_bn_ushs": 300.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1404",
+          "name": "Kibuye- Busega- Mpigi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala - Mpigi",
+          "value_bn_ushs": 1558.8,
+          "start_date": "7/1/2016",
+          "end_date": "12/30/2021"
+        },
+        {
+          "code": "1543",
+          "name": "Kihihi-Butogota-Bohoma Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kisoro, Kabale and Kanungu.",
+          "value_bn_ushs": 200.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1544",
+          "name": "Kisoro-Lake Bunyonyi Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kabale District",
+          "value_bn_ushs": 50.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1545",
+          "name": "Kisoro-Mgahinga National Park Headquarters Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kisoro District",
+          "value_bn_ushs": 50.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1546",
+          "name": "Kisoro-Nkuringo-Rubugiri-Muko Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kisoro and Kabale Districts",
+          "value_bn_ushs": 200.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1506",
+          "name": "Land Acquisition",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "UNRA HeadQuarters",
+          "value_bn_ushs": 811.0,
+          "start_date": "7/1/2018",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1490",
+          "name": "Luwero- Butalangu",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Central Part of Uganda",
+          "value_bn_ushs": 199.51,
+          "start_date": "7/1/2017",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1276",
+          "name": "Mubende-Kakumiro-Kagadi Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mubende, Kakumiro, Kagadi and Kibaale districts",
+          "value_bn_ushs": 278.0,
+          "start_date": "3/31/2014",
+          "end_date": "3/31/2021"
+        },
+        {
+          "code": "1274",
+          "name": "Musita-Lumino-Busia/Majanji Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mayuge, Nankoma and Busia districts",
+          "value_bn_ushs": 377.0,
+          "start_date": "3/1/2014",
+          "end_date": "3/1/2021"
+        },
+        {
+          "code": "1280",
+          "name": "Najjanankumbi-Busabala Road and Nambole-Namilyango-Seeta",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala City, Wakiso and Mukono districts",
+          "value_bn_ushs": 80.0,
+          "start_date": "3/31/2014",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1554",
+          "name": "Nakalama-Tirinyi-Mbale Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Iganga, Namutumba, Kibuku, Budaka and Mbale districts",
+          "value_bn_ushs": 73.36,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1550",
+          "name": "Namunsi-Sironko/Muyembe-Kapchorwa Section I",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbale, Sironko, Bulambuli and Kapchorwa districts",
+          "value_bn_ushs": 50.15,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1549",
+          "name": "Nansana-Busunju II",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso and Mityana districts",
+          "value_bn_ushs": 65.44,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1548",
+          "name": "Nansana-Busunju Section I",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso and Mityana districts",
+          "value_bn_ushs": 54.29,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1313",
+          "name": "North Eastern Road-Corridor Asset Management Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Tororo, Mbale, Kumi, Soroti, Dokolo, Lira and Apac districts.",
+          "value_bn_ushs": 607.0,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2019"
+        },
+        {
+          "code": "1275",
+          "name": "Olwiyo-Gulu-Kitgum Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Nwoya, Amuru, Gulu and Kitgum districts",
+          "value_bn_ushs": 523.33,
+          "start_date": "3/31/2014",
+          "end_date": "3/31/2021"
+        },
+        {
+          "code": "0307",
+          "name": "Rehab. of Districts Roads",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Countrywide",
+          "value_bn_ushs": 300.0,
+          "start_date": "6/30/2013",
+          "end_date": "6/30/2019"
+        },
+        {
+          "code": "1402",
+          "name": "Rwenkunye- Apac- Lira-Acholibur road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "North Eastern Uganda",
+          "value_bn_ushs": 339.8,
+          "start_date": "7/1/2016",
+          "end_date": "12/30/2021"
+        },
+        {
+          "code": "1279",
+          "name": "Seeta-Kyaliwajjala-Matugga-Wakiso-Buloba-Nsangi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Central Uganda",
+          "value_bn_ushs": 120.0,
+          "start_date": "3/31/2014",
+          "end_date": "6/30/2020"
+        },
+        {
+          "code": "1403",
+          "name": "Soroti-Katakwi-Moroto-Lokitonyala road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "North Eastern Part of Uganda",
+          "value_bn_ushs": 646.95,
+          "start_date": "7/1/2016",
+          "end_date": "12/30/2021"
+        },
+        {
+          "code": "1422",
+          "name": "Strengthening the capacity of Uganda Road Fund",
+          "agency": "Uganda Road Fund (URF)",
+          "location": "Plot 39, Nakasero Road",
+          "value_bn_ushs": 48.36,
+          "start_date": "1/7/2016",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1281",
+          "name": "Tirinyi-Pallisa-Kumi/Kamonkoli Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Pallisa, Kumi and Budaka districts",
+          "value_bn_ushs": 479.64,
+          "start_date": "3/31/2014",
+          "end_date": "12/28/2021"
+        },
+        {
+          "code": "1510",
+          "name": "UNRA Retooling Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "UNRA HeadQuarters",
+          "value_bn_ushs": 46.1,
+          "start_date": "7/1/2018",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "0265",
+          "name": "Upgrade Atiak - Moyo-Afoji (104km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Atiak-Adjunani-Moyo-Afoji",
+          "value_bn_ushs": 300.0,
+          "start_date": "12/31/2010",
+          "end_date": "6/30/2020"
+        },
+        {
+          "code": "1312",
+          "name": "Upgrading Mbale-Bubulo-Lwakhakha Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbale and Manafwa districts",
+          "value_bn_ushs": 153.1,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2019"
+        },
+        {
+          "code": "1311",
+          "name": "Upgrading Rukungiri-Kihihi-Ishasha/Kanungu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Rukungiri and Kanungu districts",
+          "value_bn_ushs": 207.83,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2019"
+        },
+        {
+          "code": "1537",
+          "name": "Upgrading of Kaya-Yei Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Republic of South Sudan",
+          "value_bn_ushs": 30.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1536",
+          "name": "Upgrading of Kitala-Gerenge Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso District",
+          "value_bn_ushs": 21.15,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2020"
+        },
+        {
+          "code": "1322",
+          "name": "Upgrading of Muyembe-Nakapiripirit (92 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "North Eastern Uganda",
+          "value_bn_ushs": 460.8,
+          "start_date": "7/1/2015",
+          "end_date": "12/30/2018"
+        },
+        {
+          "code": "0306",
+          "name": "Urban Roads Re-sealing",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Countrywide",
+          "value_bn_ushs": 148.02,
+          "start_date": "6/30/2011",
+          "end_date": "6/30/2020"
+        }
+      ],
+      "bridges": [
+        {
+          "code": "1320",
+          "name": "Construction of 66 Selected Bridges",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kasese, Nakaseke, Kotido, Lira, Nebbi, Arua, Yumbe, Moroto, Nakapiripirit",
+          "value_bn_ushs": 37.0,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1558",
+          "name": "Rural Bridges Infrastructure Development",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Country-wide",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2024"
+        }
+      ]
+    },
+    "FY2020/21": {
+      "roads": [
+        {
+          "code": "1310",
+          "name": "Albertine Region Sustainable Development Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kyenjojo, Hoima and Kagadi Districts",
+          "value_bn_ushs": 214.56,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1564",
+          "name": "Community Roads Improvement Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "All districts in Uganda",
+          "value_bn_ushs": 355.46,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1656",
+          "name": "Construction of Muko - Katuna Road (66.6 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Rubanda and Kabale Districts",
+          "value_bn_ushs": 386.9,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1040",
+          "name": "Design Kapchorwa-Suam road (77km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Bukwo, Kapchorwa and Kween Districts",
+          "value_bn_ushs": 268.46,
+          "start_date": "1/31/2013",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1041",
+          "name": "Design Kyenjojo-Hoima-Masindi-Kigumba (238km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kiryandongo, Masindi, Hoima, Kibale and Kyenjojo Dstricts",
+          "value_bn_ushs": 318.52,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "0952",
+          "name": "Design Masaka-Bukakata road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka District",
+          "value_bn_ushs": 165.32,
+          "start_date": "3/31/2014",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1035",
+          "name": "Design Mpigi-Kabulasoka-Maddu (135 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mpigi, kanoni, Gomba and Sembabule Districts",
+          "value_bn_ushs": 418.01,
+          "start_date": "11/1/2010",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1042",
+          "name": "Design Nyendo - Sembabule (48km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Sembabule and Masaka Districts",
+          "value_bn_ushs": 37.62,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1034",
+          "name": "Design of Mukono-Katosi-Nyenga (72km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mukono and Buikwe Districts",
+          "value_bn_ushs": 283.49,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1538",
+          "name": "Development of Nakaseke-Ssingo-Kituma road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Luwero and Nakaseke Districts",
+          "value_bn_ushs": 73.36,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1555",
+          "name": "Fortportal Hoima Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kabarole, Bunyagabu and Kasese Districts",
+          "value_bn_ushs": 98.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1551",
+          "name": "Fortportal Kyenjojo Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kyenjojo and Kabarole Districts",
+          "value_bn_ushs": 73.47,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1552",
+          "name": "Hoima-Katunguru Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kasese and Rubirizi Districts",
+          "value_bn_ushs": 89.56,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1176",
+          "name": "Hoima-Wanseko Road (83Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mid-Western Uganda",
+          "value_bn_ushs": 4531.73,
+          "start_date": "11/30/2011",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1375",
+          "name": "Improvement of Gulu Municipal Council Roads (Preparatory Survey)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Gulu",
+          "value_bn_ushs": 64.0,
+          "start_date": "7/4/2013",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1553",
+          "name": "Ishaka-Rugazi-Katunguru Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Bushenyi and Rubirizi districts",
+          "value_bn_ushs": 103.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1658",
+          "name": "Kampala City Roads Rehabilitation Project",
+          "agency": "Kampala Capital City Authority (KCCA)",
+          "location": "Kampala City",
+          "value_bn_ushs": 10175.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1180",
+          "name": "Kampala Entebbe Express Highway",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso district",
+          "value_bn_ushs": 1798.41,
+          "start_date": "11/19/2012",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1319",
+          "name": "Kampala Flyover",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala",
+          "value_bn_ushs": 305.33,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1277",
+          "name": "Kampala Northern Bypass Phase 2",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala District",
+          "value_bn_ushs": 447.22,
+          "start_date": "3/31/2014",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1278",
+          "name": "Kampala-Jinja Expressway",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala, Wakiso, Mukono, Buikwe and Jinja Districts",
+          "value_bn_ushs": 2300.0,
+          "start_date": "1/31/2014",
+          "end_date": "12/31/2021"
+        },
+        {
+          "code": "1547",
+          "name": "Kebisoni-Kisizi-Muhanga road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Western Uganda",
+          "value_bn_ushs": 300.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1404",
+          "name": "Kibuye- Busega- Mpigi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso and Mpigi Districts",
+          "value_bn_ushs": 1623.75,
+          "start_date": "7/1/2016",
+          "end_date": "12/30/2021"
+        },
+        {
+          "code": "1543",
+          "name": "Kihihi-Butogota-Bohoma Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Western Uganda",
+          "value_bn_ushs": 100.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1544",
+          "name": "Kisoro-Lake Bunyonyi Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Western Uganda",
+          "value_bn_ushs": 100.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1545",
+          "name": "Kisoro-Mgahinga National Park Headquarters Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Western Uganda",
+          "value_bn_ushs": 150.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1546",
+          "name": "Kisoro-Nkuringo-Rubugiri-Muko Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Western Uganda",
+          "value_bn_ushs": 250.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1506",
+          "name": "Land Acquisition",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Country wide along national roads Network",
+          "value_bn_ushs": 811.0,
+          "start_date": "7/1/2018",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1490",
+          "name": "Luwero- Butalangu",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Luwero and Nakaseke Districts",
+          "value_bn_ushs": 199.51,
+          "start_date": "7/1/2017",
+          "end_date": "6/30/2022"
+        },
+        {
+          "code": "1657",
+          "name": "Moyo-Yumbe-Koboko road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "West Nile region",
+          "value_bn_ushs": 396.3,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1276",
+          "name": "Mubende-Kakumiro-Kagadi Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mubende, kakumiro and Kagadi Districts",
+          "value_bn_ushs": 484.89,
+          "start_date": "3/31/2014",
+          "end_date": "3/31/2021"
+        },
+        {
+          "code": "1274",
+          "name": "Musita-Lumino-Busia/Majanji Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mayuge, Bugiri, Namayingo and Busia districts",
+          "value_bn_ushs": 206.78,
+          "start_date": "3/1/2014",
+          "end_date": "3/1/2021"
+        },
+        {
+          "code": "1280",
+          "name": "Najjanankumbi-Busabala Road and Nambole-Namilyango-Seeta",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala and Wakiso Districts",
+          "value_bn_ushs": 80.0,
+          "start_date": "3/31/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1554",
+          "name": "Nakalama-Tirinyi-Mbale Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Iganga, Namutumba, Kibuku, Budaka and Mbale Districts",
+          "value_bn_ushs": 73.36,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1550",
+          "name": "Namunsi-Sironko/Muyembe-Kapchorwa Section I",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbale, Sironko, Bulambuli and Kapchorwa Districts",
+          "value_bn_ushs": 50.15,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1313",
+          "name": "North Eastern Road-Corridor Asset Management Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Tororo, Mbale, Bukedea, kumi, Ngora, Soroti, kaberamaido, Dokolo, Lira Kole and Oyam",
+          "value_bn_ushs": 622.6,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1275",
+          "name": "Olwiyo-Gulu-Kitgum Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Nwoya, Omoro, Gulu, Pader, Kitgum and Lamwo districts",
+          "value_bn_ushs": 326.33,
+          "start_date": "3/31/2014",
+          "end_date": "3/31/2021"
+        },
+        {
+          "code": "1693",
+          "name": "Rehabilitation of Kampala-Jinja Highway(72 KM)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala, Wakiso, Mukono and Buikwe districts",
+          "value_bn_ushs": 234.5,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1692",
+          "name": "Rehabilitation of Masaka Town Roads (7.3 KM)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka District",
+          "value_bn_ushs": 38.45,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1694",
+          "name": "Rehabilitation of Mityana-Mubende Road(100KM)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mityana and Mubende Districts",
+          "value_bn_ushs": 642.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1695",
+          "name": "Rehabilitation of Packwach-Nebbi Section 2 Road(33KM)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Pakwach and Nebbi Districts",
+          "value_bn_ushs": 140.94,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1616",
+          "name": "Retooling of Uganda National Roads Authority",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "UNRA",
+          "value_bn_ushs": 373.79,
+          "start_date": "7/1/2021",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1677",
+          "name": "Retooling of Uganda Road Fund",
+          "agency": "Uganda Road Fund (URF)",
+          "location": "URF HEADQUARTERS",
+          "value_bn_ushs": 46.18,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1402",
+          "name": "Rwenkunye- Apac- Lira-Acholibur road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kiryandongo, Apac, Kole, Lira and Pader districts",
+          "value_bn_ushs": 339.8,
+          "start_date": "7/1/2016",
+          "end_date": "12/30/2021"
+        },
+        {
+          "code": "1279",
+          "name": "Seeta-Kyaliwajjala-Matugga-Wakiso-Buloba-Nsangi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso District",
+          "value_bn_ushs": 120.0,
+          "start_date": "3/31/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1403",
+          "name": "Soroti-Katakwi-Moroto-Lokitonyala road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Soroti, Katakwi, Napak and Moroto Districts",
+          "value_bn_ushs": 646.95,
+          "start_date": "7/1/2016",
+          "end_date": "12/30/2021"
+        },
+        {
+          "code": "1281",
+          "name": "Tirinyi-Pallisa-Kumi/Kamonkoli Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kibuku, Pallisa, Kumi and Budaka Districts",
+          "value_bn_ushs": 479.64,
+          "start_date": "3/31/2014",
+          "end_date": "12/28/2021"
+        },
+        {
+          "code": "0265",
+          "name": "Upgrade Atiak - Moyo-Afoji (104km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Amuru, Adjumani and moyo Districts",
+          "value_bn_ushs": 226.34,
+          "start_date": "12/31/2010",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1312",
+          "name": "Upgrading Mbale-Bubulo-Lwakhakha Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbale, Bubulo and manafwa Districts",
+          "value_bn_ushs": 153.1,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1311",
+          "name": "Upgrading Rukungiri-Kihihi-Ishasha/Kanungu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Rukungiri and Kanungu Districts",
+          "value_bn_ushs": 207.83,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1537",
+          "name": "Upgrading of Kaya-Yei Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Republic of South Sudan",
+          "value_bn_ushs": 30.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1536",
+          "name": "Upgrading of Kitala-Gerenge Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso District",
+          "value_bn_ushs": 33.87,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1322",
+          "name": "Upgrading of Muyembe-Nakapiripirit (92 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Bulambuli, Kween and Nakapiripirit Districts",
+          "value_bn_ushs": 480.0,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2024"
+        }
+      ],
+      "bridges": [
+        {
+          "code": "1320",
+          "name": "Construction of 66 Selected Bridges",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Country wide on National Roads",
+          "value_bn_ushs": 234.3,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2021"
+        },
+        {
+          "code": "1558",
+          "name": "Rural Bridges Infrastructure Development",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Uganda",
+          "value_bn_ushs": 300.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2024"
+        }
+      ]
+    },
+    "FY2023/24": {
+      "roads": [
+        {
+          "code": "0265",
+          "name": "Atiak-Moyo-Afoji",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Amuru, Adjumani and Moyo districts",
+          "value_bn_ushs": 400.0,
+          "start_date": "7/1/2003",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1564",
+          "name": "Community Roads Improvement Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Country wide",
+          "value_bn_ushs": 355.46,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1656",
+          "name": "Construction of Muko - Katuna Road (66.6 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Rubanda and Kabale Districts",
+          "value_bn_ushs": 386.9,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1555",
+          "name": "Fortportal -Hima Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Fortportal, Bunyangabu and Kasese districts",
+          "value_bn_ushs": 98.84,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1176",
+          "name": "Hoima- Wanseko Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Bunyoro sub region",
+          "value_bn_ushs": 2500.0,
+          "start_date": "7/1/2010",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1658",
+          "name": "Kampala City Roads Rehabilitation Project",
+          "agency": "Kampala Capital City Authority (KCCA)",
+          "location": "Kampala",
+          "value_bn_ushs": 1.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1319",
+          "name": "Kampala Flyover",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala capital City Authority",
+          "value_bn_ushs": 290.85,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1277",
+          "name": "Kampala Nothern Bypass Phase 2",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala City Council Authority and Wakiso district",
+          "value_bn_ushs": 545.67,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1278",
+          "name": "Kampala-Jinja Expressway",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala, Wakiso, Mukono, Buikwe and Jinja Districts",
+          "value_bn_ushs": 3924.0,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1040",
+          "name": "Kapchorwa - Suam Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kapchorwa, Bukwo, kween and Bulambuli Districts",
+          "value_bn_ushs": 365.45,
+          "start_date": "7/1/2010",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1547",
+          "name": "Kebisoni-Kisizi-Muhanga Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "South Western uganda",
+          "value_bn_ushs": 300.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1404",
+          "name": "Kibuye -Busega- Mpigi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso and Mpigi districts",
+          "value_bn_ushs": 547.54,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1545",
+          "name": "Kisoro-Mgahinga National Park Headquarters Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "South western Uganda",
+          "value_bn_ushs": 200.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1546",
+          "name": "Kisoro-Nkuringo-Rubugiri-Muko Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "South Western Uganda",
+          "value_bn_ushs": 250.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1041",
+          "name": "Kyenjojo- Hoima-Masindi -Kigumba road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kiryandongo, Masindi, Hoima, Kibale and Kyenjojo districts",
+          "value_bn_ushs": 373.81,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1771",
+          "name": "Land Acquisition Project II",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Along National Roads",
+          "value_bn_ushs": 1837.87,
+          "start_date": "7/1/2022",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1490",
+          "name": "Luwero - Butalangu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Luwero and Nakaseke Districts",
+          "value_bn_ushs": 200.0,
+          "start_date": "7/1/2017",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1657",
+          "name": "Moyo-Yumbe-Koboko road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Koboko, Yumbe and Moyo districts",
+          "value_bn_ushs": 396.3,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1274",
+          "name": "Musita-Lumino-Busia/Majanji Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Iganga, mayuge, Namayingo and Busia districts",
+          "value_bn_ushs": 400.0,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1280",
+          "name": "Najjanankumbi-Busabala Road and Nambole-Namilyango-Seeta",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala Capital city Authority and Wakiso district",
+          "value_bn_ushs": 258.82,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1554",
+          "name": "Nakalama-Tirinyi-Mbale Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Iganga, Namutumba, Kibuku, Budaka and Mbale districts",
+          "value_bn_ushs": 168.78,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1313",
+          "name": "North Eastern Road-Corridor Asset Management Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Eastern and Northern Uganda",
+          "value_bn_ushs": 622.6,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1796",
+          "name": "Proposed Upgrading of Katine Ochero (72.9km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Soroti and Kaberamaido Districts",
+          "value_bn_ushs": 308.69,
+          "start_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        },
+        {
+          "code": "1705",
+          "name": "Rehabilitation and Upgrading of Urban Roads Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Central, Eastern, Western and Northern Regions",
+          "value_bn_ushs": 230.56,
+          "start_date": "7/1/2021",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1703",
+          "name": "Rehabilitation of District Roads Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Country wide",
+          "value_bn_ushs": 800.75,
+          "start_date": "7/1/2021",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1693",
+          "name": "Rehabilitation of Kampala-Jinja Highway (72 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso, Mukono and Buikwe districts",
+          "value_bn_ushs": 82.02,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1692",
+          "name": "Rehabilitation of Masaka Town Roads (7.3 KM)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka City",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1694",
+          "name": "Rehabilitation of Mityana-Mubende Road (100 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mityana and Mubende Districts",
+          "value_bn_ushs": 395.25,
+          "start_date": "7/23/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1695",
+          "name": "Rehabilitation of Packwach-Nebbi Section 2 Road (33 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Pakwach and Nebbi Districts",
+          "value_bn_ushs": 104.55,
+          "start_date": "7/1/2020",
+          "end_date": "6/28/2025"
+        },
+        {
+          "code": "1616",
+          "name": "Retooling of Uganda National Roads Authority",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "UNRA HeadQuarters and stations",
+          "value_bn_ushs": 373.79,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1402",
+          "name": "Rwenkunye -Apac- Lira -Acholibur Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kiryandogo, Amolatar, Apac, Kole, Lira and Pader districts",
+          "value_bn_ushs": 753.86,
+          "start_date": "7/1/2016",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1279",
+          "name": "Seeta-Kyaliwajjala-Matugga-Wakiso-Buloba-Nsangi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso District",
+          "value_bn_ushs": 200.4,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1403",
+          "name": "Soroti -Katakwi- Moroto -Lokitonyala Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Soroti, Katakwi, Napak and Moroto districts",
+          "value_bn_ushs": 656.0,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1281",
+          "name": "Tirinyi-Pallisa-Kumi/Kamonkoli Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Pallisa, Kumi, Kibuku and Budaka districts",
+          "value_bn_ushs": 479.64,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1311",
+          "name": "Upgrading Rukungiri-Kihihi-Ishasha/Kanungu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Rukungiri and Kanungu Districts",
+          "value_bn_ushs": 207.83,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1769",
+          "name": "Upgrading of Kitgum-Kidepo Road (115 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kitgum and Kaboong Districts",
+          "value_bn_ushs": 386.46,
+          "start_date": "7/1/2022",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1785",
+          "name": "Upgrading of Kyenjojo (Kihura)-Bwizi-Rwamwanja-Kahunge ()68km/Mpara-Bwizi (37km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Bunyangabu, Kabarole, Kamwenge, Kyegegwa and Kyenjojo Districts",
+          "value_bn_ushs": 400.0,
+          "start_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        },
+        {
+          "code": "1322",
+          "name": "Upgrading of Muyembe-Nakapiripirit (92 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Sironko, Bulambuli, Kween and Nakapiripirit districts",
+          "value_bn_ushs": 400.0,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1794",
+          "name": "Upgrading of Namagumba-Budadiri-Nalugugu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbale and Sironko Districts",
+          "value_bn_ushs": 143.0,
+          "start_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        }
+      ],
+      "bridges": [
+        {
+          "code": "1320",
+          "name": "Construction of 66 Selected Bridges",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Country wide on National Roads",
+          "value_bn_ushs": 234.8,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2023"
+        },
+        {
+          "code": "1558",
+          "name": "Rural Bridges Infrastructure Development",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Country wide",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2024"
+        }
+      ]
+    },
+    "FY2024/25": {
+      "roads": [
+        {
+          "code": "0265",
+          "name": "Atiak-Moyo-Afoji",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Amuru, Adjumani and Moyo districts",
+          "value_bn_ushs": 226.34,
+          "start_date": "7/1/2003",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1564",
+          "name": "Community Roads Improvement Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "135 districts in Uganda",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1656",
+          "name": "Construction of Muko - Katuna Road (66.6 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "South Western Uganda",
+          "value_bn_ushs": 250.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1822",
+          "name": "Emergency Reconstruction of selected sections along Kampala -Masaka Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala, Wakiso, Mpigi, Butambala, Kalungu and Masaka districts",
+          "value_bn_ushs": 191.42,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1176",
+          "name": "Hoima- Wanseko Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Bunyoro sub region",
+          "value_bn_ushs": 2500.0,
+          "start_date": "7/1/2010",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1658",
+          "name": "Kampala City Roads Rehabilitation Project",
+          "agency": "Kampala Capital City Authority (KCCA)",
+          "location": "Kampala Capital City Authority",
+          "value_bn_ushs": 11349.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1319",
+          "name": "Kampala Flyover",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala capital City Authority",
+          "value_bn_ushs": 290.85,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1277",
+          "name": "Kampala Nothern Bypass Phase 2",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala City Council Authority and Wakiso district",
+          "value_bn_ushs": 545.67,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1278",
+          "name": "Kampala-Jinja Expressway",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala Capital City Authority, Wakiso. Mukono and Buikwe Districts",
+          "value_bn_ushs": 4000.0,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1040",
+          "name": "Kapchorwa - Suam Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kapchorwa, Bukwo, kween and Bulambuli Districts",
+          "value_bn_ushs": 365.45,
+          "start_date": "7/1/2010",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1404",
+          "name": "Kibuye -Busega- Mpigi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso and Mpigi districts",
+          "value_bn_ushs": 547.54,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1545",
+          "name": "Kisoro-Mgahinga National Park Headquarters Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "South western Uganda",
+          "value_bn_ushs": 112.03,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1041",
+          "name": "Kyenjojo- Hoima-Masindi -Kigumba road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kiryandongo, Masindi, Hoima, Kibale and Kyenjojo districts",
+          "value_bn_ushs": 373.81,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1771",
+          "name": "Land Acquisition Project II",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Along National Roads",
+          "value_bn_ushs": 1837.87,
+          "start_date": "7/1/2022",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1490",
+          "name": "Luwero - Butalangu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Luwero and Nakaseke Districts",
+          "value_bn_ushs": 93.85,
+          "start_date": "7/1/2017",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1657",
+          "name": "Moyo-Yumbe-Koboko road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Koboko, Yumbe and Moyo districts",
+          "value_bn_ushs": 430.26,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1274",
+          "name": "Musita-Lumino-Busia/Majanji Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Iganga, mayuge, Namayingo, Busia and Tororo districts",
+          "value_bn_ushs": 136.86,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1280",
+          "name": "Najjanankumbi-Busabala Road and Nambole-Namilyango-Seeta",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala Capital city Authority and Wakiso district",
+          "value_bn_ushs": 258.82,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1313",
+          "name": "North Eastern Road-Corridor Asset Management Project",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Eastern and Northern Uganda",
+          "value_bn_ushs": 1229.56,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1796",
+          "name": "Proposed Upgrading of Katine Ochero (72.9km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Soroti and Kaberamaido districts",
+          "value_bn_ushs": 308.69,
+          "start_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        },
+        {
+          "code": "1809",
+          "name": "Reconstruction of Masaka-Mutukula Road (89.5Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka and Kyotera Districts",
+          "value_bn_ushs": 629.87,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1705",
+          "name": "Rehabilitation and Upgrading of Urban Roads Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Project to be implemented in 76 Urban Councils in Uganda",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2021",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1819",
+          "name": "Rehabilitation of Busunju-Kiboga-Hoima Road (145km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mityana, Kiboga, Kyankwanzi, and Hoima districts",
+          "value_bn_ushs": 309.07,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1703",
+          "name": "Rehabilitation of District Roads Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "The project will be implemented in all the 135 districts of Uganda.",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2021",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1693",
+          "name": "Rehabilitation of Kampala-Jinja Highway (72 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso, Mukono and Buikwe districts",
+          "value_bn_ushs": 82.02,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1820",
+          "name": "Rehabilitation of Karuma-Packwach Road (106km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Nwoya and Pakwach Districts",
+          "value_bn_ushs": 226.06,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1692",
+          "name": "Rehabilitation of Masaka Town Roads (7.3 KM)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Masaka City",
+          "value_bn_ushs": 89.3,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1818",
+          "name": "Rehabilitation of Matugga-Kapeeka Road (42km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso, Luwero and Nakaseke Districts",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1694",
+          "name": "Rehabilitation of Mityana-Mubende Road (100 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mityana and Mubende Districts",
+          "value_bn_ushs": 395.25,
+          "start_date": "7/23/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1695",
+          "name": "Rehabilitation of Packwach-Nebbi Section 2 Road (33 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Pakwach and Nebbi Districts",
+          "value_bn_ushs": 104.55,
+          "start_date": "7/1/2020",
+          "end_date": "6/28/2025"
+        },
+        {
+          "code": "1616",
+          "name": "Retooling of Uganda National Roads Authority",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "UNRA HeadQuarters and stations",
+          "value_bn_ushs": 373.79,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1402",
+          "name": "Rwenkunye -Apac- Lira -Acholibur Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kiryandogo, Amolatar, Apac, Kole, Lira and Pader districts",
+          "value_bn_ushs": 753.86,
+          "start_date": "7/1/2016",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1279",
+          "name": "Seeta-Kyaliwajjala-Matugga-Wakiso-Buloba-Nsangi",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Wakiso District",
+          "value_bn_ushs": 222.49,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2024"
+        },
+        {
+          "code": "1403",
+          "name": "Soroti -Katakwi- Moroto -Lokitonyala Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Soroti, Katakwi, Napak and Moroto districts",
+          "value_bn_ushs": 206.05,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1281",
+          "name": "Tirinyi-Pallisa-Kumi/Kamonkoli Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Pallisa, Kumi, Kibuku and Budaka districts",
+          "value_bn_ushs": 146.19,
+          "start_date": "1/31/2014",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1311",
+          "name": "Upgrading Rukungiri-Kihihi-Ishasha/Kanungu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Rukungiri and Kanungu Districts",
+          "value_bn_ushs": 245.09,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1824",
+          "name": "Upgrading of Hamurwa Kerere Kanungu Kanyantorogo Butogota Buhoma/ Hamayanja Ifasha Ikumba Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kanungu and Rubanda Districts",
+          "value_bn_ushs": 529.1,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1807",
+          "name": "Upgrading of Iganga-Bulopa-Kamuli Road (57.2Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Iganga, Luuka, and Kamuli",
+          "value_bn_ushs": 227.61,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1810",
+          "name": "Upgrading of Jinja-Mbulamuti-Kamuli-Bukungu Road (127Km) from Gravel to Paved Standard",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Jinja, Kamuli and Buyende Districts",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1769",
+          "name": "Upgrading of Kitgum-Kidepo Road (115 Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kitgum and Kaboong Districts",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2022",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1816",
+          "name": "Upgrading of Kumi-Ngora-Brooks Corner-Serere-Kagwara Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kumi, Ngora and Serere district",
+          "value_bn_ushs": 350.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1785",
+          "name": "Upgrading of Kyenjojo (Kihura)-Bwizi-Rwamwanja-Kahunge ()68km/Mpara-Bwizi (37km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kyegegwa, Kamwenge and Kyenjojo Districts",
+          "value_bn_ushs": 400.0,
+          "start_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        },
+        {
+          "code": "1808",
+          "name": "Upgrading of Mpigi-Kasanje-Buwaya,Nateete-Nakawuka-Kisubi and Connecting Roads (71.15Km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kampala Capital City, Wakiso and Mpigi Districts",
+          "value_bn_ushs": 340.58,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1322",
+          "name": "Upgrading of Muyembe-Nakapiripirit (92 km)",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Sironko, Bulambuli, Kween and Nakapiripirit districts",
+          "value_bn_ushs": 400.0,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1794",
+          "name": "Upgrading of Namagumba-Budadiri-Nalugugu Road",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Mbale and Sironko Districts",
+          "value_bn_ushs": 129.87,
+          "start_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        }
+      ],
+      "bridges": [
+        {
+          "code": "1320",
+          "name": "Construction of 66 Selected Bridges",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Country wide on National Roads",
+          "value_bn_ushs": 234.8,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1823",
+          "name": "Construction of New Ssezibwa Bridge",
+          "agency": "Uganda National Roads Authority (UNRA)",
+          "location": "Kayunga and Mukono Districts",
+          "value_bn_ushs": 54.05,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1558",
+          "name": "Rural Bridges Infrastructure Development",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Several districts across the Country",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2026"
+        }
+      ]
+    },
+    "FY2025/26": {
+      "roads": [
+        {
+          "code": "0265",
+          "name": "Atiak-Moyo Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Along National Roads",
+          "value_bn_ushs": 1838.0,
+          "start_date": "7/1/2003",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1564",
+          "name": "Community Roads Improvement Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "various Districts",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1822",
+          "name": "Emergency Reconstruction of selected sections along Kampala -Masaka Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kampala, Wakiso, Mpigi, Butambala, Kalungu and Masaka districts",
+          "value_bn_ushs": 192.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1176",
+          "name": "Hoima- Wanseko Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Masaka City",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2010",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1658",
+          "name": "Kampala City Roads Rehabilitation Project",
+          "agency": "Kampala Capital City Authority (KCCA)",
+          "location": "Kampala",
+          "value_bn_ushs": 1286.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2028"
+        },
+        {
+          "code": "1277",
+          "name": "Kampala Nothern Bypass Phase 2",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kampala City Council Authority and Wakiso district",
+          "value_bn_ushs": 545.0,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1545",
+          "name": "Kisoro-Mgahinga National Park Headquarters Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "South western Uganda",
+          "value_bn_ushs": 112.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1546",
+          "name": "Kisoro-Nkuringo-Rubugiri-Muko Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "South Western Uganda",
+          "value_bn_ushs": 250.0,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1041",
+          "name": "Kyenjojo- Hoima-Masindi -Kigumba road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Eastern and Northern Uganda",
+          "value_bn_ushs": 1230.0,
+          "start_date": "1/30/2014",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1490",
+          "name": "Luwero - Butalangu Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Luwero and Nakaseke Districts",
+          "value_bn_ushs": 94.0,
+          "start_date": "7/1/2017",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1657",
+          "name": "Moyo-Yumbe-Koboko road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Koboko, Yumbe and Moyo districts",
+          "value_bn_ushs": 430.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2028"
+        },
+        {
+          "code": "1274",
+          "name": "Musita-Lumino-Busia/Majanji Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Wakiso, Mukono and Buikwe districts",
+          "value_bn_ushs": 82.0,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1280",
+          "name": "Najjanankumbi-Busabala Road and Nambole-Namilyango-Seeta",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kampala Capital city Authority and Wakiso district",
+          "value_bn_ushs": 259.0,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1313",
+          "name": "North Eastern Road-Corridor Asset Management Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Eastern and Northern Uganda",
+          "value_bn_ushs": 1230.0,
+          "start_date": "7/1/2014",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1809",
+          "name": "Reconstruction of Masaka-Mutukula Road (89.5Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Masaka and Kyotera Districts",
+          "value_bn_ushs": 630.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1705",
+          "name": "Rehabilitation and Upgrading of Urban Roads Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "URBAN COUNCILS",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2021",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1819",
+          "name": "Rehabilitation of Busunju-Kiboga-Hoima Road (145km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Mityana, Kiboga, Kyankwanzi, and Hoima districts",
+          "value_bn_ushs": 309.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1703",
+          "name": "Rehabilitation of District Roads Project",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "The whole of Uganda",
+          "value_bn_ushs": 911.4,
+          "start_date": "7/1/2021",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1693",
+          "name": "Rehabilitation of Kampala-Jinja Highway (72 Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Wakiso, Mukono and Buikwe districts",
+          "value_bn_ushs": 82.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2028"
+        },
+        {
+          "code": "1820",
+          "name": "Rehabilitation of Karuma-Packwach Road (106km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Nwoya and Pakwach Districts",
+          "value_bn_ushs": 226.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1841",
+          "name": "Rehabilitation of Kikorongo-Bwera-Mpondwe Road (38.2Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kasese District",
+          "value_bn_ushs": 118.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/24/2025"
+        },
+        {
+          "code": "1692",
+          "name": "Rehabilitation of Masaka Town Roads (7.3 KM)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Masaka City",
+          "value_bn_ushs": 89.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1818",
+          "name": "Rehabilitation of Matugga-Kapeeka Road (42km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Wakiso, Luwero and Nakaseke Districts",
+          "value_bn_ushs": 141.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1694",
+          "name": "Rehabilitation of Mityana-Mubende Road (100 Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Mityana and Mubende Districts",
+          "value_bn_ushs": 395.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1695",
+          "name": "Rehabilitation of Packwach-Nebbi Section 2 Road (33 Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Pakwach and Nebbi Districts",
+          "value_bn_ushs": 105.0,
+          "start_date": "7/1/2020",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1402",
+          "name": "Rwenkunye -Apac- Lira -Acholibur Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kiryandogo, Amolatar, Apac, Kole, Lira and Pader districts",
+          "value_bn_ushs": 754.0,
+          "start_date": "7/1/2016",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1403",
+          "name": "Soroti -Katakwi- Moroto -Lokitonyala Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Soroti, Katakwi, Napak and Moroto districts",
+          "value_bn_ushs": 206.0,
+          "start_date": "7/1/2017",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1764",
+          "name": "Upgrading Manibe-Yumbe road (77km) to paved standard",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "West Nile region bordering the Democratic Republic of Congo (DRC) and the",
+          "value_bn_ushs": 295.0,
+          "start_date": "7/1/2021",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1824",
+          "name": "Upgrading of Hamurwa Kerere Kanungu Kanyantorogo Butogota Buhoma/ Hamayanja Ifasha Ikumba Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kanungu and Rubanda Districts",
+          "value_bn_ushs": 529.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1807",
+          "name": "Upgrading of Iganga-Bulopa-Kamuli Road (57.2Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Iganga, Luuka, and Kamuli",
+          "value_bn_ushs": 228.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1810",
+          "name": "Upgrading of Jinja-Mbulamuti-Kamuli-Bukungu Road (127Km) from Gravel to Paved Standard",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Jinja, Kamuli and Buyende Districts",
+          "value_bn_ushs": 650.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1840",
+          "name": "Upgrading of Karenga-Kapedo-Kaabong Road (68Km) from Gravel to Paved Standard",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kaabong and Karenga Districts",
+          "value_bn_ushs": 221.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1821",
+          "name": "Upgrading of Kayunga-Bbale-Galiraya Road (88.5km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kayunga District",
+          "value_bn_ushs": 400.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1769",
+          "name": "Upgrading of Kitgum-Kidepo Road (115 Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kitgum and Kaboong Districts",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2022",
+          "end_date": "6/30/2027"
+        },
+        {
+          "code": "1816",
+          "name": "Upgrading of Kumi-Ngora-Brooks Corner-Serere-Kagwara Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kumi, Ngora and Serere district",
+          "value_bn_ushs": 350.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1808",
+          "name": "Upgrading of Mpigi-Kasanje-Buwaya,Nateete-Nakawuka-Kisubi and Connecting Roads (71.15Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kampala Capital City, Wakiso and Mpigi Districts",
+          "value_bn_ushs": 341.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1842",
+          "name": "Upgrading of Nakaseke-Singo-Kituuma Road (71Km)",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Nakaseke and Kiboga Districts",
+          "value_bn_ushs": 180.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2025"
+        },
+        {
+          "code": "1794",
+          "name": "Upgrading of Namagumba-Budadiri-Nalugugu Road",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Mbale and Sironko Districts",
+          "value_bn_ushs": 130.0,
+          "start_date": "7/1/2023",
+          "end_date": "6/30/2028"
+        }
+      ],
+      "bridges": [
+        {
+          "code": "1320",
+          "name": "Construction of 66 Selected Bridges",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Country wide on National Roads",
+          "value_bn_ushs": 235.0,
+          "start_date": "7/1/2015",
+          "end_date": "6/30/2026"
+        },
+        {
+          "code": "1823",
+          "name": "Construction of New Ssezibwa Bridge",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Kayunga and Mukono Districts",
+          "value_bn_ushs": 54.0,
+          "start_date": "7/1/2024",
+          "end_date": "6/30/2029"
+        },
+        {
+          "code": "1558",
+          "name": "Rural Bridges Infrastructure Development",
+          "agency": "Ministry of Works and Transport (MoWT)",
+          "location": "Total Project Value (Billions)                  0",
+          "value_bn_ushs": null,
+          "start_date": "7/1/2019",
+          "end_date": "6/30/2026"
+        }
+      ]
+    }
+  }
+}

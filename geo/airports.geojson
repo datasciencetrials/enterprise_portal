@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "airports",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Deg": 2.0, "Min": 12.0, "Sec": 0.0, "Lat": 2.2, "Deg1": 31.0, "Min1": 33.0, "Sec1": 0.0, "Long": 31.55, "F9": "Bugungu", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 31.551143333642258, 2.200531666807531 ] } },
+{ "type": "Feature", "properties": { "Deg": 1.0, "Min": 48.0, "Sec": 0.0, "Lat": 1.8, "Deg1": 31.0, "Min1": 20.0, "Sec1": 0.0, "Long": 31.333333, "F9": "Butiaba", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 31.333333333333794, 1.8 ] } },
+{ "type": "Feature", "properties": { "Deg": 0.0, "Min": 12.0, "Sec": 0.0, "Lat": 0.2, "Deg1": 32.0, "Min1": 33.0, "Sec1": 0.0, "Long": 32.55, "F9": "Kajjansi", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 32.55, 0.2 ] } },
+{ "type": "Feature", "properties": { "Deg": 1.0, "Min": 28.0, "Sec": 0.0, "Lat": 1.466667, "Deg1": 30.0, "Min1": 56.0, "Sec1": 0.0, "Long": 30.933333, "F9": "Kaiso", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 30.939114341481186, 1.476521204323546 ] } },
+{ "type": "Feature", "properties": { "Deg": 1.0, "Min": 15.0, "Sec": 0.0, "Lat": 1.25, "Deg1": 30.0, "Min1": 44.0, "Sec1": 0.0, "Long": 30.733333, "F9": "Massika", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 30.733333333337267, 1.25 ] } },
+{ "type": "Feature", "properties": { "Deg": 2.0, "Min": 20.0, "Sec": 0.0, "Lat": 2.333333, "Deg1": 31.0, "Min1": 30.0, "Sec1": 0.0, "Long": 31.5, "F9": "Pakuba", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 31.497431921802143, 2.32598928915121 ] } },
+{ "type": "Feature", "properties": { "Deg": 0.0, "Min": 54.0, "Sec": 0.0, "Lat": 0.9, "Deg1": 30.0, "Min1": 21.0, "Sec1": 0.0, "Long": 30.35, "F9": "Semliki air field", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 30.350000000011828, 0.9 ] } },
+{ "type": "Feature", "properties": { "Deg": 1.0, "Min": 33.0, "Sec": 0.0, "Lat": 1.55, "Deg1": 31.0, "Min1": 6.0, "Sec1": 0.0, "Long": 31.1, "F9": "Tonya", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 31.091104832425458, 1.55368555386104 ] } },
+{ "type": "Feature", "properties": { "Deg": 0.0, "Min": 0.0, "Sec": 0.0, "Lat": 0.0, "Deg1": 0.0, "Min1": 0.0, "Sec1": 0.0, "Long": 0.0, "F9": "Kasese", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 30.080768319609515, 0.164510883612631 ] } },
+{ "type": "Feature", "properties": { "Deg": 0.0, "Min": 0.0, "Sec": 0.0, "Lat": 0.0, "Deg1": 0.0, "Min1": 0.0, "Sec1": 0.0, "Long": 0.0, "F9": "Soroti", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 33.620978217142131, 1.726045160255828 ] } },
+{ "type": "Feature", "properties": { "Deg": 0.0, "Min": 0.0, "Sec": 0.0, "Lat": 0.0, "Deg1": 0.0, "Min1": 0.0, "Sec1": 0.0, "Long": 0.0, "F9": "Chobe", "Category": "Air Field (Strip)" }, "geometry": { "type": "Point", "coordinates": [ 32.15, 2.25 ] } },
+{ "type": "Feature", "properties": { "Deg": 0.0, "Min": 0.0, "Sec": 0.0, "Lat": 0.0, "Deg1": 0.0, "Min1": 0.0, "Sec1": 0.0, "Long": 0.0, "F9": "Entebbe", "Category": "International Airport" }, "geometry": { "type": "Point", "coordinates": [ 32.4404365923684, 0.036093735331053 ] } },
+{ "type": "Feature", "properties": { "Deg": 0.0, "Min": 0.0, "Sec": 0.0, "Lat": 0.0, "Deg1": 0.0, "Min1": 0.0, "Sec1": 0.0, "Long": 0.0, "F9": "Kabalega", "Category": "International Airport" }, "geometry": { "type": "Point", "coordinates": [ 31.074748627624608, 1.442120498584028 ] } }
+]
+}

@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-10",
+  "repo": "uganda_gis_enterprise",
+  "url": "https://datasciencetrials.github.io/enterprise_portal/",
+  "technical": {
+    "httpStatus": 200,
+    "loadFailed": false,
+    "pageRendered": true,
+    "bodyTextLength": 2901,
+    "consoleErrors": [],
+    "brokenImages": [],
+    "hashLinksFound": [],
+    "chartElementCount": 4
+  },
+  "accuracy": {
+    "extractedFigures": [
+      {
+        "value": 21169,
+        "raw": "21,169 km",
+        "context": "ks · 6 regions\nTOTAL CLASSIFIED NETWORK"
+      },
+      {
+        "value": 6504,
+        "raw": "6,504 km",
+        "context": "SSIFIED NETWORK\n21,169 km\nPAVED NETWORK"
+      },
+      {
+        "value": 14665,
+        "raw": "14,665 km",
+        "context": "6,504 km\n30.7% of total\nUNPAVED NETWORK"
+      },
+      {
+        "value": 135641,
+        "raw": "135,641 km",
+        "context": "JOR CULVERTS\n451\nDUCAR DISTRICT NETWORK"
+      },
+      {
+        "value": 14665,
+        "raw": "14,665 km",
+        "context": "y.\nUnsealed roads dominate the network"
+      },
+      {
+        "value": 15527,
+        "raw": "15,527 km",
+        "context": "work\n\nClass C primary roads account for"
+      },
+      {
+        "value": 4792,
+        "raw": "4,792 km",
+        "context": "the longest network\n\nCentral region has"
+      },
+      {
+        "value": 2666,
+        "raw": "2,666 km",
+        "context": "on has 4,792 km against North Eastern's"
+      },
+      {
+        "value": 20.9,
+        "raw": "20.9 km",
+        "context": "length\n\n1,015 classified links average"
+      },
+      {
+        "value": 21169,
+        "raw": "21,169 km",
+        "context": "inventory (network.geojson, 1015 links,"
+      },
+      {
+        "value": 21302,
+        "raw": "21,302 km",
+        "context": "aintenance-strategy planning workbooks ("
+      }
+    ],
+    "discrepancies": []
+  },
+  "consistency": {
+    "districtList": null,
+    "notes": []
+  }
+}

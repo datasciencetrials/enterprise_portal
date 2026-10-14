@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "source": "MoWT National Traffic Model 2025 estimate workbook (Traffic_estimate_2025.xlsx), per-link vehicle-class composition",
+    "note": "886 of 1022 links carry a modelled 2025 traffic-composition figure; the rest are unassigned in the source workbook.",
+    "linked_count": 886,
+    "total_links": 1022,
+    "total_motorised_veh_per_day": 2467129.4,
+    "total_nonmotorised_veh_per_day": 362408.3,
+    "total_vehicle_km_2025": 19572595615.1
+  },
+  "national_composition_veh_per_day": {
+    "Motorcycles & Scooters": 1350686.1,
+    "Saloon Cars & Taxis": 245050.1,
+    "Light Goods Vehicles": 304593.2,
+    "Small Buses": 240051.0,
+    "Medium Buses": 15392.8,
+    "Large Buses": 16038.4,
+    "Light Trucks": 118662.1,
+    "Medium Trucks": 106879.9,
+    "Truck Trailer / Semi-Trailer": 69775.8
+  }
+}

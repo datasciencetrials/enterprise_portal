@@ -1,0 +1,155 @@
+/* ============================================================
+Apple-style dark theme for uganda_gis_enterprise
+Loaded after the compiled app stylesheet so these declarations
+win on equal specificity (no !important needed for the vars).
+============================================================ */
+
+:root{
+/* --- surfaces (Apple system dark palette) --- */
+--bg-color:#000000;
+--panel-bg:rgba(28,28,30,.68);
+--panel-border:rgba(255,255,255,.09);
+--text-primary:#ffffff;
+--text-secondary:rgba(235,235,245,.6);
+
+/* --- her bright neon accent tokens (restored 2026-09-05 per standing
+instruction: keep the neon palette, Apple styling is glass/blur/motion/
+spacing only, never color) --- */
+--neon-blue:#00f3ff;
+--neon-purple:#9d00ff;
+--neon-green:#00ff66;
+--neon-yellow:#fffb00;
+--neon-pink:#ff00ea;
+--accent-color:#00f3ff;
+--accent-glow:rgba(0,243,255,.5);
+
+/* new tokens used below */
+--se-radius:14px;
+--se-radius-sm:10px;
+--se-hairline:rgba(255,255,255,.09);
+--se-surface-2:rgba(255,255,255,.04);
+--se-surface-3:rgba(255,255,255,.07);
+--se-shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 28px -12px rgba(0,0,0,.6);
+--se-warning:#ff9900;
+--se-danger:#ff3366;
+--se-success:#00ff99;
+--se-info:#00f3ff;
+}
+
+/* ---------- global type ---------- */
+html,body,#root,
+.sidebar-nav,.glass-card,.glass-panel,button,input,select,textarea{
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Inter",
+"Helvetica Neue",Arial,sans-serif !important;
+-webkit-font-smoothing:antialiased;
+text-rendering:optimizeLegibility;
+}
+body{ background:var(--bg-color) !important; letter-spacing:-.01em; }
+h1,h2,h3{ letter-spacing:-.02em !important; }
+
+/* ---------- calm the glow/bloom effects Apple never uses ---------- */
+.live-badge{
+animation:none !important;
+text-shadow:none !important;
+background:rgba(0,243,255,.14) !important;
+border-color:rgba(0,243,255,.4) !important;
+}
+.nav-item.active{
+box-shadow:none !important;
+text-shadow:none !important;
+}
+
+/* ---------- sidebar: quiet, rounded selection instead of neon block ---------- */
+.sidebar-header{
+border-bottom:1px solid var(--se-hairline) !important;
+}
+.sidebar-nav{ padding:6px 10px !important; }
+.nav-item{
+border-left:none !important;
+border-radius:var(--se-radius-sm) !important;
+margin:2px 0 !important;
+transition:background .15s ease, color .15s ease !important;
+}
+.nav-item:not(.active):hover{
+background:var(--se-surface-2) !important;
+}
+.nav-item.active{
+background:rgba(0,243,255,.16) !important;
+color:#ffffff !important;
+font-weight:600 !important;
+}
+.nav-item.active *{ color:#ffffff !important; }
+
+/* section group labels injected by JS (see apple_theme.js) */
+.se-nav-group-label{
+padding:14px 14px 6px !important;
+font-size:.68rem !important;
+font-weight:600 !important;
+letter-spacing:.08em !important;
+text-transform:uppercase !important;
+color:var(--text-secondary) !important;
+opacity:.75;
+}
+.se-nav-group-label:first-child{ padding-top:6px !important; }
+
+/* ---------- top bar: frosted glass ---------- */
+.topbar,[class*="topbar"],header{
+backdrop-filter:blur(20px) saturate(180%);
+-webkit-backdrop-filter:blur(20px) saturate(180%);
+}
+
+/* ---------- cards & panels: consistent Apple "grouped" surface ---------- */
+.glass-card,.glass-panel{
+border-radius:var(--se-radius) !important;
+border-color:var(--se-hairline) !important;
+box-shadow:var(--se-shadow);
+backdrop-filter:blur(24px) saturate(160%);
+-webkit-backdrop-filter:blur(24px) saturate(160%);
+}
+.glass-card.kpi-card{
+border-left-width:3px !important;
+background:rgba(28,28,30,.6) !important;
+}
+
+/* ---------- buttons / pill toggles / segmented controls ---------- */
+button{ letter-spacing:0 !important; }
+button:not(.nav-item){
+border-radius:999px;
+transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+
+/* ---------- tables ---------- */
+table thead th{
+color:var(--text-secondary) !important;
+font-weight:600 !important;
+letter-spacing:.03em !important;
+border-bottom:1px solid var(--se-hairline) !important;
+}
+table tbody tr{ transition:background .12s ease; }
+table tbody tr:hover{ background:rgba(255,255,255,.035) !important; }
+
+/* ---------- thin, quiet scrollbars ---------- */
+*{ scrollbar-width:thin; scrollbar-color:rgba(255,255,255,.18) transparent; }
+*::-webkit-scrollbar{ width:10px; height:10px; }
+*::-webkit-scrollbar-track{ background:transparent; }
+*::-webkit-scrollbar-thumb{
+background:rgba(255,255,255,.16);
+border-radius:8px;
+border:2px solid transparent;
+background-clip:padding-box;
+}
+*::-webkit-scrollbar-thumb:hover{ background:rgba(255,255,255,.28); }
+
+/* ---------- focus states ---------- */
+input:focus,select:focus,button:focus-visible{
+outline:2px solid rgba(0,243,255,.55) !important;
+outline-offset:1px;
+}
+
+/* ---------- System Architecture diagram (react-flow): kill the
+pulsing white bloom; keep a quiet static shadow. Node/edge/minimap
+colors are left as the diagram library's own native neon values. ---------- */
+.pulse-node{
+animation:none !important;
+box-shadow:var(--se-shadow) !important;
+}

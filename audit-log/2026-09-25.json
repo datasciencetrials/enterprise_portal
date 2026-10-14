@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-25",
+  "repo": "uganda_gis_enterprise",
+  "url": "https://datasciencetrials.github.io/enterprise_portal/",
+  "technical": {
+    "httpStatus": 200,
+    "loadFailed": false,
+    "pageRendered": false,
+    "bodyTextLength": 0,
+    "consoleErrors": [
+      "ReferenceError: useSupabaseData is not defined\n    at GK (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:102:85892)\n    at kv (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:38:17062)\n    at zM (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:40:44058)\n    at IM (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:40:39790)\n    at eB (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:40:39718)\n    at kg (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:40:39570)\n    at A_ (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:40:35934)\n    at DM (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:40:34883)\n    at N (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:25:1602)\n    at MessagePort.ht (https://datasciencetrials.github.io/enterprise_portal/assets/index-89NzEkT8.js:25:1977)",
+      "ReferenceError: useSupabaseData is not defined"
+    ],
+    "brokenImages": [],
+    "hashLinksFound": [],
+    "chartElementCount": 0
+  },
+  "accuracy": {
+    "extractedFigures": [],
+    "discrepancies": []
+  },
+  "consistency": {
+    "districtList": null,
+    "notes": []
+  }
+}

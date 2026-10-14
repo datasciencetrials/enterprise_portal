@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-30",
+  "repo": "uganda_gis_enterprise",
+  "url": "https://datasciencetrials.github.io/enterprise_portal/",
+  "technical": {
+    "httpStatus": 200,
+    "loadFailed": false,
+    "pageRendered": true,
+    "bodyTextLength": 297,
+    "consoleErrors": [],
+    "brokenImages": [],
+    "hashLinksFound": [],
+    "chartElementCount": 15
+  },
+  "accuracy": {
+    "extractedFigures": [],
+    "discrepancies": []
+  },
+  "consistency": {
+    "districtList": null,
+    "notes": []
+  }
+}

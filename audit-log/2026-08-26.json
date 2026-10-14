@@ -1,0 +1,121 @@
+{
+  "date": "2026-08-26",
+  "repo": "uganda_gis_enterprise",
+  "url": "https://datasciencetrials.github.io/enterprise_portal/",
+  "technical": {
+    "httpStatus": 200,
+    "loadFailed": false,
+    "pageRendered": true,
+    "bodyTextLength": 14638,
+    "consoleErrors": [],
+    "brokenImages": [],
+    "hashLinksFound": [],
+    "chartElementCount": 141
+  },
+  "accuracy": {
+    "extractedFigures": [
+      {
+        "value": 156000,
+        "raw": "156,000 km",
+        "context": "ied SQL Schema\nTOTAL CLASSIFIED NETWORK"
+      },
+      {
+        "value": 21010,
+        "raw": "21,010 km",
+        "context": "WORK\n156,000 km\nNATIONAL TRUNK HIGHWAYS"
+      },
+      {
+        "value": 134990,
+        "raw": "134,990 km",
+        "context": "GHWAYS\n21,010 km\nDUCAR DISTRICT NETWORK"
+      },
+      {
+        "value": 1240,
+        "raw": "1,240 km",
+        "context": "Engineering Recommendation: Prioritize"
+      },
+      {
+        "value": 25,
+        "raw": "25 km",
+        "context": "egradation - VOC +35%, Speed Reduced by"
+      },
+      {
+        "value": 80,
+        "raw": "80 km",
+        "context": "IRI > 5.2 m/km to restore design speed ("
+      },
+      {
+        "value": 21168.97,
+        "raw": "21,168.97 km",
+        "context": "National classified road network spans"
+      },
+      {
+        "value": 14666.85,
+        "raw": "14,666.85 km",
+        "context": "ive regions.\nUnsealed roads account for"
+      },
+      {
+        "value": 1611.16,
+        "raw": "1,611.16 km",
+        "context": "for bituminous upgrade.\n74 road links ("
+      },
+      {
+        "value": 4792.12,
+        "raw": "4,792.12 km",
+        "context": "network imbalance detected: Central has"
+      },
+      {
+        "value": 2665.67,
+        "raw": "2,665.67 km",
+        "context": "4,792.12 km vs North Eastern with only"
+      },
+      {
+        "value": 1463.24,
+        "raw": "1,463.24 km",
+        "context": ".8× disparity.\n118 road links totalling"
+      },
+      {
+        "value": 2,
+        "raw": "2km",
+        "context": "et towns and trading centres are within"
+      },
+      {
+        "value": 1873,
+        "raw": "1,873 km",
+        "context": "stress accumulation modeling identifies"
+      },
+      {
+        "value": 12.4,
+        "raw": "12.4 km",
+        "context": "ater Kampala Metropolitan Area drops to"
+      },
+      {
+        "value": 10,
+        "raw": "10km",
+        "context": "eposits and petroleum fields are within"
+      },
+      {
+        "value": 320,
+        "raw": "320 km",
+        "context": "uires dual-carriageway reinforcement on"
+      },
+      {
+        "value": 5,
+        "raw": "5 km",
+        "context": "and tea production hubs now lie within"
+      },
+      {
+        "value": 68.4,
+        "raw": "68.4 km",
+        "context": "le) experience a mean detour penalty of"
+      }
+    ],
+    "discrepancies": [
+      "\"21,168.97 km\" (context: ...National classified road network spans) vs uganda_ducar's \"2,688.2 km\" (context: ...tional Road Network - Spatially Aligned) — 87.3% difference"
+    ]
+  },
+  "consistency": {
+    "districtList": null,
+    "notes": []
+  }
+}

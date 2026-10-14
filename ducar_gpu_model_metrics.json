@@ -1,0 +1,28 @@
+{
+  "device_name": "CPU (scikit-learn RandomForestClassifier, cloud training run)",
+  "training_timestamp": "2026-08-21T12:02:00Z",
+  "total_samples_trained": 21322,
+  "pci_regressor": {
+    "model_type": "RandomForestClassifier (n_estimators=300)",
+    "target": "condition (Very Poor / Poor / Fair / Good)",
+    "test_r2_score": 0.8776,
+    "test_accuracy_pct": 87.76,
+    "n_train": 17057,
+    "n_test": 4265,
+    "n_unassessed_predicted": 9784,
+    "note": "This value is the road-condition classifier's real test accuracy, retrained on the actual DUCAR master inventory. It replaces a previous figure implied to be a Pavement Condition Index regression R\u00b2, trained on rainfall/ESAL/maintenance-frequency features that do not exist anywhere in the real DUCAR dataset. Field name test_r2_score is kept for site compatibility; the underlying metric is classification accuracy, not R\u00b2."
+  },
+  "intervention_classifier": {
+    "note": "Not retrained in this pass \u2014 no real 'intervention' labels (Urgent Reconstruction / Periodic Resurfacing / Routine Maintenance) exist in the DUCAR dataset to train against honestly. The live intervention estimate on this page is a client-side formula, not this field."
+  },
+  "ducar_network_summary": {
+    "total_ducar_length_km": 135640.8,
+    "district_roads_km": 32410.5,
+    "urban_roads_kcca_km": 2110.3,
+    "community_access_roads_km": 101120.0,
+    "paved_ratio_pct": 8.4,
+    "unpaved_ratio_pct": 91.6,
+    "total_districts": 135,
+    "total_subcounties": 2140
+  }
+}

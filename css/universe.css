@@ -1,0 +1,92 @@
+/* 3D Network Universe — styles for the solar-system section only. */
+
+.universe-wrap {
+  margin: 16px 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.universe-canvas-host {
+  width: 100%;
+  height: 62vh;
+  min-height: 420px;
+  background: #05070d;
+  position: relative;
+}
+
+.universe-canvas-host canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.universe-hud {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.universe-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.universe-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.universe-tab-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--tab-color, var(--neon-cyan));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tab-color, var(--neon-cyan)) 20%, transparent);
+}
+
+.universe-tab.active,
+.universe-tab:hover {
+  border-color: var(--tab-color, var(--neon-cyan));
+  color: var(--text-primary);
+}
+
+.universe-metric-rows {
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.universe-metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.universe-roster-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.universe-roster-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 4px 0;
+}

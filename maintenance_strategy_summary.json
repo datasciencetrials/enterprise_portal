@@ -1,0 +1,533 @@
+{
+ "meta": {
+  "title": "National Road Maintenance Strategy \u2014 Uganda",
+  "source": "MoWT / UNRA Maintenance Strategy workbooks (2026 cycle), consolidated from internal planning workbooks",
+  "note": "Network inventory, condition (VCI), 5-year investment priority plan (FY26/27-FY30/31), asset values, and bridge/major-culvert stock. Bridges and major culverts are always reported as separate figures from the road network.",
+  "regions": [
+   "Central",
+   "Eastern",
+   "North Eastern",
+   "Northern",
+   "Southern",
+   "Western"
+  ]
+ },
+ "kpi_summary": {
+  "paved_asset_value_mn_usd": 5918.269760358998,
+  "unpaved_asset_value_mn_usd": 815.4980442618677,
+  "bridges_asset_value_mn_usd": 631.0,
+  "major_culverts_asset_value_mn_usd": 207.0,
+  "total_asset_value_mn_usd": 7571.767804620866,
+  "total_asset_value_mn_ushs": 28015540.877097204,
+  "total_network_km": 21301.816298322537,
+  "paved_km": 6405.053853,
+  "unpaved_km": 14896.762445,
+  "total_bridges": 521,
+  "total_major_culverts": 451,
+  "source": "Asset Values workbook (corrected/recalculated), FY2025/26 snapshot"
+ },
+ "network_regional_breakdown": {
+  "Central": {
+   "paved_km": 1827.8,
+   "unpaved_km": 2936.0,
+   "total_km": 4763.8
+  },
+  "Eastern": {
+   "paved_km": 845.1,
+   "unpaved_km": 1920.4,
+   "total_km": 2765.4
+  },
+  "North Eastern": {
+   "paved_km": 418.3,
+   "unpaved_km": 2251.3,
+   "total_km": 2669.6
+  },
+  "Northern": {
+   "paved_km": 881.9,
+   "unpaved_km": 3596.6,
+   "total_km": 4478.4
+  },
+  "Southern": {
+   "paved_km": 1119.4,
+   "unpaved_km": 2459.8,
+   "total_km": 3579.2
+  },
+  "Western": {
+   "paved_km": 1257.0,
+   "unpaved_km": 1533.6,
+   "total_km": 2790.5
+  }
+ },
+ "network_by_class": [
+  {
+   "road_class": "A",
+   "bituminous_km": 2604.6474541874,
+   "unsealed_km": 0,
+   "total_km": 2604.6474541874,
+   "pct_total_network": 0.1222734915,
+   "description": "International Trunk Roads"
+  },
+  {
+   "road_class": "B",
+   "bituminous_km": 1804.8242622909,
+   "unsealed_km": 1040.4507037262,
+   "total_km": 2845.2749660171,
+   "pct_total_network": 0.1335695945,
+   "description": "National Trunk Roads"
+  },
+  {
+   "road_class": "C",
+   "bituminous_km": 1851.022881845,
+   "unsealed_km": 13856.3117413939,
+   "total_km": 15707.3346232389,
+   "pct_total_network": 0.7373706732,
+   "description": "Primary Roads"
+  },
+  {
+   "road_class": "M",
+   "bituminous_km": 144.5592548791,
+   "unsealed_km": 0,
+   "total_km": 144.5592548791,
+   "pct_total_network": 0.0067862408,
+   "description": "Expressways"
+  }
+ ],
+ "vci_condition_distribution": {
+  "Good": 251,
+  "Fair": 480,
+  "Very Good": 66,
+  "Committed Project": 8,
+  "Poor": 202,
+  "Very Poor": 7,
+  "Not assessed": 3
+ },
+ "investment_plan_annual": [
+  {
+   "financial_year": "FY26/27",
+   "links_count": 69,
+   "programme_cost_bn_ushs": 1822.2755571034,
+   "asset_value_at_risk_bn_ushs": 6605.092637994,
+   "delay_exposure_bn_ushs": null,
+   "funding_gap_vs_baseline_bn_ushs": 1562.2755571034
+  },
+  {
+   "financial_year": "FY27/28",
+   "links_count": 69,
+   "programme_cost_bn_ushs": 743.1001837753,
+   "asset_value_at_risk_bn_ushs": 5152.338363862,
+   "delay_exposure_bn_ushs": null,
+   "funding_gap_vs_baseline_bn_ushs": 462.3001837753
+  },
+  {
+   "financial_year": "FY28/29",
+   "links_count": 66,
+   "programme_cost_bn_ushs": 208.4023561156,
+   "asset_value_at_risk_bn_ushs": 5674.1421747929,
+   "delay_exposure_bn_ushs": null,
+   "funding_gap_vs_baseline_bn_ushs": -94.8616438844
+  },
+  {
+   "financial_year": "FY29/30",
+   "links_count": 73,
+   "programme_cost_bn_ushs": 11.7429138624,
+   "asset_value_at_risk_bn_ushs": 2567.367099199,
+   "delay_exposure_bn_ushs": null,
+   "funding_gap_vs_baseline_bn_ushs": -315.7822061376
+  },
+  {
+   "financial_year": "FY30/31",
+   "links_count": 61,
+   "programme_cost_bn_ushs": 3.2080530894,
+   "asset_value_at_risk_bn_ushs": 701.3804282924,
+   "delay_exposure_bn_ushs": null,
+   "funding_gap_vs_baseline_bn_ushs": -350.5190765106
+  },
+  {
+   "financial_year": "Total / Avg",
+   "links_count": 338,
+   "programme_cost_bn_ushs": 2788.7290639461,
+   "asset_value_at_risk_bn_ushs": 20700.3207041404,
+   "delay_exposure_bn_ushs": null,
+   "funding_gap_vs_baseline_bn_ushs": 1263.4128143461
+  }
+ ],
+ "intervention_mix_summary": [
+  {
+   "intervention": "Reconstruction",
+   "links_count": 0,
+   "length_km": 0,
+   "cost_bn_ushs": 0,
+   "avg_asset_risk_bn_ushs_per_km": 0.0,
+   "earliest_fy": null,
+   "delay_exposure_bn_ushs": 0.0
+  },
+  {
+   "intervention": "Rehabilitation",
+   "links_count": 13,
+   "length_km": 361.506,
+   "cost_bn_ushs": 935.2916860465,
+   "avg_asset_risk_bn_ushs_per_km": 3.2794676806,
+   "earliest_fy": null,
+   "delay_exposure_bn_ushs": null
+  },
+  {
+   "intervention": "Periodic Maintenance",
+   "links_count": 57,
+   "length_km": 1353.211939864,
+   "cost_bn_ushs": 1222.1683350503,
+   "avg_asset_risk_bn_ushs_per_km": 3.2794676806,
+   "earliest_fy": null,
+   "delay_exposure_bn_ushs": null
+  },
+  {
+   "intervention": "Preventive Maintenance",
+   "links_count": 71,
+   "length_km": 1678.5323733566,
+   "cost_bn_ushs": 587.4863306748,
+   "avg_asset_risk_bn_ushs_per_km": 3.2794676806,
+   "earliest_fy": null,
+   "delay_exposure_bn_ushs": null
+  },
+  {
+   "intervention": "Routine Maintenance",
+   "links_count": 166,
+   "length_km": 2182.3084783028,
+   "cost_bn_ushs": 32.7346271745,
+   "avg_asset_risk_bn_ushs_per_km": 3.2794676806,
+   "earliest_fy": null,
+   "delay_exposure_bn_ushs": null
+  },
+  {
+   "intervention": "Upgrade / Improvement",
+   "links_count": 0,
+   "length_km": 0,
+   "cost_bn_ushs": 0,
+   "avg_asset_risk_bn_ushs_per_km": 0.0,
+   "earliest_fy": null,
+   "delay_exposure_bn_ushs": 0.0
+  },
+  {
+   "intervention": "OPRC Maintenance",
+   "links_count": 31,
+   "length_km": 736.539,
+   "cost_bn_ushs": 11.048085,
+   "avg_asset_risk_bn_ushs_per_km": 3.2794676806,
+   "earliest_fy": null,
+   "delay_exposure_bn_ushs": null
+  }
+ ],
+ "intervention_rate_benchmarks": [
+  {
+   "surface_type": "Paved",
+   "intervention": "Routine maintenance",
+   "recommended_rate_bn_ushs_per_km": 0.015,
+   "primary_basis": "Direct strategy benchmark from maintenance paper comparator.",
+   "assumption_flag": "No",
+   "accuracy_score": 66,
+   "accuracy_band": "Moderate"
+  },
+  {
+   "surface_type": "Paved",
+   "intervention": "Periodic maintenance",
+   "recommended_rate_bn_ushs_per_km": 0.9031610637,
+   "primary_basis": "Direct backlog-derived unit cost from the strategy workbook.",
+   "assumption_flag": "No",
+   "accuracy_score": 68,
+   "accuracy_band": "Moderate"
+  },
+  {
+   "surface_type": "Paved",
+   "intervention": "Light rehabilitation",
+   "recommended_rate_bn_ushs_per_km": 1.0283225242,
+   "primary_basis": "Median 50mm overlay rate from the optimised programme files.",
+   "assumption_flag": "No",
+   "accuracy_score": 91,
+   "accuracy_band": "High"
+  },
+  {
+   "surface_type": "Paved",
+   "intervention": "Heavy rehabilitation",
+   "recommended_rate_bn_ushs_per_km": 2.5872093023,
+   "primary_basis": "Direct strategy rehabilitation unit cost, cross-checked against sparse 80mm overlay evidence.",
+   "assumption_flag": "No",
+   "accuracy_score": 87,
+   "accuracy_band": "High"
+  },
+  {
+   "surface_type": "Paved",
+   "intervention": "Reconstruction",
+   "recommended_rate_bn_ushs_per_km": 3.6954545455,
+   "primary_basis": "Direct strategy reconstruction unit cost with programme cross-checks.",
+   "assumption_flag": "No",
+   "accuracy_score": 81,
+   "accuracy_band": "High"
+  },
+  {
+   "surface_type": "Unpaved",
+   "intervention": "Routine maintenance",
+   "recommended_rate_bn_ushs_per_km": 0.021,
+   "primary_basis": "Direct strategy benchmark for mechanised unpaved routine maintenance.",
+   "assumption_flag": "No",
+   "accuracy_score": 67,
+   "accuracy_band": "Moderate"
+  },
+  {
+   "surface_type": "Unpaved",
+   "intervention": "Periodic maintenance",
+   "recommended_rate_bn_ushs_per_km": 0.06,
+   "primary_basis": "Direct strategy benchmark for regravelling / periodic maintenance.",
+   "assumption_flag": "No",
+   "accuracy_score": 75,
+   "accuracy_band": "Moderate"
+  },
+  {
+   "surface_type": "Unpaved",
+   "intervention": "Light rehabilitation",
+   "recommended_rate_bn_ushs_per_km": 0.12,
+   "primary_basis": "Assumption retained at 2x unpaved periodic rate; bottleneck rows were too patch-specific to use as a clean direct benchmark.",
+   "assumption_flag": "Yes",
+   "accuracy_score": 39,
+   "accuracy_band": "Low"
+  },
+  {
+   "surface_type": "Unpaved",
+   "intervention": "Heavy rehabilitation",
+   "recommended_rate_bn_ushs_per_km": 0.24,
+   "primary_basis": "Assumption retained at 4x unpaved periodic rate because direct heavy-rehab unit costs were not explicit in the scanned workbooks.",
+   "assumption_flag": "Yes",
+   "accuracy_score": 20,
+   "accuracy_band": "Low"
+  },
+  {
+   "surface_type": "Unpaved",
+   "intervention": "Reconstruction",
+   "recommended_rate_bn_ushs_per_km": 0.3,
+   "primary_basis": "Direct strategy benchmark for severe unpaved heavy improvement / reconstruction.",
+   "assumption_flag": "No",
+   "accuracy_score": 55,
+   "accuracy_band": "Indicative"
+  }
+ ],
+ "asset_value_trend": [
+  {
+   "financial_year": "17/18",
+   "length_km": 4551,
+   "unit_rate_mn_usd_per_km": 0.95,
+   "crc_mn_usd": 4323.45,
+   "condition_factor": 0.6783934127,
+   "asset_value_mn_usd": 2933,
+   "surface_type": "Paved"
+  },
+  {
+   "financial_year": "18/19",
+   "length_km": 5015,
+   "unit_rate_mn_usd_per_km": 0.95,
+   "crc_mn_usd": 4764.25,
+   "condition_factor": 0.6758671354,
+   "asset_value_mn_usd": 3220,
+   "surface_type": "Paved"
+  },
+  {
+   "financial_year": "19/20",
+   "length_km": 5398,
+   "unit_rate_mn_usd_per_km": 1.05,
+   "crc_mn_usd": 5667.9,
+   "condition_factor": 0.6880855343,
+   "asset_value_mn_usd": 3900,
+   "surface_type": "Paved"
+  },
+  {
+   "financial_year": "20/21",
+   "length_km": 5528,
+   "unit_rate_mn_usd_per_km": 1.1,
+   "crc_mn_usd": 6080.8,
+   "condition_factor": 0.7922727273,
+   "asset_value_mn_usd": 4817.652,
+   "surface_type": "Paved"
+  },
+  {
+   "financial_year": "21/22",
+   "length_km": 5745,
+   "unit_rate_mn_usd_per_km": 1.2,
+   "crc_mn_usd": 6894,
+   "condition_factor": 0.7314339837,
+   "asset_value_mn_usd": 5042.5058836359,
+   "surface_type": "Paved"
+  },
+  {
+   "financial_year": "22/23",
+   "length_km": 6056.3,
+   "unit_rate_mn_usd_per_km": 1.2,
+   "crc_mn_usd": 7267.56,
+   "condition_factor": 0.7400007705,
+   "asset_value_mn_usd": 5378,
+   "surface_type": "Paved"
+  },
+  {
+   "financial_year": "23/24",
+   "length_km": 6306,
+   "unit_rate_mn_usd_per_km": 1.2,
+   "crc_mn_usd": 7567.2,
+   "condition_factor": 0.7400359446,
+   "asset_value_mn_usd": 5600,
+   "surface_type": "Paved"
+  },
+  {
+   "financial_year": "25/26",
+   "length_km": 6405.0538532024,
+   "unit_rate_mn_usd_per_km": 1.2,
+   "crc_mn_usd": 7686.0646238429,
+   "condition_factor": 0.77,
+   "asset_value_mn_usd": 5918.269760359,
+   "surface_type": "Paved"
+  },
+  {
+   "financial_year": "17/18",
+   "length_km": 15993,
+   "unit_rate_mn_usd_per_km": 0.106,
+   "crc_mn_usd": 1695.258,
+   "condition_factor": 0.3810629415,
+   "asset_value_mn_usd": 646,
+   "surface_type": "Unpaved"
+  },
+  {
+   "financial_year": "18/19",
+   "length_km": 15841,
+   "unit_rate_mn_usd_per_km": 0.098,
+   "crc_mn_usd": 1552.418,
+   "condition_factor": 0.4180575077,
+   "asset_value_mn_usd": 649,
+   "surface_type": "Unpaved"
+  },
+  {
+   "financial_year": "19/20",
+   "length_km": 15612,
+   "unit_rate_mn_usd_per_km": 0.098,
+   "crc_mn_usd": 1529.976,
+   "condition_factor": 0.3986990646,
+   "asset_value_mn_usd": 610,
+   "surface_type": "Unpaved"
+  },
+  {
+   "financial_year": "20/21",
+   "length_km": 15497.8694,
+   "unit_rate_mn_usd_per_km": 0.098,
+   "crc_mn_usd": 1518.7912012,
+   "condition_factor": 0.38,
+   "asset_value_mn_usd": 577.140656456,
+   "surface_type": "Unpaved"
+  },
+  {
+   "financial_year": "21/22",
+   "length_km": 15375.6144,
+   "unit_rate_mn_usd_per_km": 0.098,
+   "crc_mn_usd": 1506.8102112,
+   "condition_factor": 0.5106003488,
+   "asset_value_mn_usd": 769.37781935,
+   "surface_type": "Unpaved"
+  },
+  {
+   "financial_year": "22/23",
+   "length_km": 15143.9,
+   "unit_rate_mn_usd_per_km": 0.098,
+   "crc_mn_usd": 1484.1022,
+   "condition_factor": 0.5902558463,
+   "asset_value_mn_usd": 876,
+   "surface_type": "Unpaved"
+  },
+  {
+   "financial_year": "23/24",
+   "length_km": 14982,
+   "unit_rate_mn_usd_per_km": 0.098,
+   "crc_mn_usd": 1468.236,
+   "condition_factor": 0.5598555001,
+   "asset_value_mn_usd": 822,
+   "surface_type": "Unpaved"
+  },
+  {
+   "financial_year": "25/26",
+   "length_km": 14896.7624451201,
+   "unit_rate_mn_usd_per_km": 0.098,
+   "crc_mn_usd": 1459.8827196218,
+   "condition_factor": 0.5586051765,
+   "asset_value_mn_usd": 815.4980442619,
+   "surface_type": "Unpaved"
+  }
+ ],
+ "structures_summary": [
+  {
+   "structure_type": "Bridges",
+   "count": 521,
+   "asset_value_mn_usd": 631,
+   "crc_mn_usd": 790,
+   "paved_count": 149,
+   "unpaved_count": 372
+  },
+  {
+   "structure_type": "Major culverts",
+   "count": 451,
+   "asset_value_mn_usd": 207,
+   "crc_mn_usd": 283,
+   "paved_count": 215,
+   "unpaved_count": 236
+  }
+ ],
+ "structures_regional_split": [
+  {
+   "maintenance_region": "Central",
+   "bridges_count": 55,
+   "major_culverts_count": 33,
+   "total_structures": 88
+  },
+  {
+   "maintenance_region": "Eastern",
+   "bridges_count": 98,
+   "major_culverts_count": 79,
+   "total_structures": 177
+  },
+  {
+   "maintenance_region": "Western",
+   "bridges_count": 60,
+   "major_culverts_count": 113,
+   "total_structures": 173
+  },
+  {
+   "maintenance_region": "Southern",
+   "bridges_count": 83,
+   "major_culverts_count": 83,
+   "total_structures": 166
+  },
+  {
+   "maintenance_region": "North Eastern",
+   "bridges_count": 52,
+   "major_culverts_count": 52,
+   "total_structures": 104
+  },
+  {
+   "maintenance_region": "Northern",
+   "bridges_count": 173,
+   "major_culverts_count": 91,
+   "total_structures": 264
+  }
+ ],
+ "bridge_condition_distribution": {
+  "Marginal": 133,
+  "Satisfactory": 71,
+  "Poor": 83,
+  "Good": 233,
+  "Critical": 1
+ },
+ "culvert_condition_distribution": {
+  "Good": 323,
+  "Poor": 10,
+  "Marginal": 48,
+  "Critical": 2,
+  "Satisfactory": 68
+ },
+ "counts": {
+  "road_links": 1017,
+  "priority_planned_links": 338,
+  "bridges": 521,
+  "major_culverts": 451
+ }
+}

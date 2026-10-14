@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "name": "field_verification",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [33.374330, 0.524410] },
+      "properties": {
+        "Site Name": "Jinja-Tororo Road Field Verification",
+        "Link Name": "Jinja-Tororo Road",
+        "District": "Mayuge",
+        "Region": "Eastern",
+        "Visit Date": "2026-06-02",
+        "Activity": "Manual walkover measurement (distance measuring wheel)",
+        "Surface Observed": "Bituminous surface dressing",
+        "Condition Observed": "No potholing, rutting or cracking visible in the section covered; surface sound with normal wear",
+        "Source": "Field video review"
+      }
+    }
+  ]
+}

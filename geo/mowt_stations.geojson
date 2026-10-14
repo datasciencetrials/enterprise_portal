@@ -1,0 +1,5287 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.674175,
+     0.354184
+    ]
+   },
+   "properties": {
+    "tcs_no": 210,
+    "station_name": "A00107",
+    "link_id": "A001_Link01",
+    "link_name": "Kampala - Mukono",
+    "region": "Central",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.75632,
+     0.354546
+    ]
+   },
+   "properties": {
+    "tcs_no": 122,
+    "station_name": "A00109",
+    "link_id": "A001_Link02",
+    "link_name": "Mukono - Lugazi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.179248,
+     0.44049
+    ]
+   },
+   "properties": {
+    "tcs_no": 123,
+    "station_name": "A00114",
+    "link_id": "A001_Link03",
+    "link_name": "Lugazi - Njeru",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.235366,
+     0.465198
+    ]
+   },
+   "properties": {
+    "tcs_no": 55,
+    "station_name": "A00121",
+    "link_id": "A001N2_Link01",
+    "link_name": "Jinja - Kakira Junction(Dual section)",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.333223,
+     0.51135
+    ]
+   },
+   "properties": {
+    "tcs_no": 56,
+    "station_name": "A00122",
+    "link_id": "A001_Link06",
+    "link_name": "Kakira junction - Iganga",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.3344,
+     0.220085
+    ]
+   },
+   "properties": {
+    "tcs_no": 124,
+    "station_name": "A00205",
+    "link_id": "A002_Link03",
+    "link_name": "Mpigi - Buwama",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.843214,
+     -0.206556
+    ]
+   },
+   "properties": {
+    "tcs_no": 214,
+    "station_name": "A00211",
+    "link_id": "A002_Link04",
+    "link_name": "Buwama - Lukaya",
+    "region": "Central",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.434408,
+     -0.393421
+    ]
+   },
+   "properties": {
+    "tcs_no": 125,
+    "station_name": "A00214",
+    "link_id": "A002_Link06",
+    "link_name": "Masaka  - Lyantonde",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.223287,
+     -0.927042
+    ]
+   },
+   "properties": {
+    "tcs_no": 224,
+    "station_name": "A00222",
+    "link_id": "A002_Link09",
+    "link_name": "Ntungamo - Rubaale",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.541104,
+     0.140742
+    ]
+   },
+   "properties": {
+    "tcs_no": 126,
+    "station_name": "A00303",
+    "link_id": "A003_Link02",
+    "link_name": "Zana - Entebbe Airport ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.459875,
+     0.042243
+    ]
+   },
+   "properties": {
+    "tcs_no": 127,
+    "station_name": "A00304",
+    "link_id": "A003_Link02",
+    "link_name": "Zana - Entebbe Airport ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.728986,
+     -0.336988
+    ]
+   },
+   "properties": {
+    "tcs_no": 128,
+    "station_name": "A00401",
+    "link_id": "A004_Link01",
+    "link_name": "Masaka round about - Kyotera",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.987974,
+     0.416103
+    ]
+   },
+   "properties": {
+    "tcs_no": 129,
+    "station_name": "A00509",
+    "link_id": "A005_Link03",
+    "link_name": "Mityana - Naama - Myanzi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.587595,
+     0.484048
+    ]
+   },
+   "properties": {
+    "tcs_no": 130,
+    "station_name": "A00514",
+    "link_id": "A005_Link05",
+    "link_name": "Kiganda-Kitenga",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.396642,
+     0.550429
+    ]
+   },
+   "properties": {
+    "tcs_no": 131,
+    "station_name": "A00515",
+    "link_id": "A005_Link06",
+    "link_name": "Kitenga-Mubende-Lusalira",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.235609,
+     0.487317
+    ]
+   },
+   "properties": {
+    "tcs_no": 132,
+    "station_name": "A00516",
+    "link_id": "A005_Link07",
+    "link_name": "Lusalira - Nabingoola - Lubaale",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.098898,
+     0.481522
+    ]
+   },
+   "properties": {
+    "tcs_no": 268,
+    "station_name": "A00518",
+    "link_id": "A005_Link08",
+    "link_name": "Lubaale - kyegegwa",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.392845,
+     0.642924
+    ]
+   },
+   "properties": {
+    "tcs_no": 295,
+    "station_name": "A00522",
+    "link_id": "A005_Link10",
+    "link_name": "Kyenjojo - Rugombe - Fortportal",
+    "region": "West",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.525945,
+     0.67852
+    ]
+   },
+   "properties": {
+    "tcs_no": 133,
+    "station_name": "A00606",
+    "link_id": "A006_Link03",
+    "link_name": "Matuga - Wobulenzi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.467194,
+     1.048777
+    ]
+   },
+   "properties": {
+    "tcs_no": 134,
+    "station_name": "A00610",
+    "link_id": "A006_Link05",
+    "link_name": "Luweero - Nakasongola",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.214069,
+     1.416181
+    ]
+   },
+   "properties": {
+    "tcs_no": 135,
+    "station_name": "A00612",
+    "link_id": "A006_Link06",
+    "link_name": "Nakasongola - Kafu",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.174714,
+     2.001194
+    ]
+   },
+   "properties": {
+    "tcs_no": 269,
+    "station_name": "A00617",
+    "link_id": "A006_Link08",
+    "link_name": "Kigumba - Karuma",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.378133,
+     2.460853
+    ]
+   },
+   "properties": {
+    "tcs_no": 1,
+    "station_name": "A00623",
+    "link_id": "A006_Link11",
+    "link_name": "Minakulu - Bobi - Gulu",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.160358,
+     0.923931
+    ]
+   },
+   "properties": {
+    "tcs_no": 57,
+    "station_name": "A00704",
+    "link_id": "A007_Link02",
+    "link_name": "Tororo - Magodes - Nabumali",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.16464,
+     1.14575
+    ]
+   },
+   "properties": {
+    "tcs_no": 58,
+    "station_name": "A00711",
+    "link_id": "A007_Link04",
+    "link_name": "Mbale - Namunsi - Kumi",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.507782,
+     2.239118
+    ]
+   },
+   "properties": {
+    "tcs_no": 2,
+    "station_name": "A00721",
+    "link_id": "A007_Link10",
+    "link_name": "Ayer - Kamdini",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.915265,
+     2.985421
+    ]
+   },
+   "properties": {
+    "tcs_no": 50,
+    "station_name": "A008_LINK05",
+    "link_id": "A008_Link05",
+    "link_name": "Eruba - Arua - Manibe",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.919381,
+     3.23488
+    ]
+   },
+   "properties": {
+    "tcs_no": 48,
+    "station_name": "A008_LINK06",
+    "link_id": "A008_Link06",
+    "link_name": "Manibe - Maracha - Koboko",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.05125,
+     2.383744
+    ]
+   },
+   "properties": {
+    "tcs_no": 3,
+    "station_name": "A00801",
+    "link_id": "A008_Link01",
+    "link_name": "Karuma - Olwiyo",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.481604,
+     2.460245
+    ]
+   },
+   "properties": {
+    "tcs_no": 4,
+    "station_name": "A00804",
+    "link_id": "A008_Link03",
+    "link_name": "Packwach - Nebbi",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.082228,
+     2.71155
+    ]
+   },
+   "properties": {
+    "tcs_no": 45,
+    "station_name": "A00806",
+    "link_id": "A008_LINK04",
+    "link_name": "Nebbi - Eruba",
+    "region": "North",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.938964,
+     3.493313
+    ]
+   },
+   "properties": {
+    "tcs_no": 5,
+    "station_name": "A00810",
+    "link_id": "A008_Link07",
+    "link_name": "Koboko - Oraba(Uganda/Sudan border)",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.469052,
+     0.406898
+    ]
+   },
+   "properties": {
+    "tcs_no": 136,
+    "station_name": "A00902",
+    "link_id": "A009_Link02",
+    "link_name": "Nansana - Busunju ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.142553,
+     0.60548
+    ]
+   },
+   "properties": {
+    "tcs_no": 137,
+    "station_name": "A00906",
+    "link_id": "A009_Link03",
+    "link_name": "Busunju - Kiboga - Lwamata",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.933866,
+     1.013585
+    ]
+   },
+   "properties": {
+    "tcs_no": 91,
+    "station_name": "A01204",
+    "link_id": "A012_Link04",
+    "link_name": "Kamonkoli - Mbale",
+    "region": "East",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.611877,
+     0.449001
+    ]
+   },
+   "properties": {
+    "tcs_no": 138,
+    "station_name": "B10004",
+    "link_id": "B100_Link02",
+    "link_name": "Gayaza - Kalagi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.808814,
+     0.589747
+    ]
+   },
+   "properties": {
+    "tcs_no": 211,
+    "station_name": "B101_Link01",
+    "link_id": "B101_Link02",
+    "link_name": "Kalagi - Bukoloto - kayunga",
+    "region": "Central",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.973489,
+     0.755185
+    ]
+   },
+   "properties": {
+    "tcs_no": 139,
+    "station_name": "B10105",
+    "link_id": "B101_Link03",
+    "link_name": "Kayunga - Busana - River Nile",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.000428,
+     0.618155
+    ]
+   },
+   "properties": {
+    "tcs_no": 213,
+    "station_name": "B10202",
+    "link_id": "B102_Link01",
+    "link_name": "Njeru - Bukoloto",
+    "region": "Central",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.439757,
+     -0.070925
+    ]
+   },
+   "properties": {
+    "tcs_no": 140,
+    "station_name": "B10302",
+    "link_id": "B103_Link02",
+    "link_name": "Villa Maria - Sembabule ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.185256,
+     0.307506
+    ]
+   },
+   "properties": {
+    "tcs_no": 141,
+    "station_name": "B10304",
+    "link_id": "B103_Link03",
+    "link_name": "Nkonge - Kibula - Magege - Kasambya",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.289959,
+     0.424849
+    ]
+   },
+   "properties": {
+    "tcs_no": 142,
+    "station_name": "B10305",
+    "link_id": "B103_Link04",
+    "link_name": "Kasambya - Lusalira",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.440641,
+     0.140984
+    ]
+   },
+   "properties": {
+    "tcs_no": 225,
+    "station_name": "B15005",
+    "link_id": "B150_Link03",
+    "link_name": "Ibanda - Muziza - Kamwenge",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.162317,
+     -0.679494
+    ]
+   },
+   "properties": {
+    "tcs_no": 226,
+    "station_name": "B15202",
+    "link_id": "B152_Link02",
+    "link_name": "Kagamba - Ishaka",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.093253,
+     -0.341037
+    ]
+   },
+   "properties": {
+    "tcs_no": 263,
+    "station_name": "B15203",
+    "link_id": "B152_Link03",
+    "link_name": "Ishaka - Buhinda - Rugazi",
+    "region": "South",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.871027,
+     1.785426
+    ]
+   },
+   "properties": {
+    "tcs_no": 270,
+    "station_name": "B20101",
+    "link_id": "B201_Link01",
+    "link_name": "Kigumba - Masindi",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.732997,
+     0.86364
+    ]
+   },
+   "properties": {
+    "tcs_no": 271,
+    "station_name": "B20203",
+    "link_id": "B202_Link02",
+    "link_name": "R. Muzizi - Muhooro - Kagadi",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.037739,
+     1.188799
+    ]
+   },
+   "properties": {
+    "tcs_no": 272,
+    "station_name": "B20205",
+    "link_id": "B202_Link03",
+    "link_name": "Kagadi - Mabale - Kabwoya",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.374654,
+     0.646954
+    ]
+   },
+   "properties": {
+    "tcs_no": 143,
+    "station_name": "B20301",
+    "link_id": "B203_Link01",
+    "link_name": "Mubende - Kiboyo - Kakumiro",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.256477,
+     0.902313
+    ]
+   },
+   "properties": {
+    "tcs_no": 144,
+    "station_name": "B20303",
+    "link_id": "B203_Link02",
+    "link_name": "Kakumiro - Nkondo - Kijaguza - Bulamagi- Kabaale swamp",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.114355,
+     3.274894
+    ]
+   },
+   "properties": {
+    "tcs_no": 47,
+    "station_name": "B250_LINK03",
+    "link_id": "B250_Link03",
+    "link_name": "Yumbe - Manibe",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.078262,
+     3.301995
+    ]
+   },
+   "properties": {
+    "tcs_no": 8,
+    "station_name": "B25001",
+    "link_id": "B250_Link01",
+    "link_name": "Atiak - Moyo",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.839033,
+     3.360951
+    ]
+   },
+   "properties": {
+    "tcs_no": 6,
+    "station_name": "B25002",
+    "link_id": "B250_Link01",
+    "link_name": "Atiak - Moyo",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.409521,
+     3.556128
+    ]
+   },
+   "properties": {
+    "tcs_no": 7,
+    "station_name": "B25005",
+    "link_id": "B250_Link02",
+    "link_name": "Moyo - Yumbe",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.940636,
+     2.949359
+    ]
+   },
+   "properties": {
+    "tcs_no": 49,
+    "station_name": "B252_LINK02",
+    "link_id": "B252_Link02",
+    "link_name": "Puranga Bridge - Corner Kilak - Pejule - Acholibur",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.935763,
+     2.481173
+    ]
+   },
+   "properties": {
+    "tcs_no": 44,
+    "station_name": "B25202",
+    "link_id": "B252_Link01",
+    "link_name": "Lira - Puranga Bridge",
+    "region": "North",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.885703,
+     3.287627
+    ]
+   },
+   "properties": {
+    "tcs_no": 9,
+    "station_name": "B25207",
+    "link_id": "B252_Link03",
+    "link_name": "Acholibur - Kitgum",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.0607,
+     1.7031
+    ]
+   },
+   "properties": {
+    "tcs_no": 273,
+    "station_name": "B25301",
+    "link_id": "B253_Link01",
+    "link_name": "Rwekunye - Masindi Port",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.36627,
+     1.822429
+    ]
+   },
+   "properties": {
+    "tcs_no": 10,
+    "station_name": "B25302",
+    "link_id": "B253_Link02",
+    "link_name": "Masindi Port-Akokoro-Apac-Aduku",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.795815,
+     2.127102
+    ]
+   },
+   "properties": {
+    "tcs_no": 11,
+    "station_name": "B25303",
+    "link_id": "B253_Link03",
+    "link_name": "Aduku - Lira",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.182165,
+     1.138424
+    ]
+   },
+   "properties": {
+    "tcs_no": 59,
+    "station_name": "B30001",
+    "link_id": "B300_Link01",
+    "link_name": "Namunsi - Sironko",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.411237,
+     1.475982
+    ]
+   },
+   "properties": {
+    "tcs_no": 60,
+    "station_name": "B30005",
+    "link_id": "B300_Link03",
+    "link_name": "Muyembe - Namalu",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.602362,
+     2.320386
+    ]
+   },
+   "properties": {
+    "tcs_no": 97,
+    "station_name": "B30009",
+    "link_id": "B300_Link05",
+    "link_name": "Lokapel - Ariamoi",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.115303,
+     2.972008
+    ]
+   },
+   "properties": {
+    "tcs_no": 98,
+    "station_name": "B30103",
+    "link_id": "B301_Link02",
+    "link_name": "Kapelimoru - Kotido",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.121318,
+     3.538836
+    ]
+   },
+   "properties": {
+    "tcs_no": 99,
+    "station_name": "B30105",
+    "link_id": "B301_Link03",
+    "link_name": "Kotido - Apaan - Kabong",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.241919,
+     2.767392
+    ]
+   },
+   "properties": {
+    "tcs_no": 12,
+    "station_name": "B30203",
+    "link_id": "B302_Link02",
+    "link_name": "Abim - Kilak",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.61628,
+     1.746355
+    ]
+   },
+   "properties": {
+    "tcs_no": 100,
+    "station_name": "B30301",
+    "link_id": "B303_Link01",
+    "link_name": "Soroti - Arapai",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.628538,
+     1.779603
+    ]
+   },
+   "properties": {
+    "tcs_no": 101,
+    "station_name": "B30302",
+    "link_id": "B303_Link01",
+    "link_name": "Soroti - Arapai",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.319641,
+     1.339773
+    ]
+   },
+   "properties": {
+    "tcs_no": 61,
+    "station_name": "B30401",
+    "link_id": "B304_Link01",
+    "link_name": "Muyembe - Kaserem - Kapchorwa",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.749118,
+     1.088482
+    ]
+   },
+   "properties": {
+    "tcs_no": 62,
+    "station_name": "B30501",
+    "link_id": "B305_Link01",
+    "link_name": "Tirinyi - Pallisa",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.794974,
+     1.216074
+    ]
+   },
+   "properties": {
+    "tcs_no": 92,
+    "station_name": "B30502",
+    "link_id": "B305_Link02",
+    "link_name": "Pallisa - Kanyago Bridge",
+    "region": "East",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.131228,
+     0.564168
+    ]
+   },
+   "properties": {
+    "tcs_no": 63,
+    "station_name": "B30601",
+    "link_id": "B306_Link01",
+    "link_name": "Tororo(Malaba junction) - Busia",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.146631,
+     0.763143
+    ]
+   },
+   "properties": {
+    "tcs_no": 64,
+    "station_name": "B30702",
+    "link_id": "B307_Link02",
+    "link_name": "Buwenge - Kamuli",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.019887,
+     0.480938
+    ]
+   },
+   "properties": {
+    "tcs_no": 65,
+    "station_name": "B30801",
+    "link_id": "B308_Link01",
+    "link_name": "Namutere - Busia",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.163594,
+     0.386987
+    ]
+   },
+   "properties": {
+    "tcs_no": 147,
+    "station_name": "C02902",
+    "link_id": "C029_Link01",
+    "link_name": "Njeru-Nyenga-Buikwe",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.674404,
+     0.349804
+    ]
+   },
+   "properties": {
+    "tcs_no": 148,
+    "station_name": "C03601",
+    "link_id": "C036_Link01",
+    "link_name": "Nambole - Kampala Industrial Park - Mukono",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.906525,
+     0.493977
+    ]
+   },
+   "properties": {
+    "tcs_no": 146,
+    "station_name": "C04101",
+    "link_id": "C041_Link01",
+    "link_name": "Namataba - Kyampisi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.846684,
+     0.526095
+    ]
+   },
+   "properties": {
+    "tcs_no": 149,
+    "station_name": "C04501",
+    "link_id": "C045_Link01",
+    "link_name": "Kabimbiri - Misindye",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.592027,
+     0.249396
+    ]
+   },
+   "properties": {
+    "tcs_no": 150,
+    "station_name": "C15003",
+    "link_id": "C150_Link01",
+    "link_name": "Najanankumbi - Busabala",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.708525,
+     0.383341
+    ]
+   },
+   "properties": {
+    "tcs_no": 151,
+    "station_name": "C15204",
+    "link_id": "C152_Link01",
+    "link_name": "Kireka-Namugongo-Misindye-Seeta",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.575616,
+     0.207
+    ]
+   },
+   "properties": {
+    "tcs_no": 152,
+    "station_name": "C15301",
+    "link_id": "C153_Link01",
+    "link_name": "Lweza - Kigo Prison",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.468461,
+     0.503904
+    ]
+   },
+   "properties": {
+    "tcs_no": 153,
+    "station_name": "C15401",
+    "link_id": "C154_Link01",
+    "link_name": "Matugga - Semuto - Kapeka",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.230805,
+     0.754602
+    ]
+   },
+   "properties": {
+    "tcs_no": 154,
+    "station_name": "C15404",
+    "link_id": "C154_Link02",
+    "link_name": "Kapeka-Butalangwa",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.392632,
+     0.159778
+    ]
+   },
+   "properties": {
+    "tcs_no": 145,
+    "station_name": "C16001",
+    "link_id": "C160_Link01",
+    "link_name": "Mpigi-Kasanje-Buwaya",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.116242,
+     0.180936
+    ]
+   },
+   "properties": {
+    "tcs_no": 156,
+    "station_name": "C16201",
+    "link_id": "C162_Link01",
+    "link_name": "Mpigi - Kanoni",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.857702,
+     0.173679
+    ]
+   },
+   "properties": {
+    "tcs_no": 157,
+    "station_name": "C16202",
+    "link_id": "C162_Link02",
+    "link_name": "Kanoni - Kabulasoke",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.511686,
+     0.182245
+    ]
+   },
+   "properties": {
+    "tcs_no": 158,
+    "station_name": "C16204",
+    "link_id": "C162_Link04",
+    "link_name": "Madu - Kasambya",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.00991,
+     0.113643
+    ]
+   },
+   "properties": {
+    "tcs_no": 159,
+    "station_name": "C16301",
+    "link_id": "C163_Link01",
+    "link_name": "MitalaMaria-Bulo-Kanoni",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.614129,
+     0.137016
+    ]
+   },
+   "properties": {
+    "tcs_no": 160,
+    "station_name": "C16601",
+    "link_id": "C166_Link01",
+    "link_name": "Madu-Kisozi-R.Katonga",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.508165,
+     -0.001209
+    ]
+   },
+   "properties": {
+    "tcs_no": 161,
+    "station_name": "C16602",
+    "link_id": "C166_Link02",
+    "link_name": "R. Katonga - Sembabule",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.474279,
+     -0.318433
+    ]
+   },
+   "properties": {
+    "tcs_no": 162,
+    "station_name": "C16604",
+    "link_id": "C166_Link04",
+    "link_name": "Matete - Mbirizi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.51606,
+     0.077184
+    ]
+   },
+   "properties": {
+    "tcs_no": 164,
+    "station_name": "C17501",
+    "link_id": "C175_Link01",
+    "link_name": "Abayita Ababiri - Kasenyi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.495108,
+     0.238627
+    ]
+   },
+   "properties": {
+    "tcs_no": 165,
+    "station_name": "C17803",
+    "link_id": "C178_Link01",
+    "link_name": "Natete - Nakawuka - Kisubi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.516061,
+     0.299874
+    ]
+   },
+   "properties": {
+    "tcs_no": 166,
+    "station_name": "C17901",
+    "link_id": "C179_Link01",
+    "link_name": "Old Masaka Road (Kyengera -Kabojja Secondary)",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.375647,
+     0.288863
+    ]
+   },
+   "properties": {
+    "tcs_no": 155,
+    "station_name": "C18002",
+    "link_id": "C180_Link01",
+    "link_name": "Nakawuka - Namutamala - Katende - Bujuko",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.421719,
+     0.221347
+    ]
+   },
+   "properties": {
+    "tcs_no": 167,
+    "station_name": "C18003",
+    "link_id": "C180_Link01",
+    "link_name": "Nakawuka - Namutamala - Katende - Bujuko",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.470516,
+     0.365901
+    ]
+   },
+   "properties": {
+    "tcs_no": 168,
+    "station_name": "C18201",
+    "link_id": "C182_Link01",
+    "link_name": "Buloba - Wakiso",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.369254,
+     0.489692
+    ]
+   },
+   "properties": {
+    "tcs_no": 169,
+    "station_name": "C18401",
+    "link_id": "C184_Link01",
+    "link_name": "Kakiri-Masulita-Danze-Mawale",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.321237,
+     0.600388
+    ]
+   },
+   "properties": {
+    "tcs_no": 170,
+    "station_name": "C18603",
+    "link_id": "C186_Link01",
+    "link_name": "Namyumba-Kakonda-Wabikokoma-Semuto",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.244426,
+     0.462876
+    ]
+   },
+   "properties": {
+    "tcs_no": 171,
+    "station_name": "C18701",
+    "link_id": "C187_Link01",
+    "link_name": "Namayumba - Kitalya Prison - Kamuli",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.188076,
+     0.176945
+    ]
+   },
+   "properties": {
+    "tcs_no": 172,
+    "station_name": "C18801",
+    "link_id": "C188_Link01",
+    "link_name": "Kyabadaza - Kibibi",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.912953,
+     0.083083
+    ]
+   },
+   "properties": {
+    "tcs_no": 173,
+    "station_name": "C19001",
+    "link_id": "C190_Link01",
+    "link_name": "Kayabwe - Nkozi - Kinyika - Ngando - Wab",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.498758,
+     0.434321
+    ]
+   },
+   "properties": {
+    "tcs_no": 174,
+    "station_name": "C19301",
+    "link_id": "C193_Link01",
+    "link_name": "Wakiso-Kassengejja- Matugga",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.56469,
+     0.455449
+    ]
+   },
+   "properties": {
+    "tcs_no": 175,
+    "station_name": "C19401",
+    "link_id": "C194_Link01",
+    "link_name": "Matugga - Kasangati",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.627893,
+     0.412133
+    ]
+   },
+   "properties": {
+    "tcs_no": 212,
+    "station_name": "C19402",
+    "link_id": "C194_Link02",
+    "link_name": "Kasangati - Kyaliwajala",
+    "region": "Central",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.428015,
+     0.172569
+    ]
+   },
+   "properties": {
+    "tcs_no": 176,
+    "station_name": "C19501",
+    "link_id": "C195_Link01",
+    "link_name": "Nakawuka Kasanje ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.87179,
+     -0.31246
+    ]
+   },
+   "properties": {
+    "tcs_no": 178,
+    "station_name": "C21101",
+    "link_id": "C211_Link01",
+    "link_name": "Nyendo - Lambu port Junction",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.26532,
+     -0.569819
+    ]
+   },
+   "properties": {
+    "tcs_no": 179,
+    "station_name": "C21401",
+    "link_id": "C214_Link01",
+    "link_name": "Lyantonde - Lumbugu",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.841074,
+     -0.041711
+    ]
+   },
+   "properties": {
+    "tcs_no": 180,
+    "station_name": "C21601",
+    "link_id": "C216_Link01",
+    "link_name": "Lukaya - Miwuula ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.77043,
+     -0.444723
+    ]
+   },
+   "properties": {
+    "tcs_no": 182,
+    "station_name": "C21801",
+    "link_id": "C218_Link01",
+    "link_name": "Masaka - Kidda - Buwunga - Nkuke - Kyana",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.649127,
+     -0.649277
+    ]
+   },
+   "properties": {
+    "tcs_no": 183,
+    "station_name": "C22103",
+    "link_id": "C221_Link02",
+    "link_name": "Lusakalwamese - Bikira",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.710245,
+     -0.574127
+    ]
+   },
+   "properties": {
+    "tcs_no": 177,
+    "station_name": "C22301",
+    "link_id": "C223_Link01",
+    "link_name": "Taba -Kyeesiga-Ddimo Landing site",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.51139,
+     -0.486379
+    ]
+   },
+   "properties": {
+    "tcs_no": 184,
+    "station_name": "C22501",
+    "link_id": "C225_Link01",
+    "link_name": "Kyabakuza - Kiwangala - Ndagwe - Namabal",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.612846,
+     -0.263429
+    ]
+   },
+   "properties": {
+    "tcs_no": 181,
+    "station_name": "C22601",
+    "link_id": "C226_Link01",
+    "link_name": "Kyabakuza - Kyogya - Matete",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.273725,
+     -0.24354
+    ]
+   },
+   "properties": {
+    "tcs_no": 185,
+    "station_name": "C22602",
+    "link_id": "C226_Link02",
+    "link_name": "Matete - Kakinga - Kaliro",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.1528,
+     -0.201182
+    ]
+   },
+   "properties": {
+    "tcs_no": 209,
+    "station_name": "C22702",
+    "link_id": "C227_Link01",
+    "link_name": "Lyantonde - Kaliro - Nabitanga - Ntusi",
+    "region": "Central",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.155794,
+     -0.315556
+    ]
+   },
+   "properties": {
+    "tcs_no": 186,
+    "station_name": "C22901",
+    "link_id": "C229_Link01",
+    "link_name": "Luku Pier - Kalangala HQ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.278503,
+     -0.417041
+    ]
+   },
+   "properties": {
+    "tcs_no": 187,
+    "station_name": "C23001",
+    "link_id": "C230_Link01",
+    "link_name": "Kalangala HQ - Mulabana",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.112133,
+     0.487025
+    ]
+   },
+   "properties": {
+    "tcs_no": 188,
+    "station_name": "C26001",
+    "link_id": "C260_Link01",
+    "link_name": "Mityana - Busunju",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.894334,
+     0.19725
+    ]
+   },
+   "properties": {
+    "tcs_no": 163,
+    "station_name": "C26202",
+    "link_id": "C262_Link01",
+    "link_name": "Mityana-Misigi-Kanoni",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.021063,
+     0.491971
+    ]
+   },
+   "properties": {
+    "tcs_no": 190,
+    "station_name": "C27101",
+    "link_id": "C271_Link01",
+    "link_name": "Wakitundu - Bulera - Mutetema",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.903307,
+     0.60767
+    ]
+   },
+   "properties": {
+    "tcs_no": 191,
+    "station_name": "C27102",
+    "link_id": "C271_Link02",
+    "link_name": "Mutetema-Kyamusisi - Bukuya",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.58527,
+     1.002188
+    ]
+   },
+   "properties": {
+    "tcs_no": 274,
+    "station_name": "C27106",
+    "link_id": "C271_Link04",
+    "link_name": "Kitumbi Bridge - Bukwiri",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.058627,
+     0.586722
+    ]
+   },
+   "properties": {
+    "tcs_no": 192,
+    "station_name": "C27201",
+    "link_id": "C272_Link01",
+    "link_name": "Hoima Road/Kituuma-Kiryoka-Mutetema ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.834065,
+     0.608924
+    ]
+   },
+   "properties": {
+    "tcs_no": 189,
+    "station_name": "C27302",
+    "link_id": "C273_Link02",
+    "link_name": "Kasanda - Bukuya",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.45595,
+     0.655179
+    ]
+   },
+   "properties": {
+    "tcs_no": 193,
+    "station_name": "C27401",
+    "link_id": "C274_Link01",
+    "link_name": "Kasanda - Madudu",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.659021,
+     0.58666
+    ]
+   },
+   "properties": {
+    "tcs_no": 194,
+    "station_name": "C27402",
+    "link_id": "C274_Link02",
+    "link_name": "Madudu - Kiyuya",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.422578,
+     0.360869
+    ]
+   },
+   "properties": {
+    "tcs_no": 195,
+    "station_name": "C27701",
+    "link_id": "C277_Link01",
+    "link_name": "Kitenga -Ikula-Kanyogoga",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.888323,
+     1.077025
+    ]
+   },
+   "properties": {
+    "tcs_no": 196,
+    "station_name": "C30001",
+    "link_id": "C300_Link01",
+    "link_name": "Kayunga-Bale-Galiraya-Lake Kyoga",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.645401,
+     0.832981
+    ]
+   },
+   "properties": {
+    "tcs_no": 197,
+    "station_name": "C30101",
+    "link_id": "C301_Link01",
+    "link_name": "Zirobwe -Kikyusa - Luweero",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.617826,
+     0.512864
+    ]
+   },
+   "properties": {
+    "tcs_no": 198,
+    "station_name": "C30201",
+    "link_id": "C302_Link01",
+    "link_name": "Gayaza-Zirobwe",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.387496,
+     0.716847
+    ]
+   },
+   "properties": {
+    "tcs_no": 200,
+    "station_name": "C30401",
+    "link_id": "C304_Link01",
+    "link_name": "Kisule - Nakaseke - Kapeeka",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.034579,
+     1.081372
+    ]
+   },
+   "properties": {
+    "tcs_no": 201,
+    "station_name": "C30701",
+    "link_id": "C307_Link01",
+    "link_name": "Butalangwa - Ngoma - Bulyamusenyu",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.026061,
+     0.958745
+    ]
+   },
+   "properties": {
+    "tcs_no": 66,
+    "station_name": "C31001",
+    "link_id": "C310_Link01",
+    "link_name": "Kamuli - Namasagali",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.466247,
+     0.615545
+    ]
+   },
+   "properties": {
+    "tcs_no": 199,
+    "station_name": "C31101",
+    "link_id": "C311_Link01",
+    "link_name": "Bombo - Ndejje - Kalasa",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.450019,
+     0.669153
+    ]
+   },
+   "properties": {
+    "tcs_no": 203,
+    "station_name": "C31201",
+    "link_id": "C312_Link01",
+    "link_name": "Kalule - Bowa - Nakaseke ",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.576613,
+     0.782032
+    ]
+   },
+   "properties": {
+    "tcs_no": 204,
+    "station_name": "C31301",
+    "link_id": "C313_Link01",
+    "link_name": "Katikamu - Kikyusa",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.337544,
+     1.134985
+    ]
+   },
+   "properties": {
+    "tcs_no": 205,
+    "station_name": "C31701",
+    "link_id": "C317_Link01",
+    "link_name": "Katuugo-Kinyogogga",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.741114,
+     1.188836
+    ]
+   },
+   "properties": {
+    "tcs_no": 202,
+    "station_name": "C32501",
+    "link_id": "C325_Link01",
+    "link_name": "Kikyusa- Bamugolode - Kazwama - Nakasongola",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.514186,
+     1.460026
+    ]
+   },
+   "properties": {
+    "tcs_no": 206,
+    "station_name": "C32601",
+    "link_id": "C326_Link01",
+    "link_name": "Nakasongola - Lwampanga - Zengebe Access",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.720703,
+     -0.714058
+    ]
+   },
+   "properties": {
+    "tcs_no": 228,
+    "station_name": "C35001",
+    "link_id": "C350_Link01",
+    "link_name": "Katete-Isingiro",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.80971,
+     -0.995063
+    ]
+   },
+   "properties": {
+    "tcs_no": 230,
+    "station_name": "C35301",
+    "link_id": "C353_Link01",
+    "link_name": "Nsongezi-Kyaka",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.04145,
+     -0.301855
+    ]
+   },
+   "properties": {
+    "tcs_no": 231,
+    "station_name": "C35501",
+    "link_id": "C355_Link01",
+    "link_name": "Nyakahita-Rushere",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.830342,
+     0.042202
+    ]
+   },
+   "properties": {
+    "tcs_no": 232,
+    "station_name": "C35602",
+    "link_id": "C356_Link02",
+    "link_name": "Kazo-Buremba",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.106637,
+     -0.689097
+    ]
+   },
+   "properties": {
+    "tcs_no": 229,
+    "station_name": "C35901",
+    "link_id": "C359_Link01",
+    "link_name": "Rugaaga-Rushasha-Rwentaha",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.886715,
+     -0.865288
+    ]
+   },
+   "properties": {
+    "tcs_no": 233,
+    "station_name": "C36001",
+    "link_id": "C360_Link01",
+    "link_name": "Ekitindo - Ngarama - Kasheshe",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.706505,
+     -0.864157
+    ]
+   },
+   "properties": {
+    "tcs_no": 234,
+    "station_name": "C36301",
+    "link_id": "C363_Link01",
+    "link_name": "Kabingo - Nyakitunda - Kabuyanda - Kyezi",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.606583,
+     -0.783312
+    ]
+   },
+   "properties": {
+    "tcs_no": 235,
+    "station_name": "C36401",
+    "link_id": "C364_Link01",
+    "link_name": "Ruti - Mwizi - Kabuyanda - Kikagati",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.51192,
+     -0.741937
+    ]
+   },
+   "properties": {
+    "tcs_no": 236,
+    "station_name": "C36501",
+    "link_id": "C365_Link01",
+    "link_name": "Nyakiraguju - Ruzinga (Bugamba) Chitwe",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.810951,
+     -0.363462
+    ]
+   },
+   "properties": {
+    "tcs_no": 227,
+    "station_name": "C36702",
+    "link_id": "C367_Link01",
+    "link_name": "Biharwe - Rushozi - Ruhengere - Kikatsi",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.686824,
+     -0.490537
+    ]
+   },
+   "properties": {
+    "tcs_no": 238,
+    "station_name": "C36803",
+    "link_id": "C368_Link01",
+    "link_name": "Biharwe - Bwizibwera",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.749957,
+     -0.249794
+    ]
+   },
+   "properties": {
+    "tcs_no": 239,
+    "station_name": "C37003",
+    "link_id": "C370_Link02",
+    "link_name": "Byanamira - Kashwa",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.328925,
+     -0.088715
+    ]
+   },
+   "properties": {
+    "tcs_no": 242,
+    "station_name": "C37304",
+    "link_id": "C373_Link02",
+    "link_name": "Kabujogera - Mahyoro Junction",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.082709,
+     -0.832882
+    ]
+   },
+   "properties": {
+    "tcs_no": 243,
+    "station_name": "C41001",
+    "link_id": "C410_Link01",
+    "link_name": "Kagamba-Kebisoni",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.858177,
+     -0.433091
+    ]
+   },
+   "properties": {
+    "tcs_no": 246,
+    "station_name": "C41401",
+    "link_id": "C414_Link01",
+    "link_name": "Katunguru - Ishasha",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.39121,
+     -0.49499
+    ]
+   },
+   "properties": {
+    "tcs_no": 247,
+    "station_name": "C41501",
+    "link_id": "C415_Link01",
+    "link_name": "Nsiika -  Bihanga -Katerera(Ishaka T/C)",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.517604,
+     -0.424468
+    ]
+   },
+   "properties": {
+    "tcs_no": 248,
+    "station_name": "C41503",
+    "link_id": "C415_Link02",
+    "link_name": "Kafunzo-Kikagati",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.452486,
+     -0.424255
+    ]
+   },
+   "properties": {
+    "tcs_no": 241,
+    "station_name": "C41601",
+    "link_id": "C416_Link01",
+    "link_name": "Kikagati-Nsongezi",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.298435,
+     -0.916506
+    ]
+   },
+   "properties": {
+    "tcs_no": 249,
+    "station_name": "C41701",
+    "link_id": "C417_Link01",
+    "link_name": "Ntungamo-Kakukuru",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.888181,
+     -1.396305
+    ]
+   },
+   "properties": {
+    "tcs_no": 250,
+    "station_name": "C42501",
+    "link_id": "C425_Link01",
+    "link_name": "Katuna - Rubaya - Muko",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.035398,
+     -1.202294
+    ]
+   },
+   "properties": {
+    "tcs_no": 244,
+    "station_name": "C42901",
+    "link_id": "C429_Link01",
+    "link_name": "Butobere - Muyumbu - Rwamucucu",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.144096,
+     -0.92668
+    ]
+   },
+   "properties": {
+    "tcs_no": 251,
+    "station_name": "C43002",
+    "link_id": "C430_Link01",
+    "link_name": "Rwashamaire - Rwahi",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.058603,
+     -1.012911
+    ]
+   },
+   "properties": {
+    "tcs_no": 237,
+    "station_name": "C43102",
+    "link_id": "C431_Link02",
+    "link_name": "Kyempene - Rubirizi",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.892419,
+     -0.94286
+    ]
+   },
+   "properties": {
+    "tcs_no": 252,
+    "station_name": "C43201",
+    "link_id": "C432_Link01",
+    "link_name": "Kanungu - Rugyeyo - Kabaranga",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.848275,
+     -1.015023
+    ]
+   },
+   "properties": {
+    "tcs_no": 253,
+    "station_name": "C43301",
+    "link_id": "C433_Link01",
+    "link_name": "Ikumba - Kanungu",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.76228,
+     -1.026009
+    ]
+   },
+   "properties": {
+    "tcs_no": 254,
+    "station_name": "C43401",
+    "link_id": "C434_Link01",
+    "link_name": "Ikumba - Nfasha - Ruhija - Mpungu - Hama",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.673685,
+     -1.138458
+    ]
+   },
+   "properties": {
+    "tcs_no": 245,
+    "station_name": "C43602",
+    "link_id": "C436_Link02",
+    "link_name": "Nyabwishenya - Nteko",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.793744,
+     -0.583489
+    ]
+   },
+   "properties": {
+    "tcs_no": 256,
+    "station_name": "C44503",
+    "link_id": "C445_Link02",
+    "link_name": "Bugangari - Bwambara",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.773471,
+     -0.694873
+    ]
+   },
+   "properties": {
+    "tcs_no": 255,
+    "station_name": "C44601",
+    "link_id": "C446_Link01",
+    "link_name": "Kihihi - Nyamirama - Kikongi - Burama",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.014301,
+     -0.696094
+    ]
+   },
+   "properties": {
+    "tcs_no": 257,
+    "station_name": "C44702",
+    "link_id": "C447_Link02",
+    "link_name": "Kabira - Rukungiri",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.320065,
+     -0.428669
+    ]
+   },
+   "properties": {
+    "tcs_no": 258,
+    "station_name": "C44901",
+    "link_id": "C449_Link01",
+    "link_name": "Buhindagye - Mahyoro",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.973939,
+     -0.639819
+    ]
+   },
+   "properties": {
+    "tcs_no": 259,
+    "station_name": "C45201",
+    "link_id": "C452_Link01",
+    "link_name": "Rukungiri - Station Boundary",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.153141,
+     0.423809
+    ]
+   },
+   "properties": {
+    "tcs_no": 261,
+    "station_name": "C51201",
+    "link_id": "C512_Link01",
+    "link_name": "Rugendabara - Kaswangali",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.099932,
+     0.295868
+    ]
+   },
+   "properties": {
+    "tcs_no": 262,
+    "station_name": "C51901",
+    "link_id": "C519_Link01",
+    "link_name": "Nkenda - Bugoye ",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.371081,
+     0.92966
+    ]
+   },
+   "properties": {
+    "tcs_no": 276,
+    "station_name": "C54101",
+    "link_id": "C541_Link01",
+    "link_name": "Karugutu - Ntoroko",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.426489,
+     0.839621
+    ]
+   },
+   "properties": {
+    "tcs_no": 277,
+    "station_name": "C54201",
+    "link_id": "C542_Link01",
+    "link_name": "Fortportal - Kijura - Kabende Bridge-Sogahe-Kyarusozi",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.868113,
+     0.690028
+    ]
+   },
+   "properties": {
+    "tcs_no": 278,
+    "station_name": "C54901",
+    "link_id": "C549_Link01",
+    "link_name": "Kakabara-Bujuzo-Katooke",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.198825,
+     0.776754
+    ]
+   },
+   "properties": {
+    "tcs_no": 207,
+    "station_name": "C55001",
+    "link_id": "C550_Link01",
+    "link_name": "Kakumiro-Kibale",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.158426,
+     0.619333
+    ]
+   },
+   "properties": {
+    "tcs_no": 275,
+    "station_name": "C55601",
+    "link_id": "C556_Link01",
+    "link_name": "Bukuku - Rubona",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.65075,
+     0.953045
+    ]
+   },
+   "properties": {
+    "tcs_no": 279,
+    "station_name": "C56301",
+    "link_id": "C563_Link01",
+    "link_name": "Muhooro-Ndaiga-L. Albert",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.976202,
+     0.962239
+    ]
+   },
+   "properties": {
+    "tcs_no": 280,
+    "station_name": "C56602",
+    "link_id": "C566_Link02",
+    "link_name": "Bugwara-Kikwaya",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.40123,
+     0.852378
+    ]
+   },
+   "properties": {
+    "tcs_no": 208,
+    "station_name": "C56701",
+    "link_id": "C567_Link01",
+    "link_name": "Kakumiro - Nkooko",
+    "region": "Central",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.69529,
+     0.491474
+    ]
+   },
+   "properties": {
+    "tcs_no": 281,
+    "station_name": "C56801",
+    "link_id": "C568_Link01",
+    "link_name": "Kihura - Bwizi",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.510655,
+     0.157971
+    ]
+   },
+   "properties": {
+    "tcs_no": 282,
+    "station_name": "C57101",
+    "link_id": "C571_Link01",
+    "link_name": "Kamwenge - Kabambiro - Bigusyo - Bihanga",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.382213,
+     0.028417
+    ]
+   },
+   "properties": {
+    "tcs_no": 240,
+    "station_name": "C57201",
+    "link_id": "C572_Link01",
+    "link_name": "Mbarara Bypass",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.450401,
+     0.186708
+    ]
+   },
+   "properties": {
+    "tcs_no": 296,
+    "station_name": "C57301",
+    "link_id": "C573_Link01",
+    "link_name": "Kamwenge Railway Access",
+    "region": "West",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.224375,
+     0.345257
+    ]
+   },
+   "properties": {
+    "tcs_no": 260,
+    "station_name": "C57801",
+    "link_id": "C578_Link01",
+    "link_name": "Accesses to Ibuga",
+    "region": "South",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.312852,
+     1.576503
+    ]
+   },
+   "properties": {
+    "tcs_no": 283,
+    "station_name": "C59001",
+    "link_id": "C590_Link01",
+    "link_name": "Hoima (Parajwoki) -Biso",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.92587,
+     1.230394
+    ]
+   },
+   "properties": {
+    "tcs_no": 285,
+    "station_name": "C59101",
+    "link_id": "C591_Link01",
+    "link_name": "Kabwoya - Kituti",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.255495,
+     1.507352
+    ]
+   },
+   "properties": {
+    "tcs_no": 286,
+    "station_name": "C59201",
+    "link_id": "C592_Link01",
+    "link_name": "Parajwoki-Buseruka",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.299078,
+     1.429625
+    ]
+   },
+   "properties": {
+    "tcs_no": 287,
+    "station_name": "C59401",
+    "link_id": "C594_Link01",
+    "link_name": "Bugambe-Kidoma",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.993897,
+     1.321774
+    ]
+   },
+   "properties": {
+    "tcs_no": 289,
+    "station_name": "C60601",
+    "link_id": "C606_Link01",
+    "link_name": "Rwera-Kaseeta",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.8861,
+     1.7328
+    ]
+   },
+   "properties": {
+    "tcs_no": 288,
+    "station_name": "C62101",
+    "link_id": "C621_Link01",
+    "link_name": "Rekunye - Masindi",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.530892,
+     1.632703
+    ]
+   },
+   "properties": {
+    "tcs_no": 291,
+    "station_name": "C62201",
+    "link_id": "C622_Link01",
+    "link_name": "Masindi - Biiso",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.456133,
+     1.95643
+    ]
+   },
+   "properties": {
+    "tcs_no": 284,
+    "station_name": "C62301",
+    "link_id": "C623_Link01",
+    "link_name": "Bukumi-Bulisa",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.723207,
+     2.020282
+    ]
+   },
+   "properties": {
+    "tcs_no": 292,
+    "station_name": "C62501",
+    "link_id": "C625_Link01",
+    "link_name": "Kisanja-Park jctn - Buliisa",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.669182,
+     0.947955
+    ]
+   },
+   "properties": {
+    "tcs_no": 290,
+    "station_name": "C62701",
+    "link_id": "C627_Link01",
+    "link_name": "Masoode-Nkooko",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.255722,
+     2.049141
+    ]
+   },
+   "properties": {
+    "tcs_no": 293,
+    "station_name": "C63501",
+    "link_id": "C635_Link01",
+    "link_name": "Katulikile - Mutunda - Atura / Nanda",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.98052,
+     0.963066
+    ]
+   },
+   "properties": {
+    "tcs_no": 294,
+    "station_name": "C63901",
+    "link_id": "C639_Link01",
+    "link_name": "Bukommero-Dwaniro-Kyankwanzi ",
+    "region": "West",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.237418,
+     2.405071
+    ]
+   },
+   "properties": {
+    "tcs_no": 13,
+    "station_name": "C65001",
+    "link_id": "C650_Link01",
+    "link_name": "Lira - Akia",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.099465,
+     1.821397
+    ]
+   },
+   "properties": {
+    "tcs_no": 16,
+    "station_name": "C65301",
+    "link_id": "C653_Link01",
+    "link_name": "Dokolo-Ochero",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.755291,
+     1.611589
+    ]
+   },
+   "properties": {
+    "tcs_no": 54,
+    "station_name": "C65302",
+    "link_id": "C653_Link02",
+    "link_name": "Ochero-Namasale",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.697394,
+     1.657852
+    ]
+   },
+   "properties": {
+    "tcs_no": 18,
+    "station_name": "C65601",
+    "link_id": "C656_Link01",
+    "link_name": "Namasale - Alemere",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.52059,
+     2.038383
+    ]
+   },
+   "properties": {
+    "tcs_no": 14,
+    "station_name": "C66101",
+    "link_id": "C661_Link01",
+    "link_name": "Apac-Cegere",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.516017,
+     2.335687
+    ]
+   },
+   "properties": {
+    "tcs_no": 17,
+    "station_name": "C66502",
+    "link_id": "C665_Link02",
+    "link_name": "Anyeke-Minakulu",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.914734,
+     2.254235
+    ]
+   },
+   "properties": {
+    "tcs_no": 19,
+    "station_name": "C66901",
+    "link_id": "C669_Link01",
+    "link_name": "Lira Railway Access",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.040724,
+     2.128526
+    ]
+   },
+   "properties": {
+    "tcs_no": 21,
+    "station_name": "C67001",
+    "link_id": "C670_Link01",
+    "link_name": "Lira - Boroboro - Abako - Okude",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.206423,
+     2.0293
+    ]
+   },
+   "properties": {
+    "tcs_no": 15,
+    "station_name": "C67101",
+    "link_id": "C671_Link01",
+    "link_name": "Aloi - Aboko - Bata - Dokolo",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.977097,
+     2.342636
+    ]
+   },
+   "properties": {
+    "tcs_no": 22,
+    "station_name": "C67301",
+    "link_id": "C673_Link01",
+    "link_name": "Ngetta-Apala",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.018038,
+     2.920284
+    ]
+   },
+   "properties": {
+    "tcs_no": 24,
+    "station_name": "C67502",
+    "link_id": "C675_Link02",
+    "link_name": "Pader - Kwonkwic (Palwo)",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.090625,
+     3.215927
+    ]
+   },
+   "properties": {
+    "tcs_no": 52,
+    "station_name": "C677_LINK03",
+    "link_id": "C677_Link03",
+    "link_name": "Kalongo - Kitgum Matidi",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.258229,
+     3.104025
+    ]
+   },
+   "properties": {
+    "tcs_no": 23,
+    "station_name": "C67703",
+    "link_id": "C677_Link02",
+    "link_name": "Kalongo - Kitgum Matidi",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.448003,
+     3.23503
+    ]
+   },
+   "properties": {
+    "tcs_no": 25,
+    "station_name": "C67802",
+    "link_id": "C678_Link02",
+    "link_name": "Lokapel - Adilang",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.477746,
+     2.615778
+    ]
+   },
+   "properties": {
+    "tcs_no": 26,
+    "station_name": "C68001",
+    "link_id": "C680_Link01",
+    "link_name": "Gulu-Opit",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.432623,
+     2.880954
+    ]
+   },
+   "properties": {
+    "tcs_no": 20,
+    "station_name": "C68102",
+    "link_id": "C681_Link02",
+    "link_name": "Aswa - Gulu",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.091341,
+     2.73164
+    ]
+   },
+   "properties": {
+    "tcs_no": 27,
+    "station_name": "C68501",
+    "link_id": "C685_Link01",
+    "link_name": "Katikati - Tenumu - Nwoya",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.058582,
+     2.827651
+    ]
+   },
+   "properties": {
+    "tcs_no": 46,
+    "station_name": "C68601",
+    "link_id": "C681_Link01",
+    "link_name": "Acholibur - Aswa",
+    "region": "North",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.071465,
+     3.116529
+    ]
+   },
+   "properties": {
+    "tcs_no": 29,
+    "station_name": "C68901",
+    "link_id": "C689_Link01",
+    "link_name": "Pakele - Pabbo",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.272349,
+     3.260528
+    ]
+   },
+   "properties": {
+    "tcs_no": 30,
+    "station_name": "C70001",
+    "link_id": "C700_Link01",
+    "link_name": "Atiak-Palabek",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.222132,
+     3.273647
+    ]
+   },
+   "properties": {
+    "tcs_no": 32,
+    "station_name": "C70301",
+    "link_id": "C703_Link01",
+    "link_name": "Kitgum - Orom",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.013591,
+     3.615427
+    ]
+   },
+   "properties": {
+    "tcs_no": 53,
+    "station_name": "C705_LINK01",
+    "link_id": "C705_Link01",
+    "link_name": "Padibe - Paloga",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.879807,
+     3.535938
+    ]
+   },
+   "properties": {
+    "tcs_no": 31,
+    "station_name": "C70502",
+    "link_id": "C705_Link02",
+    "link_name": "Paloga - Madiopei",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.621765,
+     3.441716
+    ]
+   },
+   "properties": {
+    "tcs_no": 33,
+    "station_name": "C72201",
+    "link_id": "C722_Link01",
+    "link_name": "Moyo - Obongi",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.688425,
+     3.297278
+    ]
+   },
+   "properties": {
+    "tcs_no": 28,
+    "station_name": "C72602",
+    "link_id": "C726_Link01",
+    "link_name": "Adjumani - Sinyanya Ferry landing",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.100868,
+     3.406444
+    ]
+   },
+   "properties": {
+    "tcs_no": 35,
+    "station_name": "C74001",
+    "link_id": "C740_Link01",
+    "link_name": "Koboko - Yumbe",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.088542,
+     2.900401
+    ]
+   },
+   "properties": {
+    "tcs_no": 36,
+    "station_name": "C74302",
+    "link_id": "C743_Link02",
+    "link_name": "Inde-Ocoko",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.889242,
+     2.926435
+    ]
+   },
+   "properties": {
+    "tcs_no": 38,
+    "station_name": "C74401",
+    "link_id": "C744_Link01",
+    "link_name": "Eruba - Vurra",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.049571,
+     2.438181
+    ]
+   },
+   "properties": {
+    "tcs_no": 39,
+    "station_name": "C74501",
+    "link_id": "C745_Link01",
+    "link_name": "Nebbi - Goli",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.150803,
+     2.320146
+    ]
+   },
+   "properties": {
+    "tcs_no": 37,
+    "station_name": "C74701",
+    "link_id": "C747_Link01",
+    "link_name": "Panyimur - Paidha Via Erusi-Goli",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.852252,
+     3.053662
+    ]
+   },
+   "properties": {
+    "tcs_no": 40,
+    "station_name": "C75201",
+    "link_id": "C752_Link01",
+    "link_name": "Arua - Lia",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.082759,
+     3.56471
+    ]
+   },
+   "properties": {
+    "tcs_no": 41,
+    "station_name": "C75701",
+    "link_id": "C757_Link01",
+    "link_name": "Keri - Lima - Midigo - Kerila",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.252246,
+     3.551795
+    ]
+   },
+   "properties": {
+    "tcs_no": 51,
+    "station_name": "C758_LINK01",
+    "link_id": "C758_Link01",
+    "link_name": "Keriri - Midigo",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.286321,
+     3.676747
+    ]
+   },
+   "properties": {
+    "tcs_no": 34,
+    "station_name": "C75802",
+    "link_id": "C758_Link02",
+    "link_name": "Midigo - Kerwa",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.087811,
+     3.123189
+    ]
+   },
+   "properties": {
+    "tcs_no": 42,
+    "station_name": "C76203",
+    "link_id": "C762_Link02",
+    "link_name": "Biliafe - Otrevu",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.928623,
+     2.56814
+    ]
+   },
+   "properties": {
+    "tcs_no": 43,
+    "station_name": "C76301",
+    "link_id": "C763_Link01",
+    "link_name": "Paidha-Zombo",
+    "region": "North",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.493992,
+     0.420334
+    ]
+   },
+   "properties": {
+    "tcs_no": 68,
+    "station_name": "C78103",
+    "link_id": "C781_Link02",
+    "link_name": "Mayuge - Kaluuba",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.936703,
+     0.319814
+    ]
+   },
+   "properties": {
+    "tcs_no": 69,
+    "station_name": "C78203",
+    "link_id": "C782_Link02",
+    "link_name": "Nankoma-Namayingo-Lumino",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.507558,
+     0.751834
+    ]
+   },
+   "properties": {
+    "tcs_no": 70,
+    "station_name": "C78401",
+    "link_id": "C784_Link01",
+    "link_name": "Iganga-Kaliro",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.155255,
+     0.522596
+    ]
+   },
+   "properties": {
+    "tcs_no": 73,
+    "station_name": "C79202",
+    "link_id": "C792_Link01",
+    "link_name": "Kaitabawaala - Buyala - Namagera",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.078342,
+     0.734108
+    ]
+   },
+   "properties": {
+    "tcs_no": 67,
+    "station_name": "C79203",
+    "link_id": "C792_Link02",
+    "link_name": "Namagera - Lubanyi",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.315337,
+     0.585291
+    ]
+   },
+   "properties": {
+    "tcs_no": 74,
+    "station_name": "C79703",
+    "link_id": "C797_Link02",
+    "link_name": "Kakira - Namasiga",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.728199,
+     0.502031
+    ]
+   },
+   "properties": {
+    "tcs_no": 75,
+    "station_name": "C80001",
+    "link_id": "C800_Link01",
+    "link_name": "Bugiri - Nankoma ",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.642046,
+     0.685383
+    ]
+   },
+   "properties": {
+    "tcs_no": 72,
+    "station_name": "C80301",
+    "link_id": "C803_Link01",
+    "link_name": "Idudi - Busembatya",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.688172,
+     0.806054
+    ]
+   },
+   "properties": {
+    "tcs_no": 76,
+    "station_name": "C80601",
+    "link_id": "C806_Link01",
+    "link_name": "Bugiri - Kiseitaka - Nabukalu - Naigaga",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.518067,
+     0.996526
+    ]
+   },
+   "properties": {
+    "tcs_no": 71,
+    "station_name": "C80901",
+    "link_id": "C809_Link01",
+    "link_name": "Kaliro - Namwiwa",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.153909,
+     0.98417
+    ]
+   },
+   "properties": {
+    "tcs_no": 77,
+    "station_name": "C81101",
+    "link_id": "C811_Link01",
+    "link_name": "Kamuli - Nabirumba",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.627001,
+     0.402527
+    ]
+   },
+   "properties": {
+    "tcs_no": 78,
+    "station_name": "C81701",
+    "link_id": "C817_Link01",
+    "link_name": "Nankoma - Kaluba",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.030027,
+     0.402872
+    ]
+   },
+   "properties": {
+    "tcs_no": 79,
+    "station_name": "C83001",
+    "link_id": "C830_Link01",
+    "link_name": "Busia - Majanji",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.044244,
+     0.759378
+    ]
+   },
+   "properties": {
+    "tcs_no": 81,
+    "station_name": "C83201",
+    "link_id": "C832_Link01",
+    "link_name": "Tororo-Nagongera",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.087433,
+     0.806075
+    ]
+   },
+   "properties": {
+    "tcs_no": 82,
+    "station_name": "C83701",
+    "link_id": "C837_Link01",
+    "link_name": "Nagongera - Merikit - Kidoko",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.22404,
+     0.761605
+    ]
+   },
+   "properties": {
+    "tcs_no": 80,
+    "station_name": "C84002",
+    "link_id": "C840_Link02",
+    "link_name": "Apokor - Kwapa - Tuba",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.083566,
+     0.685011
+    ]
+   },
+   "properties": {
+    "tcs_no": 83,
+    "station_name": "C84401",
+    "link_id": "C844_Link01",
+    "link_name": "Rubongi - Mulanda",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.264365,
+     1.147174
+    ]
+   },
+   "properties": {
+    "tcs_no": 84,
+    "station_name": "C86201",
+    "link_id": "C862_Link01",
+    "link_name": "Namagumba - Budadiri",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.238734,
+     0.823911
+    ]
+   },
+   "properties": {
+    "tcs_no": 86,
+    "station_name": "C86502",
+    "link_id": "C865_Link02",
+    "link_name": "Busumbu-Munamba",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.933242,
+     1.065014
+    ]
+   },
+   "properties": {
+    "tcs_no": 88,
+    "station_name": "C87201",
+    "link_id": "C872_Link01",
+    "link_name": "Budaka - Kaderuna",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.129963,
+     1.051926
+    ]
+   },
+   "properties": {
+    "tcs_no": 89,
+    "station_name": "C87601",
+    "link_id": "C876_Link01",
+    "link_name": "Nabiganda -Nambale - Kamoto - Malukhu",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.138713,
+     1.141863
+    ]
+   },
+   "properties": {
+    "tcs_no": 85,
+    "station_name": "C87801",
+    "link_id": "C878_Link01",
+    "link_name": "Nakaloke-Kabwangasi-Butebo",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.195733,
+     1.284688
+    ]
+   },
+   "properties": {
+    "tcs_no": 90,
+    "station_name": "C88202",
+    "link_id": "C882_Link01",
+    "link_name": "Korir - Sironko",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.9341,
+     1.48769
+    ]
+   },
+   "properties": {
+    "tcs_no": 120,
+    "station_name": "C92001",
+    "link_id": "C920_Link01",
+    "link_name": "Kumi-Brooks corner",
+    "region": "North East",
+    "station_type": "MS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.268813,
+     1.723948
+    ]
+   },
+   "properties": {
+    "tcs_no": 103,
+    "station_name": "C92401",
+    "link_id": "C924_Link01",
+    "link_name": "Katine to Ochero",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.531421,
+     1.61685
+    ]
+   },
+   "properties": {
+    "tcs_no": 104,
+    "station_name": "C92501",
+    "link_id": "C925_Link01",
+    "link_name": "Soroti - Serere",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.09247,
+     1.440615
+    ]
+   },
+   "properties": {
+    "tcs_no": 87,
+    "station_name": "C92702",
+    "link_id": "C927_Link02",
+    "link_name": "Korir - Malera - Kumi",
+    "region": "East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.353595,
+     1.447302
+    ]
+   },
+   "properties": {
+    "tcs_no": 105,
+    "station_name": "C93201",
+    "link_id": "C932_Link01",
+    "link_name": "Serere-Pingire",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.945743,
+     1.836107
+    ]
+   },
+   "properties": {
+    "tcs_no": 106,
+    "station_name": "C93802",
+    "link_id": "C938_Link02",
+    "link_name": "Katakwi - Toroma",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.630621,
+     1.905648
+    ]
+   },
+   "properties": {
+    "tcs_no": 107,
+    "station_name": "C93901",
+    "link_id": "C939_Link01",
+    "link_name": "Arapai-Amuria",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.168622,
+     1.826832
+    ]
+   },
+   "properties": {
+    "tcs_no": 109,
+    "station_name": "C94402",
+    "link_id": "C944_Link01",
+    "link_name": "Kaberamaido - Dokolo",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.569361,
+     2.038523
+    ]
+   },
+   "properties": {
+    "tcs_no": 110,
+    "station_name": "C96001",
+    "link_id": "C960_Link01",
+    "link_name": "Angatun-Nabilatuk-Lokapel",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.828089,
+     1.942511
+    ]
+   },
+   "properties": {
+    "tcs_no": 111,
+    "station_name": "C96101",
+    "link_id": "C961_Link01",
+    "link_name": "Chosan to Amudat",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.898627,
+     2.202535
+    ]
+   },
+   "properties": {
+    "tcs_no": 112,
+    "station_name": "C96302",
+    "link_id": "C963_Link02",
+    "link_name": "Lokitanyara-Loro-Amudat",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.953363,
+     1.796953
+    ]
+   },
+   "properties": {
+    "tcs_no": 113,
+    "station_name": "C96303",
+    "link_id": "C963_Link03",
+    "link_name": "Amudat-Alakasi-Kalita",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.799291,
+     1.721511
+    ]
+   },
+   "properties": {
+    "tcs_no": 102,
+    "station_name": "C96401",
+    "link_id": "C964_Link01",
+    "link_name": "Soroti-Toroma",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.055852,
+     2.217853
+    ]
+   },
+   "properties": {
+    "tcs_no": 108,
+    "station_name": "C96501",
+    "link_id": "C965_Link01",
+    "link_name": "Apeitolim - Iriri",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.366595,
+     2.513746
+    ]
+   },
+   "properties": {
+    "tcs_no": 114,
+    "station_name": "C96703",
+    "link_id": "C967_Link01",
+    "link_name": "Kokeris - Lopei",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.883942,
+     2.6952
+    ]
+   },
+   "properties": {
+    "tcs_no": 116,
+    "station_name": "C98001",
+    "link_id": "C980_Link01",
+    "link_name": "Akwanamoru - Opua - Orogom - Oreta",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.095997,
+     3.364094
+    ]
+   },
+   "properties": {
+    "tcs_no": 117,
+    "station_name": "C98101",
+    "link_id": "C981_Link01",
+    "link_name": "Koputh-Koputh Junction (Lololia)",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.186581,
+     3.159014
+    ]
+   },
+   "properties": {
+    "tcs_no": 118,
+    "station_name": "C98201",
+    "link_id": "C982_Link01",
+    "link_name": "Kotido - Loslang - Layoro",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.225536,
+     3.017955
+    ]
+   },
+   "properties": {
+    "tcs_no": 115,
+    "station_name": "C98302",
+    "link_id": "C983_Link02",
+    "link_name": "Kotein - Kenya Border",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.176601,
+     3.677369
+    ]
+   },
+   "properties": {
+    "tcs_no": 119,
+    "station_name": "C98501",
+    "link_id": "C985_Link01",
+    "link_name": "Kaabong - Kalapata - Piire",
+    "region": "North East",
+    "station_type": "DS",
+    "data_source": "MoWT ArcGIS Traffic Count Stations combined.xlsx (TCS_Combined sheet), corrected lon/lat (source LAT/LON column labels were swapped), location/metadata only \u2014 no vehicle count data attached in source"
+   }
+  }
+ ]
+}

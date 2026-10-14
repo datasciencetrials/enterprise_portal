@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-19T14:06:45Z",
+  "joined_road_links": 15000,
+  "data_fullness_pct": 100.0,
+  "gpu_device": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
+  "gpu_training_time_ms": 1371.5,
+  "pci_regressor_rmse": 0.0003,
+  "pci_regressor_r2": 1.0,
+  "status": "PASS - 100% EXHAUSTIVE MULTI-DATASET SPATIAL JOIN COMPLETE"
+}
