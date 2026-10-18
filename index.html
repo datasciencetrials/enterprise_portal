@@ -15,6 +15,125 @@
     <link rel="modulepreload" crossorigin href="/enterprise_portal/assets/vendor-charts-BQc6UxeF.js">
     <link rel="modulepreload" crossorigin href="/enterprise_portal/assets/vendor-mapbox-D3_-FEL-.js">
     <link rel="stylesheet" crossorigin href="/enterprise_portal/assets/index-Yto0uED7.css">
+    <style>
+      /* Keep the restored desktop interface intact while making the public
+         data-view portal usable on phone-sized screens. */
+      @media (max-width: 700px) {
+        .app-container {
+          flex-direction: column;
+          height: 100svh;
+          min-height: 100svh;
+        }
+
+        .sidebar {
+          width: 100%;
+          height: 64px;
+          min-height: 64px;
+          flex-direction: row;
+          border-right: 0;
+          border-bottom: 1px solid var(--panel-border);
+        }
+
+        .sidebar-header {
+          width: 56px;
+          min-width: 56px;
+          height: 62px;
+          padding: 0 0.75rem;
+          overflow: hidden;
+          font-size: 0;
+        }
+
+        .sidebar-nav {
+          flex-direction: row;
+          align-items: center;
+          padding: 0.5rem;
+          gap: 0.25rem;
+          overflow-x: auto;
+          overflow-y: hidden;
+          scrollbar-width: thin;
+        }
+
+        .nav-item {
+          flex: 0 0 auto;
+          min-width: 44px;
+          height: 44px;
+          justify-content: center;
+          padding: 0.65rem;
+          border-left: 0;
+          font-size: 0;
+        }
+
+        .nav-item.active {
+          border-left: 0;
+          border-bottom: 3px solid var(--neon-blue);
+        }
+
+        .main-area {
+          width: 100%;
+          min-width: 0;
+          height: calc(100svh - 64px);
+          flex: 1 1 auto;
+        }
+
+        .topbar {
+          display: none;
+        }
+
+        .content-container {
+          width: 100%;
+          min-width: 0;
+          padding: 0.75rem;
+        }
+
+        .content-container:not(.map-mode) .glass-card,
+        .content-container:not(.map-mode) .glass-panel {
+          max-width: 100%;
+        }
+
+        .content-container.map-mode > .map-overlay-panel:nth-child(3) {
+          display: none;
+        }
+
+        .content-container.map-mode > .map-overlay-panel:nth-child(4) {
+          top: 12px !important;
+          right: 12px !important;
+          width: min(320px, calc(100% - 72px)) !important;
+          max-height: calc(100% - 190px) !important;
+        }
+
+        .content-container.map-mode > div:nth-child(5) {
+          right: 12px !important;
+          bottom: 12px !important;
+          left: 12px !important;
+          width: auto !important;
+          transform: none !important;
+        }
+
+        .content-container.map-mode > div:nth-child(5) .glass-panel {
+          width: 100% !important;
+          padding: 12px 14px !important;
+          border-radius: 16px !important;
+        }
+
+        .content-container.map-mode > div:nth-child(5) .glass-panel > div:first-child {
+          gap: 8px !important;
+          margin-bottom: 8px !important;
+        }
+
+        .content-container.map-mode > div:nth-child(5) > div {
+          gap: 8px !important;
+        }
+
+        .content-container.map-mode > div:nth-child(5) > div > div:first-child {
+          display: none !important;
+        }
+
+        .content-container.map-mode > div:nth-child(5) > div > div:last-child {
+          flex: 1 1 0;
+          min-width: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
