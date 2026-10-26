@@ -1,0 +1,67 @@
+/* Light Apple-style presentation adapted from the repository's css/theme.css.
+   The map colours retain their data meaning; the application logic is unchanged. */
+:root {
+  color-scheme: light;
+  --bg-color: #f5f6fa;
+  --panel-bg: rgba(255, 255, 255, .88);
+  --panel-border: #e1e4ec;
+  --text-primary: #14151c;
+  --text-secondary: #565b6b;
+  --accent-color: #0089a8;
+  --accent-glow: rgba(0, 229, 255, .22);
+}
+
+html, body, #root, button, input, select, textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, "Helvetica Neue", Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+body { background: var(--bg-color) !important; color: var(--text-primary) !important; }
+.app-container, .main-area, .content-container { background-color: var(--bg-color); color: var(--text-primary); }
+.sidebar { background: #fff !important; box-shadow: 1px 0 18px rgba(20, 21, 28, .04); }
+.sidebar-header { color: #14151c !important; text-shadow: none !important; }
+.sidebar-nav { padding: 8px 10px !important; }
+.nav-item { border-left: 0 !important; border-radius: 10px !important; }
+.nav-item:hover { background: #eef0f6 !important; color: #14151c !important; }
+.nav-item.active { background: #e9f8fb !important; color: #006e88 !important; box-shadow: none !important; text-shadow: none !important; }
+.nav-item.active * { color: #006e88 !important; }
+.topbar { background: rgba(245, 246, 250, .9) !important; backdrop-filter: blur(18px) saturate(160%); }
+.topbar, .sidebar-header { border-color: var(--panel-border) !important; }
+.search-bar { background: #fff !important; border-color: #dfe3eb !important; border-radius: 999px !important; }
+.search-bar input { color: #14151c !important; }
+.search-bar input::placeholder { color: #8b90a0 !important; }
+.glass-card, .glass-panel, .map-overlay-panel {
+  background: rgba(255, 255, 255, .93) !important;
+  color: #14151c !important;
+  border: 1px solid #e1e4ec !important;
+  border-radius: 16px !important;
+  box-shadow: 0 6px 24px rgba(20, 21, 28, .08) !important;
+  backdrop-filter: blur(20px) saturate(150%);
+}
+.glass-card.kpi-card { background: #fff !important; }
+.glass-card:hover { border-color: #cdd2de !important; box-shadow: 0 10px 28px rgba(20, 21, 28, .1) !important; }
+.content-container h1, .content-container h2, .content-container h3,
+.content-container p, .content-container label,
+.glass-card *, .glass-panel * { color: #14151c !important; text-shadow: none !important; }
+.content-container h1 { letter-spacing: -.02em; }
+.content-container h2, .glass-panel h2, .glass-card h2 { color: #006e88 !important; }
+.glass-card [style*="background"], .glass-panel [style*="background"] { border-radius: 10px; }
+.stat-value, .stat-value.neon-blue, .stat-value.neon-pink, .stat-value.neon-green, .stat-value.neon-yellow { color: #14151c !important; text-shadow: none !important; }
+.stat-label { color: #565b6b !important; }
+.live-badge { color: #006e88 !important; background: #e9f8fb !important; border-color: #bcecf3 !important; text-shadow: none !important; animation: none !important; }
+button { border-radius: 10px; }
+button:not(.nav-item):hover { filter: brightness(.97); }
+select, input, textarea { color: #14151c !important; background-color: #fff !important; border-color: #dfe3eb !important; }
+select option { color: #14151c; background: #fff; }
+.map-overlay-panel button, .glass-panel button { color: #14151c !important; background: #eef0f6 !important; border-color: #dfe3eb !important; }
+.map-overlay-panel button:hover, .glass-panel button:hover { background: #e3edf3 !important; }
+table { color: #14151c !important; }
+table th { background: #f0f2f7 !important; color: #565b6b !important; }
+table td { border-color: #e1e4ec !important; }
+table tr:hover { background: #f7f9fc !important; }
+.map-background { opacity: .07 !important; }
+.content-container.map-mode .map-background { opacity: .8 !important; }
+.leaflet-container { background: #e7ebf3 !important; }
+:focus-visible { outline: 2px solid #0089a8 !important; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
