@@ -48,6 +48,19 @@
   const condition = properties => ['Good', 'Fair', 'Poor'].includes(value(properties, 'Condition')) ? value(properties, 'Condition') : 'Not supplied';
   const surface = properties => ['Paved', 'Unpaved'].includes(value(properties, 'Surface  1')) ? value(properties, 'Surface  1') : 'Not supplied';
   const length = properties => { const raw = value(properties, 'Length Km'); if (raw === null || raw === undefined || raw === '') return null; const n = Number(raw); return Number.isFinite(n) && n >= 0 ? n : null; };
+  const mappedLineKm = geometry => {
+    const lines = geometry?.type === 'LineString' ? [geometry.coordinates] : geometry?.type === 'MultiLineString' ? geometry.coordinates : [];
+    let kilometres = 0;
+    for (const line of lines) for (let index = 1; index < line.length; index++) {
+      const [lon1, lat1] = line[index - 1], [lon2, lat2] = line[index];
+      if (![lon1, lat1, lon2, lat2].every(Number.isFinite)) continue;
+      const radians = Math.PI / 180;
+      const deltaLat = (lat2 - lat1) * radians, deltaLon = (lon2 - lon1) * radians;
+      const a = Math.sin(deltaLat / 2) ** 2 + Math.cos(lat1 * radians) * Math.cos(lat2 * radians) * Math.sin(deltaLon / 2) ** 2;
+      kilometres += 12742 * Math.asin(Math.min(1, Math.sqrt(a)));
+    }
+    return kilometres;
+  };
   const recordedNumber = (properties, key) => {
     const raw = value(properties, key);
     if (raw === null || raw === undefined || raw === '') return null;
@@ -149,11 +162,7 @@
     const visible = features.filter(matches);
     if (activeMode === 'roads') drawMap(visible);
     const km = visible.reduce((sum, feature) => sum + (length(feature.properties || {}) || 0), 0);
-    const paved = visible.filter(feature => surface(feature.properties || {}) === 'Paved' && feature.properties?.['Road Type'] !== 'DUCAR')
-      .reduce((sum, feature) => sum + (length(feature.properties || {}) || 0), 0);
-    $('metric-links').textContent = format.format(visible.length);
-    $('metric-km').textContent = format.format(km);
-    $('metric-paved').textContent = format.format(paved);
+    $('metric-value').textContent = format.format(km);
     $('selection-summary').textContent = `Mapped National and DUCAR roads shown`;
     $('map-status').textContent = 'Road network on map';
     const surfaceData = tally(visible, surface, length);
@@ -187,23 +196,20 @@
     const priority = tally(visible, p => category(p, 'Intervention Priority Band'), () => 1);
     const priorities = ['Low', 'Moderate', 'High', 'Critical', 'Not supplied'];
     chart('priority-chart', priorities, priorities.map(k => priority.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], true);
-    const coverageFields = [
-      ['Length', p => length(p) !== null], ['Surface', p => surface(p) !== 'Not supplied'],
-      ['Condition', p => condition(p) !== 'Not supplied'], ['Sub-region', p => category(p, 'Region') !== 'Not supplied'],
-      ['AADT', p => recordedNumber(p, 'Aadt 2026 Live') !== null],
-      ['Safety', p => category(p, 'Road Safety Risk Band') !== 'Not supplied'],
-      ['Priority', p => category(p, 'Intervention Priority Band') !== 'Not supplied'],
-    ];
-    chart('coverage-chart', coverageFields.map(([label]) => label), coverageFields.map(([, hasValue]) =>
-      visible.filter(feature => hasValue(feature.properties || {})).length), '#45dfad', true);
   }
 
   const transportModes = {
     bridges: {
-      title: 'Bridges and major culverts', files: ['bridges.geojson', 'major_culverts.geojson'], colour: '#438ee1', countLabel: 'Structures on map', statusUnit: 'structures on map',
-      group: p => category(p, '_transportKind'),
-      description: 'Mapped bridge and major culvert points are shown separately. This layer is a subset, not the complete FY 2026/27 structures register.',
-      fields: [['Structure', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Culvert number', 'Culvert_Number'], ['Region', 'Maintenance_Region']],
+      title: 'Bridges', files: ['bridges.geojson'], colour: '#438ee1', countLabel: 'Bridges on map', statusUnit: 'bridges on map',
+      group: p => category(p, 'Maintenance_Region'),
+      description: 'Mapped bridge points only. This layer is a subset of the authoritative 552 Bridges for FY 2026/27, not a revised national total.',
+      fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region']],
+    },
+    culverts: {
+      title: 'Major Culverts', files: ['major_culverts.geojson'], colour: '#77b2f1', countLabel: 'Major Culverts on map', statusUnit: 'major culverts on map',
+      group: p => category(p, 'Maintenance_Region'),
+      description: 'Mapped Major Culvert points only. They are separate from Bridges and do not establish a complete national structures inventory.',
+      fields: [['Culvert number', 'Culvert_Number'], ['Road number', 'Link_Number'], ['Region', 'Maintenance_Region']],
     },
     traffic: {
       title: 'Traffic count stations', files: ['traffic_count_stations.geojson'], colour: '#e5ce7d', countLabel: 'Stations on map', statusUnit: 'stations on map',
@@ -240,12 +246,6 @@
       group: p => category(p, '_transportKind'),
       description: 'Mapped MGR line segments and one SGR alignment. The SGR alignment is not evidence of an operating railway. Segment counts are not route length or a national total.',
       fields: [['Name', 'Name'], ['Status', 'Status']],
-    },
-    water: {
-      title: 'Water transport crossings', files: ['ferry_crossings.geojson'], colour: '#438ee1', countLabel: 'Crossings on map', statusUnit: 'water crossings on map',
-      group: p => category(p, 'Water_body'),
-      description: 'Mapped ferry crossings grouped by named water body. This is not a complete inland waterway network, route or vessel inventory.',
-      fields: [['Crossing', 'Ferry_cros'], ['Water body', 'Water_body'], ['Category', 'Category']],
     },
   };
 
@@ -308,10 +308,9 @@
     $('mode-detail').hidden = isRoad;
     if (isRoad) {
       if (pointLayer) { map.removeLayer(pointLayer); pointLayer = null; }
-      $('metric-label-1').textContent = 'Mapped road geometry';
-      $('metric-label-2').textContent = 'Mapped km';
-      $('metric-label-3').textContent = 'National Paved Road Network, mapped km';
-      $('metric-note').textContent = 'Search, charts and CSV use the smaller subset. The expanded road backdrop is visual only.';
+      $('metric-kind').textContent = 'ROADS';
+      $('metric-label').textContent = 'Mapped road length (km)';
+      $('metric-note').textContent = 'Search and charts use the mapped subset. The expanded road backdrop is visual only.';
       update();
       showUgandaExtent();
       return;
@@ -320,7 +319,7 @@
     $('map-status').textContent = `Loading ${spec.title.toLowerCase()}`;
     $('mode-title').textContent = spec.title;
     $('mode-description').textContent = spec.description;
-    $('mode-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ bridges: 'bridges', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr', water: 'ferries' })[key])}`;
+    $('mode-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
     try {
       const items = await loadMode(key);
       if (activeMode !== key) return;
@@ -329,20 +328,15 @@
       const labels = [...groups.keys()].sort((a, b) => a.localeCompare(b));
       chart('mode-chart', labels, labels.map(label => groups.get(label)), spec.colour, true);
       $('map-status').textContent = key === 'rail' ? 'MGR and SGR on map' : `${spec.title} on map`;
-      $('metric-links').textContent = format.format(items.length);
-      $('metric-label-1').textContent = spec.countLabel;
-      $('metric-km').textContent = format.format(labels.length);
-      $('metric-label-2').textContent = 'Categories';
-      $('metric-paved').textContent = key === 'rail' ? format.format(items.filter(item => item.properties?._transportKind === 'SGR alignment').length) : format.format(items.length);
-      $('metric-label-3').textContent = key === 'rail' ? 'SGR alignment' : 'Located points';
-      $('metric-note').textContent = 'Mapped subset only. Not a national total.';
+      $('metric-kind').textContent = key.toUpperCase();
+      $('metric-value').textContent = format.format(key === 'rail' ? items.reduce((sum, item) => sum + mappedLineKm(item.geometry), 0) : items.length);
+      $('metric-label').textContent = key === 'rail' ? 'Mapped rail geometry (km)' : spec.countLabel;
+      $('metric-note').textContent = key === 'rail' ? 'Geometry-derived length, not verified operational route length.' : 'Mapped subset only. Not a national total.';
     } catch (error) {
       if (activeMode !== key) return;
       $('map-status').textContent = 'Layer unavailable';
       $('mode-description').textContent = `${spec.description} This layer could not be loaded.`;
-      $('metric-links').textContent = 'Not supplied';
-      $('metric-km').textContent = 'Not supplied';
-      $('metric-paved').textContent = 'Not supplied';
+      $('metric-value').textContent = 'Not supplied';
       console.error('Transport layer unavailable', error);
     }
   }

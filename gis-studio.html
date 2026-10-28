@@ -27,7 +27,7 @@
       <button type="button" data-mode="aviation">Aviation</button>
       <button type="button" data-mode="safety">Safety</button>
       <button type="button" data-mode="freight">Freight</button>
-      <button type="button" data-mode="water">Water</button>
+      <button type="button" data-mode="culverts">Major Culverts</button>
     </nav>
   </header>
   <main>
@@ -47,7 +47,7 @@
           <p class="filter-help">Filters update the map and charts together.</p>
         </div>
         <div class="floating-card legend-card"><p class="micro-label">ROAD LINES</p><div><span class="legend-swatch paved"></span>National paved roads</div><div><span class="legend-swatch paved-ducar"></span>DUCAR paved roads</div><div><span class="legend-swatch good"></span>National unpaved roads</div><div><span class="legend-swatch ducar"></span>DUCAR unpaved roads</div><div><span class="legend-swatch community"></span>Community access roads</div><p id="allroads-coverage" class="legend-note" role="status">Loading expanded road geometry.</p></div>
-        <div class="floating-card metric-card"><p class="micro-label">SEARCHABLE SUBSET</p><div class="metrics"><div><strong id="metric-links">-</strong><span id="metric-label-1">Mapped road geometry</span></div><div><strong id="metric-km">-</strong><span id="metric-label-2">Mapped km</span></div><div><strong id="metric-paved">-</strong><span id="metric-label-3">National Paved Road Network, mapped km</span></div></div><p id="metric-note">Search, charts and CSV use the smaller subset. The expanded road backdrop is visual only.</p></div>
+        <div class="floating-card metric-card"><p id="metric-kind" class="micro-label">ROADS</p><div class="single-metric"><strong id="metric-value">-</strong><span id="metric-label">Mapped road length (km)</span></div><p id="metric-note">Search and charts use the mapped subset. The expanded road backdrop is visual only.</p></div>
       </div>
       <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Mapped features</h2><p id="mode-description"></p><a id="mode-table-link" href="./data-explorer.html">Open related tables ↗</a></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas></div></div>
       <div id="road-analysis" class="analysis-panel">
@@ -60,7 +60,6 @@
           <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic</h3><span>Mean available AADT by class</span></div><canvas id="traffic-chart" role="img" aria-label="Mean AADT by road class chart"></canvas><p class="chart-caveat">The AADT field is displayed as supplied. Its measurement method is not confirmed here.</p></article>
           <article id="safety-view" class="chart-card"><div class="chart-header"><h3>Safety</h3><span>Roads by risk band</span></div><canvas id="safety-chart" role="img" aria-label="Safety risk band road count chart"></canvas><p class="chart-caveat">Risk-band method is not confirmed here.</p></article>
           <article id="priority-view" class="chart-card"><div class="chart-header"><h3>Priority</h3><span>Roads by priority band</span></div><canvas id="priority-chart" role="img" aria-label="Intervention priority band road count chart"></canvas><p class="chart-caveat">Priority-band method is not confirmed here.</p></article>
-          <article id="coverage-view" class="chart-card"><div class="chart-header"><h3>Data coverage</h3><span>Roads with an available field</span></div><canvas id="coverage-chart" role="img" aria-label="Field coverage chart"></canvas></article>
         </div>
         <p class="data-note">Charts are calculated from mapped roads and respond to the filters. Missing values stay distinct from zero. This map is a subset, not the complete governed network.</p>
       </div>
