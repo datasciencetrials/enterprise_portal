@@ -1,0 +1,3 @@
+/* The road geometry remains legible even when external map tiles are unavailable. */
+.map { background-image: radial-gradient(circle at 50% 50%, #183044 0, #0b1520 65%); }
+.legend-note { max-width: 132px; margin: 10px 0 0; color: #73818c; line-height: 1.4; font-size: 10px; }
