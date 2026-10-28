@@ -1,5 +1,5 @@
 import { spawn } from 'node:child_process';
-import { mkdtempSync, readFileSync, existsSync } from 'node:fs';
+import { mkdtempSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -46,11 +46,20 @@ try {
   await send('Page.enable');
   await send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: profile });
   await delay(base.startsWith('https:') ? 10000 : 2500);
-  const desktop = await evaluate(`({roadCount:document.getElementById('map-status')?.textContent,expanded:document.getElementById('allroads-coverage')?.textContent,overlayLoaded:[...document.querySelectorAll('.leaflet-image-layer')].some(x=>x.complete&&x.naturalWidth>0),downloadLabel:document.querySelector('[data-action="download"]')?.textContent.trim(),tabs:[...document.querySelectorAll('.section-tabs button')].map(x=>x.textContent),overflow:document.documentElement.scrollWidth>innerWidth,motion:getComputedStyle(document.querySelector('.intro h1 em')).animationName,progress:document.documentElement.style.getPropertyValue('--scroll-progress')})`);
+  const desktop = await evaluate(`({roadCount:document.getElementById('map-status')?.textContent,expanded:document.getElementById('allroads-coverage')?.textContent,overlayLoaded:[...document.querySelectorAll('.leaflet-image-layer')].some(x=>x.complete&&x.naturalWidth>0),downloadLabel:document.querySelector('[data-action="download"]')?.textContent.trim(),tabs:[...document.querySelectorAll('.section-tabs button')].map(x=>x.textContent),overflow:document.documentElement.scrollWidth>innerWidth,motion:getComputedStyle(document.querySelector('.intro h1 em')).animationName,progress:document.documentElement.style.getPropertyValue('--scroll-progress'),legend:document.querySelector('.legend-card')?.innerText,cardBackground:getComputedStyle(document.querySelector('.control-card')).backgroundColor,cardBlur:getComputedStyle(document.querySelector('.control-card')).backdropFilter})`);
   if (desktop.roadCount !== 'Road network on map' || desktop.tabs.length !== 9 || !desktop.tabs.includes('Rail') || !desktop.tabs.includes('Water') || desktop.tabs.includes('Explore')) throw new Error(`Road coverage or tab mismatch: ${JSON.stringify(desktop)}`);
   if (!desktop.overlayLoaded || !desktop.expanded.includes('Expanded National and DUCAR geometry shown') || desktop.downloadLabel !== 'Download') throw new Error(`Expanded map or download control mismatch: ${JSON.stringify(desktop)}`);
   if (desktop.overflow) throw new Error('Desktop horizontal overflow');
   if (desktop.motion !== 'headline-glint' || !desktop.progress) throw new Error(`Motion system unavailable: ${JSON.stringify(desktop)}`);
+  if (!desktop.legend.includes('National paved roads') || !desktop.legend.includes('DUCAR paved roads') || !desktop.cardBackground.includes('0.86') || desktop.cardBlur === 'none') throw new Error(`Road hierarchy or card transparency mismatch: ${JSON.stringify(desktop)}`);
+  const overlayManifest = await evaluate(`fetch('geo/allroads-display.json').then(response=>response.json()).then(data=>data.style_counts)`);
+  if (overlayManifest.paved_national !== 3470 || overlayManifest.paved_ducar !== 7520) throw new Error(`Paved geometry split mismatch: ${JSON.stringify(overlayManifest)}`);
+  if (process.env.GIS_CHART_SCREENSHOT) {
+    await evaluate(`document.getElementById('road-analysis').scrollIntoView({behavior:'instant'})`);
+    await delay(1200);
+    const shot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+    writeFileSync(process.env.GIS_CHART_SCREENSHOT, Buffer.from(shot.data, 'base64'));
+  }
   await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
   const reducedAnimation = await evaluate(`getComputedStyle(document.querySelector('.intro h1 em')).animationDuration`);
   if (parseFloat(reducedAnimation) > .001) throw new Error(`Reduced motion not respected: ${reducedAnimation}`);

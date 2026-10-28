@@ -94,15 +94,16 @@
         const isCommunity = p['Road Cla 1'] === 'Community Access Road';
         const isPaved = surface(p) === 'Paved';
         return {
-          color: isPaved ? '#111111' : isCommunity ? '#e4ddca' : isDucar ? '#d8ba7b' : '#ee884e',
-          weight: isCommunity ? .8 : isDucar ? 1.2 : 2.7,
+          color: isPaved ? (isDucar ? '#4e595e' : '#111111') : isCommunity ? '#e4ddca' : isDucar ? '#d8ba7b' : '#ee884e',
+          weight: isPaved ? (isDucar ? 1.4 : 2.7) : isCommunity ? .8 : isDucar ? 1.2 : 1.8,
           opacity: isCommunity ? .68 : .95,
           dashArray: null,
         };
       },
       onEachFeature: (feature, layer) => {
         layer.bindPopup(popup(feature.properties || {}), { maxWidth: 300 });
-        layer.on('mouseover', () => layer.setStyle({ weight: 5, opacity: 1 }));
+        const baseWeight = layer.options.weight;
+        layer.on('mouseover', () => layer.setStyle({ weight: baseWeight + 1.2, opacity: 1 }));
         layer.on('mouseout', () => roadLayer.resetStyle(layer));
       }
     }).addTo(map);
@@ -156,15 +157,15 @@
     $('selection-summary').textContent = `Mapped National and DUCAR roads shown`;
     $('map-status').textContent = 'Road network on map';
     const surfaceData = tally(visible, surface, length);
-    chart('surface-chart', ['Paved', 'Unpaved', 'Not supplied'], ['Paved', 'Unpaved', 'Not supplied'].map(k => surfaceData.get(k) || 0), ['#ee884e', '#e7bd61', '#a4b2c0']);
+    chart('surface-chart', ['Paved', 'Unpaved', 'Not supplied'], ['Paved', 'Unpaved', 'Not supplied'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db']);
     const conditionData = tally(visible, condition, () => 1);
-    chart('condition-chart', ['Good', 'Fair', 'Poor', 'Not supplied'], ['Good', 'Fair', 'Poor', 'Not supplied'].map(k => conditionData.get(k) || 0), ['#75b88a', '#f6c760', '#fb7473', '#a4b2c0']);
+    chart('condition-chart', ['Good', 'Fair', 'Poor', 'Not supplied'], ['Good', 'Fair', 'Poor', 'Not supplied'].map(k => conditionData.get(k) || 0), ['#34d889', '#ffd166', '#ff6176', '#c8d2db']);
     const regionData = tally(visible, p => value(p, 'Region') || 'Not supplied', length);
     const regions = Array.from(new Set(features.map(f => value(f.properties || {}, 'Region') || 'Not supplied'))).sort();
-    chart('region-chart', regions, regions.map(k => regionData.get(k) || 0), '#ee884e', true);
+    chart('region-chart', regions, regions.map(k => regionData.get(k) || 0), '#ff8b51', true);
     const classes = [...new Set(features.map(feature => category(feature.properties || {}, 'Road Cla 1')))].sort();
     const classLengths = tally(visible, p => category(p, 'Road Cla 1'), length);
-    chart('class-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => classLengths.get(k) || 0), '#d79568');
+    chart('class-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => classLengths.get(k) || 0), '#c68bff');
     const trafficGroups = new Map(classes.map(k => [k, { total: 0, count: 0 }]));
     for (const feature of visible) {
       const p = feature.properties || {};
@@ -179,13 +180,13 @@
     chart('traffic-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => {
       const group = trafficGroups.get(k);
       return group.count ? group.total / group.count : null;
-    }), '#d79568');
+    }), '#ffaf62');
     const risk = tally(visible, p => category(p, 'Road Safety Risk Band'), () => 1);
     const risks = ['Low', 'Moderate', 'High', 'Critical', 'Not supplied'];
-    chart('safety-chart', risks, risks.map(k => risk.get(k) || 0), ['#75b88a', '#c9b7d8', '#f3bd64', '#ed817c', '#8c9da8'], true);
+    chart('safety-chart', risks, risks.map(k => risk.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], true);
     const priority = tally(visible, p => category(p, 'Intervention Priority Band'), () => 1);
     const priorities = ['Low', 'Moderate', 'High', 'Critical', 'Not supplied'];
-    chart('priority-chart', priorities, priorities.map(k => priority.get(k) || 0), ['#75b88a', '#c9b7d8', '#f3bd64', '#ed817c', '#8c9da8'], true);
+    chart('priority-chart', priorities, priorities.map(k => priority.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], true);
     const coverageFields = [
       ['Length', p => length(p) !== null], ['Surface', p => surface(p) !== 'Not supplied'],
       ['Condition', p => condition(p) !== 'Not supplied'], ['Sub-region', p => category(p, 'Region') !== 'Not supplied'],
@@ -194,7 +195,7 @@
       ['Priority', p => category(p, 'Intervention Priority Band') !== 'Not supplied'],
     ];
     chart('coverage-chart', coverageFields.map(([label]) => label), coverageFields.map(([, hasValue]) =>
-      visible.filter(feature => hasValue(feature.properties || {})).length), '#d79568', true);
+      visible.filter(feature => hasValue(feature.properties || {})).length), '#45dfad', true);
   }
 
   const transportModes = {

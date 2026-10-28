@@ -38,11 +38,11 @@ def main() -> None:
 
     output = Path(__file__).resolve().parents[1] / "geo"
     versions = {
-        "overview": {"size": (1800, 1900), "widths": {"community": 1, "ducar": 1, "national": 2, "paved": 2}},
-        "detail": {"size": (7200, 7600), "widths": {"community": 1, "ducar": 2, "national": 3, "paved": 3}},
+        "overview": {"size": (3600, 3800), "widths": {"community": 1, "ducar": 1, "national": 2, "paved_ducar": 2, "paved_national": 3}},
+        "detail": {"size": (7200, 7600), "widths": {"community": 1, "ducar": 1, "national": 2, "paved_ducar": 2, "paved_national": 3}},
     }
     palette = [0, 0, 0] * 256
-    for index, rgb in enumerate([(0, 0, 0), (226, 220, 202), (216, 186, 123), (238, 136, 78), (17, 17, 17)]):
+    for index, rgb in enumerate([(0, 0, 0), (226, 220, 202), (216, 186, 123), (238, 136, 78), (17, 17, 17), (78, 89, 94)]):
         palette[index * 3:index * 3 + 3] = list(rgb)
     images = {}
     drawers = {}
@@ -62,8 +62,10 @@ def main() -> None:
             paved = row.get("PAVED_CLS") == "Paved"
             if paved != bool(pass_number):
                 continue
-            if paved:
-                style, colour = "paved", 4
+            if paved and row.get("GOV_DEPT") == "DDUCAR MoWT":
+                style, colour = "paved_ducar", 5
+            elif paved:
+                style, colour = "paved_national", 4
             elif row.get("FUNC_CLASS") == "Community Access Road":
                 style, colour = "community", 1
             elif row.get("GOV_DEPT") == "DDUCAR MoWT":
