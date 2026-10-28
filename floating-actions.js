@@ -8,7 +8,7 @@
   document.querySelector('[data-action="download"]')?.addEventListener('click', () => {
     const tableDownload = document.getElementById('download');
     if (tableDownload) { tableDownload.click(); return; }
-    const related = document.getElementById('mode-table-link');
-    window.location.href = related && !document.getElementById('mode-detail')?.hidden ? related.href : './data-explorer.html?dataset=roads';
+    if (document.getElementById('gis-map')) { window.dispatchEvent(new Event('download-mapped-data')); return; }
+    window.location.href = './data-explorer.html';
   });
 })();

@@ -12,6 +12,7 @@ let socket;
 let nextId = 1;
 const pending = new Map();
 const exceptions = [];
+const downloads = [];
 try {
   let port;
   for (let i = 0; i < 60; i++) {
@@ -28,6 +29,7 @@ try {
   socket.onmessage = event => {
     const message = JSON.parse(event.data);
     if (message.method === 'Runtime.exceptionThrown') exceptions.push(message.params.exceptionDetails.text);
+    if (message.method === 'Page.downloadWillBegin') downloads.push(message.params.suggestedFilename);
     if (message.id && pending.has(message.id)) { pending.get(message.id)(message); pending.delete(message.id); }
   };
   const send = (method, params = {}) => new Promise((resolve, reject) => {
@@ -41,9 +43,12 @@ try {
     return result.result.value;
   };
   await send('Runtime.enable');
+  await send('Page.enable');
+  await send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: profile });
   await delay(2500);
-  const desktop = await evaluate(`({roadCount:document.getElementById('map-status')?.textContent,tabs:[...document.querySelectorAll('.section-tabs button')].map(x=>x.textContent),overflow:document.documentElement.scrollWidth>innerWidth})`);
-  if (desktop.roadCount !== '5,274 road sections on map' || desktop.tabs.length !== 9 || !desktop.tabs.includes('Rail') || !desktop.tabs.includes('Water') || desktop.tabs.includes('Explore')) throw new Error(`Road coverage or tab mismatch: ${JSON.stringify(desktop)}`);
+  const desktop = await evaluate(`({roadCount:document.getElementById('map-status')?.textContent,expanded:document.getElementById('allroads-coverage')?.textContent,overlayLoaded:[...document.querySelectorAll('.leaflet-image-layer')].some(x=>x.complete&&x.naturalWidth>0),downloadLabel:document.querySelector('[data-action="download"]')?.textContent.trim(),tabs:[...document.querySelectorAll('.section-tabs button')].map(x=>x.textContent),overflow:document.documentElement.scrollWidth>innerWidth})`);
+  if (desktop.roadCount !== 'Road network on map' || desktop.tabs.length !== 9 || !desktop.tabs.includes('Rail') || !desktop.tabs.includes('Water') || desktop.tabs.includes('Explore')) throw new Error(`Road coverage or tab mismatch: ${JSON.stringify(desktop)}`);
+  if (!desktop.overlayLoaded || !desktop.expanded.includes('Expanded National and DUCAR geometry shown') || desktop.downloadLabel !== 'Download') throw new Error(`Expanded map or download control mismatch: ${JSON.stringify(desktop)}`);
   if (desktop.overflow) throw new Error('Desktop horizontal overflow');
   const modes = ['roads','bridges','traffic','ferries','aviation','safety','freight','rail','water'];
   const results = {};
@@ -54,6 +59,9 @@ try {
     if (/unavailable|loading/i.test(result.status)) throw new Error(`${mode}: ${JSON.stringify(result)}`);
     results[mode] = result.status;
   }
+  await evaluate(`document.querySelector('[data-action="download"]').click()`);
+  await delay(600);
+  if (!downloads.includes('uganda-water-map.csv')) throw new Error(`Map CSV download not observed: ${JSON.stringify(downloads)}`);
   await send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
   await delay(300);
   const mobile = await evaluate(`({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,tabCount:[...document.querySelectorAll('.section-tabs button')].filter(x=>getComputedStyle(x).display!=='none').length,homeVisible:getComputedStyle(document.querySelector('.section-tabs a')).display!=='none'})`);
@@ -69,7 +77,7 @@ try {
   const roadTable = await evaluate(`({total:document.getElementById('total')?.textContent,matching:document.getElementById('matching')?.textContent,context:document.getElementById('context')?.textContent,hasDucar:document.getElementById('table-body')?.textContent.includes('DUCAR')})`);
   if (roadTable.total !== '5,274' || roadTable.matching !== '4,259' || !roadTable.hasDucar || !roadTable.context.includes('DUCAR')) throw new Error(`Road table mismatch: ${JSON.stringify(roadTable)}`);
   if (exceptions.length) throw new Error(`Browser exceptions: ${exceptions.join('; ')}`);
-  console.log(JSON.stringify({ desktop, modes: results, mobile, bridgeTable: table, roadTable, browserExceptions: exceptions.length }, null, 2));
+  console.log(JSON.stringify({ desktop, modes: results, download: downloads, mobile, bridgeTable: table, roadTable, browserExceptions: exceptions.length }, null, 2));
 } finally {
   socket?.close();
   chrome.kill();
