@@ -126,6 +126,7 @@
       data: { labels, datasets: [{ data: values, backgroundColor: colours, borderRadius: 5, maxBarThickness: 36 }] },
       options: {
         responsive: true, maintainAspectRatio: false, indexAxis: horizontal ? 'y' : 'x',
+        animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 700, easing: 'easeOutQuart' },
         plugins: { legend: { display: false }, tooltip: { callbacks: { label: context => format.format(context.parsed[horizontal ? 'x' : 'y']) } } },
         scales: {
           x: { grid: { display: false }, ticks: { color: '#b6c7d0', font: { size: 10 } } },

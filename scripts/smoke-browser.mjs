@@ -46,10 +46,15 @@ try {
   await send('Page.enable');
   await send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: profile });
   await delay(base.startsWith('https:') ? 10000 : 2500);
-  const desktop = await evaluate(`({roadCount:document.getElementById('map-status')?.textContent,expanded:document.getElementById('allroads-coverage')?.textContent,overlayLoaded:[...document.querySelectorAll('.leaflet-image-layer')].some(x=>x.complete&&x.naturalWidth>0),downloadLabel:document.querySelector('[data-action="download"]')?.textContent.trim(),tabs:[...document.querySelectorAll('.section-tabs button')].map(x=>x.textContent),overflow:document.documentElement.scrollWidth>innerWidth})`);
+  const desktop = await evaluate(`({roadCount:document.getElementById('map-status')?.textContent,expanded:document.getElementById('allroads-coverage')?.textContent,overlayLoaded:[...document.querySelectorAll('.leaflet-image-layer')].some(x=>x.complete&&x.naturalWidth>0),downloadLabel:document.querySelector('[data-action="download"]')?.textContent.trim(),tabs:[...document.querySelectorAll('.section-tabs button')].map(x=>x.textContent),overflow:document.documentElement.scrollWidth>innerWidth,motion:getComputedStyle(document.querySelector('.intro h1 em')).animationName,progress:document.documentElement.style.getPropertyValue('--scroll-progress')})`);
   if (desktop.roadCount !== 'Road network on map' || desktop.tabs.length !== 9 || !desktop.tabs.includes('Rail') || !desktop.tabs.includes('Water') || desktop.tabs.includes('Explore')) throw new Error(`Road coverage or tab mismatch: ${JSON.stringify(desktop)}`);
   if (!desktop.overlayLoaded || !desktop.expanded.includes('Expanded National and DUCAR geometry shown') || desktop.downloadLabel !== 'Download') throw new Error(`Expanded map or download control mismatch: ${JSON.stringify(desktop)}`);
   if (desktop.overflow) throw new Error('Desktop horizontal overflow');
+  if (desktop.motion !== 'headline-glint' || !desktop.progress) throw new Error(`Motion system unavailable: ${JSON.stringify(desktop)}`);
+  await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
+  const reducedAnimation = await evaluate(`getComputedStyle(document.querySelector('.intro h1 em')).animationDuration`);
+  if (parseFloat(reducedAnimation) > .001) throw new Error(`Reduced motion not respected: ${reducedAnimation}`);
+  await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'no-preference' }] });
   const modes = ['roads','bridges','traffic','ferries','aviation','safety','freight','rail','water'];
   const results = {};
   for (const mode of modes) {
