@@ -253,6 +253,7 @@
 
   async function showMode(key) {
     activeMode = key;
+    document.querySelector('.section-tabs a[href="./"]')?.removeAttribute('aria-current');
     for (const button of document.querySelectorAll('.section-tabs button[data-mode]')) {
       if (button.dataset.mode === key) button.setAttribute('aria-current', 'page');
       else button.removeAttribute('aria-current');

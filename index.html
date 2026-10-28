@@ -1,189 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Uganda GIS enterprise machine learning data and statistics portal" />
-    <title>Uganda GIS Enterprise</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b3d2e'/%3E%3Cpath d='M16 48 27 16h10l11 32H38l-2-7h-9l-2 7zm13-15h5l-2-8z' fill='%23f6c344'/%3E%3C/svg%3E" />
-    <link rel="modulepreload" crossorigin href="/enterprise_portal/assets/vendor-leaflet-SdVW6jf5.js">
-    <link rel="modulepreload" crossorigin href="/enterprise_portal/assets/vendor-charts-BQc6UxeF.js">
-    <link rel="modulepreload" crossorigin href="/enterprise_portal/assets/vendor-mapbox-D3_-FEL-.js">
-    <link rel="stylesheet" crossorigin href="/enterprise_portal/assets/index-Yto0uED7.css">
-    <link rel="stylesheet" href="/enterprise_portal/light-apple-theme.css">
-    <link rel="stylesheet" href="/enterprise_portal/transport-nav.css">
-    <link rel="stylesheet" href="/enterprise_portal/vendor/leaflet.min.css">
-    <link rel="stylesheet" href="/enterprise_portal/portal-home.css">
-    <style>.gis-studio-link{position:fixed;right:20px;bottom:20px;z-index:3000;display:inline-block;padding:12px 16px;border-radius:999px;background:#10212c;color:#fff!important;box-shadow:0 8px 26px #0004;font:600 13px -apple-system,BlinkMacSystemFont,Arial,sans-serif;text-decoration:none}.gis-studio-link:hover{background:#006e88}.gis-studio-link:focus-visible{outline:3px solid #28c2d3;outline-offset:3px}@media(max-width:700px){.gis-studio-link{right:12px;bottom:12px;padding:10px 13px;font-size:11px}}</style>
-    <style>
-      /* Keep the restored desktop interface intact while making the public
-         data-view portal usable on phone-sized screens. */
-      @media (max-width: 700px) {
-        .app-container {
-          flex-direction: column;
-          height: 100svh;
-          min-height: 100svh;
-        }
-
-        .sidebar {
-          width: 100%;
-          height: 64px;
-          min-height: 64px;
-          flex-direction: row;
-          border-right: 0;
-          border-bottom: 1px solid var(--panel-border);
-        }
-
-        .sidebar-header {
-          width: 56px;
-          min-width: 56px;
-          height: 62px;
-          padding: 0 0.75rem;
-          overflow: hidden;
-          font-size: 0;
-        }
-
-        .sidebar-nav {
-          flex-direction: row;
-          align-items: center;
-          padding: 0.5rem;
-          gap: 0.25rem;
-          overflow-x: auto;
-          overflow-y: hidden;
-          scrollbar-width: thin;
-        }
-
-        .nav-item {
-          flex: 0 0 auto;
-          min-width: 44px;
-          height: 44px;
-          justify-content: center;
-          padding: 0.65rem;
-          border-left: 0;
-          font-size: 0;
-        }
-
-        .nav-item.active {
-          border-left: 0;
-          border-bottom: 3px solid var(--neon-blue);
-        }
-
-        .main-area {
-          width: 100%;
-          min-width: 0;
-          height: calc(100svh - 64px);
-          flex: 1 1 auto;
-        }
-
-        .topbar {
-          display: none;
-        }
-
-        .content-container {
-          width: 100%;
-          min-width: 0;
-          padding: 0.75rem;
-        }
-
-        .content-container:not(.map-mode) .glass-card,
-        .content-container:not(.map-mode) .glass-panel {
-          max-width: 100%;
-        }
-
-        .content-container.map-mode > .map-overlay-panel:nth-child(3) {
-          display: none;
-        }
-
-        .content-container.map-mode > .map-overlay-panel:nth-child(4) {
-          top: 12px !important;
-          right: 12px !important;
-          width: min(320px, calc(100% - 72px)) !important;
-          max-height: calc(100% - 190px) !important;
-        }
-
-        .content-container.map-mode > div:nth-child(5) {
-          right: 12px !important;
-          bottom: 12px !important;
-          left: 12px !important;
-          width: auto !important;
-          transform: none !important;
-        }
-
-        .content-container.map-mode > div:nth-child(5) .glass-panel {
-          width: 100% !important;
-          padding: 12px 14px !important;
-          border-radius: 16px !important;
-        }
-
-        .content-container.map-mode > div:nth-child(5) .glass-panel > div:first-child {
-          gap: 8px !important;
-          margin-bottom: 8px !important;
-        }
-
-        .content-container.map-mode > div:nth-child(5) > div {
-          gap: 8px !important;
-        }
-
-        .content-container.map-mode > div:nth-child(5) > div > div:first-child {
-          display: none !important;
-        }
-
-        .content-container.map-mode > div:nth-child(5) > div > div:last-child {
-          flex: 1 1 0;
-          min-width: 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="transport-nav" aria-label="Uganda transport portal">
-      <a class="transport-tab active" aria-current="page" href="./">Main portal</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=explore#explore">Explore</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=roads#explore">Roads</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=bridges#explore">Bridges</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=traffic#explore">Traffic</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=ferries#explore">Ferries</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=aviation#explore">Aviation</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=safety#explore">Safety</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=freight#explore">Freight</a>
-      <a class="transport-tab" href="./gis-studio.html?mode=rail-water#explore">Rail and water</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f8fafb">
+  <meta name="description" content="Interactive Uganda transport GIS explorer with maps and dynamic charts.">
+  <title>Uganda Transport GIS | GIS Enterprise</title>
+  <link rel="stylesheet" href="vendor/leaflet.min.css">
+  <link rel="stylesheet" href="gis-studio.css">
+  <link rel="stylesheet" href="gis-studio-map.css">
+  <link rel="stylesheet" href="gis-studio-tabs.css">
+</head>
+<body>
+  <a class="skip-link" href="#gis-map">Skip to map</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Uganda GIS Enterprise home"><span class="brand-mark">UG</span><span>GIS Enterprise</span></a>
+    <nav class="section-tabs" aria-label="Transport GIS navigation">
+      <a href="./" aria-current="page">Main portal</a>
+      <button type="button" data-mode="explore">Explore</button>
+      <button type="button" data-mode="roads">Roads</button>
+      <button type="button" data-mode="bridges">Bridges</button>
+      <button type="button" data-mode="traffic">Traffic</button>
+      <button type="button" data-mode="ferries">Ferries</button>
+      <button type="button" data-mode="aviation">Aviation</button>
+      <button type="button" data-mode="safety">Safety</button>
+      <button type="button" data-mode="freight">Freight</button>
+      <button type="button" data-mode="rail-water">Rail & water</button>
     </nav>
-    <main id="portal-home">
-      <section class="portal-hero">
-        <div class="portal-hero-copy">
-          <p class="portal-kicker">UGANDA TRANSPORT INTELLIGENCE</p>
-          <h1>One view of a <em>moving nation.</em></h1>
-          <p>Explore the road network and mapped transport assets through an interactive geographic view. Figures and map samples are clearly separated.</p>
-          <div class="portal-actions"><a class="portal-primary" href="./gis-studio.html?mode=explore#explore">Explore the map <span aria-hidden="true">↗</span></a><button id="open-workspace" type="button">Open data workspace</button></div>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy"><p class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">See how Uganda moves.<br><em>Explore the network.</em></h1><p class="intro-note">Explore mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities. Each view identifies the records available in this portal, without presenting a partial map as a national total.</p></div>
+      <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong>Interactive map</strong></p><a href="#explore">Open explorer <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section id="explore" class="explorer" aria-label="Interactive transport network explorer">
+      <div class="map-shell">
+        <div id="gis-map" class="map" role="application" aria-label="Map of the portal's transport geometry"></div>
+        <div class="map-topline"><span class="live-dot" aria-hidden="true"></span> UGANDA TRANSPORT GIS <span id="map-status" role="status">Loading mapped roads</span></div>
+        <div class="floating-card control-card">
+          <div class="card-heading"><span>Explore network</span><button id="reset-filters" type="button" class="quiet-button">Reset</button></div>
+          <label for="road-search">Find a road</label><input id="road-search" type="search" placeholder="Road name or number" autocomplete="off">
+          <div class="filter-grid"><div><label for="region-filter">Sub-region</label><select id="region-filter"><option value="">All mapped</option></select></div><div><label for="surface-filter">Surface</label><select id="surface-filter"><option value="">All surfaces</option><option>Paved</option><option>Unpaved</option></select></div></div>
+          <label for="condition-filter">Condition</label><select id="condition-filter"><option value="">All recorded</option><option>Good</option><option>Fair</option><option>Poor</option><option value="Not recorded">Not recorded</option></select>
+          <p class="filter-help">Filters update the map and charts together.</p>
         </div>
-        <div class="portal-hero-mark" aria-hidden="true"><span>UG</span><small>TRANSPORT<br>GIS</small></div>
-      </section>
-      <section class="portal-stat-row" aria-label="Approved network figures">
-        <div class="portal-stat"><span>Total network</span><strong>248,616.14 <small>km</small></strong></div>
-        <div class="portal-stat"><span>National roads</span><strong>21,302 <small>km</small></strong></div>
-        <div class="portal-stat"><span>Total paved</span><strong>11,762.8 <small>km</small></strong></div>
-        <div class="portal-stat"><span>Bridges, FY 2026/27</span><strong>552</strong></div>
-        <div class="portal-stat"><span>Analysed links</span><strong>404,047</strong></div>
-      </section>
-      <section class="portal-map-section" aria-labelledby="portal-map-title">
-        <div class="portal-section-heading"><div><p class="portal-kicker">EXPLORE THE NETWORK</p><h2 id="portal-map-title">A live geographic canvas.</h2></div><p>Hybrid imagery with labels and borders. The coloured lines below show only the records mapped in this portal.</p></div>
-        <div class="portal-map-wrap"><div id="portal-map" role="application" aria-label="Hybrid imagery map of mapped Uganda road links"></div>
-          <div class="portal-map-overlay portal-map-control"><label for="portal-surface">Surface type</label><select id="portal-surface"><option value="">All mapped</option><option value="Paved">Paved</option><option value="Unpaved">Unpaved</option></select><p id="portal-map-status" role="status">Loading mapped links</p></div>
-          <div class="portal-map-overlay portal-map-metric"><span>MAPPED SUBSET</span><strong id="portal-visible-count">-</strong><small>road links visible</small><a href="./gis-studio.html?mode=roads#explore">Open full explorer ↗</a></div>
+        <div class="floating-card legend-card"><p class="micro-label">MAPPED NETWORK</p><div><span class="legend-swatch good"></span>Road link</div><p class="legend-note">Use the filters and charts to inspect conditions.</p></div>
+        <div class="floating-card metric-card"><p class="micro-label">VISIBLE MAP SUBSET</p><div class="metrics"><div><strong id="metric-links">-</strong><span id="metric-label-1">Road links</span></div><div><strong id="metric-km">-</strong><span id="metric-label-2">Recorded km</span></div><div><strong id="metric-paved">-</strong><span id="metric-label-3">Paved km</span></div></div><p id="metric-note">Map sample only. Not the national network total.</p></div>
+      </div>
+      <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Mapped records</h2><p id="mode-description"></p></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas></div></div>
+      <div id="road-analysis" class="analysis-panel">
+        <div class="analysis-title"><div><p class="eyebrow">LIVE ANALYSIS</p><h2>Patterns in the mapped links</h2></div><p id="selection-summary">All mapped road links</p></div>
+        <div class="chart-grid">
+          <article id="surface-view" class="chart-card"><div class="chart-header"><h3>Surface type</h3><span>Recorded length (km)</span></div><canvas id="surface-chart" role="img" aria-label="Surface type length chart"></canvas></article>
+          <article id="condition-view" class="chart-card"><div class="chart-header"><h3>Condition</h3><span>Number of links</span></div><canvas id="condition-chart" role="img" aria-label="Condition link count chart"></canvas></article>
+          <article id="region-view" class="chart-card"><div class="chart-header"><h3>Sub-region</h3><span>Recorded length (km)</span></div><canvas id="region-chart" role="img" aria-label="Sub-region length chart"></canvas></article>
+          <article id="class-view" class="chart-card"><div class="chart-header"><h3>Road class</h3><span>Recorded length (km)</span></div><canvas id="class-chart" role="img" aria-label="Road class length chart"></canvas></article>
+          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic</h3><span>Mean recorded AADT by class</span></div><canvas id="traffic-chart" role="img" aria-label="Mean AADT by road class chart"></canvas><p class="chart-caveat">The AADT field is displayed as recorded. Its measurement method is not confirmed here.</p></article>
+          <article id="safety-view" class="chart-card"><div class="chart-header"><h3>Safety</h3><span>Links by recorded risk band</span></div><canvas id="safety-chart" role="img" aria-label="Safety risk band link count chart"></canvas><p class="chart-caveat">Risk-band method is not confirmed here.</p></article>
+          <article id="priority-view" class="chart-card"><div class="chart-header"><h3>Priority</h3><span>Links by recorded priority band</span></div><canvas id="priority-chart" role="img" aria-label="Intervention priority band link count chart"></canvas><p class="chart-caveat">Priority-band method is not confirmed here.</p></article>
+          <article id="coverage-view" class="chart-card"><div class="chart-header"><h3>Data coverage</h3><span>Links with a recorded field</span></div><canvas id="coverage-chart" role="img" aria-label="Recorded field coverage chart"></canvas></article>
         </div>
-      </section>
-      <section class="portal-mode-grid" aria-label="Transport layers">
-        <a href="./gis-studio.html?mode=roads#explore"><span>01</span><strong>Roads</strong><small>Mapped links and conditions</small></a>
-        <a href="./gis-studio.html?mode=bridges#explore"><span>02</span><strong>Bridges</strong><small>Structures and major culverts</small></a>
-        <a href="./gis-studio.html?mode=traffic#explore"><span>03</span><strong>Traffic</strong><small>Count station geography</small></a>
-        <a href="./gis-studio.html?mode=rail-water#explore"><span>04</span><strong>Rail and water</strong><small>MGR, SGR alignment and ferries</small></a>
-        <a href="./gis-studio.html?mode=aviation#explore"><span>05</span><strong>Aviation</strong><small>Mapped airport locations</small></a>
-      </section>
-      <footer class="portal-footer">Uganda Transport GIS <span>Mapped views are subsets unless stated otherwise.</span></footer>
-    </main>
-    <div id="root" hidden></div>
-    <script src="/enterprise_portal/vendor/leaflet.min.js"></script>
-    <script src="/enterprise_portal/portal-home.js" defer></script>
-  </body>
+        <p class="data-note">Charts are calculated from the mapped road links and respond to the filters. Unrecorded values stay distinct from zero. This map is a subset, not the complete governed network.</p>
+      </div>
+    </section>
+  </main>
+  <footer><span>UGANDA TRANSPORT GIS</span><a href="#page-title">Back to top</a></footer>
+  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="gis-studio.js" defer></script>
+</body>
 </html>
