@@ -4,9 +4,18 @@
   const workspace = document.getElementById('root');
   const openButton = document.getElementById('open-workspace');
   const mainTab = document.querySelector('.transport-tab.active');
+  let workspaceLoaded = false;
   openButton.addEventListener('click', () => {
     home.hidden = true;
     workspace.hidden = false;
+    if (!workspaceLoaded) {
+      workspaceLoaded = true;
+      const module = document.createElement('script');
+      module.type = 'module';
+      module.crossOrigin = 'anonymous';
+      module.src = '/enterprise_portal/assets/index-CwT9p64m.js';
+      document.head.append(module);
+    }
     mainTab.textContent = 'Portal home';
     mainTab.setAttribute('aria-label', 'Return to portal home');
     window.scrollTo(0, 0);
