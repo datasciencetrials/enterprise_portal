@@ -45,7 +45,7 @@ try {
   await send('Runtime.enable');
   await send('Page.enable');
   await send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: profile });
-  await delay(2500);
+  await delay(base.startsWith('https:') ? 10000 : 2500);
   const desktop = await evaluate(`({roadCount:document.getElementById('map-status')?.textContent,expanded:document.getElementById('allroads-coverage')?.textContent,overlayLoaded:[...document.querySelectorAll('.leaflet-image-layer')].some(x=>x.complete&&x.naturalWidth>0),downloadLabel:document.querySelector('[data-action="download"]')?.textContent.trim(),tabs:[...document.querySelectorAll('.section-tabs button')].map(x=>x.textContent),overflow:document.documentElement.scrollWidth>innerWidth})`);
   if (desktop.roadCount !== 'Road network on map' || desktop.tabs.length !== 9 || !desktop.tabs.includes('Rail') || !desktop.tabs.includes('Water') || desktop.tabs.includes('Explore')) throw new Error(`Road coverage or tab mismatch: ${JSON.stringify(desktop)}`);
   if (!desktop.overlayLoaded || !desktop.expanded.includes('Expanded National and DUCAR geometry shown') || desktop.downloadLabel !== 'Download') throw new Error(`Expanded map or download control mismatch: ${JSON.stringify(desktop)}`);
@@ -54,7 +54,7 @@ try {
   const results = {};
   for (const mode of modes) {
     await evaluate(`document.querySelector('[data-mode="${mode}"]').click()`);
-    await delay(mode === 'roads' ? 400 : 900);
+    await delay(base.startsWith('https:') ? 3000 : mode === 'roads' ? 400 : 900);
     const result = await evaluate(`({status:document.getElementById('map-status').textContent,title:document.getElementById('mode-title').textContent,link:document.getElementById('mode-table-link').href})`);
     if (/unavailable|loading/i.test(result.status)) throw new Error(`${mode}: ${JSON.stringify(result)}`);
     results[mode] = result.status;
@@ -68,14 +68,16 @@ try {
   if (mobile.scrollWidth > mobile.width || mobile.tabCount !== 9 || !mobile.homeVisible) throw new Error(`Mobile layout: ${JSON.stringify(mobile)}`);
   await send('Page.enable');
   await send('Page.navigate', { url: new URL('data-explorer.html?dataset=bridges', base).href });
-  await delay(1500);
+  await delay(base.startsWith('https:') ? 5000 : 1500);
   const table = await evaluate(`({total:document.getElementById('total')?.textContent,range:document.getElementById('row-range')?.textContent,schema:document.getElementById('schema-sql')?.textContent.includes('not a deployed SQL table')})`);
   if (table.total !== '423' || !table.range.includes('423') || !table.schema) throw new Error(`Table mismatch: ${JSON.stringify(table)}`);
   await send('Page.navigate', { url: new URL('data-explorer.html?dataset=roads', base).href });
-  await delay(1800);
+  await delay(base.startsWith('https:') ? 5000 : 1800);
+  const allRoadRows = await evaluate(`({count:document.querySelectorAll('#table-body tr').length,hasPagination:!!document.querySelector('.pagination')})`);
+  if (allRoadRows.count !== 5274 || allRoadRows.hasPagination) throw new Error(`Full road table mismatch: ${JSON.stringify(allRoadRows)}`);
   await evaluate(`(document.getElementById('category').value='Not supplied',document.getElementById('category').dispatchEvent(new Event('change')))`);
-  const roadTable = await evaluate(`({total:document.getElementById('total')?.textContent,matching:document.getElementById('matching')?.textContent,context:document.getElementById('context')?.textContent,hasDucar:document.getElementById('table-body')?.textContent.includes('DUCAR')})`);
-  if (roadTable.total !== '5,274' || roadTable.matching !== '4,259' || !roadTable.hasDucar || !roadTable.context.includes('DUCAR')) throw new Error(`Road table mismatch: ${JSON.stringify(roadTable)}`);
+  const roadTable = await evaluate(`({total:document.getElementById('total')?.textContent,matching:document.getElementById('matching')?.textContent,context:document.getElementById('context')?.textContent,hasDucar:document.getElementById('table-body')?.textContent.includes('DUCAR'),renderedRows:document.querySelectorAll('#table-body tr').length,hasPagination:!!document.querySelector('.pagination'),scrollable:document.querySelector('.table-scroll').scrollHeight>document.querySelector('.table-scroll').clientHeight})`);
+  if (roadTable.total !== '5,274' || roadTable.matching !== '4,259' || !roadTable.hasDucar || !roadTable.context.includes('DUCAR') || roadTable.renderedRows !== 4259 || roadTable.hasPagination || !roadTable.scrollable) throw new Error(`Road table mismatch: ${JSON.stringify(roadTable)}`);
   if (exceptions.length) throw new Error(`Browser exceptions: ${exceptions.join('; ')}`);
   console.log(JSON.stringify({ desktop, modes: results, download: downloads, mobile, bridgeTable: table, roadTable, browserExceptions: exceptions.length }, null, 2));
 } finally {

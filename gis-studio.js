@@ -147,7 +147,7 @@
     const visible = features.filter(matches);
     if (activeMode === 'roads') drawMap(visible);
     const km = visible.reduce((sum, feature) => sum + (length(feature.properties || {}) || 0), 0);
-    const paved = visible.filter(feature => surface(feature.properties || {}) === 'Paved')
+    const paved = visible.filter(feature => surface(feature.properties || {}) === 'Paved' && feature.properties?.['Road Type'] !== 'DUCAR')
       .reduce((sum, feature) => sum + (length(feature.properties || {}) || 0), 0);
     $('metric-links').textContent = format.format(visible.length);
     $('metric-km').textContent = format.format(km);
@@ -308,7 +308,7 @@
       if (pointLayer) { map.removeLayer(pointLayer); pointLayer = null; }
       $('metric-label-1').textContent = 'Mapped road geometry';
       $('metric-label-2').textContent = 'Mapped km';
-      $('metric-label-3').textContent = 'Paved km';
+      $('metric-label-3').textContent = 'National Paved Road Network, mapped km';
       $('metric-note').textContent = 'Search, charts and CSV use the smaller subset. The expanded road backdrop is visual only.';
       update();
       showUgandaExtent();

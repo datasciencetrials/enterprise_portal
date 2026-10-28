@@ -18,8 +18,7 @@
   for (const [key, spec] of Object.entries(layers)) select.add(new Option(spec.title, key));
   const initial = new URLSearchParams(location.search).get('dataset');
   select.value = Object.hasOwn(layers, initial) ? initial : 'roads';
-  let rows = [], filtered = [], page = 0, active = null, sequence = 0;
-  const pageSize = 50;
+  let rows = [], filtered = [], active = null, sequence = 0;
   const clean = v => v === null || v === undefined || String(v).trim() === '' ? 'Not supplied' : String(v).trim();
   const count = v => new Intl.NumberFormat('en-UG').format(v);
   const normalise = (feature, spec) => {
@@ -46,8 +45,6 @@
     const query = $('search').value.trim().toLocaleLowerCase();
     const category = $('category').value;
     filtered = rows.filter(row => (!category || row[spec.group] === category) && (!query || spec.columns.some(col => row[col.key].toLocaleLowerCase().includes(query))));
-    const maxPage = Math.max(0, Math.ceil(filtered.length / pageSize) - 1);
-    page = Math.min(page, maxPage);
     $('total').textContent = count(rows.length);
     $('matching').textContent = count(filtered.length);
     $('coverage').textContent = 'Mapped subset';
@@ -65,11 +62,11 @@
     for (const col of spec.columns) { const th = document.createElement('th'); th.scope = 'col'; th.textContent = col.title; headerRow.append(th); }
     $('table-head').replaceChildren(headerRow);
     const numericBounds = new Map(spec.columns.filter(col => col.type === 'number').map(col => {
-      const values = filtered.map(row => Number(row[col.key])).filter((n, index) => filtered[index]?.[col.key] !== 'Not supplied' && Number.isFinite(n));
+      const values = filtered.filter(row => row[col.key] !== 'Not supplied').map(row => Number(row[col.key])).filter(Number.isFinite);
       return [col.key, [Math.min(...values), Math.max(...values)]];
     }));
     const body = document.createDocumentFragment();
-    for (const row of filtered.slice(page * pageSize, (page + 1) * pageSize)) {
+    for (const row of filtered) {
       const tr = document.createElement('tr');
       for (const col of spec.columns) {
         const td = document.createElement('td'); const value = row[col.key];
@@ -93,11 +90,7 @@
       body.append(tr);
     }
     $('table-body').replaceChildren(body);
-    const start = filtered.length ? page * pageSize + 1 : 0;
-    const end = Math.min((page + 1) * pageSize, filtered.length);
-    $('row-range').textContent = `${count(start)} to ${count(end)} of ${count(filtered.length)} matching features`;
-    $('page-label').textContent = `Page ${page + 1} of ${maxPage + 1}`;
-    $('previous').disabled = page === 0; $('next').disabled = page >= maxPage;
+    $('row-range').textContent = `All ${count(filtered.length)} matching features in one scrollable table`;
   }
   function schema(name, spec) {
     const identifier = str => str.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
@@ -106,7 +99,7 @@
   }
   async function load() {
     const token = ++sequence, key = select.value, spec = layers[key];
-    active = spec; rows = []; page = 0;
+    active = spec; rows = [];
     $('context').textContent = `Loading ${spec.title.toLowerCase()}...`;
     $('schema-sql').textContent = schema(key, spec);
     history.replaceState(null, '', `?dataset=${encodeURIComponent(key)}`);
@@ -142,9 +135,7 @@
     const link = document.createElement('a'); link.href = url; link.download = `mapped-${select.value}-filtered.csv`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
   select.addEventListener('change', load);
-  $('search').addEventListener('input', () => { page = 0; render(); });
-  $('category').addEventListener('change', () => { page = 0; render(); });
-  $('previous').addEventListener('click', () => { page--; render(); });
-  $('next').addEventListener('click', () => { page++; render(); });
+  $('search').addEventListener('input', render);
+  $('category').addEventListener('change', render);
   load();
 })();
