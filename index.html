@@ -18,7 +18,7 @@
     <a class="brand" href="./" aria-label="Uganda GIS Enterprise home"><span class="brand-mark">UG</span><span>GIS Enterprise</span></a>
     <nav class="section-tabs" aria-label="Transport GIS navigation">
       <a href="./" aria-current="page">Main portal</a>
-      <button type="button" data-mode="explore">Explore</button>
+      <button type="button" data-mode="rail">Rail</button>
       <button type="button" data-mode="roads">Roads</button>
       <button type="button" data-mode="bridges">Bridges</button>
       <button type="button" data-mode="traffic">Traffic</button>
@@ -26,13 +26,13 @@
       <button type="button" data-mode="aviation">Aviation</button>
       <button type="button" data-mode="safety">Safety</button>
       <button type="button" data-mode="freight">Freight</button>
-      <button type="button" data-mode="rail-water">Rail & water</button>
+      <button type="button" data-mode="water">Water</button>
     </nav>
   </header>
   <main>
     <section class="intro" aria-labelledby="page-title">
-      <div class="intro-copy"><p class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">See how Uganda moves.<br><em>Explore the network.</em></h1><p class="intro-note">Explore mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities. Each view identifies the records available in this portal, without presenting a partial map as a national total.</p></div>
-      <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong>Interactive map</strong></p><a href="#explore">Open explorer <span aria-hidden="true">↗</span></a></div>
+      <div class="intro-copy"><p class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">See how Uganda moves.<br><em>Explore the network.</em></h1><p class="intro-note">Explore mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities. Each view identifies the mapped features available here without presenting a partial map as a national total.</p></div>
+      <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong>Interactive map and tables</strong></p><a href="./data-explorer.html">Open explorer <span aria-hidden="true">↗</span></a></div>
     </section>
     <section id="explore" class="explorer" aria-label="Interactive transport network explorer">
       <div class="map-shell">
@@ -42,30 +42,31 @@
           <div class="card-heading"><span>Explore network</span><button id="reset-filters" type="button" class="quiet-button">Reset</button></div>
           <label for="road-search">Find a road</label><input id="road-search" type="search" placeholder="Road name or number" autocomplete="off">
           <div class="filter-grid"><div><label for="region-filter">Sub-region</label><select id="region-filter"><option value="">All mapped</option></select></div><div><label for="surface-filter">Surface</label><select id="surface-filter"><option value="">All surfaces</option><option>Paved</option><option>Unpaved</option></select></div></div>
-          <label for="condition-filter">Condition</label><select id="condition-filter"><option value="">All recorded</option><option>Good</option><option>Fair</option><option>Poor</option><option value="Not recorded">Not recorded</option></select>
+          <label for="condition-filter">Condition</label><select id="condition-filter"><option value="">All available</option><option>Good</option><option>Fair</option><option>Poor</option><option value="Not supplied">Not supplied</option></select>
           <p class="filter-help">Filters update the map and charts together.</p>
         </div>
-        <div class="floating-card legend-card"><p class="micro-label">MAPPED NETWORK</p><div><span class="legend-swatch good"></span>Road link</div><p class="legend-note">Use the filters and charts to inspect conditions.</p></div>
-        <div class="floating-card metric-card"><p class="micro-label">VISIBLE MAP SUBSET</p><div class="metrics"><div><strong id="metric-links">-</strong><span id="metric-label-1">Road links</span></div><div><strong id="metric-km">-</strong><span id="metric-label-2">Recorded km</span></div><div><strong id="metric-paved">-</strong><span id="metric-label-3">Paved km</span></div></div><p id="metric-note">Map sample only. Not the national network total.</p></div>
+        <div class="floating-card legend-card"><p class="micro-label">MAPPED NETWORK</p><div><span class="legend-swatch good"></span>National road</div><div><span class="legend-swatch ducar"></span>DUCAR road</div><p class="legend-note">Mapped geometry only, not the complete national population.</p></div>
+        <div class="floating-card metric-card"><p class="micro-label">VISIBLE MAP SUBSET</p><div class="metrics"><div><strong id="metric-links">-</strong><span id="metric-label-1">Mapped segments</span></div><div><strong id="metric-km">-</strong><span id="metric-label-2">Mapped km</span></div><div><strong id="metric-paved">-</strong><span id="metric-label-3">Paved km</span></div></div><p id="metric-note">Mapped National and DUCAR geometry only. Not a complete network total.</p></div>
       </div>
-      <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Mapped records</h2><p id="mode-description"></p></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas></div></div>
+      <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Mapped features</h2><p id="mode-description"></p><a id="mode-table-link" href="./data-explorer.html">Open related tables ↗</a></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas></div></div>
       <div id="road-analysis" class="analysis-panel">
-        <div class="analysis-title"><div><p class="eyebrow">LIVE ANALYSIS</p><h2>Patterns in the mapped links</h2></div><p id="selection-summary">All mapped road links</p></div>
+        <div class="analysis-title"><div><p class="eyebrow">LIVE ANALYSIS</p><h2>Patterns in the mapped roads</h2></div><p id="selection-summary">All mapped road sections</p></div>
         <div class="chart-grid">
-          <article id="surface-view" class="chart-card"><div class="chart-header"><h3>Surface type</h3><span>Recorded length (km)</span></div><canvas id="surface-chart" role="img" aria-label="Surface type length chart"></canvas></article>
-          <article id="condition-view" class="chart-card"><div class="chart-header"><h3>Condition</h3><span>Number of links</span></div><canvas id="condition-chart" role="img" aria-label="Condition link count chart"></canvas></article>
-          <article id="region-view" class="chart-card"><div class="chart-header"><h3>Sub-region</h3><span>Recorded length (km)</span></div><canvas id="region-chart" role="img" aria-label="Sub-region length chart"></canvas></article>
-          <article id="class-view" class="chart-card"><div class="chart-header"><h3>Road class</h3><span>Recorded length (km)</span></div><canvas id="class-chart" role="img" aria-label="Road class length chart"></canvas></article>
-          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic</h3><span>Mean recorded AADT by class</span></div><canvas id="traffic-chart" role="img" aria-label="Mean AADT by road class chart"></canvas><p class="chart-caveat">The AADT field is displayed as recorded. Its measurement method is not confirmed here.</p></article>
-          <article id="safety-view" class="chart-card"><div class="chart-header"><h3>Safety</h3><span>Links by recorded risk band</span></div><canvas id="safety-chart" role="img" aria-label="Safety risk band link count chart"></canvas><p class="chart-caveat">Risk-band method is not confirmed here.</p></article>
-          <article id="priority-view" class="chart-card"><div class="chart-header"><h3>Priority</h3><span>Links by recorded priority band</span></div><canvas id="priority-chart" role="img" aria-label="Intervention priority band link count chart"></canvas><p class="chart-caveat">Priority-band method is not confirmed here.</p></article>
-          <article id="coverage-view" class="chart-card"><div class="chart-header"><h3>Data coverage</h3><span>Links with a recorded field</span></div><canvas id="coverage-chart" role="img" aria-label="Recorded field coverage chart"></canvas></article>
+          <article id="surface-view" class="chart-card"><div class="chart-header"><h3>Surface type</h3><span>Mapped length (km)</span></div><canvas id="surface-chart" role="img" aria-label="Surface type length chart"></canvas></article>
+          <article id="condition-view" class="chart-card"><div class="chart-header"><h3>Condition</h3><span>Number of road sections</span></div><canvas id="condition-chart" role="img" aria-label="Condition road section count chart"></canvas></article>
+          <article id="region-view" class="chart-card"><div class="chart-header"><h3>Sub-region</h3><span>Mapped length (km)</span></div><canvas id="region-chart" role="img" aria-label="Sub-region length chart"></canvas></article>
+          <article id="class-view" class="chart-card"><div class="chart-header"><h3>Road class</h3><span>Mapped length (km)</span></div><canvas id="class-chart" role="img" aria-label="Road class length chart"></canvas></article>
+          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic</h3><span>Mean available AADT by class</span></div><canvas id="traffic-chart" role="img" aria-label="Mean AADT by road class chart"></canvas><p class="chart-caveat">The AADT field is displayed as supplied. Its measurement method is not confirmed here.</p></article>
+          <article id="safety-view" class="chart-card"><div class="chart-header"><h3>Safety</h3><span>Road sections by risk band</span></div><canvas id="safety-chart" role="img" aria-label="Safety risk band road section count chart"></canvas><p class="chart-caveat">Risk-band method is not confirmed here.</p></article>
+          <article id="priority-view" class="chart-card"><div class="chart-header"><h3>Priority</h3><span>Road sections by priority band</span></div><canvas id="priority-chart" role="img" aria-label="Intervention priority band road section count chart"></canvas><p class="chart-caveat">Priority-band method is not confirmed here.</p></article>
+          <article id="coverage-view" class="chart-card"><div class="chart-header"><h3>Data coverage</h3><span>Road sections with an available field</span></div><canvas id="coverage-chart" role="img" aria-label="Field coverage chart"></canvas></article>
         </div>
-        <p class="data-note">Charts are calculated from the mapped road links and respond to the filters. Unrecorded values stay distinct from zero. This map is a subset, not the complete governed network.</p>
+        <p class="data-note">Charts are calculated from mapped road sections and respond to the filters. Missing values stay distinct from zero. This map is a subset, not the complete governed network.</p>
       </div>
     </section>
   </main>
   <footer><span>UGANDA TRANSPORT GIS</span><a href="#page-title">Back to top</a></footer>
-  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="gis-studio.js" defer></script>
+  <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Open data download" title="Open data download">↓</button></nav>
+  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="gis-studio.js" defer></script><script src="floating-actions.js" defer></script>
 </body>
 </html>
