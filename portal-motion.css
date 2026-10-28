@@ -21,13 +21,14 @@ body::before { content: ""; position: fixed; z-index: 2000; inset: 0 auto auto 0
 .control-card input, .control-card select, .toolbar input, .toolbar select { transition: border-color .25s ease, box-shadow .25s ease, background-color .25s ease; }
 .control-card input:focus, .control-card select:focus, .toolbar input:focus, .toolbar select:focus { border-color: #1ba5b3; box-shadow: 0 0 0 4px #30bdca20; background: #fff; }
 .live-dot { animation: beacon 2.2s ease-in-out infinite; }
-.map-topline { animation: rise-centred .7s .25s var(--motion-ease) backwards; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .control-card { animation: rise-in .8s .35s var(--motion-ease) backwards; }
 .legend-card { animation: rise-in .8s .5s var(--motion-ease) backwards; }
 .metric-card { animation: rise-centred .85s .65s var(--motion-ease) backwards; }
 .mode-detail:not([hidden]) { animation: rise-in .55s var(--motion-ease) backwards; }
 .chart-card, .summary > div, .breakdown, .records, .schema { transition: transform .35s var(--motion-ease), box-shadow .35s var(--motion-ease), border-color .35s ease; }
-.chart-card { position: relative; overflow: hidden; background: linear-gradient(145deg, #22303ee8, #17242fe0); -webkit-backdrop-filter: blur(14px) saturate(1.12); backdrop-filter: blur(14px) saturate(1.12); --card-accent: #ff8b51; }
+.chart-card { position: relative; overflow: hidden; min-height: 310px; background: linear-gradient(145deg, #22303ee8, #17242fe0); -webkit-backdrop-filter: blur(14px) saturate(1.12); backdrop-filter: blur(14px) saturate(1.12); --card-accent: #ff8b51; }
+.chart-card canvas { height: 225px !important; }
 .summary > div, .breakdown, .records, .schema { background: #ffffffdc; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
 .chart-card:nth-child(3n + 2) { --card-accent: #55d79c; }
 .chart-card:nth-child(3n) { --card-accent: #c68bff; }

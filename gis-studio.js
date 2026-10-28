@@ -3,9 +3,13 @@
   const $ = id => document.getElementById(id);
   const format = new Intl.NumberFormat('en-UG', { maximumFractionDigits: 1 });
   const filters = { search: '', region: '', surface: '', condition: '' };
-  const map = L.map('gis-map', { zoomControl: false, preferCanvas: true, scrollWheelZoom: false }).setView([1.3, 32.3], 7);
+  const map = L.map('gis-map', { zoomControl: false, preferCanvas: true, scrollWheelZoom: true, wheelPxPerZoomLevel: 120 }).setView([1.3, 32.3], 7);
   const ugandaExtent = L.latLngBounds([[-1.6, 29.4], [4.35, 35.2]]);
-  const showUgandaExtent = () => map.fitBounds(ugandaExtent, { padding: [18, 18], maxZoom: 7, animate: false });
+  const mapAspect = () => { const size = map.getSize(); return size.x / Math.max(1, size.y); };
+  const showUgandaExtent = () => map.fitBounds(ugandaExtent, { padding: mapAspect() < .8 ? [12, 12] : [18, 18], maxZoom: 7, animate: false });
+  const reportZoom = () => { map.getContainer().dataset.zoom = String(map.getZoom()); };
+  map.on('zoomend', reportZoom);
+  reportZoom();
   L.control.zoom({ position: 'bottomright' }).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 19, attribution: 'Imagery: Esri and contributors',
@@ -21,21 +25,26 @@
   map.getPane('allRoads').style.pointerEvents = 'none';
   let allRoadsOverlay = null;
   let allRoadsKind = '';
+  let allRoadsLayout = '';
   fetch('geo/allroads-display.json').then(async response => {
     if (!response.ok) throw new Error(`Expanded road geometry returned ${response.status}`);
     const manifest = await response.json();
     if (manifest.crs !== 'EPSG:4326' || manifest.geometry_count !== 389366 || !Array.isArray(manifest.bounds)) throw new Error('Expanded road geometry metadata mismatch');
     const refresh = () => {
-      const kind = map.getZoom() >= 9 ? 'detail' : 'overview';
-      if (kind === allRoadsKind) return;
+      const layout = mapAspect() < .8 ? 'portrait' : 'landscape';
+      const kind = map.getZoom() >= (layout === 'portrait' ? 8 : 9) ? 'detail' : 'overview';
+      map.getContainer().dataset.aspect = layout;
+      if (kind === allRoadsKind && layout === allRoadsLayout) return;
       if (allRoadsOverlay) map.removeLayer(allRoadsOverlay);
       allRoadsKind = kind;
-      allRoadsOverlay = L.imageOverlay(manifest.images[kind], manifest.bounds, { pane: 'allRoads', opacity: .94, interactive: false, alt: 'Mapped National and DUCAR road geometry' });
+      allRoadsLayout = layout;
+      allRoadsOverlay = L.imageOverlay(manifest.images[kind], manifest.bounds, { pane: 'allRoads', opacity: layout === 'portrait' ? .9 : .94, interactive: false, alt: 'Mapped National and DUCAR road geometry' });
       allRoadsOverlay.on('load', () => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded National and DUCAR geometry shown. Search and charts cover a smaller subset.'; });
       allRoadsOverlay.on('error', () => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded geometry unavailable. The searchable subset remains visible.'; });
       allRoadsOverlay.addTo(map);
     };
     map.on('zoomend', refresh);
+    map.on('resize', refresh);
     refresh();
   }).catch(error => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded geometry unavailable. The searchable subset remains visible.'; console.error('Expanded road geometry unavailable', error); });
   let features = [];
@@ -98,21 +107,24 @@
     return panel;
   }
 
+  function roadStyle(feature) {
+    const p = feature.properties || {};
+    const isDucar = p['Road Type'] === 'DUCAR';
+    const isCommunity = p['Road Cla 1'] === 'Community Access Road';
+    const isPaved = surface(p) === 'Paved';
+    const aspectWeight = mapAspect() < .8 ? .78 : mapAspect() > 1.6 ? 1.08 : 1;
+    return {
+      color: isPaved ? (isDucar ? '#4e595e' : '#111111') : isCommunity ? '#e4ddca' : isDucar ? '#d8ba7b' : '#ee884e',
+      weight: (isPaved ? (isDucar ? 1.4 : 2.7) : isCommunity ? .8 : isDucar ? 1.2 : 1.8) * aspectWeight,
+      opacity: isCommunity ? .68 : .95,
+      dashArray: null,
+    };
+  }
+
   function drawMap(visible) {
     if (roadLayer) map.removeLayer(roadLayer);
     roadLayer = L.geoJSON(visible, {
-      style: feature => {
-        const p = feature.properties || {};
-        const isDucar = p['Road Type'] === 'DUCAR';
-        const isCommunity = p['Road Cla 1'] === 'Community Access Road';
-        const isPaved = surface(p) === 'Paved';
-        return {
-          color: isPaved ? (isDucar ? '#4e595e' : '#111111') : isCommunity ? '#e4ddca' : isDucar ? '#d8ba7b' : '#ee884e',
-          weight: isPaved ? (isDucar ? 1.4 : 2.7) : isCommunity ? .8 : isDucar ? 1.2 : 1.8,
-          opacity: isCommunity ? .68 : .95,
-          dashArray: null,
-        };
-      },
+      style: roadStyle,
       onEachFeature: (feature, layer) => {
         layer.bindPopup(popup(feature.properties || {}), { maxWidth: 300 });
         const baseWeight = layer.options.weight;
@@ -121,6 +133,7 @@
       }
     }).addTo(map);
   }
+  map.on('resize', () => { if (roadLayer) roadLayer.setStyle(roadStyle); });
 
   function tally(items, key, measure) {
     const result = new Map();
@@ -133,16 +146,34 @@
     return result;
   }
 
-  function chart(id, labels, values, colours, horizontal = false) {
+  function chart(id, labels, values, colours, horizontal = false, type = 'bar') {
     charts[id]?.destroy();
+    const circular = ['doughnut', 'pie', 'polarArea'].includes(type);
+    const radial = circular || type === 'radar';
+    const dataset = {
+      data: values,
+      backgroundColor: type === 'radar' ? '#c68bff40' : colours,
+      borderColor: type === 'radar' ? '#c68bff' : circular ? '#182633' : 'transparent',
+      borderWidth: radial ? 2 : 0,
+      borderRadius: type === 'bar' ? 5 : 0,
+      maxBarThickness: 36,
+      pointBackgroundColor: type === 'radar' ? '#c68bff' : colours,
+      pointBorderColor: '#fff',
+      pointRadius: type === 'line' ? 6 : 3,
+      pointHoverRadius: 9,
+      showLine: type !== 'line',
+      hoverOffset: circular ? 8 : 0,
+    };
     charts[id] = new Chart($(id), {
-      type: 'bar',
-      data: { labels, datasets: [{ data: values, backgroundColor: colours, borderRadius: 5, maxBarThickness: 36 }] },
+      type,
+      data: { labels, datasets: [dataset] },
       options: {
         responsive: true, maintainAspectRatio: false, indexAxis: horizontal ? 'y' : 'x',
         animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 700, easing: 'easeOutQuart' },
-        plugins: { legend: { display: false }, tooltip: { callbacks: { label: context => format.format(context.parsed[horizontal ? 'x' : 'y']) } } },
-        scales: {
+        plugins: { legend: { display: circular, position: 'bottom', labels: { color: '#d4e2e8', boxWidth: 7, boxHeight: 7, padding: 5, font: { size: 9 } } }, tooltip: { callbacks: { label: context => format.format(Number(context.raw)) } } },
+        scales: type === 'radar' || type === 'polarArea' ? {
+          r: { beginAtZero: true, angleLines: { color: '#ffffff25' }, grid: { color: '#ffffff25' }, pointLabels: { color: '#d4e2e8', font: { size: 10 } }, ticks: { display: false } }
+        } : circular ? {} : {
           x: { grid: { display: false }, ticks: { color: '#b6c7d0', font: { size: 10 } } },
           y: { beginAtZero: true, grid: { color: '#ffffff18' }, ticks: { color: '#b6c7d0', font: { size: 10 } } }
         },
@@ -166,36 +197,31 @@
     $('selection-summary').textContent = `Mapped National and DUCAR roads shown`;
     $('map-status').textContent = 'Road network on map';
     const surfaceData = tally(visible, surface, length);
-    chart('surface-chart', ['Paved', 'Unpaved', 'Not supplied'], ['Paved', 'Unpaved', 'Not supplied'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db']);
-    const conditionData = tally(visible, condition, () => 1);
-    chart('condition-chart', ['Good', 'Fair', 'Poor', 'Not supplied'], ['Good', 'Fair', 'Poor', 'Not supplied'].map(k => conditionData.get(k) || 0), ['#34d889', '#ffd166', '#ff6176', '#c8d2db']);
+    chart('surface-chart', ['Paved', 'Unpaved', 'Not supplied'], ['Paved', 'Unpaved', 'Not supplied'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db'], false, 'doughnut');
+    const conditionData = tally(visible, condition, length);
+    chart('condition-chart', ['Good', 'Fair', 'Poor', 'Not supplied'], ['Good', 'Fair', 'Poor', 'Not supplied'].map(k => conditionData.get(k) || 0), ['#34d889', '#ffd166', '#ff6176', '#c8d2db'], false, 'polarArea');
     const regionData = tally(visible, p => value(p, 'Region') || 'Not supplied', length);
     const regions = Array.from(new Set(features.map(f => value(f.properties || {}, 'Region') || 'Not supplied'))).sort();
     chart('region-chart', regions, regions.map(k => regionData.get(k) || 0), '#ff8b51', true);
     const classes = [...new Set(features.map(feature => category(feature.properties || {}, 'Road Cla 1')))].sort();
     const classLengths = tally(visible, p => category(p, 'Road Cla 1'), length);
     chart('class-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => classLengths.get(k) || 0), '#c68bff');
-    const trafficGroups = new Map(classes.map(k => [k, { total: 0, count: 0 }]));
+    const trafficGroups = new Map(classes.map(k => [k, 0]));
     for (const feature of visible) {
       const p = feature.properties || {};
       const key = category(p, 'Road Cla 1');
       const aadt = recordedNumber(p, 'Aadt 2026 Live');
       if (trafficGroups.has(key) && aadt !== null) {
-        const group = trafficGroups.get(key);
-        group.total += aadt;
-        group.count++;
+        trafficGroups.set(key, trafficGroups.get(key) + (length(p) || 0));
       }
     }
-    chart('traffic-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => {
-      const group = trafficGroups.get(k);
-      return group.count ? group.total / group.count : null;
-    }), '#ffaf62');
-    const risk = tally(visible, p => category(p, 'Road Safety Risk Band'), () => 1);
+    chart('traffic-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => trafficGroups.get(k)), '#ffaf62', false, 'line');
+    const risk = tally(visible, p => category(p, 'Road Safety Risk Band'), length);
     const risks = ['Low', 'Moderate', 'High', 'Critical', 'Not supplied'];
-    chart('safety-chart', risks, risks.map(k => risk.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], true);
-    const priority = tally(visible, p => category(p, 'Intervention Priority Band'), () => 1);
+    chart('safety-chart', risks, risks.map(k => risk.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], false, 'pie');
+    const priority = tally(visible, p => category(p, 'Intervention Priority Band'), length);
     const priorities = ['Low', 'Moderate', 'High', 'Critical', 'Not supplied'];
-    chart('priority-chart', priorities, priorities.map(k => priority.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], true);
+    chart('priority-chart', priorities, priorities.map(k => priority.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], false, 'radar');
   }
 
   const transportModes = {

@@ -38,7 +38,7 @@
     <section id="explore" class="explorer" aria-label="Interactive road network explorer">
       <div class="map-shell">
         <div id="gis-map" class="map" role="application" aria-label="Map of the portal's transport geometry"></div>
-        <div class="map-topline"><span class="live-dot" aria-hidden="true"></span> UGANDA TRANSPORT GIS <span id="map-status" role="status">Loading mapped roads</span></div>
+        <span id="map-status" class="screen-reader-only" role="status">Loading mapped roads</span>
         <div class="floating-card control-card">
           <div class="card-heading"><span>Explore network</span><button id="reset-filters" type="button" class="quiet-button">Reset</button></div>
           <label for="road-search">Find a road</label><input id="road-search" type="search" placeholder="Road name or number" autocomplete="off">
@@ -46,7 +46,7 @@
           <label for="condition-filter">Condition</label><select id="condition-filter"><option value="">All available</option><option>Good</option><option>Fair</option><option>Poor</option><option value="Not supplied">Not supplied</option></select>
           <p class="filter-help">Filters update the map and charts together.</p>
         </div>
-        <div class="floating-card legend-card"><p class="micro-label">ROAD LINES</p><div><span class="legend-swatch paved"></span>National paved roads</div><div><span class="legend-swatch paved-ducar"></span>DUCAR paved roads</div><div><span class="legend-swatch good"></span>National unpaved roads</div><div><span class="legend-swatch ducar"></span>DUCAR unpaved roads</div><div><span class="legend-swatch community"></span>Community access roads</div><p id="allroads-coverage" class="legend-note" role="status">Loading expanded road geometry.</p></div>
+        <div class="floating-card legend-card"><p class="micro-label">ROAD LINES</p><div><span class="legend-swatch paved"></span>National paved roads</div><div><span class="legend-swatch paved-ducar"></span>DUCAR paved roads</div><div><span class="legend-swatch good"></span>National unpaved roads</div><div><span class="legend-swatch ducar"></span>DUCAR unpaved roads</div><div><span class="legend-swatch community"></span>Community access roads</div></div>
         <div class="floating-card metric-card"><p id="metric-kind" class="micro-label">ROADS</p><div class="single-metric"><strong id="metric-value">-</strong><span id="metric-label">Mapped road length (km)</span></div><p id="metric-note">Search and charts use the mapped subset. The expanded road backdrop is visual only.</p></div>
       </div>
       <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Mapped features</h2><p id="mode-description"></p><a id="mode-table-link" href="./data-explorer.html">Open related tables ↗</a></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas></div></div>
@@ -54,14 +54,14 @@
         <div class="analysis-title"><div><p class="eyebrow">LIVE ANALYSIS</p><h2>Patterns in the mapped roads</h2></div><p id="selection-summary">All mapped roads</p></div>
         <div class="chart-grid">
           <article id="surface-view" class="chart-card"><div class="chart-header"><h3>Surface type</h3><span>Mapped length (km)</span></div><canvas id="surface-chart" role="img" aria-label="Surface type length chart"></canvas></article>
-          <article id="condition-view" class="chart-card"><div class="chart-header"><h3>Condition</h3><span>Number of roads</span></div><canvas id="condition-chart" role="img" aria-label="Condition road count chart"></canvas></article>
+          <article id="condition-view" class="chart-card"><div class="chart-header"><h3>Condition</h3><span>Mapped length by condition (km)</span></div><canvas id="condition-chart" role="img" aria-label="Mapped road length by condition chart"></canvas></article>
           <article id="region-view" class="chart-card"><div class="chart-header"><h3>Sub-region</h3><span>Mapped length (km)</span></div><canvas id="region-chart" role="img" aria-label="Sub-region length chart"></canvas></article>
           <article id="class-view" class="chart-card"><div class="chart-header"><h3>Road class</h3><span>Mapped length (km)</span></div><canvas id="class-chart" role="img" aria-label="Road class length chart"></canvas></article>
-          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic</h3><span>Mean available AADT by class</span></div><canvas id="traffic-chart" role="img" aria-label="Mean AADT by road class chart"></canvas><p class="chart-caveat">The AADT field is displayed as supplied. Its measurement method is not confirmed here.</p></article>
-          <article id="safety-view" class="chart-card"><div class="chart-header"><h3>Safety</h3><span>Roads by risk band</span></div><canvas id="safety-chart" role="img" aria-label="Safety risk band road count chart"></canvas><p class="chart-caveat">Risk-band method is not confirmed here.</p></article>
-          <article id="priority-view" class="chart-card"><div class="chart-header"><h3>Priority</h3><span>Roads by priority band</span></div><canvas id="priority-chart" role="img" aria-label="Intervention priority band road count chart"></canvas><p class="chart-caveat">Priority-band method is not confirmed here.</p></article>
+          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic coverage</h3><span>Mapped length with AADT (km)</span></div><canvas id="traffic-chart" role="img" aria-label="Mapped road length with available AADT by class chart"></canvas><p class="chart-caveat">AADT availability is shown by road length. Its measurement method is not confirmed here.</p></article>
+          <article id="safety-view" class="chart-card"><div class="chart-header"><h3>Safety</h3><span>Mapped length by risk band (km)</span></div><canvas id="safety-chart" role="img" aria-label="Mapped road length by safety risk band chart"></canvas><p class="chart-caveat">Risk-band method is not confirmed here.</p></article>
+          <article id="priority-view" class="chart-card"><div class="chart-header"><h3>Priority</h3><span>Mapped length by priority band (km)</span></div><canvas id="priority-chart" role="img" aria-label="Mapped road length by intervention priority band chart"></canvas><p class="chart-caveat">Priority-band method is not confirmed here.</p></article>
         </div>
-        <p class="data-note">Charts are calculated from mapped roads and respond to the filters. Missing values stay distinct from zero. This map is a subset, not the complete governed network.</p>
+        <p class="data-note">All road charts show mapped kilometres and respond to the filters. Missing values stay distinct from zero. This map is a subset, not the complete governed network.</p>
       </div>
     </section>
   </main>
