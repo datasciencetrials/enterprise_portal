@@ -13,6 +13,9 @@
     <link rel="modulepreload" crossorigin href="/enterprise_portal/assets/vendor-mapbox-D3_-FEL-.js">
     <link rel="stylesheet" crossorigin href="/enterprise_portal/assets/index-Yto0uED7.css">
     <link rel="stylesheet" href="/enterprise_portal/light-apple-theme.css">
+    <link rel="stylesheet" href="/enterprise_portal/transport-nav.css">
+    <link rel="stylesheet" href="/enterprise_portal/vendor/leaflet.min.css">
+    <link rel="stylesheet" href="/enterprise_portal/portal-home.css">
     <style>.gis-studio-link{position:fixed;right:20px;bottom:20px;z-index:3000;display:inline-block;padding:12px 16px;border-radius:999px;background:#10212c;color:#fff!important;box-shadow:0 8px 26px #0004;font:600 13px -apple-system,BlinkMacSystemFont,Arial,sans-serif;text-decoration:none}.gis-studio-link:hover{background:#006e88}.gis-studio-link:focus-visible{outline:3px solid #28c2d3;outline-offset:3px}@media(max-width:700px){.gis-studio-link{right:12px;bottom:12px;padding:10px 13px;font-size:11px}}</style>
     <style>
       /* Keep the restored desktop interface intact while making the public
@@ -135,7 +138,53 @@
     </style>
   </head>
   <body>
-    <div id="root"></div>
-    <a class="gis-studio-link" href="./gis-studio.html">Explore GIS studio ↗</a>
+    <nav class="transport-nav" aria-label="Uganda transport portal">
+      <a class="transport-tab active" aria-current="page" href="./">Main portal</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=explore#explore">Explore</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=roads#explore">Roads</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=bridges#explore">Bridges</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=traffic#explore">Traffic</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=ferries#explore">Ferries</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=aviation#explore">Aviation</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=safety#explore">Safety</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=freight#explore">Freight</a>
+      <a class="transport-tab" href="./gis-studio.html?mode=rail-water#explore">Rail and water</a>
+    </nav>
+    <main id="portal-home">
+      <section class="portal-hero">
+        <div class="portal-hero-copy">
+          <p class="portal-kicker">UGANDA TRANSPORT INTELLIGENCE</p>
+          <h1>One view of a <em>moving nation.</em></h1>
+          <p>Explore the road network and mapped transport assets through an interactive geographic view. Figures and map samples are clearly separated.</p>
+          <div class="portal-actions"><a class="portal-primary" href="./gis-studio.html?mode=explore#explore">Explore the map <span aria-hidden="true">↗</span></a><button id="open-workspace" type="button">Open data workspace</button></div>
+        </div>
+        <div class="portal-hero-mark" aria-hidden="true"><span>UG</span><small>TRANSPORT<br>GIS</small></div>
+      </section>
+      <section class="portal-stat-row" aria-label="Approved network figures">
+        <div class="portal-stat"><span>Total network</span><strong>248,616.14 <small>km</small></strong></div>
+        <div class="portal-stat"><span>National roads</span><strong>21,302 <small>km</small></strong></div>
+        <div class="portal-stat"><span>Total paved</span><strong>11,762.8 <small>km</small></strong></div>
+        <div class="portal-stat"><span>Bridges, FY 2026/27</span><strong>552</strong></div>
+        <div class="portal-stat"><span>Analysed links</span><strong>404,047</strong></div>
+      </section>
+      <section class="portal-map-section" aria-labelledby="portal-map-title">
+        <div class="portal-section-heading"><div><p class="portal-kicker">EXPLORE THE NETWORK</p><h2 id="portal-map-title">A live geographic canvas.</h2></div><p>Hybrid imagery with labels and borders. The coloured lines below show only the records mapped in this portal.</p></div>
+        <div class="portal-map-wrap"><div id="portal-map" role="application" aria-label="Hybrid imagery map of mapped Uganda road links"></div>
+          <div class="portal-map-overlay portal-map-control"><label for="portal-surface">Surface type</label><select id="portal-surface"><option value="">All mapped</option><option value="Paved">Paved</option><option value="Unpaved">Unpaved</option></select><p id="portal-map-status" role="status">Loading mapped links</p></div>
+          <div class="portal-map-overlay portal-map-metric"><span>MAPPED SUBSET</span><strong id="portal-visible-count">-</strong><small>road links visible</small><a href="./gis-studio.html?mode=roads#explore">Open full explorer ↗</a></div>
+        </div>
+      </section>
+      <section class="portal-mode-grid" aria-label="Transport layers">
+        <a href="./gis-studio.html?mode=roads#explore"><span>01</span><strong>Roads</strong><small>Mapped links and conditions</small></a>
+        <a href="./gis-studio.html?mode=bridges#explore"><span>02</span><strong>Bridges</strong><small>Structures and major culverts</small></a>
+        <a href="./gis-studio.html?mode=traffic#explore"><span>03</span><strong>Traffic</strong><small>Count station geography</small></a>
+        <a href="./gis-studio.html?mode=rail-water#explore"><span>04</span><strong>Rail and water</strong><small>MGR, SGR alignment and ferries</small></a>
+        <a href="./gis-studio.html?mode=aviation#explore"><span>05</span><strong>Aviation</strong><small>Mapped airport locations</small></a>
+      </section>
+      <footer class="portal-footer">Uganda Transport GIS <span>Mapped views are subsets unless stated otherwise.</span></footer>
+    </main>
+    <div id="root" hidden></div>
+    <script src="/enterprise_portal/vendor/leaflet.min.js"></script>
+    <script src="/enterprise_portal/portal-home.js" defer></script>
   </body>
 </html>

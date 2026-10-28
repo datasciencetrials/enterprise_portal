@@ -1,0 +1,40 @@
+.transport-nav {
+  position: relative;
+  z-index: 3001;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  box-sizing: border-box;
+  padding: 8px 14px;
+  height: 96px;
+  background: #f8fafb;
+  border-bottom: 1px solid #dce4e8;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+.transport-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 0;
+  border-radius: 12px;
+  padding: 8px 10px;
+  color: #193042;
+  background: #fff;
+  border: 1px solid #dbe5e9;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.transport-tab:hover, .transport-tab:focus-visible { border-color: #1594a3; background: #effbfd; }
+.transport-tab:focus-visible { outline: 3px solid #1594a3; outline-offset: 1px; }
+.transport-tab.active { color: #fff; background: #123f4c; border-color: #123f4c; }
+#root { height: calc(100svh - 96px); min-height: 0; }
+#root .app-container { height: 100% !important; min-height: 0 !important; }
+@media (max-width: 700px) {
+  .transport-nav { grid-template-columns: repeat(5, minmax(105px, 1fr)); overflow-x: auto; overflow-y: hidden; padding: 7px; gap: 5px; height: 98px; }
+  .transport-tab { font-size: 11px; padding: 6px 4px; }
+  #root { height: calc(100svh - 98px); }
+}
