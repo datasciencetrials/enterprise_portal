@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="gis-studio-map.css">
   <link rel="stylesheet" href="gis-studio-tabs.css?v=20261029-rail">
   <link rel="stylesheet" href="portal-motion.css">
+  <link rel="stylesheet" href="transport-photos.css?v=20261029-local">
 </head>
 <body>
   <a class="skip-link" href="#gis-map">Skip to map</a>
@@ -34,6 +35,16 @@
     <section class="intro" aria-labelledby="page-title">
       <div class="intro-copy"><p id="intro-kicker" class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">See how Uganda moves.<br><em>Explore the network.</em></h1><p id="intro-note" class="intro-note">Explore mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities. Each view identifies the mapped features available here without presenting a partial map as a national total.</p></div>
       <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong id="intro-aside-title">Interactive map and tables</strong></p><a id="intro-table-link" href="./data-explorer.html">Open explorer <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="transport-photos" aria-label="Uganda transport photo carousel" aria-roledescription="carousel">
+      <div class="transport-photos-track">
+        <figure class="transport-photo is-active" aria-hidden="false"><img src="media/kapchorwa-suam-road.webp" alt="Winding paved Kapchorwa-Suam road through terraced hills" width="1800" height="880" fetchpriority="high"><figcaption><span>ROAD NETWORK</span><strong>Kapchorwa-Suam road</strong></figcaption></figure>
+        <figure class="transport-photo" aria-hidden="true"><img src="media/source-of-the-nile-bridge.webp" alt="Aerial view of the cable-stayed Source of the Nile Bridge over the river" width="1800" height="1013" loading="lazy"><figcaption><span>BRIDGES</span><strong>Source of the Nile Bridge</strong></figcaption></figure>
+        <figure class="transport-photo" aria-hidden="true"><img src="media/mv-kyoga-ii.webp" alt="MV Kyoga II ferry on the water" width="1800" height="1200" loading="lazy"><figcaption><span>FERRIES</span><strong>MV Kyoga II</strong></figcaption></figure>
+        <figure class="transport-photo" aria-hidden="true"><img src="media/kampala-northern-bypass.webp" alt="Traffic moving along the divided Kampala Northern Bypass" width="1800" height="1013" loading="lazy"><figcaption><span>URBAN ROADS</span><strong>Kampala Northern Bypass</strong></figcaption></figure>
+      </div>
+      <div class="transport-photos-controls"><button type="button" class="transport-photo-arrow" data-photo-action="previous" aria-label="Previous photograph">←</button><div class="transport-photo-dots" aria-label="Choose photograph"><button type="button" class="is-active" data-photo-index="0" aria-label="Show Kapchorwa-Suam road" aria-current="true"></button><button type="button" data-photo-index="1" aria-label="Show Source of the Nile Bridge"></button><button type="button" data-photo-index="2" aria-label="Show MV Kyoga II ferry"></button><button type="button" data-photo-index="3" aria-label="Show Kampala Northern Bypass"></button></div><button type="button" class="transport-photo-arrow" data-photo-action="next" aria-label="Next photograph">→</button><button type="button" class="transport-photo-pause" data-photo-action="pause" aria-label="Pause automatic rotation" aria-pressed="false">Pause</button></div>
+      <p class="screen-reader-only" id="transport-photo-status" role="status" aria-live="polite"></p>
     </section>
     <section id="explore" class="explorer" aria-label="Interactive road network explorer">
       <div class="map-shell">
@@ -70,6 +81,6 @@
   </main>
   <footer><span>UGANDA TRANSPORT GIS</span><a href="./">Return to enterprise portal</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Download selected map data as CSV" title="Download selected map data as CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261029-bms" defer></script><script src="gis-studio.js?v=20261029-rail" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script>
+  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261029-bms" defer></script><script src="gis-studio.js?v=20261029-rail" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script><script src="transport-photos.js?v=20261029-local" defer></script>
 </body>
 </html>
