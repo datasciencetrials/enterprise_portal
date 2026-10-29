@@ -4,6 +4,13 @@
   const format = new Intl.NumberFormat('en-UG', { maximumFractionDigits: 1 });
   const filters = { search: '', region: '', surface: '', condition: '' };
   const map = L.map('gis-map', { zoomControl: false, preferCanvas: true, scrollWheelZoom: true, wheelPxPerZoomLevel: 120 }).setView([1.3, 32.3], 7);
+  const mapContainer = map.getContainer();
+  const activateWheelZoom = () => {
+    map.scrollWheelZoom.enable();
+    if (document.activeElement !== mapContainer) mapContainer.focus({ preventScroll: true });
+  };
+  mapContainer.addEventListener('pointerenter', activateWheelZoom);
+  mapContainer.addEventListener('wheel', activateWheelZoom, { capture: true, passive: true });
   const ugandaExtent = L.latLngBounds([[-1.6, 29.4], [4.35, 35.2]]);
   const mapAspect = () => { const size = map.getSize(); return size.x / Math.max(1, size.y); };
   const showUgandaExtent = () => map.fitBounds(ugandaExtent, { padding: mapAspect() < .8 ? [12, 12] : [18, 18], maxZoom: 7, animate: false });
