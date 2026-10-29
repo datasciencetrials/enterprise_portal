@@ -1,8 +1,10 @@
 (() => {
   const carousel = document.querySelector('.transport-photos');
   if (!carousel) return;
-  const slides = [...carousel.querySelectorAll('.transport-photo')];
-  const dots = [...carousel.querySelectorAll('[data-photo-index]')];
+  const track = carousel.querySelector('.transport-photos-track');
+  const dotContainer = carousel.querySelector('.transport-photo-dots');
+  let slides = [...carousel.querySelectorAll('.transport-photo')];
+  let dots = [...carousel.querySelectorAll('[data-photo-index]')];
   const status = carousel.querySelector('#transport-photo-status');
   const pauseButton = carousel.querySelector('[data-photo-action="pause"]');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -19,7 +21,7 @@
   const stop = () => { window.clearInterval(timer); timer = undefined; };
   const start = () => {
     stop();
-    if (!paused && !document.hidden && !carousel.matches(':hover') && !carousel.contains(document.activeElement)) {
+    if (!paused && !document.hidden && slides.length > 1) {
       timer = window.setInterval(() => show(active + 1, false), 6000);
     }
   };
@@ -66,10 +68,6 @@
     touchStart = null;
     if (Math.abs(delta) > 45) show(active + (delta < 0 ? 1 : -1));
   }, {passive:true});
-  carousel.addEventListener('mouseenter', stop);
-  carousel.addEventListener('mouseleave', start);
-  carousel.addEventListener('focusin', stop);
-  carousel.addEventListener('focusout', () => window.setTimeout(start, 0));
   document.addEventListener('visibilitychange', start);
   prefersReducedMotion.addEventListener('change', event => {
     paused = event.matches;
@@ -78,5 +76,37 @@
     pauseButton.setAttribute('aria-pressed', String(paused));
     start();
   });
+  fetch('media/transport-gallery.json')
+    .then(response => { if (!response.ok) throw new Error('Gallery unavailable'); return response.json(); })
+    .then(photos => {
+      photos.forEach(photo => {
+        const figure = document.createElement('figure');
+        figure.className = 'transport-photo';
+        figure.setAttribute('aria-hidden', 'true');
+        const img = document.createElement('img');
+        img.src = `media/${photo.file}`;
+        img.alt = photo.alt;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        figure.append(img);
+        const caption = document.createElement('figcaption');
+        const category = document.createElement('span');
+        category.textContent = photo.category;
+        const title = document.createElement('strong');
+        title.textContent = photo.title;
+        caption.append(category, title);
+        figure.append(caption);
+        track.append(figure);
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.dataset.photoIndex = String(slides.length);
+        dot.setAttribute('aria-label', `Show ${photo.title}`);
+        dotContainer.append(dot);
+        slides.push(figure);
+        dots.push(dot);
+      });
+      start();
+    })
+    .catch(() => start());
   start();
 })();
