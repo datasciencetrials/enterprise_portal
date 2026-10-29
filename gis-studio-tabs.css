@@ -28,12 +28,14 @@
 .mode-chart-wrap { min-width: 0; height: 275px; }
 .mode-chart-wrap canvas { max-width: 100%; max-height: 240px; }
 .mode-chart-wrap p { margin: 3px 0 0; color: #607681; font-size: 11px; text-align: center; }
-.chart-gallery { border-top: 1px solid #ffffff20; padding-top: 36px; }
-.chart-gallery .gallery-grid { margin-top: 20px; }
-.gallery-card { min-height: 306px; }
+.chart-gallery { border-top: 1px solid #ffffff20; padding-top: 30px; }
+.chart-gallery .gallery-grid { margin-top: 18px; }
+.gallery-card { min-height: 270px; padding: 18px 20px; }
 .gallery-card .chart-header h3 { line-height: 1.35; }
-.gallery-card canvas { height: 205px !important; }
-.chart-download { margin-top: 12px; padding: 7px 11px; border: 1px solid #5e8292; border-radius: 8px; background: #263845; color: #ecf7f8; font: 600 11px/1.2 -apple-system,BlinkMacSystemFont,Arial,sans-serif; cursor: pointer; }
+.gallery-card canvas { height: 205px !important; margin-top: 10px; }
+.gallery-card-actions { display: flex; align-items: center; gap: 10px; flex: none; }
+.chart-unit { color: #a6bac4; font-size: 11px; }
+.chart-download { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 1px solid #5e8292; border-radius: 7px; background: transparent; color: #ecf7f8; font: 600 16px/1 -apple-system,BlinkMacSystemFont,Arial,sans-serif; cursor: pointer; }
 .chart-download:hover,.chart-download:focus-visible { background: #0d7e8d; }
 .map-tools { position: absolute; z-index: 600; top: 50%; right: 14px; transform: translateY(-50%); display: grid; gap: 4px; padding: 5px; border-radius: 12px; background: #0d1d29df; backdrop-filter: blur(10px); box-shadow: 0 8px 28px #0006; }
 .map-tools button { width: 38px; height: 38px; border: 1px solid #ffffff3a; border-radius: 8px; background: #213949; color: #fff; font: 700 13px/1 -apple-system,BlinkMacSystemFont,Arial,sans-serif; cursor: pointer; }

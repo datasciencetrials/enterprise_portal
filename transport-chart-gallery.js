@@ -53,7 +53,7 @@
       for (const item of items) { const key = dim.get(item.properties || {}); groups.set(key, (groups.get(key) || 0) + 1); }
       return { ...dim, groups };
     }).filter(dim => dim.groups.size > 1);
-    const specs = valid.map(dim => ({ dimension: dim, title: `${dim.label}, all mapped ${mode}`, subset: null }));
+    const specs = valid.map(dim => ({ dimension: dim, title: dim.label, subset: null }));
     const strata = valid.filter(dim => dim.groups.size <= 12);
     const buckets = strata.map(subset => {
       const views = [];
@@ -106,12 +106,12 @@
           y: { beginAtZero: true, ticks: { color: '#b6c7d0' }, grid: { color: '#ffffff19' } } } }
     });
     chartInstances.push(instance);
-    canvas.parentElement.querySelector('.chart-type').textContent = `${type} chart`;
     return instance;
   }
 
   let currentMode = 'roads';
   function modeLabel() { return currentMode === 'roads' || currentMode === 'rail' ? 'km' : 'mapped features'; }
+  function modeUnit() { return currentMode === 'roads' || currentMode === 'rail' ? 'km' : 'count'; }
   function render(mode, catalogueItems, visibleItems, measure) {
     currentMode = mode;
     generation++;
@@ -122,9 +122,8 @@
     gallery.replaceChildren();
     gallery.hidden = false;
     const heading = document.createElement('div'); heading.className = 'analysis-title';
-    const title = document.createElement('h2'); title.textContent = `${mode === 'roads' ? 'Roads' : mode[0].toUpperCase() + mode.slice(1)} chart gallery`;
-    const note = document.createElement('p'); note.textContent = `${modeLabel() === 'km' ? 'Mapped kilometres' : 'Mapped feature counts'}. Charts render as you scroll.`;
-    heading.append(title, note); gallery.append(heading);
+    const title = document.createElement('h2'); title.textContent = `${mode === 'roads' ? 'Roads' : mode[0].toUpperCase() + mode.slice(1)} by category`;
+    heading.append(title); gallery.append(heading);
     const grid = document.createElement('div'); grid.className = 'chart-grid gallery-grid'; gallery.append(grid);
     const version = generation;
     observer = new IntersectionObserver(entries => {
@@ -144,16 +143,19 @@
       const card = document.createElement('article'); card.className = 'chart-card gallery-card'; card.dataset.index = String(index);
       const header = document.createElement('div'); header.className = 'chart-header';
       const label = document.createElement('h3'); label.textContent = spec.title;
-      const type = document.createElement('span'); type.className = 'chart-type'; type.textContent = 'Loading chart';
+      const actions = document.createElement('div'); actions.className = 'gallery-card-actions';
+      const unit = document.createElement('span'); unit.className = 'chart-unit'; unit.textContent = modeUnit();
       const canvas = document.createElement('canvas'); canvas.setAttribute('role', 'img'); canvas.setAttribute('aria-label', `${spec.title}, ${modeLabel()}`);
-      const download = document.createElement('button'); download.type = 'button'; download.className = 'chart-download'; download.textContent = 'Download PNG';
+      const download = document.createElement('button'); download.type = 'button'; download.className = 'chart-download'; download.textContent = '↓';
+      download.setAttribute('aria-label', `Download ${spec.title} chart as PNG`);
+      download.title = 'Download PNG';
       download.addEventListener('click', () => {
         if (!Chart.getChart(canvas)) draw(canvas, spec, visibleItems, measure, index);
         Chart.getChart(canvas)?.update('none');
         const slug = spec.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const a = document.createElement('a'); a.href = canvas.toDataURL('image/png'); a.download = `uganda-${mode}-${slug}.png`; a.click();
       });
-      header.append(label, type); card.append(header, canvas, download); grid.append(card); observer.observe(card);
+      actions.append(unit, download); header.append(label, actions); card.append(header, canvas); grid.append(card); observer.observe(card);
     });
     return specs.length;
   }
