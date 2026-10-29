@@ -38,7 +38,7 @@
       if (current) dot.setAttribute('aria-current', 'true');
       else dot.removeAttribute('aria-current');
     });
-    if (announce) status.textContent = `Photograph ${active + 1} of ${slides.length}: ${slides[active].querySelector('strong').textContent}`;
+    if (announce) status.textContent = `Now showing ${slides[active].querySelector('strong').textContent}`;
     start();
   };
   pauseButton.addEventListener('click', () => {

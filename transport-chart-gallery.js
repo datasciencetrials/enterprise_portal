@@ -123,7 +123,7 @@
     gallery.hidden = false;
     const heading = document.createElement('div'); heading.className = 'analysis-title';
     const title = document.createElement('h2'); title.textContent = `${mode === 'roads' ? 'Roads' : mode[0].toUpperCase() + mode.slice(1)} chart gallery`;
-    const note = document.createElement('p'); note.textContent = `${specs.length} charts in this tab. ${modeLabel() === 'km' ? 'Mapped kilometres' : 'Mapped feature counts'}. Charts render as you scroll.`;
+    const note = document.createElement('p'); note.textContent = `${modeLabel() === 'km' ? 'Mapped kilometres' : 'Mapped feature counts'}. Charts render as you scroll.`;
     heading.append(title, note); gallery.append(heading);
     const grid = document.createElement('div'); grid.className = 'chart-grid gallery-grid'; gallery.append(grid);
     const version = generation;
@@ -143,14 +143,15 @@
     specs.forEach((spec, index) => {
       const card = document.createElement('article'); card.className = 'chart-card gallery-card'; card.dataset.index = String(index);
       const header = document.createElement('div'); header.className = 'chart-header';
-      const label = document.createElement('h3'); label.textContent = `${index + 1}. ${spec.title}`;
+      const label = document.createElement('h3'); label.textContent = spec.title;
       const type = document.createElement('span'); type.className = 'chart-type'; type.textContent = 'Loading chart';
       const canvas = document.createElement('canvas'); canvas.setAttribute('role', 'img'); canvas.setAttribute('aria-label', `${spec.title}, ${modeLabel()}`);
       const download = document.createElement('button'); download.type = 'button'; download.className = 'chart-download'; download.textContent = 'Download PNG';
       download.addEventListener('click', () => {
         if (!Chart.getChart(canvas)) draw(canvas, spec, visibleItems, measure, index);
         Chart.getChart(canvas)?.update('none');
-        const a = document.createElement('a'); a.href = canvas.toDataURL('image/png'); a.download = `uganda-${mode}-chart-${index + 1}.png`; a.click();
+        const slug = spec.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        const a = document.createElement('a'); a.href = canvas.toDataURL('image/png'); a.download = `uganda-${mode}-${slug}.png`; a.click();
       });
       header.append(label, type); card.append(header, canvas, download); grid.append(card); observer.observe(card);
     });
