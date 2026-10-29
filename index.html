@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="vendor/leaflet.min.css">
   <link rel="stylesheet" href="gis-studio.css">
   <link rel="stylesheet" href="gis-studio-map.css">
-  <link rel="stylesheet" href="gis-studio-tabs.css">
+  <link rel="stylesheet" href="gis-studio-tabs.css?v=20261029-rail">
   <link rel="stylesheet" href="portal-motion.css">
 </head>
 <body>
@@ -51,7 +51,7 @@
         <div class="floating-card legend-card"><p class="micro-label">ROAD LINES</p><div><span class="legend-swatch paved"></span>National paved roads</div><div><span class="legend-swatch paved-ducar"></span>DUCAR paved roads</div><div><span class="legend-swatch good"></span>National unpaved roads</div><div><span class="legend-swatch ducar"></span>DUCAR unpaved roads</div><div><span class="legend-swatch community"></span>Community access roads</div></div>
       </div>
       <div hidden><span id="metric-kind">ROADS</span><span id="metric-value">-</span><span id="metric-label">Mapped road length (km)</span><span id="metric-note">Search and charts use the mapped subset.</span></div>
-      <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Mapped features</h2><p id="mode-description"></p><a id="mode-table-link" href="./data-explorer.html">Open related tables ↗</a></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas></div></div>
+      <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Mapped features</h2><p id="mode-description"></p><a id="mode-table-link" href="./data-explorer.html">Open related tables ↗</a></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas><p id="mode-chart-unit">Mapped feature counts</p></div></div>
       <div id="road-analysis" class="analysis-panel">
         <div class="analysis-title"><div><p class="eyebrow">LIVE ANALYSIS</p><h2>Patterns in the mapped roads</h2></div><p id="selection-summary">All mapped roads</p></div>
         <div class="chart-grid">
@@ -70,6 +70,6 @@
   </main>
   <footer><span>UGANDA TRANSPORT GIS</span><a href="#page-title">Back to top</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Download selected map data as CSV" title="Download selected map data as CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261029-bms" defer></script><script src="gis-studio.js?v=20261029-bms" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script>
+  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261029-bms" defer></script><script src="gis-studio.js?v=20261029-rail" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script>
 </body>
 </html>

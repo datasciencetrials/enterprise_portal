@@ -344,7 +344,7 @@
     rail: {
       title: 'Rail alignments', files: ['mgr.geojson', 'sgr_alignment.geojson'], colour: '#a58de6', countLabel: 'Mapped rail geometry', statusUnit: 'rail on map',
       group: p => category(p, '_transportKind'),
-      description: 'Mapped MGR line segments and one SGR alignment. The SGR alignment is not evidence of an operating railway. Segment counts are not route length or a national total.',
+      description: 'Mapped MGR line segments and one SGR alignment. Charts show geometry-derived kilometres, not verified operational route length or a national total. The SGR alignment is not evidence of an operating railway.',
       fields: [['Name', 'Name'], ['Status', 'Status']],
     },
   };
@@ -468,9 +468,15 @@
       const items = await loadMode(key);
       if (activeMode !== key) return;
       drawModePoints(items, spec);
-      const groups = tally(items, spec.group, () => 1);
+      const groups = key === 'rail' ? items.reduce((result, item) => {
+        const group = spec.group(item.properties || {});
+        result.set(group, (result.get(group) || 0) + mappedLineKm(item.geometry));
+        return result;
+      }, new Map()) : tally(items, spec.group, () => 1);
       const labels = [...groups.keys()].sort((a, b) => a.localeCompare(b));
       chart('mode-chart', labels, labels.map(label => groups.get(label)), spec.colour, true);
+      $('mode-chart').setAttribute('aria-label', key === 'rail' ? 'Mapped rail geometry by alignment type in kilometres' : `${spec.title} counts by category`);
+      $('mode-chart-unit').textContent = key === 'rail' ? 'Mapped rail geometry (km)' : 'Mapped feature counts';
       window.TransportChartGallery?.render(key, items, items, item => key === 'rail' ? mappedLineKm(item.geometry) : 1);
       $('map-status').textContent = key === 'rail' ? 'MGR and SGR on map' : `${spec.title} on map`;
       $('metric-kind').textContent = key.toUpperCase();

@@ -25,8 +25,9 @@
 .section-tabs a:focus-visible, .section-tabs button:focus-visible { outline: 3px solid #1594a3; outline-offset: 2px; }
 .mode-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, 1fr); gap: 24px; align-items: center; padding: 28px; background: #f5fafb; }
 .mode-detail[hidden], .control-card[hidden], .legend-card[hidden], .analysis-panel[hidden] { display: none !important; }
-.mode-chart-wrap { min-width: 0; height: 250px; }
-.mode-chart-wrap canvas { max-width: 100%; max-height: 250px; }
+.mode-chart-wrap { min-width: 0; height: 275px; }
+.mode-chart-wrap canvas { max-width: 100%; max-height: 240px; }
+.mode-chart-wrap p { margin: 3px 0 0; color: #607681; font-size: 11px; text-align: center; }
 .chart-gallery { border-top: 1px solid #ffffff20; padding-top: 36px; }
 .chart-gallery .gallery-grid { margin-top: 20px; }
 .gallery-card { min-height: 306px; }
