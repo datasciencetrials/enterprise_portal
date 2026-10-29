@@ -24,7 +24,7 @@
   map.createPane('hybridLabels');
   map.getPane('hybridLabels').style.zIndex = 650;
   map.getPane('hybridLabels').style.pointerEvents = 'none';
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+  const labelsLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
     pane: 'hybridLabels', maxZoom: 19, attribution: 'Labels and borders: Esri',
   }).addTo(map);
   map.createPane('allRoads');
@@ -33,7 +33,8 @@
   let allRoadsOverlay = null;
   let allRoadsKind = '';
   let allRoadsLayout = '';
-  fetch('geo/allroads-display.json').then(async response => {
+  let showExpandedRoads = true;
+  fetch('geo/allroads-display.json?v=20261029-bms').then(async response => {
     if (!response.ok) throw new Error(`Expanded road geometry returned ${response.status}`);
     const manifest = await response.json();
     if (manifest.crs !== 'EPSG:4326' || manifest.geometry_count !== 389366 || !Array.isArray(manifest.bounds)) throw new Error('Expanded road geometry metadata mismatch');
@@ -45,10 +46,10 @@
       if (allRoadsOverlay) map.removeLayer(allRoadsOverlay);
       allRoadsKind = kind;
       allRoadsLayout = layout;
-      allRoadsOverlay = L.imageOverlay(manifest.images[kind], manifest.bounds, { pane: 'allRoads', opacity: layout === 'portrait' ? .9 : .94, interactive: false, alt: 'Mapped National and DUCAR road geometry' });
+      allRoadsOverlay = L.imageOverlay(`${manifest.images[kind]}?v=20261029-thin`, manifest.bounds, { pane: 'allRoads', opacity: layout === 'portrait' ? .9 : .94, interactive: false, alt: 'Mapped National and DUCAR road geometry' });
       allRoadsOverlay.on('load', () => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded National and DUCAR geometry shown. Search and charts cover a smaller subset.'; });
       allRoadsOverlay.on('error', () => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded geometry unavailable. The searchable subset remains visible.'; });
-      allRoadsOverlay.addTo(map);
+      if (showExpandedRoads) allRoadsOverlay.addTo(map);
     };
     map.on('zoomend', refresh);
     map.on('resize', refresh);
@@ -60,6 +61,72 @@
   let activeMode = 'roads';
   const modeCache = new Map();
   let charts = {};
+  L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
+  const measureStatus = $('map-measure-status');
+  let measureMode = null;
+  let measurePoints = [];
+  let measureShape = null;
+  const earthRadiusKm = 6371.0088;
+  const measureArea = points => {
+    if (points.length < 3) return 0;
+    const meanLat = points.reduce((sum, point) => sum + point.lat, 0) / points.length * Math.PI / 180;
+    const xy = points.map(point => [earthRadiusKm * point.lng * Math.PI / 180 * Math.cos(meanLat), earthRadiusKm * point.lat * Math.PI / 180]);
+    return Math.abs(xy.reduce((sum, point, i) => sum + point[0] * xy[(i + 1) % xy.length][1] - xy[(i + 1) % xy.length][0] * point[1], 0)) / 2;
+  };
+  const resetMeasure = () => {
+    measureMode = null; measurePoints = [];
+    if (measureShape) { map.removeLayer(measureShape); measureShape = null; }
+    map.doubleClickZoom.enable();
+    for (const button of document.querySelectorAll('[data-map-tool="distance"],[data-map-tool="area"]')) button.setAttribute('aria-pressed', 'false');
+    measureStatus.hidden = true;
+  };
+  const updateMeasure = () => {
+    if (measureShape) map.removeLayer(measureShape);
+    measureShape = measureMode === 'area' ? L.polygon(measurePoints, { color: '#39e9dc', weight: 2, fillOpacity: .16 }).addTo(map)
+      : L.polyline(measurePoints, { color: '#39e9dc', weight: 2, dashArray: '6 4' }).addTo(map);
+    const distance = measurePoints.slice(1).reduce((sum, point, i) => sum + map.distance(measurePoints[i], point) / 1000, 0);
+    measureStatus.textContent = `${measureMode === 'area' ? `Area: ${format.format(measureArea(measurePoints))} km²` : `Distance: ${format.format(distance)} km`}. Click to add points; double-click to finish; Escape to clear.`;
+    measureStatus.hidden = false;
+  };
+  map.on('click', event => { if (measureMode) { measurePoints.push(event.latlng); updateMeasure(); } });
+  map.on('mousemove', event => { $('map-coordinates').textContent = `N ↑  ${event.latlng.lat.toFixed(5)}°, ${event.latlng.lng.toFixed(5)}°`; });
+  map.on('dblclick', event => { if (measureMode) { L.DomEvent.stop(event.originalEvent); measureMode = null; map.doubleClickZoom.enable(); measureStatus.textContent += ' Measurement complete. Escape to clear.'; } });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') resetMeasure(); });
+  for (const button of document.querySelectorAll('[data-map-tool]')) {
+    button.addEventListener('click', () => {
+      const action = button.dataset.mapTool;
+      if (action === 'zoom-in') map.zoomIn();
+      else if (action === 'zoom-out') map.zoomOut();
+      else if (action === 'extent') showUgandaExtent();
+      else if (action === 'clear') resetMeasure();
+      else if (action === 'distance' || action === 'area') {
+        resetMeasure(); measureMode = action; measurePoints = []; map.doubleClickZoom.disable();
+        button.setAttribute('aria-pressed', 'true'); measureStatus.hidden = false;
+        measureStatus.textContent = `Measure ${action}. Click the map to add points; double-click to finish; Escape to clear.`;
+      } else if (action === 'locate') {
+        map.locate({ setView: true, maxZoom: 13, enableHighAccuracy: false });
+        measureStatus.hidden = false; measureStatus.textContent = 'Finding your location...';
+      } else if (action === 'roads') {
+        showExpandedRoads = !showExpandedRoads;
+        if (allRoadsOverlay) { if (showExpandedRoads) allRoadsOverlay.addTo(map); else map.removeLayer(allRoadsOverlay); }
+        button.setAttribute('aria-pressed', String(showExpandedRoads));
+      } else if (action === 'labels') {
+        const visible = map.hasLayer(labelsLayer);
+        if (visible) map.removeLayer(labelsLayer); else labelsLayer.addTo(map);
+        button.setAttribute('aria-pressed', String(!visible));
+      } else if (action === 'fullscreen') {
+        const shell = document.querySelector('.map-shell');
+        if (document.fullscreenElement) document.exitFullscreen();
+        else shell.requestFullscreen?.().then(() => map.invalidateSize());
+      }
+    });
+  }
+  map.on('locationfound', event => {
+    L.circleMarker(event.latlng, { radius: 7, color: '#fff', weight: 2, fillColor: '#008ca9', fillOpacity: 1 }).addTo(map).bindPopup('Your approximate location').openPopup();
+    measureStatus.textContent = 'Approximate location shown.';
+  });
+  map.on('locationerror', () => { measureStatus.hidden = false; measureStatus.textContent = 'Location unavailable or permission denied.'; });
+  document.addEventListener('fullscreenchange', () => map.invalidateSize());
   const value = (properties, key) => properties?.[key];
   const condition = properties => ['Good', 'Fair', 'Poor'].includes(value(properties, 'Condition')) ? value(properties, 'Condition') : 'Not supplied';
   const surface = properties => ['Paved', 'Unpaved'].includes(value(properties, 'Surface  1')) ? value(properties, 'Surface  1') : 'Not supplied';
@@ -119,10 +186,9 @@
     const isDucar = p['Road Type'] === 'DUCAR';
     const isCommunity = p['Road Cla 1'] === 'Community Access Road';
     const isPaved = surface(p) === 'Paved';
-    const aspectWeight = mapAspect() < .8 ? .78 : mapAspect() > 1.6 ? 1.08 : 1;
     return {
-      color: isPaved ? (isDucar ? '#4e595e' : '#111111') : isCommunity ? '#e4ddca' : isDucar ? '#d8ba7b' : '#ee884e',
-      weight: (isPaved ? (isDucar ? 1.4 : 2.7) : isCommunity ? .8 : isDucar ? 1.2 : 1.8) * aspectWeight,
+      color: isPaved ? (isDucar ? '#4e595e' : '#111111') : isCommunity ? '#e4ddca' : isDucar ? '#d8ba7b' : '#ff7a25',
+      weight: isPaved ? (isDucar ? 1.4 : 2) : isCommunity ? .2 : isDucar ? .35 : .5,
       opacity: isCommunity ? .68 : .95,
       dashArray: null,
     };
@@ -135,7 +201,7 @@
       onEachFeature: (feature, layer) => {
         layer.bindPopup(popup(feature.properties || {}), { maxWidth: 300 });
         const baseWeight = layer.options.weight;
-        layer.on('mouseover', () => layer.setStyle({ weight: baseWeight + 1.2, opacity: 1 }));
+        layer.on('mouseover', () => layer.setStyle({ weight: baseWeight + (surface(feature.properties || {}) === 'Paved' ? 1.2 : .3), opacity: 1 }));
         layer.on('mouseout', () => roadLayer.resetStyle(layer));
       }
     }).addTo(map);
@@ -229,19 +295,20 @@
     const priority = tally(visible, p => category(p, 'Intervention Priority Band'), length);
     const priorities = ['Low', 'Moderate', 'High', 'Critical', 'Not supplied'];
     chart('priority-chart', priorities, priorities.map(k => priority.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], false, 'radar');
+    if (activeMode === 'roads') window.TransportChartGallery?.render('roads', features, visible, item => length(item.properties || {}) || 0);
   }
 
   const transportModes = {
     bridges: {
       title: 'Bridges', files: ['bridges.geojson'], colour: '#438ee1', countLabel: 'Bridges on map', statusUnit: 'bridges on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'Mapped bridge points only. This layer is a subset of the authoritative 552 Bridges for FY 2026/27, not a revised national total.',
+      description: 'The FY 2026/27 BMS register contains 552 Bridges. Only 527 have positions verified against a mapped road link; 25 remain in the table pending spatial verification.',
       fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region']],
     },
     culverts: {
       title: 'Major Culverts', files: ['major_culverts.geojson'], colour: '#77b2f1', countLabel: 'Major Culverts on map', statusUnit: 'major culverts on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'Mapped Major Culvert points only. They are separate from Bridges and do not establish a complete national structures inventory.',
+      description: 'The BMS register contains 452 Major Culverts. Only 425 have positions verified against a mapped road link; 27 remain in the table pending spatial verification.',
       fields: [['Culvert number', 'Culvert_Number'], ['Road number', 'Link_Number'], ['Region', 'Maintenance_Region']],
     },
     traffic: {
@@ -282,11 +349,36 @@
     },
   };
 
+  const tabHeadings = {
+    roads: ['Follow Uganda\'s roads.', 'Compare mapped kilometres.'],
+    bridges: ['Explore Uganda\'s bridges.', 'Inspect mapped crossings.'],
+    culverts: ['Explore major culverts.', 'Inspect drainage structures.'],
+    traffic: ['Explore traffic stations.', 'See where counts are taken.'],
+    ferries: ['Explore ferry crossings.', 'Connect across water.'],
+    aviation: ['Explore aviation sites.', 'See mapped air access.'],
+    safety: ['Explore traffic incidents.', 'Find mapped safety patterns.'],
+    freight: ['Explore freight facilities.', 'See mapped weighbridges.'],
+    rail: ['Explore Uganda\'s rail.', 'Compare mapped alignments.'],
+  };
+  function updateIntro(key) {
+    const [first, second] = tabHeadings[key];
+    const heading = $('page-title');
+    const emphasis = document.createElement('em'); emphasis.textContent = second;
+    heading.replaceChildren(document.createTextNode(first), document.createElement('br'), emphasis);
+    $('intro-kicker').textContent = `UGANDA TRANSPORT / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
+    $('intro-note').textContent = key === 'roads'
+      ? 'Explore mapped National Road Network and DUCAR geometry. Filter by sub-region, surface and condition. Road charts report mapped kilometres, not a national total.'
+      : transportModes[key].description;
+    $('intro-aside-title').textContent = key === 'roads' ? 'Road map, charts and tables' : `${transportModes[key].title}: map, charts and tables`;
+    $('intro-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ roads: 'roads', bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
+    $('intro-table-link').firstChild.textContent = `Open ${key === 'culverts' ? 'major culvert' : key} tables `;
+  }
+
   async function loadMode(key) {
     if (!modeCache.has(key)) {
       const spec = transportModes[key];
       modeCache.set(key, Promise.all(spec.files.map(async file => {
-        const response = await fetch(`geo/${file}`);
+        const response = await fetch(`geo/${file}?v=20261029-bms`);
         if (!response.ok) throw new Error(`${file} returned ${response.status}`);
         const data = await response.json();
         if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`${file} is not a GeoJSON feature collection`);
@@ -315,11 +407,29 @@
     return panel;
   }
 
+  const markerShapes = {
+    bridges: '<path d="M3 16h18M5 16V9l4-3 3 3 3-3 4 3v7M8 16v-4m8 4v-4"/>',
+    culverts: '<path d="M3 17h18M5 17V9h14v8M8 17v-5a4 4 0 0 1 8 0v5M4 7h16"/>',
+    traffic: '<path d="M5 20V4m14 16V4M5 8h14M8 13h2m4 0h2M9 8v6m6-6v6"/>',
+    ferries: '<path d="M3 15h18l-3 4H6zM8 15V6h8v9M8 9h8M4 21c2-1 4-1 6 0 2-1 4-1 6 0 2-1 4-1 6 0"/>',
+    aviation: '<path d="M12 2v20m0-8L3 17v-3l9-5 9 5v3zM9 20l3-2 3 2"/>',
+    safety: '<path d="M12 3 2 21h20L12 3Zm0 6v5m0 3v1"/>',
+    freight: '<path d="M2 7h12v10H2zM14 10h4l4 4v3h-8zM6 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>',
+  };
+  const markerIcons = new Map();
+  function markerIcon(key, colour) {
+    if (markerIcons.has(key)) return markerIcons.get(key);
+    const svg = `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${markerShapes[key] || markerShapes.bridges}</svg>`;
+    const icon = L.divIcon({ className: 'transport-marker', html: `<span class="marker-shadow"></span><span class="marker-pin" style="--marker-colour:${colour}">${svg}</span>`, iconSize: [38, 46], iconAnchor: [19, 43], popupAnchor: [0, -39] });
+    markerIcons.set(key, icon);
+    return icon;
+  }
+
   function drawModePoints(items, spec) {
     if (roadLayer) map.removeLayer(roadLayer);
     if (pointLayer) map.removeLayer(pointLayer);
     pointLayer = L.geoJSON(items, {
-      pointToLayer: (_, latlng) => L.circleMarker(latlng, { radius: 6, color: '#081520', weight: 1.4, fillColor: spec.colour, fillOpacity: .92 }),
+      pointToLayer: (_, latlng) => L.marker(latlng, { icon: markerIcon(activeMode, spec.colour), keyboard: true }),
       style: feature => ({ color: feature.properties?._transportKind === 'SGR alignment' ? '#7657b7' : feature.properties?._transportKind === 'Major Culverts' ? '#77b2f1' : spec.colour, weight: 2.5, opacity: .9 }),
       onEachFeature: (feature, layer) => layer.bindPopup(pointPopup(feature.properties || {}, spec), { maxWidth: 290 }),
     }).addTo(map);
@@ -328,6 +438,7 @@
 
   async function showMode(key) {
     activeMode = key;
+    updateIntro(key);
     showUgandaExtent();
     document.querySelector('.section-tabs a[href="./"]')?.removeAttribute('aria-current');
     for (const button of document.querySelectorAll('.section-tabs button[data-mode]')) {
@@ -360,6 +471,7 @@
       const groups = tally(items, spec.group, () => 1);
       const labels = [...groups.keys()].sort((a, b) => a.localeCompare(b));
       chart('mode-chart', labels, labels.map(label => groups.get(label)), spec.colour, true);
+      window.TransportChartGallery?.render(key, items, items, item => key === 'rail' ? mappedLineKm(item.geometry) : 1);
       $('map-status').textContent = key === 'rail' ? 'MGR and SGR on map' : `${spec.title} on map`;
       $('metric-kind').textContent = key.toUpperCase();
       $('metric-value').textContent = format.format(key === 'rail' ? items.reduce((sum, item) => sum + mappedLineKm(item.geometry), 0) : items.length);
@@ -387,14 +499,27 @@
     setTimeout(() => URL.revokeObjectURL(url), 3000);
   }
 
-  window.addEventListener('download-mapped-data', async () => {
+  function downloadJson(data, filename, type) {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type }));
+    const anchor = document.createElement('a'); anchor.href = url; anchor.download = filename; anchor.click();
+    setTimeout(() => URL.revokeObjectURL(url), 3000);
+  }
+
+  window.addEventListener('download-mapped-data', async event => {
+    const fileType = event.detail?.format || 'csv';
     if (activeMode === 'roads') {
-      const rows = features.filter(matches).map(feature => {
+      const publicFeatures = features.filter(matches).map(feature => {
         const p = feature.properties || {};
-        return [value(p, 'Link Id 1'), title(p), value(p, 'Road Type') || 'National Road Network',
-          category(p, 'Road Cla 1'), surface(p), category(p, 'Region'), condition(p), length(p)];
+        return { type: 'Feature', geometry: feature.geometry, properties: {
+          'Road ID': value(p, 'Link Id 1'), 'Road name': title(p), Network: value(p, 'Road Type') || 'National Road Network',
+          'Functional Class': category(p, 'Road Cla 1'), 'Surface Type': surface(p), 'Sub-Region': category(p, 'Region'),
+          Condition: condition(p), 'Mapped km': length(p),
+        } };
       });
-      downloadCsv(['Road ID', 'Road name', 'Network', 'Functional Class', 'Surface Type', 'Sub-Region', 'Condition', 'Mapped km'], rows, 'uganda-mapped-roads.csv');
+      const headers = ['Road ID', 'Road name', 'Network', 'Functional Class', 'Surface Type', 'Sub-Region', 'Condition', 'Mapped km'];
+      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: publicFeatures }, 'uganda-mapped-roads.geojson', 'application/geo+json');
+      else if (fileType === 'json') downloadJson(publicFeatures.map(feature => feature.properties), 'uganda-mapped-roads.json', 'application/json');
+      else downloadCsv(headers, publicFeatures.map(feature => headers.map(key => feature.properties[key])), 'uganda-mapped-roads.csv');
       return;
     }
     const spec = transportModes[activeMode];
@@ -403,7 +528,10 @@
       const items = await loadMode(activeMode);
       const headers = ['Feature type', ...spec.fields.map(([label]) => label)];
       const rows = items.map(item => [item.properties?._transportKind || spec.title, ...spec.fields.map(([, key]) => item.properties?.[key])]);
-      downloadCsv(headers, rows, `uganda-${activeMode}-map.csv`);
+      const publicFeatures = items.map((item, index) => ({ type: 'Feature', geometry: item.geometry, properties: Object.fromEntries(headers.map((header, column) => [header, rows[index][column]])) }));
+      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: publicFeatures }, `uganda-${activeMode}-map.geojson`, 'application/geo+json');
+      else if (fileType === 'json') downloadJson(publicFeatures.map(feature => feature.properties), `uganda-${activeMode}-map.json`, 'application/json');
+      else downloadCsv(headers, rows, `uganda-${activeMode}-map.csv`);
     } catch (error) {
       $('map-status').textContent = 'Download unavailable';
       console.error('Map CSV download failed', error);

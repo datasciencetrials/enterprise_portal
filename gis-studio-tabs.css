@@ -27,6 +27,31 @@
 .mode-detail[hidden], .control-card[hidden], .legend-card[hidden], .analysis-panel[hidden] { display: none !important; }
 .mode-chart-wrap { min-width: 0; height: 250px; }
 .mode-chart-wrap canvas { max-width: 100%; max-height: 250px; }
+.chart-gallery { border-top: 1px solid #ffffff20; padding-top: 36px; }
+.chart-gallery .gallery-grid { margin-top: 20px; }
+.gallery-card { min-height: 306px; }
+.gallery-card .chart-header h3 { line-height: 1.35; }
+.gallery-card canvas { height: 205px !important; }
+.chart-download { margin-top: 12px; padding: 7px 11px; border: 1px solid #5e8292; border-radius: 8px; background: #263845; color: #ecf7f8; font: 600 11px/1.2 -apple-system,BlinkMacSystemFont,Arial,sans-serif; cursor: pointer; }
+.chart-download:hover,.chart-download:focus-visible { background: #0d7e8d; }
+.map-tools { position: absolute; z-index: 600; top: 50%; right: 14px; transform: translateY(-50%); display: grid; gap: 4px; padding: 5px; border-radius: 12px; background: #0d1d29df; backdrop-filter: blur(10px); box-shadow: 0 8px 28px #0006; }
+.map-tools button { width: 38px; height: 38px; border: 1px solid #ffffff3a; border-radius: 8px; background: #213949; color: #fff; font: 700 13px/1 -apple-system,BlinkMacSystemFont,Arial,sans-serif; cursor: pointer; }
+.map-tools button:hover,.map-tools button[aria-pressed="true"]:is([data-map-tool="distance"],[data-map-tool="area"]),.map-tools button:focus-visible { background: #087f95; }
+.map-tools button[aria-pressed="false"] { opacity: .45; }
+.map-measure-status { position: absolute; z-index: 600; bottom: 28px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 120px); padding: 9px 13px; border-radius: 20px; background: #0d1d29e8; color: #fff; font-size: 12px; text-align: center; pointer-events: none; }
+.map-coordinates { position: absolute; z-index: 600; bottom: 20px; left: 18px; padding: 6px 10px; border-radius: 8px; background: #0d1d29c9; color: #fff; font: 600 11px/1.2 -apple-system,BlinkMacSystemFont,Arial,sans-serif; pointer-events: none; }
+.map-shell:fullscreen { width: 100vw; height: 100vh; }
+.map-download-menu { position: absolute; right: 0; bottom: 56px; min-width: 180px; padding: 7px; display: grid; gap: 4px; border: 1px solid #dbe5e9; border-radius: 12px; background: #fff; box-shadow: 0 10px 30px #0005; }
+.map-download-menu[hidden] { display: none; }
+.map-download-menu button { width: 100%; height: auto; padding: 9px 10px; border-radius: 7px; background: transparent; color: #193441; font: 600 12px/1.2 -apple-system,BlinkMacSystemFont,Arial,sans-serif; text-align: left; box-shadow: none; }
+.map-download-menu button:hover,.map-download-menu button:focus-visible { background: #e9f7f9; color: #123f4c; }
+.transport-marker { background: transparent; border: 0; }
+.transport-marker .marker-shadow { position: absolute; left: 6px; bottom: 0; width: 27px; height: 8px; border-radius: 50%; background: #0008; filter: blur(3px); }
+.transport-marker .marker-pin { position: absolute; left: 3px; top: 0; display: grid; place-items: center; width: 32px; height: 36px; border: 2px solid #ffffffbc; border-radius: 15px 15px 15px 3px; transform: rotate(-45deg); background: radial-gradient(circle at 25% 20%, #ffffff94, transparent 43%), linear-gradient(135deg, #ffffff4a, transparent 47%), var(--marker-colour); box-shadow: inset -4px -5px 8px #08152065, inset 2px 2px 4px #fff8, 4px 6px 9px #0008; }
+.transport-marker .marker-pin svg { width: 20px; height: 20px; transform: rotate(45deg); filter: drop-shadow(1px 1px 1px #0009); }
+.transport-marker:hover .marker-pin { filter: brightness(1.18); transform: rotate(-45deg) translate(2px,-2px); }
+@media print { .site-header,.floating-actions,.map-tools,.control-card,.legend-card,.chart-download { display: none !important; } .map-shell { height: 420px; } .chart-card { break-inside: avoid; } }
+@media (max-width:680px) { .map-tools { top: auto; bottom: 175px; right: 8px; transform: none; grid-template-columns: repeat(3, 1fr); } .map-tools button { width: 32px; height: 32px; } }
 .floating-actions{position:fixed;right:20px;bottom:24px;z-index:1000;display:grid;gap:8px}.floating-actions button{width:44px;height:44px;border:0;border-radius:50%;background:#242d33;color:#fff;font:700 25px/1 -apple-system,BlinkMacSystemFont,Arial,sans-serif;box-shadow:0 7px 20px #10202c45;cursor:pointer}.floating-actions button:hover{background:#116676}.floating-actions button:focus-visible{outline:3px solid #40d4e0;outline-offset:2px}
 .floating-actions{justify-items:end}.floating-actions button[data-action="download"]{width:auto;min-width:116px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 14px;border-radius:24px;font-size:12px;letter-spacing:.01em}.floating-actions button[data-action="download"] svg{width:19px;height:19px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 @media (max-width: 760px) {

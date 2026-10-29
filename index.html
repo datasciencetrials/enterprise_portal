@@ -32,12 +32,14 @@
   </header>
   <main>
     <section class="intro" aria-labelledby="page-title">
-      <div class="intro-copy"><p class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">See how Uganda moves.<br><em>Explore the network.</em></h1><p class="intro-note">Explore mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities. Each view identifies the mapped features available here without presenting a partial map as a national total.</p></div>
-      <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong>Interactive map and tables</strong></p><a href="./data-explorer.html">Open explorer <span aria-hidden="true">↗</span></a></div>
+      <div class="intro-copy"><p id="intro-kicker" class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">See how Uganda moves.<br><em>Explore the network.</em></h1><p id="intro-note" class="intro-note">Explore mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities. Each view identifies the mapped features available here without presenting a partial map as a national total.</p></div>
+      <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong id="intro-aside-title">Interactive map and tables</strong></p><a id="intro-table-link" href="./data-explorer.html">Open explorer <span aria-hidden="true">↗</span></a></div>
     </section>
     <section id="explore" class="explorer" aria-label="Interactive transport network explorer">
       <div class="map-shell">
         <div id="gis-map" class="map" role="application" aria-label="Map of the portal's transport geometry" tabindex="0"></div>
+        <div class="map-tools" role="toolbar" aria-label="Map controls"><button type="button" data-map-tool="zoom-in" title="Zoom in" aria-label="Zoom in">+</button><button type="button" data-map-tool="zoom-out" title="Zoom out" aria-label="Zoom out">−</button><button type="button" data-map-tool="extent" title="Show Uganda extent" aria-label="Show Uganda extent">⌖</button><button type="button" data-map-tool="distance" title="Measure distance" aria-label="Measure distance">km</button><button type="button" data-map-tool="area" title="Measure area" aria-label="Measure area">km²</button><button type="button" data-map-tool="clear" title="Clear measurement" aria-label="Clear measurement">×</button><button type="button" data-map-tool="locate" title="Show my location" aria-label="Show my location">◎</button><button type="button" data-map-tool="roads" title="Show or hide expanded roads" aria-label="Show or hide expanded roads" aria-pressed="true">R</button><button type="button" data-map-tool="labels" title="Show or hide labels and borders" aria-label="Show or hide labels and borders" aria-pressed="true">L</button><button type="button" data-map-tool="fullscreen" title="Full-screen map" aria-label="Full-screen map">⛶</button></div><div id="map-coordinates" class="map-coordinates" aria-hidden="true">N ↑</div>
+        <div id="map-measure-status" class="map-measure-status" role="status" hidden></div>
         <span id="map-status" class="screen-reader-only" role="status">Loading mapped roads</span>
         <div class="floating-card control-card">
           <div class="card-heading"><span>Explore network</span><button id="reset-filters" type="button" class="quiet-button">Reset</button></div>
@@ -63,10 +65,11 @@
         </div>
         <p class="data-note">All road charts show mapped kilometres and respond to the filters. Missing values stay distinct from zero. This map is a subset, not the complete governed network.</p>
       </div>
+      <section id="transport-chart-gallery" class="analysis-panel chart-gallery" aria-label="Charts for the selected transport tab"></section>
     </section>
   </main>
   <footer><span>UGANDA TRANSPORT GIS</span><a href="#page-title">Back to top</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Download selected map data as CSV" title="Download selected map data as CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="gis-studio.js?v=hover-wheel-20261029" defer></script><script src="floating-actions.js" defer></script><script src="portal-motion.js" defer></script>
+  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261029-bms" defer></script><script src="gis-studio.js?v=20261029-bms" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script>
 </body>
 </html>

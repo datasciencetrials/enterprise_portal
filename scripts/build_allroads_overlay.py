@@ -38,11 +38,11 @@ def main() -> None:
 
     output = Path(__file__).resolve().parents[1] / "geo"
     versions = {
-        "overview": {"size": (3600, 3800), "widths": {"community": 1, "ducar": 1, "national": 2, "paved_ducar": 2, "paved_national": 3}},
-        "detail": {"size": (7200, 7600), "widths": {"community": 1, "ducar": 1, "national": 2, "paved_ducar": 2, "paved_national": 3}},
+        "overview": {"size": (3600, 3800), "widths": {"community": 1, "ducar": 1, "national": 1, "paved_ducar": 2, "paved_national": 2}},
+        "detail": {"size": (7200, 7600), "widths": {"community": 1, "ducar": 1, "national": 1, "paved_ducar": 2, "paved_national": 2}},
     }
     palette = [0, 0, 0] * 256
-    for index, rgb in enumerate([(0, 0, 0), (226, 220, 202), (216, 186, 123), (238, 136, 78), (17, 17, 17), (78, 89, 94)]):
+    for index, rgb in enumerate([(0, 0, 0), (226, 220, 202), (216, 186, 123), (255, 122, 37), (17, 17, 17), (78, 89, 94)]):
         palette[index * 3:index * 3 + 3] = list(rgb)
     images = {}
     drawers = {}
@@ -91,7 +91,9 @@ def main() -> None:
 
     for key, image in images.items():
         target = output / f"allroads-{key}.png"
-        image.save(target, format="PNG", optimize=True, transparency=0)
+        # Pale alpha makes one-pixel unpaved geometry visually finer while
+        # preserving the original opaque paved-road widths and colours.
+        image.save(target, format="PNG", optimize=True, transparency=bytes([0, 95, 125, 155, 255, 255] + [255] * 250))
         print(f"{target.name}: {target.stat().st_size:,} bytes", flush=True)
     manifest = {
         "bounds": [[south, west], [north, east]],

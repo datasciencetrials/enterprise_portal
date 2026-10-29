@@ -2,7 +2,7 @@
 .map { background-image: radial-gradient(circle at 50% 50%, #183044 0, #0b1520 65%); }
 .legend-note { max-width: 132px; margin: 10px 0 0; color: #73818c; line-height: 1.4; font-size: 10px; }
 .legend-swatch.ducar { background: #d8ba7b; height: 1px; }
-.legend-swatch.good { background: #ee884e; height: 2px; }
-.legend-swatch.paved { background: #111; height: 3px; }
+.legend-swatch.good { background: #ff7a25; height: 1px; }
+.legend-swatch.paved { background: #111; height: 2px; }
 .legend-swatch.paved-ducar { background: #4e595e; height: 2px; }
 .legend-swatch.community { background: #e4ddca; height: 1px; }
