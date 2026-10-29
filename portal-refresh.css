@@ -1,0 +1,43 @@
+/* Main portal: the photography occupies the introduction instead of a blank pane. */
+.site-header { padding-inline: clamp(18px, 3vw, 48px); }
+.transport-photos { height: clamp(500px, 45vw, 650px); }
+.transport-photos .intro { padding: clamp(38px, 5vw, 72px) clamp(20px, 3vw, 48px) 0; gap: 28px; }
+.transport-photos .intro h1 { font-size: clamp(42px, 5vw, 76px); }
+.transport-photos .intro-aside { margin-top: 58px; }
+.transport-photo figcaption, .transport-photos-controls { left: clamp(20px, 3vw, 48px); }
+.transport-photos-controls { right: clamp(20px, 3vw, 48px); }
+
+/* The summary shows direct categories only. Bright cards keep their units legible. */
+.analysis-panel { padding: 42px clamp(18px, 3vw, 48px) 48px; background: #edf7fa; color: #173244; }
+.analysis-panel:nth-of-type(even) { background: #e9f3fa; }
+.analysis-title .eyebrow { color: #087a92; }
+.analysis-title h2 { color: #143448; }
+.analysis-title > p, .data-note { color: #516c78; }
+.chart-grid { gap: 14px; margin-top: 24px; }
+.chart-card { min-height: 270px; padding: 19px; border: 1px solid #cde4ea; background: linear-gradient(145deg, #fff 0%, #f9fdff 72%, #eaf8ff 100%); color: #173244; box-shadow: 0 8px 24px #1c708314; }
+.chart-card:nth-child(5n+1) { border-top: 4px solid #ff784f; }
+.chart-card:nth-child(5n+2) { border-top: 4px solid #27ca91; }
+.chart-card:nth-child(5n+3) { border-top: 4px solid #3398e9; }
+.chart-card:nth-child(5n+4) { border-top: 4px solid #aa74ed; }
+.chart-card:nth-child(5n+5) { border-top: 4px solid #ffb13d; }
+.chart-card .chart-header h3 { color: #173244; }
+.chart-card .chart-header span, .chart-unit, .chart-caveat { color: #57717c; }
+.chart-card::before { display: none; }
+.chart-download { border-color: #b8d6df; color: #175b74; }
+.chart-download:hover, .chart-download:focus-visible { background: #dbf4f5; color: #11465a; }
+.chart-gallery { border-top-color: #cde4ea; }
+.transport-marker--structure .marker-shadow { left: 3px; bottom: 0; width: 17px; height: 4px; }
+.transport-marker--structure .marker-object { position: absolute; inset: 0; width: 22px; height: 22px; overflow: visible; filter: drop-shadow(1px 2px 2px #062b4daa); transition: transform .18s ease, filter .18s ease; }
+.transport-marker--structure:hover .marker-object { transform: translateY(-2px) scale(1.1); filter: drop-shadow(2px 5px 3px #062b4daa); }
+@media (max-width: 680px) {
+  .transport-photos { height: 590px; }
+  .transport-photos .intro { padding: 32px 18px 0; }
+  .transport-photos .intro h1 { font-size: clamp(32px, 8vw, 42px); }
+  .transport-photos .intro-aside { margin-top: 14px; }
+  .transport-photo figcaption, .transport-photos-controls { left: 18px; }
+  .transport-photos-controls { right: 18px; }
+  .analysis-panel { padding: 34px 16px 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .transport-marker--structure .marker-object { transition: none; }
+}

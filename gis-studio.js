@@ -226,7 +226,7 @@
     const dataset = {
       data: values,
       backgroundColor: type === 'radar' ? '#c68bff40' : colours,
-      borderColor: type === 'radar' ? '#c68bff' : circular ? '#182633' : 'transparent',
+      borderColor: type === 'radar' ? '#c68bff' : circular ? '#ffffff' : 'transparent',
       borderWidth: radial ? 2 : 0,
       borderRadius: type === 'bar' ? 5 : 0,
       maxBarThickness: 36,
@@ -243,12 +243,12 @@
       options: {
         responsive: true, maintainAspectRatio: false, indexAxis: horizontal ? 'y' : 'x',
         animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 700, easing: 'easeOutQuart' },
-        plugins: { legend: { display: circular, position: 'bottom', labels: { color: '#d4e2e8', boxWidth: 7, boxHeight: 7, padding: 5, font: { size: 9 } } }, tooltip: { callbacks: { label: context => format.format(Number(context.raw)) } } },
+        plugins: { legend: { display: circular, position: 'bottom', labels: { color: '#28414d', boxWidth: 9, boxHeight: 9, padding: 7, font: { size: 10 } } }, tooltip: { callbacks: { label: context => `${format.format(Number(context.raw))} km` } } },
         scales: type === 'radar' || type === 'polarArea' ? {
-          r: { beginAtZero: true, angleLines: { color: '#ffffff25' }, grid: { color: '#ffffff25' }, pointLabels: { color: '#d4e2e8', font: { size: 10 } }, ticks: { display: false } }
+          r: { beginAtZero: true, angleLines: { color: '#dae7ed' }, grid: { color: '#dae7ed' }, pointLabels: { color: '#28414d', font: { size: 10 } }, ticks: { display: false } }
         } : circular ? {} : {
-          x: { grid: { display: false }, ticks: { color: '#b6c7d0', font: { size: 10 } } },
-          y: { beginAtZero: true, grid: { color: '#ffffff18' }, ticks: { color: '#b6c7d0', font: { size: 10 } } }
+          x: { grid: { display: false }, ticks: { color: '#48606d', font: { size: 10 } } },
+          y: { beginAtZero: true, grid: { color: '#dae7ed' }, ticks: { color: '#48606d', font: { size: 10 } } }
         },
         onClick: (_, elements) => {
           if (!elements.length) return;
@@ -272,7 +272,7 @@
     const surfaceData = tally(visible, surface, length);
     chart('surface-chart', ['Paved', 'Unpaved', 'Not supplied'], ['Paved', 'Unpaved', 'Not supplied'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db'], false, 'doughnut');
     const conditionData = tally(visible, condition, length);
-    chart('condition-chart', ['Good', 'Fair', 'Poor', 'Not supplied'], ['Good', 'Fair', 'Poor', 'Not supplied'].map(k => conditionData.get(k) || 0), ['#34d889', '#ffd166', '#ff6176', '#c8d2db'], false, 'polarArea');
+    chart('condition-chart', ['Good', 'Fair', 'Poor', 'Not supplied'], ['Good', 'Fair', 'Poor', 'Not supplied'].map(k => conditionData.get(k) || 0), ['#22c985', '#ffcb47', '#ff6176', '#b2c4d0']);
     const regionData = tally(visible, p => value(p, 'Region') || 'Not supplied', length);
     const regions = Array.from(new Set(features.map(f => value(f.properties || {}, 'Region') || 'Not supplied'))).sort();
     chart('region-chart', regions, regions.map(k => regionData.get(k) || 0), '#ff8b51', true);
@@ -288,13 +288,7 @@
         trafficGroups.set(key, trafficGroups.get(key) + (length(p) || 0));
       }
     }
-    chart('traffic-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => trafficGroups.get(k)), '#ffaf62', false, 'line');
-    const risk = tally(visible, p => category(p, 'Road Safety Risk Band'), length);
-    const risks = ['Low', 'Moderate', 'High', 'Critical', 'Not supplied'];
-    chart('safety-chart', risks, risks.map(k => risk.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], false, 'pie');
-    const priority = tally(visible, p => category(p, 'Intervention Priority Band'), length);
-    const priorities = ['Low', 'Moderate', 'High', 'Critical', 'Not supplied'];
-    chart('priority-chart', priorities, priorities.map(k => priority.get(k) || 0), ['#34d889', '#c68bff', '#ffd166', '#ff6176', '#c8d2db'], false, 'radar');
+    chart('traffic-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => trafficGroups.get(k)), '#ffaf62');
     if (activeMode === 'roads') window.TransportChartGallery?.render('roads', features, visible, item => length(item.properties || {}) || 0);
   }
 
@@ -408,8 +402,6 @@
   }
 
   const markerShapes = {
-    bridges: '<path d="M3 16h18M5 16V9l4-3 3 3 3-3 4 3v7M8 16v-4m8 4v-4"/>',
-    culverts: '<path d="M3 17h18M5 17V9h14v8M8 17v-5a4 4 0 0 1 8 0v5M4 7h16"/>',
     traffic: '<path d="M5 20V4m14 16V4M5 8h14M8 13h2m4 0h2M9 8v6m6-6v6"/>',
     ferries: '<path d="M3 15h18l-3 4H6zM8 15V6h8v9M8 9h8M4 21c2-1 4-1 6 0 2-1 4-1 6 0 2-1 4-1 6 0"/>',
     aviation: '<path d="M12 2v20m0-8L3 17v-3l9-5 9 5v3zM9 20l3-2 3 2"/>',
@@ -419,8 +411,21 @@
   const markerIcons = new Map();
   function markerIcon(key, colour) {
     if (markerIcons.has(key)) return markerIcons.get(key);
-    const svg = `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${markerShapes[key] || markerShapes.bridges}</svg>`;
-    const icon = L.divIcon({ className: 'transport-marker', html: `<span class="marker-shadow"></span><span class="marker-pin" style="--marker-colour:${colour}">${svg}</span>`, iconSize: [38, 46], iconAnchor: [19, 43], popupAnchor: [0, -39] });
+    let html;
+    let iconSize;
+    let iconAnchor;
+    if (key === 'bridges') {
+      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M2 13 16 8l14 5-14 5Z" fill="#bceaff" stroke="#fff"/><path d="M2 13v5l14 5v-5Z" fill="#74b8ee" stroke="#e9f8ff"/><path d="M16 18v5l14-5v-5Z" fill="#327ec3" stroke="#e9f8ff"/><path d="M7 21v6m18-7v7M4 27h24" fill="none" stroke="#0b466f" stroke-width="2.5"/><path d="M8 14h16" stroke="#fff" stroke-width="1.4"/></svg>`;
+      iconSize = [22, 22]; iconAnchor = [11, 19];
+    } else if (key === 'culverts') {
+      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M3 9 17 5l12 4-14 4Z" fill="#c7edff" stroke="#fff"/><path d="M3 9v16l12 3V13Z" fill="#6fb5e1" stroke="#e9f8ff"/><path d="M15 13v15l14-4V9Z" fill="#388bbd" stroke="#e9f8ff"/><path d="M18 26v-7a4 4 0 0 1 8 0v5Z" fill="#123e60" stroke="#d6f2ff" stroke-width="1.2"/><path d="M4 24h24" stroke="#f4fbff" stroke-width="1.2"/></svg>`;
+      iconSize = [22, 22]; iconAnchor = [11, 19];
+    } else {
+      const svg = `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${markerShapes[key] || markerShapes.traffic}</svg>`;
+      html = `<span class="marker-shadow"></span><span class="marker-pin" style="--marker-colour:${colour}">${svg}</span>`;
+      iconSize = [38, 46]; iconAnchor = [19, 43];
+    }
+    const icon = L.divIcon({ className: `transport-marker${key === 'bridges' || key === 'culverts' ? ' transport-marker--structure' : ''}`, html, iconSize, iconAnchor, popupAnchor: [0, -iconAnchor[1]] });
     markerIcons.set(key, icon);
     return icon;
   }

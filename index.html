@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="gis-studio.css">
   <link rel="stylesheet" href="gis-studio-map.css">
   <link rel="stylesheet" href="gis-studio-tabs.css?v=20261029-rail">
+  <link rel="stylesheet" href="transport-photos.css?v=20261029-gallery">
   <link rel="stylesheet" href="portal-motion.css">
+  <link rel="stylesheet" href="portal-refresh.css?v=20261029-main3">
 </head>
-<body>
+<body class="main-portal">
   <a class="skip-link" href="#gis-map">Skip to map</a>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Uganda GIS Enterprise home"><span class="brand-mark">UG</span><span>GIS Enterprise</span></a>
@@ -31,9 +33,19 @@
     </nav>
   </header>
   <main>
-    <section class="intro" aria-labelledby="page-title">
-      <div class="intro-copy"><p id="intro-kicker" class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">See how Uganda moves.<br><em>Explore the network.</em></h1><p id="intro-note" class="intro-note">Explore mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities. Each view identifies the mapped features available here without presenting a partial map as a national total.</p></div>
-      <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong id="intro-aside-title">Interactive map and tables</strong></p><a id="intro-table-link" href="./data-explorer.html">Open explorer <span aria-hidden="true">↗</span></a></div>
+    <section class="transport-photos" aria-label="Uganda transport photo carousel" aria-roledescription="carousel">
+      <div class="transport-photos-track">
+        <figure class="transport-photo is-active" aria-hidden="false"><img src="media/kapchorwa-suam-road.webp" alt="Winding paved Kapchorwa-Suam road through terraced hills" width="1800" height="880" fetchpriority="high"><figcaption><span>ROAD NETWORK</span><strong>Kapchorwa-Suam road</strong></figcaption></figure>
+        <figure class="transport-photo" aria-hidden="true"><img src="media/source-of-the-nile-bridge.webp" alt="Aerial view of the cable-stayed Source of the Nile Bridge over the river" width="1800" height="1013" loading="lazy"><figcaption><span>BRIDGES</span><strong>Source of the Nile Bridge</strong></figcaption></figure>
+        <figure class="transport-photo" aria-hidden="true"><img src="media/mv-kyoga-ii.webp" alt="MV Kyoga II ferry on the water" width="1800" height="1200" loading="lazy"><figcaption><span>FERRIES</span><strong>MV Kyoga II</strong></figcaption></figure>
+        <figure class="transport-photo" aria-hidden="true"><img src="media/kampala-northern-bypass.webp" alt="Traffic moving along the divided Kampala Northern Bypass" width="1800" height="1013" loading="lazy"><figcaption><span>URBAN ROADS</span><strong>Kampala Northern Bypass</strong></figcaption></figure>
+      </div>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy"><p id="intro-kicker" class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">See how Uganda moves.<br><em>Explore the network.</em></h1><p id="intro-note" class="intro-note">Explore mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities. Each view identifies the mapped features available here without presenting a partial map as a national total.</p></div>
+        <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong id="intro-aside-title">Interactive map and tables</strong></p><a id="intro-table-link" href="./data-explorer.html">Open explorer <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <div class="transport-photos-controls"><button type="button" class="transport-photo-arrow" data-photo-action="previous" aria-label="Previous photograph">←</button><div class="transport-photo-dots" aria-label="Choose photograph"><button type="button" class="is-active" data-photo-index="0" aria-label="Show Kapchorwa-Suam road" aria-current="true"></button><button type="button" data-photo-index="1" aria-label="Show Source of the Nile Bridge"></button><button type="button" data-photo-index="2" aria-label="Show MV Kyoga II ferry"></button><button type="button" data-photo-index="3" aria-label="Show Kampala Northern Bypass"></button></div><button type="button" class="transport-photo-arrow" data-photo-action="next" aria-label="Next photograph">→</button><button type="button" class="transport-photo-pause" data-photo-action="pause" aria-label="Pause automatic rotation" aria-pressed="false">Pause</button></div>
+      <p class="screen-reader-only" id="transport-photo-status" role="status" aria-live="polite"></p>
     </section>
     <section id="explore" class="explorer" aria-label="Interactive transport network explorer">
       <div class="map-shell">
@@ -60,8 +72,6 @@
           <article id="region-view" class="chart-card"><div class="chart-header"><h3>Sub-region</h3><span>Mapped length (km)</span></div><canvas id="region-chart" role="img" aria-label="Sub-region length chart"></canvas></article>
           <article id="class-view" class="chart-card"><div class="chart-header"><h3>Road class</h3><span>Mapped length (km)</span></div><canvas id="class-chart" role="img" aria-label="Road class length chart"></canvas></article>
           <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic coverage</h3><span>Mapped length with AADT (km)</span></div><canvas id="traffic-chart" role="img" aria-label="Mapped road length with available AADT by class chart"></canvas><p class="chart-caveat">AADT availability is shown by road length. Its measurement method is not confirmed here.</p></article>
-          <article id="safety-view" class="chart-card"><div class="chart-header"><h3>Safety</h3><span>Mapped length by risk band (km)</span></div><canvas id="safety-chart" role="img" aria-label="Mapped road length by safety risk band chart"></canvas><p class="chart-caveat">Risk-band method is not confirmed here.</p></article>
-          <article id="priority-view" class="chart-card"><div class="chart-header"><h3>Priority</h3><span>Mapped length by priority band (km)</span></div><canvas id="priority-chart" role="img" aria-label="Mapped road length by intervention priority band chart"></canvas><p class="chart-caveat">Priority-band method is not confirmed here.</p></article>
         </div>
         <p class="data-note">All road charts show mapped kilometres and respond to the filters. Missing values stay distinct from zero. This map is a subset, not the complete governed network.</p>
       </div>
@@ -70,6 +80,6 @@
   </main>
   <footer><span>UGANDA TRANSPORT GIS</span><a href="#page-title">Back to top</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Download selected map data as CSV" title="Download selected map data as CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261029-bms" defer></script><script src="gis-studio.js?v=20261029-rail" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script>
+  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261029-meaningful3" defer></script><script src="gis-studio.js?v=20261029-markers2" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script><script src="transport-photos.js?v=20261029-unnumbered" defer></script>
 </body>
 </html>
