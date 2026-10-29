@@ -88,6 +88,8 @@
     const requested = types[index % types.length];
     const type = labels.length > 14 && ['doughnut', 'pie', 'polarArea', 'radar'].includes(requested) ? 'bar' : requested;
     const pointType = type === 'scatter' || type === 'bubble';
+    const xTicks = { color: '#b6c7d0', maxRotation: 65 };
+    if (pointType) xTicks.callback = value => labels[value - 1] || '';
     const peak = Math.max(1, ...totals);
     const data = pointType ? totals.map((y, x) => type === 'bubble' ? { x: x + 1, y, r: 3 + Math.sqrt(y / peak) * 12 } : { x: x + 1, y }) : totals;
     const circular = ['doughnut', 'pie', 'polarArea'].includes(type);
@@ -102,7 +104,7 @@
           tooltip: { callbacks: { title: context => pointType ? labels[Math.round(context[0].raw.x) - 1] : context[0].label,
             label: context => `${round(pointType ? context.raw.y : context.raw)} ${modeLabel()}` } } },
         scales: type === 'radar' || type === 'polarArea' ? { r: { beginAtZero: true, grid: { color: '#ffffff25' }, angleLines: { color: '#ffffff25' }, pointLabels: { color: '#d4e2e8' }, ticks: { color: '#d4e2e8', backdropColor: 'transparent' } } }
-          : circular ? {} : { x: { ticks: { color: '#b6c7d0', callback: pointType ? value => labels[value - 1] || '' : undefined, maxRotation: 65 }, grid: { color: '#ffffff12' } },
+          : circular ? {} : { x: { ticks: xTicks, grid: { color: '#ffffff12' } },
           y: { beginAtZero: true, ticks: { color: '#b6c7d0' }, grid: { color: '#ffffff19' } } } }
     });
     chartInstances.push(instance);
