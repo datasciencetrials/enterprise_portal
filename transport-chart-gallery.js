@@ -124,7 +124,13 @@
         if (!Chart.getChart(canvas)) draw(canvas, spec, visibleItems, measure);
         Chart.getChart(canvas)?.update('none');
         const slug = spec.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-        const a = document.createElement('a'); a.href = canvas.toDataURL('image/png'); a.download = `uganda-${mode}-${slug}.png`; a.click();
+        canvas.toBlob(blob => {
+          if (!blob) return;
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a'); a.href = url; a.download = `uganda-${mode}-${slug}.png`;
+          document.body.append(a); a.click(); a.remove();
+          window.setTimeout(() => URL.revokeObjectURL(url), 60000);
+        }, 'image/png');
       });
       actions.append(unit, download); header.append(label, actions); card.append(header, canvas); grid.append(card); observer.observe(card);
     });
