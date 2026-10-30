@@ -11,7 +11,7 @@
     if (document.getElementById('gis-map')) {
       let menu = document.getElementById('map-download-menu');
       if (!menu) {
-        menu = document.createElement('div'); menu.id = 'map-download-menu'; menu.className = 'map-download-menu';
+        menu = document.createElement('div'); menu.id = 'map-download-menu'; menu.className = 'map-download-menu'; menu.hidden = true;
         menu.setAttribute('role', 'group'); menu.setAttribute('aria-label', 'Download options');
         for (const [format, label] of [['csv', 'Table CSV'], ['geojson', 'Map GeoJSON'], ['json', 'Table JSON'], ['print', 'Print or save PDF']]) {
           const option = document.createElement('button'); option.type = 'button'; option.textContent = label;
