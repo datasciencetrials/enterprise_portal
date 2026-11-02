@@ -14,7 +14,11 @@
   const ugandaExtent = L.latLngBounds([[-1.6, 29.4], [4.35, 35.2]]);
   const mapAspect = () => { const size = map.getSize(); return size.x / Math.max(1, size.y); };
   const showUgandaExtent = () => map.fitBounds(ugandaExtent, { padding: mapAspect() < .8 ? [12, 12] : [18, 18], maxZoom: 7, animate: false });
-  const reportZoom = () => { map.getContainer().dataset.zoom = String(map.getZoom()); };
+  const reportZoom = () => {
+    const zoom = map.getZoom();
+    mapContainer.dataset.zoom = String(zoom);
+    mapContainer.style.setProperty('--structure-icon-size', `${zoom >= 9 ? 22 : zoom >= 8 ? 18 : 14}px`);
+  };
   map.on('zoomend', reportZoom);
   reportZoom();
   L.control.zoom({ position: 'bottomright' }).addTo(map);

@@ -26,8 +26,8 @@
 .chart-download { border-color: #b8d6df; color: #175b74; }
 .chart-download:hover, .chart-download:focus-visible { background: #dbf4f5; color: #11465a; }
 .chart-gallery { border-top-color: #cde4ea; }
-.transport-marker--structure .marker-shadow { left: 3px; bottom: 0; width: 17px; height: 4px; }
-.transport-marker--structure .marker-object { position: absolute; inset: 0; width: 22px; height: 22px; overflow: visible; filter: drop-shadow(1px 2px 2px #062b4daa); transition: transform .18s ease, filter .18s ease; }
+.transport-marker--structure .marker-shadow { left: 6px; bottom: 2px; width: 10px; height: 3px; }
+.transport-marker--structure .marker-object { position: absolute; top: calc((22px - var(--structure-icon-size, 14px)) / 2); left: calc((22px - var(--structure-icon-size, 14px)) / 2); width: var(--structure-icon-size, 14px); height: var(--structure-icon-size, 14px); overflow: visible; filter: drop-shadow(1px 2px 2px #062b4daa); transition: transform .18s ease, filter .18s ease; }
 .transport-marker--structure:hover .marker-object { transform: translateY(-2px) scale(1.1); filter: drop-shadow(2px 5px 3px #062b4daa); }
 @media (max-width: 680px) {
   .transport-photos { height: 590px; }
