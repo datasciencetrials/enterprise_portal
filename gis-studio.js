@@ -60,6 +60,8 @@
     refresh();
   }).catch(error => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded geometry unavailable. The searchable subset remains visible.'; console.error('Expanded road geometry unavailable', error); });
   let features = [];
+  let roadsLoaded = false;
+  let roadLoadPromise = null;
   let roadLayer = null;
   let pointLayer = null;
   let activeMode = 'roads';
@@ -267,6 +269,12 @@
   }
 
   function update() {
+    if (!roadsLoaded) {
+      $('map-status').textContent = roadLoadPromise ? 'Loading road geometry' : 'Road geometry unavailable';
+      $('selection-summary').textContent = roadLoadPromise ? 'Loading mapped roads' : 'Select Roads to retry the mapped road layer';
+      $('metric-value').textContent = 'Not supplied';
+      return;
+    }
     const visible = features.filter(matches);
     if (activeMode === 'roads') drawMap(visible);
     const km = visible.reduce((sum, feature) => sum + (length(feature.properties || {}) || 0), 0);
@@ -473,6 +481,7 @@
       $('metric-kind').textContent = 'ROADS';
       $('metric-label').textContent = 'Mapped road length (km)';
       $('metric-note').textContent = 'Search and charts use the mapped subset. The expanded road backdrop is visual only.';
+      if (!roadsLoaded && !roadLoadPromise) loadRoadFeatures().catch(() => {});
       update();
       showUgandaExtent();
       return;
@@ -593,27 +602,40 @@
     update();
   });
 
-  Promise.all(['network.geojson', 'geo/ducar_all_roads_2025.geojson'].map(async path => {
-    const response = await fetch(path);
-    if (!response.ok) throw new Error(`${path} returned ${response.status}`);
-    const data = await response.json();
-    if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`Invalid GeoJSON in ${path}`);
-    return data.features;
-  })).then(([national, ducarFile]) => {
-    const ducar = ducarFile.filter(feature => feature.geometry && feature.properties?.governance_department === 'DDUCAR MoWT')
-      .map(feature => ({ ...feature, properties: {
-        'Link Id 1': feature.properties.link_id, 'Link Name': feature.properties.road_name,
-        'Road Cla 1': feature.properties.functional_class, 'Road Type': 'DUCAR',
-        'Surface  1': ['Paved', 'Unpaved'].includes(feature.properties.pavement_class) ? feature.properties.pavement_class : 'Not supplied',
-        'Length Km': feature.properties.length_km,
-      } }));
-    features = [...national.filter(feature => feature.geometry && feature.properties), ...ducar];
-    const regions = Array.from(new Set(features.map(f => value(f.properties, 'Region')).filter(Boolean))).sort();
-    for (const region of regions) $('region-filter').add(new Option(region, region));
-    showUgandaExtent();
-    update();
-    const requestedMode = new URLSearchParams(window.location.search).get('mode');
-    if (requestedMode && (requestedMode === 'roads' || transportModes[requestedMode])) showMode(requestedMode);
-  }).catch(error => { $('map-status').textContent = 'Road geometry unavailable'; $('selection-summary').textContent = error.message; });
+  function loadRoadFeatures() {
+    if (roadLoadPromise) return roadLoadPromise;
+    roadLoadPromise = Promise.all(['network.geojson', 'geo/ducar_all_roads_2025.geojson'].map(async path => {
+      const response = await fetch(path);
+      if (!response.ok) throw new Error(`${path} returned ${response.status}`);
+      const data = await response.json();
+      if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`Invalid GeoJSON in ${path}`);
+      return data.features;
+    })).then(([national, ducarFile]) => {
+      const ducar = ducarFile.filter(feature => feature.geometry && feature.properties?.governance_department === 'DDUCAR MoWT')
+        .map(feature => ({ ...feature, properties: {
+          'Link Id 1': feature.properties.link_id, 'Link Name': feature.properties.road_name,
+          'Road Cla 1': feature.properties.functional_class, 'Road Type': 'DUCAR',
+          'Surface  1': ['Paved', 'Unpaved'].includes(feature.properties.pavement_class) ? feature.properties.pavement_class : 'Not supplied',
+          'Length Km': feature.properties.length_km,
+        } }));
+      features = [...national.filter(feature => feature.geometry && feature.properties), ...ducar];
+      roadsLoaded = true;
+      const regions = Array.from(new Set(features.map(f => value(f.properties, 'Region')).filter(Boolean))).sort();
+      for (const region of regions) $('region-filter').add(new Option(region, region));
+      if (activeMode === 'roads') { showUgandaExtent(); update(); }
+    }).catch(error => {
+      roadLoadPromise = null;
+      if (activeMode === 'roads') {
+        $('map-status').textContent = 'Road geometry unavailable';
+        $('selection-summary').textContent = `${error.message}. Select Roads to retry.`;
+        $('metric-value').textContent = 'Not supplied';
+      }
+      throw error;
+    });
+    return roadLoadPromise;
+  }
+  const requestedMode = new URLSearchParams(window.location.search).get('mode');
+  if (requestedMode && (requestedMode === 'roads' || transportModes[requestedMode])) showMode(requestedMode);
+  loadRoadFeatures().catch(() => {});
 
 })();
