@@ -9,6 +9,8 @@
   const pauseButton = carousel.querySelector('[data-photo-action="pause"]');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let active = 0;
+  let mode = new URLSearchParams(window.location.search).get('mode') || 'all';
+  let visibleIndices = [];
   let paused = prefersReducedMotion.matches;
   let timer;
   let touchStart = null;
@@ -19,14 +21,37 @@
   }
 
   const stop = () => { window.clearInterval(timer); timer = undefined; };
+  const categoriesFor = {
+    roads: ['ROAD NETWORK', 'EXPRESSWAYS', 'URBAN ROADS'],
+    bridges: ['BRIDGES'],
+    culverts: ['ROAD NETWORK'],
+    traffic: ['EXPRESSWAYS', 'URBAN ROADS'],
+    ferries: ['FERRIES'],
+  };
+  const setMode = nextMode => {
+    mode = nextMode;
+    const categories = categoriesFor[mode];
+    visibleIndices = slides.map((slide, index) => ({
+      index,
+      category: slide.querySelector('figcaption span')?.textContent?.trim(),
+    })).filter(item => !categories || categories.includes(item.category)).map(item => item.index);
+    if (!visibleIndices.length) visibleIndices = slides.map((_, index) => index);
+    slides.forEach((slide, index) => { slide.hidden = !visibleIndices.includes(index); });
+    dots.forEach((dot, index) => { dot.hidden = !visibleIndices.includes(index); });
+    show(visibleIndices.includes(active) ? active : visibleIndices[0], false);
+  };
+  const step = (delta, announce = true) => {
+    const place = visibleIndices.indexOf(active);
+    show(visibleIndices[(place + delta + visibleIndices.length) % visibleIndices.length], announce);
+  };
   const start = () => {
     stop();
-    if (!paused && !document.hidden && slides.length > 1) {
-      timer = window.setInterval(() => show(active + 1, false), 6000);
+    if (!paused && !document.hidden && visibleIndices.length > 1) {
+      timer = window.setInterval(() => step(1, false), 6000);
     }
   };
   const show = (index, announce = true) => {
-    active = (index + slides.length) % slides.length;
+    active = visibleIndices.includes(index) ? index : visibleIndices[0];
     slides.forEach((slide, i) => {
       const current = i === active;
       slide.classList.toggle('is-active', current);
@@ -52,13 +77,13 @@
     const dot = event.target.closest('[data-photo-index]');
     const arrow = event.target.closest('[data-photo-action]');
     if (dot) show(Number(dot.dataset.photoIndex));
-    else if (arrow?.dataset.photoAction === 'previous') show(active - 1);
-    else if (arrow?.dataset.photoAction === 'next') show(active + 1);
+    else if (arrow?.dataset.photoAction === 'previous') step(-1);
+    else if (arrow?.dataset.photoAction === 'next') step(1);
   });
   carousel.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
-      show(active + (event.key === 'ArrowRight' ? 1 : -1));
+      step(event.key === 'ArrowRight' ? 1 : -1);
     }
   });
   carousel.addEventListener('touchstart', event => { touchStart = event.changedTouches[0]?.screenX ?? null; }, {passive:true});
@@ -66,8 +91,9 @@
     if (touchStart === null) return;
     const delta = event.changedTouches[0].screenX - touchStart;
     touchStart = null;
-    if (Math.abs(delta) > 45) show(active + (delta < 0 ? 1 : -1));
+    if (Math.abs(delta) > 45) step(delta < 0 ? 1 : -1);
   }, {passive:true});
+  window.addEventListener('transportmodechange', event => setMode(event.detail.mode));
   document.addEventListener('visibilitychange', start);
   prefersReducedMotion.addEventListener('change', event => {
     paused = event.matches;
@@ -105,8 +131,8 @@
         slides.push(figure);
         dots.push(dot);
       });
-      start();
+      setMode(mode);
     })
     .catch(() => start());
-  start();
+  setMode(mode);
 })();

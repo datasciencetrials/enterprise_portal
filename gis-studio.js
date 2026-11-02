@@ -444,6 +444,7 @@
   async function showMode(key) {
     activeMode = key;
     updateIntro(key);
+    window.dispatchEvent(new CustomEvent('transportmodechange', { detail: { mode: key } }));
     showUgandaExtent();
     document.querySelector('.section-tabs a[href="./"]')?.removeAttribute('aria-current');
     for (const button of document.querySelectorAll('.section-tabs button[data-mode]')) {
