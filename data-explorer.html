@@ -17,7 +17,7 @@
     <section class="hero"><p class="eyebrow">UGANDA TRANSPORT GIS / DATA EXPLORER</p><h1>Inspect the mapped data.</h1><p>Search complete published layer tables, inspect categorical coverage and export every filtered row. These layers are mapped subsets and are not national totals or a live SQL database.</p></section>
     <section class="workspace" aria-label="Mapped dataset browser">
       <div class="toolbar"><div><label for="dataset">Transport layer</label><select id="dataset"></select></div><div><label for="search">Find a feature</label><input id="search" type="search" placeholder="Search displayed fields" autocomplete="off"></div><div><label for="category">Category</label><select id="category"><option value="">All available categories</option></select></div><button id="download" type="button">Export filtered CSV</button></div>
-      <div class="summary"><div><span>Mapped features</span><strong id="total">-</strong></div><div><span>Matching features</span><strong id="matching">-</strong></div><div><span>Coverage</span><strong id="coverage">Mapped subset</strong></div></div>
+      <div class="summary"><div><span id="total-label">Mapped km</span><strong id="total">-</strong></div><div><span id="matching-label">Matching km</span><strong id="matching">-</strong></div><div><span>Coverage</span><strong id="coverage">Mapped subset</strong></div></div>
       <p id="context" class="context" role="status">Loading layer.</p>
       <section class="breakdown" aria-labelledby="breakdown-heading"><div class="section-heading"><h2 id="breakdown-heading">Complete category breakdown</h2><p id="breakdown-field"></p></div><div id="breakdown-list" class="breakdown-list"></div></section>
       <section id="records" class="records" aria-labelledby="records-heading"><div class="section-heading"><h2 id="records-heading">Mapped feature table</h2><p id="row-range"></p></div><div class="table-scroll" role="region" aria-label="All matching mapped features, scroll to browse" tabindex="0"><table><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div><p class="note">Every matching row is in the scrollable table and CSV export. “Not supplied” is a missing-data status, not zero. Colour denotes available categories and relative values within this mapped layer, not an engineering threshold.</p></section>
@@ -26,6 +26,6 @@
   </main>
   <footer><span>UGANDA TRANSPORT GIS</span><a href="./">Return to map</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Download filtered CSV" title="Download filtered CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="data-explorer.js?v=20261029-bms" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script>
+  <script src="data-explorer.js?v=20261102-line-km" defer></script><script src="floating-actions.js?v=20261029-bms" defer></script><script src="portal-motion.js" defer></script>
 </body>
 </html>

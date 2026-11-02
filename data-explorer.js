@@ -11,8 +11,8 @@
     aviation: { title: 'Aviation sites', file: 'geo/airports.geojson', group: 'Category', context: 'Mapped airports and airfields. Completeness and operational status are not established by this layer.', gaps: 'Operational status and Financial Year are not verified in this layer.', columns: [field('Site','F9'),field('Category','Category')] },
     safety: { title: 'Traffic incidents', file: 'geo/kampala_traffic_incidents.geojson', group: 'severity', context: 'Mapped incidents concentrated around Kampala, not a national incident population.', gaps: 'Coverage outside Kampala, complete annual and monthly trends, and Financial Year classification are not verified.', columns: [field('Incident type','incident_type'),field('Severity','severity'),field('Road','road_name'),field('Road class','road_class'),field('Date','date')] },
     freight: { title: 'Weighbridges', file: 'geo/weighbridges.geojson', group: 'Status', context: 'Mapped weighbridge facilities. Proposed facilities are not operational facilities.', gaps: 'Freight volumes and Financial Year are not verified in this layer.', columns: [field('Facility','Weighbridge Name'),field('Status','Status')] },
-    mgr: { title: 'MGR mapped segments', file: 'geo/mgr.geojson', group: 'Status', context: 'Mapped metre-gauge railway segments. Segment count is not route length or proof of operational status.', gaps: 'Verified rail operations, route length and Financial Year are not present in this layer.', columns: [field('Name','Name'),field('Status','Status')] },
-    sgr: { title: 'SGR alignment', file: 'geo/sgr_alignment.geojson', group: 'Status', context: 'One mapped standard-gauge alignment. An alignment is not evidence of an operating railway.', gaps: 'Construction, operational status, route length and Financial Year require verification.', columns: [field('Name','Name'),field('Status','Status')] }
+    mgr: { title: 'MGR mapped segments', file: 'geo/mgr.geojson', group: 'Status', context: 'Geometry-derived mapped kilometres of metre-gauge railway. This is not verified operational route length or proof of service.', gaps: 'Verified rail operations, route length and Financial Year are not present in this layer.', columns: [field('Name','Name'),field('Status','Status'),field('Mapped geometry km','Mapped km','number')] },
+    sgr: { title: 'SGR alignment', file: 'geo/sgr_alignment.geojson', group: 'Status', context: 'Geometry-derived mapped kilometres of one standard-gauge alignment. An alignment is not evidence of an operating railway.', gaps: 'Construction, operational status, route length and Financial Year require verification.', columns: [field('Name','Name'),field('Status','Status'),field('Mapped geometry km','Mapped km','number')] }
   };
   const select = $('dataset');
   for (const [key, spec] of Object.entries(layers)) select.add(new Option(spec.title, key));
@@ -21,7 +21,22 @@
   let rows = [], filtered = [], active = null, sequence = 0;
   const clean = v => v === null || v === undefined || String(v).trim() === '' ? 'Not supplied' : String(v).trim();
   const count = v => new Intl.NumberFormat('en-UG').format(v);
-  const normalise = (feature, spec) => {
+  const kilometres = v => new Intl.NumberFormat('en-UG', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(v);
+  const isLineLayer = key => ['roads', 'mgr', 'sgr'].includes(key);
+  const mappedLineKm = geometry => {
+    const lines = geometry?.type === 'LineString' ? [geometry.coordinates] : geometry?.type === 'MultiLineString' ? geometry.coordinates : [];
+    let total = 0;
+    for (const line of lines) for (let i = 1; i < line.length; i++) {
+      const [lon1, lat1] = line[i - 1], [lon2, lat2] = line[i];
+      if (![lon1, lat1, lon2, lat2].every(Number.isFinite)) continue;
+      const radians = Math.PI / 180;
+      const deltaLat = (lat2 - lat1) * radians, deltaLon = (lon2 - lon1) * radians;
+      const a = Math.sin(deltaLat / 2) ** 2 + Math.cos(lat1 * radians) * Math.cos(lat2 * radians) * Math.sin(deltaLon / 2) ** 2;
+      total += 12742 * Math.asin(Math.min(1, Math.sqrt(a)));
+    }
+    return total;
+  };
+  const normalise = (feature, spec, key) => {
     const p = feature.properties || {};
     const result = {};
     for (const col of spec.columns) {
@@ -31,6 +46,14 @@
         raw = ['paved','bituminous','concrete'].includes(surface) ? 'Paved' : ['unpaved','gravel','earth'].includes(surface) ? 'Unpaved' : 'Not supplied';
       }
       result[col.key] = clean(raw);
+    }
+    if (key === 'roads') {
+      const supplied = feature.properties?.['Length Km'];
+      const parsed = supplied === null || supplied === undefined || supplied === '' ? NaN : Number(supplied);
+      result._mappedKm = Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
+    } else if (isLineLayer(key)) {
+      result._mappedKm = mappedLineKm(feature.geometry);
+      result['Mapped km'] = result._mappedKm.toFixed(1);
     }
     return result;
   };
@@ -45,18 +68,22 @@
     const query = $('search').value.trim().toLocaleLowerCase();
     const category = $('category').value;
     filtered = rows.filter(row => (!category || row[spec.group] === category) && (!query || spec.columns.some(col => row[col.key].toLocaleLowerCase().includes(query))));
-    $('total').textContent = count(rows.length);
-    $('matching').textContent = count(filtered.length);
+    const lineLayer = isLineLayer(select.value);
+    $('total-label').textContent = lineLayer ? 'Mapped km' : 'Mapped features';
+    $('matching-label').textContent = lineLayer ? 'Matching km' : 'Matching features';
+    $('total').textContent = lineLayer ? kilometres(rows.reduce((sum, row) => sum + (row._mappedKm ?? 0), 0)) : count(rows.length);
+    $('matching').textContent = lineLayer ? kilometres(filtered.reduce((sum, row) => sum + (row._mappedKm ?? 0), 0)) : count(filtered.length);
     $('coverage').textContent = 'Mapped subset';
-    $('context').textContent = spec.context;
+    $('context').textContent = lineLayer && rows.some(row => row._mappedKm === null)
+      ? `${spec.context} Some mapped lengths are not supplied and are excluded from kilometre totals.` : spec.context;
     $('gaps').textContent = `Coverage limits: ${spec.gaps}`;
     const groups = new Map();
-    for (const row of filtered) groups.set(row[spec.group], (groups.get(row[spec.group]) || 0) + 1);
-    $('breakdown-field').textContent = spec.columns.find(col => col.key === spec.group)?.title || spec.group;
+    for (const row of filtered) groups.set(row[spec.group], (groups.get(row[spec.group]) || 0) + (lineLayer ? row._mappedKm ?? 0 : 1));
+    $('breakdown-field').textContent = `${spec.columns.find(col => col.key === spec.group)?.title || spec.group}${lineLayer ? ' (km)' : ''}`;
     const list = $('breakdown-list'); list.replaceChildren();
     for (const [label, n] of [...groups].sort((a,b) => a[0].localeCompare(b[0]))) {
       const pill = document.createElement('span'); pill.append(document.createTextNode(label));
-      const strong = document.createElement('strong'); strong.textContent = count(n); pill.append(strong); list.append(pill);
+      const strong = document.createElement('strong'); strong.textContent = lineLayer ? `${kilometres(n)} km` : count(n); pill.append(strong); list.append(pill);
     }
     const headerRow = document.createElement('tr');
     for (const col of spec.columns) { const th = document.createElement('th'); th.scope = 'col'; th.textContent = col.title; headerRow.append(th); }
@@ -90,7 +117,7 @@
       body.append(tr);
     }
     $('table-body').replaceChildren(body);
-    $('row-range').textContent = `All ${count(filtered.length)} matching features in one scrollable table`;
+    $('row-range').textContent = lineLayer ? 'All matching rows in one scrollable table' : `All ${count(filtered.length)} matching features in one scrollable table`;
   }
   function schema(name, spec) {
     const identifier = str => str.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
@@ -120,7 +147,7 @@
           'Length Km': f.properties.length_km,
         } })),
       ] : groups.flat();
-      rows = features.filter(f => f.properties).map(f => normalise(f, spec));
+      rows = features.filter(f => f.properties).map(f => normalise(f, spec, key));
       const categories = [...new Set(rows.map(row => row[spec.group]))].sort();
       $('category').replaceChildren(new Option('All available categories', ''));
       for (const category of categories) $('category').add(new Option(category, category));
