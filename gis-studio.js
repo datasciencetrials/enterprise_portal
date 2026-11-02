@@ -478,7 +478,18 @@
       return;
     }
     const spec = transportModes[key];
+    // Clear the previous tab before loading. A failed request must not leave
+    // its markers or chart visible beneath the newly selected tab heading.
+    if (roadLayer) { map.removeLayer(roadLayer); roadLayer = null; }
+    if (pointLayer) { map.removeLayer(pointLayer); pointLayer = null; }
+    charts['mode-chart']?.destroy();
+    delete charts['mode-chart'];
+    window.TransportChartGallery?.render(key, [], [], () => 0);
     $('map-status').textContent = `Loading ${spec.title.toLowerCase()}`;
+    $('metric-kind').textContent = key.toUpperCase();
+    $('metric-value').textContent = 'Loading';
+    $('metric-label').textContent = key === 'rail' ? 'Mapped rail geometry (km)' : spec.countLabel;
+    $('metric-note').textContent = '';
     $('mode-title').textContent = spec.title;
     $('mode-description').textContent = spec.description;
     $('mode-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
@@ -531,7 +542,8 @@
 
   window.addEventListener('download-mapped-data', async event => {
     const fileType = event.detail?.format || 'csv';
-    if (activeMode === 'roads') {
+    const mode = activeMode;
+    if (mode === 'roads') {
       const publicFeatures = features.filter(matches).map(feature => {
         const p = feature.properties || {};
         return { type: 'Feature', geometry: feature.geometry, properties: {
@@ -546,18 +558,18 @@
       else downloadCsv(headers, publicFeatures.map(feature => headers.map(key => feature.properties[key])), 'uganda-mapped-roads.csv');
       return;
     }
-    const spec = transportModes[activeMode];
+    const spec = transportModes[mode];
     if (!spec) return;
     try {
-      const items = await loadMode(activeMode);
+      const items = await loadMode(mode);
       const headers = ['Feature type', ...spec.fields.map(([label]) => label)];
       const rows = items.map(item => [item.properties?._transportKind || spec.title, ...spec.fields.map(([, key]) => item.properties?.[key])]);
       const publicFeatures = items.map((item, index) => ({ type: 'Feature', geometry: item.geometry, properties: Object.fromEntries(headers.map((header, column) => [header, rows[index][column]])) }));
-      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: publicFeatures }, `uganda-${activeMode}-map.geojson`, 'application/geo+json');
-      else if (fileType === 'json') downloadJson(publicFeatures.map(feature => feature.properties), `uganda-${activeMode}-map.json`, 'application/json');
-      else downloadCsv(headers, rows, `uganda-${activeMode}-map.csv`);
+      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: publicFeatures }, `uganda-${mode}-map.geojson`, 'application/geo+json');
+      else if (fileType === 'json') downloadJson(publicFeatures.map(feature => feature.properties), `uganda-${mode}-map.json`, 'application/json');
+      else downloadCsv(headers, rows, `uganda-${mode}-map.csv`);
     } catch (error) {
-      $('map-status').textContent = 'Download unavailable';
+      if (activeMode === mode) $('map-status').textContent = 'Download unavailable';
       console.error('Map CSV download failed', error);
     }
   });
