@@ -376,17 +376,25 @@
     if (!modeCache.has(key)) {
       const spec = transportModes[key];
       modeCache.set(key, Promise.all(spec.files.map(async file => {
-        const response = await fetch(`geo/${file}?v=20261029-bms`);
-        if (!response.ok) throw new Error(`${file} returned ${response.status}`);
-        const data = await response.json();
-        if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`${file} is not a GeoJSON feature collection`);
-        const kind = file === 'bridges.geojson' ? 'Bridges' : file === 'major_culverts.geojson' ? 'Major Culverts' :
-          file === 'mgr.geojson' ? 'MGR mapped segments' : file === 'sgr_alignment.geojson' ? 'SGR alignment' :
-          file === 'ferry_crossings.geojson' && key === 'water' ? 'Ferry crossings' : '';
-        return data.features.filter(feature => feature.geometry && feature.properties &&
-          (feature.geometry.type === 'Point' || (key === 'rail' && ['LineString', 'MultiLineString'].includes(feature.geometry.type))))
-          .map(feature => ({ ...feature, properties: { ...feature.properties, _transportKind: kind } }));
-      })).then(groups => groups.flat()));
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), 30000);
+        try {
+          const response = await fetch(`geo/${file}?v=20261029-bms`, { signal: controller.signal });
+          if (!response.ok) throw new Error(`${file} returned ${response.status}`);
+          const data = await response.json();
+          if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`${file} is not a GeoJSON feature collection`);
+          const kind = file === 'bridges.geojson' ? 'Bridges' : file === 'major_culverts.geojson' ? 'Major Culverts' :
+            file === 'mgr.geojson' ? 'MGR mapped segments' : file === 'sgr_alignment.geojson' ? 'SGR alignment' : '';
+          return data.features.filter(feature => feature.geometry && feature.properties &&
+            (feature.geometry.type === 'Point' || (key === 'rail' && ['LineString', 'MultiLineString'].includes(feature.geometry.type))))
+            .map(feature => ({ ...feature, properties: { ...feature.properties, _transportKind: kind } }));
+        } finally {
+          window.clearTimeout(timeout);
+        }
+      })).then(groups => groups.flat()).catch(error => {
+        modeCache.delete(key);
+        throw error;
+      }));
     }
     return modeCache.get(key);
   }
@@ -496,7 +504,7 @@
     } catch (error) {
       if (activeMode !== key) return;
       $('map-status').textContent = 'Layer unavailable';
-      $('mode-description').textContent = `${spec.description} This layer could not be loaded.`;
+      $('mode-description').textContent = `${spec.description} This layer could not be loaded. Select this tab again to retry.`;
       $('metric-value').textContent = 'Not supplied';
       console.error('Transport layer unavailable', error);
     }
