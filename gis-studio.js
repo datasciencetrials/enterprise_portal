@@ -223,7 +223,7 @@
     return result;
   }
 
-  function chart(id, labels, values, colours, horizontal = false, type = 'bar') {
+  function chart(id, labels, values, colours, horizontal = false, type = 'bar', unit = 'km') {
     charts[id]?.destroy();
     const circular = ['doughnut', 'pie', 'polarArea'].includes(type);
     const radial = circular || type === 'radar';
@@ -247,7 +247,7 @@
       options: {
         responsive: true, maintainAspectRatio: false, indexAxis: horizontal ? 'y' : 'x',
         animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 700, easing: 'easeOutQuart' },
-        plugins: { legend: { display: circular, position: 'bottom', labels: { color: '#28414d', boxWidth: 9, boxHeight: 9, padding: 7, font: { size: 10 } } }, tooltip: { callbacks: { label: context => `${format.format(Number(context.raw))} km` } } },
+        plugins: { legend: { display: circular, position: 'bottom', labels: { color: '#28414d', boxWidth: 9, boxHeight: 9, padding: 7, font: { size: 10 } } }, tooltip: { callbacks: { label: context => `${format.format(Number(context.raw))} ${unit}` } } },
         scales: type === 'radar' || type === 'polarArea' ? {
           r: { beginAtZero: true, angleLines: { color: '#dae7ed' }, grid: { color: '#dae7ed' }, pointLabels: { color: '#28414d', font: { size: 10 } }, ticks: { display: false } }
         } : circular ? {} : {
@@ -492,7 +492,7 @@
         return result;
       }, new Map()) : tally(items, spec.group, () => 1);
       const labels = [...groups.keys()].sort((a, b) => a.localeCompare(b));
-      chart('mode-chart', labels, labels.map(label => groups.get(label)), spec.colour, true);
+      chart('mode-chart', labels, labels.map(label => groups.get(label)), spec.colour, true, 'bar', key === 'rail' ? 'km' : 'mapped features');
       $('mode-chart').setAttribute('aria-label', key === 'rail' ? 'Mapped rail geometry by alignment type in kilometres' : `${spec.title} counts by category`);
       $('mode-chart-unit').textContent = key === 'rail' ? 'Mapped rail geometry (km)' : 'Mapped feature counts';
       window.TransportChartGallery?.render(key, items, items, item => key === 'rail' ? mappedLineKm(item.geometry) : 1);
