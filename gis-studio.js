@@ -371,14 +371,14 @@
     bridges: {
       title: 'Bridges', files: ['bridges.geojson'], colour: '#438ee1', countLabel: 'Bridges on map', statusUnit: 'bridges on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'The FY 2026/27 BMS register contains 552 Bridges with recorded map positions. Of these, 536 are road-linked or corrected points and 16 remain marked for review, including 2 requiring a field check. Review points are shown in amber and are not verified bridge locations.',
+      description: 'The FY 2026/27 BMS register contains 552 Bridges with recorded map positions. Of these, 536 are road-linked or corrected points and 16 remain marked for review, including 2 requiring a field check. Amber and red points are recorded positions, not verified bridge locations.',
       fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     culverts: {
       title: 'Major Culverts', files: ['major_culverts.geojson'], colour: '#77b2f1', countLabel: 'Major Culverts on map', statusUnit: 'major culverts on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'The BMS register contains 452 Major Culverts. Only 425 have positions verified against a mapped road link; 27 remain in the table pending spatial verification.',
-      fields: [['Culvert number', 'Culvert_Number'], ['Road number', 'Link_Number'], ['Region', 'Maintenance_Region']],
+      description: 'All 452 Major Culverts in the BMS register have recorded map positions. The original 425 are road-verified; 27 added source points are shown in amber or red, including 13 requiring review and 1 requiring a field check. Added points must not be treated as verified locations.',
+      fields: [['Culvert number', 'Culvert_Number'], ['Road number', 'Link_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     traffic: {
       title: 'Traffic count stations', files: ['traffic_count_stations.geojson'], colour: '#e5ce7d', countLabel: 'Stations on map', statusUnit: 'stations on map',
@@ -450,7 +450,7 @@
         const controller = new AbortController();
         const timeout = window.setTimeout(() => controller.abort(), 30000);
         try {
-          const response = await fetch(`geo/${file}?v=20261104-552-bridges`, { signal: controller.signal });
+          const response = await fetch(`geo/${file}?v=20261104-all-structures`, { signal: controller.signal });
           if (!response.ok) throw new Error(`${file} returned ${response.status}`);
           const data = await response.json();
           if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`${file} is not a GeoJSON feature collection`);
@@ -519,8 +519,9 @@
     pointLayer = L.geoJSON(items, {
       pointToLayer: (feature, latlng) => {
         const status = String(feature.properties?.Position_Status || '');
-        if (activeMode === 'bridges' && /review|field check|approximate|not mapped|differs|boundary check/i.test(status)) {
-          return L.circleMarker(latlng, { radius: 7, color: '#754200', weight: 2, fillColor: '#f5ac39', fillOpacity: .95 });
+        if ((activeMode === 'bridges' || activeMode === 'culverts') && status !== 'Verified on mapped road link') {
+          const review = /review|field check|approximate|not mapped|differs|boundary check/i.test(status);
+          return L.circleMarker(latlng, { radius: 7, color: review ? '#8b2e2a' : '#754200', weight: 2, fillColor: review ? '#e36b63' : '#f5ac39', fillOpacity: .95 });
         }
         return L.marker(latlng, { icon: markerIcon(activeMode, spec.colour), keyboard: true });
       },
