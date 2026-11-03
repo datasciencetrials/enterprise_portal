@@ -341,7 +341,7 @@
     if (activeMode === 'roads') drawMap(visible);
     const km = visible.reduce((sum, feature) => sum + (length(feature.properties || {}) || 0), 0);
     $('metric-value').textContent = format.format(km);
-    $('selection-summary').textContent = `Mapped National and DUCAR roads shown`;
+    $('selection-summary').textContent = `${format.format(visible.length)} of ${format.format(features.length)} mapped National and DUCAR road records shown (${format.format(km)} km)`;
     $('map-status').textContent = 'Road network on map';
     const surfaceData = tally(visible, surface, length);
     chart('surface-chart', ['Paved', 'Unpaved', 'Not supplied'], ['Paved', 'Unpaved', 'Not supplied'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db'], false, 'doughnut');
