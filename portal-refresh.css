@@ -41,3 +41,4 @@
 @media (prefers-reduced-motion: reduce) {
   .transport-marker--structure .marker-object { transition: none; }
 }
+.national-context-label{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;color:#405966;margin:.8rem 0}.national-context-label[hidden]{display:none}.national-context-label span{display:inline-block;width:27px;border-top:3px solid #d8a94b;box-shadow:0 1px 0 #fff}

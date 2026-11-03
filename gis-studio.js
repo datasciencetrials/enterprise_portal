@@ -116,10 +116,25 @@
   let roadsLoaded = false;
   let roadLoadPromise = null;
   let roadLayer = null;
+  let nationalContextLayer = null;
   let pointLayer = null;
   let activeMode = 'roads';
   const modeCache = new Map();
   let charts = {};
+  function updateNationalContext() {
+    if (!nationalContextLayer) return;
+    if (activeMode === 'roads') map.removeLayer(nationalContextLayer);
+    else if (!map.hasLayer(nationalContextLayer)) nationalContextLayer.addTo(map).bringToBack();
+    $('national-context-label').hidden = activeMode === 'roads';
+  }
+  function prepareNationalContext(national) {
+    const mapped = national.filter(feature => feature.geometry && ['LineString', 'MultiLineString'].includes(feature.geometry.type));
+    nationalContextLayer = L.geoJSON({ type: 'FeatureCollection', features: mapped }, {
+      interactive: false,
+      style: { color: '#f9d875', weight: 1.45, opacity: .82 },
+    });
+    updateNationalContext();
+  }
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
   const measureStatus = $('map-measure-status');
   let measureMode = null;
@@ -517,6 +532,7 @@
 
   async function showMode(key) {
     activeMode = key;
+    updateNationalContext();
     updateIntro(key);
     window.dispatchEvent(new CustomEvent('transportmodechange', { detail: { mode: key } }));
     showUgandaExtent();
@@ -664,6 +680,7 @@
       if (!response.ok) throw new Error(`${path} returned ${response.status}`);
       const data = await response.json();
       if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`Invalid GeoJSON in ${path}`);
+      if (path === 'network.geojson') prepareNationalContext(data.features);
       return data.features;
     })).then(([national, ducarFile]) => {
       const ducar = ducarFile.filter(feature => feature.geometry && feature.properties?.governance_department === 'DDUCAR MoWT')
