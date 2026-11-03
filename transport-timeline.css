@@ -1,0 +1,13 @@
+.transport-timeline{padding:20px clamp(16px,4vw,64px) 24px;background:#fff;border-bottom:1px solid #d9e9ed;color:#17313a}
+.timeline-heading{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px 24px}
+.timeline-heading h2{margin:2px 0 4px;font-size:clamp(20px,2vw,28px);line-height:1.2}
+.timeline-heading .eyebrow{margin:0;color:#008ba1}
+.timeline-actions{display:flex;flex-wrap:wrap;align-items:end;gap:8px}
+.timeline-actions label{display:grid;gap:4px;font-size:12px;font-weight:600;color:#385b66}
+.timeline-actions select,.timeline-actions button{min-height:36px;border:1px solid #a9c6ce;border-radius:7px;background:#fff;color:#123b48;padding:6px 10px;font:inherit}
+.timeline-actions button{font-size:12px;font-weight:600;cursor:pointer}
+.timeline-actions button:disabled{opacity:.5;cursor:not-allowed}
+#timeline-note{margin:8px 0 0;max-width:100ch;color:#385b66;font-size:13px;line-height:1.5}
+#timeline-chart-wrap{height:260px;margin-top:12px}
+#timeline-chart{width:100%;height:100%}
+@media(max-width:720px){#timeline-chart-wrap{height:230px}.timeline-actions{width:100%}.timeline-actions label{flex:1;min-width:0}.timeline-actions select{width:100%}}

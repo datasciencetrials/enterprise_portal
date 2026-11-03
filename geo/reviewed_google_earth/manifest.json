@@ -1,0 +1,55 @@
+{
+  "purpose": "Reviewed, sanitised source overlays. Not governed national counts or annual inventories.",
+  "crs": "EPSG:4326",
+  "ugandaBoundary": "135 mapped district geometries buffered by 0.025 degrees for source alignment",
+  "layers": [
+    {
+      "id": "a_class_roads",
+      "file": "geo/reviewed_google_earth/a_class_roads.geojson",
+      "name": "A-class roads, source snapshot",
+      "category": "roads",
+      "source": "A class roads.kmz",
+      "sourceSha256": "2cbd9295644fa0f65b66dbce8fc75745b8269402c1ae78540947a8ffc5e07aa7",
+      "featureCount": 91,
+      "rejectedOutsideUganda": 0,
+      "temporalStatus": "Undated source snapshot",
+      "review": "Allowlisted source; WGS84 geometry clipped to mapped Uganda districts; non-name source attributes removed; independent of governed totals."
+    },
+    {
+      "id": "atc_locations",
+      "file": "geo/reviewed_google_earth/atc_locations.geojson",
+      "name": "ATC locations, source snapshot",
+      "category": "traffic",
+      "source": "ATC LOCATIONS.kml",
+      "sourceSha256": "4fef2f7c97ea660ca728db5411402e85a8627786d66d9ba0344050abfc6f9afb",
+      "featureCount": 14,
+      "rejectedOutsideUganda": 0,
+      "temporalStatus": "Undated source snapshot",
+      "review": "Allowlisted source; WGS84 geometry clipped to mapped Uganda districts; non-name source attributes removed; independent of governed totals."
+    },
+    {
+      "id": "bridges_2025",
+      "file": "geo/reviewed_google_earth/bridges_2025.geojson",
+      "name": "Bridges, 2025 source snapshot",
+      "category": "bridges",
+      "source": "Bridges2025.kmz",
+      "sourceSha256": "f6009ca8569ca343f35574713051d1de18339a4719baea9009ae2ac1011121ae",
+      "featureCount": 483,
+      "rejectedOutsideUganda": 0,
+      "temporalStatus": "2025 source label, not an annual inventory",
+      "review": "Allowlisted source; WGS84 geometry clipped to mapped Uganda districts; non-name source attributes removed; independent of governed totals."
+    },
+    {
+      "id": "major_culverts_2025",
+      "file": "geo/reviewed_google_earth/major_culverts_2025.geojson",
+      "name": "Major Culverts, 2025 source snapshot",
+      "category": "culverts",
+      "source": "Major_Culverts2025.kmz",
+      "sourceSha256": "eaa51bfbbb0b76855e62fd9852ad69076309c3d4de1856ed5375d70759d95658",
+      "featureCount": 294,
+      "rejectedOutsideUganda": 0,
+      "temporalStatus": "2025 source label, not an annual inventory",
+      "review": "Allowlisted source; WGS84 geometry clipped to mapped Uganda districts; non-name source attributes removed; independent of governed totals."
+    }
+  ]
+}

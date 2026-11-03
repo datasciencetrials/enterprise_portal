@@ -5,6 +5,31 @@
   const filters = { search: '', region: '', surface: '', condition: '' };
   const map = L.map('gis-map', { zoomControl: false, preferCanvas: true, scrollWheelZoom: true, wheelPxPerZoomLevel: 120 }).setView([1.3, 32.3], 7);
   const localLayers = new Map();
+  const reviewedLayers = new Map();
+  window.addEventListener('gis-reviewed-layer', event => {
+    const { action, id, features, visible = true } = event.detail || {};
+    if (!id) return;
+    if (action === 'toggle') {
+      const layer = reviewedLayers.get(id);
+      if (layer) visible ? layer.addTo(map) : map.removeLayer(layer);
+      return;
+    }
+    if (action !== 'add' || !Array.isArray(features)) return;
+    const colour = { a_class_roads: '#f0a245', atc_locations: '#ef6e6e', bridges_2025: '#8c78d6', major_culverts_2025: '#47b4a0' }[id] || '#8c78d6';
+    const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
+      style: { color: colour, weight: 3, opacity: .9, fillOpacity: .1 },
+      pointToLayer: (_feature, latlng) => L.circleMarker(latlng, { radius: 4, color: '#263a52', weight: 1, fillColor: colour, fillOpacity: .9 }),
+      onEachFeature: (feature, item) => {
+        const title = document.createElement('div');
+        const heading = document.createElement('strong'); heading.textContent = feature.properties?.name || 'Source feature';
+        const note = document.createElement('small'); note.textContent = 'Reviewed source overlay, not a governed count or annual inventory';
+        title.append(heading, document.createElement('br'), note);
+        item.bindPopup(title);
+      },
+    });
+    reviewedLayers.set(id, layer);
+    if (visible) layer.addTo(map);
+  });
   window.addEventListener('gis-local-layer', event => {
     const { action, id, name, features, visible = true } = event.detail || {};
     if (action === 'clear') {
@@ -330,6 +355,7 @@
     }
     chart('traffic-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => trafficGroups.get(k)), '#ffaf62');
     if (activeMode === 'roads') window.TransportChartGallery?.render('roads', features, visible, item => length(item.properties || {}) || 0);
+    if (activeMode === 'roads') window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode: 'roads', items: visible } }));
   }
 
   const transportModes = {
@@ -544,6 +570,7 @@
       $('mode-chart').setAttribute('aria-label', key === 'rail' ? 'Mapped rail geometry by alignment type in kilometres' : `${spec.title} counts by category`);
       $('mode-chart-unit').textContent = key === 'rail' ? 'Mapped rail geometry (km)' : 'Mapped feature counts';
       window.TransportChartGallery?.render(key, items, items, item => key === 'rail' ? mappedLineKm(item.geometry) : 1);
+      window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode: key, items } }));
       $('map-status').textContent = key === 'rail' ? 'MGR and SGR on map' : `${spec.title} on map`;
       $('metric-kind').textContent = key.toUpperCase();
       $('metric-value').textContent = format.format(key === 'rail' ? items.reduce((sum, item) => sum + mappedLineKm(item.geometry), 0) : items.length);
@@ -664,6 +691,15 @@
   }
   const requestedMode = new URLSearchParams(window.location.search).get('mode');
   if (requestedMode && (requestedMode === 'roads' || transportModes[requestedMode])) showMode(requestedMode);
+  window.addEventListener('timeline-request', () => {
+    if (activeMode === 'roads' && roadsLoaded) window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode: 'roads', items: features.filter(matches) } }));
+    else if (transportModes[activeMode]) {
+      const mode = activeMode;
+      loadMode(mode).then(items => {
+        if (activeMode === mode) window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode, items } }));
+      }).catch(() => {});
+    }
+  });
   loadRoadFeatures().catch(() => {});
 
 })();
