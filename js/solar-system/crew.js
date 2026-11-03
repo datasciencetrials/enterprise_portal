@@ -7,7 +7,7 @@ const Crew = (() => {
     pms:    ['Pavement Engineer', 'Defect Survey Technician', 'Reseal & Overlay Lead'],
     tis:    ['Traffic Engineer', 'Axle Load Analyst', 'Congestion Modeler'],
     bms:    ['Bridge Engineer', 'Structural Inspector', 'Culvert Assessment Lead'],
-    socio:  ['Economist', 'NDP IV Liaison', 'Corridor Access Analyst'],
+    socio:  ['Economist', 'Investment analyst', 'Corridor access analyst'],
     budget: ['Asset Valuation Analyst', 'LCCA Modeler', 'Budget Planning Officer'],
     lidar:  ['GIS Analyst', 'Remote Sensing Specialist', 'Point Cloud Technician'],
     piarc:  ['Standards Officer', 'Benchmarking Analyst', 'International Liaison'],

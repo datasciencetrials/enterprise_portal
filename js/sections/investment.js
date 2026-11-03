@@ -15,8 +15,9 @@ RENDERERS.investment = async function(container){
   // "Total Expenditure (UGX bn):") instead of real values. Excluded from every table —
   // this is a source-extraction artifact, not a real project attribute.
   function isCleanRow(r){ return r.agency !== 'Responsible Officer:'; }
-  function cleanRoads(fy){ return (byYear[fy]?.roads || []).filter(isCleanRow); }
-  function cleanBridges(fy){ return (byYear[fy]?.bridges || []).filter(isCleanRow); }
+  function displayAgency(row){ return { ...row, agency: String(row.agency || '').replace(/\bUNRA\b/g, 'Former roads agency') }; }
+  function cleanRoads(fy){ return (byYear[fy]?.roads || []).filter(isCleanRow).map(displayAgency); }
+  function cleanBridges(fy){ return (byYear[fy]?.bridges || []).filter(isCleanRow).map(displayAgency); }
 
   container.appendChild(pageHead(
     'Investment Plan',
@@ -72,22 +73,22 @@ RENDERERS.investment = async function(container){
     const first = years[0], latest = years[years.length-1];
     const firstS = summary[first], latestS = summary[latest];
     wrap.appendChild(el('p',{class:'footnote', style:'margin-bottom:18px;'},
-      `The Public Investment Plan is not republished with full project detail every fiscal year — the ${years.length} cycles shown here (${years.join(', ')}) are the ones with project-level data available on record; the gaps reflect real PIP publishing cycles, not missing data. Implementing agency also shifts over time: in ${first}, ${fmtNum(firstS.unra_projects)} of that year's ${fmtNum(firstS.road_projects+firstS.bridge_major_culvert_projects)} listed projects were attributed to UNRA; by ${latest}, ${fmtNum(latestS.unra_projects)} were attributed to UNRA and ${fmtNum(latestS.mowt_projects)} to MoWT. This reflects UNRA's real dissolution (Dec 2024) and the absorption of its road-development mandate into MoWT's new National Roads Department, not a data error — the same category of capital project is credited to whichever agency was in force when that year's Plan was published.`
+      `The Public Investment Plan is not republished with full project detail every fiscal year. The ${years.length} cycles shown here (${years.join(', ')}) are the ones with project-level data available on record; the gaps reflect publishing cycles, not missing data. Implementing agency also shifts over time: in ${first}, ${fmtNum(firstS.unra_projects)} of that year's ${fmtNum(firstS.road_projects+firstS.bridge_major_culvert_projects)} listed projects were attributed to the former roads agency; by ${latest}, ${fmtNum(latestS.unra_projects)} were attributed to that agency and ${fmtNum(latestS.mowt_projects)} to MoWT. The road-development mandate transferred to MoWT in 2024, so projects are attributed to the agency responsible in each cycle.`
     ));
 
     // ---- trend charts across all real years ----
     const trendYears = years;
-    wrap.appendChild(sectionBlock('Public Investment Plan cycles over time', 'All published cycles with project-level data — not a continuous annual series.', chartGrid([
+    wrap.appendChild(sectionBlock('Public Investment Plan cycles over time', 'All published cycles with project-level data, not a continuous annual series.', chartGrid([
       chartCard({
         title:'Combined Project Value by PIP Cycle', subtitle:'UGX billion', type:'bar',
         labels: trendYears,
         datasets:[{ data: trendYears.map(y=>Math.round(summary[y].combined_value_bn_ushs)), backgroundColor:'#00e5ff', borderRadius:6 }]
       }),
       chartCard({
-        title:'Implementing Agency by PIP Cycle', subtitle:'Reflects the 2024 UNRA→MoWT mandate transfer described above', type:'bar', stacked:true,
+        title:'Implementing agency by PIP cycle', subtitle:'Reflects the 2024 transfer of the road-development mandate', type:'bar', stacked:true,
         labels: trendYears,
         datasets:[
-          { label:'UNRA', data: trendYears.map(y=>summary[y].unra_projects), backgroundColor:'#2979ff', borderRadius:4 },
+          { label:'Former roads agency', data: trendYears.map(y=>summary[y].unra_projects), backgroundColor:'#2979ff', borderRadius:4 },
           { label:'MoWT', data: trendYears.map(y=>summary[y].mowt_projects), backgroundColor:'#ff7a00', borderRadius:4 }
         ]
       })
@@ -126,15 +127,15 @@ RENDERERS.investment = async function(container){
       { label:'Road Projects', value: fmtNum(s.road_projects), accent:'var(--neon-cyan)' },
       { label:'Bridge & Major Culvert Projects', value: fmtNum(s.bridge_major_culvert_projects), accent:'var(--neon-magenta)' },
       { label:'Combined Project Value', value: fmtNum(s.combined_value_bn_ushs,0), unit:'UGX bn', accent:'var(--neon-purple)' },
-      { label:'UNRA-Implemented', value: fmtNum(s.unra_projects), accent:'var(--neon-blue)' },
+      { label:'Former agency projects', value: fmtNum(s.unra_projects), accent:'var(--neon-blue)' },
       { label:'MoWT-Implemented', value: fmtNum(s.mowt_projects), accent:'var(--neon-orange)' },
     ]));
 
     const agencyOptions = uniq([...roads, ...bridges].map(r=>r.agency));
     const valueFmt = v => (v===null||v===undefined) ? 'Not yet costed' : fmtNum(v,1)+' bn';
-    const timelineRender = (v,row) => esc((row.start_date||'—') + ' – ' + (row.end_date||'—'));
+    const timelineRender = (v,row) => esc((row.start_date||'Not supplied') + ' to ' + (row.end_date||'Not supplied'));
 
-    panel.appendChild(sectionBlock(`Road Projects — ${fy}`, roads.length+' road projects as published in this cycle’s Public Investment Plan.',
+    panel.appendChild(sectionBlock(`Road projects: ${fy}`, roads.length+' road projects as published in this cycle’s Public Investment Plan.',
       dataTable({
         caption:'road projects',
         rows: roads,
@@ -151,7 +152,7 @@ RENDERERS.investment = async function(container){
       })
     ));
 
-    panel.appendChild(sectionBlock(`Bridge & Major Culvert Projects — ${fy}`, bridges.length+' bridge/major-culvert projects as published in this cycle’s Public Investment Plan — reported separately from road projects, never merged.',
+    panel.appendChild(sectionBlock(`Bridge and major culvert projects: ${fy}`, bridges.length+' bridge and major culvert projects as published in this cycle’s Public Investment Plan, reported separately from road projects.',
       dataTable({
         caption:'bridge & major culvert projects',
         rows: bridges,
@@ -169,7 +170,7 @@ RENDERERS.investment = async function(container){
     ));
 
     panel.appendChild(el('p',{class:'footnote'},
-      'Figures are total lifecycle project values as published in each fiscal year’s Public Investment Plan, not annual budget allocations — the same project can appear across multiple years with updated figures as it progresses through appraisal, approval and implementation. Source: '+esc(ibp.meta && ibp.meta.source || 'Ministry of Finance, Planning and Economic Development (Uganda) — Integrated Bank of Projects (IBP), Public Investment Plan (PIP) series')+'. One malformed source row (a PDF column-header parsed as a project value) has been excluded from these tables.'
+      'Figures are total lifecycle project values, not annual budget allocations. The same project can appear across multiple years with updated figures as it progresses through appraisal, approval and implementation. One malformed extraction row has been excluded from these tables.'
     ));
 
     return panel;

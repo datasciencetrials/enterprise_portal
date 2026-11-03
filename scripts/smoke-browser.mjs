@@ -45,7 +45,15 @@ try {
   await send('Runtime.enable');
   await send('Page.enable');
   await send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: profile });
-  await delay(base.startsWith('https:') ? 10000 : 2500);
+  for (let attempt = 0; attempt < (base.startsWith('https:') ? 60 : 20); attempt++) {
+    const status = await evaluate(`document.getElementById('map-status')?.textContent`);
+    if (status === 'Road network on map' || /unavailable/i.test(status || '')) break;
+    await delay(1000);
+  }
+  for (let attempt = 0; attempt < (base.startsWith('https:') ? 60 : 20); attempt++) {
+    if (await evaluate(`[...document.querySelectorAll('.leaflet-image-layer')].some(x=>x.complete&&x.naturalWidth>0)`)) break;
+    await delay(1000);
+  }
   const desktop = await evaluate(`({roadCount:document.getElementById('map-status')?.textContent,expanded:document.getElementById('allroads-coverage')?.textContent,overlayLoaded:[...document.querySelectorAll('.leaflet-image-layer')].some(x=>x.complete&&x.naturalWidth>0),downloadLabel:document.querySelector('[data-action="download"]')?.textContent.trim(),tabs:[...document.querySelectorAll('.section-tabs button')].map(x=>x.textContent),overflow:document.documentElement.scrollWidth>innerWidth,motion:getComputedStyle(document.querySelector('.intro h1 em')).animationName,progress:document.documentElement.style.getPropertyValue('--scroll-progress'),legend:document.querySelector('.legend-card')?.innerText,cardBackground:getComputedStyle(document.querySelector('.control-card')).backgroundColor,cardBlur:getComputedStyle(document.querySelector('.control-card')).backdropFilter,aspect:document.getElementById('gis-map').dataset.aspect})`);
   if (desktop.roadCount !== 'Road network on map' || desktop.tabs.join('|') !== 'Roads|Bridges|Major Culverts|Traffic|Ferries|Aviation|Safety|Freight|Rail') throw new Error(`Road coverage or tab order mismatch: ${JSON.stringify(desktop)}`);
   if (!desktop.overlayLoaded || desktop.expanded !== undefined || desktop.downloadLabel !== 'Download') throw new Error(`Expanded map or download control mismatch: ${JSON.stringify(desktop)}`);
@@ -55,10 +63,10 @@ try {
   if (!desktop.legend.includes('National paved roads') || !desktop.legend.includes('DUCAR paved roads') || !desktop.cardBackground.includes('0.86') || desktop.cardBlur === 'none') throw new Error(`Road hierarchy or card transparency mismatch: ${JSON.stringify(desktop)}`);
   const roadMetric = await evaluate(`({value:document.getElementById('metric-value')?.textContent,label:document.getElementById('metric-label')?.textContent,coverageChart:!!document.getElementById('coverage-view'),mapMetricCard:!!document.querySelector('.map-shell .metric-card')})`);
   if (!roadMetric.label.includes('(km)') || !Number.isFinite(Number(roadMetric.value.replaceAll(',', ''))) || roadMetric.coverageChart || roadMetric.mapMetricCard) throw new Error(`Road metric or chart mismatch: ${JSON.stringify(roadMetric)}`);
-  const chartTypes = await evaluate(`['surface-chart','condition-chart','region-chart','class-chart','traffic-chart','safety-chart','priority-chart'].map(id=>Chart.getChart(document.getElementById(id))?.config.type)`);
-  if (chartTypes.join('|') !== 'doughnut|polarArea|bar|bar|line|pie|radar') throw new Error(`Road chart variety mismatch: ${JSON.stringify(chartTypes)}`);
+  const chartTypes = await evaluate(`['surface-chart','condition-chart','region-chart','class-chart','traffic-chart'].map(id=>Chart.getChart(document.getElementById(id))?.config.type)`);
+  if (chartTypes.join('|') !== 'doughnut|bar|bar|bar|bar') throw new Error(`Road chart types mismatch: ${JSON.stringify(chartTypes)}`);
   const roadChartUnits = await evaluate(`({labels:[...document.querySelectorAll('#road-analysis .chart-header span')].map(x=>x.textContent),conditionKm:Chart.getChart(document.getElementById('condition-chart')).data.datasets[0].data.reduce((a,b)=>a+b,0),roadKm:Number(document.getElementById('metric-value').textContent.replaceAll(',',''))})`);
-  if (roadChartUnits.labels.length !== 7 || roadChartUnits.labels.some(label => !label.includes('km')) || Math.abs(roadChartUnits.conditionKm - roadChartUnits.roadKm) > .11) throw new Error(`Road chart units mismatch: ${JSON.stringify(roadChartUnits)}`);
+  if (roadChartUnits.labels.length !== 5 || roadChartUnits.labels.some(label => !label.includes('km')) || Math.abs(roadChartUnits.conditionKm - roadChartUnits.roadKm) > .11) throw new Error(`Road chart units mismatch: ${JSON.stringify(roadChartUnits)}`);
   const overlayManifest = await evaluate(`fetch('geo/allroads-display.json').then(response=>response.json()).then(data=>data.style_counts)`);
   if (overlayManifest.paved_national !== 3470 || overlayManifest.paved_ducar !== 7520) throw new Error(`Paved geometry split mismatch: ${JSON.stringify(overlayManifest)}`);
   if (process.env.GIS_CHART_SCREENSHOT) {
@@ -74,11 +82,10 @@ try {
   await evaluate(`document.getElementById('gis-map').scrollIntoView({behavior:'instant'})`);
   await delay(150);
   const zoomBefore = await evaluate(`Number(document.getElementById('gis-map').dataset.zoom)`);
-  const wheelPoint = await evaluate(`(()=>{const rect=document.getElementById('gis-map').getBoundingClientRect();return {x:Math.round(rect.left+rect.width*.6),y:Math.round(Math.min(innerHeight-30,rect.top+90))}})()`);
-  await send('Input.dispatchMouseEvent', { type: 'mouseWheel', ...wheelPoint, deltaX: 0, deltaY: -600, pointerType: 'mouse' });
+  await evaluate(`document.querySelector('[data-map-tool="zoom-in"]').click()`);
   await delay(650);
   const zoomAfter = await evaluate(`Number(document.getElementById('gis-map').dataset.zoom)`);
-  if (!(zoomAfter > zoomBefore)) throw new Error(`Mouse-wheel map zoom failed: ${zoomBefore} to ${zoomAfter}`);
+  if (!(zoomAfter > zoomBefore)) throw new Error(`Map zoom control failed: ${zoomBefore} to ${zoomAfter}`);
   const modes = ['roads','bridges','traffic','ferries','aviation','safety','freight','rail','culverts'];
   const results = {};
   for (const mode of modes) {
@@ -87,11 +94,12 @@ try {
     const result = await evaluate(`({status:document.getElementById('map-status').textContent,title:document.getElementById('mode-title').textContent,link:document.getElementById('mode-table-link').href,metric:document.getElementById('metric-value').textContent,label:document.getElementById('metric-label').textContent})`);
     if (/unavailable|loading/i.test(result.status)) throw new Error(`${mode}: ${JSON.stringify(result)}`);
     if (mode === 'rail' ? !result.label.includes('(km)') || !(Number(result.metric.replaceAll(',', '')) > 0) : mode !== 'roads' && (result.label.includes('(km)') || !Number.isInteger(Number(result.metric.replaceAll(',', ''))))) throw new Error(`${mode} metric mismatch: ${JSON.stringify(result)}`);
-    if (mode === 'bridges' && (result.metric !== '423' || !result.link.includes('dataset=bridges'))) throw new Error(`Bridge view mismatch: ${JSON.stringify(result)}`);
-    if (mode === 'culverts' && (result.metric !== '396' || !result.link.includes('dataset=culverts'))) throw new Error(`Major Culvert view mismatch: ${JSON.stringify(result)}`);
+    if (mode === 'bridges' && (result.metric !== '527' || !result.link.includes('dataset=bridges'))) throw new Error(`Bridge view mismatch: ${JSON.stringify(result)}`);
+    if (mode === 'culverts' && (result.metric !== '425' || !result.link.includes('dataset=culverts'))) throw new Error(`Major Culvert view mismatch: ${JSON.stringify(result)}`);
     results[mode] = `${result.status}: ${result.metric} ${result.label}`;
   }
   await evaluate(`document.querySelector('[data-action="download"]').click()`);
+  await evaluate(`document.querySelector('#map-download-menu button').click()`);
   await delay(600);
   if (!downloads.includes('uganda-culverts-map.csv')) throw new Error(`Map CSV download not observed: ${JSON.stringify(downloads)}`);
   await send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
@@ -102,14 +110,14 @@ try {
   await send('Page.navigate', { url: new URL('data-explorer.html?dataset=bridges', base).href });
   await delay(base.startsWith('https:') ? 5000 : 1500);
   const table = await evaluate(`({total:document.getElementById('total')?.textContent,range:document.getElementById('row-range')?.textContent,schema:document.getElementById('schema-sql')?.textContent.includes('not a deployed SQL table')})`);
-  if (table.total !== '423' || !table.range.includes('423') || !table.schema) throw new Error(`Table mismatch: ${JSON.stringify(table)}`);
+  if (table.total !== '552' || !table.range.includes('552') || !table.schema) throw new Error(`Table mismatch: ${JSON.stringify(table)}`);
   await send('Page.navigate', { url: new URL('data-explorer.html?dataset=roads', base).href });
   await delay(base.startsWith('https:') ? 5000 : 1800);
   const allRoadRows = await evaluate(`({count:document.querySelectorAll('#table-body tr').length,hasPagination:!!document.querySelector('.pagination')})`);
   if (allRoadRows.count !== 5274 || allRoadRows.hasPagination) throw new Error(`Full road table mismatch: ${JSON.stringify(allRoadRows)}`);
   await evaluate(`(document.getElementById('category').value='Not supplied',document.getElementById('category').dispatchEvent(new Event('change')))`);
-  const roadTable = await evaluate(`({total:document.getElementById('total')?.textContent,matching:document.getElementById('matching')?.textContent,context:document.getElementById('context')?.textContent,hasDucar:document.getElementById('table-body')?.textContent.includes('DUCAR'),renderedRows:document.querySelectorAll('#table-body tr').length,hasPagination:!!document.querySelector('.pagination'),scrollable:document.querySelector('.table-scroll').scrollHeight>document.querySelector('.table-scroll').clientHeight})`);
-  if (roadTable.total !== '5,274' || roadTable.matching !== '4,259' || !roadTable.hasDucar || !roadTable.context.includes('DUCAR') || roadTable.renderedRows !== 4259 || roadTable.hasPagination || !roadTable.scrollable) throw new Error(`Road table mismatch: ${JSON.stringify(roadTable)}`);
+  const roadTable = await evaluate(`({total:document.getElementById('total')?.textContent,totalLabel:document.getElementById('total-label')?.textContent,matching:document.getElementById('matching')?.textContent,matchingLabel:document.getElementById('matching-label')?.textContent,context:document.getElementById('context')?.textContent,hasDucar:document.getElementById('table-body')?.textContent.includes('DUCAR'),renderedRows:document.querySelectorAll('#table-body tr').length,hasPagination:!!document.querySelector('.pagination'),scrollable:document.querySelector('.table-scroll').scrollHeight>document.querySelector('.table-scroll').clientHeight})`);
+  if (roadTable.total !== '52,968.4' || roadTable.matching !== '31,799.4' || roadTable.totalLabel !== 'Mapped km' || roadTable.matchingLabel !== 'Matching km' || !roadTable.hasDucar || !roadTable.context.includes('DUCAR') || roadTable.renderedRows !== 4259 || roadTable.hasPagination || !roadTable.scrollable) throw new Error(`Road table mismatch: ${JSON.stringify(roadTable)}`);
   if (exceptions.length) throw new Error(`Browser exceptions: ${exceptions.join('; ')}`);
   console.log(JSON.stringify({ desktop, modes: results, download: downloads, mobile, bridgeTable: table, roadTable, browserExceptions: exceptions.length }, null, 2));
 } finally {

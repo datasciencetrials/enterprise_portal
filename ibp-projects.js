@@ -60,7 +60,7 @@
         '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#00f3ff"><div class="ibp-kpi-label">Road Projects</div><div class="ibp-kpi-value">' + s.road_projects + '</div></div>' +
         '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#ff00ea"><div class="ibp-kpi-label">Bridge &amp; Major Culvert Projects</div><div class="ibp-kpi-value">' + s.bridge_major_culvert_projects + '</div></div>' +
         '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#00ff66"><div class="ibp-kpi-label">Combined Value (' + esc(year) + ')</div><div class="ibp-kpi-value">UShs ' + fmtBn(s.combined_value_bn_ushs) + '</div></div>' +
-        '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#fffb00"><div class="ibp-kpi-label">UNRA / MoWT Projects</div><div class="ibp-kpi-value ibp-kpi-small">' + s.unra_projects + ' / ' + s.mowt_projects + '</div></div>' +
+        '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#fffb00"><div class="ibp-kpi-label">Former agency / MoWT projects</div><div class="ibp-kpi-value ibp-kpi-small">' + s.unra_projects + ' / ' + s.mowt_projects + '</div></div>' +
       '</div>' +
 
       '<h3 class="ibp-section-title">Road Projects <span class="ibp-count">(' + roads.length + ')</span></h3>' +

@@ -176,7 +176,7 @@ RENDERERS.map = async function(container){
     { id:'mowt_stations', label:'MoWT National Roads Stations', unit:'stations', loader: ()=>DataStore.getJSON('geo/mowt_stations.geojson'), color:NEON[4], type:'point', radius:4, popup:'generic' },
     { id:'ducar', label:'DUCAR Road Network', unit:'road segments', loader: DataStore.ducarRoads, color:NEON[0], type:'line', lazy:true, warn:'~9 MB', popup:'generic' },
     { id:'oprc', label:'OPRC Contract Lots', unit:'lot segments', loader: DataStore.oprcContracts, color:NEON[5], type:'line', weight:4, popup:'generic' },
-    { id:'ndpiv', label:'NDP IV Investment Projects', unit:'project segments', loader: DataStore.ndpivProjects, color:NEON[6], type:'line', weight:4, popup:'generic' },
+    { id:'ndpiv', label:'Investment projects', unit:'project segments', loader: DataStore.ndpivProjects, color:NEON[6], type:'line', weight:4, popup:'generic' },
     { id:'districts', label:'UBOS Districts', unit:'districts', loader: DataStore.districts, color:NEON[7], type:'polygon', popup:'generic' },
     { id:'maint_regions', label:'Maintenance Regions', unit:'regions', loader: DataStore.maintRegions, color:NEON[0], type:'polygon', fillOpacity:0.06, weight:2, popup:'generic' },
     { id:'parishes', label:'Parishes', unit:'parishes', loader: ()=>DataStore.getJSON('geo/parishes.geojson'), color:NEON[1], type:'polygon', lazy:true, warn:'~6.8 MB', fillOpacity:0.06, popup:'generic' },

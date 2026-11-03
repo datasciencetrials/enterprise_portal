@@ -110,7 +110,7 @@ RENDERERS.universe = async function(container){
       load: async()=>{
         const [ndpiv, forest, wet, prot] = await Promise.all([DataStore.ndpivProjects(), DataStore.forestReserves(), DataStore.wetlands(), DataStore.protectedAreas()]);
         return { kpis:[
-          {label:'NDP IV Investment Projects', value:fmtNum(ndpiv.features.length,0), accent:'#2979ff'},
+          {label:'Investment projects', value:fmtNum(ndpiv.features.length,0), accent:'#2979ff'},
           {label:'Forest Reserves', value:fmtNum(forest.features.length,0), accent:'#00ff85'},
           {label:'Wetlands', value:fmtNum(wet.features.length,0), accent:'#00e5ff'},
           {label:'Protected Areas', value:fmtNum(prot.features.length,0), accent:'#fff500'},

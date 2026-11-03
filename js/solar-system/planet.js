@@ -18,7 +18,7 @@ const SolarSystem = (() => {
     { id:'bms',    name:'BMS',      full:'Bridge Management System',          body:'Terra',   color:0x00E676, orbit:16.0, size:1.00, speed:0.40, gravity:0.55, moon:{ name:'Moon',    size:0.27, dist:1.7, color:0xCFD8DC },
       feeds: '450 inspected bridges & major culverts, 96.2% structural safety index (New Jinja 9.2/10)',
       receives: 'River crossing LRS chainage positions' },
-    { id:'socio',  name:'NDP IV',   full:'Socio-Economic & NDP IV',           body:'Mars',    color:0xFF6D00, orbit:19.5, size:0.72, speed:0.33, gravity:0.30, moon:null,
+    { id:'socio',  name:'Investment',   full:'Socio-economic and investment',           body:'Mars',    color:0xFF6D00, orbit:19.5, size:0.72, speed:0.33, gravity:0.30, moon:null,
       feeds: '135-district feeder network (15,000 km), 18.4% EIRR, agricultural trade corridor access',
       receives: 'National network connectivity topology' },
     { id:'budget', name:'Budgets',  full:'Budgets & LCCA',                    body:'Jupiter', color:0xFFD700, orbit:25.0, size:1.90, speed:0.22, gravity:0.72, moon:{ name:'Europa',  size:0.32, dist:2.6, color:0xE8D9B5 },
@@ -31,7 +31,7 @@ const SolarSystem = (() => {
       feeds: 'PIARC World Road Association standards, World Bank RMI metrics, AASHTO guidelines, climate-resilient specs (NZ, UK, South Africa, Japan)',
       receives: 'DNR-MOWT national performance data for global cross-benchmarking' },
     { id:'pims',   name:'PIMS',     full:'PIMS Projects & Public Investment', body:'Neptune', color:0x2979FF, orbit:41.0, size:1.35, speed:0.10, gravity:0.60, moon:{ name:'Triton',  size:0.26, dist:2.2, color:0x9FD8E0 },
-      feeds: 'NDP IV capital project pipeline, PIMS gatekeeper clearance, donor-funded corridors (World Bank, AfDB, JICA)',
+      feeds: 'Capital project pipeline, PIMS gatekeeper clearance, donor-funded corridors (World Bank, AfDB, JICA)',
       receives: 'Priority MYFP capital interventions & condition-adjusted asset replacement values' },
   ];
 

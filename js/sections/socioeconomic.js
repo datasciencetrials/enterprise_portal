@@ -108,7 +108,7 @@ RENDERERS.socioeconomic = async function(container){
     { id:'forest',    label:'Forest Reserves' },
     { id:'parks',     label:'National Parks, Game & Wildlife Reserves' },
     { id:'wetlands',  label:'Wetlands' },
-    { id:'corridors', label:'OPRC / NDP IV Investment Corridors' },
+    { id:'corridors', label:'OPRC / investment corridors' },
     { id:'access',    label:'Towns & Access' },
   ];
   const tabRow = el('div', {class:'tab-row'});
@@ -308,24 +308,24 @@ RENDERERS.socioeconomic = async function(container){
     wrap.appendChild(kpiGrid([
       { label:'OPRC Scoped Links', value: fmtNum(oprcRows.length), accent:'var(--neon-cyan)' },
       { label:'OPRC Scoped Length', value: fmtNum(oprcKm,0), unit:'km', accent:'var(--neon-blue)' },
-      { label:'NDP IV Investment Projects', value: fmtNum(ndpivRows.length), accent:'var(--neon-magenta)' },
-      { label:'NDP IV Tagged Length', value: fmtNum(ndpivKm,0), unit:'km', accent:'var(--neon-purple)' },
-      { label:'NDP IV High-Priority Links', value: fmtNum(ndpivHigh), accent:'var(--neon-orange)', delta:(ndpivHigh/ndpivRows.length*100).toFixed(0)+'% of projects' },
+      { label:'Investment projects', value: fmtNum(ndpivRows.length), accent:'var(--neon-magenta)' },
+      { label:'Investment tagged length', value: fmtNum(ndpivKm,0), unit:'km', accent:'var(--neon-purple)' },
+      { label:'High-priority investment links', value: fmtNum(ndpivHigh), accent:'var(--neon-orange)', delta:(ndpivHigh/ndpivRows.length*100).toFixed(0)+'% of projects' },
     ]));
     wrap.appendChild(el('p', {class:'footnote'},
-      'Source: MoWT FY2025/26 NDP IV investment master list ('+fmtNum(ndpivRows.length)+' project-tagged road links) and Output- and Performance-based Road Contracts (OPRC) scoping register ('+fmtNum(oprcRows.length)+' links across 6 regional lots). Both are real planning-stage overlays on the road-link network — link names are decoded from the source register, not shown as raw link codes.'
+      'This view covers '+fmtNum(ndpivRows.length)+' project-tagged road links and '+fmtNum(oprcRows.length)+' OPRC links across 6 regional lots. Both are planning-stage overlays on the road-link network. Link names are displayed as labels rather than raw codes.'
     ));
 
-    wrap.appendChild(sectionBlock('Investment corridors by region and component', 'All 6 maintenance regions for OPRC; all NDP IV components — no subset.', chartGrid([
+    wrap.appendChild(sectionBlock('Investment corridors by region and component', 'All 6 maintenance regions for OPRC and all investment components.', chartGrid([
       chartCard({ title:'OPRC scoped length by region', subtitle:'km', type:'bar',
         labels: DataStore.REGIONS, datasets:[{ data: DataStore.REGIONS.map(r=>Math.round(oprcByRegion[r])), backgroundColor:'#00e5ff', borderRadius:6 }] }),
-      chartCard({ title:'NDP IV projects by component', type:'bar', indexAxis:'y',
+      chartCard({ title:'Investment projects by component', type:'bar', indexAxis:'y',
         labels: components, datasets:[{ data: components.map(c=>ndpivByComponent[c]), backgroundColor:NEON.slice(0,components.length), borderRadius:6 }] }),
     ])));
 
     const mapDiv = el('div', {class:'map-shell'});
-    const mapCard = el('div', {class:'card card-pad'}, [mapDiv, legend([['OPRC contract-lot links ('+fmtNum(oprcRows.length)+')','#00e5ff'], ['NDP IV investment-project links ('+fmtNum(ndpivRows.length)+')','#ff00c8']])]);
-    wrap.appendChild(sectionBlock('Investment corridor map', 'Road links carrying an OPRC contract-lot scope or an NDP IV investment tag.', mapCard));
+    const mapCard = el('div', {class:'card card-pad'}, [mapDiv, legend([['OPRC contract-lot links ('+fmtNum(oprcRows.length)+')','#00e5ff'], ['Investment-project links ('+fmtNum(ndpivRows.length)+')','#ff00c8']])]);
+    wrap.appendChild(sectionBlock('Investment corridor map', 'Road links carrying an OPRC contract-lot scope or an investment tag.', mapCard));
     requestAnimationFrame(()=>{
       const map = baseMap(mapDiv, [1.4,32.3], 7);
       const oLayer = L.geoJSON(oprcGeo, { style:{ color:'#00e5ff', weight:3, opacity:0.85 }, onEachFeature:(f,l)=>l.bindPopup(esc(f.properties.link_name)+'<br>'+esc(f.properties.lot_name)) }).addTo(map);
@@ -348,7 +348,7 @@ RENDERERS.socioeconomic = async function(container){
       caption:'OPRC-scoped links',
     })));
 
-    wrap.appendChild(sectionBlock('NDP IV investment projects', 'All '+fmtNum(ndpivRows.length)+' project-tagged road links.', dataTable({
+    wrap.appendChild(sectionBlock('Investment projects', 'All '+fmtNum(ndpivRows.length)+' project-tagged road links.', dataTable({
       columns:[
         { key:'project', label:'Project' },
         { key:'component', label:'Component' },
@@ -361,7 +361,7 @@ RENDERERS.socioeconomic = async function(container){
       ],
       rows: ndpivRows, pageSize:25, searchKeys:['project','linkName','roadNo'],
       filters:[{ label:'region', key:'region', options: DataStore.REGIONS }, { label:'priority', key:'priority', options:['High','Medium'] }],
-      caption:'NDP IV project links',
+      caption:'Investment project links',
     })));
 
     return wrap;
