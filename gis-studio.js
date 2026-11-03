@@ -4,6 +4,34 @@
   const format = new Intl.NumberFormat('en-UG', { maximumFractionDigits: 1 });
   const filters = { search: '', region: '', surface: '', condition: '' };
   const map = L.map('gis-map', { zoomControl: false, preferCanvas: true, scrollWheelZoom: true, wheelPxPerZoomLevel: 120 }).setView([1.3, 32.3], 7);
+  const localLayers = new Map();
+  window.addEventListener('gis-local-layer', event => {
+    const { action, id, name, features, visible = true } = event.detail || {};
+    if (action === 'clear') {
+      for (const layer of localLayers.values()) map.removeLayer(layer);
+      localLayers.clear();
+      return;
+    }
+    if (action === 'toggle') {
+      const layer = localLayers.get(id);
+      if (layer) visible ? layer.addTo(map) : map.removeLayer(layer);
+      return;
+    }
+    if (action !== 'add' || !id || !Array.isArray(features)) return;
+    const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
+      style: { color: '#ba45a3', weight: 2, opacity: .9, fillColor: '#d38ac5', fillOpacity: .14 },
+      pointToLayer: (_feature, latlng) => L.circleMarker(latlng, { radius: 4, color: '#80286f', weight: 1, fillColor: '#df68b8', fillOpacity: .85 }),
+      onEachFeature: (feature, item) => {
+        const label = document.createElement('strong');
+        label.textContent = String(feature.properties?.name || name || 'Local feature');
+        item.bindPopup(label);
+      },
+    });
+    localLayers.set(id, layer);
+    layer.addTo(map);
+    if (localLayers.size === 1 && layer.getBounds().isValid()) map.fitBounds(layer.getBounds(), { padding: [30, 30], maxZoom: 11 });
+  });
+  window.gisLocalLayerReady = true;
   const mapContainer = map.getContainer();
   const activateWheelZoom = () => {
     map.scrollWheelZoom.enable();
