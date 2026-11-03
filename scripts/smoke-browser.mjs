@@ -94,7 +94,7 @@ try {
     const result = await evaluate(`({status:document.getElementById('map-status').textContent,title:document.getElementById('mode-title').textContent,link:document.getElementById('mode-table-link').href,metric:document.getElementById('metric-value').textContent,label:document.getElementById('metric-label').textContent})`);
     if (/unavailable|loading/i.test(result.status)) throw new Error(`${mode}: ${JSON.stringify(result)}`);
     if (mode === 'rail' ? !result.label.includes('(km)') || !(Number(result.metric.replaceAll(',', '')) > 0) : mode !== 'roads' && (result.label.includes('(km)') || !Number.isInteger(Number(result.metric.replaceAll(',', ''))))) throw new Error(`${mode} metric mismatch: ${JSON.stringify(result)}`);
-    if (mode === 'bridges' && (result.metric !== '527' || !result.link.includes('dataset=bridges'))) throw new Error(`Bridge view mismatch: ${JSON.stringify(result)}`);
+    if (mode === 'bridges' && (result.metric !== '552' || !result.link.includes('dataset=bridges'))) throw new Error(`Bridge view mismatch: ${JSON.stringify(result)}`);
     if (mode === 'culverts' && (result.metric !== '425' || !result.link.includes('dataset=culverts'))) throw new Error(`Major Culvert view mismatch: ${JSON.stringify(result)}`);
     results[mode] = `${result.status}: ${result.metric} ${result.label}`;
   }
@@ -111,6 +111,8 @@ try {
   await delay(base.startsWith('https:') ? 5000 : 1500);
   const table = await evaluate(`({total:document.getElementById('total')?.textContent,range:document.getElementById('row-range')?.textContent,schema:document.getElementById('schema-sql')?.textContent.includes('not a deployed SQL table')})`);
   if (table.total !== '552' || !table.range.includes('552') || !table.schema) throw new Error(`Table mismatch: ${JSON.stringify(table)}`);
+  const bridgeCoordinates = await evaluate(`fetch('geo/bridges.geojson?v=20261104-552-bridges').then(response=>response.json()).then(data=>({total:data.features.length,mapped:data.features.filter(feature=>feature.geometry?.type==='Point'&&Number.isFinite(feature.properties?.Longitude)&&Number.isFinite(feature.properties?.Latitude)).length,review:data.features.filter(feature=>/review|field check|approximate|not mapped|differs|boundary check/i.test(feature.properties?.Position_Status||'')).length,fieldCheck:data.features.filter(feature=>/field check/i.test(feature.properties?.Position_Status||'')).length}))`);
+  if (bridgeCoordinates.total !== 552 || bridgeCoordinates.mapped !== 552 || bridgeCoordinates.review !== 16 || bridgeCoordinates.fieldCheck !== 2) throw new Error(`Bridge coordinate coverage mismatch: ${JSON.stringify(bridgeCoordinates)}`);
   await send('Page.navigate', { url: new URL('data-explorer.html?dataset=roads', base).href });
   await delay(base.startsWith('https:') ? 5000 : 1800);
   const allRoadRows = await evaluate(`({count:document.querySelectorAll('#table-body tr').length,hasPagination:!!document.querySelector('.pagination')})`);

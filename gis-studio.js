@@ -371,8 +371,8 @@
     bridges: {
       title: 'Bridges', files: ['bridges.geojson'], colour: '#438ee1', countLabel: 'Bridges on map', statusUnit: 'bridges on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'The FY 2026/27 BMS register contains 552 Bridges. Only 527 have positions verified against a mapped road link; 25 remain in the table pending spatial verification.',
-      fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region']],
+      description: 'The FY 2026/27 BMS register contains 552 Bridges with recorded map positions. Of these, 536 are road-linked or corrected points and 16 remain marked for review, including 2 requiring a field check. Review points are shown in amber and are not verified bridge locations.',
+      fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     culverts: {
       title: 'Major Culverts', files: ['major_culverts.geojson'], colour: '#77b2f1', countLabel: 'Major Culverts on map', statusUnit: 'major culverts on map',
@@ -450,7 +450,7 @@
         const controller = new AbortController();
         const timeout = window.setTimeout(() => controller.abort(), 30000);
         try {
-          const response = await fetch(`geo/${file}?v=20261029-bms`, { signal: controller.signal });
+          const response = await fetch(`geo/${file}?v=20261104-552-bridges`, { signal: controller.signal });
           if (!response.ok) throw new Error(`${file} returned ${response.status}`);
           const data = await response.json();
           if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`${file} is not a GeoJSON feature collection`);
@@ -517,7 +517,13 @@
     if (roadLayer) map.removeLayer(roadLayer);
     if (pointLayer) map.removeLayer(pointLayer);
     pointLayer = L.geoJSON(items, {
-      pointToLayer: (_, latlng) => L.marker(latlng, { icon: markerIcon(activeMode, spec.colour), keyboard: true }),
+      pointToLayer: (feature, latlng) => {
+        const status = String(feature.properties?.Position_Status || '');
+        if (activeMode === 'bridges' && /review|field check|approximate|not mapped|differs|boundary check/i.test(status)) {
+          return L.circleMarker(latlng, { radius: 7, color: '#754200', weight: 2, fillColor: '#f5ac39', fillOpacity: .95 });
+        }
+        return L.marker(latlng, { icon: markerIcon(activeMode, spec.colour), keyboard: true });
+      },
       style: feature => ({ color: feature.properties?._transportKind === 'SGR alignment' ? '#7657b7' : feature.properties?._transportKind === 'Major Culverts' ? '#77b2f1' : spec.colour, weight: 2.5, opacity: .9 }),
       onEachFeature: (feature, layer) => layer.bindPopup(pointPopup(feature.properties || {}, spec), { maxWidth: 290 }),
     }).addTo(map);
