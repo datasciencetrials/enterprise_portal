@@ -222,6 +222,7 @@
     const raw = value(properties, key);
     return typeof raw === 'string' && raw.trim() ? raw.trim() : 'Not supplied';
   };
+  const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw || 'Not supplied';
   const title = properties => value(properties, 'Link Name') || value(properties, 'Road No 1') || 'Unnamed road';
   const text = item => document.createTextNode(String(item ?? 'Not supplied'));
 
@@ -382,7 +383,7 @@
     },
     traffic: {
       title: 'Traffic count stations', files: ['traffic_count_stations.geojson'], colour: '#e5ce7d', countLabel: 'Stations on map', statusUnit: 'stations on map',
-      group: p => category(p, 'REGION'),
+      group: p => subRegion(category(p, 'REGION')),
       description: 'Mapped station locations by region. Counts of stations are not traffic volumes.',
       fields: [['Station', 'TCS_NAME'], ['Road', 'Link_Name'], ['Region', 'REGION']],
     },
@@ -479,7 +480,7 @@
     for (const [label, key] of spec.fields) {
       const entry = properties[key];
       if (entry === null || entry === undefined || entry === '') continue;
-      const row = document.createElement('div'); row.append(text(`${label}: ${entry}`)); panel.append(row);
+      const row = document.createElement('div'); row.append(text(`${label}: ${key === 'REGION' ? subRegion(entry) : entry}`)); panel.append(row);
     }
     return panel;
   }
@@ -644,7 +645,7 @@
     try {
       const items = await loadMode(mode);
       const headers = ['Feature type', ...spec.fields.map(([label]) => label)];
-      const rows = items.map(item => [item.properties?._transportKind || spec.title, ...spec.fields.map(([, key]) => item.properties?.[key])]);
+      const rows = items.map(item => [item.properties?._transportKind || spec.title, ...spec.fields.map(([, key]) => key === 'REGION' ? subRegion(item.properties?.[key]) : item.properties?.[key])]);
       const publicFeatures = items.map((item, index) => ({ type: 'Feature', geometry: item.geometry, properties: Object.fromEntries(headers.map((header, column) => [header, rows[index][column]])) }));
       if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: publicFeatures }, `uganda-${mode}-map.geojson`, 'application/geo+json');
       else if (fileType === 'json') downloadJson(publicFeatures.map(feature => feature.properties), `uganda-${mode}-map.json`, 'application/json');

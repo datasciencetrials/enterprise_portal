@@ -20,6 +20,7 @@
   select.value = Object.hasOwn(layers, initial) ? initial : 'roads';
   let rows = [], filtered = [], active = null, sequence = 0;
   const clean = v => v === null || v === undefined || String(v).trim() === '' ? 'Not supplied' : String(v).trim();
+  const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw;
   const count = v => new Intl.NumberFormat('en-UG').format(v);
   const kilometres = v => new Intl.NumberFormat('en-UG', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(v);
   const isLineLayer = key => ['roads', 'mgr', 'sgr'].includes(key);
@@ -45,6 +46,7 @@
         const surface = clean(p['Surface  1']).toLowerCase();
         raw = ['paved','bituminous','concrete'].includes(surface) ? 'Paved' : ['unpaved','gravel','earth'].includes(surface) ? 'Unpaved' : 'Not supplied';
       }
+      if (key === 'stations' && col.key === 'REGION') raw = subRegion(clean(raw));
       result[col.key] = clean(raw);
     }
     if (key === 'roads') {

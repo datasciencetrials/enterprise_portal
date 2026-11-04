@@ -5,6 +5,7 @@
   if (!gallery) return;
   const palette = ['#ff7a25', '#28d9bd', '#ffca48', '#bc85ff', '#ff6176', '#65a9ff', '#e6f17a', '#ff9ecd'];
   const missing = value => value === null || value === undefined || String(value).trim() === '' ? 'Not supplied' : String(value).trim();
+  const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw;
   const field = (label, key) => ({ label, get: p => missing(p[key]) });
   const schemas = {
     roads: [{ label: 'Surface Type', get: p => {
@@ -15,7 +16,7 @@
     bridges: [field('Maintenance Region', 'Maintenance_Region'), field('Maintenance Station', 'Maintenance_Station'), field('Structure Type', 'Structure_Type'),
       field('River crossing', 'River_Crossing')],
     culverts: [field('Maintenance Region', 'Maintenance_Region'), field('Structure Type', 'Culvert_Structure_Type')],
-    traffic: [field('Region', 'REGION'), field('Station group', 'STATIONS'), field('Station category', 'STATION'),
+    traffic: [{ label: 'Sub-Region', get: p => subRegion(missing(p.REGION)) }, field('Station group', 'STATIONS'), field('Station category', 'STATION'),
       field('Comparison status', 'compare')],
     ferries: [field('Category', 'Category'), field('Water body', 'Water_body')],
     aviation: [field('Category', 'Category')],
