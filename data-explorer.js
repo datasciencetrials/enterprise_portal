@@ -47,7 +47,9 @@
         raw = ['paved','bituminous','concrete'].includes(surface) ? 'Paved' : ['unpaved','gravel','earth'].includes(surface) ? 'Unpaved' : 'Not supplied';
       }
       if (key === 'stations' && col.key === 'REGION') raw = subRegion(clean(raw));
-      result[col.key] = clean(raw);
+      const displayed = clean(raw);
+      result[col.key] = /^(Link_Number|Link_ID|Link Id 1)$/.test(col.key)
+        ? displayed.replaceAll('_', ' ').replace(/\bLink(\d+)\b/g, 'Link $1') : displayed;
     }
     if (key === 'roads') {
       const supplied = feature.properties?.['Length Km'];
@@ -84,7 +86,7 @@
     $('coverage').textContent = 'Mapped subset';
     $('context').textContent = lineLayer && rows.some(row => row._mappedKm === null)
       ? `${spec.context} Some mapped lengths are not supplied and are excluded from kilometre totals.` : spec.context;
-    $('gaps').textContent = `Coverage limits: ${spec.gaps}`;
+    $('gaps').textContent = spec.gaps;
     const groups = new Map();
     for (const row of filtered) groups.set(row[spec.group], (groups.get(row[spec.group]) || 0) + (lineLayer ? row._mappedKm ?? 0 : 1));
     $('breakdown-field').textContent = `${spec.columns.find(col => col.key === spec.group)?.title || spec.group}${lineLayer ? ' (km)' : ''}`;
@@ -131,16 +133,10 @@
     $('table-body').replaceChildren(body);
     $('row-range').textContent = lineLayer ? 'All matching rows in one scrollable table' : `All ${count(filtered.length)} matching features in one scrollable table`;
   }
-  function schema(name, spec) {
-    const identifier = str => str.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
-    const columns = spec.columns.map(col => `  ${identifier(col.title)} ${col.type === 'number' ? 'NUMERIC' : 'TEXT'}`).join(',\n');
-    return `-- Proposed read schema only; not a deployed SQL table.\nCREATE TABLE mapped_${identifier(name)} (\n  feature_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n${columns},\n  geometry GEOMETRY\n);\n\n-- Published GeoJSON is the current page data source.\n-- Missing values remain NULL on import; no total is inferred.`;
-  }
   async function load() {
     const token = ++sequence, key = select.value, spec = layers[key];
     active = spec; rows = [];
     $('context').textContent = `Loading ${spec.title.toLowerCase()}...`;
-    $('schema-sql').textContent = schema(key, spec);
     history.replaceState(null, '', `?dataset=${encodeURIComponent(key)}`);
     try {
       const groups = await Promise.all((spec.files || [spec.file]).map(async file => {
