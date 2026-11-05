@@ -420,24 +420,22 @@
   };
 
   const tabHeadings = {
-    roads: ['Follow Uganda\'s roads.', 'Compare mapped kilometres.'],
-    bridges: ['Explore Uganda\'s bridges.', 'Inspect mapped crossings.'],
-    culverts: ['Explore major culverts.', 'Inspect drainage structures.'],
-    traffic: ['Explore traffic stations.', 'See where counts are taken.'],
-    ferries: ['Explore ferry crossings.', 'Connect across water.'],
-    aviation: ['Explore aviation sites.', 'See mapped air access.'],
-    safety: ['Explore traffic incidents.', 'Find mapped safety patterns.'],
-    freight: ['Explore freight facilities.', 'See mapped weighbridges.'],
-    rail: ['Explore Uganda\'s rail.', 'Compare mapped alignments.'],
+    roads: 'Road network',
+    bridges: 'Bridges',
+    culverts: 'Major Culverts',
+    traffic: 'Traffic stations',
+    ferries: 'Ferry crossings',
+    aviation: 'Aviation sites',
+    safety: 'Traffic incidents',
+    freight: 'Freight facilities',
+    rail: 'Rail alignments',
   };
   function updateIntro(key) {
-    const [first, second] = tabHeadings[key];
     const heading = $('page-title');
-    const emphasis = document.createElement('em'); emphasis.textContent = second;
-    heading.replaceChildren(document.createTextNode(first), document.createElement('br'), emphasis);
+    heading.textContent = tabHeadings[key];
     $('intro-kicker').textContent = `UGANDA TRANSPORT / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
     $('intro-note').textContent = key === 'roads'
-      ? 'Explore mapped National Road Network and DUCAR geometry. Filter by sub-region, surface and condition. Road charts report mapped kilometres, not a national total.'
+      ? 'Mapped National Road Network and DUCAR geometry can be filtered by sub-region, surface and condition. Road charts report mapped kilometres, not a national total.'
       : transportModes[key].description;
     $('intro-aside-title').textContent = key === 'roads' ? 'Road map, charts and tables' : `${transportModes[key].title}: map, charts and tables`;
     $('intro-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ roads: 'roads', bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
