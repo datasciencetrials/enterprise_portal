@@ -1,0 +1,7 @@
+:root, button, input, select, table { font-family: Arial, sans-serif; }
+.site-header, .hero, .workspace, footer { padding-left: clamp(14px, 1.5vw, 24px); padding-right: clamp(14px, 1.5vw, 24px); }
+.workspace { width: 100%; max-width: none; margin: 0; }
+.badge.unpaved, .badge.neutral { background: #eaf1f6; color: #34556a; }
+.badge.low, .badge.verified { background: #dff7ee; color: #11654b; }
+.badge.review, .badge.very-high { background: #ffe5e3; color: #922c2c; }
+.badge.unverified { background: #fff2d9; color: #865c0b; }

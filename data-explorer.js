@@ -59,11 +59,17 @@
     }
     return result;
   };
-  const cellClass = (value, type) => {
+  const cellClass = (value, col) => {
     if (value === 'Not supplied') return 'badge missing';
-    if (type === 'number') return 'numeric';
+    if (col.type === 'number') return 'numeric';
     const known = value.toLowerCase();
-    return ['good','fair','poor','paved','moderate','high','critical','operational','proposed'].includes(known) ? `badge ${known}` : '';
+    if (col.key === 'Position_Status') return /review|field check|approximate|not mapped|differs|boundary check/i.test(value)
+      ? 'badge review' : known.startsWith('verified') ? 'badge verified' : 'badge unverified';
+    if (['good','fair','poor','paved','unpaved','low','moderate','high','critical','operational','proposed'].includes(known)) return `badge ${known}`;
+    if (/risk|priority/i.test(col.title) && known.includes('very high')) return 'badge very-high';
+    if (/risk|priority/i.test(col.title) && known.includes('high')) return 'badge high';
+    if (/risk|priority/i.test(col.title) && known.includes('low')) return 'badge low';
+    return /^(Surface Type|Functional Class|Road Type|Sub-Region|Region|Financial Year|Category|Structure type|Severity)$/i.test(col.title) ? 'badge neutral' : '';
   };
   function render() {
     const spec = active;
@@ -90,16 +96,20 @@
     const headerRow = document.createElement('tr');
     for (const col of spec.columns) { const th = document.createElement('th'); th.scope = 'col'; th.textContent = col.title; headerRow.append(th); }
     $('table-head').replaceChildren(headerRow);
-    const numericBounds = new Map(spec.columns.filter(col => col.type === 'number').map(col => {
-      const values = filtered.filter(row => row[col.key] !== 'Not supplied').map(row => Number(row[col.key])).filter(Number.isFinite);
-      return [col.key, [Math.min(...values), Math.max(...values)]];
-    }));
+    const numericBounds = new Map(spec.columns.filter(col => col.type === 'number').map(col => [col.key, [Infinity, -Infinity]]));
+    for (const row of filtered) for (const [key, bounds] of numericBounds) {
+      if (row[key] === 'Not supplied') continue;
+      const number = Number(row[key]);
+      if (!Number.isFinite(number)) continue;
+      if (number < bounds[0]) bounds[0] = number;
+      if (number > bounds[1]) bounds[1] = number;
+    }
     const body = document.createDocumentFragment();
     for (const row of filtered) {
       const tr = document.createElement('tr');
       for (const col of spec.columns) {
         const td = document.createElement('td'); const value = row[col.key];
-        const style = cellClass(value, col.type);
+        const style = cellClass(value, col);
         if (style.startsWith('badge')) { const badge = document.createElement('span'); badge.className = style; badge.textContent = value; td.append(badge); }
         else {
           td.textContent = value;

@@ -18,13 +18,14 @@
     const colour = { a_class_roads: '#f0a245', atc_locations: '#ef6e6e', bridges_2025: '#8c78d6', major_culverts_2025: '#47b4a0' }[id] || '#8c78d6';
     const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
       style: { color: colour, weight: 3, opacity: .9, fillOpacity: .1 },
-      pointToLayer: (_feature, latlng) => L.circleMarker(latlng, { radius: 4, color: '#263a52', weight: 1, fillColor: colour, fillOpacity: .9 }),
+      pointToLayer: (_feature, latlng) => L.marker(latlng, { icon: markerIcon('reviewed', colour), keyboard: true }),
       onEachFeature: (feature, item) => {
         const title = document.createElement('div');
         const heading = document.createElement('strong'); heading.textContent = feature.properties?.name || 'Source feature';
         const note = document.createElement('small'); note.textContent = 'Reviewed source overlay, not a governed count or annual inventory';
         title.append(heading, document.createElement('br'), note);
         item.bindPopup(title);
+        item.on('click', () => { if (!measureMode) showFeatureDetails(title.cloneNode(true)); });
       },
     });
     reviewedLayers.set(id, layer);
@@ -43,13 +44,18 @@
       return;
     }
     if (action !== 'add' || !id || !Array.isArray(features)) return;
+    const pointCount = features.reduce((count, feature) => count + (feature.geometry?.type === 'Point' ? 1 : 0), 0);
+    const useDetailedMarkers = pointCount <= 1200;
     const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
       style: { color: '#ba45a3', weight: 2, opacity: .9, fillColor: '#d38ac5', fillOpacity: .14 },
-      pointToLayer: (_feature, latlng) => L.circleMarker(latlng, { radius: 4, color: '#80286f', weight: 1, fillColor: '#df68b8', fillOpacity: .85 }),
+      pointToLayer: (_feature, latlng) => useDetailedMarkers
+        ? L.marker(latlng, { icon: markerIcon('local', '#ba45a3'), keyboard: true })
+        : L.circleMarker(latlng, { radius: 4, color: '#80286f', weight: 1, fillColor: '#df68b8', fillOpacity: .85 }),
       onEachFeature: (feature, item) => {
         const label = document.createElement('strong');
         label.textContent = String(feature.properties?.name || name || 'Local feature');
         item.bindPopup(label);
+        item.on('click', () => { if (!measureMode) showFeatureDetails(label.cloneNode(true)); });
       },
     });
     localLayers.set(id, layer);
@@ -69,15 +75,47 @@
   map.on('zoomend', reportZoom);
   reportZoom();
   L.control.zoom({ position: 'bottomright' }).addTo(map);
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    maxZoom: 19, attribution: 'Imagery: Esri and contributors',
-  }).addTo(map);
+  const basemapServices = {
+    imagery: { service: 'World_Imagery', attribution: 'Imagery: Esri and contributors' },
+    topographic: { service: 'World_Topo_Map', attribution: 'Topographic map: Esri and contributors' },
+    streets: { service: 'World_Street_Map', attribution: 'Street map: Esri and contributors' },
+  };
+  const basemapLayers = new Map(Object.entries(basemapServices).map(([key, config]) => [key,
+    L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/${config.service}/MapServer/tile/{z}/{y}/{x}`, {
+      maxZoom: 19, attribution: config.attribution,
+    })
+  ]));
+  let activeBasemap = 'topographic';
+  basemapLayers.get(activeBasemap).addTo(map);
   map.createPane('hybridLabels');
   map.getPane('hybridLabels').style.zIndex = 650;
   map.getPane('hybridLabels').style.pointerEvents = 'none';
   const labelsLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
     pane: 'hybridLabels', maxZoom: 19, attribution: 'Labels and borders: Esri',
-  }).addTo(map);
+  });
+  let showHybridLabels = true;
+  function syncLabels() {
+    const enabled = activeBasemap === 'imagery';
+    if (enabled && showHybridLabels) labelsLayer.addTo(map);
+    else map.removeLayer(labelsLayer);
+    const tool = document.querySelector('[data-map-tool="labels"]');
+    tool.disabled = !enabled;
+    tool.setAttribute('aria-pressed', String(enabled && showHybridLabels));
+    $('workspace-labels').disabled = !enabled;
+    $('workspace-labels').checked = enabled && showHybridLabels;
+  }
+  syncLabels();
+  for (const button of document.querySelectorAll('[data-basemap]')) {
+    button.addEventListener('click', () => {
+      const choice = button.dataset.basemap;
+      if (!basemapLayers.has(choice) || choice === activeBasemap) return;
+      map.removeLayer(basemapLayers.get(activeBasemap));
+      activeBasemap = choice;
+      basemapLayers.get(choice).addTo(map).bringToBack();
+      for (const option of document.querySelectorAll('[data-basemap]')) option.setAttribute('aria-pressed', String(option === button));
+      syncLabels();
+    });
+  }
   map.createPane('allRoads');
   map.getPane('allRoads').style.zIndex = 390;
   map.getPane('allRoads').style.pointerEvents = 'none';
@@ -113,7 +151,56 @@
   let nationalContextLayer = null;
   let pointLayer = null;
   let activeMode = 'roads';
+  let activeLayerVisible = true;
   const modeCache = new Map();
+  const syncActiveLayer = () => {
+    const layer = activeMode === 'roads' ? roadLayer : pointLayer;
+    if (layer) activeLayerVisible ? layer.addTo(map) : map.removeLayer(layer);
+    $('workspace-active-layer').checked = activeLayerVisible;
+    $('workspace-active-label').textContent = document.querySelector(`.section-tabs [data-mode="${activeMode}"]`)?.textContent.trim() || 'Mapped features';
+  };
+  const syncLayerPanel = () => {
+    syncActiveLayer();
+    $('workspace-expanded-roads').checked = showExpandedRoads;
+    $('workspace-position-legend').hidden = !['bridges', 'culverts'].includes(activeMode);
+    syncLabels();
+  };
+  const catalogue = $('map-workspace-catalogue');
+  for (const mode of document.querySelectorAll('.section-tabs button[data-mode]')) {
+    const item = document.createElement('button');
+    item.type = 'button';
+    item.textContent = mode.textContent.trim();
+    item.dataset.catalogueMode = mode.dataset.mode;
+    item.addEventListener('click', () => { mode.click(); openWorkspacePanel('contents'); });
+    catalogue.append(item);
+  }
+  function openWorkspacePanel(tab) {
+    $('map-workspace-panel').hidden = false;
+    $('map-workspace-title').textContent = tab === 'catalogue' ? 'Catalogue' : tab === 'contents' ? 'Contents' : tab === 'details' ? 'Details' : 'Basemaps';
+    for (const button of document.querySelectorAll('[data-workspace-tab]')) button.setAttribute('aria-expanded', String(button.dataset.workspaceTab === tab));
+    for (const section of ['catalogue', 'contents', 'details', 'basemaps']) $(`map-workspace-${section}`).hidden = section !== tab;
+    for (const item of catalogue.querySelectorAll('[data-catalogue-mode]')) item.setAttribute('aria-current', String(item.dataset.catalogueMode === activeMode));
+    syncLayerPanel();
+  }
+  function showFeatureDetails(content) {
+    $('map-workspace-details').replaceChildren(content);
+    openWorkspacePanel('details');
+  }
+  for (const button of document.querySelectorAll('[data-workspace-tab]')) {
+    button.addEventListener('click', () => {
+      const panel = $('map-workspace-panel');
+      const open = !panel.hidden && button.getAttribute('aria-expanded') === 'true';
+      if (open) { panel.hidden = true; button.setAttribute('aria-expanded', 'false'); }
+      else openWorkspacePanel(button.dataset.workspaceTab);
+    });
+  }
+  $('map-workspace-close').addEventListener('click', () => {
+    $('map-workspace-panel').hidden = true;
+    for (const tab of document.querySelectorAll('[data-workspace-tab]')) tab.setAttribute('aria-expanded', 'false');
+  });
+  $('workspace-active-layer').addEventListener('change', event => { activeLayerVisible = event.target.checked; syncActiveLayer(); });
+  $('workspace-expanded-roads').addEventListener('change', () => document.querySelector('[data-map-tool="roads"]').click());
+  $('workspace-labels').addEventListener('change', () => document.querySelector('[data-map-tool="labels"]').click());
   let charts = {};
   function updateNationalContext() {
     if (!nationalContextLayer) return;
@@ -178,10 +265,10 @@
         showExpandedRoads = !showExpandedRoads;
         if (allRoadsOverlay) { if (showExpandedRoads) allRoadsOverlay.addTo(map); else map.removeLayer(allRoadsOverlay); }
         button.setAttribute('aria-pressed', String(showExpandedRoads));
+        $('workspace-expanded-roads').checked = showExpandedRoads;
       } else if (action === 'labels') {
-        const visible = map.hasLayer(labelsLayer);
-        if (visible) map.removeLayer(labelsLayer); else labelsLayer.addTo(map);
-        button.setAttribute('aria-pressed', String(!visible));
+        showHybridLabels = !showHybridLabels;
+        syncLabels();
       } else if (action === 'fullscreen') {
         const shell = document.querySelector('.map-shell');
         if (document.fullscreenElement) document.exitFullscreen();
@@ -269,11 +356,13 @@
       style: roadStyle,
       onEachFeature: (feature, layer) => {
         layer.bindPopup(popup(feature.properties || {}), { maxWidth: 300 });
+        layer.on('click', () => { if (!measureMode) showFeatureDetails(popup(feature.properties || {})); });
         const baseWeight = layer.options.weight;
         layer.on('mouseover', () => layer.setStyle({ weight: baseWeight + (surface(feature.properties || {}) === 'Paved' ? 1.2 : .3), opacity: 1 }));
         layer.on('mouseout', () => roadLayer.resetStyle(layer));
       }
     }).addTo(map);
+    syncActiveLayer();
   }
   map.on('resize', () => { if (roadLayer) roadLayer.setStyle(roadStyle); });
 
@@ -484,6 +573,8 @@
   }
 
   const markerShapes = {
+    reviewed: '<path d="M3 8 12 4l9 4-9 4Z M3 8v9l9 4v-9m9-4v9l-9 4"/>',
+    local: '<path d="M4 7 12 3l8 4-8 4Z M4 7v10l8 4V11m8-4v10l-8 4"/>',
     traffic: '<path d="M5 20V4m14 16V4M5 8h14M8 13h2m4 0h2M9 8v6m6-6v6"/>',
     ferries: '<path d="M3 15h18l-3 4H6zM8 15V6h8v9M8 9h8M4 21c2-1 4-1 6 0 2-1 4-1 6 0 2-1 4-1 6 0"/>',
     aviation: '<path d="M12 2v20m0-8L3 17v-3l9-5 9 5v3zM9 20l3-2 3 2"/>',
@@ -491,24 +582,24 @@
     freight: '<path d="M2 7h12v10H2zM14 10h4l4 4v3h-8zM6 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>',
   };
   const markerIcons = new Map();
-  function markerIcon(key, colour) {
-    if (markerIcons.has(key)) return markerIcons.get(key);
+  function markerIcon(key, colour, positionStatus = '') {
+    const cacheKey = `${key}:${colour}:${positionStatus}`;
+    if (markerIcons.has(cacheKey)) return markerIcons.get(cacheKey);
     let html;
     let iconSize;
     let iconAnchor;
     if (key === 'bridges') {
-      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M2 13 16 8l14 5-14 5Z" fill="#bceaff" stroke="#fff"/><path d="M2 13v5l14 5v-5Z" fill="#74b8ee" stroke="#e9f8ff"/><path d="M16 18v5l14-5v-5Z" fill="#327ec3" stroke="#e9f8ff"/><path d="M7 21v6m18-7v7M4 27h24" fill="none" stroke="#0b466f" stroke-width="2.5"/><path d="M8 14h16" stroke="#fff" stroke-width="1.4"/></svg>`;
+      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M2 13 16 8l14 5-14 5Z" fill="#bceaff" stroke="#fff"/><path d="M2 13v5l14 5v-5Z" fill="#74b8ee" stroke="#e9f8ff"/><path d="M16 18v5l14-5v-5Z" fill="#327ec3" stroke="#e9f8ff"/><path d="M7 21v6m18-7v7M4 27h24" fill="none" stroke="#0b466f" stroke-width="2.5"/><path d="M8 14h16" stroke="#fff" stroke-width="1.4"/></svg>${positionStatus ? '<span class="marker-position-status" aria-hidden="true"></span>' : ''}`;
       iconSize = [22, 22]; iconAnchor = [11, 19];
     } else if (key === 'culverts') {
-      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M3 9 17 5l12 4-14 4Z" fill="#c7edff" stroke="#fff"/><path d="M3 9v16l12 3V13Z" fill="#6fb5e1" stroke="#e9f8ff"/><path d="M15 13v15l14-4V9Z" fill="#388bbd" stroke="#e9f8ff"/><path d="M18 26v-7a4 4 0 0 1 8 0v5Z" fill="#123e60" stroke="#d6f2ff" stroke-width="1.2"/><path d="M4 24h24" stroke="#f4fbff" stroke-width="1.2"/></svg>`;
+      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M3 9 17 5l12 4-14 4Z" fill="#c7edff" stroke="#fff"/><path d="M3 9v16l12 3V13Z" fill="#6fb5e1" stroke="#e9f8ff"/><path d="M15 13v15l14-4V9Z" fill="#388bbd" stroke="#e9f8ff"/><path d="M18 26v-7a4 4 0 0 1 8 0v5Z" fill="#123e60" stroke="#d6f2ff" stroke-width="1.2"/><path d="M4 24h24" stroke="#f4fbff" stroke-width="1.2"/></svg>${positionStatus ? '<span class="marker-position-status" aria-hidden="true"></span>' : ''}`;
       iconSize = [22, 22]; iconAnchor = [11, 19];
     } else {
-      const svg = `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${markerShapes[key] || markerShapes.traffic}</svg>`;
-      html = `<span class="marker-shadow"></span><span class="marker-pin" style="--marker-colour:${colour}">${svg}</span>`;
-      iconSize = [38, 46]; iconAnchor = [19, 43];
+      html = `<svg class="marker-isometric" viewBox="0 0 48 54" aria-hidden="true" style="--marker-colour:${colour}"><ellipse cx="24" cy="48" rx="17" ry="4" fill="#06243955"/><path d="M6 32 24 23l18 9-18 9Z" fill="#e9f8fc" stroke="#fff"/><path d="M6 32v7l18 9v-7Z" fill="#79a9ba"/><path d="M24 41v7l18-9v-7Z" fill="#41778d"/><circle cx="24" cy="20" r="15" fill="var(--marker-colour)" stroke="#fff" stroke-width="2"/><path d="M14 14c4-8 13-9 19-3" fill="none" stroke="#fff8" stroke-width="3" stroke-linecap="round"/><g transform="translate(12 8)" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${markerShapes[key] || markerShapes.traffic}</g></svg>`;
+      iconSize = [42, 50]; iconAnchor = [21, 47];
     }
-    const icon = L.divIcon({ className: `transport-marker${key === 'bridges' || key === 'culverts' ? ' transport-marker--structure' : ''}`, html, iconSize, iconAnchor, popupAnchor: [0, -iconAnchor[1]] });
-    markerIcons.set(key, icon);
+    const icon = L.divIcon({ className: `transport-marker${key === 'bridges' || key === 'culverts' ? ' transport-marker--structure' : ''}${positionStatus ? ` transport-marker--${positionStatus}` : ''}`, html, iconSize, iconAnchor, popupAnchor: [0, -iconAnchor[1]] });
+    markerIcons.set(cacheKey, icon);
     return icon;
   }
 
@@ -520,18 +611,23 @@
         const status = String(feature.properties?.Position_Status || '');
         if ((activeMode === 'bridges' || activeMode === 'culverts') && status !== 'Verified on mapped road link') {
           const review = /review|field check|approximate|not mapped|differs|boundary check/i.test(status);
-          return L.circleMarker(latlng, { radius: 7, color: review ? '#8b2e2a' : '#754200', weight: 2, fillColor: review ? '#e36b63' : '#f5ac39', fillOpacity: .95 });
+          return L.marker(latlng, { icon: markerIcon(activeMode, spec.colour, review ? 'review' : 'unverified'), keyboard: true });
         }
         return L.marker(latlng, { icon: markerIcon(activeMode, spec.colour), keyboard: true });
       },
       style: feature => ({ color: feature.properties?._transportKind === 'SGR alignment' ? '#7657b7' : feature.properties?._transportKind === 'Major Culverts' ? '#77b2f1' : spec.colour, weight: 2.5, opacity: .9 }),
-      onEachFeature: (feature, layer) => layer.bindPopup(pointPopup(feature.properties || {}, spec), { maxWidth: 290 }),
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(pointPopup(feature.properties || {}, spec), { maxWidth: 290 });
+        layer.on('click', () => { if (!measureMode) showFeatureDetails(pointPopup(feature.properties || {}, spec)); });
+      },
     }).addTo(map);
+    syncActiveLayer();
     showUgandaExtent();
   }
 
   async function showMode(key) {
     activeMode = key;
+    syncLayerPanel();
     updateNationalContext();
     updateIntro(key);
     window.dispatchEvent(new CustomEvent('transportmodechange', { detail: { mode: key } }));
@@ -657,7 +753,7 @@
   for (const button of document.querySelectorAll('.section-tabs button[data-mode]')) {
     button.addEventListener('click', () => {
       showMode(button.dataset.mode);
-      (button.dataset.mode === 'roads' ? $('road-analysis') : $('explore')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      $('explore').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 
