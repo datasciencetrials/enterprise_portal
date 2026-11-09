@@ -535,20 +535,25 @@
     if (!modeCache.has(key)) {
       const spec = transportModes[key];
       modeCache.set(key, Promise.all(spec.files.map(async file => {
-        const controller = new AbortController();
-        const timeout = window.setTimeout(() => controller.abort(), 30000);
-        try {
-          const response = await fetch(`geo/${file}?v=20261104-all-structures`, { signal: controller.signal });
-          if (!response.ok) throw new Error(`${file} returned ${response.status}`);
-          const data = await response.json();
-          if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`${file} is not a GeoJSON feature collection`);
-          const kind = file === 'bridges.geojson' ? 'Bridges' : file === 'major_culverts.geojson' ? 'Major Culverts' :
-            file === 'mgr.geojson' ? 'MGR mapped segments' : file === 'sgr_alignment.geojson' ? 'SGR alignment' : '';
-          return data.features.filter(feature => feature.geometry && feature.properties &&
-            (feature.geometry.type === 'Point' || (key === 'rail' && ['LineString', 'MultiLineString'].includes(feature.geometry.type))))
-            .map(feature => ({ ...feature, properties: { ...feature.properties, _transportKind: kind } }));
-        } finally {
-          window.clearTimeout(timeout);
+        for (let attempt = 0; attempt < 2; attempt++) {
+          const controller = new AbortController();
+          const timeout = window.setTimeout(() => controller.abort(), 30000);
+          try {
+            const response = await fetch(`geo/${file}?v=20261104-all-structures`, { signal: controller.signal });
+            if (!response.ok) throw new Error(`${file} returned ${response.status}`);
+            const data = await response.json();
+            if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`${file} is not a GeoJSON feature collection`);
+            const kind = file === 'bridges.geojson' ? 'Bridges' : file === 'major_culverts.geojson' ? 'Major Culverts' :
+              file === 'mgr.geojson' ? 'MGR mapped segments' : file === 'sgr_alignment.geojson' ? 'SGR alignment' : '';
+            return data.features.filter(feature => feature.geometry && feature.properties &&
+              (feature.geometry.type === 'Point' || (key === 'rail' && ['LineString', 'MultiLineString'].includes(feature.geometry.type))))
+              .map(feature => ({ ...feature, properties: { ...feature.properties, _transportKind: kind } }));
+          } catch (error) {
+            if (attempt !== 0 || (error.name !== 'AbortError' && !(error instanceof TypeError))) throw error;
+            if (activeMode === key) $('map-status').textContent = `Retrying ${spec.title.toLowerCase()}`;
+          } finally {
+            window.clearTimeout(timeout);
+          }
         }
       })).then(groups => groups.flat()).catch(error => {
         modeCache.delete(key);
