@@ -4,6 +4,18 @@
   const format = new Intl.NumberFormat('en-UG', { maximumFractionDigits: 1 });
   const filters = { search: '', region: '', surface: '', condition: '' };
   const map = L.map('gis-map', { zoomControl: false, preferCanvas: true, scrollWheelZoom: false }).setView([1.3, 32.3], 7);
+  function syncZoomScale() {
+    const z = map.getZoom();
+    const scale = z <= 7 ? 0.26 : Math.min(1.25, 0.26 + Math.pow(Math.max(0, z - 7), 1.25) * 0.14);
+    const roadScale = z <= 7 ? 1.0 : Math.min(3.2, 1.0 + Math.max(0, z - 7) * 0.35);
+    document.documentElement.style.setProperty('--point-scale', scale.toFixed(3));
+    map.getContainer().style.setProperty('--point-scale', scale.toFixed(3));
+    map.getContainer().style.setProperty('--road-scale', roadScale.toFixed(2));
+    if (roadLayer) roadLayer.setStyle(roadStyle);
+  }
+  map.on('zoom', syncZoomScale);
+  map.on('zoomend', syncZoomScale);
+  syncZoomScale();
   const localLayers = new Map();
   const reviewedLayers = new Map();
   window.addEventListener('gis-reviewed-layer', event => {
@@ -342,10 +354,12 @@
     const isDucar = p['Road Type'] === 'DUCAR';
     const isCommunity = p['Road Cla 1'] === 'Community Access Road';
     const isPaved = surface(p) === 'Paved';
+    const z = map ? map.getZoom() : 7;
+    const roadScale = z <= 7 ? 1.0 : Math.min(3.2, 1.0 + Math.max(0, z - 7) * 0.35);
     return {
-      color: isPaved ? (isDucar ? '#4e595e' : '#111111') : isCommunity ? '#e4ddca' : isDucar ? '#d8ba7b' : '#ff7a25',
-      weight: isPaved ? (isDucar ? 1.4 : 2) : isCommunity ? .2 : isDucar ? .35 : .5,
-      opacity: isCommunity ? .68 : .95,
+      color: isPaved ? (isDucar ? '#2e3d48' : '#041525') : isCommunity ? '#d5cca8' : isDucar ? '#b38234' : '#e65100',
+      weight: (isPaved ? (isDucar ? 2.0 : 2.8) : isCommunity ? .5 : isDucar ? 1.0 : 1.4) * roadScale,
+      opacity: isCommunity ? .72 : .98,
       dashArray: null,
     };
   }

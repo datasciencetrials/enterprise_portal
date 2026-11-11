@@ -62,9 +62,12 @@
 #map-workspace-basemaps { display: grid; grid-template-columns: 1fr; gap: 8px; }
 #map-workspace-basemaps button { min-height: 38px; text-align: left; padding: 8px 11px; }
 .map-workspace-panel p { margin: 8px 0 0; color: #526b76; font-size: 11px; }
-.transport-marker .marker-isometric { display: block; width: 42px; height: 50px; overflow: visible; filter: drop-shadow(1px 3px 2px #08273880); transition: transform .18s, filter .18s; }
-.transport-marker:hover .marker-isometric { transform: translateY(-3px); filter: drop-shadow(2px 6px 4px #08273890); }
-.transport-marker--structure .marker-position-status { position: absolute; top: -4px; right: -4px; width: 9px; height: 9px; border: 2px solid #fff; border-radius: 50%; background: #b85a18; box-shadow: 0 1px 4px #08273880; }
+.transport-marker .marker-isometric { display: block; width: 42px; height: 50px; overflow: visible; filter: drop-shadow(1px 3px 2px #08273880); transform-origin: bottom center; transform: scale(var(--point-scale, 0.26)); transition: transform .18s, filter .18s; }
+.transport-marker:hover .marker-isometric { transform: scale(calc(var(--point-scale, 0.26) * 1.45)) translateY(-3px); filter: drop-shadow(2px 6px 4px #08273890); }
+.transport-marker--structure .marker-object { transform-origin: center center; transform: scale(var(--point-scale, 0.26)); transition: transform .18s ease, filter .18s ease; }
+.transport-marker--structure:hover .marker-object { transform: scale(calc(var(--point-scale, 0.26) * 1.5)) translateY(-2px); }
+.transport-marker .marker-shadow { transform-origin: center center; transform: scale(var(--point-scale, 0.26)); transition: transform .18s ease; }
+.transport-marker--structure .marker-position-status { position: absolute; top: -4px; right: -4px; width: 9px; height: 9px; border: 2px solid #fff; border-radius: 50%; background: #b85a18; box-shadow: 0 1px 4px #08273880; transform-origin: center center; transform: scale(var(--point-scale, 0.26)); }
 .transport-marker--review .marker-position-status { background: #c92836; }
 .transport-marker--unverified .marker-position-status { background: #b16a12; }
 .map-workspace-panel :focus-visible { outline: 3px solid #087e91; outline-offset: 2px; }

@@ -58,21 +58,21 @@
   }
 
   function renderCondition(){
-    var vci = summary.vci_condition_distribution;
-    var total = Object.keys(vci).reduce(function(s,k2){return s+vci[k2];},0);
+    var vciKm = summary.vci_condition_distribution_km || {};
+    var totalKm = Object.keys(vciKm).reduce(function(s,k2){return s+vciKm[k2];},0) || 21047.02;
     var order = ['Very Good','Good','Fair','Poor','Very Poor','Committed Project','Not assessed'];
-    var keys = order.filter(function(k2){return vci[k2]!==undefined;}).concat(Object.keys(vci).filter(function(k2){return order.indexOf(k2)===-1;}));
+    var keys = order.filter(function(k2){return vciKm[k2]!==undefined;});
     var rows = keys.map(function(k2){
-      var v = vci[k2];
-      var pct = total ? (v/total*100) : 0;
-      return '<tr><td class="ms-name">' + esc(k2) + '</td><td class="ms-num">' + v + '</td>' +
+      var v = vciKm[k2] || 0;
+      var pct = totalKm ? (v/totalKm*100) : 0;
+      return '<tr><td class="ms-name">' + esc(k2) + '</td><td class="ms-num">' + km(v) + '</td>' +
         '<td><div class="ms-bar-track"><div class="ms-bar-fill" style="width:' + pct.toFixed(1) + '%;background:' + vciColor(k2) + '"></div></div></td>' +
         '<td class="ms-num">' + pct.toFixed(1) + '%</td></tr>';
     }).join('');
     return (
-      '<h3 class="ms-section-title">Pavement Condition Index (VCI) Distribution <span class="ms-count">(' + total + ' assessed links)</span></h3>' +
-      '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>VCI Rating</th><th>Links</th><th>Share</th><th></th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
-      '<div class="ms-footnote">VCI (Visual Condition Index) rating derived from the national road network condition survey, all 6 maintenance regions.</div>'
+      '<h3 class="ms-section-title">Pavement Visual Condition Index (VCI) Distribution <span class="ms-count">(' + km(totalKm) + ' assessed network)</span></h3>' +
+      '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>VCI Rating</th><th>Length</th><th>Share</th><th></th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
+      '<div class="ms-footnote">VCI (Visual Condition Index) rating derived from national road network condition survey using MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing), all 6 maintenance regions.</div>'
     );
   }
 
@@ -84,12 +84,12 @@
   function renderPlan(){
     var annual = summary.investment_plan_annual, mix = summary.intervention_mix_summary, rates = summary.intervention_rate_benchmarks;
     var annualRows = annual.map(function(r){
-      return '<tr><td class="ms-name">' + esc(r.financial_year) + '</td><td class="ms-num">' + n(r.links_count,0) + '</td>' +
+      return '<tr><td class="ms-name">' + esc(r.financial_year) + '</td><td class="ms-num">' + (r.length_km ? km(r.length_km) : 'Not specified') + '</td>' +
         '<td class="ms-num">' + bn(r.programme_cost_bn_ushs) + '</td><td class="ms-num">' + bn(r.asset_value_at_risk_bn_ushs) + '</td>' +
         '<td class="ms-num">' + bn(r.funding_gap_vs_baseline_bn_ushs) + '</td></tr>';
     }).join('');
     var mixRows = mix.map(function(r){
-      return '<tr><td class="ms-name">' + esc(r.intervention) + '</td><td class="ms-num">' + n(r.links_count,0) + '</td>' +
+      return '<tr><td class="ms-name">' + esc(r.intervention) + '</td>' +
         '<td class="ms-num">' + km(r.length_km) + '</td><td class="ms-num">' + bn(r.cost_bn_ushs) + '</td></tr>';
     }).join('');
     var rateRows = rates.map(function(r){
@@ -98,10 +98,10 @@
         '<td>' + esc(r.accuracy_band) + '</td></tr>';
     }).join('');
     return (
-      '<h3 class="ms-section-title">5-Year Investment Plan Summary <span class="ms-count">(FY26/27 &ndash; FY30/31, paved network)</span></h3>' +
-      '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Financial Year</th><th>Links</th><th>Programme Cost</th><th>Asset Value at Risk</th><th>Funding Gap vs Baseline</th></tr></thead><tbody>' + annualRows + '</tbody></table></div>' +
+      '<h3 class="ms-section-title">5-Year Investment Plan Summary <span class="ms-count">(FY 2026-27 to FY 2030-31, paved network)</span></h3>' +
+      '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Financial Year</th><th>Length</th><th>Programme Cost</th><th>Asset Value at Risk</th><th>Funding Gap vs Baseline</th></tr></thead><tbody>' + annualRows + '</tbody></table></div>' +
       '<h3 class="ms-section-title">Intervention Mix (5-Year Total)</h3>' +
-      '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Intervention</th><th>Links</th><th>Length</th><th>Cost</th></tr></thead><tbody>' + mixRows + '</tbody></table></div>' +
+      '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Intervention</th><th>Length</th><th>Cost</th></tr></thead><tbody>' + mixRows + '</tbody></table></div>' +
       '<h3 class="ms-section-title">Recommended Unit Intervention Rates</h3>' +
       '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Surface</th><th>Intervention</th><th>Rate</th><th>Confidence</th></tr></thead><tbody>' + rateRows + '</tbody></table></div>' +
       '<div class="ms-footnote">Programme costs and funding gap figures in UShs billions. Rate confidence bands reflect direct-vs-assumption basis in the source workbook.</div>'
@@ -128,11 +128,11 @@
         '<td class="ms-num">' + n(r.major_culverts_count,0) + '</td><td class="ms-num">' + n(r.total_structures,0) + '</td></tr>';
     }).join('');
     return (
-      '<h3 class="ms-section-title">Road Asset Value Trend &mdash; Paved</h3>' +
+      '<h3 class="ms-section-title">Road Asset Value Trend (Paved)</h3>' +
       '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Financial Year</th><th>Length</th><th>Asset Value</th></tr></thead><tbody>' + trendRows(paved) + '</tbody></table></div>' +
-      '<h3 class="ms-section-title">Road Asset Value Trend &mdash; Unpaved</h3>' +
+      '<h3 class="ms-section-title">Road Asset Value Trend (Unpaved)</h3>' +
       '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Financial Year</th><th>Length</th><th>Asset Value</th></tr></thead><tbody>' + trendRows(unpaved) + '</tbody></table></div>' +
-      '<h3 class="ms-section-title">Structures &mdash; Bridges &amp; Major Culverts <span class="ms-count">(always reported separately)</span></h3>' +
+      '<h3 class="ms-section-title">Structures (Bridges and Major Culverts) <span class="ms-count">(always reported separately)</span></h3>' +
       '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Structure</th><th>Count</th><th>Asset Value</th><th>On Paved</th><th>On Unpaved</th></tr></thead><tbody>' + structRows + '</tbody></table></div>' +
       '<h3 class="ms-section-title">Structures by Maintenance Region</h3>' +
       '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Region</th><th>Bridges</th><th>Major Culverts</th><th>Total</th></tr></thead><tbody>' + regRows + '</tbody></table></div>'
@@ -169,15 +169,15 @@
   function renderBridges(){
     var dist = summary.bridge_condition_distribution;
     var html = '<h3 class="ms-section-title">Bridge Condition Distribution <span class="ms-count">(' + summary.counts.bridges + ' bridges)</span></h3>' + condDist(dist);
-    html += '<div class="ms-search-row"><input type="text" id="ms-search-bridges" class="ms-search" placeholder="Filter by bridge name, road link, or condition…" /></div>';
-    html += '<div id="ms-bridges-table"><div class="ms-loading">Loading bridge register…</div></div>';
+    html += '<div class="ms-search-row"><input type="text" id="ms-search-bridges" class="ms-search" placeholder="Filter by bridge name, road link, or condition..." /></div>';
+    html += '<div id="ms-bridges-table"><div class="ms-loading">Loading bridge register...</div></div>';
     return html;
   }
   function renderCulverts(){
     var dist = summary.culvert_condition_distribution;
-    var html = '<h3 class="ms-section-title">Major Culvert Condition Distribution <span class="ms-count">(' + summary.counts.major_culverts + ' culverts &mdash; reported separately from bridges)</span></h3>' + condDist(dist);
-    html += '<div class="ms-search-row"><input type="text" id="ms-search-culverts" class="ms-search" placeholder="Filter by river, road, or condition…" /></div>';
-    html += '<div id="ms-culverts-table"><div class="ms-loading">Loading culvert register…</div></div>';
+    var html = '<h3 class="ms-section-title">Major Culvert Condition Distribution <span class="ms-count">(' + summary.counts.major_culverts + ' culverts, reported separately from bridges)</span></h3>' + condDist(dist);
+    html += '<div class="ms-search-row"><input type="text" id="ms-search-culverts" class="ms-search" placeholder="Filter by river, road, or condition..." /></div>';
+    html += '<div id="ms-culverts-table"><div class="ms-loading">Loading culvert register...</div></div>';
     return html;
   }
 

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "title": "National Road Maintenance Strategy \u2014 Uganda",
+  "title": "National Road Maintenance Strategy : Uganda",
   "source": "MoWT / UNRA Maintenance Strategy workbooks (2026 cycle), consolidated from internal planning workbooks",
   "note": "Network inventory, condition (VCI), 5-year investment priority plan (FY26/27-FY30/31), asset values, and bridge/major-culvert stock. Bridges and major culverts are always reported as separate figures from the road network.",
   "regions": [
@@ -108,7 +108,8 @@
    "programme_cost_bn_ushs": 1822.2755571034,
    "asset_value_at_risk_bn_ushs": 6605.092637994,
    "delay_exposure_bn_ushs": null,
-   "funding_gap_vs_baseline_bn_ushs": 1562.2755571034
+   "funding_gap_vs_baseline_bn_ushs": 1562.2755571034,
+   "length_km": 2014.07
   },
   {
    "financial_year": "FY27/28",
@@ -116,7 +117,8 @@
    "programme_cost_bn_ushs": 743.1001837753,
    "asset_value_at_risk_bn_ushs": 5152.338363862,
    "delay_exposure_bn_ushs": null,
-   "funding_gap_vs_baseline_bn_ushs": 462.3001837753
+   "funding_gap_vs_baseline_bn_ushs": 462.3001837753,
+   "length_km": 1571.09
   },
   {
    "financial_year": "FY28/29",
@@ -124,7 +126,8 @@
    "programme_cost_bn_ushs": 208.4023561156,
    "asset_value_at_risk_bn_ushs": 5674.1421747929,
    "delay_exposure_bn_ushs": null,
-   "funding_gap_vs_baseline_bn_ushs": -94.8616438844
+   "funding_gap_vs_baseline_bn_ushs": -94.8616438844,
+   "length_km": 1765.3
   },
   {
    "financial_year": "FY29/30",
@@ -132,7 +135,8 @@
    "programme_cost_bn_ushs": 11.7429138624,
    "asset_value_at_risk_bn_ushs": 2567.367099199,
    "delay_exposure_bn_ushs": null,
-   "funding_gap_vs_baseline_bn_ushs": -315.7822061376
+   "funding_gap_vs_baseline_bn_ushs": -315.7822061376,
+   "length_km": 782.86
   },
   {
    "financial_year": "FY30/31",
@@ -140,7 +144,8 @@
    "programme_cost_bn_ushs": 3.2080530894,
    "asset_value_at_risk_bn_ushs": 701.3804282924,
    "delay_exposure_bn_ushs": null,
-   "funding_gap_vs_baseline_bn_ushs": -350.5190765106
+   "funding_gap_vs_baseline_bn_ushs": -350.5190765106,
+   "length_km": 213.87
   },
   {
    "financial_year": "Total / Avg",
@@ -148,7 +153,8 @@
    "programme_cost_bn_ushs": 2788.7290639461,
    "asset_value_at_risk_bn_ushs": 20700.3207041404,
    "delay_exposure_bn_ushs": null,
-   "funding_gap_vs_baseline_bn_ushs": 1263.4128143461
+   "funding_gap_vs_baseline_bn_ushs": 1263.4128143461,
+   "length_km": 6347.19
   }
  ],
  "intervention_mix_summary": [
@@ -529,5 +535,14 @@
   "priority_planned_links": 338,
   "bridges": 521,
   "major_culverts": 451
+ },
+ "vci_condition_distribution_km": {
+  "Fair": 10922.55,
+  "Poor": 4260.93,
+  "Good": 4111.62,
+  "Very Good": 1335.89,
+  "Committed Project": 297.05,
+  "Very Poor": 67.96,
+  "Not assessed": 51.01
  }
 }
