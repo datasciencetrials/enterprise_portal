@@ -53,7 +53,7 @@
       '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Region</th><th>Paved</th><th>Unpaved</th><th>Total</th></tr></thead><tbody>' + regionRows + '</tbody></table></div>' +
       '<h3 class="ms-section-title">Network by Functional Class</h3>' +
       '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Class</th><th>Description</th><th>Bituminous</th><th>Unsealed</th><th>Total</th><th>% of Network</th></tr></thead><tbody>' + classRows + '</tbody></table></div>' +
-      '<div class="ms-footnote">Source: MoWT maintenance strategy planning workbooks (2026 cycle), asset values (corrected/recalculated), FY2025/26 network snapshot. Structure counts and asset values are always reported separately for bridges and major culverts.</div>'
+      '<div class="ms-footnote">Source: National maintenance strategy planning workbooks (2026 cycle), asset values (corrected/recalculated), FY2025/26 network snapshot. Structure counts and asset values are always reported separately for bridges and major culverts.</div>'
     );
   }
 

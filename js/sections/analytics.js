@@ -10,7 +10,7 @@ RENDERERS.analytics = async function(container){
 
   container.appendChild(pageHead(
     'Analytics & Insights',
-    'The single canonical chart library for this platform — real distributions computed from the GIS road-network inventory and MoWT maintenance-strategy and planning workbooks. Top-line KPIs live on Overview; this page goes deeper.',
+    'The single canonical chart library for this platform: real distributions computed from the GIS road-network inventory and national maintenance-strategy and planning workbooks. Top-line KPIs live on Overview; this page goes deeper.',
     '22 charts · 4 categories · 17 findings'
   ));
 
@@ -155,7 +155,7 @@ RENDERERS.analytics = async function(container){
       type:'bar', indexAxis:'y', labels: stationEntries.map(e=>e[0]), datasets:[{ data: stationEntries.map(e=>Math.round(e[1])), backgroundColor:'#00e5ff', borderRadius:3 }] }), 'network'),
     tagged(chartCard({ title:'Network Length by Surface Material',
       type:'bar', indexAxis:'y', labels: surfaceEntries.map(e=>e[0]), datasets:[{ data: surfaceEntries.map(e=>Math.round(e[1])), backgroundColor:'#00ff85', borderRadius:3 }] }), 'network'),
-    tagged(chartCard({ title:'Paved Road Density by Subregion', subtitle:'km of bituminous road per 1,000 km² land area — MoWT road density workbook, 13 subregions', tall:true,
+    tagged(chartCard({ title:'Paved Road Density by Subregion', subtitle:'km of bituminous road per 1,000 km² land area: national road density workbook, 13 subregions', tall:true,
       type:'bar', indexAxis:'y', labels: densityRows.map(r=>r.subregion), datasets:[
         {label:'Now', data: densityRows.map(r=>r.road_density_now_km_per_1000km2), backgroundColor:'#00e5ff', borderRadius:3},
         {label:'At NDP3 completion', data: densityRows.map(r=>r.road_density_ndp3_end_km_per_1000km2), backgroundColor:'#9d00ff', borderRadius:3},
@@ -205,7 +205,7 @@ RENDERERS.analytics = async function(container){
       labels: null, datasets:[{ label:'Links', data:scatterPts, backgroundColor:'#9d00ff' }] }), 'investment'),
     tagged(chartCard({ title:'Network-Wide Intervention Priority', subtitle:priorityScored+' of '+feats.length+' links scored — this site’s own composite (40% condition, 35% traffic, 25% safety risk), distinct from the 338-link paved backlog score above',
       type:'doughnut', labels:PRIORITY_BANDS, datasets:[{ data:PRIORITY_BANDS.map(b=>priorityBandCounts[b]), backgroundColor:['#00c853','#fff500','#ff7a00','#ff2d78'], borderWidth:0 }] }), 'investment'),
-    tagged(chartCard({ title:'Weighbridge District Coverage', subtitle:'Districts assigned per enforcement station — separate MoWT register, see Network Explorer footnote',
+    tagged(chartCard({ title:'Weighbridge District Coverage', subtitle:'Districts assigned per enforcement station: national register, see Network Explorer footnote',
       type:'bar', indexAxis:'y', labels: wbRows.map(r=>r.weighbridge), datasets:[{ data: wbRows.map(r=>r.district_count), backgroundColor:'#00e5ff', borderRadius:4 }] }), 'traffic'),
   ];
 
@@ -321,10 +321,10 @@ RENDERERS.analytics = async function(container){
     { t:`${topSurface[0]} is the dominant surface material`, d:`${fmtNum(topSurface[1],0)} km (${(topSurface[1]/totalKm*100).toFixed(0)}% of the classified network) is recorded as ${topSurface[0]} surface — the single largest of ${surfaceEntries.length} recorded materials.`, a:'var(--neon-cyan)' },
     { t:`${REGIONS[heaviestTruckRegionIdx]} carries the heaviest freight-truck share`, d:`Heavy trucks make up ${heavySharePct[heaviestTruckRegionIdx]}% of AADT on ${REGIONS[heaviestTruckRegionIdx]} region's links, the highest heavy-vehicle share of any region — a proxy for freight-corridor loading and pavement-fatigue risk.`, a:'var(--neon-green)' },
     { t:`Mean condition-rating confidence is ${avgConfidence.toFixed(0)}%`, d:`Across ${fmtNum(confVals.length)} field-surveyed links, ${fmtNum(lowConfCount)} (${(lowConfCount/confVals.length*100).toFixed(0)}%) carry a recorded condition confidence below 70% — flagged here rather than treated as equally certain as the rest.`, a:'var(--neon-pink)' },
-    { t:`${densityRows[0].subregion} has the densest paved network, ${densityRows[densityRows.length-1].subregion} the sparsest`, d:`${densityRows[0].subregion} carries ${densityRows[0].road_density_now_km_per_1000km2} km of paved road per 1,000 km² of land area, against ${densityRows[densityRows.length-1].road_density_now_km_per_1000km2} km in ${densityRows[densityRows.length-1].subregion} — a ${(densityRows[0].road_density_now_km_per_1000km2/densityRows[densityRows.length-1].road_density_now_km_per_1000km2).toFixed(1)}× gap, from the MoWT road density workbook.`, a:'var(--neon-yellow)' },
-    { t:`Motorcycles are the single largest vehicle class on the network`, d:`Motorcycles & scooters account for ${(compEntries[0][1]/trafficComp.meta.total_motorised_veh_per_day*100).toFixed(0)}% of modelled 2025 motorised traffic (${fmtNum(compEntries[0][1],0)} of ${fmtNum(trafficComp.meta.total_motorised_veh_per_day,0)} vehicles/day) — more than double the next-largest class, from the MoWT national traffic model.`, a:'var(--neon-blue)' },
-    { t:`${fmtNum(priorityBandCounts.Critical)} links fall in the network-wide Critical priority band`, d:`Scoring all ${fmtNum(priorityScored)} of ${fmtNum(feats.length)} classified links on condition, traffic loading and safety risk together, ${fmtNum(priorityBandCounts.Critical)} land in the top (Critical) quartile for intervention priority — see Network Explorer for the full per-link register.`, a:'var(--neon-pink)' },
-    { t:`${wbRows[0].weighbridge} weighbridge has the widest district catchment`, d:`${wbRows[0].weighbridge} station is assigned ${fmtNum(wbRows[0].district_count)} districts in the MoWT weighbridge coverage register, the widest catchment of the ${fmtNum(wbRows.length)} stations with a defined coverage area.`, a:'var(--neon-cyan)' },
+    { t:`${densityRows[0].subregion} has the densest paved network, ${densityRows[densityRows.length-1].subregion} the sparsest`, d:`${densityRows[0].subregion} carries ${densityRows[0].road_density_now_km_per_1000km2} km of paved road per 1,000 km² of land area, against ${densityRows[densityRows.length-1].road_density_now_km_per_1000km2} km in ${densityRows[densityRows.length-1].subregion}, a ${(densityRows[0].road_density_now_km_per_1000km2/densityRows[densityRows.length-1].road_density_now_km_per_1000km2).toFixed(1)}× gap, from the national road density workbook.`, a:'var(--neon-yellow)' },
+    { t:`Motorcycles are the single largest vehicle class on the network`, d:`Motorcycles & scooters account for ${(compEntries[0][1]/trafficComp.meta.total_motorised_veh_per_day*100).toFixed(0)}% of modelled 2025 motorised traffic (${fmtNum(compEntries[0][1],0)} of ${fmtNum(trafficComp.meta.total_motorised_veh_per_day,0)} vehicles/day), more than double the next-largest class, from the national traffic model.`, a:'var(--neon-blue)' },
+    { t:`${fmtNum(priorityBandCounts.Critical)} sections fall in the network-wide Critical priority band`, d:`Scoring all ${fmtNum(priorityScored)} of ${fmtNum(feats.length)} classified sections on condition, traffic loading and safety risk together, ${fmtNum(priorityBandCounts.Critical)} land in the top (Critical) quartile for intervention priority, see Network Explorer for the full per-corridor register.`, a:'var(--neon-pink)' },
+    { t:`${wbRows[0].weighbridge} weighbridge has the widest district catchment`, d:`${wbRows[0].weighbridge} station is assigned ${fmtNum(wbRows[0].district_count)} districts in the national weighbridge coverage register, the widest catchment of the ${fmtNum(wbRows.length)} stations with a defined coverage area.`, a:'var(--neon-cyan)' },
   ];
   const findGrid = el('div',{class:'grid-3'});
   findings.forEach(f=>{
