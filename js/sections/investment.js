@@ -82,7 +82,7 @@ RENDERERS.investment = async function(container){
       chartCard({
         title:'Combined Project Value by PIP Cycle', subtitle:'UGX billion', type:'bar',
         labels: trendYears,
-        datasets:[{ data: trendYears.map(y=>Math.round(summary[y].combined_value_bn_ushs)), backgroundColor:'#00e5ff', borderRadius:6 }]
+        datasets:[{ data: trendYears.map(y=>Math.round(summary[y].combined_value_bn_ushs)), backgroundColor:'#0284C7', borderRadius:6 }]
       }),
       chartCard({
         title:'Implementing agency by PIP cycle', subtitle:'Reflects the 2024 transfer of the road-development mandate', type:'bar', stacked:true,
@@ -266,7 +266,7 @@ RENDERERS.investment = async function(container){
           type:'line',
           data:{ labels:r.labels, datasets:[
             { label:'Do-Minimum', data:r.dmSeries, borderColor:'#ff7a00', backgroundColor:'#ff7a00', tension:0.15, pointRadius:0, borderWidth:2.5 },
-            { label:'Preventive-Preservation', data:r.ppSeries, borderColor:'#00e5ff', backgroundColor:'#00e5ff', tension:0.15, pointRadius:0, borderWidth:2.5 },
+            { label:'Preventive-Preservation', data:r.ppSeries, borderColor:'#0284C7', backgroundColor:'#0284C7', tension:0.15, pointRadius:0, borderWidth:2.5 },
           ]},
           options:{
             responsive:true, maintainAspectRatio:false,

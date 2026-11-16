@@ -1,5 +1,5 @@
 {
-  "engine_name": "MoWT GeoPandas Spatial Inner Join GPU Engine",
+  "engine_name": "National GeoPandas Spatial Inner Join GPU Engine",
   "gpu_hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
   "training_timestamp": "2026-08-19T11:47:39Z",
   "total_spatially_joined_links": 15000,

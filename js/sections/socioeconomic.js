@@ -10,12 +10,12 @@ RENDERERS.socioeconomic = async function(container){
   container.appendChild(body);
   body.appendChild(loadingBlock('Loading protected-area, forest, wetland, investment-corridor and access datasets…'));
 
-  const [paGeo, frGeo, wetGeo, oprcGeo, ndpivGeo, townsGeo, airportsGeo, ferryGeo] = await Promise.all([
+  const [paGeo, frGeo, wetGeo, oprcGeo, investmentGeo, townsGeo, airportsGeo, ferryGeo] = await Promise.all([
     DataStore.protectedAreas(),
     DataStore.forestReserves(),
     DataStore.wetlands(),
     DataStore.oprcContracts(),
-    DataStore.ndpivProjects(),
+    DataStore.investmentProjects(),
     DataStore.towns(),
     DataStore.airports(),
     DataStore.ferryCrossings(),
@@ -79,8 +79,8 @@ RENDERERS.socioeconomic = async function(container){
     return { lot: p.lot_name, region: p.region, roadNo: p.road_no, linkName: p.link_name, lengthKm: p.length_km, lotTotalKm: p.lot_total_km, status: p.status };
   });
 
-  // ---- NDP IV investment projects (165 project-tagged road links) ----
-  const ndpivRows = ndpivGeo.features.map(f=>{
+  // ---- National Investment investment projects (165 project-tagged road links) ----
+  const investmentRows = investmentGeo.features.map(f=>{
     const p = f.properties;
     return { project: p.project_name, component: p.component, region: p.region, roadNo: p.road_no, linkName: p.link_name, lengthKm: p.length_km, priority: p.priority, status: p.status, funder: p.funder };
   });
@@ -133,7 +133,7 @@ RENDERERS.socioeconomic = async function(container){
     const byTypeCount = {}, byTypeArea = {};
     forestRows.forEach(r=>{ byTypeCount[r.type] = (byTypeCount[r.type]||0)+1; byTypeArea[r.type] = (byTypeArea[r.type]||0)+r.areaHa; });
     const types = Object.keys(byTypeCount);
-    const typeColor = { 'Central Forest Reserve':'#00ff85', 'Local Forest Reserve':'#00e5ff', 'Degazetted / Joint Management Area':'#ff7a00' };
+    const typeColor = { 'Central Forest Reserve':'#16A34A', 'Local Forest Reserve':'#0284C7', 'Degazetted / Joint Management Area':'#ff7a00' };
 
     wrap.appendChild(kpiGrid([
       { label:'Named Forest Reserves', value: fmtNum(forestRows.length), accent:'var(--neon-green)' },
@@ -258,7 +258,7 @@ RENDERERS.socioeconomic = async function(container){
 
     wrap.appendChild(sectionBlock('Wetland area by region and type', 'All regions and types recorded in the inventory — no subset.', chartGrid([
       chartCard({ title:'Wetland area by inventory region', subtitle:'Hectares — inventory’s own regional classification, not maintenance regions', type:'bar',
-        labels: regions, datasets:[{ data: regions.map(r=>Math.round(byRegion[r])), backgroundColor:'#00e5ff', borderRadius:6 }] }),
+        labels: regions, datasets:[{ data: regions.map(r=>Math.round(byRegion[r])), backgroundColor:'#0284C7', borderRadius:6 }] }),
       chartCard({ title:'Wetland area by type', subtitle:'Hectares', type:'bar', indexAxis:'y',
         labels: types, datasets:[{ data: types.map(t=>Math.round(byType[t])), backgroundColor:NEON.slice(0,types.length), borderRadius:6 }] }),
     ])));
@@ -292,44 +292,44 @@ RENDERERS.socioeconomic = async function(container){
     return wrap;
   }
 
-  // ---- OPRC / NDP IV investment corridors pane ----
+  // ---- OPRC / National Investment investment corridors pane ----
   function buildCorridorsPane(){
     const wrap = el('div', {});
     const oprcKm = oprcRows.reduce((s,r)=>s+(r.lengthKm||0), 0);
-    const ndpivKm = ndpivRows.reduce((s,r)=>s+(r.lengthKm||0), 0);
-    const ndpivHigh = ndpivRows.filter(r=>r.priority==='High').length;
+    const investmentKm = investmentRows.reduce((s,r)=>s+(r.lengthKm||0), 0);
+    const investmentHigh = investmentRows.filter(r=>r.priority==='High').length;
 
     const oprcByRegion = {}; DataStore.REGIONS.forEach(r=>oprcByRegion[r]=0);
     oprcRows.forEach(r=>{ if(oprcByRegion[r.region]!==undefined) oprcByRegion[r.region]+=(r.lengthKm||0); });
-    const ndpivByComponent = {};
-    ndpivRows.forEach(r=>{ ndpivByComponent[r.component] = (ndpivByComponent[r.component]||0)+1; });
-    const components = Object.keys(ndpivByComponent);
+    const investmentByComponent = {};
+    investmentRows.forEach(r=>{ investmentByComponent[r.component] = (investmentByComponent[r.component]||0)+1; });
+    const components = Object.keys(investmentByComponent);
 
     wrap.appendChild(kpiGrid([
       { label:'OPRC Scoped Links', value: fmtNum(oprcRows.length), accent:'var(--neon-cyan)' },
       { label:'OPRC Scoped Length', value: fmtNum(oprcKm,0), unit:'km', accent:'var(--neon-blue)' },
-      { label:'Investment projects', value: fmtNum(ndpivRows.length), accent:'var(--neon-magenta)' },
-      { label:'Investment tagged length', value: fmtNum(ndpivKm,0), unit:'km', accent:'var(--neon-purple)' },
-      { label:'High-priority investment links', value: fmtNum(ndpivHigh), accent:'var(--neon-orange)', delta:(ndpivHigh/ndpivRows.length*100).toFixed(0)+'% of projects' },
+      { label:'Investment projects', value: fmtNum(investmentRows.length), accent:'var(--neon-magenta)' },
+      { label:'Investment tagged length', value: fmtNum(investmentKm,0), unit:'km', accent:'var(--neon-purple)' },
+      { label:'High-priority investment links', value: fmtNum(investmentHigh), accent:'var(--neon-orange)', delta:(investmentHigh/investmentRows.length*100).toFixed(0)+'% of projects' },
     ]));
     wrap.appendChild(el('p', {class:'footnote'},
-      'This view covers '+fmtNum(ndpivRows.length)+' project-tagged road links and '+fmtNum(oprcRows.length)+' OPRC links across 6 regional lots. Both are planning-stage overlays on the road-link network. Link names are displayed as labels rather than raw codes.'
+      'This view covers '+fmtNum(investmentRows.length)+' project-tagged road links and '+fmtNum(oprcRows.length)+' OPRC links across 6 regional lots. Both are planning-stage overlays on the road-link network. Link names are displayed as labels rather than raw codes.'
     ));
 
     wrap.appendChild(sectionBlock('Investment corridors by region and component', 'All 6 maintenance regions for OPRC and all investment components.', chartGrid([
       chartCard({ title:'OPRC scoped length by region', subtitle:'km', type:'bar',
-        labels: DataStore.REGIONS, datasets:[{ data: DataStore.REGIONS.map(r=>Math.round(oprcByRegion[r])), backgroundColor:'#00e5ff', borderRadius:6 }] }),
+        labels: DataStore.REGIONS, datasets:[{ data: DataStore.REGIONS.map(r=>Math.round(oprcByRegion[r])), backgroundColor:'#0284C7', borderRadius:6 }] }),
       chartCard({ title:'Investment projects by component', type:'bar', indexAxis:'y',
-        labels: components, datasets:[{ data: components.map(c=>ndpivByComponent[c]), backgroundColor:NEON.slice(0,components.length), borderRadius:6 }] }),
+        labels: components, datasets:[{ data: components.map(c=>investmentByComponent[c]), backgroundColor:NEON.slice(0,components.length), borderRadius:6 }] }),
     ])));
 
     const mapDiv = el('div', {class:'map-shell'});
-    const mapCard = el('div', {class:'card card-pad'}, [mapDiv, legend([['OPRC contract-lot links ('+fmtNum(oprcRows.length)+')','#00e5ff'], ['Investment-project links ('+fmtNum(ndpivRows.length)+')','#ff00c8']])]);
+    const mapCard = el('div', {class:'card card-pad'}, [mapDiv, legend([['OPRC contract-lot links ('+fmtNum(oprcRows.length)+')','#0284C7'], ['Investment-project links ('+fmtNum(investmentRows.length)+')','#ff00c8']])]);
     wrap.appendChild(sectionBlock('Investment corridor map', 'Road links carrying an OPRC contract-lot scope or an investment tag.', mapCard));
     requestAnimationFrame(()=>{
       const map = baseMap(mapDiv, [1.4,32.3], 7);
-      const oLayer = L.geoJSON(oprcGeo, { style:{ color:'#00e5ff', weight:3, opacity:0.85 }, onEachFeature:(f,l)=>l.bindPopup(esc(f.properties.link_name)+'<br>'+esc(f.properties.lot_name)) }).addTo(map);
-      L.geoJSON(ndpivGeo, { style:{ color:'#ff00c8', weight:3, opacity:0.85 }, onEachFeature:(f,l)=>l.bindPopup(esc(f.properties.link_name)+'<br>'+esc(f.properties.project_name)) }).addTo(map);
+      const oLayer = L.geoJSON(oprcGeo, { style:{ color:'#0284C7', weight:3, opacity:0.85 }, onEachFeature:(f,l)=>l.bindPopup(esc(f.properties.link_name)+'<br>'+esc(f.properties.lot_name)) }).addTo(map);
+      L.geoJSON(investmentGeo, { style:{ color:'#ff00c8', weight:3, opacity:0.85 }, onEachFeature:(f,l)=>l.bindPopup(esc(f.properties.link_name)+'<br>'+esc(f.properties.project_name)) }).addTo(map);
       try{ map.fitBounds(oLayer.getBounds(), {padding:[20,20]}); }catch(e){}
     });
 
@@ -348,7 +348,7 @@ RENDERERS.socioeconomic = async function(container){
       caption:'OPRC-scoped links',
     })));
 
-    wrap.appendChild(sectionBlock('Investment projects', 'All '+fmtNum(ndpivRows.length)+' project-tagged road links.', dataTable({
+    wrap.appendChild(sectionBlock('Investment projects', 'All '+fmtNum(investmentRows.length)+' project-tagged road links.', dataTable({
       columns:[
         { key:'project', label:'Project' },
         { key:'component', label:'Component' },
@@ -359,7 +359,7 @@ RENDERERS.socioeconomic = async function(container){
         { key:'status', label:'Status' },
         { key:'funder', label:'Funder' },
       ],
-      rows: ndpivRows, pageSize:25, searchKeys:['project','linkName','roadNo'],
+      rows: investmentRows, pageSize:25, searchKeys:['project','linkName','roadNo'],
       filters:[{ label:'region', key:'region', options: DataStore.REGIONS }, { label:'priority', key:'priority', options:['High','Medium'] }],
       caption:'Investment project links',
     })));
@@ -388,13 +388,13 @@ RENDERERS.socioeconomic = async function(container){
 
     wrap.appendChild(sectionBlock('Towns and airport classification', 'Full distribution recorded in each source register — no subset.', chartGrid([
       chartCard({ title:'Towns by classification', type:'bar',
-        labels: classes, datasets:[{ data: classes.map(c=>byCls[c]), backgroundColor:'#00e5ff', borderRadius:6 }] }),
+        labels: classes, datasets:[{ data: classes.map(c=>byCls[c]), backgroundColor:'#0284C7', borderRadius:6 }] }),
       chartCard({ title:'Airports by category', type:'doughnut',
-        labels: Object.keys(byAirportCat), datasets:[{ data: Object.values(byAirportCat), backgroundColor:['#00ff85','#ff7a00'], borderWidth:0 }] }),
+        labels: Object.keys(byAirportCat), datasets:[{ data: Object.values(byAirportCat), backgroundColor:['#16A34A','#ff7a00'], borderWidth:0 }] }),
     ])));
 
     const mapDiv = el('div', {class:'map-shell'});
-    const mapCard = el('div', {class:'card card-pad'}, [mapDiv, legend([['Road network','#c7cad4'], ['Towns','#00e5ff'], ['Airports / airstrips','#00ff85'], ['Ferry crossings','#ff2d78']])]);
+    const mapCard = el('div', {class:'card card-pad'}, [mapDiv, legend([['Road network','#c7cad4'], ['Towns','#0284C7'], ['Airports / airstrips','#16A34A'], ['Ferry crossings','#ff2d78']])]);
     wrap.appendChild(sectionBlock('Towns, airports & ferry crossings on the road network', 'All '+fmtNum(townRows.length)+' towns, '+fmtNum(airportRows.length)+' airports/airstrips and '+fmtNum(ferryRows.length)+' ferry crossings, over the road-link network.', mapCard));
     requestAnimationFrame(async ()=>{
       const map = baseMap(mapDiv, [1.4,32.3], 7);
@@ -402,8 +402,8 @@ RENDERERS.socioeconomic = async function(container){
         const net = await DataStore.network();
         L.geoJSON(net, { style:{ color:'#c7cad4', weight:1, opacity:0.7 } }).addTo(map);
       }catch(e){}
-      townRows.forEach(r=> L.circleMarker([r.lat,r.lon], {radius:3, color:'#00e5ff', weight:0, fillOpacity:0.8}).bindPopup(esc(r.name)+'<br>Class: '+esc(r.cls)).addTo(map));
-      airportRows.forEach(r=> L.circleMarker([r.lat,r.lon], {radius:6, color:'#00ff85', weight:1, fillOpacity:0.9}).bindPopup(esc(r.name)+'<br>'+esc(r.category)).addTo(map));
+      townRows.forEach(r=> L.circleMarker([r.lat,r.lon], {radius:3, color:'#0284C7', weight:0, fillOpacity:0.8}).bindPopup(esc(r.name)+'<br>Class: '+esc(r.cls)).addTo(map));
+      airportRows.forEach(r=> L.circleMarker([r.lat,r.lon], {radius:6, color:'#16A34A', weight:1, fillOpacity:0.9}).bindPopup(esc(r.name)+'<br>'+esc(r.category)).addTo(map));
       ferryRows.forEach(r=> L.circleMarker([r.lat,r.lon], {radius:6, color:'#ff2d78', weight:1, fillOpacity:0.9}).bindPopup(esc(r.name)+'<br>'+esc(r.waterBody)+'<br>'+esc(r.status)).addTo(map));
     });
 

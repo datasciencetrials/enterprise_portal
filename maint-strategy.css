@@ -128,7 +128,7 @@
 .ms-table td{ padding:9px 14px; color:#e2e8f0; border-bottom:1px solid rgba(255,255,255,.04); white-space:normal; }
 .ms-table tr:last-child td{ border-bottom:none; }
 .ms-name{ color:#fff; font-weight:500; min-width:180px; }
-.ms-num{ font-variant-numeric:tabular-nums; color:#00ff66; }
+.ms-num{ font-variant-numeric:tabular-nums; color:#16A34A; }
 .ms-empty{ color:#6b7688; text-align:center; padding:20px; }
 .ms-loading{ color:#6b7688; padding:16px 0; }
 

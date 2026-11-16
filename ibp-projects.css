@@ -183,7 +183,7 @@
 }
 .ibp-table tr:last-child td{ border-bottom:none; }
 .ibp-name{ color:#fff; font-weight:500; min-width:220px; }
-.ibp-num{ font-variant-numeric:tabular-nums; color:#00f3ff; }
+.ibp-num{ font-variant-numeric:tabular-nums; color:#0284C7; }
 .ibp-years{ color:#a0aec0; font-size:.78rem; }
 .ibp-empty{ color:#6b7688; text-align:center; padding:20px !important; }
 

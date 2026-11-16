@@ -64,7 +64,7 @@ RENDERERS.reports = async function(container){
         { label:'Class M — Expressway', value: fmtNum(net.byClass.M||0,0), unit:'km', accent:'var(--neon-pink)', raw: Math.round(net.byClass.M||0) },
       ],
       chart: () => chartCard({ title:'Network Length by Functional Class', subtitle:'km', type:'bar',
-        labels:['A','B','C','M'], datasets:[{ data:[net.byClass.A||0,net.byClass.B||0,net.byClass.C||0,net.byClass.M||0].map(v=>Math.round(v)), backgroundColor:'#00e5ff', borderRadius:6 }] }),
+        labels:['A','B','C','M'], datasets:[{ data:[net.byClass.A||0,net.byClass.B||0,net.byClass.C||0,net.byClass.M||0].map(v=>Math.round(v)), backgroundColor:'#0284C7', borderRadius:6 }] }),
     },
     {
       id: 'structures', label: 'Bridges & Structures',
@@ -77,7 +77,7 @@ RENDERERS.reports = async function(container){
         { label:'Major Culvert Asset Value', value: fmtNum(culvertStructure.asset_value_mn_usd,0), unit:'USD mn', accent:'var(--neon-green)', raw: culvertStructure.asset_value_mn_usd },
       ],
       chart: () => chartCard({ title:'Asset Value: Bridges vs Major Culverts', subtitle:'USD million', type:'bar',
-        labels:['Bridges','Major Culverts'], datasets:[{ data:[Math.round(bridgeStructure.asset_value_mn_usd), Math.round(culvertStructure.asset_value_mn_usd)], backgroundColor:['#2979ff','#00ff85'], borderRadius:6 }] }),
+        labels:['Bridges','Major Culverts'], datasets:[{ data:[Math.round(bridgeStructure.asset_value_mn_usd), Math.round(culvertStructure.asset_value_mn_usd)], backgroundColor:['#2979ff','#16A34A'], borderRadius:6 }] }),
     },
     {
       id: 'traffic', label: 'Traffic',
@@ -90,7 +90,7 @@ RENDERERS.reports = async function(container){
         { label:'Average Crash Rate', value: fmtNum(avgCrashRate,1), unit:'per 100m-veh-km', accent:'var(--neon-magenta)', raw: Number(avgCrashRate.toFixed(1)) },
       ],
       chart: () => chartCard({ title:'Road Safety Risk Band, National', subtitle:'Links assigned a Critical or Low band', type:'doughnut',
-        labels:['Critical','Low'], datasets:[{ data:[criticalRiskLinks, lowRiskLinks], backgroundColor:['#ff2d78','#00ff85'], borderWidth:0 }] }),
+        labels:['Critical','Low'], datasets:[{ data:[criticalRiskLinks, lowRiskLinks], backgroundColor:['#ff2d78','#16A34A'], borderWidth:0 }] }),
     },
     {
       id: 'investment', label: 'Investment',

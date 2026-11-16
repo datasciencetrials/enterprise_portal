@@ -62,12 +62,12 @@ RENDERERS.ducar = async function(container){
     chartCard({
       title: 'Condition Distribution',
       type: 'doughnut', labels: ['Good', 'Fair', 'Poor'],
-      datasets: [{ data: [Math.round(goodKm), Math.round(fairKm), Math.round(poorKm)], backgroundColor: ['#00ff85', '#fff500', '#ff7a00'], borderWidth: 0 }],
+      datasets: [{ data: [Math.round(goodKm), Math.round(fairKm), Math.round(poorKm)], backgroundColor: ['#16A34A', '#D97706', '#ff7a00'], borderWidth: 0 }],
     }),
     chartCard({
       title: 'Network Length by Road Category',
       type: 'bar', labels: ['District Roads', 'Urban Roads', 'Community Access Roads'],
-      datasets: [{ data: [Math.round(distKm), Math.round(urbKm), Math.round(commKm)], backgroundColor: '#00e5ff', borderRadius: 6 }],
+      datasets: [{ data: [Math.round(distKm), Math.round(urbKm), Math.round(commKm)], backgroundColor: '#0284C7', borderRadius: 6 }],
     }),
     chartCard({
       title: 'Paved vs Unpaved',

@@ -21,11 +21,11 @@
   --text-on-accent: #ffffff;
 
   /* ---- neon accent family: TRUE bright values (fills, borders, glows, chart series, badges-on-dark) ---- */
-  --neon-cyan:    #00e5ff;
+  --neon-cyan:    #0284C7;
   --neon-magenta: #ff00c8;
   --neon-purple:  #9d00ff;
-  --neon-green:   #00ff85;
-  --neon-yellow:  #fff500;
+  --neon-green:   #16A34A;
+  --neon-yellow:  #D97706;
   --neon-orange:  #ff7a00;
   --neon-blue:    #2979ff;
   --neon-pink:    #ff2d78;
@@ -378,10 +378,10 @@ table.data-table td.num, table.data-table th.num{ text-align:right; font-variant
 .universe-label{
   position:absolute; transform:translate(-50%,-140%); display:flex; align-items:center; gap:5px;
   font-size:.72rem; font-weight:700; color:#f5f7ff; white-space:nowrap;
-  background:rgba(6,9,18,.55); border:1px solid var(--accent,#00e5ff); border-radius:999px;
+  background:rgba(6,9,18,.55); border:1px solid var(--accent,#0284C7); border-radius:999px;
   padding:3px 9px 3px 7px; text-shadow:0 1px 2px rgba(0,0,0,.6);
 }
-.universe-label-sun{ border-color:#fff500; font-size:.78rem; }
+.universe-label-sun{ border-color:#D97706; font-size:.78rem; }
 
 .universe-legend{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
 .universe-chip{

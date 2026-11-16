@@ -2,7 +2,7 @@
 // All functions return DOM nodes or HTML strings as noted.
 
 const RENDERERS = {}; // populated by section scripts: RENDERERS.overview = async (container) => {...}
-const NEON = ['#00e5ff','#ff00c8','#9d00ff','#00ff85','#fff500','#ff7a00','#2979ff','#ff2d78'];
+const NEON = ['#0284C7','#ff00c8','#9d00ff','#16A34A','#D97706','#ff7a00','#2979ff','#ff2d78'];
 const INK  = ['#0089a8','#b8008f','#6d1fd1','#00944f','#93790a','#c85400','#1a56cc','#c30057'];
 
 function fmtNum(n, digits=0){

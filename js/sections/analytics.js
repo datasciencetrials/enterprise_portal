@@ -140,8 +140,8 @@ RENDERERS.analytics = async function(container){
     // ---- Network & Pavement ----
     tagged(chartCard({ title:'Road Condition by Region',
       type:'bar', stacked:true, labels:REGIONS, datasets:[
-        {label:'Good', data:REGIONS.map(r=>Math.round(condByRegion[r].Good)), backgroundColor:'#00ff85', borderRadius:3},
-        {label:'Fair', data:REGIONS.map(r=>Math.round(condByRegion[r].Fair)), backgroundColor:'#fff500', borderRadius:3},
+        {label:'Good', data:REGIONS.map(r=>Math.round(condByRegion[r].Good)), backgroundColor:'#16A34A', borderRadius:3},
+        {label:'Fair', data:REGIONS.map(r=>Math.round(condByRegion[r].Fair)), backgroundColor:'#D97706', borderRadius:3},
         {label:'Poor', data:REGIONS.map(r=>Math.round(condByRegion[r].Poor)), backgroundColor:'#ff2d78', borderRadius:3},
       ] }), 'network'),
     tagged(chartCard({ title:'Sealed vs Unsealed Length by Road Class',
@@ -152,12 +152,12 @@ RENDERERS.analytics = async function(container){
     tagged(chartCard({ title:'VCI Rating Distribution', subtitle:'Maintenance-strategy scale — distinct from the field-survey Condition above',
       type:'doughnut', labels:Object.keys(ms.vci_condition_distribution), datasets:[{ data:Object.values(ms.vci_condition_distribution), backgroundColor:NEON, borderWidth:0 }] }), 'network'),
     tagged(chartCard({ title:'Network Length by Maintenance Station', tall:true,
-      type:'bar', indexAxis:'y', labels: stationEntries.map(e=>e[0]), datasets:[{ data: stationEntries.map(e=>Math.round(e[1])), backgroundColor:'#00e5ff', borderRadius:3 }] }), 'network'),
+      type:'bar', indexAxis:'y', labels: stationEntries.map(e=>e[0]), datasets:[{ data: stationEntries.map(e=>Math.round(e[1])), backgroundColor:'#0284C7', borderRadius:3 }] }), 'network'),
     tagged(chartCard({ title:'Network Length by Surface Material',
-      type:'bar', indexAxis:'y', labels: surfaceEntries.map(e=>e[0]), datasets:[{ data: surfaceEntries.map(e=>Math.round(e[1])), backgroundColor:'#00ff85', borderRadius:3 }] }), 'network'),
+      type:'bar', indexAxis:'y', labels: surfaceEntries.map(e=>e[0]), datasets:[{ data: surfaceEntries.map(e=>Math.round(e[1])), backgroundColor:'#16A34A', borderRadius:3 }] }), 'network'),
     tagged(chartCard({ title:'Paved Road Density by Subregion', subtitle:'km of bituminous road per 1,000 km² land area: national road density workbook, 13 subregions', tall:true,
       type:'bar', indexAxis:'y', labels: densityRows.map(r=>r.subregion), datasets:[
-        {label:'Now', data: densityRows.map(r=>r.road_density_now_km_per_1000km2), backgroundColor:'#00e5ff', borderRadius:3},
+        {label:'Now', data: densityRows.map(r=>r.road_density_now_km_per_1000km2), backgroundColor:'#0284C7', borderRadius:3},
         {label:'At NDP3 completion', data: densityRows.map(r=>r.road_density_ndp3_end_km_per_1000km2), backgroundColor:'#9d00ff', borderRadius:3},
       ] }), 'network'),
 
@@ -169,14 +169,14 @@ RENDERERS.analytics = async function(container){
     tagged(chartCard({ title:'Road Safety Risk Band by Region',
       type:'bar', stacked:true, labels:REGIONS, datasets:[
         {label:'Critical', data:REGIONS.map(r=>Math.round(bandByRegion[r].Critical)), backgroundColor:'#ff2d78', borderRadius:3},
-        {label:'Low', data:REGIONS.map(r=>Math.round(bandByRegion[r].Low)), backgroundColor:'#00ff85', borderRadius:3},
+        {label:'Low', data:REGIONS.map(r=>Math.round(bandByRegion[r].Low)), backgroundColor:'#16A34A', borderRadius:3},
       ] }), 'traffic'),
     tagged(chartCard({ title:'Average Crash Rate by Region', subtitle:'Crashes per 100m-veh-km',
       type:'bar', labels:REGIONS, datasets:[{ data:crAvg, backgroundColor:'#ff7a00', borderRadius:6 }] }), 'traffic'),
     tagged(chartCard({ title:'Heavy-Truck Share of Traffic by Region', subtitle:'% of AADT (Aadt Heavy Trucks ÷ Aadt 2026 Live)',
       type:'bar', labels:REGIONS, datasets:[{ data:heavySharePct, backgroundColor:'#ff00c8', borderRadius:6 }] }), 'traffic'),
     tagged(chartCard({ title:'National Traffic Composition by Vehicle Class, 2025', subtitle:trafficComp.meta.linked_count+' of '+trafficComp.meta.total_links+' links carry a modelled figure — vehicles/day, summed', tall:true,
-      type:'bar', indexAxis:'y', labels: compEntries.map(e=>e[0]), datasets:[{ data: compEntries.map(e=>Math.round(e[1])), backgroundColor:'#fff500', borderRadius:3 }] }), 'traffic'),
+      type:'bar', indexAxis:'y', labels: compEntries.map(e=>e[0]), datasets:[{ data: compEntries.map(e=>Math.round(e[1])), backgroundColor:'#D97706', borderRadius:3 }] }), 'traffic'),
 
     // ---- Structures ----
     tagged(chartCard({ title:'Bridge Condition Distribution',
@@ -186,27 +186,27 @@ RENDERERS.analytics = async function(container){
     tagged(chartCard({ title:'Structures by Region: Bridges vs Major Culverts',
       type:'bar', stacked:true, labels:REGIONS, datasets:[
         {label:'Bridges', data:bridgesByRegion, backgroundColor:'#2979ff', borderRadius:3},
-        {label:'Major Culverts', data:culvertsByRegion, backgroundColor:'#00e5ff', borderRadius:3},
+        {label:'Major Culverts', data:culvertsByRegion, backgroundColor:'#0284C7', borderRadius:3},
       ] }), 'structures'),
 
     // ---- Investment & Priority ----
     tagged(chartCard({ title:'Recommended Intervention Mix', subtitle:'Network length, km',
-      type:'bar', indexAxis:'y', labels:(ms.intervention_mix_summary||[]).map(x=>x.intervention), datasets:[{ data:(ms.intervention_mix_summary||[]).map(x=>Math.round(x.length_km)), backgroundColor:'#00ff85', borderRadius:4 }] }), 'investment'),
+      type:'bar', indexAxis:'y', labels:(ms.intervention_mix_summary||[]).map(x=>x.intervention), datasets:[{ data:(ms.intervention_mix_summary||[]).map(x=>Math.round(x.length_km)), backgroundColor:'#16A34A', borderRadius:4 }] }), 'investment'),
     tagged(chartCard({ title:'Paved vs Unpaved Asset Value Trend', subtitle:'USD million', type:'line',
       labels: avtFY, datasets:[
         {label:'Paved', data:avtPaved, borderColor:'#2979ff', backgroundColor:'#2979ff', tension:0.25, spanGaps:true},
         {label:'Unpaved', data:avtUnpaved, borderColor:'#ff7a00', backgroundColor:'#ff7a00', tension:0.25, spanGaps:true},
       ] }), 'investment'),
     tagged(chartCard({ title:'Priority Score Distribution',
-      type:'bar', labels:scoreLabels, datasets:[{ data:scoreCounts, backgroundColor:'#fff500', borderRadius:6 }] }), 'investment'),
+      type:'bar', labels:scoreLabels, datasets:[{ data:scoreCounts, backgroundColor:'#D97706', borderRadius:6 }] }), 'investment'),
     tagged(chartCard({ title:'Funding Gap vs Baseline by Year', subtitle:'UGX billion',
       type:'bar', labels: fyRows.map(y=>y.financial_year), datasets:[{ data: fyRows.map(y=>Math.round(y.funding_gap_vs_baseline_bn_ushs||0)), backgroundColor:'#ff2d78', borderRadius:6 }] }), 'investment'),
     tagged(chartCard({ title:'Link Age vs Priority Score', type:'scatter',
       labels: null, datasets:[{ label:'Links', data:scatterPts, backgroundColor:'#9d00ff' }] }), 'investment'),
     tagged(chartCard({ title:'Network-Wide Intervention Priority', subtitle:priorityScored+' of '+feats.length+' links scored — this site’s own composite (40% condition, 35% traffic, 25% safety risk), distinct from the 338-link paved backlog score above',
-      type:'doughnut', labels:PRIORITY_BANDS, datasets:[{ data:PRIORITY_BANDS.map(b=>priorityBandCounts[b]), backgroundColor:['#00c853','#fff500','#ff7a00','#ff2d78'], borderWidth:0 }] }), 'investment'),
+      type:'doughnut', labels:PRIORITY_BANDS, datasets:[{ data:PRIORITY_BANDS.map(b=>priorityBandCounts[b]), backgroundColor:['#00c853','#D97706','#ff7a00','#ff2d78'], borderWidth:0 }] }), 'investment'),
     tagged(chartCard({ title:'Weighbridge District Coverage', subtitle:'Districts assigned per enforcement station: national register, see Network Explorer footnote',
-      type:'bar', indexAxis:'y', labels: wbRows.map(r=>r.weighbridge), datasets:[{ data: wbRows.map(r=>r.district_count), backgroundColor:'#00e5ff', borderRadius:4 }] }), 'traffic'),
+      type:'bar', indexAxis:'y', labels: wbRows.map(r=>r.weighbridge), datasets:[{ data: wbRows.map(r=>r.district_count), backgroundColor:'#0284C7', borderRadius:4 }] }), 'traffic'),
   ];
 
   const CATS = [

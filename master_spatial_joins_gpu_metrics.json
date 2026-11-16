@@ -1,5 +1,5 @@
 {
-  "engine_name": "MoWT Unified All-Uganda Road Network & Spatial Join GPU Engine",
+  "engine_name": "National Unified All-Uganda Road Network & Spatial Join GPU Engine",
   "gpu_hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
   "training_timestamp": "2026-08-19T11:30:42Z",
   "total_unified_links_processed": 6923,

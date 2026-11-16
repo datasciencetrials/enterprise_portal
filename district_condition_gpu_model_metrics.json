@@ -2,7 +2,7 @@
   "device_name": "CPU (scikit-learn RandomForestRegressor, cloud training run)",
   "training_timestamp": "2026-08-25T08:10:00Z",
   "total_samples_trained": 135,
-  "source_dataset": "ducar_district_condition_summary.geojson (135 districts, full national coverage, MoWT DUCAR GIS Package 2026)",
+  "source_dataset": "ducar_district_condition_summary.geojson (135 districts, full national coverage, DUCAR GIS Package 2026)",
   "poor_pct_regressor": {
     "model_type": "RandomForestRegressor",
     "target": "POOR_PCT (share of district road network in Poor condition)",

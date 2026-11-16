@@ -28,7 +28,7 @@
   function km(v){ return n(v,1) + (v===null||v===undefined?'':' km'); }
   function bn(v){ return v===null||v===undefined?'Not available':'UShs ' + n(v,1) + ' bn'; }
 
-  var REGION_COLORS = {'Central':'#00f3ff','Eastern':'#ff00ea','Northern':'#00ff66','Western':'#fffb00','Southern':'#9d00ff','North Eastern':'#ff6a00'};
+  var REGION_COLORS = {'Central':'#0284C7','Eastern':'#ff00ea','Northern':'#16A34A','Western':'#D97706','Southern':'#9d00ff','North Eastern':'#ff6a00'};
 
   function renderOverview(){
     var k = summary.kpi_summary, reg = summary.network_regional_breakdown, cls = summary.network_by_class;
@@ -44,10 +44,10 @@
     }).join('');
     return (
       '<div class="ms-kpis">' +
-        '<div class="glass-card kpi-card ms-kpi" style="border-left-color:#00f3ff"><div class="ms-kpi-label">Total Network</div><div class="ms-kpi-value">' + km(k.total_network_km) + '</div></div>' +
-        '<div class="glass-card kpi-card ms-kpi" style="border-left-color:#00ff66"><div class="ms-kpi-label">Paved / Unpaved</div><div class="ms-kpi-value ms-kpi-small">' + km(k.paved_km) + ' / ' + km(k.unpaved_km) + '</div></div>' +
+        '<div class="glass-card kpi-card ms-kpi" style="border-left-color:#0284C7"><div class="ms-kpi-label">Total Network</div><div class="ms-kpi-value">' + km(k.total_network_km) + '</div></div>' +
+        '<div class="glass-card kpi-card ms-kpi" style="border-left-color:#16A34A"><div class="ms-kpi-label">Paved / Unpaved</div><div class="ms-kpi-value ms-kpi-small">' + km(k.paved_km) + ' / ' + km(k.unpaved_km) + '</div></div>' +
         '<div class="glass-card kpi-card ms-kpi" style="border-left-color:#ff00ea"><div class="ms-kpi-label">Bridges / Major Culverts</div><div class="ms-kpi-value ms-kpi-small">' + n(k.total_bridges,0) + ' / ' + n(k.total_major_culverts,0) + '</div></div>' +
-        '<div class="glass-card kpi-card ms-kpi" style="border-left-color:#fffb00"><div class="ms-kpi-label">Total Road Asset Value</div><div class="ms-kpi-value ms-kpi-small">USD ' + n(k.total_asset_value_mn_usd,0) + ' mn</div></div>' +
+        '<div class="glass-card kpi-card ms-kpi" style="border-left-color:#D97706"><div class="ms-kpi-label">Total Road Asset Value</div><div class="ms-kpi-value ms-kpi-small">USD ' + n(k.total_asset_value_mn_usd,0) + ' mn</div></div>' +
       '</div>' +
       '<h3 class="ms-section-title">Network by Maintenance Region <span class="ms-count">(all 6 regions, paved/unpaved split)</span></h3>' +
       '<div class="ms-table-wrap"><table class="ms-table"><thead><tr><th>Region</th><th>Paved</th><th>Unpaved</th><th>Total</th></tr></thead><tbody>' + regionRows + '</tbody></table></div>' +
@@ -77,8 +77,8 @@
   }
 
   function vciColor(r){
-    var m = {'Very Good':'#00ff66','Good':'#00f3ff','Fair':'#fffb00','Poor':'#ff6a00','Very Poor':'#ff0044','Committed Project':'#9d00ff','Not assessed':'#6b7688'};
-    return m[r] || '#00f3ff';
+    var m = {'Very Good':'#16A34A','Good':'#0284C7','Fair':'#D97706','Poor':'#ff6a00','Very Poor':'#ff0044','Committed Project':'#9d00ff','Not assessed':'#6b7688'};
+    return m[r] || '#0284C7';
   }
 
   function renderPlan(){
@@ -162,8 +162,8 @@
     }).join('') + '</div>';
   }
   function condColor(c){
-    var m = {'Good':'#00ff66','Satisfactory':'#00f3ff','Marginal':'#fffb00','Poor':'#ff6a00','Critical':'#ff0044','Not recorded':'#6b7688'};
-    return m[c] || '#00f3ff';
+    var m = {'Good':'#16A34A','Satisfactory':'#0284C7','Marginal':'#D97706','Poor':'#ff6a00','Critical':'#ff0044','Not recorded':'#6b7688'};
+    return m[c] || '#0284C7';
   }
 
   function renderBridges(){
@@ -334,7 +334,7 @@
     item.className = 'nav-item';
     item.id = 'ms-nav-item';
     item.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" ' +
-      'stroke="#00ff66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench">' +
+      'stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench">' +
       '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>' +
       '<span>12. Maintenance Strategy</span>';
     item.addEventListener('click', openPanel);

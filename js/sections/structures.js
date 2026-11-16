@@ -7,7 +7,7 @@ const STRUCT_COND_COLOR = {
   'Good': '#00c853',
   'Satisfactory': '#2979ff',
   'Fair': '#2979ff',
-  'Marginal': '#fff500',
+  'Marginal': '#D97706',
   'Poor': '#ff7a00',
   'Critical': '#ff2d78',
   'Very Poor': '#ff2d78'

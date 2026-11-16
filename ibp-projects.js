@@ -57,10 +57,10 @@
 
     return (
       '<div class="ibp-kpis">' +
-        '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#00f3ff"><div class="ibp-kpi-label">Road Projects</div><div class="ibp-kpi-value">' + s.road_projects + '</div></div>' +
+        '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#0284C7"><div class="ibp-kpi-label">Road Projects</div><div class="ibp-kpi-value">' + s.road_projects + '</div></div>' +
         '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#ff00ea"><div class="ibp-kpi-label">Bridge &amp; Major Culvert Projects</div><div class="ibp-kpi-value">' + s.bridge_major_culvert_projects + '</div></div>' +
-        '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#00ff66"><div class="ibp-kpi-label">Combined Value (' + esc(year) + ')</div><div class="ibp-kpi-value">UShs ' + fmtBn(s.combined_value_bn_ushs) + '</div></div>' +
-        '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#fffb00"><div class="ibp-kpi-label">Agency / Department Projects</div><div class="ibp-kpi-value ibp-kpi-small">' + s.unra_projects + ' / ' + s.mowt_projects + '</div></div>' +
+        '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#16A34A"><div class="ibp-kpi-label">Combined Value (' + esc(year) + ')</div><div class="ibp-kpi-value">UShs ' + fmtBn(s.combined_value_bn_ushs) + '</div></div>' +
+        '<div class="glass-card kpi-card ibp-kpi" style="border-left-color:#D97706"><div class="ibp-kpi-label">Agency / Department Projects</div><div class="ibp-kpi-value ibp-kpi-small">' + s.unra_projects + ' / ' + s.mowt_projects + '</div></div>' +
       '</div>' +
 
       '<h3 class="ibp-section-title">Road Projects <span class="ibp-count">(' + roads.length + ')</span></h3>' +
@@ -111,7 +111,7 @@
           '<div class="ibp-header">' +
             '<div>' +
               '<h2>IBP Uganda — National Road &amp; Bridge Investment Projects</h2>' +
-              '<div class="ibp-subtitle">Ministry of Finance, Planning and Economic Development — Integrated Bank of Projects (IBP), Public Investment Plan documents by fiscal year</div>' +
+              '<div class="ibp-subtitle">Department of Finance, Planning and Economic Development — Integrated Bank of Projects (IBP), Public Investment Plan documents by fiscal year</div>' +
             '</div>' +
             '<button class="ibp-close" id="ibp-close" aria-label="Close">✕</button>' +
           '</div>' +

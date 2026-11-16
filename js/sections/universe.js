@@ -26,14 +26,14 @@ RENDERERS.universe = async function(container){
 
   // ---- subsystem definitions: every load() fetches this platform's real data files ----
   const SUBSYSTEMS = [
-    { id:'pms', label:'PMS — Pavement Management', short:'PMS', icon:'🛣️', accent:'#00e5ff',
+    { id:'pms', label:'PMS — Pavement Management', short:'PMS', icon:'🛣️', accent:'#0284C7',
       sectionId:'maintenance', sectionLabel:'Maintenance & Condition',
       radius:5.0, speed:0.16, size:0.62,
       load: async()=>{
         const s = await DataStore.networkStats();
         return { kpis:[
-          {label:'Total Network', value:fmtNum(s.totalKm,0), unit:'km', accent:'#00e5ff'},
-          {label:'Paved', value:fmtNum(s.pavedKm,0), unit:'km', accent:'#00ff85'},
+          {label:'Total Network', value:fmtNum(s.totalKm,0), unit:'km', accent:'#0284C7'},
+          {label:'Paved', value:fmtNum(s.pavedKm,0), unit:'km', accent:'#16A34A'},
           {label:'Unpaved', value:fmtNum(s.unpavedKm,0), unit:'km', accent:'#ff7a00'},
         ], note:'Computed live from the platform’s GIS road-network inventory.' };
       }
@@ -45,8 +45,8 @@ RENDERERS.universe = async function(container){
         const [stations, comp] = await Promise.all([DataStore.trafficStations(), DataStore.trafficComposition()]);
         return { kpis:[
           {label:'Traffic Count Stations', value:fmtNum(stations.features.length,0), accent:'#ff00c8'},
-          {label:'Motorised Veh/Day', value:fmtNum(comp.meta.total_motorised_veh_per_day,0), accent:'#00e5ff'},
-          {label:'Non-Motorised Veh/Day', value:fmtNum(comp.meta.total_nonmotorised_veh_per_day,0), accent:'#fff500'},
+          {label:'Motorised Veh/Day', value:fmtNum(comp.meta.total_motorised_veh_per_day,0), accent:'#0284C7'},
+          {label:'Non-Motorised Veh/Day', value:fmtNum(comp.meta.total_nonmotorised_veh_per_day,0), accent:'#D97706'},
         ], note:comp.meta.note };
       }
     },
@@ -60,23 +60,23 @@ RENDERERS.universe = async function(container){
         return { kpis:[
           {label:'Bridges', value:fmtNum(br.count,0), accent:'#9d00ff'},
           {label:'Major Culverts', value:fmtNum(cu.count,0), accent:'#ff2d78'},
-          {label:'Bridge Asset Value', value:fmtNum(br.asset_value_mn_usd,0), unit:'USD mn', accent:'#00e5ff'},
-          {label:'Culvert Asset Value', value:fmtNum(cu.asset_value_mn_usd,0), unit:'USD mn', accent:'#00ff85'},
+          {label:'Bridge Asset Value', value:fmtNum(br.asset_value_mn_usd,0), unit:'USD mn', accent:'#0284C7'},
+          {label:'Culvert Asset Value', value:fmtNum(cu.asset_value_mn_usd,0), unit:'USD mn', accent:'#16A34A'},
         ], note:'Bridges and major culverts are always reported as separate figures on this platform, never merged into one.' };
       }
     },
-    { id:'ducar', label:'DUCAR — District Roads', short:'DUCAR', icon:'🏘️', accent:'#00ff85',
+    { id:'ducar', label:'DUCAR — District Roads', short:'DUCAR', icon:'🏘️', accent:'#16A34A',
       sectionId:'ducar', sectionLabel:'DUCAR Network',
       radius:8.6, speed:0.085, size:0.54,
       load: async()=>{
         const [roads, cond] = await Promise.all([DataStore.ducarRoads(), DataStore.ducarConditionSummary()]);
         return { kpis:[
-          {label:'DUCAR Road Segments', value:fmtNum(roads.features.length,0), accent:'#00ff85'},
-          {label:'District Condition Summaries', value:fmtNum(cond.features.length,0), accent:'#00e5ff'},
+          {label:'DUCAR Road Segments', value:fmtNum(roads.features.length,0), accent:'#16A34A'},
+          {label:'District Condition Summaries', value:fmtNum(cond.features.length,0), accent:'#0284C7'},
         ] };
       }
     },
-    { id:'invest', label:'Investment & Budgets', short:'IBP', icon:'💰', accent:'#fff500',
+    { id:'invest', label:'Investment & Budgets', short:'IBP', icon:'💰', accent:'#D97706',
       sectionId:'investment', sectionLabel:'Investment Plan',
       radius:9.8, speed:0.07, size:0.60,
       load: async()=>{
@@ -84,10 +84,10 @@ RENDERERS.universe = async function(container){
         const years = ibp.years||[]; const latest = years[years.length-1];
         const y = (ibp.summary_by_year||{})[latest] || {};
         return { kpis:[
-          {label:latest+' Road Projects', value:fmtNum(y.road_projects,0), accent:'#fff500'},
+          {label:latest+' Road Projects', value:fmtNum(y.road_projects,0), accent:'#D97706'},
           {label:latest+' Combined Value', value:fmtNum(y.combined_value_bn_ushs,1), unit:'UGX bn', accent:'#ff7a00'},
-          {label:'Total Network Asset Value', value:fmtNum(ms.kpi_summary.total_asset_value_mn_usd,0), unit:'USD mn', accent:'#00e5ff'},
-        ], note:'From the Integrated Bank of Projects (Ministry of Finance, Planning and Economic Development) and the platform’s own asset-value model.' };
+          {label:'Total Network Asset Value', value:fmtNum(ms.kpi_summary.total_asset_value_mn_usd,0), unit:'USD mn', accent:'#0284C7'},
+        ], note:'From the Integrated Bank of Projects (Department of Finance, Planning and Economic Development) and the platform’s own asset-value model.' };
       }
     },
     { id:'wim', label:'WIM — Weighbridge Compliance', short:'WIM', icon:'⚖️', accent:'#ff7a00',
@@ -100,7 +100,7 @@ RENDERERS.universe = async function(container){
         return { kpis:[
           {label:'Weighbridge Stations', value:fmtNum(wb.features.length,0), accent:'#ff7a00'},
           {label:'Enforcement Weighbridges', value:fmtNum(cov.meta.weighbridge_count,0), accent:'#9d00ff'},
-          {label:'Districts in Catchment', value:fmtNum(districtSet.size,0), accent:'#00e5ff'},
+          {label:'Districts in Catchment', value:fmtNum(districtSet.size,0), accent:'#0284C7'},
         ], note:cov.meta.note };
       }
     },
@@ -108,12 +108,12 @@ RENDERERS.universe = async function(container){
       sectionId:'socioeconomic', sectionLabel:'Socio-Economic & Climate',
       radius:12.2, speed:0.045, size:0.56,
       load: async()=>{
-        const [ndpiv, forest, wet, prot] = await Promise.all([DataStore.ndpivProjects(), DataStore.forestReserves(), DataStore.wetlands(), DataStore.protectedAreas()]);
+        const [investment, forest, wet, prot] = await Promise.all([DataStore.investmentProjects(), DataStore.forestReserves(), DataStore.wetlands(), DataStore.protectedAreas()]);
         return { kpis:[
-          {label:'Investment projects', value:fmtNum(ndpiv.features.length,0), accent:'#2979ff'},
-          {label:'Forest Reserves', value:fmtNum(forest.features.length,0), accent:'#00ff85'},
-          {label:'Wetlands', value:fmtNum(wet.features.length,0), accent:'#00e5ff'},
-          {label:'Protected Areas', value:fmtNum(prot.features.length,0), accent:'#fff500'},
+          {label:'Investment projects', value:fmtNum(investment.features.length,0), accent:'#2979ff'},
+          {label:'Forest Reserves', value:fmtNum(forest.features.length,0), accent:'#16A34A'},
+          {label:'Wetlands', value:fmtNum(wet.features.length,0), accent:'#0284C7'},
+          {label:'Protected Areas', value:fmtNum(prot.features.length,0), accent:'#D97706'},
         ] };
       }
     },
@@ -232,8 +232,8 @@ RENDERERS.universe = async function(container){
       DataStore.msSummary().then(ms=>{
         loading.remove();
         hud.appendChild(kpiGrid([
-          {label:'Total Network', value:fmtNum(ms.kpi_summary.total_network_km,0), unit:'km', accent:'#fff500'},
-          {label:'Total Asset Value', value:fmtNum(ms.kpi_summary.total_asset_value_mn_usd,0), unit:'USD mn', accent:'#00e5ff'},
+          {label:'Total Network', value:fmtNum(ms.kpi_summary.total_network_km,0), unit:'km', accent:'#D97706'},
+          {label:'Total Asset Value', value:fmtNum(ms.kpi_summary.total_asset_value_mn_usd,0), unit:'USD mn', accent:'#0284C7'},
           {label:'Bridges', value:fmtNum(ms.kpi_summary.total_bridges,0), accent:'#9d00ff'},
           {label:'Major Culverts', value:fmtNum(ms.kpi_summary.total_major_culverts,0), accent:'#ff2d78'},
         ]));

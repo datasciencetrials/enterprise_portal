@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "IBP Uganda \u2014 National Road & Bridge Investment Projects",
-    "source": "Ministry of Finance, Planning and Economic Development (Uganda) \u2014 Integrated Bank of Projects (IBP)",
+    "source": "Department of Finance, Planning and Economic Development (Uganda) \u2014 Integrated Bank of Projects (IBP)",
     "document_series": "Public Investment Plan (PIP)",
     "years": [
       "FY2015/16",
@@ -318,7 +318,7 @@
           "code": "1105",
           "name": "Road Sector Institu. Capacity Dev. Proj.",
           "agency": "National Roads Authority",
-          "location": "UNRA Headquarters",
+          "location": "National Roads Headquarters",
           "value_bn_ushs": 60.0,
           "start_date": "31/10/2011",
           "end_date": "31/01/2018"
@@ -693,7 +693,7 @@
           "code": "1506",
           "name": "Land Acquisition",
           "agency": "National Roads Authority",
-          "location": "UNRA HeadQuarters",
+          "location": "National Roads Headquarters",
           "value_bn_ushs": 811.0,
           "start_date": "7/1/2018",
           "end_date": "6/30/2021"
@@ -846,7 +846,7 @@
           "code": "1510",
           "name": "UNRA Retooling Project",
           "agency": "National Roads Authority",
-          "location": "UNRA HeadQuarters",
+          "location": "National Roads Headquarters",
           "value_bn_ushs": 46.1,
           "start_date": "7/1/2018",
           "end_date": "6/30/2023"
@@ -1704,7 +1704,7 @@
           "code": "1616",
           "name": "Retooling of Uganda National Roads Authority",
           "agency": "National Roads Authority",
-          "location": "UNRA HeadQuarters and stations",
+          "location": "National Roads Headquarters and stations",
           "value_bn_ushs": 373.79,
           "start_date": "7/1/2020",
           "end_date": "6/30/2025"
@@ -2088,7 +2088,7 @@
           "code": "1616",
           "name": "Retooling of Uganda National Roads Authority",
           "agency": "National Roads Authority",
-          "location": "UNRA HeadQuarters and stations",
+          "location": "National Roads Headquarters and stations",
           "value_bn_ushs": 373.79,
           "start_date": "7/1/2020",
           "end_date": "6/30/2025"

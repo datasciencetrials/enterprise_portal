@@ -32,7 +32,7 @@ RENDERERS.overview = async function(container){
     chartCard({ title:'Road Condition (all assessed links)', type:'doughnut',
       labels:condLabels, datasets:[{ data:condData, backgroundColor:NEON.slice(0,condLabels.length), borderWidth:0 }] }),
     chartCard({ title:'Network Length by Road Class', type:'bar',
-      labels: classLabels.map(c=>DataStore.CLASS_LABELS[c]||c), datasets:[{ data:classData, backgroundColor:'#00e5ff', borderRadius:6 }] }),
+      labels: classLabels.map(c=>DataStore.CLASS_LABELS[c]||c), datasets:[{ data:classData, backgroundColor:'#0284C7', borderRadius:6 }] }),
     chartCard({ title:'Paved vs Unpaved Network by Region', type:'bar', stacked:true,
       labels:regionLabels, datasets:[
         { label:'Paved', data:regionPaved, backgroundColor:'#2979ff', borderRadius:4 },

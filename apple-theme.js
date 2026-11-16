@@ -4,10 +4,10 @@
   // ---------- 1. insight-wall status cards: swap heavy neon wash for a
   // quiet surface + a slim colored accent bar + a recolored icon ----------
   var STATUS_MAP = [
-    { match:/rgba\(0,\s*243,\s*255/i,  accent:'#00f3ff' }, // info    (cyan)
+    { match:/rgba\(0,\s*243,\s*255/i,  accent:'#0284C7' }, // info    (cyan)
     { match:/rgba\(255,\s*153,\s*0/i,  accent:'#ff9900' }, // warning (orange)
     { match:/rgba\(255,\s*51,\s*102/i, accent:'#ff3366' }, // danger  (hot pink/red)
-    { match:/rgba\(0,\s*255,\s*153/i,  accent:'#00ff99' }  // success (neon green)
+    { match:/rgba\(0,\s*255,\s*153/i,  accent:'#16A34A' }  // success (neon green)
   ];
 
   function refineInsightPanels(){
@@ -43,9 +43,9 @@
       var accent = null;
       // classify by hue: reddish, greenish, amber, blue-ish
       if (r > 180 && g < 140 && b < 140) accent = '#ff3366';
-      else if (g > 150 && r < 140) accent = '#00ff99';
+      else if (g > 150 && r < 140) accent = '#16A34A';
       else if (r > 200 && g > 120 && g < 210 && b < 90) accent = '#ff9900';
-      else if (b > 180 && r < 140) accent = '#00f3ff';
+      else if (b > 180 && r < 140) accent = '#0284C7';
       if (!accent) return;
       td.dataset.seApple = '1';
       var hexToRgb = function(h){ var n = parseInt(h.slice(1),16); return [(n>>16)&255,(n>>8)&255,n&255]; };

@@ -15,12 +15,12 @@ win on equal specificity (no !important needed for the vars).
 /* --- her bright neon accent tokens (restored 2026-09-05 per standing
 instruction: keep the neon palette, Apple styling is glass/blur/motion/
 spacing only, never color) --- */
---neon-blue:#00f3ff;
+--neon-blue:#0284C7;
 --neon-purple:#9d00ff;
---neon-green:#00ff66;
---neon-yellow:#fffb00;
+--neon-green:#16A34A;
+--neon-yellow:#D97706;
 --neon-pink:#ff00ea;
---accent-color:#00f3ff;
+--accent-color:#0284C7;
 --accent-glow:rgba(0,243,255,.5);
 
 /* new tokens used below */
@@ -32,8 +32,8 @@ spacing only, never color) --- */
 --se-shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 28px -12px rgba(0,0,0,.6);
 --se-warning:#ff9900;
 --se-danger:#ff3366;
---se-success:#00ff99;
---se-info:#00f3ff;
+--se-success:#16A34A;
+--se-info:#0284C7;
 }
 
 /* ---------- global type ---------- */
