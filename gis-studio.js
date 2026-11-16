@@ -798,7 +798,7 @@
       if (path === 'network.geojson') prepareNationalContext(data.features);
       return data.features;
     })).then(([national, ducarFile]) => {
-      const ducar = ducarFile.filter(feature => feature.geometry && feature.properties?.governance_department === 'DDUCAR MoWT')
+      const ducar = ducarFile.filter(feature => feature.geometry && feature.properties?.(feature.properties?.governance_department && feature.properties.governance_department.includes('DDUCAR')))
         .map(feature => ({ ...feature, properties: {
           'Link Id 1': feature.properties.link_id, 'Link Name': feature.properties.road_name,
           'Road Cla 1': feature.properties.functional_class, 'Road Type': 'DUCAR',

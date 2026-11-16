@@ -13,7 +13,7 @@ const SolarHUD = (() => {
 
   function vciLegend(){
     const wrap = el('div', { class: 'card card-pad' });
-    wrap.appendChild(el('h3', {}, 'Visual Condition Index (VCI) — DNR-MOWT Visual Inspection Manual 2012'));
+    wrap.appendChild(el('h3', {}, 'Visual Condition Index (VCI) — National Roads Directorate Visual Inspection Manual 2012'));
     const table = el('table', { class: 'data-table', style: 'margin-top:10px;' });
     const thead = el('thead', {}, el('tr', {}, [
       el('th', {}, 'VCI Band'), el('th', {}, 'Condition'), el('th', {}, 'Standard Intervention'),

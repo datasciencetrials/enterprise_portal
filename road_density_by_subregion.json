@@ -1,6 +1,6 @@
 {
   "meta": {
-    "source": "MoWT Road Density workbook (Road Density 18062025.xlsx), subregion-level bituminous/unsealed network vs land area",
+    "source": "National Roads Directorate Road Density workbook (Road Density 18062025.xlsx), subregion-level bituminous/unsealed network vs land area",
     "note": "Subregions are a finer geographic breakdown than this platform's 6 maintenance regions; land area figures include major water bodies where recorded in source."
   },
   "by_subregion": [

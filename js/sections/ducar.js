@@ -30,7 +30,7 @@ RENDERERS.ducar = async function(container){
   // Supplementary: the digitized road-link geometry file (used elsewhere for
   // interactive mapping in Network Explorer). DDUCAR-governed features only —
   // this file also carries ~1,011 national-road features mixed in, excluded here.
-  const ducarLinks = ducarRoadsGeo.features.filter(f => f.properties.governance_department === 'DDUCAR MoWT');
+  const ducarLinks = ducarRoadsGeo.features.filter(f => f.properties.governance_department === 'DDUCAR National Roads Directorate');
   const ducarLinksKm = ducarLinks.reduce((s, f) => s + (Number(f.properties.length_km) || 0), 0);
   const byFunctionalClass = {};
   ducarLinks.forEach(f => {
@@ -54,11 +54,11 @@ RENDERERS.ducar = async function(container){
     { label: 'Poor Condition', value: fmtNum(poorKm, 0), unit: 'km', accent: 'var(--neon-pink)', delta: (poorKm/conditionAssessedKm*100).toFixed(1)+'% of assessed' },
   ]));
   container.appendChild(el('p', { class: 'footnote' },
-    'DUCAR (District, Urban, Community Access Roads) totals computed live from the MoWT DUCAR district-level condition survey, all '+fmtNum(districts.length)+' districts ('+fmtNum(distKm,0)+' km district + '+fmtNum(urbKm,0)+' km urban + '+fmtNum(commKm,0)+' km community access roads). This is a separately-maintained source from the national road-network inventory shown on Overview — the two are not combined. The digitized DUCAR road-link map layer used in Network Explorer contains '+fmtNum(ducarLinks.length)+' mapped link features totalling '+fmtNum(ducarLinksKm,0)+' km — a partial, digitized subset used for mapping, not a substitute for the district condition-survey total above; the two figures are reported separately, not reconciled to a single number.'
+    'DUCAR (District, Urban, Community Access Roads) totals computed live from the National Roads Directorate DUCAR district-level condition survey, all '+fmtNum(districts.length)+' districts ('+fmtNum(distKm,0)+' km district + '+fmtNum(urbKm,0)+' km urban + '+fmtNum(commKm,0)+' km community access roads). This is a separately-maintained source from the national road-network inventory shown on Overview — the two are not combined. The digitized DUCAR road-link map layer used in Network Explorer contains '+fmtNum(ducarLinks.length)+' mapped link features totalling '+fmtNum(ducarLinksKm,0)+' km — a partial, digitized subset used for mapping, not a substitute for the district condition-survey total above; the two figures are reported separately, not reconciled to a single number.'
   ));
 
   // ---- Charts: condition distribution + network composition ----
-  container.appendChild(sectionBlock('DUCAR network composition', 'Computed from the MoWT district-level condition survey, all 135 districts.', chartGrid([
+  container.appendChild(sectionBlock('DUCAR network composition', 'Computed from the National Roads Directorate district-level condition survey, all 135 districts.', chartGrid([
     chartCard({
       title: 'Condition Distribution',
       type: 'doughnut', labels: ['Good', 'Fair', 'Poor'],
@@ -162,7 +162,7 @@ RENDERERS.ducar = async function(container){
 
   // -----------------------------------------------------------------------
   // Honest traffic-data disclosure. No named DUCAR traffic-count-station
-  // history exists in the platform's data — MoWT's traffic-count
+  // history exists in the platform's data — National Roads Directorate's traffic-count
   // programme (geo/traffic_count_stations.geojson) covers only the
   // classified national road network. We say so plainly and show that real
   // national-network station data for illustration, rather than fabricating
@@ -188,7 +188,7 @@ RENDERERS.ducar = async function(container){
 
   const trafficBlock = el('div', {});
   trafficBlock.appendChild(el('p', { class: 'muted', style: 'margin:0 0 12px;' },
-    fmtNum(stationRows.length) + ' stations with a matched current AADT figure · mean ' + fmtNum(avgAadt, 0) + ' vehicles/day across these stations. These are national-network counts (MoWT\'s traffic-count programme covers only the classified national network, not DUCAR roads) shown for illustration — not projected, extrapolated or averaged onto the DUCAR totals above.'));
+    fmtNum(stationRows.length) + ' stations with a matched current AADT figure · mean ' + fmtNum(avgAadt, 0) + ' vehicles/day across these stations. These are national-network counts (National Roads Directorate\'s traffic-count programme covers only the classified national network, not DUCAR roads) shown for illustration — not projected, extrapolated or averaged onto the DUCAR totals above.'));
   trafficBlock.appendChild(dataTable({
     caption: 'traffic count stations',
     pageSize: 25,

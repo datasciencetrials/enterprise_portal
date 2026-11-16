@@ -20,7 +20,7 @@ RENDERERS.map = async function(container){
   const mapDiv = el('div',{class:'map-shell', id:'gis-national-map'});
   mapCol.appendChild(mapDiv);
   mapCol.appendChild(el('p',{class:'footnote'},
-    'Basemap tiles courtesy of Esri and OpenStreetMap contributors. Overlay data: MoWT GIS road-network inventory and the platform’s reference GeoJSON layers (bridges, culverts, districts, protected areas and related registers).'
+    'Basemap tiles courtesy of Esri and OpenStreetMap contributors. Overlay data: National Roads Directorate GIS road-network inventory and the platform’s reference GeoJSON layers (bridges, culverts, districts, protected areas and related registers).'
   ));
 
   const panel = el('div',{class:'card card-pad', style:'flex:1 1 300px;max-width:340px;max-height:640px;overflow-y:auto;'});
@@ -173,7 +173,7 @@ RENDERERS.map = async function(container){
     { id:'bridges', label:'Bridges', unit:'bridges', loader: DataStore.bridgesGeo, color:NEON[1], type:'point', radius:5, popup:'bridge' },
     { id:'culverts', label:'Major Culverts', unit:'culverts', loader: DataStore.culvertsGeo, color:NEON[2], type:'point', radius:4, popup:'culvert' },
     { id:'weighbridges', label:'Weighbridges', unit:'weighbridges', loader: DataStore.weighbridges, color:NEON[3], type:'point', radius:6, popup:'generic' },
-    { id:'mowt_stations', label:'MoWT National Roads Stations', unit:'stations', loader: ()=>DataStore.getJSON('geo/mowt_stations.geojson'), color:NEON[4], type:'point', radius:4, popup:'generic' },
+    { id:'mowt_stations', label:'National Roads Directorate National Roads Stations', unit:'stations', loader: ()=>DataStore.getJSON('geo/mowt_stations.geojson'), color:NEON[4], type:'point', radius:4, popup:'generic' },
     { id:'ducar', label:'DUCAR Road Network', unit:'road segments', loader: DataStore.ducarRoads, color:NEON[0], type:'line', lazy:true, warn:'~9 MB', popup:'generic' },
     { id:'oprc', label:'OPRC Contract Lots', unit:'lot segments', loader: DataStore.oprcContracts, color:NEON[5], type:'line', weight:4, popup:'generic' },
     { id:'ndpiv', label:'Investment projects', unit:'project segments', loader: DataStore.ndpivProjects, color:NEON[6], type:'line', weight:4, popup:'generic' },

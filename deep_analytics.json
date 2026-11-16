@@ -12648,7 +12648,7 @@
             "type": "polarArea",
             "labels": [
                 "District Roads",
-                "Urban (KCCA) Roads",
+                "Urban (Metropolitan Authority) Roads",
                 "Community Access Roads"
             ],
             "data": [
@@ -12735,7 +12735,7 @@
         },
         {
             "id": "chart_77",
-            "title": "Pavement Condition by Road Classification - Stacked Link Count, All 4 Classes",
+            "title": "Pavement Condition by Road Classification - Stacked Length (km), All 4 Classes",
             "type": "bar",
             "labels": [
                 "Class A - National Trunk Roads",

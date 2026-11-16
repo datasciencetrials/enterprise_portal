@@ -48,7 +48,7 @@ RENDERERS.maintenance = async function(container){
 
   container.appendChild(pageHead(
     'Maintenance & Condition',
-    'The FY2025/26 MoWT maintenance-strategy plan for the classified road network — condition, 5-year investment programme, intervention mix, and the full priority-ranked link register. Bridges and major culverts are reported separately in Bridges & Culverts.',
+    'The FY2025/26 National Roads Directorate maintenance-strategy plan for the classified road network — condition, 5-year investment programme, intervention mix, and the full priority-ranked link register. Bridges and major culverts are reported separately in Bridges & Culverts.',
     fmtNum(kpi.total_network_km,0)+' km assessed · FY26/27–FY30/31 plan'
   ));
 
@@ -60,7 +60,7 @@ RENDERERS.maintenance = async function(container){
     { label:'Links in Strategy Register', value: fmtNum(detail.road_links.length), accent:'var(--neon-purple)' },
     { label:'Priority-Planned Links', value: fmtNum(priorityLinks.length), accent:'var(--neon-green)', delta:'FY26/27–FY30/31 programme' },
   ]));
-  container.appendChild(el('p',{class:'footnote'}, 'MoWT maintenance-strategy planning workbooks, FY2025/26 cycle. Figures cover the ROAD network only — see Bridges & Culverts for the 521-bridge and 451-culvert registers.'));
+  container.appendChild(el('p',{class:'footnote'}, 'National Roads Directorate maintenance-strategy planning workbooks, FY2025/26 cycle. Figures cover the ROAD network only — see Bridges & Culverts for the 521-bridge and 451-culvert registers.'));
 
   // ---- Derived insight strip (computed from the same real data above — no new source) ----
   const costliestIntervention = interventionMix.slice().sort((a,b)=>b.cost_bn_ushs-a.cost_bn_ushs)[0];
@@ -213,6 +213,6 @@ RENDERERS.maintenance = async function(container){
   })));
 
   container.appendChild(el('p',{class:'footnote'},
-    'Source: MoWT maintenance-strategy planning workbooks, FY2025/26 cycle — network condition (VCI), the 5-year investment priority plan, intervention mix, and unit-rate benchmarks above. This page covers routine and periodic road MAINTENANCE funding only; new-construction capital investment (IBP/PIP) is reported separately in the Investment Plan section. Bridges and major culverts are always reported as their own registers — see Bridges & Culverts.'
+    'Source: National Roads Directorate maintenance-strategy planning workbooks, FY2025/26 cycle — network condition (VCI), the 5-year investment priority plan, intervention mix, and unit-rate benchmarks above. This page covers routine and periodic road MAINTENANCE funding only; new-construction capital investment (IBP/PIP) is reported separately in the Investment Plan section. Bridges and major culverts are always reported as their own registers — see Bridges & Culverts.'
   ));
 };

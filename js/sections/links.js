@@ -23,7 +23,7 @@ RENDERERS.links = async function(container){
   const enterpriseLinks = [
     { icon:'🛰️', label:'Uganda GIS Enterprise Portal', desc:'This platform — live national road-network GIS, maintenance analytics and investment dashboards.', url:'https://datasciencetrials.github.io/enterprise_portal/', a:'var(--neon-cyan)' },
   ];
-  container.appendChild(sectionBlock('🚀 Live Verification & Enterprise Links', 'Live, publicly deployed MoWT enterprise systems.', linkCardGrid(enterpriseLinks)));
+  container.appendChild(sectionBlock('🚀 Live Verification & Enterprise Links', 'Live, publicly deployed National Roads Directorate enterprise systems.', linkCardGrid(enterpriseLinks)));
 
   // ---- Bot / automation projects (separate GitHub account — priscananjehe1996/priezent) ----
   const botResultLinks = [
@@ -36,7 +36,7 @@ RENDERERS.links = async function(container){
   // ==========================================================================
   // CREATIVE / DEMO CONTENT — pulled from the "Result Engine" bot-result pages
   // above (priscananjehe1996/priezent). This is a personal creative project,
-  // NOT verified MoWT engineering data. Every value below is illustrative
+  // NOT verified National Roads Directorate engineering data. Every value below is illustrative
   // decorative content hardcoded into those pages, not computed from a real
   // trained model, weighbridge log, or bridge inspection register. Kept
   // clearly separated and labelled so it is never mistaken for the real,
@@ -44,7 +44,7 @@ RENDERERS.links = async function(container){
   // ==========================================================================
   container.appendChild(el('div',{class:'callout warn', style:'margin:28px 0 -6px;'},[
     el('strong',{},'🎨 Creative / demo content below. '),
-    'This section mirrors the "UNRN Result Engine" bot-result pages from Prisca\'s personal priezent project. The model metrics, weighbridge figures, bridge ratings and "AI workforce" roster are illustrative content written into those pages, not verified MoWT engineering results or figures computed anywhere on this platform. Nothing below should be treated as an official finding of the Uganda GIS Enterprise portal.'
+    'This section mirrors the "UNRN Result Engine" bot-result pages from Prisca\'s personal priezent project. The model metrics, weighbridge figures, bridge ratings and "AI workforce" roster are illustrative content written into those pages, not verified National Roads Directorate engineering results or figures computed anywhere on this platform. Nothing below should be treated as an official finding of the Uganda GIS Enterprise portal.'
   ]));
 
   container.appendChild(kpiGrid([
@@ -150,7 +150,7 @@ RENDERERS.links = async function(container){
       ],
       rows:[
         {world:'🪐 Mercury', lead:'Alexander (L100)', g:'0.38g', focus:'Weighbridge Data & Axle Load Spectra', score:'780/1000'},
-        {world:'♀️ Venus', lead:'Amelia (L98)', g:'0.90g', focus:'MoWT Engineering Manuals & Standards', score:'820/1000'},
+        {world:'♀️ Venus', lead:'Amelia (L98)', g:'0.90g', focus:'National Roads Directorate Engineering Manuals & Standards', score:'820/1000'},
         {world:'🌍 Terra (Earth)', lead:'Arthur (L100)', g:'1.00g', focus:'21,000 km Classified Network Master', score:'980/1000'},
         {world:'🌙 Luna (Moon)', lead:'Audrey (L99)', g:'0.165g', focus:'LCMS 3D Laser & Road Condition Scans', score:'940/1000'},
         {world:'♂️ Mars', lead:'Benjamin (L97)', g:'0.38g', focus:'Traffic Volumetrics & ATC Counts', score:'860/1000'},
@@ -204,6 +204,6 @@ RENDERERS.links = async function(container){
     const btn = el('button',{class:'tab-btn', 'data-id':t.id, type:'button', onclick:()=>showDemoTab(t.id)}, t.label);
     demoTabRow.appendChild(btn);
   });
-  container.appendChild(sectionBlock('🎨 Result Engine Mirror — 6 Demo Tabs', 'Click a tab to switch panels. Every value below is illustrative content copied from the priezent Result Engine page, not verified MoWT engineering data.', el('div',{},[demoTabRow, demoPaneHost])));
+  container.appendChild(sectionBlock('🎨 Result Engine Mirror — 6 Demo Tabs', 'Click a tab to switch panels. Every value below is illustrative content copied from the priezent Result Engine page, not verified National Roads Directorate engineering data.', el('div',{},[demoTabRow, demoPaneHost])));
   showDemoTab('cnn');
 };

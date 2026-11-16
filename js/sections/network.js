@@ -66,7 +66,7 @@ RENDERERS.network = async function(container){
   ));
 
   container.appendChild(el('p',{class:'footnote'},
-    'National Road Network: computed live from the platform’s GIS road-network inventory (' + net.features.length + ' links). DUCAR District Network: the platform’s district, urban and community-access roads inventory (DDUCAR/DNR, MoWT), fetched live. Raw source-file identifiers and link codes are never shown — records are identified by their real road/link names. Priority Score: a transparent weighted composite (40% pavement condition, 35% traffic loading percentile, 25% safety risk band) computed live from this table’s own real fields — renormalized when a link is missing one input, and banded into Low/Moderate/High/Critical by this network’s own quartiles, not fixed cutoffs. 6 links with no Condition, AADT or Risk Band on record are left unscored rather than defaulted.'
+    'National Road Network: computed live from the platform’s GIS road-network inventory (' + net.features.length + ' links). DUCAR District Network: the platform’s district, urban and community-access roads inventory (DDUCAR/DNR, National Transport Network), fetched live. Raw source-file identifiers and link codes are never shown — records are identified by their real road/link names. Priority Score: a transparent weighted composite (40% pavement condition, 35% traffic loading percentile, 25% safety risk band) computed live from this table’s own real fields — renormalized when a link is missing one input, and banded into Low/Moderate/High/Critical by this network’s own quartiles, not fixed cutoffs. 6 links with no Condition, AADT or Risk Band on record are left unscored rather than defaulted.'
   ));
 };
 
@@ -134,7 +134,7 @@ function buildDucarTable(features){
     return {
       name: p.road_name || '(unnamed road)',
       functionalClass: p.functional_class || '—',
-      network: p.governance_department==='DDUCAR MoWT' ? 'District / Urban / Community Access' : (p.governance_department==='DNR MoWT' ? 'National (DNR)' : (p.governance_department||'—')),
+      network: p.governance_department==='DDUCAR National Transport Network' ? 'District / Urban / Community Access' : (p.governance_department==='DNR National Transport Network' ? 'National (DNR)' : (p.governance_department||'—')),
       surface: p.surface,
       pavement: p.pavement_class,
       lengthKm: p.length_km,
@@ -246,7 +246,7 @@ function buildCrossTabs(features){
     'Region × Surface Type (km)'
   );
 
-  // 3. Pavement Condition x Road Class (link count)
+  // 3. Pavement Condition x Road Class (km)
   const countCondClass = {};
   features.forEach(f=>{
     const p = f.properties;
@@ -260,7 +260,7 @@ function buildCrossTabs(features){
     (cond,c)=> countCondClass[cond+'|'+c],
     'Condition', classes.map(c=>classLabelsShort[c]),
     v=>fmtNum(v,0),
-    'Pavement Condition × Road Class (link count)'
+    'Pavement Condition × Road Class (km)'
   );
 
   // 4. Region x Road Class (km)

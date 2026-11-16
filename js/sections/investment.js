@@ -15,7 +15,7 @@ RENDERERS.investment = async function(container){
   // "Total Expenditure (UGX bn):") instead of real values. Excluded from every table —
   // this is a source-extraction artifact, not a real project attribute.
   function isCleanRow(r){ return r.agency !== 'Responsible Officer:'; }
-  function displayAgency(row){ return { ...row, agency: String(row.agency || '').replace(/\bUNRA\b/g, 'Former roads agency') }; }
+  function displayAgency(row){ return { ...row, agency: String(row.agency || '').replace(/\bNational Roads Authority\b/g, 'Former roads agency') }; }
   function cleanRoads(fy){ return (byYear[fy]?.roads || []).filter(isCleanRow).map(displayAgency); }
   function cleanBridges(fy){ return (byYear[fy]?.bridges || []).filter(isCleanRow).map(displayAgency); }
 
@@ -73,7 +73,7 @@ RENDERERS.investment = async function(container){
     const first = years[0], latest = years[years.length-1];
     const firstS = summary[first], latestS = summary[latest];
     wrap.appendChild(el('p',{class:'footnote', style:'margin-bottom:18px;'},
-      `The Public Investment Plan is not republished with full project detail every fiscal year. The ${years.length} cycles shown here (${years.join(', ')}) are the ones with project-level data available on record; the gaps reflect publishing cycles, not missing data. Implementing agency also shifts over time: in ${first}, ${fmtNum(firstS.unra_projects)} of that year's ${fmtNum(firstS.road_projects+firstS.bridge_major_culvert_projects)} listed projects were attributed to the former roads agency; by ${latest}, ${fmtNum(latestS.unra_projects)} were attributed to that agency and ${fmtNum(latestS.mowt_projects)} to MoWT. The road-development mandate transferred to MoWT in 2024, so projects are attributed to the agency responsible in each cycle.`
+      `The Public Investment Plan is not republished with full project detail every fiscal year. The ${years.length} cycles shown here (${years.join(', ')}) are the ones with project-level data available on record; the gaps reflect publishing cycles, not missing data. Implementing agency also shifts over time: in ${first}, ${fmtNum(firstS.unra_projects)} of that year's ${fmtNum(firstS.road_projects+firstS.bridge_major_culvert_projects)} listed projects were attributed to the former roads agency; by ${latest}, ${fmtNum(latestS.unra_projects)} were attributed to that agency and ${fmtNum(latestS.mowt_projects)} to National Roads Directorate. The road-development mandate transferred to National Roads Directorate in 2024, so projects are attributed to the agency responsible in each cycle.`
     ));
 
     // ---- trend charts across all real years ----
@@ -89,7 +89,7 @@ RENDERERS.investment = async function(container){
         labels: trendYears,
         datasets:[
           { label:'Former roads agency', data: trendYears.map(y=>summary[y].unra_projects), backgroundColor:'#2979ff', borderRadius:4 },
-          { label:'MoWT', data: trendYears.map(y=>summary[y].mowt_projects), backgroundColor:'#ff7a00', borderRadius:4 }
+          { label:'National Roads Directorate', data: trendYears.map(y=>summary[y].mowt_projects), backgroundColor:'#ff7a00', borderRadius:4 }
         ]
       })
     ])));
@@ -128,7 +128,7 @@ RENDERERS.investment = async function(container){
       { label:'Bridge & Major Culvert Projects', value: fmtNum(s.bridge_major_culvert_projects), accent:'var(--neon-magenta)' },
       { label:'Combined Project Value', value: fmtNum(s.combined_value_bn_ushs,0), unit:'UGX bn', accent:'var(--neon-purple)' },
       { label:'Former agency projects', value: fmtNum(s.unra_projects), accent:'var(--neon-blue)' },
-      { label:'MoWT-Implemented', value: fmtNum(s.mowt_projects), accent:'var(--neon-orange)' },
+      { label:'National Roads Directorate-Implemented', value: fmtNum(s.mowt_projects), accent:'var(--neon-orange)' },
     ]));
 
     const agencyOptions = uniq([...roads, ...bridges].map(r=>r.agency));

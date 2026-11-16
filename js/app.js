@@ -33,7 +33,7 @@ function buildSidebar(activeId, onNavigate){
   const sidebar = el('div',{class:'sidebar'});
   sidebar.appendChild(el('div',{class:'brand'},[
     el('div',{class:'brand-badge'},'UG'),
-    el('div',{},[ el('div',{class:'brand-text'},'GIS Enterprise'), el('div',{class:'brand-sub'},'Roads & Bridges · MoWT') ])
+    el('div',{},[ el('div',{class:'brand-text'},'GIS Enterprise'), el('div',{class:'brand-sub'},'Roads & Bridges · National Network') ])
   ]));
   const nav = el('div',{class:'nav'});
   NAV.forEach(group=>{

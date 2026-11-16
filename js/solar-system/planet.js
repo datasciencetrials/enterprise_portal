@@ -5,7 +5,7 @@
 
 const SolarSystem = (() => {
   // feeds/receives: the bi-directional interlink narrative each subsystem exchanges with the RMS
-  // Sun Core, as reported by DNR-MOWT engineering staff. Kept separate from the live-computed
+  // Sun Core, as reported by National Roads Directorate engineering staff. Kept separate from the live-computed
   // metrics rendered in js/sections/universe.js — those come straight from DataStore; these are
   // stated subsystem context, not this platform's own live KPIs.
   const PLANETS = [
@@ -29,7 +29,7 @@ const SolarSystem = (() => {
       receives: '60 m road reserve cadastral boundaries' },
     { id:'piarc',  name:'PIARC',    full:'Global Benchmarks & PIARC',         body:'Uranus',  color:0x1DE9B6, orbit:36.0, size:1.40, speed:0.13, gravity:0.48, moon:{ name:'Titania', size:0.24, dist:2.3, color:0xB9C6D6 },
       feeds: 'PIARC World Road Association standards, World Bank RMI metrics, AASHTO guidelines, climate-resilient specs (NZ, UK, South Africa, Japan)',
-      receives: 'DNR-MOWT national performance data for global cross-benchmarking' },
+      receives: 'National Roads Directorate national performance data for global cross-benchmarking' },
     { id:'pims',   name:'PIMS',     full:'PIMS Projects & Public Investment', body:'Neptune', color:0x2979FF, orbit:41.0, size:1.35, speed:0.10, gravity:0.60, moon:{ name:'Triton',  size:0.26, dist:2.2, color:0x9FD8E0 },
       feeds: 'Capital project pipeline, PIMS gatekeeper clearance, donor-funded corridors (World Bank, AfDB, JICA)',
       receives: 'Priority MYFP capital interventions & condition-adjusted asset replacement values' },

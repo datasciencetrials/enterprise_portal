@@ -68,7 +68,7 @@ RENDERERS.reports = async function(container){
     },
     {
       id: 'structures', label: 'Bridges & Structures',
-      source: 'MoWT maintenance-strategy structures register, FY2025/26 cycle. Bridges and major culverts are always reported as separate figures.',
+      source: 'National Roads Directorate maintenance-strategy structures register, FY2025/26 cycle. Bridges and major culverts are always reported as separate figures.',
       stats: () => [
         { label:'Total Bridges', value: fmtNum(ms.kpi_summary.total_bridges), accent:'var(--neon-magenta)', raw: ms.kpi_summary.total_bridges },
         { label:'Total Major Culverts', value: fmtNum(ms.kpi_summary.total_major_culverts), accent:'var(--neon-purple)', raw: ms.kpi_summary.total_major_culverts },
@@ -119,7 +119,7 @@ RENDERERS.reports = async function(container){
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'mowt-executive-report-' + tab.id + '.csv';
+    a.download = 'executive-report-' + tab.id + '.csv';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

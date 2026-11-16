@@ -149,7 +149,7 @@
       if (token !== sequence) return;
       const features = key === 'roads' ? [
         ...groups[0].map(f => ({ ...f, properties: { ...f.properties, 'Road Type': 'National Road Network' } })),
-        ...groups[1].filter(f => f.properties?.governance_department === 'DDUCAR MoWT').map(f => ({ ...f, properties: {
+        ...groups[1].filter(f => f.properties?.(feature.properties?.governance_department && feature.properties.governance_department.includes('DDUCAR'))).map(f => ({ ...f, properties: {
           'Link Id 1': f.properties.link_id, 'Link Name': f.properties.road_name, 'Road Type': 'DUCAR',
           'Road Cla 1': f.properties.functional_class, 'Surface  1': f.properties.pavement_class,
           'Length Km': f.properties.length_km,
