@@ -15,7 +15,6 @@
   }
   map.on('zoom', syncZoomScale);
   map.on('zoomend', syncZoomScale);
-  syncZoomScale();
   const localLayers = new Map();
   const reviewedLayers = new Map();
   window.addEventListener('gis-reviewed-layer', event => {
@@ -160,6 +159,7 @@
   let roadsLoaded = false;
   let roadLoadPromise = null;
   let roadLayer = null;
+  syncZoomScale();
   let nationalContextLayer = null;
   let pointLayer = null;
   let activeMode = 'roads';
