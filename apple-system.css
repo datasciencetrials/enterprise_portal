@@ -403,3 +403,6 @@ svg text {
   }
 }
 
+
+.explorer, #explore { background: #f8fafc !important; }
+.map-shell, #gis-map, .leaflet-container { background: #ffffff !important; }
