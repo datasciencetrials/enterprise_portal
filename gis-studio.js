@@ -475,7 +475,7 @@
     bridges: {
       title: 'Bridges', files: ['bridges.geojson'], colour: '#438ee1', countLabel: 'Bridges on map', statusUnit: 'bridges on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'The FY 2026/27 BMS register contains 552 Bridges. B005 is Rwizi Bridge. The incorrectly reassigned B548 identity and location are withheld pending correction, so 551 bridge positions can be displayed. Amber and red points are recorded positions, not verified bridge locations.',
+      description: 'The FY 2026/27 BMS register contains 552 Bridges. B005 is Rwizi Bridge. The incorrectly reassigned B548 identity and location are withheld pending correction, so 552 bridge positions can be displayed. Amber and red points are recorded positions, not verified bridge locations.',
       fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     culverts: {

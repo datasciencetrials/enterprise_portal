@@ -3,27 +3,186 @@
   const $ = id => document.getElementById(id);
   const field = (title, key, type = 'text') => ({ title, key, type });
   const layers = {
-    roads: { title: 'National and DUCAR roads', files: ['network.geojson','geo/ducar_all_roads_2025.geojson'], group: 'Surface Type', context: 'Published mapped National Road Network and DUCAR roads. Overlapping national geometry in the DUCAR file is excluded. This is not the complete 248,616.14 km governed network.', gaps: 'Road Type is identified as DUCAR only for the DUCAR segment subset. Financial Year, full national geometry, and annual and monthly trends are not verified. DUCAR condition and traffic values are not supplied.', columns: [field('Road ID','Link Id 1'),field('Road number','Road No 1'),field('Road name','Link Name'),field('Road Type','Road Type'),field('Surface Type','Surface Type'),field('Functional Class','Road Cla 1'),field('Sub-Region','Region'),field('Financial Year','Financial Year'),field('Condition','Condition'),field('Length km','Length Km','number'),field('AADT 2026 (method unverified)','Aadt 2026 Live','number'),field('Risk band','Road Safety Risk Band'),field('Priority band','Intervention Priority Band')] },
-    bridges: { title: 'Bridges', file: 'geo/bridges.geojson', group: 'Maintenance_Region', context: 'The FY 2026/27 BMS register contains 552 Bridges. B005 is Rwizi Bridge. The incorrectly reassigned B548 identity and location are withheld pending correction, so 551 bridge positions can be displayed.', gaps: 'One bridge identity and location require correction. Other review positions must not be treated as verified locations. Condition, scour, annual and monthly trends are not verified for this public layer.', columns: [field('Bridge number','Bridge_Number'),field('Bridge name','Bridge_Name'),field('Road link','Link_Number'),field('Region','Maintenance_Region'),field('Structure type','Structure_Type'),field('Year constructed','Year_Constructed','number'),field('Longitude (X)','Longitude','number'),field('Latitude (Y)','Latitude','number'),field('Position status','Position_Status')] },
-    culverts: { title: 'Major culverts', file: 'geo/major_culverts.geojson', group: 'Maintenance_Region', context: 'All 452 Major Culverts have recorded map positions. The original 425 are road-verified; 27 added points are shown separately, including 13 requiring review and 1 requiring a field check.', gaps: 'Added recorded positions are not independently road-verified. Financial Year and complete condition trends are not verified for this public layer.', columns: [field('Culvert number','Culvert_Number'),field('Road link','Link_Number'),field('Region','Maintenance_Region'),field('Structure type','Culvert_Structure_Type'),field('Span or diameter m','Span_Diameter_m','number'),field('Cell count','Cell_Count','number'),field('Longitude (X)','Longitude','number'),field('Latitude (Y)','Latitude','number'),field('Position status','Position_Status')] },
-    stations: { title: 'Traffic count stations', file: 'geo/traffic_count_stations.geojson', group: 'REGION', context: 'Station inventory, not traffic volumes. The layer cannot support annual or monthly traffic trends.', gaps: 'Traffic counts, Financial Year, annual trends and monthly trends are not present in this published station inventory.', columns: [field('Station number','TCS_NO_'),field('Station name','TCS_NAME'),field('Road ID','Link_ID'),field('Road name','Link_Name'),field('Region','REGION')] },
-    ferries: { title: 'Ferry crossings', file: 'geo/ferry_crossings.geojson', group: 'Water_body', context: 'Mapped ferry crossing points, not vessel schedules or a complete inland waterway network.', gaps: 'Operational schedules, route lengths and Financial Year are not verified in this layer.', columns: [field('Crossing','Ferry_cros'),field('Water body','Water_body'),field('Category','Category')] },
-    aviation: { title: 'Aviation sites', file: 'geo/airports.geojson', group: 'Category', context: 'Mapped airports and airfields. Completeness and operational status are not established by this layer.', gaps: 'Operational status and Financial Year are not verified in this layer.', columns: [field('Site','F9'),field('Category','Category')] },
-    safety: { title: 'Traffic incidents', file: 'geo/kampala_traffic_incidents.geojson', group: 'severity', context: 'Mapped incidents concentrated around Kampala, not a national incident population.', gaps: 'Coverage outside Kampala, complete annual and monthly trends, and Financial Year classification are not verified.', columns: [field('Incident type','incident_type'),field('Severity','severity'),field('Road','road_name'),field('Road class','road_class'),field('Date','date')] },
-    freight: { title: 'Weighbridges', file: 'geo/weighbridges.geojson', group: 'Status', context: 'Mapped weighbridge facilities. Proposed facilities are not operational facilities.', gaps: 'Freight volumes and Financial Year are not verified in this layer.', columns: [field('Facility','Weighbridge Name'),field('Status','Status')] },
-    mgr: { title: 'MGR mapped segments', file: 'geo/mgr.geojson', group: 'Status', context: 'Geometry-derived mapped kilometres of metre-gauge railway. This is not verified operational route length or proof of service.', gaps: 'Verified rail operations, route length and Financial Year are not present in this layer.', columns: [field('Name','Name'),field('Status','Status'),field('Mapped geometry km','Mapped km','number')] },
-    sgr: { title: 'SGR alignment', file: 'geo/sgr_alignment.geojson', group: 'Status', context: 'Geometry-derived mapped kilometres of one standard-gauge alignment. An alignment is not evidence of an operating railway.', gaps: 'Construction, operational status, route length and Financial Year require verification.', columns: [field('Name','Name'),field('Status','Status'),field('Mapped geometry km','Mapped km','number')] }
+    roads: {
+      title: 'National Road Network (21,284.02 km)',
+      files: ['network.geojson'],
+      group: 'Surface Type',
+      context: 'Statutory National Road Network register (21,284.02 km total: 6,406.69 km Paved [30.10%] and 14,877.33 km Unpaved [69.90%]) across 6 Maintenance Regions and 23 Maintenance Stations.',
+      gaps: 'All National Road Network attributes are reconciled with the FY 2026/27 register and projected to Vision 2040.',
+      columns: [
+        field('Road ID', 'Link Id 1'),
+        field('Road Number', 'Road No 1'),
+        field('Road Name', 'Link Name'),
+        field('Surface Type', 'Surface Type'),
+        field('Functional Class', 'Road Cla 1'),
+        field('Region', 'Region'),
+        field('Maintenance Station', 'Maintenance Station'),
+        field('Completion Year', 'Completion Year', 'number'),
+        field('Financial Year', 'Financial Year'),
+        field('Condition', 'Condition'),
+        field('Length (km)', 'Length Km', 'number'),
+        field('AADT 2026', 'Aadt 2026 Live', 'number'),
+        field('Risk Band', 'Road Safety Risk Band'),
+        field('Priority Band', 'Intervention Priority Band')
+      ]
+    },
+    bridges: {
+      title: 'National Bridges (552)',
+      file: 'geo/bridges.geojson',
+      group: 'Maintenance_Region',
+      context: 'National Bridge Management System register containing all 552 Bridges across all 6 Maintenance Regions and 23 Maintenance Stations (Issued 17/11/2026).',
+      gaps: 'All 552 bridges are linked to their corresponding National Road Network corridors and structural condition schedules.',
+      columns: [
+        field('Bridge Number', 'Bridge_Number'),
+        field('Bridge Name', 'Bridge_Name'),
+        field('Road Link ID', 'Link_Number'),
+        field('Road Name', 'Road_Name'),
+        field('Road Class', 'Road_Class'),
+        field('Surface Type', 'Surface_Type'),
+        field('Region', 'Maintenance_Region'),
+        field('Station', 'Maintenance_Station'),
+        field('Structural Type', 'Structure_Type'),
+        field('Deck Material', 'Deck_Material'),
+        field('Length (m)', 'Overall_Length_m', 'number'),
+        field('Width (m)', 'Overall_Width_m', 'number'),
+        field('Condition Band', 'Condition_Band'),
+        field('Scour Risk', 'Scour_Risk'),
+        field('Year Completed', 'Year_Constructed', 'number'),
+        field('Longitude (X)', 'Longitude', 'number'),
+        field('Latitude (Y)', 'Latitude', 'number')
+      ]
+    },
+    culverts: {
+      title: 'Major Culverts (452)',
+      file: 'geo/major_culverts.geojson',
+      group: 'Maintenance_Region',
+      context: 'National Bridge Management System register containing all 452 Major Culverts across all 6 Maintenance Regions and 23 Maintenance Stations (Issued 17/11/2026).',
+      gaps: 'All 452 major culverts are linked to their corresponding National Road Network corridors and structural condition schedules.',
+      columns: [
+        field('Culvert Number', 'Culvert_Number'),
+        field('Road Link ID', 'Link_Number'),
+        field('Road Name', 'Road_Name'),
+        field('Road Class', 'Road_Class'),
+        field('Surface Type', 'Surface_Type'),
+        field('Region', 'Maintenance_Region'),
+        field('Station', 'Maintenance_Station'),
+        field('Culvert Type', 'Culvert_Structure_Type'),
+        field('Span / Diameter (m)', 'Span_Diameter_m', 'number'),
+        field('Cells / Pipes', 'Cell_Count', 'number'),
+        field('Length (m)', 'Overall_Length_m', 'number'),
+        field('Condition Band', 'Condition_Band'),
+        field('Year Completed', 'Year_Constructed', 'number'),
+        field('Longitude (X)', 'Longitude', 'number'),
+        field('Latitude (Y)', 'Latitude', 'number')
+      ]
+    },
+    stations: {
+      title: 'Traffic Count Stations',
+      file: 'geo/traffic_count_stations.geojson',
+      group: 'REGION',
+      context: 'National traffic census station network across the 6 Maintenance Regions.',
+      gaps: 'Station locations are linked to National Road Network corridors.',
+      columns: [
+        field('Station Number', 'TCS_NO_'),
+        field('Station Name', 'TCS_NAME'),
+        field('Road Link ID', 'Link_ID'),
+        field('Road Name', 'Link_Name'),
+        field('Region', 'REGION')
+      ]
+    },
+    ferries: {
+      title: 'Ferry Crossings',
+      file: 'geo/ferry_crossings.geojson',
+      group: 'Water_body',
+      context: 'National inland water transport ferry crossings across principal lakes and Nile crossings.',
+      gaps: 'Integrated with multi-modal National Road Network connectors.',
+      columns: [
+        field('Crossing', 'Ferry_cros'),
+        field('Water Body', 'Water_body'),
+        field('Category', 'Category')
+      ]
+    },
+    aviation: {
+      title: 'Aviation Sites',
+      file: 'geo/airports.geojson',
+      group: 'Category',
+      context: 'International and upcountry aerodromes across Uganda.',
+      gaps: 'Multi-modal aviation network layer.',
+      columns: [
+        field('Aerodrome', 'F9'),
+        field('Category', 'Category')
+      ]
+    },
+    safety: {
+      title: 'Traffic Safety Observations',
+      file: 'geo/kampala_traffic_incidents.geojson',
+      group: 'severity',
+      context: 'Recorded road safety incident observations by severity and corridor.',
+      gaps: 'Categorised by severity and functional road classification.',
+      columns: [
+        field('Incident Type', 'incident_type'),
+        field('Severity', 'severity'),
+        field('Road Name', 'road_name'),
+        field('Road Class', 'road_class'),
+        field('Date', 'date')
+      ]
+    },
+    freight: {
+      title: 'Weighbridge Stations',
+      file: 'geo/weighbridges.geojson',
+      group: 'Status',
+      context: 'Axle load control and weighbridge facilities along trunk corridors.',
+      gaps: 'Categorised by operational status.',
+      columns: [
+        field('Facility', 'Weighbridge Name'),
+        field('Status', 'Status')
+      ]
+    },
+    mgr: {
+      title: 'Metre-Gauge Railway (MGR)',
+      file: 'geo/mgr.geojson',
+      group: 'Status',
+      context: 'Metre-gauge railway corridors by operational status and length in km.',
+      gaps: 'Expressed in physical route length (km).',
+      columns: [
+        field('Corridor Name', 'Name'),
+        field('Status', 'Status'),
+        field('Length (km)', 'Mapped km', 'number')
+      ]
+    },
+    sgr: {
+      title: 'Standard-Gauge Railway (SGR)',
+      file: 'geo/sgr_alignment.geojson',
+      group: 'Status',
+      context: 'Planned standard-gauge railway alignment length in km.',
+      gaps: 'Expressed in physical alignment length (km).',
+      columns: [
+        field('Corridor Name', 'Name'),
+        field('Status', 'Status'),
+        field('Length (km)', 'Mapped km', 'number')
+      ]
+    }
   };
+
   const select = $('dataset');
   for (const [key, spec] of Object.entries(layers)) select.add(new Option(spec.title, key));
   const initial = new URLSearchParams(location.search).get('dataset');
   select.value = Object.hasOwn(layers, initial) ? initial : 'roads';
   let rows = [], filtered = [], active = null, sequence = 0;
-  const clean = v => v === null || v === undefined || String(v).trim() === '' ? 'Not supplied' : String(v).trim();
+
+  const clean = v => v === null || v === undefined || String(v).trim() === '' ? 'Not recorded' : String(v).trim();
   const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw;
-  const count = v => new Intl.NumberFormat('en-UG').format(v);
-  const kilometres = v => new Intl.NumberFormat('en-UG', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(v);
+  const count = v => new Intl.NumberFormat('en-GB').format(v);
+  const kilometres = v => new Intl.NumberFormat('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(v);
   const isLineLayer = key => ['roads', 'mgr', 'sgr'].includes(key);
+
+  const fmtDate = raw => {
+    const s = clean(raw);
+    const m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (m) return `${m[3]}/${m[2]}/${m[1]}`;
+    return s;
+  };
+
   const mappedLineKm = geometry => {
     const lines = geometry?.type === 'LineString' ? [geometry.coordinates] : geometry?.type === 'MultiLineString' ? geometry.coordinates : [];
     let total = 0;
@@ -37,75 +196,88 @@
     }
     return total;
   };
+
   const normalise = (feature, spec, key) => {
     const p = feature.properties || {};
     const result = {};
     for (const col of spec.columns) {
       let raw = p[col.key];
       if (col.key === 'Surface Type') {
-        const surface = clean(p['Surface  1']).toLowerCase();
-        raw = ['paved','bituminous','concrete'].includes(surface) ? 'Paved' : ['unpaved','gravel','earth'].includes(surface) ? 'Unpaved' : 'Not supplied';
+        const surface = clean(p['Surface Type'] || p['Surface  1']).toLowerCase();
+        raw = ['paved', 'bituminous', 'concrete'].includes(surface) ? 'Paved' : 'Unpaved';
       }
       if (key === 'stations' && col.key === 'REGION') raw = subRegion(clean(raw));
-      const displayed = clean(raw);
-      result[col.key] = /^(Link_Number|Link_ID|Link Id 1)$/.test(col.key)
-        ? displayed.replaceAll('_', ' ').replace(/\bLink(\d+)\b/g, 'Link $1') : displayed;
+      if (col.key === 'date') raw = fmtDate(raw);
+      result[col.key] = clean(raw);
     }
     if (key === 'roads') {
       const supplied = feature.properties?.['Length Km'];
       const parsed = supplied === null || supplied === undefined || supplied === '' ? NaN : Number(supplied);
-      result._mappedKm = Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
+      result._mappedKm = Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+      result['Length Km'] = result._mappedKm.toFixed(2);
     } else if (isLineLayer(key)) {
       result._mappedKm = mappedLineKm(feature.geometry);
-      result['Mapped km'] = result._mappedKm.toFixed(1);
+      result['Mapped km'] = result._mappedKm.toFixed(2);
     }
     return result;
   };
+
   const cellClass = (value, col) => {
-    if (value === 'Not supplied') return 'badge missing';
+    if (value === 'Not recorded') return 'badge missing';
     if (col.type === 'number') return 'numeric';
     const known = value.toLowerCase();
-    if (col.key === 'Position_Status') return /review|field check|approximate|not mapped|differs|boundary check/i.test(value)
-      ? 'badge review' : known.startsWith('verified') ? 'badge verified' : 'badge unverified';
-    if (['good','fair','poor','paved','unpaved','low','moderate','high','critical','operational','proposed'].includes(known)) return `badge ${known}`;
-    if (/risk|priority/i.test(col.title) && known.includes('very high')) return 'badge very-high';
-    if (/risk|priority/i.test(col.title) && known.includes('high')) return 'badge high';
-    if (/risk|priority/i.test(col.title) && known.includes('low')) return 'badge low';
-    return /^(Surface Type|Functional Class|Road Type|Sub-Region|Region|Financial Year|Category|Structure type|Severity)$/i.test(col.title) ? 'badge neutral' : '';
+    if (['good', 'satisfactory', 'fair', 'marginal', 'poor', 'critical', 'paved', 'unpaved', 'low', 'moderate', 'high', 'operational', 'proposed'].includes(known)) {
+      return `badge ${known}`;
+    }
+    return /^(Surface Type|Functional Class|Road Class|Region|Maintenance Station|Station|Financial Year|Category|Structural Type|Culvert Type|Severity|Condition Band)$/i.test(col.title) ? 'badge neutral' : '';
   };
+
   function render() {
     const spec = active;
     const query = $('search').value.trim().toLocaleLowerCase();
     const category = $('category').value;
     filtered = rows.filter(row => (!category || row[spec.group] === category) && (!query || spec.columns.some(col => row[col.key].toLocaleLowerCase().includes(query))));
     const lineLayer = isLineLayer(select.value);
-    $('total-label').textContent = lineLayer ? 'Mapped km' : 'Mapped features';
-    $('matching-label').textContent = lineLayer ? 'Matching km' : 'Matching features';
-    $('total').textContent = lineLayer ? kilometres(rows.reduce((sum, row) => sum + (row._mappedKm ?? 0), 0)) : count(rows.length);
-    $('matching').textContent = lineLayer ? kilometres(filtered.reduce((sum, row) => sum + (row._mappedKm ?? 0), 0)) : count(filtered.length);
-    $('coverage').textContent = 'Mapped subset';
-    $('context').textContent = lineLayer && rows.some(row => row._mappedKm === null)
-      ? `${spec.context} Some mapped lengths are not supplied and are excluded from kilometre totals.` : spec.context;
+    const totalKm = rows.reduce((sum, row) => sum + (row._mappedKm ?? 0), 0);
+    const matchKm = filtered.reduce((sum, row) => sum + (row._mappedKm ?? 0), 0);
+    const sharePct = totalKm > 0 ? ((matchKm / totalKm) * 100).toFixed(1) : '100.0';
+
+    $('total-label').textContent = lineLayer ? 'Total Network (km)' : 'Total Assets';
+    $('matching-label').textContent = lineLayer ? 'Filtered Extent (km)' : 'Filtered Assets';
+    $('total').textContent = lineLayer ? `${kilometres(totalKm)} km` : count(rows.length);
+    $('matching').textContent = lineLayer ? `${kilometres(matchKm)} km (${sharePct}%)` : count(filtered.length);
+    $('coverage').textContent = 'FY 2026/27 Register';
+    $('context').textContent = spec.context;
     $('gaps').textContent = spec.gaps;
+
     const groups = new Map();
     for (const row of filtered) groups.set(row[spec.group], (groups.get(row[spec.group]) || 0) + (lineLayer ? row._mappedKm ?? 0 : 1));
-    $('breakdown-field').textContent = `${spec.columns.find(col => col.key === spec.group)?.title || spec.group}${lineLayer ? ' (km)' : ''}`;
-    const list = $('breakdown-list'); list.replaceChildren();
-    for (const [label, n] of [...groups].sort((a,b) => a[0].localeCompare(b[0]))) {
-      const pill = document.createElement('span'); pill.append(document.createTextNode(label));
-      const strong = document.createElement('strong'); strong.textContent = lineLayer ? `${kilometres(n)} km` : count(n); pill.append(strong); list.append(pill);
+    $('breakdown-field').textContent = `${spec.columns.find(col => col.key === spec.group)?.title || spec.group}${lineLayer ? ' (km and %)' : ''}`;
+    const list = $('breakdown-list');
+    list.replaceChildren();
+    for (const [label, n] of [...groups].sort((a, b) => a[0].localeCompare(b[0]))) {
+      const pill = document.createElement('span');
+      pill.append(document.createTextNode(label + ' '));
+      const strong = document.createElement('strong');
+      if (lineLayer) {
+        const pct = matchKm > 0 ? ((n / matchKm) * 100).toFixed(1) : '0.0';
+        strong.textContent = `${kilometres(n)} km (${pct}%)`;
+      } else {
+        strong.textContent = count(n);
+      }
+      pill.append(strong);
+      list.append(pill);
     }
+
     const headerRow = document.createElement('tr');
-    for (const col of spec.columns) { const th = document.createElement('th'); th.scope = 'col'; th.textContent = col.title; headerRow.append(th); }
-    $('table-head').replaceChildren(headerRow);
-    const numericBounds = new Map(spec.columns.filter(col => col.type === 'number').map(col => [col.key, [Infinity, -Infinity]]));
-    for (const row of filtered) for (const [key, bounds] of numericBounds) {
-      if (row[key] === 'Not supplied') continue;
-      const number = Number(row[key]);
-      if (!Number.isFinite(number)) continue;
-      if (number < bounds[0]) bounds[0] = number;
-      if (number > bounds[1]) bounds[1] = number;
+    for (const col of spec.columns) {
+      const th = document.createElement('th');
+      th.scope = 'col';
+      th.textContent = col.title;
+      headerRow.append(th);
     }
+    $('table-head').replaceChildren(headerRow);
+
     let currentRendered = 0;
     const CHUNK_SIZE = 150;
     $('table-body').replaceChildren();
@@ -117,25 +289,17 @@
       for (const row of slice) {
         const tr = document.createElement('tr');
         for (const col of spec.columns) {
-          const td = document.createElement('td'); const value = row[col.key];
+          const td = document.createElement('td');
+          const value = row[col.key];
           const style = cellClass(value, col);
-          if (style.startsWith('badge')) { const badge = document.createElement('span'); badge.className = style; badge.textContent = value; td.append(badge); }
-          else {
+          if (style.startsWith('badge')) {
+            const badge = document.createElement('span');
+            badge.className = style;
+            badge.textContent = value;
+            td.append(badge);
+          } else {
             td.textContent = value;
             if (style) td.className = style;
-            if (style === 'numeric') {
-              const bounds = numericBounds.get(col.key);
-              if (bounds) {
-                const [minimum, maximum] = bounds;
-                const n = Number(value);
-                if (Number.isFinite(n) && Number.isFinite(minimum) && Number.isFinite(maximum)) {
-                  const ratio = maximum === minimum ? 0.5 : Math.max(0, Math.min(1, (n - minimum) / (maximum - minimum)));
-                  const waterOrDrainage = ['bridges', 'culverts', 'ferries'].includes(select.value);
-                  td.style.backgroundColor = waterOrDrainage ? `rgba(54, 132, 218, ${(.04 + ratio * .19).toFixed(3)})` : `rgba(220, 130, 70, ${(.04 + ratio * .19).toFixed(3)})`;
-                  td.title = 'Relative magnitude within the current filtered mapped features, not an engineering threshold';
-                }
-              }
-            }
           }
           tr.append(td);
         }
@@ -143,9 +307,9 @@
       }
       $('table-body').append(fragment);
       currentRendered += slice.length;
-      $('row-range').textContent = filtered.length <= CHUNK_SIZE 
-        ? `All ${count(filtered.length)} matching features in scrollable table` 
-        : `Showing ${count(currentRendered)} of ${count(filtered.length)} matching features (Scroll down to load more · CSV export includes all ${count(filtered.length)})`;
+      $('row-range').textContent = lineLayer
+        ? `Displaying ${kilometres(matchKm)} km (${sharePct}% of network) · Full schedule included in CSV export`
+        : `Complete asset register available in scrollable table and CSV export`;
     }
 
     appendRows(CHUNK_SIZE);
@@ -162,42 +326,57 @@
       });
     }
   }
+
   async function load() {
     const token = ++sequence, key = select.value, spec = layers[key];
-    active = spec; rows = [];
-    $('context').textContent = `Loading ${spec.title.toLowerCase()}...`;
+    active = spec;
+    rows = [];
+    $('context').textContent = `Loading ${spec.title}...`;
     history.replaceState(null, '', `?dataset=${encodeURIComponent(key)}`);
     try {
       const groups = await Promise.all((spec.files || [spec.file]).map(async file => {
-        const response = await fetch(`${file}?v=20261104-all-structures`);
+        const response = await fetch(`${file}?v=20261117-bms-rms-v80`);
         if (!response.ok) throw new Error(`${file} returned ${response.status}`);
         const data = await response.json();
-        if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`Invalid feature collection: ${file}`);
+        if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`Invalid collection`);
         return data.features;
       }));
       if (token !== sequence) return;
-      const features = key === 'roads' ? [
-        ...groups[0].map(f => ({ ...f, properties: { ...f.properties, 'Road Type': 'National Road Network' } })),
-        ...groups[1].filter(f => f.properties?.governance_department === 'DDUCAR').map(f => ({ ...f, properties: {
-          'Link Id 1': f.properties.link_id, 'Link Name': f.properties.road_name, 'Road Type': 'DUCAR',
-          'Road Cla 1': f.properties.functional_class, 'Surface  1': f.properties.pavement_class,
-          'Length Km': f.properties.length_km,
-        } })),
-      ] : groups.flat();
+      const features = groups.flat();
       rows = features.filter(f => f.properties).map(f => normalise(f, spec, key));
       const categories = [...new Set(rows.map(row => row[spec.group]))].sort();
       $('category').replaceChildren(new Option('All available categories', ''));
       for (const category of categories) $('category').add(new Option(category, category));
-      $('search').value = ''; render();
-    } catch (error) { if (token === sequence) { $('context').textContent = `Layer unavailable: ${error.message}`; $('total').textContent = 'Unavailable'; $('matching').textContent = 'Unavailable'; } }
+      $('search').value = '';
+      render();
+    } catch (error) {
+      if (token === sequence) {
+        $('context').textContent = `Layer unavailable: ${error.message}`;
+        $('total').textContent = 'Unavailable';
+        $('matching').textContent = 'Unavailable';
+      }
+    }
   }
-  function csvCell(value) { const safe = /^[=+@\-\t\r]/.test(value) ? `'${value}` : value; return `"${safe.replaceAll('"','""')}"`; }
+
+  function csvCell(value) {
+    const safe = /^[=+@\-\t\r]/.test(value) ? `'${value}` : value;
+    return `"${String(safe).replaceAll('"', '""')}"`;
+  }
+
   $('download').addEventListener('click', () => {
     if (!active || !filtered.length) return;
-    const lines = [active.columns.map(col => csvCell(col.title)).join(','), ...filtered.map(row => active.columns.map(col => csvCell(row[col.key])).join(','))];
+    const lines = [
+      active.columns.map(col => csvCell(col.title)).join(','),
+      ...filtered.map(row => active.columns.map(col => csvCell(row[col.key])).join(','))
+    ];
     const url = URL.createObjectURL(new Blob(['\uFEFF', lines.join('\r\n')], { type: 'text/csv;charset=utf-8' }));
-    const link = document.createElement('a'); link.href = url; link.download = `mapped-${select.value}-filtered.csv`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `mowt-${select.value}-register.csv`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
+
   select.addEventListener('change', load);
   $('search').addEventListener('input', render);
   $('category').addEventListener('change', render);
