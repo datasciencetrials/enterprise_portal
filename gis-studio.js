@@ -249,7 +249,7 @@
   };
   const updateMeasure = () => {
     if (measureShape) map.removeLayer(measureShape);
-    measureShape = measureMode === 'area' ? L.polygon(measurePoints, { color: '#39e9dc', weight: 2, fillOpacity: .16 }).addTo(map)
+    measureShape = measureMode === 'area' ? L.polygon(measurePoints, { color: '#0f7890', weight: 2, fillOpacity: .16 }).addTo(map)
       : L.polyline(measurePoints, { color: '#39e9dc', weight: 2, dashArray: '6 4' }).addTo(map);
     const distance = measurePoints.slice(1).reduce((sum, point, i) => sum + map.distance(measurePoints[i], point) / 1000, 0);
     measureStatus.textContent = `${measureMode === 'area' ? `Area: ${format.format(measureArea(measurePoints))} km²` : `Distance: ${format.format(distance)} km`}. Click to add points; double-click to finish; Escape to clear.`;
@@ -445,7 +445,7 @@
     if (activeMode === 'roads') drawMap(visible);
     const km = visible.reduce((sum, feature) => sum + (length(feature.properties || {}) || 0), 0);
     $('metric-value').textContent = format.format(km);
-    $('selection-summary').textContent = `${format.format(visible.length)} of ${format.format(features.length)} mapped National and DUCAR road records shown (${format.format(km)} km)`;
+    $('selection-summary').textContent = `${format.format(km)} mapped km shown`;
     $('map-status').textContent = 'Road network on map';
     const surfaceData = tally(visible, surface, length);
     chart('surface-chart', ['Paved', 'Unpaved', 'Not supplied'], ['Paved', 'Unpaved', 'Not supplied'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db'], false, 'doughnut');
@@ -475,7 +475,7 @@
     bridges: {
       title: 'Bridges', files: ['bridges.geojson'], colour: '#438ee1', countLabel: 'Bridges on map', statusUnit: 'bridges on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'The FY 2026/27 BMS register contains 552 Bridges with recorded map positions. Of these, 536 are road-linked or corrected points and 16 remain marked for review, including 2 requiring a field check. Amber and red points are recorded positions, not verified bridge locations.',
+      description: 'The FY 2026/27 BMS register contains 552 Bridges. B005 is Rwizi Bridge. The incorrectly reassigned B548 identity and location are withheld pending correction, so 551 bridge positions can be displayed. Amber and red points are recorded positions, not verified bridge locations.',
       fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     culverts: {
@@ -798,7 +798,7 @@
       if (path === 'network.geojson') prepareNationalContext(data.features);
       return data.features;
     })).then(([national, ducarFile]) => {
-      const ducar = ducarFile.filter(feature => feature.geometry && feature.properties?.(feature.properties?.governance_department && feature.properties.governance_department.includes('DDUCAR')))
+      const ducar = ducarFile.filter(feature => feature.geometry && feature.properties?.governance_department === 'DDUCAR')
         .map(feature => ({ ...feature, properties: {
           'Link Id 1': feature.properties.link_id, 'Link Name': feature.properties.road_name,
           'Road Cla 1': feature.properties.functional_class, 'Road Type': 'DUCAR',

@@ -406,7 +406,6 @@ svg text {
 
 .explorer, #explore { background: #f8fafc !important; }
 .map-shell, #gis-map, .leaflet-container { background: #ffffff !important; }
-
 /* Explicit Apple HIG Light Overrides for Enterprise Portal */
 .transport-photos {
   background: #F5F5F7 !important;
@@ -421,4 +420,94 @@ svg text {
 
 .map-tools button, .map-coordinates span {
   color: #0F172A !important;
+}
+
+/* GIS portal light-theme completion. Keep imagery useful without turning the
+   surrounding interface into a dark or neon presentation. */
+footer {
+  color: var(--apple-muted) !important;
+  background: #ffffff !important;
+  border-top: 1px solid var(--apple-line) !important;
+}
+
+footer a {
+  color: #1d4ed8 !important;
+}
+
+.transport-photos {
+  color: var(--apple-text) !important;
+  background: #f4f6f8 !important;
+}
+
+.transport-photo img {
+  filter: saturate(.88) brightness(1.05) !important;
+}
+
+.transport-photo::after {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .78) 46%, rgba(255, 255, 255, .18) 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 48%) !important;
+}
+
+.transport-photos :where(.intro, .intro h1, .intro-note, .intro-aside, .intro-aside strong, .intro-aside a),
+.transport-photo figcaption,
+.transport-photo figcaption strong {
+  color: var(--apple-text) !important;
+  text-shadow: none !important;
+}
+
+.transport-photos .intro .eyebrow,
+.transport-photo figcaption span {
+  color: #086b7a !important;
+}
+
+.transport-photos .accent-line {
+  background: #2563eb !important;
+  box-shadow: none !important;
+}
+
+.transport-photo-arrow,
+.transport-photo-pause {
+  color: #111827 !important;
+  background: rgba(255, 255, 255, .92) !important;
+  border-color: rgba(17, 24, 39, .24) !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, .12) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.transport-photo-dots button {
+  background: #8b98aa !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 1px rgba(17, 24, 39, .18) !important;
+}
+
+.transport-photo-dots button.is-active,
+.transport-photo-dots button[aria-current="true"] {
+  background: #2563eb !important;
+}
+
+.map-topline,
+.map-coordinates,
+.map-measure-status {
+  color: var(--apple-text) !important;
+  background: rgba(255, 255, 255, .94) !important;
+  border-color: var(--apple-line) !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, .1) !important;
+}
+
+.map-topline span:last-child {
+  color: var(--apple-muted) !important;
+}
+
+pre,
+code {
+  color: #17324d !important;
+  background: #edf3f8 !important;
+}
+
+@media (max-width: 720px) {
+  .transport-photo::after {
+    background: linear-gradient(0deg, rgba(255, 255, 255, .97) 0%, rgba(255, 255, 255, .74) 55%, rgba(255, 255, 255, .2) 100%) !important;
+  }
 }
