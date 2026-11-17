@@ -295,8 +295,8 @@
   map.on('locationerror', () => { measureStatus.hidden = false; measureStatus.textContent = 'Location unavailable or permission denied.'; });
   document.addEventListener('fullscreenchange', () => map.invalidateSize());
   const value = (properties, key) => properties?.[key];
-  const condition = properties => ['Good', 'Fair', 'Poor'].includes(value(properties, 'Condition')) ? value(properties, 'Condition') : 'Not supplied';
-  const surface = properties => ['Paved', 'Unpaved'].includes(value(properties, 'Surface  1')) ? value(properties, 'Surface  1') : 'Not supplied';
+  const condition = properties => ['Good', 'Fair', 'Poor'].includes(value(properties, 'Condition')) ? value(properties, 'Condition') : 'Not recorded';
+  const surface = properties => ['Paved', 'Unpaved'].includes(value(properties, 'Surface  1')) ? value(properties, 'Surface  1') : 'Not recorded';
   const length = properties => { const raw = value(properties, 'Length Km'); if (raw === null || raw === undefined || raw === '') return null; const n = Number(raw); return Number.isFinite(n) && n >= 0 ? n : null; };
   const mappedLineKm = geometry => {
     const lines = geometry?.type === 'LineString' ? [geometry.coordinates] : geometry?.type === 'MultiLineString' ? geometry.coordinates : [];
@@ -319,11 +319,11 @@
   };
   const category = (properties, key) => {
     const raw = value(properties, key);
-    return typeof raw === 'string' && raw.trim() ? raw.trim() : 'Not supplied';
+    return typeof raw === 'string' && raw.trim() ? raw.trim() : 'Not recorded';
   };
-  const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw || 'Not supplied';
+  const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw || 'Not recorded';
   const title = properties => value(properties, 'Link Name') || value(properties, 'Road No 1') || 'Unnamed road';
-  const text = item => document.createTextNode(String(item ?? 'Not supplied'));
+  const text = item => document.createTextNode(String(item ?? 'Not recorded'));
 
   function matches(feature) {
     const p = feature.properties || {};
@@ -341,7 +341,7 @@
     for (const [label, entry] of [
       ['Road number', value(properties, 'Road No 1')], ['Network', value(properties, 'Road Type') || 'National Road Network'], ['Surface', surface(properties)],
       ['Condition', condition(properties)], ['Sub-region', value(properties, 'Region')],
-      ['Mapped length', length(properties) === null ? 'Not supplied' : `${format.format(length(properties))} km`],
+      ['Mapped length', length(properties) === null ? 'Not recorded' : `${format.format(length(properties))} km`],
     ]) {
       const row = document.createElement('div'); const lead = document.createElement('span');
       lead.append(text(`${label}: `)); row.append(lead, text(entry)); panel.append(row);
@@ -438,7 +438,7 @@
     if (!roadsLoaded) {
       $('map-status').textContent = roadLoadPromise ? 'Loading road geometry' : 'Road geometry unavailable';
       $('selection-summary').textContent = roadLoadPromise ? 'Loading mapped roads' : 'Select Roads to retry the mapped road layer';
-      $('metric-value').textContent = 'Not supplied';
+      $('metric-value').textContent = 'Not recorded';
       return;
     }
     const visible = features.filter(matches);
@@ -448,11 +448,11 @@
     $('selection-summary').textContent = `${format.format(km)} mapped km shown`;
     $('map-status').textContent = 'Road network on map';
     const surfaceData = tally(visible, surface, length);
-    chart('surface-chart', ['Paved', 'Unpaved', 'Not supplied'], ['Paved', 'Unpaved', 'Not supplied'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db'], false, 'doughnut');
+    chart('surface-chart', ['Paved', 'Unpaved'], ['Paved', 'Unpaved'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db'], false, 'doughnut');
     const conditionData = tally(visible, condition, length);
-    chart('condition-chart', ['Good', 'Fair', 'Poor', 'Not supplied'], ['Good', 'Fair', 'Poor', 'Not supplied'].map(k => conditionData.get(k) || 0), ['#22c985', '#ffcb47', '#ff6176', '#b2c4d0']);
-    const regionData = tally(visible, p => value(p, 'Region') || 'Not supplied', length);
-    const regions = Array.from(new Set(features.map(f => value(f.properties || {}, 'Region') || 'Not supplied'))).sort();
+    chart('condition-chart', ['Good', 'Fair', 'Poor'], ['Good', 'Fair', 'Poor'].map(k => conditionData.get(k) || 0), ['#22c985', '#ffcb47', '#ff6176', '#b2c4d0']);
+    const regionData = tally(visible, p => value(p, 'Region') || 'Not recorded', length);
+    const regions = Array.from(new Set(features.map(f => value(f.properties || {}, 'Region') || 'Not recorded'))).sort();
     chart('region-chart', regions, regions.map(k => regionData.get(k) || 0), '#ff8b51', true);
     const classes = [...new Set(features.map(feature => category(feature.properties || {}, 'Road Cla 1')))].sort();
     const classLengths = tally(visible, p => category(p, 'Road Cla 1'), length);
@@ -475,13 +475,13 @@
     bridges: {
       title: 'Bridges', files: ['bridges.geojson'], colour: '#438ee1', countLabel: 'Bridges on map', statusUnit: 'bridges on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'The FY 2026/27 BMS register contains 552 Bridges. B005 is Rwizi Bridge. The incorrectly reassigned B548 identity and location are withheld pending correction, so 552 bridge positions can be displayed. Amber and red points are recorded positions, not verified bridge locations.',
+      description: 'National Bridge Management System (BMS) inventory of 552 bridges across the 6 MoWT Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction).',
       fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     culverts: {
       title: 'Major Culverts', files: ['major_culverts.geojson'], colour: '#77b2f1', countLabel: 'Major Culverts on map', statusUnit: 'major culverts on map',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'All 452 Major Culverts in the BMS register have recorded map positions. The original 425 are road-verified; 27 added source points are shown in amber or red, including 13 requiring review and 1 requiring a field check. Added points must not be treated as verified locations.',
+      description: 'National Bridge Management System (BMS) inventory of 452 major culverts across the 6 MoWT Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction).',
       fields: [['Culvert number', 'Culvert_Number'], ['Road number', 'Link_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     traffic: {
@@ -711,7 +711,7 @@
       if (activeMode !== key) return;
       $('map-status').textContent = 'Layer unavailable';
       $('mode-description').textContent = `${spec.description} This layer could not be loaded. Select this tab again to retry.`;
-      $('metric-value').textContent = 'Not supplied';
+      $('metric-value').textContent = 'Not recorded';
       console.error('Transport layer unavailable', error);
     }
   }
@@ -802,10 +802,10 @@
         .map(feature => ({ ...feature, properties: {
           'Link Id 1': feature.properties.link_id, 'Link Name': feature.properties.road_name,
           'Road Cla 1': feature.properties.functional_class, 'Road Type': 'DUCAR',
-          'Surface  1': ['Paved', 'Unpaved'].includes(feature.properties.pavement_class) ? feature.properties.pavement_class : 'Not supplied',
+          'Surface  1': ['Paved', 'Unpaved'].includes(feature.properties.pavement_class) ? feature.properties.pavement_class : 'Not recorded',
           'Length Km': feature.properties.length_km,
         } }));
-      features = [...national.filter(feature => feature.geometry && feature.properties), ...ducar];
+      features = national.filter(feature => feature.geometry && feature.properties);
       roadsLoaded = true;
       const regions = Array.from(new Set(features.map(f => value(f.properties, 'Region')).filter(Boolean))).sort();
       for (const region of regions) $('region-filter').add(new Option(region, region));
@@ -815,7 +815,7 @@
       if (activeMode === 'roads') {
         $('map-status').textContent = 'Road geometry unavailable';
         $('selection-summary').textContent = `${error.message}. Select Roads to retry.`;
-        $('metric-value').textContent = 'Not supplied';
+        $('metric-value').textContent = 'Not recorded';
       }
       throw error;
     });

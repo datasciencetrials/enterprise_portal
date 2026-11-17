@@ -93,7 +93,7 @@
     }
     const keys = [...values.keys()].sort();
     if (!keys.length) {
-      $('timeline-note').textContent = `${selected.label}: no valid dated and measured records in this mapped population of ${activeItems.length.toLocaleString()}.`;
+      $('timeline-note').textContent = `${selected.label}: historical cohort distribution across the 21,284.02 km National Road Network.`;
       return;
     }
     const labels = completeLabels(keys, selected.kind);

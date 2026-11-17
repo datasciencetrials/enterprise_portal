@@ -4,13 +4,13 @@
   const gallery = document.getElementById('transport-chart-gallery');
   if (!gallery) return;
   const palette = ['#ff7a25', '#28d9bd', '#ffca48', '#bc85ff', '#ff6176', '#65a9ff', '#e6f17a', '#ff9ecd'];
-  const missing = value => value === null || value === undefined || String(value).trim() === '' ? 'Not supplied' : String(value).trim();
+  const missing = value => value === null || value === undefined || String(value).trim() === '' ? 'Not recorded' : String(value).trim();
   const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw;
   const field = (label, key) => ({ label, get: p => missing(p[key]) });
   const schemas = {
     roads: [{ label: 'Surface Type', get: p => {
       const raw = missing(p['Surface  1']).toLowerCase();
-      return ['paved', 'bituminous', 'concrete'].includes(raw) ? 'Paved' : ['unpaved', 'gravel', 'earth'].includes(raw) ? 'Unpaved' : 'Not supplied';
+      return ['paved', 'bituminous', 'concrete'].includes(raw) ? 'Paved' : ['unpaved', 'gravel', 'earth'].includes(raw) ? 'Unpaved' : 'Not recorded';
     } }, field('Condition', 'Condition'), field('Sub-Region', 'Region'), field('Functional Class', 'Road Cla 1'),
       { label: 'Road Type', get: p => p['Road Type'] === 'DUCAR' ? 'DUCAR' : 'National Road Network' }],
     bridges: [field('Maintenance Region', 'Maintenance_Region'), field('Maintenance Station', 'Maintenance_Station'), field('Structure Type', 'Structure_Type'),
@@ -21,8 +21,8 @@
     ferries: [field('Category', 'Category'), field('Water body', 'Water_body')],
     aviation: [field('Category', 'Category')],
     safety: [field('Severity', 'severity'), field('Incident type', 'incident_type'), field('Road class', 'road_class'),
-      { label: 'Year', get: p => /^\d{4}/.test(String(p.date || '')) ? String(p.date).slice(0, 4) : 'Not supplied' },
-      { label: 'Month', get: p => /^\d{4}-\d{2}/.test(String(p.date || '')) ? String(p.date).slice(0, 7) : 'Not supplied' }],
+      { label: 'Year', get: p => /^\d{4}/.test(String(p.date || '')) ? String(p.date).slice(0, 4) : 'Not recorded' },
+      { label: 'Month', get: p => /^\d{4}-\d{2}/.test(String(p.date || '')) ? String(p.date).slice(0, 7) : 'Not recorded' }],
     freight: [field('Facility status', 'Status')],
     rail: [field('Rail type', '_transportKind'), field('Alignment status', 'Status')],
   };
