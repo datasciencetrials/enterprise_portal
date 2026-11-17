@@ -844,7 +844,7 @@
         },
         {
           "code": "1510",
-          "name": "UNRA Retooling Project",
+          "name": "National Roads Retooling Project",
           "agency": "National Roads Authority",
           "location": "National Roads Headquarters",
           "value_bn_ushs": 46.1,
@@ -1311,7 +1311,7 @@
           "code": "1616",
           "name": "Retooling of Uganda National Roads Authority",
           "agency": "National Roads Authority",
-          "location": "UNRA",
+          "location": "National",
           "value_bn_ushs": 373.79,
           "start_date": "7/1/2021",
           "end_date": "6/30/2025"
