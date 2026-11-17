@@ -106,32 +106,61 @@
       if (number < bounds[0]) bounds[0] = number;
       if (number > bounds[1]) bounds[1] = number;
     }
-    const body = document.createDocumentFragment();
-    for (const row of filtered) {
-      const tr = document.createElement('tr');
-      for (const col of spec.columns) {
-        const td = document.createElement('td'); const value = row[col.key];
-        const style = cellClass(value, col);
-        if (style.startsWith('badge')) { const badge = document.createElement('span'); badge.className = style; badge.textContent = value; td.append(badge); }
-        else {
-          td.textContent = value;
-          if (style) td.className = style;
-          if (style === 'numeric') {
-            const n = Number(value), [minimum, maximum] = numericBounds.get(col.key);
-            if (Number.isFinite(n) && Number.isFinite(minimum) && Number.isFinite(maximum)) {
-              const ratio = maximum === minimum ? 0.5 : Math.max(0, Math.min(1, (n - minimum) / (maximum - minimum)));
-              const waterOrDrainage = ['bridges', 'culverts', 'ferries'].includes(select.value);
-              td.style.backgroundColor = waterOrDrainage ? `rgba(54, 132, 218, ${(.04 + ratio * .19).toFixed(3)})` : `rgba(220, 130, 70, ${(.04 + ratio * .19).toFixed(3)})`;
-              td.title = 'Relative magnitude within the current filtered mapped features, not an engineering threshold';
+    let currentRendered = 0;
+    const CHUNK_SIZE = 150;
+    $('table-body').replaceChildren();
+
+    function appendRows(chunk) {
+      const slice = filtered.slice(currentRendered, currentRendered + chunk);
+      if (!slice.length) return;
+      const fragment = document.createDocumentFragment();
+      for (const row of slice) {
+        const tr = document.createElement('tr');
+        for (const col of spec.columns) {
+          const td = document.createElement('td'); const value = row[col.key];
+          const style = cellClass(value, col);
+          if (style.startsWith('badge')) { const badge = document.createElement('span'); badge.className = style; badge.textContent = value; td.append(badge); }
+          else {
+            td.textContent = value;
+            if (style) td.className = style;
+            if (style === 'numeric') {
+              const bounds = numericBounds.get(col.key);
+              if (bounds) {
+                const [minimum, maximum] = bounds;
+                const n = Number(value);
+                if (Number.isFinite(n) && Number.isFinite(minimum) && Number.isFinite(maximum)) {
+                  const ratio = maximum === minimum ? 0.5 : Math.max(0, Math.min(1, (n - minimum) / (maximum - minimum)));
+                  const waterOrDrainage = ['bridges', 'culverts', 'ferries'].includes(select.value);
+                  td.style.backgroundColor = waterOrDrainage ? `rgba(54, 132, 218, ${(.04 + ratio * .19).toFixed(3)})` : `rgba(220, 130, 70, ${(.04 + ratio * .19).toFixed(3)})`;
+                  td.title = 'Relative magnitude within the current filtered mapped features, not an engineering threshold';
+                }
+              }
             }
           }
+          tr.append(td);
         }
-        tr.append(td);
+        fragment.append(tr);
       }
-      body.append(tr);
+      $('table-body').append(fragment);
+      currentRendered += slice.length;
+      $('row-range').textContent = filtered.length <= CHUNK_SIZE 
+        ? `All ${count(filtered.length)} matching features in scrollable table` 
+        : `Showing ${count(currentRendered)} of ${count(filtered.length)} matching features (Scroll down to load more · CSV export includes all ${count(filtered.length)})`;
     }
-    $('table-body').replaceChildren(body);
-    $('row-range').textContent = lineLayer ? 'All matching rows in one scrollable table' : `All ${count(filtered.length)} matching features in one scrollable table`;
+
+    appendRows(CHUNK_SIZE);
+
+    const scrollContainer = document.querySelector('.table-scroll');
+    if (scrollContainer && !scrollContainer._hasStreamListener) {
+      scrollContainer._hasStreamListener = true;
+      scrollContainer.addEventListener('scroll', () => {
+        if (scrollContainer.scrollTop + scrollContainer.clientHeight >= scrollContainer.scrollHeight - 350) {
+          if (currentRendered < filtered.length) {
+            appendRows(CHUNK_SIZE);
+          }
+        }
+      });
+    }
   }
   async function load() {
     const token = ++sequence, key = select.value, spec = layers[key];

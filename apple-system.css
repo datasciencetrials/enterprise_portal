@@ -511,3 +511,38 @@ code {
     background: linear-gradient(0deg, rgba(255, 255, 255, .97) 0%, rgba(255, 255, 255, .74) 55%, rgba(255, 255, 255, .2) 100%) !important;
   }
 }
+
+/* === ENTERPRISE PORTAL LEAFLET & ACTIONS FIXES === */
+.leaflet-marker-icon.transport-marker,
+.transport-marker,
+.transport-marker--structure,
+.leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+nav.floating-actions,
+.floating-actions {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.floating-actions button {
+  background: #0071E3 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(0, 113, 227, 0.35) !important;
+}
+
+.floating-actions button:hover {
+  background: #0077ED !important;
+}
+
+/* Force hero on top */
+main > .transport-photos {
+  order: 0 !important;
+}
+.explorer {
+  order: 1 !important;
+}

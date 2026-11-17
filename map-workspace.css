@@ -76,8 +76,8 @@
 .workspace-heading h1 { margin: 0; font: 700 19px/1.2 Arial, sans-serif; }
 .workspace-heading a { font: 600 12px/1.2 Arial, sans-serif; color: #075b6a; text-decoration: underline; }
 main { display: flex; flex-direction: column; }
-main > .explorer { order: 0; }
-main > .transport-photos { order: 1; }
+main > .explorer { order: 1; }
+main > .transport-photos { order: 0; }
 .map-shell { height: max(620px, calc(100vh - 132px)); }
 .site-header, .transport-photos .intro, .analysis-panel, .sources, footer { padding-left: clamp(14px, 1.5vw, 24px); padding-right: clamp(14px, 1.5vw, 24px); }
 @media (max-width: 680px) {
