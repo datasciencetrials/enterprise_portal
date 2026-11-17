@@ -406,3 +406,19 @@ svg text {
 
 .explorer, #explore { background: #f8fafc !important; }
 .map-shell, #gis-map, .leaflet-container { background: #ffffff !important; }
+
+/* Explicit Apple HIG Light Overrides for Enterprise Portal */
+.transport-photos {
+  background: #F5F5F7 !important;
+}
+
+.map-tools, .map-coordinates, .leaflet-control, .map-toolbar {
+  background: rgba(255, 255, 255, 0.96) !important;
+  color: #0F172A !important;
+  border: 1px solid #CBD5E1 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+.map-tools button, .map-coordinates span {
+  color: #0F172A !important;
+}
