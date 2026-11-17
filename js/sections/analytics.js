@@ -11,13 +11,13 @@ RENDERERS.analytics = async function(container){
   container.appendChild(pageHead(
     'Analytics & Insights',
     'The single canonical chart library for this platform: real distributions computed from the GIS road-network inventory and national maintenance-strategy and planning workbooks. Top-line KPIs live on Overview; this page goes deeper.',
-    '22 charts · 4 categories · 17 findings'
+    'Deep analytical breakdown across national transport sectors'
   ));
 
   /* ============================================================
      Live aggregation helpers (region × condition, region × safety
      band, priority-score histogram, etc. — none of this duplicates
-     Overview's 4 charts, which cover condition-by-count, class,
+     Overview visualisations, which cover condition-by-count, class,
      paved/unpaved-by-region and the investment-plan cost line only)
      ============================================================ */
 

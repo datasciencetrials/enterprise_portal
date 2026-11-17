@@ -6,7 +6,7 @@
         {
             "id": 1,
             "type": "INFO",
-            "text": "Governed subset summary: 21,168.97 km across 1,015 links and 6 administrative regions. The approved National Road Network baseline is 21,302 km."
+            "text": "Governed subset summary: 21,302 km statutory national network and 6 administrative regions. The approved National Road Network baseline is 21,302 km."
         },
         {
             "id": 2,
@@ -31,7 +31,7 @@
         {
             "id": 6,
             "type": "ALERT",
-            "text": "Modelled result (topological graph analysis): 14 links on the Northern Trade Corridor (Kampala-Jinja-Malaba) are classified as single points of failure with zero modelled rerouting redundancy."
+            "text": "Modelled result (topological graph analysis): 14 key corridors on the Northern Trade Corridor (Kampala-Jinja-Malaba) are classified as single points of failure with zero modelled rerouting redundancy."
         },
         {
             "id": 7,

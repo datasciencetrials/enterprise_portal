@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "National Roads Directorate National Traffic Model 2025 estimate workbook (Traffic_estimate_2025.xlsx), per-link vehicle-class composition",
-    "note": "886 of 1022 links carry a modelled 2025 traffic-composition figure; the rest are unassigned in the source workbook.",
+    "note": "Modelled network corridors carry a modelled 2025 traffic-composition figure; the rest are unassigned in the source workbook.",
     "linked_count": 886,
     "total_links": 1022,
     "total_motorised_veh_per_day": 2467129.4,
