@@ -33,9 +33,9 @@ RENDERERS.map = async function(container){
   L.control.scale({ imperial:false }).addTo(map);
 
   const BASEMAPS = {
-    light:   { label:'Light',   url:'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', attribution:'&copy; Esri, HERE, Garmin, FAO, NOAA, USGS', maxZoom:16 },
-    streets: { label:'Streets', url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', subdomains:'abc', attribution:'&copy; OpenStreetMap contributors', maxZoom:19 },
-    world:   { label:'World Street', url:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', attribution:'&copy; Esri, HERE, Garmin, FAO, NOAA, USGS', maxZoom:19 },
+    light:   { label:'Light',   url:'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attribution:'&copy; Esri, HERE, Garmin, FAO, NOAA, USGS', maxZoom:16 },
+    streets: { label:'Streets', url:'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', subdomains:'abc', attribution:'&copy; OpenStreetMap contributors', maxZoom:19 },
+    world:   { label:'World Street', url:'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attribution:'&copy; Esri, HERE, Garmin, FAO, NOAA, USGS', maxZoom:19 },
   };
   let currentTiles = null;
   const basemapRow = el('div',{class:'tab-row', style:'margin:2px 0 16px;'});

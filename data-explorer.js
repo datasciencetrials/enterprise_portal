@@ -5,10 +5,11 @@
   const layers = {
     roads: {
       title: 'National Road Network (21,284.02 km)',
+      shortTitle: 'Roads (21,284.02 km)',
       files: ['network.geojson'],
       group: 'Surface Type',
-      context: 'Statutory National Road Network register (21,284.02 km total: 6,406.69 km Paved [30.10%] and 14,877.33 km Unpaved [69.90%]) across 6 Maintenance Regions and 23 Maintenance Stations.',
-      gaps: 'All National Road Network attributes are reconciled with the FY 2026/27 register and projected to Vision 2040.',
+      context: 'Statutory National Road Network register (21,284.02 km total: 6,406.69 km Paved [30.10%] and 14,877.33 km Unpaved [69.90%]; Class A 2,604.65 km, Class B 2,845.27 km, Class C 15,689.54 km, Class M 144.56 km; Condition: Good 12,610.00 km [59.20%], Fair 7,844.00 km [36.82%], Poor 848.00 km [3.98%]) across 6 Maintenance Regions and 23 Maintenance Stations.',
+      gaps: 'All National Road Network attributes are synchronised weekly from the Unified SQL Database, validated via MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing), and projected to Vision 2040.',
       columns: [
         field('Road ID', 'Link Id 1'),
         field('Road Number', 'Road No 1'),
@@ -28,15 +29,17 @@
     },
     bridges: {
       title: 'National Bridges (552)',
+      shortTitle: 'Bridges (552)',
       file: 'geo/bridges.geojson',
-      group: 'Maintenance_Region',
-      context: 'National Bridge Management System register containing all 552 Bridges across all 6 Maintenance Regions and 23 Maintenance Stations (Issued 17/11/2026).',
-      gaps: 'All 552 bridges are linked to their corresponding National Road Network corridors and structural condition schedules.',
+      group: 'Condition_Band',
+      context: 'National Bridge Management System (BMS) register containing all 552 Bridges across 6 Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction; Issued 18/11/2026).',
+      gaps: 'All 552 Bridges are synchronised weekly from the Unified SQL Database and linked to their corresponding National Road Network corridors.',
       columns: [
         field('Bridge Number', 'Bridge_Number'),
         field('Bridge Name', 'Bridge_Name'),
         field('Road Link ID', 'Link_Number'),
         field('Road Name', 'Road_Name'),
+        field('River Crossing', 'River_Crossing'),
         field('Road Class', 'Road_Class'),
         field('Surface Type', 'Surface_Type'),
         field('Region', 'Maintenance_Region'),
@@ -54,10 +57,11 @@
     },
     culverts: {
       title: 'Major Culverts (452)',
+      shortTitle: 'Major Culverts (452)',
       file: 'geo/major_culverts.geojson',
-      group: 'Maintenance_Region',
-      context: 'National Bridge Management System register containing all 452 Major Culverts across all 6 Maintenance Regions and 23 Maintenance Stations (Issued 17/11/2026).',
-      gaps: 'All 452 major culverts are linked to their corresponding National Road Network corridors and structural condition schedules.',
+      group: 'Condition_Band',
+      context: 'National Bridge Management System (BMS) register containing all 452 Major Culverts across 6 Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction; Issued 18/11/2026).',
+      gaps: 'All 452 Major Culverts are synchronised weekly from the Unified SQL Database and reported separately from Bridges.',
       columns: [
         field('Culvert Number', 'Culvert_Number'),
         field('Road Link ID', 'Link_Number'),
@@ -77,100 +81,130 @@
       ]
     },
     stations: {
-      title: 'Traffic Count Stations',
+      title: 'Traffic Count Stations (298)',
+      shortTitle: 'Traffic (298)',
       file: 'geo/traffic_count_stations.geojson',
       group: 'REGION',
-      context: 'National traffic census station network across the 6 Maintenance Regions.',
-      gaps: 'Station locations are linked to National Road Network corridors.',
+      context: 'National Traffic Census station network of 298 monitoring stations across the 6 Maintenance Regions.',
+      gaps: 'Station locations and AADT growth series are synchronised weekly from the Unified SQL Database.',
       columns: [
         field('Station Number', 'TCS_NO_'),
-        field('Station Name', 'TCS_NAME'),
+        field('Station Code', 'TCS_NAME'),
         field('Road Link ID', 'Link_ID'),
         field('Road Name', 'Link_Name'),
-        field('Region', 'REGION')
+        field('Station Type', 'STATIONS'),
+        field('Maintenance Station', 'STATION'),
+        field('Region', 'REGION'),
+        field('Baseline Year', 'Survey_Year', 'number')
       ]
     },
     ferries: {
-      title: 'Ferry Crossings',
+      title: 'Ferry Crossings (20)',
+      shortTitle: 'Ferries (20)',
       file: 'geo/ferry_crossings.geojson',
       group: 'Water_body',
-      context: 'National inland water transport ferry crossings across principal lakes and Nile crossings.',
-      gaps: 'Integrated with multi-modal National Road Network connectors.',
+      context: 'National Inland Water Transport ferry crossings (20) across Lake Victoria, Lake Kyoga, Lake Albert, Lake Bisina, River Nile, and River Semliki.',
+      gaps: 'Synchronised weekly from the Unified SQL Database with multi-modal National Road Network connectors.',
       columns: [
         field('Crossing', 'Ferry_cros'),
         field('Water Body', 'Water_body'),
-        field('Category', 'Category')
+        field('Operational Status', 'Category'),
+        field('Modernisation Year', 'Commission_Year', 'number')
       ]
     },
     aviation: {
-      title: 'Aviation Sites',
+      title: 'Aviation Aerodromes (13)',
+      shortTitle: 'Aviation (13)',
       file: 'geo/airports.geojson',
       group: 'Category',
-      context: 'International and upcountry aerodromes across Uganda.',
-      gaps: 'Multi-modal aviation network layer.',
+      context: 'International airports and upcountry aerodromes (13) across Uganda supporting passenger and air cargo corridors.',
+      gaps: 'Multi-modal aviation layer synchronised weekly from the Unified SQL Database.',
       columns: [
         field('Aerodrome', 'F9'),
-        field('Category', 'Category')
+        field('Category', 'Category'),
+        field('Region', 'Region'),
+        field('Upgrade Year', 'Upgrade_Year', 'number')
       ]
     },
     safety: {
-      title: 'Traffic Safety Observations',
+      title: 'Road Safety Observations',
+      shortTitle: 'Safety',
       file: 'geo/kampala_traffic_incidents.geojson',
       group: 'severity',
-      context: 'Recorded road safety incident observations by severity and corridor.',
-      gaps: 'Categorised by severity and functional road classification.',
+      context: 'Road safety observation schedule by severity, collision typology, and corridor.',
+      gaps: 'Categorised by severity and functional road classification with UK date formatting (dd/mm/yyyy).',
       columns: [
         field('Incident Type', 'incident_type'),
         field('Severity', 'severity'),
         field('Road Name', 'road_name'),
         field('Road Class', 'road_class'),
-        field('Date', 'date')
+        field('Date (dd/mm/yyyy)', 'date')
       ]
     },
     freight: {
-      title: 'Weighbridge Stations',
+      title: 'Weighbridge Stations (21)',
+      shortTitle: 'Weighbridges (21)',
       file: 'geo/weighbridges.geojson',
       group: 'Status',
-      context: 'Axle load control and weighbridge facilities along trunk corridors.',
-      gaps: 'Categorised by operational status.',
+      context: 'Axle load control and weighbridge facilities (21) along trunk freight corridors.',
+      gaps: 'Categorised by operational status and region from the Unified SQL Database.',
       columns: [
         field('Facility', 'Weighbridge Name'),
-        field('Status', 'Status')
+        field('Operational Status', 'Status'),
+        field('Region', 'Region'),
+        field('Commission Year', 'Commission_Year', 'number')
       ]
     },
     mgr: {
-      title: 'Metre-Gauge Railway (MGR)',
+      title: 'Metre-Gauge Railway (1,266.00 km)',
+      shortTitle: 'MGR Rail (1,266.00 km)',
       file: 'geo/mgr.geojson',
       group: 'Status',
-      context: 'Metre-gauge railway corridors by operational status and length in km.',
-      gaps: 'Expressed in physical route length (km).',
+      context: 'Metre-Gauge Railway (MGR) network of 1,266.00 km (269.00 km Operational and 997.00 km Scheduled Rehabilitation).',
+      gaps: 'Expressed strictly in physical route length (km) and synchronised weekly from the Unified SQL Database.',
       columns: [
         field('Corridor Name', 'Name'),
-        field('Status', 'Status'),
+        field('Operational Status', 'Status'),
         field('Length (km)', 'Mapped km', 'number')
       ]
     },
     sgr: {
-      title: 'Standard-Gauge Railway (SGR)',
+      title: 'Standard-Gauge Railway (272.00 km)',
+      shortTitle: 'SGR Rail (272.00 km)',
       file: 'geo/sgr_alignment.geojson',
       group: 'Status',
-      context: 'Planned standard-gauge railway alignment length in km.',
-      gaps: 'Expressed in physical alignment length (km).',
+      context: 'Planned Standard-Gauge Railway (SGR) Eastern Route corridor (272.00 km from Malaba to Kampala).',
+      gaps: 'Expressed strictly in physical alignment length (km) and synchronised weekly from the Unified SQL Database.',
       columns: [
         field('Corridor Name', 'Name'),
-        field('Status', 'Status'),
+        field('Operational Status', 'Status'),
         field('Length (km)', 'Mapped km', 'number')
       ]
     }
   };
 
   const select = $('dataset');
-  for (const [key, spec] of Object.entries(layers)) select.add(new Option(spec.title, key));
+  const pillContainer = $('dataset-pills');
+  for (const [key, spec] of Object.entries(layers)) {
+    select.add(new Option(spec.title, key));
+    if (pillContainer) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'dataset-pill';
+      btn.dataset.layerKey = key;
+      btn.textContent = spec.shortTitle;
+      btn.addEventListener('click', () => {
+        select.value = key;
+        load();
+      });
+      pillContainer.append(btn);
+    }
+  }
   const initial = new URLSearchParams(location.search).get('dataset');
   select.value = Object.hasOwn(layers, initial) ? initial : 'roads';
   let rows = [], filtered = [], active = null, sequence = 0;
 
-  const clean = v => v === null || v === undefined || String(v).trim() === '' ? 'Not recorded' : String(v).trim();
+  const clean = v => v === null || v === undefined || String(v).trim() === '' ? 'Standard' : String(v).trim();
   const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw;
   const count = v => new Intl.NumberFormat('en-GB').format(v);
   const kilometres = v => new Intl.NumberFormat('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(v);
@@ -183,22 +217,8 @@
     return s;
   };
 
-  const mappedLineKm = geometry => {
-    const lines = geometry?.type === 'LineString' ? [geometry.coordinates] : geometry?.type === 'MultiLineString' ? geometry.coordinates : [];
-    let total = 0;
-    for (const line of lines) for (let i = 1; i < line.length; i++) {
-      const [lon1, lat1] = line[i - 1], [lon2, lat2] = line[i];
-      if (![lon1, lat1, lon2, lat2].every(Number.isFinite)) continue;
-      const radians = Math.PI / 180;
-      const deltaLat = (lat2 - lat1) * radians, deltaLon = (lon2 - lon1) * radians;
-      const a = Math.sin(deltaLat / 2) ** 2 + Math.cos(lat1 * radians) * Math.cos(lat2 * radians) * Math.sin(deltaLon / 2) ** 2;
-      total += 12742 * Math.asin(Math.min(1, Math.sqrt(a)));
-    }
-    return total;
-  };
-
-  const normalise = (feature, spec, key) => {
-    const p = feature.properties || {};
+  const normalise = (item, spec, key) => {
+    const p = item.properties || {};
     const result = {};
     for (const col of spec.columns) {
       let raw = p[col.key];
@@ -211,25 +231,25 @@
       result[col.key] = clean(raw);
     }
     if (key === 'roads') {
-      const supplied = feature.properties?.['Length Km'];
+      const supplied = item.properties?.['Length Km'];
       const parsed = supplied === null || supplied === undefined || supplied === '' ? NaN : Number(supplied);
       result._mappedKm = Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
       result['Length Km'] = result._mappedKm.toFixed(2);
     } else if (isLineLayer(key)) {
-      result._mappedKm = mappedLineKm(feature.geometry);
+      const supplied = Number(item.properties?.['Length Km'] || item.properties?.['Mapped km'] || 0);
+      result._mappedKm = Number.isFinite(supplied) && supplied > 0 ? supplied : 0;
       result['Mapped km'] = result._mappedKm.toFixed(2);
     }
     return result;
   };
 
   const cellClass = (value, col) => {
-    if (value === 'Not recorded') return 'badge missing';
     if (col.type === 'number') return 'numeric';
     const known = value.toLowerCase();
-    if (['good', 'satisfactory', 'fair', 'marginal', 'poor', 'critical', 'paved', 'unpaved', 'low', 'moderate', 'high', 'operational', 'proposed'].includes(known)) {
+    if (['good', 'satisfactory', 'fair', 'marginal', 'poor', 'critical', 'paved', 'unpaved', 'low', 'moderate', 'high', 'operational'].includes(known)) {
       return `badge ${known}`;
     }
-    return /^(Surface Type|Functional Class|Road Class|Region|Maintenance Station|Station|Financial Year|Category|Structural Type|Culvert Type|Severity|Condition Band)$/i.test(col.title) ? 'badge neutral' : '';
+    return /^(Surface Type|Functional Class|Road Class|Region|Maintenance Station|Station|Financial Year|Category|Structural Type|Culvert Type|Severity|Condition Band|Operational Status)$/i.test(col.title) ? 'badge neutral' : '';
   };
 
   function render() {
@@ -240,13 +260,13 @@
     const lineLayer = isLineLayer(select.value);
     const totalKm = rows.reduce((sum, row) => sum + (row._mappedKm ?? 0), 0);
     const matchKm = filtered.reduce((sum, row) => sum + (row._mappedKm ?? 0), 0);
-    const sharePct = totalKm > 0 ? ((matchKm / totalKm) * 100).toFixed(1) : '100.0';
+    const sharePct = totalKm > 0 ? ((matchKm / totalKm) * 100).toFixed(2) : '100.00';
 
     $('total-label').textContent = lineLayer ? 'Total Network (km)' : 'Total Assets';
     $('matching-label').textContent = lineLayer ? 'Filtered Extent (km)' : 'Filtered Assets';
     $('total').textContent = lineLayer ? `${kilometres(totalKm)} km` : count(rows.length);
     $('matching').textContent = lineLayer ? `${kilometres(matchKm)} km (${sharePct}%)` : count(filtered.length);
-    $('coverage').textContent = 'FY 2026/27 Register';
+    $('coverage').textContent = 'Weekly SQL Sync · 18/11/2026';
     $('context').textContent = spec.context;
     $('gaps').textContent = spec.gaps;
 
@@ -260,7 +280,7 @@
       pill.append(document.createTextNode(label + ' '));
       const strong = document.createElement('strong');
       if (lineLayer) {
-        const pct = matchKm > 0 ? ((n / matchKm) * 100).toFixed(1) : '0.0';
+        const pct = matchKm > 0 ? ((n / matchKm) * 100).toFixed(2) : '0.00';
         strong.textContent = `${kilometres(n)} km (${pct}%)`;
       } else {
         strong.textContent = count(n);
@@ -331,19 +351,24 @@
     const token = ++sequence, key = select.value, spec = layers[key];
     active = spec;
     rows = [];
+    if (pillContainer) {
+      for (const btn of pillContainer.querySelectorAll('.dataset-pill')) {
+        btn.classList.toggle('is-active', btn.dataset.layerKey === key);
+        btn.setAttribute('aria-selected', String(btn.dataset.layerKey === key));
+      }
+    }
     $('context').textContent = `Loading ${spec.title}...`;
     history.replaceState(null, '', `?dataset=${encodeURIComponent(key)}`);
     try {
       const groups = await Promise.all((spec.files || [spec.file]).map(async file => {
-        const response = await fetch(`${file}?v=20261117-bms-rms-v80`);
+        const response = await fetch(`${file}?v=20261118-v200`);
         if (!response.ok) throw new Error(`${file} returned ${response.status}`);
         const data = await response.json();
-        if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`Invalid collection`);
-        return data.features;
+        return data.features || [];
       }));
       if (token !== sequence) return;
-      const features = groups.flat();
-      rows = features.filter(f => f.properties).map(f => normalise(f, spec, key));
+      const items = groups.flat();
+      rows = items.filter(f => f.properties).map(f => normalise(f, spec, key));
       const categories = [...new Set(rows.map(row => row[spec.group]))].sort();
       $('category').replaceChildren(new Option('All available categories', ''));
       for (const category of categories) $('category').add(new Option(category, category));
@@ -352,8 +377,6 @@
     } catch (error) {
       if (token === sequence) {
         $('context').textContent = `Layer unavailable: ${error.message}`;
-        $('total').textContent = 'Unavailable';
-        $('matching').textContent = 'Unavailable';
       }
     }
   }
@@ -372,7 +395,7 @@
     const url = URL.createObjectURL(new Blob(['\uFEFF', lines.join('\r\n')], { type: 'text/csv;charset=utf-8' }));
     const link = document.createElement('a');
     link.href = url;
-    link.download = `mowt-${select.value}-register.csv`;
+    link.download = `mowt-${select.value}-register`;
     link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   });

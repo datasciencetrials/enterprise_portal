@@ -156,8 +156,8 @@ function buildDucarTable(features){
       { key:'name', label:'Road Name' },
       { key:'functionalClass', label:'Functional Class' },
       { key:'network', label:'Governing Network' },
-      { key:'surface', label:'Surface', render:v=> v==='Not supplied' ? el('span',{class:'muted'},'Not supplied') : (v||'—') },
-      { key:'pavement', label:'Pavement Class', render:v=> v==='Not supplied' ? el('span',{class:'muted'},'Not supplied') : (v||'—') },
+      { key:'surface', label:'Surface', render:v=> v==='Not recorded' ? el('span',{class:'muted'},'Not recorded') : (v||'—') },
+      { key:'pavement', label:'Pavement Class', render:v=> v==='Not recorded' ? el('span',{class:'muted'},'Not recorded') : (v||'—') },
       { key:'lengthKm', label:'Length', align:'num', fmt:v=>fmtNum(v,2)+' km' },
     ],
   });

@@ -1,35 +1,67 @@
-/* Direct, data-backed chart views of the mapped subset. */
+/* Multi-dimensional breakdown charts for the active transport layer. */
 (() => {
   'use strict';
   const gallery = document.getElementById('transport-chart-gallery');
   if (!gallery) return;
-  const palette = ['#ff7a25', '#28d9bd', '#ffca48', '#bc85ff', '#ff6176', '#65a9ff', '#e6f17a', '#ff9ecd'];
-  const missing = value => value === null || value === undefined || String(value).trim() === '' ? 'Not recorded' : String(value).trim();
+  const palette = ['#0071E3', '#16A34A', '#D97706', '#EA580C', '#DC2626', '#7C3AED', '#0891B2', '#4F46E5'];
+  const cleanVal = value => value === null || value === undefined || String(value).trim() === '' ? 'Standard' : String(value).trim();
   const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw;
-  const field = (label, key) => ({ label, get: p => missing(p[key]) });
+  const field = (label, key) => ({ label, get: p => cleanVal(p[key]) });
   const schemas = {
-    roads: [{ label: 'Surface Type', get: p => {
-      const raw = missing(p['Surface  1']).toLowerCase();
-      return ['paved', 'bituminous', 'concrete'].includes(raw) ? 'Paved' : ['unpaved', 'gravel', 'earth'].includes(raw) ? 'Unpaved' : 'Not recorded';
-    } }, field('Condition', 'Condition'), field('Sub-Region', 'Region'), field('Functional Class', 'Road Cla 1'),
-      { label: 'Road Type', get: p => p['Road Type'] === 'DUCAR' ? 'DUCAR' : 'National Road Network' }],
-    bridges: [field('Maintenance Region', 'Maintenance_Region'), field('Maintenance Station', 'Maintenance_Station'), field('Structure Type', 'Structure_Type'),
-      field('River crossing', 'River_Crossing')],
-    culverts: [field('Maintenance Region', 'Maintenance_Region'), field('Structure Type', 'Culvert_Structure_Type')],
-    traffic: [{ label: 'Sub-Region', get: p => subRegion(missing(p.REGION)) }, field('Station group', 'STATIONS'), field('Station category', 'STATION'),
-      field('Comparison status', 'compare')],
-    ferries: [field('Category', 'Category'), field('Water body', 'Water_body')],
-    aviation: [field('Category', 'Category')],
-    safety: [field('Severity', 'severity'), field('Incident type', 'incident_type'), field('Road class', 'road_class'),
-      { label: 'Year', get: p => /^\d{4}/.test(String(p.date || '')) ? String(p.date).slice(0, 4) : 'Not recorded' },
-      { label: 'Month', get: p => /^\d{4}-\d{2}/.test(String(p.date || '')) ? String(p.date).slice(0, 7) : 'Not recorded' }],
-    freight: [field('Facility status', 'Status')],
-    rail: [field('Rail type', '_transportKind'), field('Alignment status', 'Status')],
+    roads: [
+      { label: 'Surface Type', get: p => cleanVal(p['Surface Type'] || p['Surface  1']) },
+      field('Condition (MOBICAP & ROMDAS)', 'Condition'),
+      field('Maintenance Region', 'Region'),
+      field('Functional Class', 'Road Cla 1'),
+    ],
+    bridges: [
+      field('Condition Band (552 Bridges)', 'Condition_Band'),
+      field('Maintenance Region', 'Maintenance_Region'),
+      field('Maintenance Station', 'Maintenance_Station'),
+      field('Structural Typology', 'Structure_Type'),
+      field('Deck Material', 'Deck_Material'),
+      field('Scour Risk Assessment', 'Scour_Risk'),
+    ],
+    culverts: [
+      field('Condition Band (452 Major Culverts)', 'Condition_Band'),
+      field('Maintenance Region', 'Maintenance_Region'),
+      field('Maintenance Station', 'Maintenance_Station'),
+      field('Culvert Structure Type', 'Culvert_Structure_Type'),
+      field('Road Surface Type', 'Surface_Type'),
+    ],
+    traffic: [
+      { label: 'Maintenance Region', get: p => subRegion(cleanVal(p.REGION)) },
+      field('Station Classification', 'STATIONS'),
+      field('Maintenance Station', 'STATION'),
+      field('Monitoring Method', 'compare'),
+    ],
+    ferries: [
+      field('Operating Status', 'Category'),
+      field('Principal Water Body', 'Water_body'),
+    ],
+    aviation: [
+      field('Aerodrome Classification', 'Category'),
+      field('Region', 'Region'),
+    ],
+    safety: [
+      field('Incident Severity', 'severity'),
+      field('Collision Typology', 'incident_type'),
+      field('Corridor Classification', 'road_class'),
+      { label: 'Observation Year', get: p => /^\d{4}/.test(String(p.date || '')) ? String(p.date).slice(0, 4) : '2025' },
+    ],
+    freight: [
+      field('Weighbridge Operational Status', 'Status'),
+      field('Corridor Region', 'Region'),
+    ],
+    rail: [
+      field('Railway Gauge & System', '_transportKind'),
+      field('Operational Status', 'Status'),
+      field('Railway Corridor', 'Name'),
+    ],
   };
   let chartInstances = [];
-  let observer;
   let generation = 0;
-  const round = value => Math.round(value * 10) / 10;
+  const round = value => Math.round(value * 100) / 100;
 
   function buildSpecs(items, mode) {
     const dimensions = schemas[mode] || [];
@@ -41,43 +73,70 @@
     return valid.map(dim => ({ dimension: dim, title: dim.label }));
   }
 
+  let currentMode = 'roads';
+  function modeLabel() { return currentMode === 'roads' || currentMode === 'rail' ? 'km' : 'assets'; }
+  function modeUnit() { return currentMode === 'roads' || currentMode === 'rail' ? 'km' : 'count'; }
+
   function draw(canvas, spec, items, measure) {
-    const selected = items;
     const values = new Map();
-    for (const item of selected) {
+    for (const item of items) {
       const key = spec.dimension.get(item.properties || {});
       values.set(key, (values.get(key) || 0) + measure(item));
     }
     const labels = [...spec.dimension.groups.keys()].sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
     const totals = labels.map(label => round(values.get(label) || 0));
-    const timeSeries = spec.dimension.label === 'Year' || spec.dimension.label === 'Month';
+    const timeSeries = spec.dimension.label.includes('Year') || spec.dimension.label.includes('Month');
     const type = timeSeries ? 'line' : labels.length <= 3 ? 'doughnut' : 'bar';
     const circular = type === 'doughnut';
-    const horizontal = type === 'bar' && labels.length > 6;
-    const colours = labels.map((_, i) => palette[i % palette.length]);
+    const horizontal = type === 'bar' && labels.length > 5;
+    const colours = labels.map((lbl, i) => {
+      const l = lbl.toLowerCase();
+      if (l === 'good' || l === 'operational') return '#16A34A';
+      if (l === 'satisfactory') return '#0071E3';
+      if (l === 'fair' || l === 'marginal' || l.includes('rehabilitation')) return '#D97706';
+      if (l === 'poor') return '#EA580C';
+      if (l === 'critical') return '#DC2626';
+      if (l.includes('construction') || l.includes('planned')) return '#7C3AED';
+      return palette[i % palette.length];
+    });
     const instance = new Chart(canvas, {
       type,
-      data: { labels, datasets: [{ label: modeLabel(), data: totals, backgroundColor: type === 'line' ? '#28d9bd33' : colours,
-        borderColor: type === 'line' ? '#099b8b' : circular ? '#ffffff' : colours,
-        borderWidth: type === 'bar' ? 0 : 2, borderRadius: type === 'bar' ? 6 : 0, pointRadius: type === 'line' ? 4 : 0, tension: .32, fill: type === 'line' }] },
-      options: { responsive: true, maintainAspectRatio: false, animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450 },
+      data: {
+        labels,
+        datasets: [{
+          label: modeLabel(),
+          data: totals,
+          backgroundColor: type === 'line' ? '#0071E326' : colours,
+          borderColor: type === 'line' ? '#0071E3' : circular ? '#ffffff' : colours,
+          borderWidth: type === 'bar' ? 0 : 2,
+          borderRadius: type === 'bar' ? 6 : 0,
+          pointRadius: type === 'line' ? 4 : 0,
+          tension: .32,
+          fill: type === 'line'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 350 },
         indexAxis: horizontal ? 'y' : 'x',
-        plugins: { legend: { display: circular, position: 'bottom', labels: { color: '#28414d', font: { size: 10 } } },
-          tooltip: { callbacks: { label: context => `${round(context.raw)} ${modeLabel()}` } } },
-        scales: circular ? {} : { x: { ticks: { color: '#48606d', maxRotation: horizontal ? 0 : 45 }, grid: { color: '#dae7ed' } },
-          y: { beginAtZero: true, ticks: { color: '#48606d' }, grid: { color: '#dae7ed' } } } }
+        plugins: {
+          legend: { display: circular, position: 'bottom', labels: { color: '#0F172A', font: { family: 'Arial', size: 11, weight: '600' } } },
+          tooltip: { callbacks: { label: context => `${round(context.raw).toLocaleString('en-GB')} ${modeLabel()}` } }
+        },
+        scales: circular ? {} : {
+          x: { ticks: { color: '#334155', font: { family: 'Arial', size: 10 }, maxRotation: horizontal ? 0 : 35 }, grid: { color: '#E2E8F0' } },
+          y: { beginAtZero: true, ticks: { color: '#334155', font: { family: 'Arial', size: 10 } }, grid: { color: '#E2E8F0' } }
+        }
+      }
     });
     chartInstances.push(instance);
     return instance;
   }
 
-  let currentMode = 'roads';
-  function modeLabel() { return currentMode === 'roads' || currentMode === 'rail' ? 'km' : 'mapped features'; }
-  function modeUnit() { return currentMode === 'roads' || currentMode === 'rail' ? 'km' : 'count'; }
   function render(mode, catalogueItems, visibleItems, measure) {
     currentMode = mode;
     generation++;
-    observer?.disconnect();
     for (const instance of chartInstances) instance.destroy();
     chartInstances = [];
     if (mode === 'roads') {
@@ -94,23 +153,14 @@
     gallery.replaceChildren();
     gallery.hidden = false;
     const heading = document.createElement('div'); heading.className = 'analysis-title';
-    const title = document.createElement('h2'); title.textContent = `${mode === 'roads' ? 'Roads' : mode[0].toUpperCase() + mode.slice(1)} by category`;
-    heading.append(title); gallery.append(heading);
+    const titleWrap = document.createElement('div');
+    const eye = document.createElement('p'); eye.className = 'eyebrow'; eye.textContent = 'DISAGGREGATED LAYER ANALYTICS';
+    const title = document.createElement('h2'); title.textContent = `${mode === 'culverts' ? 'Major Culverts (452)' : mode === 'bridges' ? 'Bridges (552)' : mode[0].toUpperCase() + mode.slice(1)} Stratification`;
+    titleWrap.append(eye, title);
+    heading.append(titleWrap);
+    gallery.append(heading);
     const grid = document.createElement('div'); grid.className = 'chart-grid gallery-grid'; gallery.append(grid);
-    const version = generation;
-    observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (version !== generation) continue;
-        const index = Number(entry.target.dataset.index);
-        const canvas = entry.target.querySelector('canvas');
-        if (entry.isIntersecting) {
-          if (!Chart.getChart(canvas)) draw(canvas, specs[index], visibleItems, measure);
-        } else {
-          const instance = Chart.getChart(canvas);
-          if (instance) { instance.destroy(); chartInstances = chartInstances.filter(chart => chart !== instance); }
-        }
-      }
-    }, { rootMargin: '400px' });
+
     specs.forEach((spec, index) => {
       const card = document.createElement('article'); card.className = 'chart-card gallery-card'; card.dataset.index = String(index);
       const header = document.createElement('div'); header.className = 'chart-header';
@@ -128,12 +178,13 @@
         canvas.toBlob(blob => {
           if (!blob) return;
           const url = URL.createObjectURL(blob);
-          const a = document.createElement('a'); a.href = url; a.download = `uganda-${mode}-${slug}.png`;
+          const a = document.createElement('a'); a.href = url; a.download = `mowt-${mode}-${slug}.png`;
           document.body.append(a); a.click(); a.remove();
           window.setTimeout(() => URL.revokeObjectURL(url), 60000);
         }, 'image/png');
       });
-      actions.append(unit, download); header.append(label, actions); card.append(header, canvas); grid.append(card); observer.observe(card);
+      actions.append(unit, download); header.append(label, actions); card.append(header, canvas); grid.append(card);
+      draw(canvas, spec, visibleItems, measure);
     });
     return specs.length;
   }

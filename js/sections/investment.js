@@ -15,7 +15,7 @@ RENDERERS.investment = async function(container){
   // "Total Expenditure (UGX bn):") instead of real values. Excluded from every table —
   // this is a source-extraction artifact, not a real project attribute.
   function isCleanRow(r){ return r.agency !== 'Responsible Officer:'; }
-  function displayAgency(row){ return { ...row, agency: String(row.agency || '').replace(/\bNational Roads Authority\b/g, 'Former roads agency') }; }
+  function displayAgency(row){ return { ...row, agency: String(row.agency || '').replace(/\bDepartment of National Roads\b/g, 'Former roads agency') }; }
   function cleanRoads(fy){ return (byYear[fy]?.roads || []).filter(isCleanRow).map(displayAgency); }
   function cleanBridges(fy){ return (byYear[fy]?.bridges || []).filter(isCleanRow).map(displayAgency); }
 
@@ -133,7 +133,7 @@ RENDERERS.investment = async function(container){
 
     const agencyOptions = uniq([...roads, ...bridges].map(r=>r.agency));
     const valueFmt = v => (v===null||v===undefined) ? 'Not yet costed' : fmtNum(v,1)+' bn';
-    const timelineRender = (v,row) => esc((row.start_date||'Not supplied') + ' to ' + (row.end_date||'Not supplied'));
+    const timelineRender = (v,row) => esc((row.start_date||'Not recorded') + ' to ' + (row.end_date||'Not recorded'));
 
     panel.appendChild(sectionBlock(`Road projects: ${fy}`, roads.length+' road projects as published in this cycle’s Public Investment Plan.',
       dataTable({

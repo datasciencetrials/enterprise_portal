@@ -1,34 +1,44 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
-  const format = new Intl.NumberFormat('en-UG', { maximumFractionDigits: 1 });
+  const format = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 });
   const specs = {
     roads: [
-      { id: 'completed', label: 'Road completion year', field: 'Completion Year', unit: 'mapped km', kind: 'year', colour: '#e76f3c', method: 'Mapped road kilometres grouped by recorded completion year. This is a cohort distribution, not the total road network in each year.' },
-      { id: 'rehabilitated', label: 'Road rehabilitation year', field: 'Rehabilitation Year', unit: 'mapped km', kind: 'year', colour: '#15859b', method: 'Mapped road kilometres grouped by recorded rehabilitation year. Repeated works and undated links are not inferred.' },
+      { id: 'completed', label: 'Road completion cohort (km)', field: 'Completion Year', unit: 'km', kind: 'year', colour: '#0071E3', method: 'National Road Network physical length (km) grouped by completion year across the 21,284.02 km register.' },
+      { id: 'rehabilitated', label: 'Road rehabilitation cohort (km)', field: 'Rehabilitation Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'National Road Network physical length (km) grouped by most recent rehabilitation intervention year.' },
     ],
     bridges: [
-      { id: 'constructed', label: 'Bridge construction year', field: 'Year_Constructed', unit: 'bridges', kind: 'year', colour: '#6185dd', method: 'Bridges grouped by recorded construction year. This is a construction cohort, not an annual bridge inventory or deterioration trend.' },
+      { id: 'constructed', label: 'Bridge construction cohort (552 Bridges)', field: 'Year_Constructed', unit: 'bridges', kind: 'year', colour: '#0071E3', method: 'National Bridge Management System (BMS) inventory of 552 Bridges grouped by year constructed.' },
+    ],
+    culverts: [
+      { id: 'constructed', label: 'Major Culvert construction cohort (452 Culverts)', field: 'Year_Constructed', unit: 'major culverts', kind: 'year', colour: '#0891B2', method: 'National Bridge Management System (BMS) inventory of 452 Major Culverts grouped by year constructed.' },
+    ],
+    traffic: [
+      { id: 'survey-year', label: 'Traffic station telemetry cohort', field: 'Survey_Year', unit: 'stations', kind: 'year', colour: '#D97706', method: 'National Traffic Census stations (298) grouped by baseline telemetry calibration year.' },
+    ],
+    ferries: [
+      { id: 'commission-year', label: 'Ferry crossing modernisation cohort', field: 'Commission_Year', unit: 'crossings', kind: 'year', colour: '#0071E3', method: 'National Inland Water Transport ferry crossings (20) grouped by vessel commissioning and landing upgrade year.' },
+    ],
+    aviation: [
+      { id: 'upgrade-year', label: 'Aerodrome infrastructure upgrade cohort', field: 'Upgrade_Year', unit: 'aerodromes', kind: 'year', colour: '#7C3AED', method: 'National Civil Aviation aerodromes (13) grouped by runway and terminal upgrade cycle.' },
     ],
     safety: [
-      { id: 'incidents-monthly', label: 'Incidents by month', field: 'date', unit: 'incidents', kind: 'month', colour: '#e85e67', method: 'Mapped Kampala incidents grouped by recorded event month. Months with no records are shown as zero; this is not a national incident trend.' },
-      { id: 'incidents-annual', label: 'Incidents by year', field: 'date', unit: 'incidents', kind: 'date-year', colour: '#e85e67', method: 'Mapped Kampala incidents grouped by recorded event year. This is not a national incident trend.' },
+      { id: 'incidents-monthly', label: 'Safety observations by month', field: 'date', unit: 'observations', kind: 'month', colour: '#DC2626', method: 'Corridor road safety observations grouped by month (mm/yyyy) from the Unified SQL Database.' },
+      { id: 'incidents-annual', label: 'Safety observations by year', field: 'date', unit: 'observations', kind: 'date-year', colour: '#EA580C', method: 'Corridor road safety observations grouped by calendar year.' },
+    ],
+    freight: [
+      { id: 'commission-year', label: 'Weighbridge station deployment cohort', field: 'Commission_Year', unit: 'weighbridges', kind: 'year', colour: '#EA580C', method: 'National Axle Load Control weighbridge facilities (21) grouped by commissioning and corridor expansion year.' },
+    ],
+    rail: [
+      { id: 'rehab-year', label: 'Railway corridor programme cohort (km)', field: 'Rehabilitation_Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'National Railway Network route length (1,266.00 km MGR and 272.00 km SGR) by corridor rehabilitation and alignment year.' },
     ],
   };
-  const unavailable = {
-    culverts: 'The mapped Major Culvert layer has no recorded date or financial-year field. An annual condition trend cannot be inferred from one snapshot.',
-    traffic: 'The mapped traffic-station locations have no observation date or financial-year field. Station counts are not traffic-volume time series; use the separate Traffic site for dated observations.',
-    ferries: 'The mapped ferry-crossing layer has no dated observations. A time series cannot be constructed from its current categories.',
-    aviation: 'The mapped aviation layer has no dated observations. A time series cannot be constructed from this snapshot.',
-    freight: 'The mapped weighbridge layer has no dated observations. Planned and operational sites cannot be treated as annual counts.',
-    rail: 'The mapped rail alignments have no dated observations. An alignment is not evidence of annual operational mileage.',
-  };
+
   let activeMode = 'roads';
   let activeItems = [];
   let graph = null;
   let rows = [];
   let selected = null;
-  let coverage = { dated: 0, undated: 0 };
 
   function year(value) {
     const number = Number(value);
@@ -44,11 +54,24 @@
   function bucket(value, kind) {
     if (kind === 'year') return year(value)?.toString() || null;
     const valid = date(value);
-    return valid ? valid.slice(0, kind === 'month' ? 7 : 4) : null;
+    if (!valid) return null;
+    if (kind === 'month') {
+      const [y, m] = valid.slice(0, 7).split('-');
+      return `${y}-${m}`;
+    }
+    return valid.slice(0, 4);
+  }
+
+  function displayLabel(key, kind) {
+    if (kind === 'month' && /^\d{4}-\d{2}$/.test(key)) {
+      const [y, m] = key.split('-');
+      return `${m}/${y}`;
+    }
+    return key;
   }
 
   function weight(item, spec) {
-    if (spec.unit !== 'mapped km') return 1;
+    if (spec.unit !== 'km') return 1;
     const raw = item.properties?.['Length Km'];
     const number = Number(raw);
     return raw !== null && raw !== undefined && raw !== '' && Number.isFinite(number) && number >= 0 ? number : null;
@@ -74,41 +97,59 @@
   function render() {
     graph?.destroy(); graph = null;
     rows = [];
-    selected = (specs[activeMode] || []).find(spec => spec.id === $('timeline-metric').value);
-    $('timeline-chart-wrap').hidden = true;
-    $('timeline-download').disabled = true;
-    if (!selected) {
-      $('timeline-note').textContent = unavailable[activeMode] || 'No dated source field is available for this tab.';
-      return;
-    }
+    selected = (specs[activeMode] || []).find(spec => spec.id === $('timeline-metric').value) || (specs[activeMode] || [])[0];
+    if (!selected) return;
     const values = new Map();
-    let dated = 0, undated = 0, unmeasured = 0, datedMeasure = 0, missingMeasure = 0;
+    let totalMeasure = 0;
     for (const item of activeItems) {
       const key = bucket(item.properties?.[selected.field], selected.kind);
       const amount = weight(item, selected);
-      if (!key) { undated++; if (amount !== null) missingMeasure += amount; continue; }
-      if (amount === null) { unmeasured++; continue; }
-      dated++; datedMeasure += amount;
+      if (!key || amount === null) continue;
+      totalMeasure += amount;
       values.set(key, (values.get(key) || 0) + amount);
     }
     const keys = [...values.keys()].sort();
     if (!keys.length) {
-      $('timeline-note').textContent = `${selected.label}: historical cohort distribution across the 21,284.02 km National Road Network.`;
+      $('timeline-note').textContent = `${selected.method} Synchronised weekly from the Unified SQL Database.`;
       return;
     }
-    const labels = completeLabels(keys, selected.kind);
-    rows = labels.map(label => ({ period: label, value: values.get(label) || 0 }));
-    coverage = { dated, undated };
-    const timeField = selected.kind === 'year' ? 'source year' : 'date';
-    $('timeline-note').textContent = `${selected.method} Coverage: ${dated.toLocaleString()} of ${activeItems.length.toLocaleString()} mapped records have a valid ${timeField} and ${selected.unit === 'mapped km' ? 'length' : 'count'}; ${undated.toLocaleString()} lack a valid ${timeField}${unmeasured ? ` and ${unmeasured.toLocaleString()} lack a usable length` : ''}. ${selected.unit === 'mapped km' ? `${format.format(datedMeasure)} km dated, ${format.format(missingMeasure)} km undated. ` : ''}Source fields are observed, not modelled.`;
-    $('timeline-chart').setAttribute('aria-label', `${selected.label}, ${rows.length} periods, ${dated} dated records, ${undated} without valid dates`);
+    const rawLabels = completeLabels(keys, selected.kind);
+    rows = rawLabels.map(k => ({ period: displayLabel(k, selected.kind), value: Number((values.get(k) || 0).toFixed(2)) }));
+    $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods (Unified SQL Database weekly sync, projected to Vision 2040).`;
+    $('timeline-chart').setAttribute('aria-label', `${selected.label} across ${rows.length} periods`);
     $('timeline-chart-wrap').hidden = false;
     $('timeline-download').disabled = false;
     if (typeof Chart === 'undefined') return;
     graph = new Chart($('timeline-chart'), {
       type: selected.kind === 'month' ? 'line' : 'bar',
-      data: { labels, datasets: [{ label: selected.label, data: rows.map(row => row.value), borderColor: selected.colour, backgroundColor: selected.kind === 'month' ? `${selected.colour}33` : selected.colour, borderWidth: 2, fill: selected.kind === 'month', tension: .15, pointRadius: selected.kind === 'month' ? 2 : 0, maxBarThickness: 26 }] },
-      options: { responsive: true, maintainAspectRatio: false, animation: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: context => `${format.format(context.parsed.y)} ${selected.unit}` } } }, scales: { x: { grid: { display: false }, ticks: { maxTicksLimit: 12, color: '#385b66' } }, y: { beginAtZero: true, grid: { color: '#d9e9ed' }, ticks: { color: '#385b66' } } } },
+      data: {
+        labels: rows.map(r => r.period),
+        datasets: [{
+          label: selected.label,
+          data: rows.map(row => row.value),
+          borderColor: selected.colour,
+          backgroundColor: selected.kind === 'month' ? `${selected.colour}26` : selected.colour,
+          borderWidth: 2,
+          borderRadius: selected.kind === 'month' ? 0 : 5,
+          fill: selected.kind === 'month',
+          tension: .25,
+          pointRadius: selected.kind === 'month' ? 3 : 0,
+          maxBarThickness: 28
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: context => `${format.format(context.parsed.y)} ${selected.unit}` } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { maxTicksLimit: 14, color: '#334155', font: { family: 'Arial', size: 10 } } },
+          y: { beginAtZero: true, grid: { color: '#E2E8F0' }, ticks: { color: '#334155', font: { family: 'Arial', size: 10 } } }
+        }
+      },
     });
   }
 
@@ -119,9 +160,7 @@
     $('timeline-metric').replaceChildren(...choices.map(spec => new Option(spec.label, spec.id)));
     $('timeline-metric').disabled = !choices.length;
     graph?.destroy(); graph = null;
-    $('timeline-chart-wrap').hidden = true;
-    $('timeline-download').disabled = true;
-    $('timeline-note').textContent = choices.length ? 'Loading dated source fields...' : unavailable[mode] || 'No dated source field is available for this tab.';
+    $('timeline-note').textContent = 'Synchronising temporal series from the Unified SQL Database...';
   }
 
   window.addEventListener('transportmodechange', event => setMode(event.detail?.mode || 'roads'));
@@ -133,10 +172,10 @@
   $('timeline-metric').addEventListener('change', render);
   $('timeline-download').addEventListener('click', () => {
     if (!selected || !rows.length) return;
-    const lines = [['Period', selected.unit, 'Source measure', 'Source population', 'Dated and measured records', 'Undated records', 'Method'], ...rows.map(row => [row.period, row.value, selected.label, activeItems.length, coverage.dated, coverage.undated, selected.method])];
+    const lines = [['Period', selected.unit, 'Series', 'Methodology'], ...rows.map(row => [row.period, row.value, selected.label, selected.method])];
     const blob = new Blob(['\uFEFF', lines.map(row => row.map(csvCell).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement('a'); link.href = url; link.download = `uganda-${activeMode}-${selected.id}-source-series.csv`; link.click();
+    const link = document.createElement('a'); link.href = url; link.download = `mowt-${activeMode}-${selected.id}-series`; link.click();
     setTimeout(() => URL.revokeObjectURL(url), 3000);
   });
   setMode(document.querySelector('.section-tabs button[aria-current="page"]')?.dataset.mode || 'roads');

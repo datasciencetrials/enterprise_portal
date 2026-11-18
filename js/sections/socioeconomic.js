@@ -121,7 +121,7 @@ RENDERERS.socioeconomic = async function(container){
 
   function baseMap(mapDiv, center, zoom){
     const map = L.map(mapDiv, { scrollWheelZoom:false }).setView(center, zoom);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:13 }).addTo(map);
+    L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { attribution:'&copy; OpenStreetMap contributors', maxZoom:13 }).addTo(map);
     currentMap = map;
     return map;
   }

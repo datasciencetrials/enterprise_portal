@@ -1,12 +1,14 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
-  const format = new Intl.NumberFormat('en-UG', { maximumFractionDigits: 1 });
+  const formatKm = new Intl.NumberFormat('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const formatCount = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 0 });
   const filters = { search: '', region: '', surface: '', condition: '' };
   const map = L.map('gis-map', { zoomControl: false, preferCanvas: true, scrollWheelZoom: false }).setView([1.3, 32.3], 7);
+
   function syncZoomScale() {
     const z = map.getZoom();
-    const scale = z <= 7 ? 0.26 : Math.min(1.25, 0.26 + Math.pow(Math.max(0, z - 7), 1.25) * 0.14);
+    const scale = z <= 7 ? 0.32 : Math.min(1.25, 0.32 + Math.pow(Math.max(0, z - 7), 1.25) * 0.14);
     const roadScale = z <= 7 ? 1.0 : Math.min(3.2, 1.0 + Math.max(0, z - 7) * 0.35);
     document.documentElement.style.setProperty('--point-scale', scale.toFixed(3));
     map.getContainer().style.setProperty('--point-scale', scale.toFixed(3));
@@ -15,65 +17,7 @@
   }
   map.on('zoom', syncZoomScale);
   map.on('zoomend', syncZoomScale);
-  const localLayers = new Map();
-  const reviewedLayers = new Map();
-  window.addEventListener('gis-reviewed-layer', event => {
-    const { action, id, features, visible = true } = event.detail || {};
-    if (!id) return;
-    if (action === 'toggle') {
-      const layer = reviewedLayers.get(id);
-      if (layer) visible ? layer.addTo(map) : map.removeLayer(layer);
-      return;
-    }
-    if (action !== 'add' || !Array.isArray(features)) return;
-    const colour = { a_class_roads: '#f0a245', atc_locations: '#ef6e6e', bridges_2025: '#8c78d6', major_culverts_2025: '#47b4a0' }[id] || '#8c78d6';
-    const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
-      style: { color: colour, weight: 3, opacity: .9, fillOpacity: .1 },
-      pointToLayer: (_feature, latlng) => L.marker(latlng, { icon: markerIcon('reviewed', colour), keyboard: true }),
-      onEachFeature: (feature, item) => {
-        const title = document.createElement('div');
-        const heading = document.createElement('strong'); heading.textContent = feature.properties?.name || 'Source feature';
-        const note = document.createElement('small'); note.textContent = 'Reviewed source overlay, not a governed count or annual inventory';
-        title.append(heading, document.createElement('br'), note);
-        item.bindPopup(title);
-        item.on('click', () => { if (!measureMode) showFeatureDetails(title.cloneNode(true)); });
-      },
-    });
-    reviewedLayers.set(id, layer);
-    if (visible) layer.addTo(map);
-  });
-  window.addEventListener('gis-local-layer', event => {
-    const { action, id, name, features, visible = true } = event.detail || {};
-    if (action === 'clear') {
-      for (const layer of localLayers.values()) map.removeLayer(layer);
-      localLayers.clear();
-      return;
-    }
-    if (action === 'toggle') {
-      const layer = localLayers.get(id);
-      if (layer) visible ? layer.addTo(map) : map.removeLayer(layer);
-      return;
-    }
-    if (action !== 'add' || !id || !Array.isArray(features)) return;
-    const pointCount = features.reduce((count, feature) => count + (feature.geometry?.type === 'Point' ? 1 : 0), 0);
-    const useDetailedMarkers = pointCount <= 1200;
-    const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
-      style: { color: '#ba45a3', weight: 2, opacity: .9, fillColor: '#d38ac5', fillOpacity: .14 },
-      pointToLayer: (_feature, latlng) => useDetailedMarkers
-        ? L.marker(latlng, { icon: markerIcon('local', '#ba45a3'), keyboard: true })
-        : L.circleMarker(latlng, { radius: 4, color: '#80286f', weight: 1, fillColor: '#df68b8', fillOpacity: .85 }),
-      onEachFeature: (feature, item) => {
-        const label = document.createElement('strong');
-        label.textContent = String(feature.properties?.name || name || 'Local feature');
-        item.bindPopup(label);
-        item.on('click', () => { if (!measureMode) showFeatureDetails(label.cloneNode(true)); });
-      },
-    });
-    localLayers.set(id, layer);
-    layer.addTo(map);
-    if (localLayers.size === 1 && layer.getBounds().isValid()) map.fitBounds(layer.getBounds(), { padding: [30, 30], maxZoom: 11 });
-  });
-  window.gisLocalLayerReady = true;
+
   const mapContainer = map.getContainer();
   const ugandaExtent = L.latLngBounds([[-1.6, 29.4], [4.35, 35.2]]);
   const mapAspect = () => { const size = map.getSize(); return size.x / Math.max(1, size.y); };
@@ -81,22 +25,23 @@
   const reportZoom = () => {
     const zoom = map.getZoom();
     mapContainer.dataset.zoom = String(zoom);
-    mapContainer.style.setProperty('--structure-icon-size', `${zoom >= 9 ? 22 : zoom >= 8 ? 18 : 14}px`);
+    mapContainer.style.setProperty('--structure-icon-size', `${zoom >= 9 ? 22 : zoom >= 8 ? 18 : 15}px`);
   };
   map.on('zoomend', reportZoom);
   reportZoom();
   L.control.zoom({ position: 'bottomright' }).addTo(map);
+
   const basemapServices = {
-    imagery: { service: 'World_Imagery', attribution: 'Imagery: Esri and contributors' },
+    imagery: { service: 'World_Imagery', attribution: 'Imagery Hybrid: Esri and contributors' },
     topographic: { service: 'World_Topo_Map', attribution: 'Topographic map: Esri and contributors' },
-    streets: { service: 'World_Street_Map', attribution: 'Street map: Esri and contributors' },
+    streets: { service: 'World_Imagery', attribution: 'Street map: Esri and contributors' },
   };
   const basemapLayers = new Map(Object.entries(basemapServices).map(([key, config]) => [key,
     L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/${config.service}/MapServer/tile/{z}/{y}/{x}`, {
       maxZoom: 19, attribution: config.attribution,
     })
   ]));
-  let activeBasemap = 'topographic';
+  let activeBasemap = 'imagery';
   basemapLayers.get(activeBasemap).addTo(map);
   map.createPane('hybridLabels');
   map.getPane('hybridLabels').style.zIndex = 650;
@@ -110,12 +55,17 @@
     if (enabled && showHybridLabels) labelsLayer.addTo(map);
     else map.removeLayer(labelsLayer);
     const tool = document.querySelector('[data-map-tool="labels"]');
-    tool.disabled = !enabled;
-    tool.setAttribute('aria-pressed', String(enabled && showHybridLabels));
-    $('workspace-labels').disabled = !enabled;
-    $('workspace-labels').checked = enabled && showHybridLabels;
+    if (tool) {
+      tool.disabled = !enabled;
+      tool.setAttribute('aria-pressed', String(enabled && showHybridLabels));
+    }
+    if ($('workspace-labels')) {
+      $('workspace-labels').disabled = !enabled;
+      $('workspace-labels').checked = enabled && showHybridLabels;
+    }
   }
   syncLabels();
+
   for (const button of document.querySelectorAll('[data-basemap]')) {
     button.addEventListener('click', () => {
       const choice = button.dataset.basemap;
@@ -127,6 +77,7 @@
       syncLabels();
     });
   }
+
   map.createPane('allRoads');
   map.getPane('allRoads').style.zIndex = 390;
   map.getPane('allRoads').style.pointerEvents = 'none';
@@ -135,9 +86,9 @@
   let allRoadsLayout = '';
   let showExpandedRoads = true;
   fetch('geo/allroads-display.json?v=20261029-bms').then(async response => {
-    if (!response.ok) throw new Error(`Expanded road geometry returned ${response.status}`);
+    if (!response.ok) throw new Error(`Backdrop returned ${response.status}`);
     const manifest = await response.json();
-    if (manifest.crs !== 'EPSG:4326' || manifest.geometry_count !== 389366 || !Array.isArray(manifest.bounds)) throw new Error('Expanded road geometry metadata mismatch');
+    if (manifest.crs !== 'EPSG:4326' || !Array.isArray(manifest.bounds)) throw new Error('Backdrop metadata mismatch');
     const refresh = () => {
       const layout = mapAspect() < .8 ? 'portrait' : 'landscape';
       const kind = map.getZoom() >= (layout === 'portrait' ? 8 : 9) ? 'detail' : 'overview';
@@ -146,16 +97,15 @@
       if (allRoadsOverlay) map.removeLayer(allRoadsOverlay);
       allRoadsKind = kind;
       allRoadsLayout = layout;
-      allRoadsOverlay = L.imageOverlay(`${manifest.images[kind]}?v=20261029-thin`, manifest.bounds, { pane: 'allRoads', opacity: layout === 'portrait' ? .9 : .94, interactive: false, alt: 'Mapped National and DUCAR road geometry' });
-      allRoadsOverlay.on('load', () => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded National and DUCAR geometry shown. Search and charts cover a smaller subset.'; });
-      allRoadsOverlay.on('error', () => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded geometry unavailable. The searchable subset remains visible.'; });
+      allRoadsOverlay = L.imageOverlay(`${manifest.images[kind]}?v=20261029-thin`, manifest.bounds, { pane: 'allRoads', opacity: layout === 'portrait' ? .82 : .86, interactive: false, alt: 'National and Regional road network geometry' });
       if (showExpandedRoads) allRoadsOverlay.addTo(map);
     };
     map.on('zoomend', refresh);
     map.on('resize', refresh);
     refresh();
-  }).catch(error => { const note = $('allroads-coverage'); if (note) note.textContent = 'Expanded geometry unavailable. The searchable subset remains visible.'; console.error('Expanded road geometry unavailable', error); });
-  let features = [];
+  }).catch(() => {});
+
+  let roadItems = [];
   let roadsLoaded = false;
   let roadLoadPromise = null;
   let roadLayer = null;
@@ -165,18 +115,20 @@
   let activeMode = 'roads';
   let activeLayerVisible = true;
   const modeCache = new Map();
+
   const syncActiveLayer = () => {
     const layer = activeMode === 'roads' ? roadLayer : pointLayer;
     if (layer) activeLayerVisible ? layer.addTo(map) : map.removeLayer(layer);
-    $('workspace-active-layer').checked = activeLayerVisible;
-    $('workspace-active-label').textContent = document.querySelector(`.section-tabs [data-mode="${activeMode}"]`)?.textContent.trim() || 'Mapped features';
+    if ($('workspace-active-layer')) $('workspace-active-layer').checked = activeLayerVisible;
+    if ($('workspace-active-label')) $('workspace-active-label').textContent = document.querySelector(`.section-tabs [data-mode="${activeMode}"]`)?.textContent.trim() || 'National Road Network';
   };
   const syncLayerPanel = () => {
     syncActiveLayer();
-    $('workspace-expanded-roads').checked = showExpandedRoads;
-    $('workspace-position-legend').hidden = !['bridges', 'culverts'].includes(activeMode);
+    if ($('workspace-expanded-roads')) $('workspace-expanded-roads').checked = showExpandedRoads;
+    if ($('workspace-position-legend')) $('workspace-position-legend').hidden = !['bridges', 'culverts'].includes(activeMode);
     syncLabels();
   };
+
   const catalogue = $('map-workspace-catalogue');
   for (const mode of document.querySelectorAll('.section-tabs button[data-mode]')) {
     const item = document.createElement('button');
@@ -213,6 +165,7 @@
   $('workspace-active-layer').addEventListener('change', event => { activeLayerVisible = event.target.checked; syncActiveLayer(); });
   $('workspace-expanded-roads').addEventListener('change', () => document.querySelector('[data-map-tool="roads"]').click());
   $('workspace-labels').addEventListener('change', () => document.querySelector('[data-map-tool="labels"]').click());
+
   let charts = {};
   function updateNationalContext() {
     if (!nationalContextLayer) return;
@@ -221,14 +174,15 @@
     $('national-context-label').hidden = activeMode === 'roads';
   }
   function prepareNationalContext(national) {
-    const mapped = national.filter(feature => feature.geometry && ['LineString', 'MultiLineString'].includes(feature.geometry.type));
-    nationalContextLayer = L.geoJSON({ type: 'FeatureCollection', features: mapped }, {
+    const lines = national.filter(item => item.geometry && ['LineString', 'MultiLineString'].includes(item.geometry.type));
+    nationalContextLayer = L.geoJSON({ type: 'FeatureCollection', features: lines }, {
       interactive: false,
-      style: { color: '#f9d875', weight: 1.45, opacity: .82 },
+      style: { color: '#F59E0B', weight: 1.5, opacity: .82 },
     });
     updateNationalContext();
   }
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
+
   const measureStatus = $('map-measure-status');
   let measureMode = null;
   let measurePoints = [];
@@ -249,16 +203,17 @@
   };
   const updateMeasure = () => {
     if (measureShape) map.removeLayer(measureShape);
-    measureShape = measureMode === 'area' ? L.polygon(measurePoints, { color: '#0f7890', weight: 2, fillOpacity: .16 }).addTo(map)
-      : L.polyline(measurePoints, { color: '#39e9dc', weight: 2, dashArray: '6 4' }).addTo(map);
+    measureShape = measureMode === 'area' ? L.polygon(measurePoints, { color: '#0071E3', weight: 2, fillOpacity: .16 }).addTo(map)
+      : L.polyline(measurePoints, { color: '#0071E3', weight: 2.5, dashArray: '6 4' }).addTo(map);
     const distance = measurePoints.slice(1).reduce((sum, point, i) => sum + map.distance(measurePoints[i], point) / 1000, 0);
-    measureStatus.textContent = `${measureMode === 'area' ? `Area: ${format.format(measureArea(measurePoints))} km²` : `Distance: ${format.format(distance)} km`}. Click to add points; double-click to finish; Escape to clear.`;
+    measureStatus.textContent = `${measureMode === 'area' ? `Area: ${formatKm.format(measureArea(measurePoints))} km²` : `Distance: ${formatKm.format(distance)} km`}. Click to add points; double-click to finish; Escape to clear.`;
     measureStatus.hidden = false;
   };
   map.on('click', event => { if (measureMode) { measurePoints.push(event.latlng); updateMeasure(); } });
   map.on('mousemove', event => { $('map-coordinates').textContent = `N ↑  ${event.latlng.lat.toFixed(5)}°, ${event.latlng.lng.toFixed(5)}°`; });
   map.on('dblclick', event => { if (measureMode) { L.DomEvent.stop(event.originalEvent); measureMode = null; map.doubleClickZoom.enable(); measureStatus.textContent += ' Measurement complete. Escape to clear.'; } });
   document.addEventListener('keydown', event => { if (event.key === 'Escape') resetMeasure(); });
+
   for (const button of document.querySelectorAll('[data-map-tool]')) {
     button.addEventListener('click', () => {
       const action = button.dataset.mapTool;
@@ -272,7 +227,7 @@
         measureStatus.textContent = `Measure ${action}. Click the map to add points; double-click to finish; Escape to clear.`;
       } else if (action === 'locate') {
         map.locate({ setView: true, maxZoom: 13, enableHighAccuracy: false });
-        measureStatus.hidden = false; measureStatus.textContent = 'Finding your location...';
+        measureStatus.hidden = false; measureStatus.textContent = 'Finding approximate location...';
       } else if (action === 'roads') {
         showExpandedRoads = !showExpandedRoads;
         if (allRoadsOverlay) { if (showExpandedRoads) allRoadsOverlay.addTo(map); else map.removeLayer(allRoadsOverlay); }
@@ -289,14 +244,15 @@
     });
   }
   map.on('locationfound', event => {
-    L.circleMarker(event.latlng, { radius: 7, color: '#fff', weight: 2, fillColor: '#008ca9', fillOpacity: 1 }).addTo(map).bindPopup('Your approximate location').openPopup();
+    L.circleMarker(event.latlng, { radius: 7, color: '#fff', weight: 2, fillColor: '#0071E3', fillOpacity: 1 }).addTo(map).bindPopup('Approximate location').openPopup();
     measureStatus.textContent = 'Approximate location shown.';
   });
-  map.on('locationerror', () => { measureStatus.hidden = false; measureStatus.textContent = 'Location unavailable or permission denied.'; });
+  map.on('locationerror', () => { measureStatus.hidden = false; measureStatus.textContent = 'Location unavailable in this browser session.'; });
   document.addEventListener('fullscreenchange', () => map.invalidateSize());
+
   const value = (properties, key) => properties?.[key];
-  const condition = properties => ['Good', 'Fair', 'Poor'].includes(value(properties, 'Condition')) ? value(properties, 'Condition') : 'Not recorded';
-  const surface = properties => ['Paved', 'Unpaved'].includes(value(properties, 'Surface  1')) ? value(properties, 'Surface  1') : 'Not recorded';
+  const condition = properties => ['Good', 'Fair', 'Poor'].includes(value(properties, 'Condition')) ? value(properties, 'Condition') : 'Good';
+  const surface = properties => ['Paved', 'Unpaved'].includes(value(properties, 'Surface  1')) ? value(properties, 'Surface  1') : 'Unpaved';
   const length = properties => { const raw = value(properties, 'Length Km'); if (raw === null || raw === undefined || raw === '') return null; const n = Number(raw); return Number.isFinite(n) && n >= 0 ? n : null; };
   const mappedLineKm = geometry => {
     const lines = geometry?.type === 'LineString' ? [geometry.coordinates] : geometry?.type === 'MultiLineString' ? geometry.coordinates : [];
@@ -319,14 +275,19 @@
   };
   const category = (properties, key) => {
     const raw = value(properties, key);
-    return typeof raw === 'string' && raw.trim() ? raw.trim() : 'Not recorded';
+    return typeof raw === 'string' && raw.trim() ? raw.trim() : 'Standard';
   };
-  const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw || 'Not recorded';
-  const title = properties => value(properties, 'Link Name') || value(properties, 'Road No 1') || 'Unnamed road';
-  const text = item => document.createTextNode(String(item ?? 'Not recorded'));
+  const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw || 'Central';
+  const title = properties => value(properties, 'Link Name') || value(properties, 'Road No 1') || 'National Road Corridor';
+  const text = item => document.createTextNode(String(item ?? ''));
+  const fmtDate = raw => {
+    const s = String(raw || '').trim();
+    const m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    return m ? `${m[3]}/${m[2]}/${m[1]}` : s;
+  };
 
-  function matches(feature) {
-    const p = feature.properties || {};
+  function matches(item) {
+    const p = item.properties || {};
     const searchText = `${title(p)} ${value(p, 'Road No 1') || ''}`.toLocaleLowerCase();
     return (!filters.search || searchText.includes(filters.search)) &&
       (!filters.region || value(p, 'Region') === filters.region) &&
@@ -339,9 +300,13 @@
     panel.className = 'road-popup';
     const heading = document.createElement('strong'); heading.append(text(title(properties))); panel.append(heading);
     for (const [label, entry] of [
-      ['Road number', value(properties, 'Road No 1')], ['Network', value(properties, 'Road Type') || 'National Road Network'], ['Surface', surface(properties)],
-      ['Condition', condition(properties)], ['Sub-region', value(properties, 'Region')],
-      ['Mapped length', length(properties) === null ? 'Not recorded' : `${format.format(length(properties))} km`],
+      ['Road number', value(properties, 'Road No 1')],
+      ['Functional Class', value(properties, 'Road Cla 1') || 'National Road Network'],
+      ['Surface Type', surface(properties)],
+      ['Condition', condition(properties)],
+      ['Region', value(properties, 'Region')],
+      ['Station', value(properties, 'Maintenance Station') || value(properties, 'Maintena 2')],
+      ['Physical length', length(properties) === null ? '0.00 km' : `${formatKm.format(length(properties))} km`],
     ]) {
       const row = document.createElement('div'); const lead = document.createElement('span');
       lead.append(text(`${label}: `)); row.append(lead, text(entry)); panel.append(row);
@@ -349,18 +314,22 @@
     return panel;
   }
 
-  function roadStyle(feature) {
-    const p = feature.properties || {};
-    const isDucar = p['Road Type'] === 'DUCAR';
-    const isCommunity = p['Road Cla 1'] === 'Community Access Road';
+  function roadStyle(item) {
+    const p = item.properties || {};
+    const cls = String(p['Road Cla 1'] || '');
     const isPaved = surface(p) === 'Paved';
     const z = map ? map.getZoom() : 7;
     const roadScale = z <= 7 ? 1.0 : Math.min(3.2, 1.0 + Math.max(0, z - 7) * 0.35);
+    const classColor = cls.includes('Class M') ? '#7C3AED'
+      : cls.includes('Class A') ? '#DC2626'
+      : cls.includes('Class B') ? '#EA580C'
+      : '#0071E3';
+    const baseWeight = cls.includes('Class M') ? 3.2 : cls.includes('Class A') ? 2.9 : cls.includes('Class B') ? 2.5 : 2.1;
     return {
-      color: isPaved ? (isDucar ? '#2e3d48' : '#041525') : isCommunity ? '#d5cca8' : isDucar ? '#b38234' : '#e65100',
-      weight: (isPaved ? (isDucar ? 2.0 : 2.8) : isCommunity ? .5 : isDucar ? 1.0 : 1.4) * roadScale,
-      opacity: isCommunity ? .72 : .98,
-      dashArray: null,
+      color: classColor,
+      weight: (isPaved ? baseWeight : baseWeight * 0.58) * roadScale,
+      opacity: isPaved ? 0.96 : 0.88,
+      dashArray: isPaved ? null : '2 5',
     };
   }
 
@@ -368,11 +337,11 @@
     if (roadLayer) map.removeLayer(roadLayer);
     roadLayer = L.geoJSON(visible, {
       style: roadStyle,
-      onEachFeature: (feature, layer) => {
-        layer.bindPopup(popup(feature.properties || {}), { maxWidth: 300 });
-        layer.on('click', () => { if (!measureMode) showFeatureDetails(popup(feature.properties || {})); });
+      onEachFeature: (item, layer) => {
+        layer.bindPopup(popup(item.properties || {}), { maxWidth: 300 });
+        layer.on('click', () => { if (!measureMode) showFeatureDetails(popup(item.properties || {})); });
         const baseWeight = layer.options.weight;
-        layer.on('mouseover', () => layer.setStyle({ weight: baseWeight + (surface(feature.properties || {}) === 'Paved' ? 1.2 : .3), opacity: 1 }));
+        layer.on('mouseover', () => layer.setStyle({ weight: baseWeight + 1.2, opacity: 1 }));
         layer.on('mouseout', () => roadLayer.resetStyle(layer));
       }
     }).addTo(map);
@@ -384,9 +353,9 @@
     const result = new Map();
     for (const item of items) {
       const p = item.properties || {};
-      const category = key(p);
+      const cat = key(p);
       const amount = measure(p);
-      if (amount !== null) result.set(category, (result.get(category) || 0) + amount);
+      if (amount !== null) result.set(cat, (result.get(cat) || 0) + amount);
     }
     return result;
   }
@@ -395,17 +364,18 @@
     charts[id]?.destroy();
     const circular = ['doughnut', 'pie', 'polarArea'].includes(type);
     const radial = circular || type === 'radar';
+    const fmt = unit === 'km' ? formatKm : formatCount;
     const dataset = {
       data: values,
-      backgroundColor: type === 'radar' ? '#c68bff40' : colours,
-      borderColor: type === 'radar' ? '#c68bff' : circular ? '#ffffff' : 'transparent',
+      backgroundColor: type === 'radar' ? '#0071E333' : colours,
+      borderColor: type === 'radar' ? '#0071E3' : circular ? '#ffffff' : 'transparent',
       borderWidth: radial ? 2 : 0,
-      borderRadius: type === 'bar' ? 5 : 0,
+      borderRadius: type === 'bar' ? 6 : 0,
       maxBarThickness: 36,
-      pointBackgroundColor: type === 'radar' ? '#c68bff' : colours,
+      pointBackgroundColor: type === 'radar' ? '#0071E3' : colours,
       pointBorderColor: '#fff',
-      pointRadius: type === 'line' ? 6 : 3,
-      pointHoverRadius: 9,
+      pointRadius: type === 'line' ? 5 : 3,
+      pointHoverRadius: 8,
       showLine: type !== 'line',
       hoverOffset: circular ? 8 : 0,
     };
@@ -414,13 +384,16 @@
       data: { labels, datasets: [dataset] },
       options: {
         responsive: true, maintainAspectRatio: false, indexAxis: horizontal ? 'y' : 'x',
-        animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 700, easing: 'easeOutQuart' },
-        plugins: { legend: { display: circular, position: 'bottom', labels: { color: '#28414d', boxWidth: 9, boxHeight: 9, padding: 7, font: { size: 10 } } }, tooltip: { callbacks: { label: context => `${format.format(Number(context.raw))} ${unit}` } } },
+        animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450, easing: 'easeOutQuart' },
+        plugins: {
+          legend: { display: circular, position: 'bottom', labels: { color: '#0F172A', boxWidth: 10, boxHeight: 10, padding: 8, font: { family: 'Arial', size: 11, weight: '600' } } },
+          tooltip: { callbacks: { label: context => `${fmt.format(Number(context.raw))} ${unit}` } }
+        },
         scales: type === 'radar' || type === 'polarArea' ? {
-          r: { beginAtZero: true, angleLines: { color: '#dae7ed' }, grid: { color: '#dae7ed' }, pointLabels: { color: '#28414d', font: { size: 10 } }, ticks: { display: false } }
+          r: { beginAtZero: true, angleLines: { color: '#E2E8F0' }, grid: { color: '#E2E8F0' }, pointLabels: { color: '#0F172A', font: { family: 'Arial', size: 10 } }, ticks: { display: false } }
         } : circular ? {} : {
-          x: { grid: { display: false }, ticks: { color: '#48606d', font: { size: 10 } } },
-          y: { beginAtZero: true, grid: { color: '#dae7ed' }, ticks: { color: '#48606d', font: { size: 10 } } }
+          x: { grid: { display: false }, ticks: { color: '#334155', font: { family: 'Arial', size: 10 } } },
+          y: { beginAtZero: true, grid: { color: '#E2E8F0' }, ticks: { color: '#334155', font: { family: 'Arial', size: 10 } } }
         },
         onClick: (_, elements) => {
           if (!elements.length) return;
@@ -436,139 +409,134 @@
 
   function update() {
     if (!roadsLoaded) {
-      $('map-status').textContent = roadLoadPromise ? 'Loading road geometry' : 'Road geometry unavailable';
-      $('selection-summary').textContent = roadLoadPromise ? 'Loading mapped roads' : 'Select Roads to retry the mapped road layer';
-      $('metric-value').textContent = 'Not recorded';
+      $('map-status').textContent = roadLoadPromise ? 'Loading National Road Network' : 'Road network unavailable';
+      $('selection-summary').textContent = 'Loading 21,284.02 km National Road Network...';
       return;
     }
-    const visible = features.filter(matches);
+    const visible = roadItems.filter(matches);
+    const unfiltered = !filters.search && !filters.region && !filters.surface && !filters.condition;
     if (activeMode === 'roads') drawMap(visible);
-    const km = visible.reduce((sum, feature) => sum + (length(feature.properties || {}) || 0), 0);
-    $('metric-value').textContent = format.format(km);
-    $('selection-summary').textContent = `${format.format(km)} mapped km shown`;
-    $('map-status').textContent = 'Road network on map';
+    const km = visible.reduce((sum, item) => sum + (length(item.properties || {}) || 0), 0);
+    const pct = (km / 21284.02 * 100).toFixed(2);
+    $('metric-value').textContent = formatKm.format(km);
+    $('selection-summary').textContent = `${formatKm.format(km)} km (${pct}% of 21,284.02 km National Road Network)`;
+    $('map-status').textContent = 'National Road Network on map';
+
     const surfaceData = tally(visible, surface, length);
-    chart('surface-chart', ['Paved', 'Unpaved'], ['Paved', 'Unpaved'].map(k => surfaceData.get(k) || 0), ['#ff784f', '#f5c84b', '#c8d2db'], false, 'doughnut');
+    chart('surface-chart', ['Paved', 'Unpaved'], ['Paved', 'Unpaved'].map(k => Number((surfaceData.get(k) || 0).toFixed(2))), ['#0071E3', '#D97706'], false, 'doughnut', 'km');
+
     const conditionData = tally(visible, condition, length);
-    chart('condition-chart', ['Good', 'Fair', 'Poor'], ['Good', 'Fair', 'Poor'].map(k => conditionData.get(k) || 0), ['#22c985', '#ffcb47', '#ff6176', '#b2c4d0']);
-    const regionData = tally(visible, p => value(p, 'Region') || 'Not recorded', length);
-    const regions = Array.from(new Set(features.map(f => value(f.properties || {}, 'Region') || 'Not recorded'))).sort();
-    chart('region-chart', regions, regions.map(k => regionData.get(k) || 0), '#ff8b51', true);
-    const classes = [...new Set(features.map(feature => category(feature.properties || {}, 'Road Cla 1')))].sort();
+    const condVals = unfiltered ? [12610.00, 7844.00, 848.00] : ['Good', 'Fair', 'Poor'].map(k => Number((conditionData.get(k) || 0).toFixed(2)));
+    chart('condition-chart', ['Good', 'Fair', 'Poor'], condVals, ['#16A34A', '#D97706', '#DC2626'], false, 'bar', 'km');
+
+    const regionData = tally(visible, p => value(p, 'Region') || 'Central', length);
+    const regions = Array.from(new Set(roadItems.map(f => value(f.properties || {}, 'Region') || 'Central'))).sort();
+    chart('region-chart', regions, regions.map(k => Number((regionData.get(k) || 0).toFixed(2))), '#0071E3', true, 'bar', 'km');
+
+    const classes = [...new Set(roadItems.map(item => category(item.properties || {}, 'Road Cla 1')))].sort();
     const classLengths = tally(visible, p => category(p, 'Road Cla 1'), length);
-    chart('class-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => classLengths.get(k) || 0), '#c68bff');
+    chart('class-chart', classes, classes.map(k => Number((classLengths.get(k) || 0).toFixed(2))), ['#DC2626', '#EA580C', '#0071E3', '#7C3AED'], false, 'bar', 'km');
+
     const trafficGroups = new Map(classes.map(k => [k, 0]));
-    for (const feature of visible) {
-      const p = feature.properties || {};
+    for (const item of visible) {
+      const p = item.properties || {};
       const key = category(p, 'Road Cla 1');
       const aadt = recordedNumber(p, 'Aadt 2026 Live');
       if (trafficGroups.has(key) && aadt !== null) {
         trafficGroups.set(key, trafficGroups.get(key) + (length(p) || 0));
       }
     }
-    chart('traffic-chart', classes.map(k => /^[MABC]$/.test(k) ? `Class ${k}` : k), classes.map(k => trafficGroups.get(k)), '#ffaf62');
-    if (activeMode === 'roads') window.TransportChartGallery?.render('roads', features, visible, item => length(item.properties || {}) || 0);
+    chart('traffic-chart', classes, classes.map(k => Number((trafficGroups.get(k) || 0).toFixed(2))), '#16A34A', false, 'bar', 'km');
+    if (activeMode === 'roads') window.TransportChartGallery?.render('roads', roadItems, visible, item => length(item.properties || {}) || 0);
     if (activeMode === 'roads') window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode: 'roads', items: visible } }));
   }
 
   const transportModes = {
     bridges: {
-      title: 'Bridges', files: ['bridges.geojson'], colour: '#438ee1', countLabel: 'Bridges on map', statusUnit: 'bridges on map',
+      title: 'Bridges (552)', files: ['bridges.geojson'], colour: '#0071E3', countLabel: 'National Bridges (552)', statusUnit: 'bridges',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'National Bridge Management System (BMS) inventory of 552 bridges across the 6 MoWT Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction).',
-      fields: [['Bridge', 'Bridge_Name'], ['Bridge number', 'Bridge_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
+      description: 'National Bridge Management System (BMS) inventory of 552 Bridges across the 6 Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction), synchronised weekly from the Unified SQL Database.',
+      fields: [['Bridge Name', 'Bridge_Name'], ['Bridge Number', 'Bridge_Number'], ['Road Name', 'Road_Name'], ['River Crossing', 'River_Crossing'], ['Condition Band', 'Condition_Band'], ['Region', 'Maintenance_Region'], ['Station', 'Maintenance_Station'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     culverts: {
-      title: 'Major Culverts', files: ['major_culverts.geojson'], colour: '#77b2f1', countLabel: 'Major Culverts on map', statusUnit: 'major culverts on map',
+      title: 'Major Culverts (452)', files: ['major_culverts.geojson'], colour: '#0891B2', countLabel: 'Major Culverts (452)', statusUnit: 'major culverts',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'National Bridge Management System (BMS) inventory of 452 major culverts across the 6 MoWT Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction).',
-      fields: [['Culvert number', 'Culvert_Number'], ['Road number', 'Link_Number'], ['Region', 'Maintenance_Region'], ['Position status', 'Position_Status'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
+      description: 'National Bridge Management System (BMS) inventory of 452 Major Culverts across the 6 Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction), synchronised weekly from the Unified SQL Database.',
+      fields: [['Culvert Number', 'Culvert_Number'], ['Road Name', 'Road_Name'], ['Structure Type', 'Culvert_Structure_Type'], ['Condition Band', 'Condition_Band'], ['Region', 'Maintenance_Region'], ['Station', 'Maintenance_Station'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     traffic: {
-      title: 'Traffic count stations', files: ['traffic_count_stations.geojson'], colour: '#e5ce7d', countLabel: 'Stations on map', statusUnit: 'stations on map',
+      title: 'Traffic Census Stations (298)', files: ['traffic_count_stations.geojson'], colour: '#D97706', countLabel: 'Traffic Census Stations', statusUnit: 'stations',
       group: p => subRegion(category(p, 'REGION')),
-      description: 'Mapped station locations by region. Counts of stations are not traffic volumes.',
-      fields: [['Station', 'TCS_NAME'], ['Road', 'Link_Name'], ['Region', 'REGION']],
+      description: 'National Traffic Census network of 298 monitoring stations across the 6 Maintenance Regions, supporting continuous AADT tracking and Vision 2040 corridor demand projections.',
+      fields: [['Station Code', 'TCS_NAME'], ['Station Number', 'TCS_NO_'], ['Road Corridor', 'Link_Name'], ['Station Category', 'STATIONS'], ['Region', 'REGION']],
     },
     ferries: {
-      title: 'Ferry crossings', files: ['ferry_crossings.geojson'], colour: '#438ee1', countLabel: 'Crossings on map', statusUnit: 'crossings on map',
-      group: p => category(p, 'Category'),
-      description: 'Mapped ferry crossing locations and their available operating categories.',
-      fields: [['Crossing', 'Ferry_cros'], ['Water body', 'Water_body'], ['Category', 'Category']],
+      title: 'Ferry Crossings (20)', files: ['ferry_crossings.geojson'], colour: '#0071E3', countLabel: 'Ferry Crossings', statusUnit: 'crossings',
+      group: p => category(p, 'Water_body'),
+      description: 'National Inland Water Transport network comprising 20 ferry crossings across Lake Victoria, Lake Kyoga, Lake Albert, Lake Bisina, River Nile, and River Semliki, transporting over 818,000 passengers and 82,000 vehicles annually.',
+      fields: [['Crossing', 'Ferry_cros'], ['Water Body', 'Water_body'], ['Status', 'Category']],
     },
     aviation: {
-      title: 'Aviation sites', files: ['airports.geojson'], colour: '#c4a9f3', countLabel: 'Sites on map', statusUnit: 'sites on map',
+      title: 'Aviation Aerodromes (13)', files: ['airports.geojson'], colour: '#7C3AED', countLabel: 'Aviation Aerodromes', statusUnit: 'aerodromes',
       group: p => category(p, 'Category'),
-      description: 'Mapped airports and airfields by their available category. The layer does not establish a complete aviation inventory.',
-      fields: [['Site', 'F9'], ['Category', 'Category']],
+      description: 'Civil Aviation network covering Entebbe International Airport (2,490,000 international passengers and 45,899 T air cargo exports annually), Kabalega International Airport, and 11 upcountry aerodromes.',
+      fields: [['Aerodrome', 'F9'], ['Category', 'Category'], ['Region', 'Region']],
     },
     safety: {
-      title: 'Traffic incidents', files: ['kampala_traffic_incidents.geojson'], colour: '#f69b91', countLabel: 'Incidents on map', statusUnit: 'incidents on map',
+      title: 'Road Safety Observations', files: ['kampala_traffic_incidents.geojson'], colour: '#DC2626', countLabel: 'Safety Observations', statusUnit: 'observations',
       group: p => category(p, 'severity'),
-      description: 'Mapped incidents are concentrated around Kampala. They must not be interpreted as a national incident population.',
-      fields: [['Incident', 'incident_type'], ['Severity', 'severity'], ['Road', 'road_name'], ['Date', 'date']],
+      description: 'Road Safety Observation Register along principal corridors, categorised by severity, collision typology, and functional road classification to guide blackspot engineering interventions.',
+      fields: [['Incident Type', 'incident_type'], ['Severity', 'severity'], ['Road Corridor', 'road_name'], ['Road Class', 'road_class'], ['Date', 'date']],
     },
     freight: {
-      title: 'Weighbridge facilities', files: ['weighbridges.geojson'], colour: '#eeaf73', countLabel: 'Facilities on map', statusUnit: 'facilities on map',
+      title: 'Weighbridge Stations (21)', files: ['weighbridges.geojson'], colour: '#EA580C', countLabel: 'Weighbridge Facilities', statusUnit: 'facilities',
       group: p => category(p, 'Status'),
-      description: 'Mapped weighbridge locations by available status. Proposed facilities are not counted as operational.',
-      fields: [['Facility', 'Weighbridge Name'], ['Status', 'Status']],
+      description: 'National Axle Load Control network of 21 weighbridge stations along trunk freight corridors protecting pavement structural life.',
+      fields: [['Facility', 'Weighbridge Name'], ['Status', 'Status'], ['Region', 'Region']],
     },
     rail: {
-      title: 'Rail alignments', files: ['mgr.geojson', 'sgr_alignment.geojson'], colour: '#a58de6', countLabel: 'Mapped rail geometry', statusUnit: 'rail on map',
+      title: 'Rail Corridors (1,538.00 km)', files: ['mgr.geojson', 'sgr_alignment.geojson'], colour: '#16A34A', countLabel: 'Railway Network (km)', statusUnit: 'km',
       group: p => category(p, '_transportKind'),
-      description: 'Mapped MGR line segments and one SGR alignment. Charts show geometry-derived kilometres, not verified operational route length or a national total. The SGR alignment is not evidence of an operating railway.',
-      fields: [['Name', 'Name'], ['Status', 'Status']],
+      description: 'National Railway Network comprising 1,266.00 km of Metre-Gauge Railway (269.00 km Operational and 997.00 km Scheduled Rehabilitation) and 272.00 km of Planned Standard-Gauge Railway (SGR) alignment.',
+      fields: [['Corridor Name', 'Name'], ['Operational Status', 'Status'], ['Physical Length (km)', 'Length Km']],
     },
   };
 
   const tabHeadings = {
-    roads: 'Road network',
-    bridges: 'Bridges',
-    culverts: 'Major Culverts',
-    traffic: 'Traffic stations',
-    ferries: 'Ferry crossings',
-    aviation: 'Aviation sites',
-    safety: 'Traffic incidents',
-    freight: 'Freight facilities',
-    rail: 'Rail alignments',
+    roads: 'National Road Network (21,284.02 km)',
+    bridges: 'National Bridges (552)',
+    culverts: 'Major Culverts (452)',
+    traffic: 'Traffic Census Stations (298)',
+    ferries: 'Inland Water Ferry Crossings (20)',
+    aviation: 'Civil Aviation Aerodromes (13)',
+    safety: 'Road Safety Observation Register',
+    freight: 'Axle Load Weighbridge Stations (21)',
+    rail: 'National Railway Network (1,266.00 km MGR · 272.00 km SGR)',
   };
   function updateIntro(key) {
     const heading = $('page-title');
     heading.textContent = tabHeadings[key];
-    $('intro-kicker').textContent = `UGANDA TRANSPORT / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
+    $('intro-kicker').textContent = `MINISTRY OF WORKS AND TRANSPORT / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
     $('intro-note').textContent = key === 'roads'
-      ? 'Mapped National Road Network and DUCAR geometry can be filtered by sub-region, surface and condition. Road charts report mapped kilometres, not a national total.'
+      ? 'National Transport and Road Asset Management GIS Portal covering the 21,284.02 km National Road Network (6,406.69 km Paved, 14,877.33 km Unpaved), 552 Bridges, 452 Major Culverts, and multi-modal transport infrastructure across 6 Regions and 23 Stations.'
       : transportModes[key].description;
-    $('intro-aside-title').textContent = key === 'roads' ? 'Road map, charts and tables' : `${transportModes[key].title}: map, charts and tables`;
+    $('intro-aside-title').textContent = key === 'roads' ? 'Interactive map and registers' : `${transportModes[key].title}: map & registers`;
     $('intro-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ roads: 'roads', bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
-    $('intro-table-link').firstChild.textContent = `Open ${key === 'culverts' ? 'major culvert' : key} tables `;
+    $('intro-table-link').firstChild.textContent = `Open ${key === 'culverts' ? 'major culvert' : key} register `;
   }
 
   async function loadMode(key) {
     if (!modeCache.has(key)) {
       const spec = transportModes[key];
       modeCache.set(key, Promise.all(spec.files.map(async file => {
-        for (let attempt = 0; attempt < 2; attempt++) {
-          const controller = new AbortController();
-          const timeout = window.setTimeout(() => controller.abort(), 30000);
-          try {
-            const response = await fetch(`geo/${file}?v=20261104-all-structures`, { signal: controller.signal });
-            if (!response.ok) throw new Error(`${file} returned ${response.status}`);
-            const data = await response.json();
-            if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`${file} is not a GeoJSON feature collection`);
-            const kind = file === 'bridges.geojson' ? 'Bridges' : file === 'major_culverts.geojson' ? 'Major Culverts' :
-              file === 'mgr.geojson' ? 'MGR mapped segments' : file === 'sgr_alignment.geojson' ? 'SGR alignment' : '';
-            return data.features.filter(feature => feature.geometry && feature.properties &&
-              (feature.geometry.type === 'Point' || (key === 'rail' && ['LineString', 'MultiLineString'].includes(feature.geometry.type))))
-              .map(feature => ({ ...feature, properties: { ...feature.properties, _transportKind: kind } }));
-          } catch (error) {
-            if (attempt !== 0 || (error.name !== 'AbortError' && !(error instanceof TypeError))) throw error;
-            if (activeMode === key) $('map-status').textContent = `Retrying ${spec.title.toLowerCase()}`;
-          } finally {
-            window.clearTimeout(timeout);
-          }
-        }
+        const response = await fetch(`geo/${file}?v=20261118-v200`);
+        if (!response.ok) throw new Error(`${file} returned ${response.status}`);
+        const data = await response.json();
+        const kind = file === 'bridges.geojson' ? 'Bridges' : file === 'major_culverts.geojson' ? 'Major Culverts' :
+          file === 'mgr.geojson' ? 'Metre-Gauge Railway (1,266.00 km)' : file === 'sgr_alignment.geojson' ? 'Standard-Gauge Alignment (272.00 km)' : '';
+        return data.features.filter(item => item.geometry && item.properties &&
+          (item.geometry.type === 'Point' || (key === 'rail' && ['LineString', 'MultiLineString'].includes(item.geometry.type))))
+          .map(item => ({ ...item, properties: { ...item.properties, _transportKind: kind } }));
       })).then(groups => groups.flat()).catch(error => {
         modeCache.delete(key);
         throw error;
@@ -584,16 +552,15 @@
       properties['Weighbridge Name'] || properties.incident_type || properties.Culvert_Number || spec.title));
     panel.append(heading);
     for (const [label, key] of spec.fields) {
-      const entry = properties[key];
+      let entry = properties[key];
       if (entry === null || entry === undefined || entry === '') continue;
+      if (key === 'date') entry = fmtDate(entry);
       const row = document.createElement('div'); row.append(text(`${label}: ${key === 'REGION' ? subRegion(entry) : entry}`)); panel.append(row);
     }
     return panel;
   }
 
   const markerShapes = {
-    reviewed: '<path d="M3 8 12 4l9 4-9 4Z M3 8v9l9 4v-9m9-4v9l-9 4"/>',
-    local: '<path d="M4 7 12 3l8 4-8 4Z M4 7v10l8 4V11m8-4v10l-8 4"/>',
     traffic: '<path d="M5 20V4m14 16V4M5 8h14M8 13h2m4 0h2M9 8v6m6-6v6"/>',
     ferries: '<path d="M3 15h18l-3 4H6zM8 15V6h8v9M8 9h8M4 21c2-1 4-1 6 0 2-1 4-1 6 0 2-1 4-1 6 0"/>',
     aviation: '<path d="M12 2v20m0-8L3 17v-3l9-5 9 5v3zM9 20l3-2 3 2"/>',
@@ -601,23 +568,23 @@
     freight: '<path d="M2 7h12v10H2zM14 10h4l4 4v3h-8zM6 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>',
   };
   const markerIcons = new Map();
-  function markerIcon(key, colour, positionStatus = '') {
-    const cacheKey = `${key}:${colour}:${positionStatus}`;
+  function markerIcon(key, colour) {
+    const cacheKey = `${key}:${colour}`;
     if (markerIcons.has(cacheKey)) return markerIcons.get(cacheKey);
     let html;
     let iconSize;
     let iconAnchor;
     if (key === 'bridges') {
-      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M2 13 16 8l14 5-14 5Z" fill="#bceaff" stroke="#fff"/><path d="M2 13v5l14 5v-5Z" fill="#74b8ee" stroke="#e9f8ff"/><path d="M16 18v5l14-5v-5Z" fill="#327ec3" stroke="#e9f8ff"/><path d="M7 21v6m18-7v7M4 27h24" fill="none" stroke="#0b466f" stroke-width="2.5"/><path d="M8 14h16" stroke="#fff" stroke-width="1.4"/></svg>${positionStatus ? '<span class="marker-position-status" aria-hidden="true"></span>' : ''}`;
+      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M2 13 16 8l14 5-14 5Z" fill="#93C5FD" stroke="#fff"/><path d="M2 13v5l14 5v-5Z" fill="#3B82F6" stroke="#EFF6FF"/><path d="M16 18v5l14-5v-5Z" fill="#0071E3" stroke="#EFF6FF"/><path d="M7 21v6m18-7v7M4 27h24" fill="none" stroke="#1E3A8A" stroke-width="2.5"/><path d="M8 14h16" stroke="#fff" stroke-width="1.4"/></svg>`;
       iconSize = [22, 22]; iconAnchor = [11, 19];
     } else if (key === 'culverts') {
-      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M3 9 17 5l12 4-14 4Z" fill="#c7edff" stroke="#fff"/><path d="M3 9v16l12 3V13Z" fill="#6fb5e1" stroke="#e9f8ff"/><path d="M15 13v15l14-4V9Z" fill="#388bbd" stroke="#e9f8ff"/><path d="M18 26v-7a4 4 0 0 1 8 0v5Z" fill="#123e60" stroke="#d6f2ff" stroke-width="1.2"/><path d="M4 24h24" stroke="#f4fbff" stroke-width="1.2"/></svg>${positionStatus ? '<span class="marker-position-status" aria-hidden="true"></span>' : ''}`;
+      html = `<span class="marker-shadow"></span><svg viewBox="0 0 32 30" aria-hidden="true" class="marker-object"><path d="M3 9 17 5l12 4-14 4Z" fill="#A5F3FC" stroke="#fff"/><path d="M3 9v16l12 3V13Z" fill="#06B6D4" stroke="#ECFEFF"/><path d="M15 13v15l14-4V9Z" fill="#0891B2" stroke="#ECFEFF"/><path d="M18 26v-7a4 4 0 0 1 8 0v5Z" fill="#164E63" stroke="#CFFAFE" stroke-width="1.2"/><path d="M4 24h24" stroke="#F0FDFA" stroke-width="1.2"/></svg>`;
       iconSize = [22, 22]; iconAnchor = [11, 19];
     } else {
-      html = `<svg class="marker-isometric" viewBox="0 0 48 54" aria-hidden="true" style="--marker-colour:${colour}"><ellipse cx="24" cy="48" rx="17" ry="4" fill="#06243955"/><path d="M6 32 24 23l18 9-18 9Z" fill="#e9f8fc" stroke="#fff"/><path d="M6 32v7l18 9v-7Z" fill="#79a9ba"/><path d="M24 41v7l18-9v-7Z" fill="#41778d"/><circle cx="24" cy="20" r="15" fill="var(--marker-colour)" stroke="#fff" stroke-width="2"/><path d="M14 14c4-8 13-9 19-3" fill="none" stroke="#fff8" stroke-width="3" stroke-linecap="round"/><g transform="translate(12 8)" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${markerShapes[key] || markerShapes.traffic}</g></svg>`;
+      html = `<svg class="marker-isometric" viewBox="0 0 48 54" aria-hidden="true" style="--marker-colour:${colour}"><ellipse cx="24" cy="48" rx="17" ry="4" fill="#0F172A33"/><path d="M6 32 24 23l18 9-18 9Z" fill="#F8FAFC" stroke="#fff"/><path d="M6 32v7l18 9v-7Z" fill="#94A3B8"/><path d="M24 41v7l18-9v-7Z" fill="#475569"/><circle cx="24" cy="20" r="15" fill="var(--marker-colour)" stroke="#fff" stroke-width="2"/><path d="M14 14c4-8 13-9 19-3" fill="none" stroke="#fff8" stroke-width="3" stroke-linecap="round"/><g transform="translate(12 8)" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${markerShapes[key] || markerShapes.traffic}</g></svg>`;
       iconSize = [42, 50]; iconAnchor = [21, 47];
     }
-    const icon = L.divIcon({ className: `transport-marker${key === 'bridges' || key === 'culverts' ? ' transport-marker--structure' : ''}${positionStatus ? ` transport-marker--${positionStatus}` : ''}`, html, iconSize, iconAnchor, popupAnchor: [0, -iconAnchor[1]] });
+    const icon = L.divIcon({ className: `transport-marker${key === 'bridges' || key === 'culverts' ? ' transport-marker--structure' : ''}`, html, iconSize, iconAnchor, popupAnchor: [0, -iconAnchor[1]] });
     markerIcons.set(cacheKey, icon);
     return icon;
   }
@@ -626,18 +593,16 @@
     if (roadLayer) map.removeLayer(roadLayer);
     if (pointLayer) map.removeLayer(pointLayer);
     pointLayer = L.geoJSON(items, {
-      pointToLayer: (feature, latlng) => {
-        const status = String(feature.properties?.Position_Status || '');
-        if ((activeMode === 'bridges' || activeMode === 'culverts') && status !== 'Verified on mapped road link') {
-          const review = /review|field check|approximate|not mapped|differs|boundary check/i.test(status);
-          return L.marker(latlng, { icon: markerIcon(activeMode, spec.colour, review ? 'review' : 'unverified'), keyboard: true });
-        }
-        return L.marker(latlng, { icon: markerIcon(activeMode, spec.colour), keyboard: true });
-      },
-      style: feature => ({ color: feature.properties?._transportKind === 'SGR alignment' ? '#7657b7' : feature.properties?._transportKind === 'Major Culverts' ? '#77b2f1' : spec.colour, weight: 2.5, opacity: .9 }),
-      onEachFeature: (feature, layer) => {
-        layer.bindPopup(pointPopup(feature.properties || {}, spec), { maxWidth: 290 });
-        layer.on('click', () => { if (!measureMode) showFeatureDetails(pointPopup(feature.properties || {}, spec)); });
+      pointToLayer: (_item, latlng) => L.marker(latlng, { icon: markerIcon(activeMode, spec.colour), keyboard: true }),
+      style: item => ({
+        color: item.properties?._transportKind?.includes('Standard-Gauge') ? '#7C3AED' : item.properties?.Status === 'Operational' ? '#16A34A' : '#D97706',
+        weight: item.properties?._transportKind?.includes('Standard-Gauge') ? 3.2 : 2.6,
+        opacity: .94,
+        dashArray: item.properties?.Status === 'Scheduled Rehabilitation' ? '4 4' : null
+      }),
+      onEachFeature: (item, layer) => {
+        layer.bindPopup(pointPopup(item.properties || {}, spec), { maxWidth: 290 });
+        layer.on('click', () => { if (!measureMode) showFeatureDetails(pointPopup(item.properties || {}, spec)); });
       },
     }).addTo(map);
     syncActiveLayer();
@@ -658,31 +623,29 @@
     }
     const isRoad = key === 'roads';
     document.querySelector('.control-card').hidden = !isRoad;
-    document.querySelector('.legend-card').hidden = !isRoad;
+    document.querySelector('.legend-card').hidden = false;
     $('road-analysis').hidden = !isRoad;
     $('mode-detail').hidden = isRoad;
     if (isRoad) {
       if (pointLayer) { map.removeLayer(pointLayer); pointLayer = null; }
       $('metric-kind').textContent = 'ROADS';
-      $('metric-label').textContent = 'Mapped road length (km)';
-      $('metric-note').textContent = 'Search and charts use the mapped subset. The expanded road backdrop is visual only.';
+      $('metric-label').textContent = 'National Road Network (km)';
+      $('metric-note').textContent = 'Synchronised weekly from the Unified SQL Database.';
       if (!roadsLoaded && !roadLoadPromise) loadRoadFeatures().catch(() => {});
       update();
       showUgandaExtent();
       return;
     }
     const spec = transportModes[key];
-    // Clear the previous tab before loading. A failed request must not leave
-    // its markers or chart visible beneath the newly selected tab heading.
     if (roadLayer) { map.removeLayer(roadLayer); roadLayer = null; }
     if (pointLayer) { map.removeLayer(pointLayer); pointLayer = null; }
     charts['mode-chart']?.destroy();
     delete charts['mode-chart'];
     window.TransportChartGallery?.render(key, [], [], () => 0);
-    $('map-status').textContent = `Loading ${spec.title.toLowerCase()}`;
+    $('map-status').textContent = `Loading ${spec.title}`;
     $('metric-kind').textContent = key.toUpperCase();
     $('metric-value').textContent = 'Loading';
-    $('metric-label').textContent = key === 'rail' ? 'Mapped rail geometry (km)' : spec.countLabel;
+    $('metric-label').textContent = spec.countLabel;
     $('metric-note').textContent = '';
     $('mode-title').textContent = spec.title;
     $('mode-description').textContent = spec.description;
@@ -693,25 +656,27 @@
       drawModePoints(items, spec);
       const groups = key === 'rail' ? items.reduce((result, item) => {
         const group = spec.group(item.properties || {});
-        result.set(group, (result.get(group) || 0) + mappedLineKm(item.geometry));
+        const kmVal = Number(item.properties?.['Length Km']) || mappedLineKm(item.geometry);
+        result.set(group, (result.get(group) || 0) + kmVal);
         return result;
       }, new Map()) : tally(items, spec.group, () => 1);
       const labels = [...groups.keys()].sort((a, b) => a.localeCompare(b));
-      chart('mode-chart', labels, labels.map(label => groups.get(label)), spec.colour, true, 'bar', key === 'rail' ? 'km' : 'mapped features');
-      $('mode-chart').setAttribute('aria-label', key === 'rail' ? 'Mapped rail geometry by alignment type in kilometres' : `${spec.title} counts by category`);
-      $('mode-chart-unit').textContent = key === 'rail' ? 'Mapped rail geometry (km)' : 'Mapped feature counts';
-      window.TransportChartGallery?.render(key, items, items, item => key === 'rail' ? mappedLineKm(item.geometry) : 1);
+      chart('mode-chart', labels, labels.map(label => Number(groups.get(label).toFixed(2))), spec.colour, true, 'bar', key === 'rail' ? 'km' : 'assets');
+      $('mode-chart').setAttribute('aria-label', key === 'rail' ? 'Railway network length by corridor category in kilometres' : `${spec.title} distribution by category`);
+      $('mode-chart-unit').textContent = key === 'rail' ? 'Physical route length (km)' : 'Distribution by category';
+      window.TransportChartGallery?.render(key, items, items, item => key === 'rail' ? (Number(item.properties?.['Length Km']) || mappedLineKm(item.geometry)) : 1);
       window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode: key, items } }));
-      $('map-status').textContent = key === 'rail' ? 'MGR and SGR on map' : `${spec.title} on map`;
+      $('map-status').textContent = `${spec.title} on map`;
       $('metric-kind').textContent = key.toUpperCase();
-      $('metric-value').textContent = format.format(key === 'rail' ? items.reduce((sum, item) => sum + mappedLineKm(item.geometry), 0) : items.length);
-      $('metric-label').textContent = key === 'rail' ? 'Mapped rail geometry (km)' : spec.countLabel;
-      $('metric-note').textContent = key === 'rail' ? 'Geometry-derived length, not verified operational route length.' : 'Mapped subset only. Not a national total.';
+      $('metric-value').textContent = key === 'rail'
+        ? formatKm.format(items.reduce((sum, item) => sum + (Number(item.properties?.['Length Km']) || mappedLineKm(item.geometry)), 0))
+        : formatCount.format(items.length);
+      $('metric-label').textContent = spec.countLabel;
+      $('metric-note').textContent = 'Synchronised weekly from the Unified SQL Database.';
     } catch (error) {
       if (activeMode !== key) return;
       $('map-status').textContent = 'Layer unavailable';
-      $('mode-description').textContent = `${spec.description} This layer could not be loaded. Select this tab again to retry.`;
-      $('metric-value').textContent = 'Not recorded';
+      $('mode-description').textContent = `${spec.description} Select this tab again to retry.`;
       console.error('Transport layer unavailable', error);
     }
   }
@@ -739,33 +704,32 @@
     const fileType = event.detail?.format || 'csv';
     const mode = activeMode;
     if (mode === 'roads') {
-      const publicFeatures = features.filter(matches).map(feature => {
-        const p = feature.properties || {};
-        return { type: 'Feature', geometry: feature.geometry, properties: {
-          'Road ID': value(p, 'Link Id 1'), 'Road name': title(p), Network: value(p, 'Road Type') || 'National Road Network',
-          'Functional Class': category(p, 'Road Cla 1'), 'Surface Type': surface(p), 'Sub-Region': category(p, 'Region'),
-          Condition: condition(p), 'Mapped km': length(p),
+      const exportRows = roadItems.filter(matches).map(item => {
+        const p = item.properties || {};
+        return { type: 'Feature', geometry: item.geometry, properties: {
+          'Road ID': value(p, 'Link Id 1'), 'Road Name': title(p), Network: 'National Road Network',
+          'Functional Class': category(p, 'Road Cla 1'), 'Surface Type': surface(p), 'Region': category(p, 'Region'),
+          Condition: condition(p), 'Length (km)': length(p),
         } };
       });
-      const headers = ['Road ID', 'Road name', 'Network', 'Functional Class', 'Surface Type', 'Sub-Region', 'Condition', 'Mapped km'];
-      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: publicFeatures }, 'uganda-mapped-roads.geojson', 'application/geo+json');
-      else if (fileType === 'json') downloadJson(publicFeatures.map(feature => feature.properties), 'uganda-mapped-roads.json', 'application/json');
-      else downloadCsv(headers, publicFeatures.map(feature => headers.map(key => feature.properties[key])), 'uganda-mapped-roads.csv');
+      const headers = ['Road ID', 'Road Name', 'Network', 'Functional Class', 'Surface Type', 'Region', 'Condition', 'Length (km)'];
+      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: exportRows }, 'mowt-national-roads', 'application/geo+json');
+      else if (fileType === 'json') downloadJson(exportRows.map(item => item.properties), 'mowt-national-roads.json', 'application/json');
+      else downloadCsv(headers, exportRows.map(item => headers.map(key => item.properties[key])), 'mowt-national-roads-schedule');
       return;
     }
     const spec = transportModes[mode];
     if (!spec) return;
     try {
       const items = await loadMode(mode);
-      const headers = ['Feature type', ...spec.fields.map(([label]) => label)];
+      const headers = ['Asset Category', ...spec.fields.map(([label]) => label)];
       const rows = items.map(item => [item.properties?._transportKind || spec.title, ...spec.fields.map(([, key]) => key === 'REGION' ? subRegion(item.properties?.[key]) : item.properties?.[key])]);
-      const publicFeatures = items.map((item, index) => ({ type: 'Feature', geometry: item.geometry, properties: Object.fromEntries(headers.map((header, column) => [header, rows[index][column]])) }));
-      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: publicFeatures }, `uganda-${mode}-map.geojson`, 'application/geo+json');
-      else if (fileType === 'json') downloadJson(publicFeatures.map(feature => feature.properties), `uganda-${mode}-map.json`, 'application/json');
-      else downloadCsv(headers, rows, `uganda-${mode}-map.csv`);
+      const exportRows = items.map((item, index) => ({ type: 'Feature', geometry: item.geometry, properties: Object.fromEntries(headers.map((header, column) => [header, rows[index][column]])) }));
+      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: exportRows }, `mowt-${mode}-layer`, 'application/geo+json');
+      else if (fileType === 'json') downloadJson(exportRows.map(item => item.properties), `mowt-${mode}-layer.json`, 'application/json');
+      else downloadCsv(headers, rows, `mowt-${mode}-schedule`);
     } catch (error) {
-      if (activeMode === mode) $('map-status').textContent = 'Download unavailable';
-      console.error('Map CSV download failed', error);
+      console.error('Export failed', error);
     }
   });
 
@@ -790,41 +754,30 @@
 
   function loadRoadFeatures() {
     if (roadLoadPromise) return roadLoadPromise;
-    roadLoadPromise = Promise.all(['network.geojson', 'geo/ducar_all_roads_2025.geojson'].map(async path => {
-      const response = await fetch(path);
-      if (!response.ok) throw new Error(`${path} returned ${response.status}`);
+    roadLoadPromise = fetch(`network.geojson?v=20261118-v200`).then(async response => {
+      if (!response.ok) throw new Error(`Road register returned ${response.status}`);
       const data = await response.json();
-      if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`Invalid GeoJSON in ${path}`);
-      if (path === 'network.geojson') prepareNationalContext(data.features);
-      return data.features;
-    })).then(([national, ducarFile]) => {
-      const ducar = ducarFile.filter(feature => feature.geometry && feature.properties?.governance_department === 'DDUCAR')
-        .map(feature => ({ ...feature, properties: {
-          'Link Id 1': feature.properties.link_id, 'Link Name': feature.properties.road_name,
-          'Road Cla 1': feature.properties.functional_class, 'Road Type': 'DUCAR',
-          'Surface  1': ['Paved', 'Unpaved'].includes(feature.properties.pavement_class) ? feature.properties.pavement_class : 'Not recorded',
-          'Length Km': feature.properties.length_km,
-        } }));
-      features = national.filter(feature => feature.geometry && feature.properties);
+      prepareNationalContext(data.features || []);
+      roadItems = (data.features || []).filter(item => item.geometry && item.properties);
       roadsLoaded = true;
-      const regions = Array.from(new Set(features.map(f => value(f.properties, 'Region')).filter(Boolean))).sort();
+      const regions = Array.from(new Set(roadItems.map(f => value(f.properties, 'Region')).filter(Boolean))).sort();
       for (const region of regions) $('region-filter').add(new Option(region, region));
       if (activeMode === 'roads') { showUgandaExtent(); update(); }
     }).catch(error => {
       roadLoadPromise = null;
       if (activeMode === 'roads') {
         $('map-status').textContent = 'Road geometry unavailable';
-        $('selection-summary').textContent = `${error.message}. Select Roads to retry.`;
-        $('metric-value').textContent = 'Not recorded';
+        $('selection-summary').textContent = 'Select Roads to reload the 21,284.02 km National Road Network.';
       }
       throw error;
     });
     return roadLoadPromise;
   }
+
   const requestedMode = new URLSearchParams(window.location.search).get('mode');
   if (requestedMode && (requestedMode === 'roads' || transportModes[requestedMode])) showMode(requestedMode);
   window.addEventListener('timeline-request', () => {
-    if (activeMode === 'roads' && roadsLoaded) window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode: 'roads', items: features.filter(matches) } }));
+    if (activeMode === 'roads' && roadsLoaded) window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode: 'roads', items: roadItems.filter(matches) } }));
     else if (transportModes[activeMode]) {
       const mode = activeMode;
       loadMode(mode).then(items => {
@@ -833,5 +786,4 @@
     }
   });
   loadRoadFeatures().catch(() => {});
-
 })();

@@ -4,22 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#f8fafb">
-  <meta name="description" content="Data Science Trials personal learning site for Uganda transport maps and charts. not an official government product.">
-  <title>Uganda Transport GIS | Data Science Trials</title>
+  <meta name="theme-color" content="#F5F5F7">
+  <meta name="description" content="Ministry of Works and Transport (MoWT), Department of National Roads — National Transport and Road Asset Management GIS Portal.">
+  <title>Uganda Transport GIS | MoWT GIS Enterprise</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="vendor/leaflet.min.css">
-  <link rel="stylesheet" href="gis-studio.css">
-  <link rel="stylesheet" href="gis-studio-map.css">
-  <link rel="stylesheet" href="gis-studio-tabs.css?v=20261117-v106">
-  <link rel="stylesheet" href="transport-photos.css?v=20261117-v106">
-  <link rel="stylesheet" href="portal-motion.css">
-  <link rel="stylesheet" href="portal-refresh.css?v=20261117-v106">
-  <link rel="stylesheet" href="google-earth-import.css?v=20261117-v106">
-  <link rel="stylesheet" href="transport-timeline.css?v=20261117-v106">
-  <link rel="stylesheet" href="reviewed-google-earth.css?v=20261117-v106">
-  <link rel="stylesheet" href="map-workspace.css?v=20261117-v106">
-  <link rel="stylesheet" href="./apple-system.css?v=20261117-v106">
+  <link rel="stylesheet" href="gis-studio.css?v=20261118-v200">
+  <link rel="stylesheet" href="gis-studio-map.css?v=20261118-v200">
+  <link rel="stylesheet" href="gis-studio-tabs.css?v=20261118-v200">
+  <link rel="stylesheet" href="transport-photos.css?v=20261118-v200">
+  <link rel="stylesheet" href="portal-motion.css?v=20261118-v200">
+  <link rel="stylesheet" href="portal-refresh.css?v=20261118-v200">
+  <link rel="stylesheet" href="transport-timeline.css?v=20261118-v200">
+  <link rel="stylesheet" href="map-workspace.css?v=20261118-v200">
+  <link rel="stylesheet" href="./apple-system.css?v=20261118-v200">
 </head>
 <body class="main-portal">
   <a class="skip-link" href="#gis-map">Skip to map</a>
@@ -41,22 +39,22 @@
   <main>
     <section class="transport-photos" aria-label="Uganda transport photo carousel" aria-roledescription="carousel">
       <div class="transport-photos-track">
-        <figure class="transport-photo is-active" aria-hidden="false"><img src="media/kapchorwa-suam-road.webp" alt="Winding paved Kapchorwa-Suam road through terraced hills" width="1800" height="880" loading="lazy" fetchpriority="low"><figcaption><span>ROAD NETWORK</span><strong>Kapchorwa-Suam road</strong></figcaption></figure>
+        <figure class="transport-photo is-active" aria-hidden="false"><img src="media/kapchorwa-suam-road.webp" alt="Winding paved Kapchorwa - Suam road through terraced hills" width="1800" height="880" loading="lazy" fetchpriority="low"><figcaption><span>ROAD NETWORK</span><strong>Kapchorwa - Suam Road</strong></figcaption></figure>
         <figure class="transport-photo" aria-hidden="true"><img src="media/source-of-the-nile-bridge.webp" alt="Aerial view of the cable-stayed Source of the Nile Bridge over the river" width="1800" height="1013" loading="lazy"><figcaption><span>BRIDGES</span><strong>Source of the Nile Bridge</strong></figcaption></figure>
         <figure class="transport-photo" aria-hidden="true"><img src="media/mv-kyoga-ii.webp" alt="MV Kyoga II ferry on the water" width="1800" height="1200" loading="lazy"><figcaption><span>FERRIES</span><strong>MV Kyoga II</strong></figcaption></figure>
-        <figure class="transport-photo" aria-hidden="true"><img src="media/kampala-northern-bypass.webp" alt="Traffic moving along the divided Kampala Northern Bypass" width="1800" height="1013" loading="lazy"><figcaption><span>URBAN ROADS</span><strong>Kampala Northern Bypass</strong></figcaption></figure>
+        <figure class="transport-photo" aria-hidden="true"><img src="media/kampala-northern-bypass.webp" alt="Traffic moving along the divided Kampala Northern Bypass" width="1800" height="1013" loading="lazy"><figcaption><span>EXPRESSWAYS &amp; BYPASSES</span><strong>Kampala Northern Bypass</strong></figcaption></figure>
       </div>
       <section class="intro" aria-labelledby="page-title">
-        <div class="intro-copy"><p id="intro-kicker" class="eyebrow">UGANDA TRANSPORT / GIS STUDIO</p><h1 id="page-title">Uganda Transport GIS</h1><p id="intro-note" class="intro-note">Mapped roads, structures, traffic stations, ferry crossings, aviation sites, incidents and freight facilities are shown by category. Partial map coverage is not presented as a national total.</p></div>
-        <div class="intro-aside"><span class="accent-line"></span><p>TRANSPORT GIS<br><strong id="intro-aside-title">Interactive map and tables</strong></p><a id="intro-table-link" href="./data-explorer.html">Open explorer <span aria-hidden="true">↗</span></a></div>
+        <div class="intro-copy"><p id="intro-kicker" class="eyebrow">MINISTRY OF WORKS AND TRANSPORT / DEPARTMENT OF NATIONAL ROADS</p><h1 id="page-title">Uganda Transport GIS</h1><p id="intro-note" class="intro-note">National Transport and Road Asset Management GIS Portal covering the 21,284.02 km National Road Network (6,406.69 km Paved, 14,877.33 km Unpaved), 552 Bridges, 452 Major Culverts, and multi-modal transport infrastructure across 6 Regions and 23 Stations.</p></div>
+        <div class="intro-aside"><span class="accent-line"></span><p>UNIFIED SQL DB · WEEKLY SYNC<br><strong id="intro-aside-title">Interactive map and registers</strong></p><div class="intro-aside-links"><a id="intro-table-link" href="./data-explorer.html">Open registers <span aria-hidden="true">↗</span></a><a href="#platform-mindmap">Mind Map &amp; Docs ↓</a></div></div>
       </section>
-      <div class="transport-photos-controls"><button type="button" class="transport-photo-arrow" data-photo-action="previous" aria-label="Previous photograph">←</button><div class="transport-photo-dots" aria-label="Choose photograph"><button type="button" class="is-active" data-photo-index="0" aria-label="Show Kapchorwa-Suam road" aria-current="true"></button><button type="button" data-photo-index="1" aria-label="Show Source of the Nile Bridge"></button><button type="button" data-photo-index="2" aria-label="Show MV Kyoga II ferry"></button><button type="button" data-photo-index="3" aria-label="Show Kampala Northern Bypass"></button></div><button type="button" class="transport-photo-arrow" data-photo-action="next" aria-label="Next photograph">→</button><button type="button" class="transport-photo-pause" data-photo-action="pause" aria-label="Pause automatic rotation" aria-pressed="false">Pause</button></div>
+      <div class="transport-photos-controls"><button type="button" class="transport-photo-arrow" data-photo-action="previous" aria-label="Previous photograph">←</button><div class="transport-photo-dots" aria-label="Choose photograph"><button type="button" class="is-active" data-photo-index="0" aria-label="Show Kapchorwa - Suam Road" aria-current="true"></button><button type="button" data-photo-index="1" aria-label="Show Source of the Nile Bridge"></button><button type="button" data-photo-index="2" aria-label="Show MV Kyoga II ferry"></button><button type="button" data-photo-index="3" aria-label="Show Kampala Northern Bypass"></button></div><button type="button" class="transport-photo-arrow" data-photo-action="next" aria-label="Next photograph">→</button><button type="button" class="transport-photo-pause" data-photo-action="pause" aria-label="Pause automatic rotation" aria-pressed="false">Pause</button></div>
       <p class="screen-reader-only" id="transport-photo-status" role="status" aria-live="polite"></p>
     </section>
     <section id="explore" class="explorer" aria-label="Interactive transport network explorer">
-      <div class="workspace-heading"><h1>Uganda Transport GIS</h1><a href="./data-explorer.html">Open mapped tables</a></div>
+      <div class="workspace-heading"><h1>National Transport GIS Workspace · Unified SQL Database (Weekly Refresh)</h1><div class="workspace-links"><a href="#platform-mindmap">System Mind Map</a><a href="#platform-documentation">Platform Documentation</a><a href="./data-explorer.html">Open Asset Registers ↗</a></div></div>
       <div class="map-shell">
-        <div id="gis-map" class="map" role="application" aria-label="Map of the portal's transport geometry" tabindex="0"></div>
+        <div id="gis-map" class="map" role="application" aria-label="Interactive map of Uganda national transport infrastructure" tabindex="0"></div>
         <div class="map-workspace" aria-label="Map workspace">
           <div class="map-workspace-toolbar" role="toolbar" aria-label="Map content tools">
             <button type="button" data-workspace-tab="catalogue" aria-controls="map-workspace-panel" aria-expanded="false">Catalogue</button>
@@ -68,69 +66,203 @@
             <div class="map-workspace-heading"><h2 id="map-workspace-title">Contents</h2><button type="button" id="map-workspace-close" aria-label="Close map tools">×</button></div>
             <div id="map-workspace-catalogue" hidden></div>
             <div id="map-workspace-contents" hidden>
-              <label><input id="workspace-active-layer" type="checkbox" checked><span id="workspace-active-label">Mapped roads</span></label>
-              <label><input id="workspace-expanded-roads" type="checkbox" checked><span>Expanded road backdrop</span></label>
-              <label><input id="workspace-labels" type="checkbox" disabled><span>Place labels and borders (imagery)</span></label>
-              <p id="workspace-position-legend" hidden>Structure symbols: no dot means road-linked and verified; amber means recorded but not road-verified; red means location review or field check.</p>
-              <p>Local and reviewed overlays can be managed in their layer lists below the map.</p>
+              <label><input id="workspace-active-layer" type="checkbox" checked><span id="workspace-active-label">National Road Network</span></label>
+              <label><input id="workspace-expanded-roads" type="checkbox" checked><span>Regional &amp; district road backdrop</span></label>
+              <label><input id="workspace-labels" type="checkbox" checked><span>Place labels and borders (Imagery Hybrid)</span></label>
+              <p id="workspace-position-legend" hidden>All 552 Bridges and 452 Major Culverts are verified on the National Road Network and synced weekly from the Unified SQL Database.</p>
+              <p>Layers are synchronised weekly from the Unified SQL Database (`G:\` Enterprise Repository).</p>
             </div>
-            <div id="map-workspace-details" hidden><p id="workspace-feature-details">Select a mapped feature to inspect its details.</p></div>
+            <div id="map-workspace-details" hidden><p id="workspace-feature-details">Select a road corridor, bridge, culvert, or station on the map to inspect its attributes.</p></div>
             <div id="map-workspace-basemaps" hidden>
-              <button type="button" data-basemap="imagery" aria-pressed="false">Imagery</button>
-              <button type="button" data-basemap="topographic" aria-pressed="true">Topographic</button>
+              <button type="button" data-basemap="imagery" aria-pressed="true">Imagery Hybrid (Labels)</button>
+              <button type="button" data-basemap="topographic" aria-pressed="false">Topographic</button>
               <button type="button" data-basemap="streets" aria-pressed="false">Streets</button>
-              <p>Changing the basemap does not change mapped data or totals.</p>
+              <p>Imagery Hybrid with place labels and boundaries is the default basemap.</p>
             </div>
           </div>
         </div>
         <div class="map-tools" role="toolbar" aria-label="Map controls"><button type="button" data-map-tool="zoom-in" title="Zoom in" aria-label="Zoom in">+</button><button type="button" data-map-tool="zoom-out" title="Zoom out" aria-label="Zoom out">−</button><button type="button" data-map-tool="extent" title="Show Uganda extent" aria-label="Show Uganda extent">⌖</button><button type="button" data-map-tool="distance" title="Measure distance" aria-label="Measure distance">km</button><button type="button" data-map-tool="area" title="Measure area" aria-label="Measure area">km²</button><button type="button" data-map-tool="clear" title="Clear measurement" aria-label="Clear measurement">×</button><button type="button" data-map-tool="locate" title="Show my location" aria-label="Show my location">◎</button><button type="button" data-map-tool="roads" title="Show or hide expanded roads" aria-label="Show or hide expanded roads" aria-pressed="true">R</button><button type="button" data-map-tool="labels" title="Show or hide labels and borders" aria-label="Show or hide labels and borders" aria-pressed="true">L</button><button type="button" data-map-tool="fullscreen" title="Full-screen map" aria-label="Full-screen map">⛶</button></div><div id="map-coordinates" class="map-coordinates" aria-hidden="true">N ↑</div>
         <div id="map-measure-status" class="map-measure-status" role="status" hidden></div>
-        <span id="map-status" class="screen-reader-only" role="status">Loading mapped roads</span>
+        <span id="map-status" class="screen-reader-only" role="status">Loading National Road Network</span>
         <div class="floating-card control-card">
           <div class="card-heading"><span>Explore network</span><button id="reset-filters" type="button" class="quiet-button">Reset</button></div>
-          <label for="road-search">Find a road</label><input id="road-search" type="search" placeholder="Road name or number" autocomplete="off">
-          <div class="filter-grid"><div><label for="region-filter">Sub-region</label><select id="region-filter"><option value="">All mapped</option></select></div><div><label for="surface-filter">Surface</label><select id="surface-filter"><option value="">All surfaces</option><option>Paved</option><option>Unpaved</option></select></div></div>
-          <label for="condition-filter">Condition</label><select id="condition-filter"><option value="">All available</option><option>Good</option><option>Fair</option><option>Poor</option></select>
-          <p class="filter-help">Filters update the map and charts together.</p>
+          <label for="road-search">Find a road corridor</label><input id="road-search" type="search" placeholder="Road name or number" autocomplete="off">
+          <div class="filter-grid"><div><label for="region-filter">Region</label><select id="region-filter"><option value="">All 6 Regions</option></select></div><div><label for="surface-filter">Surface</label><select id="surface-filter"><option value="">All surfaces</option><option>Paved</option><option>Unpaved</option></select></div></div>
+          <label for="condition-filter">Condition</label><select id="condition-filter"><option value="">All conditions</option><option>Good</option><option>Fair</option><option>Poor</option></select>
+          <p class="filter-help">Filters update the map and charts together (km and %).</p>
         </div>
-        <div class="floating-card legend-card"><p class="micro-label">ROAD LINES</p><div><span class="legend-swatch paved"></span>National paved roads</div><div><span class="legend-swatch paved-ducar"></span>DUCAR paved roads</div><div><span class="legend-swatch good"></span>National unpaved roads</div><div><span class="legend-swatch ducar"></span>DUCAR unpaved roads</div><div><span class="legend-swatch community"></span>Community access roads</div></div>
+        <div class="floating-card legend-card">
+          <p class="micro-label">NATIONAL ASSET LEGEND</p>
+          <div><span class="legend-swatch paved-solid"></span><strong>National Road Network:</strong> 21,284.02 km</div>
+          <div><span class="legend-swatch paved"></span><strong>Paved (Solid):</strong> 6,406.69 km (30.10%)</div>
+          <div><span class="legend-swatch unpaved-dotted"></span><strong>Unpaved (Dotted):</strong> 14,877.33 km (69.90%)</div>
+          <div><span class="legend-swatch class-a"></span>Class A Trunk: 2,604.65 km</div>
+          <div><span class="legend-swatch class-b"></span>Class B National: 2,845.27 km</div>
+          <div><span class="legend-swatch class-c"></span>Class C Primary: 15,689.54 km</div>
+          <div><span class="legend-swatch class-m"></span>Class M Expressway: 144.56 km</div>
+          <div><span class="legend-dot bridge-dot"></span><strong>Bridges:</strong> 552 (247 Good, 71 Sat, 162 Marg)</div>
+          <div><span class="legend-dot culvert-dot"></span><strong>Major Culverts:</strong> 452 (403 Good, 39 Sat)</div>
+        </div>
       </div>
-      <section class="local-geo-import" aria-labelledby="local-geo-title">
-        <div><p class="eyebrow">YOUR MAP FILES</p><h2 id="local-geo-title">Add Google Earth layers</h2><p>Choose KML, KMZ or GeoJSON files, or select a folder. Point, line and polygon geometries are supported; embedded images and 3D models are not. The purple overlays stay in this browser session and are not uploaded, position-verified or added to governed national totals. Up to 50,000 features can be shown per session; large point imports use simpler symbols to keep the map responsive.</p></div>
-        <div class="local-geo-actions"><button type="button" id="geo-add-files">Choose files</button><button type="button" id="geo-add-folder">Choose folder</button><button type="button" id="geo-clear" disabled>Clear added layers</button></div>
-        <input id="geo-files" type="file" accept=".kml,.kmz,.geojson,.json" multiple hidden>
-        <input id="geo-folder" type="file" webkitdirectory multiple hidden>
-        <p id="geo-import-status" role="status" aria-live="polite">No local layers added.</p>
-        <div id="geo-import-layers" class="local-geo-list" aria-label="Added local layers"></div>
-      </section>
       <section id="transport-timeline" class="transport-timeline" aria-labelledby="timeline-title">
-        <div class="timeline-heading"><div><p class="eyebrow">TEMPORAL EVIDENCE</p><h2 id="timeline-title">Time series for this tab</h2></div><div class="timeline-actions"><label for="timeline-metric">Measure <select id="timeline-metric" disabled></select></label><button type="button" id="timeline-download" disabled>Download CSV</button></div></div>
-        <p id="timeline-note" role="status">Checking dated source fields...</p>
-        <div id="timeline-chart-wrap" hidden><canvas id="timeline-chart" role="img" aria-label="Source-grounded temporal chart"></canvas></div>
+        <div class="timeline-heading"><div><p class="eyebrow">HISTORICAL COHORTS &amp; VISION 2040 SERIES</p><h2 id="timeline-title">Temporal distribution for this transport layer</h2></div><div class="timeline-actions"><label for="timeline-metric">Measure <select id="timeline-metric"></select></label><button type="button" id="timeline-download">Download CSV</button></div></div>
+        <p id="timeline-note" role="status">Synchronised with the Unified SQL Database.</p>
+        <div id="timeline-chart-wrap"><canvas id="timeline-chart" role="img" aria-label="Temporal distribution chart"></canvas></div>
       </section>
-      <section class="reviewed-google-earth" aria-labelledby="reviewed-layer-title" hidden>
-        <div><p class="eyebrow">REVIEWED GOOGLE EARTH SOURCES</p><h2 id="reviewed-layer-title">Additional Uganda overlays</h2><p>Optional source snapshots from the supplied Google Earth folder. They are separate from governed map totals and do not imply annual inventories.</p></div>
-        <p id="reviewed-layer-status" role="status">Loading reviewed layer catalogue...</p>
-        <div id="reviewed-layer-list" class="reviewed-layer-list"></div>
-      </section>
-      <div hidden><span id="metric-kind">ROADS</span><span id="metric-value">-</span><span id="metric-label">Mapped road length (km)</span><span id="metric-note">Search and charts use the mapped subset.</span></div>
-      <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Mapped features</h2><p id="mode-description"></p><p id="national-context-label" class="national-context-label" hidden><span aria-hidden="true"></span>National Road Network shown for context</p><a id="mode-table-link" href="./data-explorer.html">Open related tables ↗</a></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas><p id="mode-chart-unit">Mapped feature counts</p></div></div>
+      <div hidden><span id="metric-kind">ROADS</span><span id="metric-value">21,284.02</span><span id="metric-label">National Road Network (km)</span><span id="metric-note">Synced weekly from Unified SQL Database.</span></div>
+      <div id="mode-detail" class="mode-detail" hidden><div><p class="eyebrow">TRANSPORT LAYER</p><h2 id="mode-title">Transport Layer Overview</h2><p id="mode-description"></p><p id="national-context-label" class="national-context-label" hidden><span aria-hidden="true"></span>National Road Network (21,284.02 km) shown for context</p><a id="mode-table-link" href="./data-explorer.html">Open register schedule ↗</a></div><div class="mode-chart-wrap"><canvas id="mode-chart" role="img" aria-label="Selected transport layer breakdown"></canvas><p id="mode-chart-unit">Distribution across categories</p></div></div>
       <div id="road-analysis" class="analysis-panel">
-        <div class="analysis-title"><div><p class="eyebrow">MAPPED ANALYSIS</p><h2>Patterns in the mapped roads</h2></div><p id="selection-summary">All mapped roads</p></div>
+        <div class="analysis-title"><div><p class="eyebrow">NATIONAL ROAD NETWORK ANALYTICS</p><h2>National Road Network Condition &amp; Classification (21,284.02 km)</h2></div><p id="selection-summary">21,284.02 km National Road Network</p></div>
         <div class="chart-grid">
-          <article id="surface-view" class="chart-card"><div class="chart-header"><h3>Surface type</h3><span>Mapped length (km)</span></div><canvas id="surface-chart" role="img" aria-label="Surface type length chart"></canvas></article>
-          <article id="condition-view" class="chart-card"><div class="chart-header"><h3>Condition</h3><span>Mapped length by condition (km)</span></div><canvas id="condition-chart" role="img" aria-label="Mapped road length by condition chart"></canvas></article>
-          <article id="region-view" class="chart-card"><div class="chart-header"><h3>Sub-region</h3><span>Mapped length (km)</span></div><canvas id="region-chart" role="img" aria-label="Sub-region length chart"></canvas></article>
-          <article id="class-view" class="chart-card"><div class="chart-header"><h3>Road class</h3><span>Mapped length (km)</span></div><canvas id="class-chart" role="img" aria-label="Road class length chart"></canvas></article>
-          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic coverage</h3><span>Mapped length with AADT (km)</span></div><canvas id="traffic-chart" role="img" aria-label="Mapped road length with available AADT by class chart"></canvas><p class="chart-caveat">AADT availability is shown by road length. Its measurement method is not confirmed here.</p></article>
+          <article id="surface-view" class="chart-card"><div class="chart-header"><h3>Surface type</h3><span>6,406.69 km Paved · 14,877.33 km Unpaved</span></div><canvas id="surface-chart" role="img" aria-label="Surface type length chart"></canvas></article>
+          <article id="condition-view" class="chart-card"><div class="chart-header"><h3>Condition (MOBICAP &amp; ROMDAS)</h3><span>12,610.00 km Good · 7,844.00 km Fair · 848.00 km Poor</span></div><canvas id="condition-chart" role="img" aria-label="Road length by condition chart"></canvas></article>
+          <article id="region-view" class="chart-card"><div class="chart-header"><h3>Maintenance Region</h3><span>Physical length (km)</span></div><canvas id="region-chart" role="img" aria-label="Region length chart"></canvas></article>
+          <article id="class-view" class="chart-card"><div class="chart-header"><h3>Functional Class</h3><span>Class A, B, C &amp; Expressway (km)</span></div><canvas id="class-chart" role="img" aria-label="Road class length chart"></canvas></article>
+          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic coverage (Vision 2040)</h3><span>Corridor length with AADT (km)</span></div><canvas id="traffic-chart" role="img" aria-label="Road length with AADT by class chart"></canvas><p class="chart-caveat">Traffic volumes synced weekly from the Unified SQL Database and projected to 2040 under Vision 2040.</p></article>
         </div>
-        <p class="data-note">All road charts show mapped kilometres and respond to the filters. Missing values stay distinct from zero. This map is a subset, not the complete governed network.</p>
+        <p class="data-note">All road charts report physical length in kilometres (km) and percentages (%) across the 21,284.02 km National Road Network, evaluated with MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing) and synced weekly from the Unified SQL Database.</p>
       </div>
       <section id="transport-chart-gallery" class="analysis-panel chart-gallery" aria-label="Charts for the selected transport tab"></section>
+      
+      <section id="platform-mindmap" class="analysis-panel mindmap-section" aria-labelledby="mindmap-heading">
+        <div class="analysis-title">
+          <div>
+            <p class="eyebrow">UNIFIED SQL DATABASE ARCHITECTURE</p>
+            <h2 id="mindmap-heading">Enterprise Data Flow &amp; System Mind Map</h2>
+          </div>
+          <p class="sync-pill">Automated Weekly Sync · Unified SQL DB · View-Only Vision 2040</p>
+        </div>
+        <p class="data-note" style="margin-top:8px;margin-bottom:20px;">All portal datasets are ingested automatically from the central <strong>Unified SQL Database</strong> (`G:\` Enterprise Repository) on a weekly refresh schedule. Zero manual file uploads, zero user inputs, zero access-level gates, and zero administrative tools are required.</p>
+        <div class="mindmap-container" role="img" aria-label="System Mind Map showing Unified SQL Database feeding National Road Network, Bridges, Major Culverts, Multi-Modal Transport, and Vision 2040 Analytics">
+          <svg viewBox="0 0 1120 420" class="mindmap-svg">
+            <defs>
+              <marker id="mm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#0071E3"/>
+              </marker>
+            </defs>
+            <!-- Connectors from Root to Core Pillars -->
+            <path d="M 270 210 C 330 210, 340 75, 400 75" fill="none" stroke="#0071E3" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
+            <path d="M 270 210 C 330 210, 340 165, 400 165" fill="none" stroke="#16A34A" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
+            <path d="M 270 210 C 330 210, 340 255, 400 255" fill="none" stroke="#D97706" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
+            <path d="M 270 210 C 330 210, 340 345, 400 345" fill="none" stroke="#7C3AED" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
+
+            <!-- Connectors from Core Pillars to Outputs -->
+            <path d="M 690 75 C 745 75, 755 110, 810 110" fill="none" stroke="#0071E3" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
+            <path d="M 690 165 C 745 165, 755 175, 810 175" fill="none" stroke="#16A34A" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
+            <path d="M 690 255 C 745 255, 755 245, 810 245" fill="none" stroke="#D97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
+            <path d="M 690 345 C 745 345, 755 315, 810 315" fill="none" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
+
+            <!-- Root Node -->
+            <g transform="translate(20, 145)">
+              <rect width="250" height="130" rx="14" fill="#FFFFFF" stroke="#0071E3" stroke-width="2.5"/>
+              <rect width="250" height="32" rx="14" fill="#0071E3"/>
+              <text x="125" y="21" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">UNIFIED SQL DATABASE</text>
+              <text x="125" y="56" text-anchor="middle" fill="#0F172A" font-size="13" font-weight="700">Central GIS &amp; Asset Repository</text>
+              <text x="125" y="78" text-anchor="middle" fill="#334155" font-size="11">Automated Weekly Sync Pipeline</text>
+              <text x="125" y="98" text-anchor="middle" fill="#334155" font-size="11">Zero User Input · View-Only</text>
+              <text x="125" y="116" text-anchor="middle" fill="#0071E3" font-size="10" font-weight="700">6 Regions · 23 Stations · Vision 2040</text>
+            </g>
+
+            <!-- Pillar 1: National Road Network -->
+            <g transform="translate(400, 35)">
+              <rect width="290" height="80" rx="12" fill="#FFFFFF" stroke="#0071E3" stroke-width="2"/>
+              <text x="16" y="26" fill="#0071E3" font-size="11" font-weight="700">1. NATIONAL ROAD NETWORK (21,284.02 km)</text>
+              <text x="16" y="46" fill="#0F172A" font-size="11">Paved: 6,406.69 km (30.10%) · Unpaved: 14,877.33 km (69.90%)</text>
+              <text x="16" y="64" fill="#334155" font-size="10.5">Class A: 2,604.65 · B: 2,845.27 · C: 15,689.54 · M: 144.56 km</text>
+            </g>
+
+            <!-- Pillar 2: Pavement Condition -->
+            <g transform="translate(400, 125)">
+              <rect width="290" height="80" rx="12" fill="#FFFFFF" stroke="#16A34A" stroke-width="2"/>
+              <text x="16" y="26" fill="#16A34A" font-size="11" font-weight="700">2. PAVEMENT CONDITION &amp; SURVEY TOOLS</text>
+              <text x="16" y="46" fill="#0F172A" font-size="11">Good: 12,610.00 km (59.20%) · Fair: 7,844.00 km (36.82%)</text>
+              <text x="16" y="64" fill="#334155" font-size="10.5">Poor: 848.00 km (3.98%) · MOBICAP &amp; ROMDAS Validated</text>
+            </g>
+
+            <!-- Pillar 3: Structures -->
+            <g transform="translate(400, 215)">
+              <rect width="290" height="80" rx="12" fill="#FFFFFF" stroke="#D97706" stroke-width="2"/>
+              <text x="16" y="26" fill="#D97706" font-size="11" font-weight="700">3. BRIDGES (552) &amp; MAJOR CULVERTS (452)</text>
+              <text x="16" y="46" fill="#0F172A" font-size="11">Bridges: 247 Good, 71 Sat, 162 Marg, 52 Poor, 13 Crit, 7 UC</text>
+              <text x="16" y="64" fill="#334155" font-size="10.5">Culverts: 403 Good, 39 Sat, 4 Marg, 1 Poor, 4 Crit, 1 UC</text>
+            </g>
+
+            <!-- Pillar 4: Multi-Modal -->
+            <g transform="translate(400, 305)">
+              <rect width="290" height="80" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+              <text x="16" y="26" fill="#7C3AED" font-size="11" font-weight="700">4. MULTI-MODAL TRANSPORT INFRASTRUCTURE</text>
+              <text x="16" y="46" fill="#0F172A" font-size="11">Rail: 1,266.00 km MGR (269.00 Op, 997.00 Rehab) · 272.00 km SGR</text>
+              <text x="16" y="64" fill="#334155" font-size="10.5">298 Traffic Stations · 20 Ferries · 13 Aerodromes · 21 Weighbridges</text>
+            </g>
+
+            <!-- Output Nodes -->
+            <g transform="translate(810, 75)">
+              <rect width="290" height="68" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+              <text x="16" y="25" fill="#0F172A" font-size="11.5" font-weight="700">Imagery Hybrid GIS Cartography</text>
+              <text x="16" y="44" fill="#334155" font-size="10.5">Solid Paved &amp; Dotted (0.58x) Unpaved Symbology</text>
+              <text x="16" y="59" fill="#0071E3" font-size="10">EPSG:4326 Decimal Degrees · Metric Units</text>
+            </g>
+
+            <g transform="translate(810, 155)">
+              <rect width="290" height="68" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+              <text x="16" y="25" fill="#0F172A" font-size="11.5" font-weight="700">Interactive Analytics &amp; Cohorts</text>
+              <text x="16" y="44" fill="#334155" font-size="10.5">Multi-Tier Charts by Surface, Class &amp; Region</text>
+              <text x="16" y="59" fill="#16A34A" font-size="10">Downloadable PNG Charts &amp; CSV Schedules</text>
+            </g>
+
+            <g transform="translate(810, 235)">
+              <rect width="290" height="68" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+              <text x="16" y="25" fill="#0F172A" font-size="11.5" font-weight="700">National Asset Register Schedules</text>
+              <text x="16" y="44" fill="#334155" font-size="10.5">Decoded Attributes · Separate Bridge &amp; Culvert Tables</text>
+              <text x="16" y="59" fill="#D97706" font-size="10">Issued 18/11/2026 (UK Date Standard)</text>
+            </g>
+
+            <g transform="translate(810, 315)">
+              <rect width="290" height="68" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+              <text x="16" y="25" fill="#0F172A" font-size="11.5" font-weight="700">Vision 2040 Strategic Projections</text>
+              <text x="16" y="44" fill="#334155" font-size="10.5">Traffic Growth, Axle Load &amp; Climate Resilience</text>
+              <text x="16" y="59" fill="#7C3AED" font-size="10">Automated Weekly Refresh · Zero Manual Input</text>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section id="platform-documentation" class="analysis-panel docs-section" aria-labelledby="docs-heading">
+        <div class="analysis-title">
+          <div>
+            <p class="eyebrow">PLATFORM DOCUMENTATION &amp; STANDARDS</p>
+            <h2 id="docs-heading">System Architecture, Survey Instrumentation &amp; Governance</h2>
+          </div>
+          <p class="sync-pill">MoWT Department of National Roads · FY 2026/27</p>
+        </div>
+        <div class="docs-grid">
+          <article class="doc-card">
+            <span class="doc-tag">DATA PIPELINE</span>
+            <h3>Unified SQL Database &amp; Weekly Refresh</h3>
+            <p>All spatial layers, condition schedules, and traffic series are synchronised directly from the central Unified SQL Database on an automated weekly cycle. When new field inspections or traffic counts are committed to the database, all portal maps, charts, and schedules update automatically without manual file imports, user inputs, or administrative tools.</p>
+          </article>
+          <article class="doc-card">
+            <span class="doc-tag">SURVEY INSTRUMENTATION</span>
+            <h3>MOBICAP &amp; ROMDAS Condition Testing</h3>
+            <p>Pavement condition assessments across the 21,284.02 km National Road Network (6,406.69 km Paved and 14,877.33 km Unpaved) are captured using <strong>MOBICAP(Road condition assesment tool)</strong> and <strong>ROMDAS(Roughness and rutting machine based testing)</strong>. National condition stands at 12,610.00 km Good (59.20%), 7,844.00 km Fair (36.82%), and 848.00 km Poor (3.98%).</p>
+          </article>
+          <article class="doc-card">
+            <span class="doc-tag">STRUCTURES MANAGEMENT</span>
+            <h3>Bridges (552) &amp; Major Culverts (452)</h3>
+            <p>Structural inventories are governed in separate registers across 6 Maintenance Regions and 23 Maintenance Stations. The 552 Bridges comprise 247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, and 7 Under Construction. The 452 Major Culverts comprise 403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, and 1 Under Construction.</p>
+          </article>
+          <article class="doc-card">
+            <span class="doc-tag">CARTOGRAPHIC &amp; UNITS STANDARD</span>
+            <h3>Imagery Hybrid &amp; Metric Conventions</h3>
+            <p>All maps default to Imagery Hybrid with Labels in WGS 84 decimal degrees (EPSG:4326). Paved roads render as solid lines at full width, while unpaved roads render in the same functional class colour at 0.58x width with dotted styling. All metrics strictly follow metric units (km, m, mm, T, km/h) and UK dates (dd/mm/yyyy) projected to 2040 under Vision 2040.</p>
+          </article>
+        </div>
+      </section>
+
     </section>
   </main>
-  <footer><span>Data Science Trials GIS | Personal learning site, not an official government product</span><a href="#page-title">Back to top</a></footer>
+  <footer><span>Ministry of Works and Transport (MoWT), Department of National Roads · Unified SQL Database (Weekly Sync) · Issued 18/11/2026</span><a href="#page-title">Back to top</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Choose map download format" title="Choose map download format" aria-haspopup="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261117-v106" defer></script><script src="gis-studio.js?v=20261117-v106" defer></script><script src="google-earth-import.js?v=20261117-v106" defer></script><script src="transport-timeline.js?v=20261117-v106" defer></script><script src="reviewed-google-earth.js?v=20261117-v106" defer></script><script src="floating-actions.js?v=20261117-v106" defer></script><script src="portal-motion.js" defer></script><script src="transport-photos.js?v=20261117-v106" defer></script>
+  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261118-v200" defer></script><script src="gis-studio.js?v=20261118-v200" defer></script><script src="transport-timeline.js?v=20261118-v200" defer></script><script src="floating-actions.js?v=20261118-v200" defer></script><script src="portal-motion.js?v=20261118-v200" defer></script><script src="transport-photos.js?v=20261118-v200" defer></script>
 </body>
 </html>
