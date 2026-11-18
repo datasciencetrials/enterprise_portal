@@ -8,11 +8,25 @@
   <meta name="description" content="Ministry of Works and Transport (MoWT), Department of National Roads — National Transport Asset Registers and Unified SQL Database Schedules.">
   <title>National Transport Asset Registers | MoWT GIS Enterprise</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="data-explorer.css?v=20261118-v200">
-  <link rel="stylesheet" href="data-explorer-layout.css?v=20261118-v200">
-  <link rel="stylesheet" href="gis-studio-tabs.css?v=20261118-v200">
-  <link rel="stylesheet" href="portal-motion.css?v=20261118-v200">
-  <link rel="stylesheet" href="./apple-system.css?v=20261118-v200">
+  <link rel="stylesheet" href="data-explorer.css?v=20261118-v111">
+  <link rel="stylesheet" href="data-explorer-layout.css?v=20261118-v111">
+  <link rel="stylesheet" href="gis-studio-tabs.css?v=20261118-v111">
+  <link rel="stylesheet" href="portal-motion.css?v=20261118-v111">
+  <link rel="stylesheet" href="./apple-system.css?v=20261118-v111">
+<style>
+/* v111: No wide margins - full-width responsive layout */
+body > .container, body > .wrapper, body > main, .page-shell, .app-container,
+.main-content, .content-wrapper, .hero-inner, .portal-shell, .explorer-shell,
+.shell, .layout-container, #app > .container, #root > div > main {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  box-sizing: border-box !important;
+}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#schedule-table">Skip to table</a>
@@ -188,6 +202,6 @@
   </main>
   <footer><span>Ministry of Works and Transport (MoWT), Department of National Roads · Unified SQL Database (Weekly Sync) · Issued 18/11/2026</span><a href="./">Return to map</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Download filtered CSV" title="Download filtered CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="data-explorer.js?v=20261118-v200" defer></script><script src="floating-actions.js?v=20261118-v200" defer></script><script src="portal-motion.js?v=20261118-v200" defer></script>
+  <script src="data-explorer.js?v=20261118-v111" defer></script><script src="floating-actions.js?v=20261118-v111" defer></script><script src="portal-motion.js?v=20261118-v111" defer></script>
 </body>
 </html>
