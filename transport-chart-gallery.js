@@ -10,7 +10,7 @@
   const schemas = {
     roads: [
       { label: 'Surface Type', get: p => cleanVal(p['Surface Type'] || p['Surface  1']) },
-      field('Condition (MOBICAP & ROMDAS)', 'Condition'),
+      field('Condition (MOBICAP(Road condition assesment tool) & ROMDAS(Roughness and rutting machine based testing))', 'Condition'),
       field('Maintenance Region', 'Region'),
       field('Functional Class', 'Road Cla 1'),
     ],
@@ -122,7 +122,7 @@
         indexAxis: horizontal ? 'y' : 'x',
         plugins: {
           legend: { display: circular, position: 'bottom', labels: { color: '#0F172A', font: { family: 'Arial', size: 11, weight: '600' } } },
-          tooltip: { callbacks: { label: context => `${round(context.raw).toLocaleString('en-GB')} ${modeLabel()}` } }
+          tooltip: { backgroundColor: '#FFFFFF', titleColor: '#0F172A', bodyColor: '#334155', borderColor: '#E2E8F0', borderWidth: 1, padding: 10, cornerRadius: 8, callbacks: { label: context => `${round(context.raw).toLocaleString('en-GB')} ${modeLabel()}` } }
         },
         scales: circular ? {} : {
           x: { ticks: { color: '#334155', font: { family: 'Arial', size: 10 }, maxRotation: horizontal ? 0 : 35 }, grid: { color: '#E2E8F0' } },

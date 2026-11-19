@@ -387,7 +387,7 @@
         animation: { duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450, easing: 'easeOutQuart' },
         plugins: {
           legend: { display: circular, position: 'bottom', labels: { color: '#0F172A', boxWidth: 10, boxHeight: 10, padding: 8, font: { family: 'Arial', size: 11, weight: '600' } } },
-          tooltip: { callbacks: { label: context => `${fmt.format(Number(context.raw))} ${unit}` } }
+          tooltip: { backgroundColor: '#FFFFFF', titleColor: '#0F172A', bodyColor: '#334155', borderColor: '#E2E8F0', borderWidth: 1, padding: 10, cornerRadius: 8, callbacks: { label: context => `${fmt.format(Number(context.raw))} ${unit}` } }
         },
         scales: type === 'radar' || type === 'polarArea' ? {
           r: { beginAtZero: true, angleLines: { color: '#E2E8F0' }, grid: { color: '#E2E8F0' }, pointLabels: { color: '#0F172A', font: { family: 'Arial', size: 10 } }, ticks: { display: false } }

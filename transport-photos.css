@@ -2,17 +2,17 @@
 
 /* The gallery is the hero: the active tab's introduction sits on the imagery. */
 .transport-photos{height:clamp(560px,62vw,760px)}
-.transport-photo::after{background:linear-gradient(90deg,rgba(5,15,25,.86) 0%,rgba(5,15,25,.56) 48%,rgba(5,15,25,.28) 100%),linear-gradient(0deg,rgba(5,15,25,.72),transparent 38%)}
-.transport-photos .intro{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;align-items:flex-start;min-height:0;padding-top:clamp(44px,6vw,88px);background:transparent;color:#fff;pointer-events:none}
+.transport-photo::after{background:linear-gradient(90deg,rgba(245,245,247,.94) 0%,rgba(245,245,247,.72) 52%,rgba(245,245,247,.25) 100%),linear-gradient(0deg,rgba(245,245,247,.90),transparent 42%)}
+.transport-photos .intro{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;align-items:flex-start;min-height:0;padding-top:clamp(44px,6vw,88px);background:transparent;color:#0F172A;pointer-events:none}
 .transport-photos .intro>*{pointer-events:auto}
-.transport-photos .intro h1{max-width:950px;color:#fff;text-shadow:0 2px 24px #0007}
-.transport-photos .intro h1 em{background:linear-gradient(110deg,#ffffff 0%,#b3faff 48%,#ffffff 100%);background-size:250% 100%;background-clip:text;-webkit-background-clip:text;color:transparent}
-.transport-photos .intro .eyebrow{color:#6cf1f5}
-.transport-photos .intro-note{color:#e4edf1;max-width:590px;text-shadow:0 1px 12px #000a}
-.transport-photos .intro-aside{margin-top:72px;color:#dbe8ed}
-.transport-photos .intro-aside strong{color:#fff}
-.transport-photos .intro-aside a{color:#fff;text-decoration:underline;text-underline-offset:4px}
-.transport-photos .intro-aside a:hover{color:#6cf1f5}
+.transport-photos .intro h1{max-width:950px;color:#0F172A;text-shadow:none}
+.transport-photos .intro h1 em{background:linear-gradient(110deg,#0F172A 0%,#0071E3 48%,#0F172A 100%);background-size:250% 100%;background-clip:text;-webkit-background-clip:text;color:transparent}
+.transport-photos .intro .eyebrow{color:#0071E3}
+.transport-photos .intro-note{color:#334155;max-width:590px;text-shadow:none}
+.transport-photos .intro-aside{margin-top:72px;color:#334155}
+.transport-photos .intro-aside strong{color:#0F172A}
+.transport-photos .intro-aside a{color:#0071E3;text-decoration:underline;text-underline-offset:4px}
+.transport-photos .intro-aside a:hover{color:#005BB5}
 .transport-photo figcaption{bottom:84px}
 .transport-photo figcaption strong{font-size:clamp(19px,2.2vw,29px)}
 .transport-photo-dots{max-width:min(48vw,650px);overflow-x:auto;scrollbar-width:thin;padding:8px 2px;white-space:nowrap}

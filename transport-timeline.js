@@ -143,7 +143,7 @@
         animation: false,
         plugins: {
           legend: { display: false },
-          tooltip: { callbacks: { label: context => `${format.format(context.parsed.y)} ${selected.unit}` } }
+          tooltip: { backgroundColor: '#FFFFFF', titleColor: '#0F172A', bodyColor: '#334155', borderColor: '#E2E8F0', borderWidth: 1, padding: 10, cornerRadius: 8, callbacks: { label: context => `${format.format(context.parsed.y)} ${selected.unit}` } }
         },
         scales: {
           x: { grid: { display: false }, ticks: { maxTicksLimit: 14, color: '#334155', font: { family: 'Arial', size: 10 } } },
