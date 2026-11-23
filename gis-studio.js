@@ -278,6 +278,9 @@
   const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw || 'Central';
   const title = properties => value(properties, 'Link Name') || value(properties, 'Road No 1') || 'National Road Corridor';
   const text = item => document.createTextNode(String(item ?? ''));
+  const linkId = raw => typeof raw === 'string' && raw.includes('_') ? raw : 'Link ID not verified';
+  const displayField = (key, raw) => key === 'Link Id 1' || key === 'Link_Number' || key === 'Link_ID'
+    ? linkId(raw) : typeof raw === 'string' ? raw.replaceAll('_', ' ') : raw;
   const fmtDate = raw => {
     const s = String(raw || '').trim();
     const m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
@@ -298,6 +301,7 @@
     panel.className = 'road-popup';
     const heading = document.createElement('strong'); heading.append(text(title(properties))); panel.append(heading);
     for (const [label, entry] of [
+      ['Link ID', linkId(value(properties, 'Link Id 1'))],
       ['Road number', value(properties, 'Road No 1')],
       ['Functional Class', value(properties, 'Road Cla 1') || 'National Road Network'],
       ['Surface Type', surface(properties)],
@@ -460,19 +464,19 @@
       title: 'Bridges (552)', files: ['bridges.geojson'], colour: '#0071E3', countLabel: 'National Bridges (552)', statusUnit: 'bridges',
       group: p => category(p, 'Maintenance_Region'),
       description: 'National Bridge Management System (BMS) inventory of 552 Bridges across the 6 Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction), synchronised weekly from the Unified SQL Database.',
-      fields: [['Bridge Name', 'Bridge_Name'], ['Bridge Number', 'Bridge_Number'], ['Road Name', 'Road_Name'], ['River Crossing', 'River_Crossing'], ['Condition Band', 'Condition_Band'], ['Region', 'Maintenance_Region'], ['Station', 'Maintenance_Station'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
+      fields: [['Bridge Name', 'Bridge_Name'], ['Bridge Number', 'Bridge_Number'], ['Link ID', 'Link_Number'], ['Road Name', 'Road_Name'], ['River Crossing', 'River_Crossing'], ['Condition Band', 'Condition_Band'], ['Region', 'Maintenance_Region'], ['Station', 'Maintenance_Station'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     culverts: {
       title: 'Major Culverts (452)', files: ['major_culverts.geojson'], colour: '#0891B2', countLabel: 'Major Culverts (452)', statusUnit: 'major culverts',
       group: p => category(p, 'Maintenance_Region'),
       description: 'National Bridge Management System (BMS) inventory of 452 Major Culverts across the 6 Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction), synchronised weekly from the Unified SQL Database.',
-      fields: [['Culvert Number', 'Culvert_Number'], ['Road Name', 'Road_Name'], ['Structure Type', 'Culvert_Structure_Type'], ['Condition Band', 'Condition_Band'], ['Region', 'Maintenance_Region'], ['Station', 'Maintenance_Station'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
+      fields: [['Culvert Number', 'Culvert_Number'], ['Link ID', 'Link_Number'], ['Road Name', 'Road_Name'], ['Structure Type', 'Culvert_Structure_Type'], ['Condition Band', 'Condition_Band'], ['Region', 'Maintenance_Region'], ['Station', 'Maintenance_Station'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     traffic: {
       title: 'Traffic Census Stations (298)', files: ['traffic_count_stations.geojson'], colour: '#D97706', countLabel: 'Traffic Census Stations', statusUnit: 'stations',
       group: p => subRegion(category(p, 'REGION')),
       description: 'National Traffic Census network of 298 monitoring stations across the 6 Maintenance Regions, supporting continuous AADT tracking and Vision 2040 corridor demand projections.',
-      fields: [['Station Code', 'TCS_NAME'], ['Station Number', 'TCS_NO_'], ['Road Corridor', 'Link_Name'], ['Station Category', 'STATIONS'], ['Region', 'REGION']],
+      fields: [['Station Code', 'TCS_NAME'], ['Station Number', 'TCS_NO_'], ['Link ID', 'Link_ID'], ['Road Corridor', 'Link_Name'], ['Station Category', 'STATIONS'], ['Region', 'REGION']],
     },
     ferries: {
       title: 'Ferry Crossings (20)', files: ['ferry_crossings.geojson'], colour: '#0071E3', countLabel: 'Ferry Crossings', statusUnit: 'crossings',
@@ -559,7 +563,7 @@
       let entry = properties[key];
       if (entry === null || entry === undefined || entry === '') continue;
       if (key === 'date') entry = fmtDate(entry);
-      const row = document.createElement('div'); row.append(text(`${label}: ${key === 'REGION' ? subRegion(entry) : entry}`)); panel.append(row);
+      const row = document.createElement('div'); row.append(text(`${label}: ${key === 'REGION' ? subRegion(entry) : displayField(key, entry)}`)); panel.append(row);
     }
     return panel;
   }
@@ -711,12 +715,12 @@
       const exportRows = roadItems.filter(matches).map(item => {
         const p = item.properties || {};
         return { type: 'Feature', geometry: item.geometry, properties: {
-          'Road ID': value(p, 'Link Id 1'), 'Road Name': title(p), Network: 'National Road Network',
+          'Link ID': linkId(value(p, 'Link Id 1')), 'Road Name': title(p), Network: 'National Road Network',
           'Functional Class': category(p, 'Road Cla 1'), 'Surface Type': surface(p), 'Region': category(p, 'Region'),
           Condition: condition(p), 'Length (km)': length(p),
         } };
       });
-      const headers = ['Road ID', 'Road Name', 'Network', 'Functional Class', 'Surface Type', 'Region', 'Condition', 'Length (km)'];
+      const headers = ['Link ID', 'Road Name', 'Network', 'Functional Class', 'Surface Type', 'Region', 'Condition', 'Length (km)'];
       if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: exportRows }, 'mowt-national-roads', 'application/geo+json');
       else if (fileType === 'json') downloadJson(exportRows.map(item => item.properties), 'mowt-national-roads.json', 'application/json');
       else downloadCsv(headers, exportRows.map(item => headers.map(key => item.properties[key])), 'mowt-national-roads-schedule');
@@ -727,7 +731,7 @@
     try {
       const items = await loadMode(mode);
       const headers = ['Asset Category', ...spec.fields.map(([label]) => label)];
-      const rows = items.map(item => [item.properties?._transportKind || spec.title, ...spec.fields.map(([, key]) => key === 'REGION' ? subRegion(item.properties?.[key]) : item.properties?.[key])]);
+      const rows = items.map(item => [item.properties?._transportKind || spec.title, ...spec.fields.map(([, key]) => key === 'REGION' ? subRegion(item.properties?.[key]) : displayField(key, item.properties?.[key]))]);
       const exportRows = items.map((item, index) => ({ type: 'Feature', geometry: item.geometry, properties: Object.fromEntries(headers.map((header, column) => [header, rows[index][column]])) }));
       if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: exportRows }, `mowt-${mode}-layer`, 'application/geo+json');
       else if (fileType === 'json') downloadJson(exportRows.map(item => item.properties), `mowt-${mode}-layer.json`, 'application/json');

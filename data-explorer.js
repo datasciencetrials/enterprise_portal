@@ -11,7 +11,7 @@
       context: 'Statutory National Road Network register (21,284.02 km total: 6,406.69 km Paved [30.10%] and 14,877.33 km Unpaved [69.90%]; Class A 2,604.65 km, Class B 2,845.27 km, Class C 15,689.54 km, Class M 144.56 km; Condition: Good 12,610.00 km [59.20%], Fair 7,844.00 km [36.82%], Poor 848.00 km [3.98%]) across 6 Maintenance Regions and 23 Maintenance Stations.',
       gaps: 'All National Road Network attributes are synchronised weekly from the Unified SQL Database, validated via MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing), and projected to Vision 2040.',
       columns: [
-        field('Road ID', 'Link Id 1'),
+        field('Link ID', 'Link Id 1'),
         field('Road Number', 'Road No 1'),
         field('Road Name', 'Link Name'),
         field('Surface Type', 'Surface Type'),
@@ -205,6 +205,12 @@
   let rows = [], filtered = [], active = null, sequence = 0;
 
   const clean = v => v === null || v === undefined || String(v).trim() === '' ? 'Standard' : String(v).trim();
+  const linkIdKeys = new Set(['Link Id 1', 'Link_Number', 'Link_ID']);
+  const displayValue = (key, raw) => {
+    const value = clean(raw);
+    if (linkIdKeys.has(key)) return value.includes('_') ? value : 'Link ID not verified';
+    return value.replaceAll('_', ' ');
+  };
   const subRegion = raw => ({ North: 'Northern', South: 'Southern', East: 'Eastern', West: 'Western', 'North East': 'North Eastern' })[raw] || raw;
   const count = v => new Intl.NumberFormat('en-GB').format(v);
   const kilometres = v => new Intl.NumberFormat('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(v);
@@ -228,7 +234,7 @@
       }
       if (key === 'stations' && col.key === 'REGION') raw = subRegion(clean(raw));
       if (col.key === 'date') raw = fmtDate(raw);
-      result[col.key] = clean(raw);
+      result[col.key] = displayValue(col.key, raw);
     }
     if (key === 'roads') {
       const supplied = item.properties?.['Length Km'];
