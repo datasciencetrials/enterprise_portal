@@ -411,24 +411,23 @@
 
   function update() {
     if (!roadsLoaded) {
-      $('map-status').textContent = roadLoadPromise ? 'Loading National Road Network' : 'Road network unavailable';
-      $('selection-summary').textContent = 'Loading 21,284.02 km National Road Network...';
+      $('map-status').textContent = roadLoadPromise ? 'Loading mapped National Roads' : 'Mapped road layer unavailable';
+      $('selection-summary').textContent = 'Loading 21,284.02 km mapped extent...';
       return;
     }
     const visible = roadItems.filter(matches);
-    const unfiltered = !filters.search && !filters.region && !filters.surface && !filters.condition;
     if (activeMode === 'roads') drawMap(visible);
     const km = visible.reduce((sum, item) => sum + (length(item.properties || {}) || 0), 0);
     const pct = (km / 21284.02 * 100).toFixed(2);
     $('metric-value').textContent = formatKm.format(km);
-    $('selection-summary').textContent = `${formatKm.format(km)} km (${pct}% of 21,284.02 km National Road Network)`;
-    $('map-status').textContent = 'National Road Network on map';
+    $('selection-summary').textContent = `${formatKm.format(km)} km (${pct}% of the 21,284.02 km mapped road layer)`;
+    $('map-status').textContent = 'Mapped National Roads on map';
 
     const surfaceData = tally(visible, surface, length);
     chart('surface-chart', ['Paved', 'Unpaved'], ['Paved', 'Unpaved'].map(k => Number((surfaceData.get(k) || 0).toFixed(2))), ['#0071E3', '#D97706'], false, 'doughnut', 'km');
 
     const conditionData = tally(visible, condition, length);
-    const condVals = unfiltered ? [12610.00, 7844.00, 848.00] : ['Good', 'Fair', 'Poor'].map(k => Number((conditionData.get(k) || 0).toFixed(2)));
+    const condVals = ['Good', 'Fair', 'Poor'].map(k => Number((conditionData.get(k) || 0).toFixed(2)));
     chart('condition-chart', ['Good', 'Fair', 'Poor'], condVals, ['#16A34A', '#D97706', '#DC2626'], false, 'bar', 'km');
 
     const regionData = tally(visible, p => value(p, 'Region') || 'Central', length);
@@ -463,55 +462,55 @@
     bridges: {
       title: 'Bridges (552)', files: ['bridges.geojson'], colour: '#0071E3', countLabel: 'National Bridges (552)', statusUnit: 'bridges',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'National Bridge Management System (BMS) inventory of 552 Bridges across the 6 Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction), synchronised weekly from the Unified SQL Database.',
+      description: 'Published mapped inventory of 552 Bridges across 6 Maintenance Regions and 23 Maintenance Stations: 247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical and 7 Under Construction. Some Link IDs and positions require review.',
       fields: [['Bridge Name', 'Bridge_Name'], ['Bridge Number', 'Bridge_Number'], ['Link ID', 'Link_Number'], ['Road Name', 'Road_Name'], ['River Crossing', 'River_Crossing'], ['Condition Band', 'Condition_Band'], ['Region', 'Maintenance_Region'], ['Station', 'Maintenance_Station'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     culverts: {
       title: 'Major Culverts (452)', files: ['major_culverts.geojson'], colour: '#0891B2', countLabel: 'Major Culverts (452)', statusUnit: 'major culverts',
       group: p => category(p, 'Maintenance_Region'),
-      description: 'National Bridge Management System (BMS) inventory of 452 Major Culverts across the 6 Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction), synchronised weekly from the Unified SQL Database.',
+      description: 'Published mapped inventory of 452 Major Culverts across 6 Maintenance Regions and 23 Maintenance Stations: 403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical and 1 Under Construction. Some Link IDs and positions require review.',
       fields: [['Culvert Number', 'Culvert_Number'], ['Link ID', 'Link_Number'], ['Road Name', 'Road_Name'], ['Structure Type', 'Culvert_Structure_Type'], ['Condition Band', 'Condition_Band'], ['Region', 'Maintenance_Region'], ['Station', 'Maintenance_Station'], ['Longitude (X)', 'Longitude'], ['Latitude (Y)', 'Latitude']],
     },
     traffic: {
       title: 'Traffic Census Stations (298)', files: ['traffic_count_stations.geojson'], colour: '#D97706', countLabel: 'Traffic Census Stations', statusUnit: 'stations',
       group: p => subRegion(category(p, 'REGION')),
-      description: 'National Traffic Census network of 298 monitoring stations across the 6 Maintenance Regions, supporting continuous AADT tracking and Vision 2040 corridor demand projections.',
+      description: 'Published mapped inventory of 298 traffic census stations across 6 Maintenance Regions. The layer does not establish a live feed, current speed or current traffic volumes.',
       fields: [['Station Code', 'TCS_NAME'], ['Station Number', 'TCS_NO_'], ['Link ID', 'Link_ID'], ['Road Corridor', 'Link_Name'], ['Station Category', 'STATIONS'], ['Region', 'REGION']],
     },
     ferries: {
       title: 'Ferry Crossings (20)', files: ['ferry_crossings.geojson'], colour: '#0071E3', countLabel: 'Ferry Crossings', statusUnit: 'crossings',
       group: p => category(p, 'Water_body'),
-      description: 'National Inland Water Transport network comprising 20 ferry crossings across Lake Victoria, Lake Kyoga, Lake Albert, Lake Bisina, River Nile, and River Semliki, transporting over 818,000 passengers and 82,000 vehicles annually.',
+      description: 'Published mapped inventory of 20 ferry crossings across Lake Victoria, Lake Kyoga, Lake Albert, Lake Bisina, River Nile and River Semliki. Current schedules and operations are not verified.',
       fields: [['Crossing', 'Ferry_cros'], ['Water Body', 'Water_body'], ['Status', 'Category']],
     },
     aviation: {
       title: 'Aviation Aerodromes (13)', files: ['airports.geojson'], colour: '#7C3AED', countLabel: 'Aviation Aerodromes', statusUnit: 'aerodromes',
       group: p => category(p, 'Category'),
-      description: 'Civil Aviation network covering Entebbe International Airport (2,490,000 international passengers and 45,899 T air cargo exports annually), Kabalega International Airport, and 11 upcountry aerodromes.',
+      description: 'Published mapped inventory of 13 aviation aerodromes. Current passenger, cargo and operational figures are not verified by this layer.',
       fields: [['Aerodrome', 'F9'], ['Category', 'Category'], ['Region', 'Region']],
     },
     safety: {
       title: 'Road Safety Observations', files: ['kampala_traffic_incidents.geojson'], colour: '#DC2626', countLabel: 'Safety Observations', statusUnit: 'observations',
       group: p => category(p, 'severity'),
-      description: 'Road Safety Observation Register along principal corridors, categorised by severity, collision typology, and functional road classification to guide blackspot engineering interventions.',
+      description: 'Published road safety observations categorised by severity, collision type and road class. This is a static historical layer, not a current incident feed.',
       fields: [['Incident Type', 'incident_type'], ['Severity', 'severity'], ['Road Corridor', 'road_name'], ['Road Class', 'road_class'], ['Date', 'date']],
     },
     freight: {
       title: 'Weighbridge Stations (21)', files: ['weighbridges.geojson'], colour: '#EA580C', countLabel: 'Weighbridge Facilities', statusUnit: 'facilities',
       group: p => category(p, 'Status'),
-      description: 'National Axle Load Control network of 21 weighbridge stations along trunk freight corridors protecting pavement structural life.',
+      description: 'Published mapped inventory of 21 weighbridge facilities. Live operational status is not verified.',
       fields: [['Facility', 'Weighbridge Name'], ['Status', 'Status'], ['Region', 'Region']],
     },
     rail: {
       title: 'Rail Corridors (1,538.00 km)', files: ['mgr.geojson', 'sgr_alignment.geojson'], colour: '#16A34A', countLabel: 'Railway Network (km)', statusUnit: 'km',
       group: p => category(p, '_transportKind'),
-      description: 'National Railway Network comprising 1,266.00 km of Metre-Gauge Railway (269.00 km Operational and 997.00 km Scheduled Rehabilitation) and 272.00 km of Planned Standard-Gauge Railway (SGR) alignment.',
+      description: 'Published mapped rail geometry comprises 1,266.00 km of Metre-Gauge Railway and 272.00 km of planned Standard-Gauge Railway alignment. Mapped geometry is not proof of current operational length.',
       fields: [['Corridor Name', 'Name'], ['Operational Status', 'Status'], ['Physical Length (km)', 'Length Km']],
     },
   };
 
   const tabHeadings = {
-    roads: 'National Road Network (21,284.02 km)',
+    roads: 'Mapped National Roads (21,284.02 km)',
     bridges: 'National Bridges (552)',
     culverts: 'Major Culverts (452)',
     traffic: 'Traffic Census Stations (298)',
@@ -524,9 +523,9 @@
   function updateIntro(key) {
     const heading = $('page-title');
     heading.textContent = tabHeadings[key];
-    $('intro-kicker').textContent = `MINISTRY OF WORKS AND TRANSPORT / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
+    $('intro-kicker').textContent = `DATA SCIENCE TRIALS / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
     $('intro-note').textContent = key === 'roads'
-      ? 'National Transport and Road Asset Management GIS Portal covering the 21,284.02 km National Road Network (6,406.69 km Paved, 14,877.33 km Unpaved), 552 Bridges, 452 Major Culverts, and multi-modal transport infrastructure across 6 Regions and 23 Stations.'
+      ? 'The published mapped National Roads layer totals 21,284.02 km, which is 17.98 km below the approved 21,302 km baseline. This personal learning portal is not an official Ministry product and does not claim a live database refresh.'
       : transportModes[key].description;
     $('intro-aside-title').textContent = key === 'roads' ? 'Interactive map and registers' : `${transportModes[key].title}: map & registers`;
     $('intro-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ roads: 'roads', bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
@@ -537,7 +536,16 @@
     if (!modeCache.has(key)) {
       const spec = transportModes[key];
       modeCache.set(key, Promise.all(spec.files.map(async file => {
-        const response = await fetch(`geo/${file}?v=20261118-v200`);
+        let response;
+        for (let attempt = 0; attempt < 2; attempt++) {
+          try {
+            response = await fetch(`geo/${file}?v=20261118-v200`);
+            break;
+          } catch (error) {
+            if (error?.name !== 'AbortError' || attempt === 1) throw error;
+            $('map-status').textContent = `Retrying ${spec.title.toLowerCase()}`;
+          }
+        }
         if (!response.ok) throw new Error(`${file} returned ${response.status}`);
         const data = await response.json();
         const kind = file === 'bridges.geojson' ? 'Bridges' : file === 'major_culverts.geojson' ? 'Major Culverts' :
@@ -637,8 +645,8 @@
     if (isRoad) {
       if (pointLayer) { map.removeLayer(pointLayer); pointLayer = null; }
       $('metric-kind').textContent = 'ROADS';
-      $('metric-label').textContent = 'National Road Network (km)';
-      $('metric-note').textContent = 'Synchronised weekly from the Unified SQL Database.';
+      $('metric-label').textContent = 'Mapped National Roads (km)';
+      $('metric-note').textContent = 'Published mapped layer.';
       if (!roadsLoaded && !roadLoadPromise) loadRoadFeatures().catch(() => {});
       update();
       showUgandaExtent();
@@ -680,7 +688,7 @@
         ? formatKm.format(items.reduce((sum, item) => sum + (Number(item.properties?.['Length Km']) || mappedLineKm(item.geometry)), 0))
         : formatCount.format(items.length);
       $('metric-label').textContent = spec.countLabel;
-      $('metric-note').textContent = 'Synchronised weekly from the Unified SQL Database.';
+      $('metric-note').textContent = 'Published mapped layer.';
     } catch (error) {
       if (activeMode !== key) return;
       $('map-status').textContent = 'Layer unavailable';
@@ -721,9 +729,9 @@
         } };
       });
       const headers = ['Link ID', 'Road Name', 'Network', 'Functional Class', 'Surface Type', 'Region', 'Condition', 'Length (km)'];
-      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: exportRows }, 'mowt-national-roads', 'application/geo+json');
-      else if (fileType === 'json') downloadJson(exportRows.map(item => item.properties), 'mowt-national-roads.json', 'application/json');
-      else downloadCsv(headers, exportRows.map(item => headers.map(key => item.properties[key])), 'mowt-national-roads-schedule');
+      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: exportRows }, 'data-science-trials-mapped-roads.geojson', 'application/geo+json');
+      else if (fileType === 'json') downloadJson(exportRows.map(item => item.properties), 'data-science-trials-mapped-roads.json', 'application/json');
+      else downloadCsv(headers, exportRows.map(item => headers.map(key => item.properties[key])), 'data-science-trials-mapped-roads.csv');
       return;
     }
     const spec = transportModes[mode];
@@ -733,9 +741,9 @@
       const headers = ['Asset Category', ...spec.fields.map(([label]) => label)];
       const rows = items.map(item => [item.properties?._transportKind || spec.title, ...spec.fields.map(([, key]) => key === 'REGION' ? subRegion(item.properties?.[key]) : displayField(key, item.properties?.[key]))]);
       const exportRows = items.map((item, index) => ({ type: 'Feature', geometry: item.geometry, properties: Object.fromEntries(headers.map((header, column) => [header, rows[index][column]])) }));
-      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: exportRows }, `mowt-${mode}-layer`, 'application/geo+json');
-      else if (fileType === 'json') downloadJson(exportRows.map(item => item.properties), `mowt-${mode}-layer.json`, 'application/json');
-      else downloadCsv(headers, rows, `mowt-${mode}-schedule`);
+      if (fileType === 'geojson') downloadJson({ type: 'FeatureCollection', features: exportRows }, `data-science-trials-${mode}-layer.geojson`, 'application/geo+json');
+      else if (fileType === 'json') downloadJson(exportRows.map(item => item.properties), `data-science-trials-${mode}-layer.json`, 'application/json');
+      else downloadCsv(headers, rows, `data-science-trials-${mode}-schedule.csv`);
     } catch (error) {
       console.error('Export failed', error);
     }
@@ -775,7 +783,7 @@
       roadLoadPromise = null;
       if (activeMode === 'roads') {
         $('map-status').textContent = 'Road geometry unavailable';
-        $('selection-summary').textContent = 'Select Roads to reload the 21,284.02 km National Road Network.';
+        $('selection-summary').textContent = 'Select Roads to reload the 21,284.02 km mapped road layer.';
       }
       throw error;
     });
