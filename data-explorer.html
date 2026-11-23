@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#F5F5F7">
-  <meta name="description" content="National Transport Infrastructure GIS Enterprise  -  National Transport Asset Registers and Unified SQL Database Schedules.">
-  <title>National Transport Asset Registers | National Transport GIS Enterprise</title>
+  <meta name="description" content="Data Science Trials mapped Uganda transport asset registers.">
+  <title>Transport Asset Registers | Data Science Trials</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="data-explorer.css?v=20261123-v113">
   <link rel="stylesheet" href="data-explorer-layout.css?v=20261123-v113">
@@ -35,15 +35,15 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
     <nav aria-label="Primary">
       <a href="./">Main portal</a>
       <a href="./data-explorer.html" aria-current="page">Asset Registers</a>
-      <a href="#platform-mindmap">System Mind Map</a>
-      <a href="#platform-documentation">Platform Documentation</a>
+      <a href="#platform-mindmap">Data Coverage Map</a>
+      <a href="#platform-documentation">Portal Notes</a>
     </nav>
   </header>
   <main>
     <section class="hero">
-      <p class="eyebrow">UGANDA NATIONAL TRANSPORT GIS ENTERPRISE</p>
-      <h1>National Transport Asset Registers</h1>
-      <p>Comprehensive view-only registers covering the 21,284.02 km National Road Network (6,406.69 km Paved [30.10%], 14,877.33 km Unpaved [69.90%]; Good 12,610.00 km [59.20%], Fair 7,844.00 km [36.82%], Poor 848.00 km [3.98%]), 552 National Bridges, 452 Major Culverts, and multi-modal infrastructure across 6 Regions and 23 Stations. Synchronised weekly from the Unified SQL Database with zero user inputs required.</p>
+      <p class="eyebrow">DATA SCIENCE TRIALS / UGANDA TRANSPORT GIS</p>
+      <h1>Mapped Transport Asset Registers</h1>
+      <p>Published mapped registers support review of 21,284.02 km of roads, 552 Bridges and 452 Major Culverts. The road layer is 17.98 km below the approved 21,302 km National Roads baseline and is not the complete national total. This is a personal learning site, not an official Ministry product.</p>
     </section>
     <section class="workspace" aria-label="Asset dataset browser">
       <div class="dataset-pills" id="dataset-pills" role="tablist" aria-label="Transport register tabs"></div>
@@ -56,23 +56,23 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
       <div class="summary">
         <div><span id="total-label">Total Network (km)</span><strong id="total">21,284.02 km</strong></div>
         <div><span id="matching-label">Filtered Extent (km)</span><strong id="matching">21,284.02 km (100.0%)</strong></div>
-        <div><span>Database Sync Status</span><strong id="coverage">Weekly SQL Sync · 18/11/2026</strong></div>
+        <div><span>Data status</span><strong id="coverage">Published mapped layer</strong></div>
       </div>
       <p id="context" class="context" role="status">Loading layer.</p>
       <section class="breakdown" aria-labelledby="breakdown-heading"><div class="section-heading"><h2 id="breakdown-heading">Category distribution</h2><p id="breakdown-field"></p></div><div id="breakdown-list" class="breakdown-list"></div></section>
-      <section id="schedule-table" class="records" aria-labelledby="records-heading"><div class="section-heading"><h2 id="records-heading">National Asset Register Schedule</h2><p id="row-range"></p></div><div class="table-scroll" role="region" aria-label="National asset schedule, scroll to browse" tabindex="0"><table><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div><p class="note">All attributes are decoded in accordance with the National Road Data Dictionary (FY 2026/27), surveyed with MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing), synced weekly from the Unified SQL Database, and projected to Vision 2040.</p></section>
-      <section class="schema" aria-labelledby="schema-heading"><div class="section-heading"><h2 id="schema-heading">Technical &amp; Database Sync Notes</h2></div><p id="gaps" class="note"></p></section>
+      <section id="schedule-table" class="records" aria-labelledby="records-heading"><div class="section-heading"><h2 id="records-heading">Mapped Asset Register Schedule</h2><p id="row-range"></p></div><div class="table-scroll" role="region" aria-label="Mapped asset schedule, scroll to browse" tabindex="0"><table><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div><p class="note">Rows render from the published mapped layer. Not supplied and Link ID not verified are explicit data-quality states. No live database refresh or projected traffic series is claimed.</p></section>
+      <section class="schema" aria-labelledby="schema-heading"><div class="section-heading"><h2 id="schema-heading">Technical and Data Status Notes</h2></div><p id="gaps" class="note"></p></section>
       
       <section id="platform-mindmap" class="analysis-panel mindmap-section" aria-labelledby="mindmap-heading">
         <div class="analysis-title">
           <div>
-            <p class="eyebrow">UNIFIED SQL DATABASE ARCHITECTURE</p>
-            <h2 id="mindmap-heading">Enterprise Data Flow &amp; System Mind Map</h2>
+            <p class="eyebrow">PUBLISHED DATA COVERAGE</p>
+            <h2 id="mindmap-heading">Portal Data Flow and Coverage Map</h2>
           </div>
-          <p class="sync-pill">Automated Weekly Sync · Unified SQL DB · View-Only Vision 2040</p>
+          <p class="sync-pill">Static mapped exports · Browser calculations · View only</p>
         </div>
-        <p class="data-note" style="margin-top:8px;margin-bottom:20px;">All portal datasets are ingested automatically from the central <strong>Unified SQL Database</strong> (Central Enterprise Repository) on a weekly refresh schedule. Zero manual file uploads, zero user inputs, zero access-level gates, and zero administrative tools are required.</p>
-        <div class="mindmap-container" role="img" aria-label="System Mind Map showing Unified SQL Database feeding National Road Network, Bridges, Major Culverts, Multi-Modal Transport, and Vision 2040 Analytics">
+        <p class="data-note" style="margin-top:8px;margin-bottom:20px;">The portal loads published static mapped layers in the browser. The connected database currently has no governed public tables, so live database status and automated refresh are not claimed.</p>
+        <div class="mindmap-container" role="img" aria-label="Data coverage map showing published mapped layers for roads, bridges, major culverts and multi-modal transport">
           <svg viewBox="0 0 1240 468" class="mindmap-svg">
             <defs>
               <marker id="mm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -95,17 +95,17 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
             <g data-node="root" transform="translate(20, 169)">
               <rect width="250" height="130" rx="14" fill="#FFFFFF" stroke="#0071E3" stroke-width="2.5"/>
               <rect width="250" height="32" rx="14" fill="#0071E3"/>
-              <text x="125" y="21" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">UNIFIED SQL DATABASE</text>
-              <text x="125" y="56" text-anchor="middle" fill="#0F172A" font-size="13" font-weight="700">Central GIS &amp; Asset Repository</text>
-              <text x="125" y="78" text-anchor="middle" fill="#334155" font-size="11">Automated Weekly Sync Pipeline</text>
-              <text x="125" y="98" text-anchor="middle" fill="#334155" font-size="11">Zero User Input · View-Only</text>
-              <text x="125" y="116" text-anchor="middle" fill="#0071E3" font-size="10" font-weight="700">6 Regions · 23 Stations · Vision 2040</text>
+              <text x="125" y="21" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">PUBLISHED MAPPED EXPORTS</text>
+              <text x="125" y="56" text-anchor="middle" fill="#0F172A" font-size="13" font-weight="700">Browser GIS and Asset Registers</text>
+              <text x="125" y="78" text-anchor="middle" fill="#334155" font-size="11">Static Published Layers</text>
+              <text x="125" y="98" text-anchor="middle" fill="#334155" font-size="11">View Only · Browser Calculations</text>
+              <text x="125" y="116" text-anchor="middle" fill="#0071E3" font-size="10" font-weight="700">Live Database Not Verified</text>
             </g>
 
             <!-- Pillar 1: National Road Network -->
             <g data-node="roads" transform="translate(385, 24)">
               <rect width="410" height="84" rx="12" fill="#FFFFFF" stroke="#0071E3" stroke-width="2"/>
-              <text x="16" y="26" fill="#0071E3" font-size="11.5" font-weight="700">1. NATIONAL ROAD NETWORK (21,284.02 km)</text>
+              <text x="16" y="26" fill="#0071E3" font-size="11.5" font-weight="700">1. MAPPED NATIONAL ROADS (21,284.02 km)</text>
               <text x="16" y="48" fill="#0F172A" font-size="11">Paved: 6,406.69 km (30.10%) · Unpaved: 14,877.33 km (69.90%)</text>
               <text x="16" y="68" fill="#334155" font-size="10.5">Class A: 2,604.65 · B: 2,845.27 · C: 15,689.54 · M: 144.56 km</text>
             </g>
@@ -114,8 +114,8 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
             <g data-node="condition" transform="translate(385, 124)">
               <rect width="410" height="102" rx="12" fill="#FFFFFF" stroke="#16A34A" stroke-width="2"/>
               <text x="16" y="25" fill="#16A34A" font-size="11.5" font-weight="700">2. PAVEMENT CONDITION &amp; SURVEY TOOLS</text>
-              <text x="16" y="46" fill="#0F172A" font-size="11">Good: 12,610.00 km (59.20%) · Fair: 7,844.00 km (36.82%)</text>
-              <text x="16" y="66" fill="#334155" font-size="10.5">Poor: 848.00 km (3.98%) · MOBICAP(Road condition assesment tool)</text>
+              <text x="16" y="46" fill="#0F172A" font-size="11">Good: 12,608.66 km · Fair: 7,824.14 km</text>
+              <text x="16" y="66" fill="#334155" font-size="10.5">Poor: 851.22 km · MOBICAP(Road condition assesment tool)</text>
               <text x="16" y="85" fill="#334155" font-size="10.5">ROMDAS(Roughness and rutting machine based testing)</text>
             </g>
 
@@ -157,18 +157,18 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
               <text x="16" y="64" fill="#D97706" font-size="10" font-weight="600">Issued 23/11/2026 (UK Date Standard)</text>
             </g>
 
-            <g data-node="vision2040" transform="translate(895, 332)">
+            <g data-node="gaps" transform="translate(895, 332)">
               <rect width="325" height="76" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
-              <text x="16" y="27" fill="#0F172A" font-size="12" font-weight="700">Vision 2040 Strategic Projections</text>
-              <text x="16" y="47" fill="#334155" font-size="10.5">Traffic Growth, Axle Load &amp; Climate Resilience</text>
-              <text x="16" y="64" fill="#7C3AED" font-size="10" font-weight="600">Automated Weekly Refresh · Zero Manual Input</text>
+              <text x="16" y="27" fill="#0F172A" font-size="12" font-weight="700">Coverage and Data Gaps</text>
+              <text x="16" y="47" fill="#334155" font-size="10.5">Road Baseline Gap: 17.98 km</text>
+              <text x="16" y="64" fill="#7C3AED" font-size="10" font-weight="600">Live Database and Current Traffic Not Verified</text>
             </g>
           </svg>
         </div>
         <div id="mindmap-detail" class="mindmap-detail" aria-live="polite">
           <div>
-            <h3>Unified SQL Database (Central Enterprise Repository)</h3>
-            <p>Select any node in the Mind Map above to inspect its authoritative scope, dataset coverage, and Vision 2040 integration.</p>
+            <h3>Published Mapped Exports</h3>
+            <p>Select any node above to inspect the published scope, mapped coverage and known data gaps.</p>
           </div>
           <button type="button" class="quiet-button" data-mindmap-action hidden>Open layer on map</button>
         </div>
@@ -177,21 +177,21 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
       <section id="platform-documentation" class="analysis-panel docs-section" aria-labelledby="docs-heading">
         <div class="analysis-title">
           <div>
-            <p class="eyebrow">PLATFORM DOCUMENTATION &amp; STANDARDS</p>
-            <h2 id="docs-heading">System Architecture, Survey Instrumentation &amp; Governance</h2>
+            <p class="eyebrow">PORTAL NOTES AND STANDARDS</p>
+            <h2 id="docs-heading">Data Status, Survey Instrumentation and Mapping Standards</h2>
           </div>
-          <p class="sync-pill">National Road Network Administration · FY 2026/27</p>
+          <p class="sync-pill">Personal learning site · Not an official Ministry product</p>
         </div>
         <div class="docs-grid">
           <article class="doc-card">
-            <span class="doc-tag">DATA PIPELINE</span>
-            <h3>Unified SQL Database &amp; Weekly Refresh</h3>
-            <p>All spatial layers, condition schedules, and traffic series are synchronised directly from the central Unified SQL Database on an automated weekly cycle. When new field inspections or traffic counts are committed to the database, all portal maps, charts, and schedules update automatically without manual file imports, user inputs, or administrative tools.</p>
+            <span class="doc-tag">DATA STATUS</span>
+            <h3>Published Mapped Layers</h3>
+            <p>Spatial layers, condition schedules and recorded traffic fields load from static published exports. The connected database has no governed public tables, so the portal does not claim live data, current-second reporting or an automated weekly refresh.</p>
           </article>
           <article class="doc-card">
             <span class="doc-tag">SURVEY INSTRUMENTATION</span>
             <h3>MOBICAP(Road condition assesment tool) &amp; ROMDAS(Roughness and rutting machine based testing)</h3>
-            <p>Pavement condition assessments across the 21,284.02 km National Road Network (6,406.69 km Paved and 14,877.33 km Unpaved) are captured using <strong>MOBICAP(Road condition assesment tool)</strong> and <strong>ROMDAS(Roughness and rutting machine based testing)</strong>. National condition stands at 12,610.00 km Good (59.20%), 7,844.00 km Fair (36.82%), and 848.00 km Poor (3.98%).</p>
+            <p>The published 21,284.02 km mapped road layer contains 6,406.69 km Paved and 14,877.33 km Unpaved. Condition fields are associated with <strong>MOBICAP(Road condition assesment tool)</strong> and <strong>ROMDAS(Roughness and rutting machine based testing)</strong>. The mapped condition totals are 12,608.66 km Good, 7,824.14 km Fair and 851.22 km Poor. These are mapped-layer figures, not the approved 21,302 km baseline.</p>
           </article>
           <article class="doc-card">
             <span class="doc-tag">STRUCTURES MANAGEMENT</span>
@@ -201,16 +201,16 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
           <article class="doc-card">
             <span class="doc-tag">CARTOGRAPHIC &amp; UNITS STANDARD</span>
             <h3>Imagery Hybrid &amp; Metric Conventions</h3>
-            <p>All maps default to Imagery Hybrid with Labels in WGS 84 decimal degrees (EPSG:4326). Paved roads render as solid lines at full width, while unpaved roads render in the same functional class colour at 0.58x width with dotted styling. All metrics strictly follow metric units (km, m, mm, T, km/h) and UK dates (dd/mm/yyyy) projected to 2040 under Vision 2040.</p>
+            <p>Maps default to Imagery Hybrid with Labels in WGS 84 decimal degrees (EPSG:4326). Paved roads render as solid lines at full width, while unpaved roads render in the same functional class colour at 0.58x width with dotted styling. Metrics use kilometres and percentages. Temporal fields are reported only when present in the published layer.</p>
           </article>
         </div>
       </section>
 
     </section>
   </main>
-  <footer><span>National Transport Infrastructure GIS Enterprise · Unified SQL Database (Weekly Sync) · Issued 18/11/2026</span><a href="./">Return to map</a></footer>
+  <footer><span>Data Science Trials GIS · Personal learning site · Not an official Ministry product</span><a href="./">Return to map</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Download filtered CSV" title="Download filtered CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="data-explorer.js?v=20261123-link-id" defer></script><script src="floating-actions.js?v=20261123-v113" defer></script><script src="portal-motion.js?v=20261123-v113" defer></script>
-  <script src="mindmap-interactive.js?v=20261123-v113" defer></script>
+  <script src="data-explorer.js?v=20261123-data-status" defer></script><script src="floating-actions.js?v=20261123-v113" defer></script><script src="portal-motion.js?v=20261123-v113" defer></script>
+  <script src="mindmap-interactive.js?v=20261123-data-status" defer></script>
 </body>
 </html>

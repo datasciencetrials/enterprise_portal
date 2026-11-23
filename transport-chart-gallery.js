@@ -178,7 +178,7 @@
         canvas.toBlob(blob => {
           if (!blob) return;
           const url = URL.createObjectURL(blob);
-          const a = document.createElement('a'); a.href = url; a.download = `mowt-${mode}-${slug}.png`;
+          const a = document.createElement('a'); a.href = url; a.download = `data-science-trials-${mode}-${slug}.png`;
           document.body.append(a); a.click(); a.remove();
           window.setTimeout(() => URL.revokeObjectURL(url), 60000);
         }, 'image/png');
