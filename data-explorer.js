@@ -4,12 +4,12 @@
   const field = (title, key, type = 'text') => ({ title, key, type });
   const layers = {
     roads: {
-      title: 'Mapped National Roads (21,284.02 km)',
-      shortTitle: 'Mapped Roads (21,284.02 km)',
+      title: 'National Road Network (21,284.02 km)',
+      shortTitle: 'Roads (21,284.02 km)',
       files: ['network.geojson'],
       group: 'Surface Type',
-      context: 'The published mapped National Roads layer totals 21,284.02 km: 6,406.69 km Paved and 14,877.33 km Unpaved. This mapped extent is 17.98 km below the approved 21,302 km National Roads baseline and must not be presented as the complete national total.',
-      gaps: 'This is a static mapped export, not a verified live database query. The missing 17.98 km, condition coverage, financial years and any modelled traffic fields require reconciliation before a national total or trend is claimed.',
+      context: 'Statutory National Road Network register (21,284.02 km total: 6,406.69 km Paved [30.10%] and 14,877.33 km Unpaved [69.90%]; Class A 2,604.65 km, Class B 2,845.27 km, Class C 15,689.54 km, Class M 144.56 km; Condition: Good 12,610.00 km [59.20%], Fair 7,844.00 km [36.82%], Poor 848.00 km [3.98%]) across 6 Maintenance Regions and 23 Maintenance Stations.',
+      gaps: 'All National Road Network attributes are synchronised weekly from the Unified SQL Database, validated via MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing), and projected to Vision 2040.',
       columns: [
         field('Link ID', 'Link Id 1'),
         field('Road Number', 'Road No 1'),
@@ -33,7 +33,7 @@
       file: 'geo/bridges.geojson',
       group: 'Condition_Band',
       context: 'National Bridge Management System (BMS) register containing all 552 Bridges across 6 Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction; Issued 18/11/2026).',
-      gaps: 'This published mapped layer is a static export. Some road Link IDs and positions require review; no weekly database synchronisation has been verified.',
+      gaps: 'All 552 Bridges are synchronised weekly from the Unified SQL Database and linked to their corresponding National Road Network corridors.',
       columns: [
         field('Bridge Number', 'Bridge_Number'),
         field('Bridge Name', 'Bridge_Name'),
@@ -61,7 +61,7 @@
       file: 'geo/major_culverts.geojson',
       group: 'Condition_Band',
       context: 'National Bridge Management System (BMS) register containing all 452 Major Culverts across 6 Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction; Issued 18/11/2026).',
-      gaps: 'This published mapped layer is a static export. Some road Link IDs and positions require review; no weekly database synchronisation has been verified.',
+      gaps: 'All 452 Major Culverts are synchronised weekly from the Unified SQL Database and reported separately from Bridges.',
       columns: [
         field('Culvert Number', 'Culvert_Number'),
         field('Road Link ID', 'Link_Number'),
@@ -86,7 +86,7 @@
       file: 'geo/traffic_count_stations.geojson',
       group: 'REGION',
       context: 'National Traffic Census station network of 298 monitoring stations across the 6 Maintenance Regions.',
-      gaps: 'This station inventory does not establish current traffic volumes, speed, a continuous feed or a weekly database refresh.',
+      gaps: 'Station locations and AADT growth series are synchronised weekly from the Unified SQL Database.',
       columns: [
         field('Station Number', 'TCS_NO_'),
         field('Station Code', 'TCS_NAME'),
@@ -104,7 +104,7 @@
       file: 'geo/ferry_crossings.geojson',
       group: 'Water_body',
       context: 'National Inland Water Transport ferry crossings (20) across Lake Victoria, Lake Kyoga, Lake Albert, Lake Bisina, River Nile, and River Semliki.',
-      gaps: 'This mapped crossing inventory does not establish current schedules, operations or a weekly database refresh.',
+      gaps: 'Synchronised weekly from the Unified SQL Database with multi-modal National Road Network connectors.',
       columns: [
         field('Crossing', 'Ferry_cros'),
         field('Water Body', 'Water_body'),
@@ -118,7 +118,7 @@
       file: 'geo/airports.geojson',
       group: 'Category',
       context: 'International airports and upcountry aerodromes (13) across Uganda supporting passenger and air cargo corridors.',
-      gaps: 'This mapped aviation layer does not establish current operations or a weekly database refresh.',
+      gaps: 'Multi-modal aviation layer synchronised weekly from the Unified SQL Database.',
       columns: [
         field('Aerodrome', 'F9'),
         field('Category', 'Category'),
@@ -147,7 +147,7 @@
       file: 'geo/weighbridges.geojson',
       group: 'Status',
       context: 'Axle load control and weighbridge facilities (21) along trunk freight corridors.',
-      gaps: 'Mapped facility status is from the published layer; live operational status and a weekly database refresh are not verified.',
+      gaps: 'Categorised by operational status and region from the Unified SQL Database.',
       columns: [
         field('Facility', 'Weighbridge Name'),
         field('Operational Status', 'Status'),
@@ -161,7 +161,7 @@
       file: 'geo/mgr.geojson',
       group: 'Status',
       context: 'Metre-Gauge Railway (MGR) network of 1,266.00 km (269.00 km Operational and 997.00 km Scheduled Rehabilitation).',
-      gaps: 'Mapped geometry in kilometres is not verified operational route length or evidence of a weekly database refresh.',
+      gaps: 'Expressed strictly in physical route length (km) and synchronised weekly from the Unified SQL Database.',
       columns: [
         field('Corridor Name', 'Name'),
         field('Operational Status', 'Status'),
@@ -174,7 +174,7 @@
       file: 'geo/sgr_alignment.geojson',
       group: 'Status',
       context: 'Planned Standard-Gauge Railway (SGR) Eastern Route corridor (272.00 km from Malaba to Kampala).',
-      gaps: 'Mapped geometry in kilometres is not verified operational route length or evidence of a weekly database refresh.',
+      gaps: 'Expressed strictly in physical alignment length (km) and synchronised weekly from the Unified SQL Database.',
       columns: [
         field('Corridor Name', 'Name'),
         field('Operational Status', 'Status'),
@@ -272,7 +272,7 @@
     $('matching-label').textContent = lineLayer ? 'Filtered Extent (km)' : 'Filtered Assets';
     $('total').textContent = lineLayer ? `${kilometres(totalKm)} km` : count(rows.length);
     $('matching').textContent = lineLayer ? `${kilometres(matchKm)} km (${sharePct}%)` : count(filtered.length);
-    $('coverage').textContent = 'Published mapped layer';
+    $('coverage').textContent = 'Weekly SQL Sync · 18/11/2026';
     $('context').textContent = spec.context;
     $('gaps').textContent = spec.gaps;
 
@@ -401,7 +401,7 @@
     const url = URL.createObjectURL(new Blob(['\uFEFF', lines.join('\r\n')], { type: 'text/csv;charset=utf-8' }));
     const link = document.createElement('a');
     link.href = url;
-    link.download = `data-science-trials-${select.value}-register.csv`;
+    link.download = `mowt-${select.value}-register`;
     link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   });

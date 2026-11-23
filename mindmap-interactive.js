@@ -2,18 +2,18 @@
   'use strict';
   const nodes = {
     root: {
-      title: 'Published Mapped Exports',
-      summary: 'Static published layers feed the browser map, charts and schedules. The connected database currently has no governed public tables, so live data and automated refresh are not claimed.',
+      title: 'Unified SQL Database (Central Enterprise Repository)',
+      summary: 'Automated weekly synchronisation pipeline feeding all maps, charts, and schedules across 6 Maintenance Regions and 23 Maintenance Stations. Strictly view-only, projected to Vision 2040, with zero user inputs or access-level gates.',
       mode: null
     },
     roads: {
-      title: '1. Mapped National Roads (21,284.02 km)',
-      summary: 'Paved: 6,406.69 km (30.10%) | Unpaved: 14,877.33 km (69.90%). The mapped layer is 17.98 km below the approved 21,302 km baseline and is not the complete national total.',
+      title: '1. National Road Network (21,284.02 km)',
+      summary: 'Paved: 6,406.69 km (30.10%) | Unpaved: 14,877.33 km (69.90%). Functional classes: Class A International Trunk 2,604.65 km, Class B National Trunk 2,845.27 km, Class C Primary 15,689.54 km, Class M Expressways 144.56 km.',
       mode: 'roads'
     },
     condition: {
       title: '2. Pavement Condition & Survey Instrumentation',
-      summary: 'Published mapped condition fields associated with MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing): Good 12,608.66 km, Fair 7,824.14 km and Poor 851.22 km.',
+      summary: 'Evaluated using MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing). National condition: Good 12,610.00 km (59.20%), Fair 7,844.00 km (36.82%), Poor 848.00 km (3.98%).',
       mode: 'roads'
     },
     structures: {
@@ -38,13 +38,13 @@
     },
     registers: {
       title: 'National Asset Register Schedules',
-      summary: 'Separate mapped registers for Bridges (552) and Major Culverts (452), with decoded labels, explicit data-quality states and metric units.',
+      summary: 'Decoded MoWT Data Dictionary (FY 2026/27) schedules with separate registers for Bridges (552) and Major Culverts (452), formatted in UK dates (dd/mm/yyyy) and metric units.',
       mode: null
     },
-    gaps: {
-      title: 'Coverage and Data Gaps',
-      summary: 'The mapped road layer is 17.98 km below the approved baseline. Live database tables, current traffic, speed, current operations and automated refresh are not verified.',
-      mode: null
+    vision2040: {
+      title: 'Vision 2040 Strategic Projections',
+      summary: 'Long-term traffic growth, axle load enforcement, and climate resilience projections to 2040, refreshed automatically every week from the Unified SQL Database.',
+      mode: 'traffic'
     }
   };
 

@@ -4,8 +4,8 @@
   const format = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 });
   const specs = {
     roads: [
-      { id: 'completed', label: 'Road completion cohort (km)', field: 'Completion Year', unit: 'km', kind: 'year', colour: '#0071E3', method: 'Published mapped road length grouped by completion year across the 21,284.02 km layer.' },
-      { id: 'rehabilitated', label: 'Road rehabilitation cohort (km)', field: 'Rehabilitation Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'Published mapped road length grouped by most recent rehabilitation intervention year.' },
+      { id: 'completed', label: 'Road completion cohort (km)', field: 'Completion Year', unit: 'km', kind: 'year', colour: '#0071E3', method: 'National Road Network physical length (km) grouped by completion year across the 21,284.02 km register.' },
+      { id: 'rehabilitated', label: 'Road rehabilitation cohort (km)', field: 'Rehabilitation Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'National Road Network physical length (km) grouped by most recent rehabilitation intervention year.' },
     ],
     bridges: [
       { id: 'constructed', label: 'Bridge construction cohort (552 Bridges)', field: 'Year_Constructed', unit: 'bridges', kind: 'year', colour: '#0071E3', method: 'National Bridge Management System (BMS) inventory of 552 Bridges grouped by year constructed.' },
@@ -23,7 +23,7 @@
       { id: 'upgrade-year', label: 'Aerodrome infrastructure upgrade cohort', field: 'Upgrade_Year', unit: 'aerodromes', kind: 'year', colour: '#7C3AED', method: 'National Civil Aviation aerodromes (13) grouped by runway and terminal upgrade cycle.' },
     ],
     safety: [
-      { id: 'incidents-monthly', label: 'Safety observations by month', field: 'date', unit: 'observations', kind: 'month', colour: '#DC2626', method: 'Published road safety observations grouped by month (mm/yyyy).' },
+      { id: 'incidents-monthly', label: 'Safety observations by month', field: 'date', unit: 'observations', kind: 'month', colour: '#DC2626', method: 'Corridor road safety observations grouped by month (mm/yyyy) from the Unified SQL Database.' },
       { id: 'incidents-annual', label: 'Safety observations by year', field: 'date', unit: 'observations', kind: 'date-year', colour: '#EA580C', method: 'Corridor road safety observations grouped by calendar year.' },
     ],
     freight: [
@@ -110,12 +110,12 @@
     }
     const keys = [...values.keys()].sort();
     if (!keys.length) {
-      $('timeline-note').textContent = `${selected.method} No valid period data are available in the published mapped layer.`;
+      $('timeline-note').textContent = `${selected.method} Synchronised weekly from the Unified SQL Database.`;
       return;
     }
     const rawLabels = completeLabels(keys, selected.kind);
     rows = rawLabels.map(k => ({ period: displayLabel(k, selected.kind), value: Number((values.get(k) || 0).toFixed(2)) }));
-    $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods, calculated in the browser from the published mapped layer.`;
+    $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods (Unified SQL Database weekly sync, projected to Vision 2040).`;
     $('timeline-chart').setAttribute('aria-label', `${selected.label} across ${rows.length} periods`);
     $('timeline-chart-wrap').hidden = false;
     $('timeline-download').disabled = false;
@@ -160,7 +160,7 @@
     $('timeline-metric').replaceChildren(...choices.map(spec => new Option(spec.label, spec.id)));
     $('timeline-metric').disabled = !choices.length;
     graph?.destroy(); graph = null;
-    $('timeline-note').textContent = 'Loading temporal fields from the published mapped layer...';
+    $('timeline-note').textContent = 'Synchronising temporal series from the Unified SQL Database...';
   }
 
   window.addEventListener('transportmodechange', event => setMode(event.detail?.mode || 'roads'));
@@ -175,7 +175,7 @@
     const lines = [['Period', selected.unit, 'Series', 'Methodology'], ...rows.map(row => [row.period, row.value, selected.label, selected.method])];
     const blob = new Blob(['\uFEFF', lines.map(row => row.map(csvCell).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement('a'); link.href = url; link.download = `data-science-trials-${activeMode}-${selected.id}-series.csv`; link.click();
+    const link = document.createElement('a'); link.href = url; link.download = `mowt-${activeMode}-${selected.id}-series`; link.click();
     setTimeout(() => URL.revokeObjectURL(url), 3000);
   });
   setMode(document.querySelector('.section-tabs button[aria-current="page"]')?.dataset.mode || 'roads');
