@@ -1,5 +1,5 @@
 /* ============================================================
-   Uganda GIS Enterprise — Light Apple-style theme
+   Uganda GIS Enterprise  -  Light Apple-style theme
    Ground: light, warm-neutral. Accents: the platform's original
    bright neon palette, preserved at full saturation for data-viz,
    borders, glows and small UI accents; deepened only where a
@@ -40,7 +40,7 @@
   --ink-blue:    #1a56cc;
   --ink-pink:    #c30057;
 
-  /* ---- semantic (status) — distinct from brand accent ---- */
+  /* ---- semantic (status)  -  distinct from brand accent ---- */
   --status-good:     #12b76a;
   --status-fair:     #f5b300;
   --status-poor:     #ff7a00;

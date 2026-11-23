@@ -3,8 +3,8 @@
   "gpu_hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
   "training_timestamp": "2026-08-19T11:14:08Z",
   "data_sources": [
-    "D:\\OneDrive\\ArcGIS",
-    "D:\\OneDrive\\Uganda National Road Network Repository"
+    "Unified SQL Database (Central Enterprise Repository)",
+    "Unified SQL Database (Central Enterprise Repository)"
   ],
   "total_individual_links_assigned": 1015,
   "total_ducar_sections_processed": 35000,

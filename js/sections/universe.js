@@ -1,14 +1,14 @@
-// Network Universe — the Road Management System staged as a solar system.
+// Network Universe  -  the Road Management System staged as a solar system.
 // RMS sits at the centre; its 8 subsystems orbit as planets. Every figure
 // shown in the side panel is fetched live through DataStore, from the exact
-// same real data files the rest of this platform uses — nothing here is
+// same real data files the rest of this platform uses  -  nothing here is
 // decorative or invented.
 
 RENDERERS.universe = async function(container){
   container.innerHTML = '';
   container.appendChild(pageHead(
     'Network Universe',
-    'The Road Management System staged as a solar system — RMS at the centre, its 8 subsystems orbiting as planets. Click one to inspect it: every figure in the panel is real, pulled live from this platform’s own data.',
+    'The Road Management System staged as a solar system  -  RMS at the centre, its 8 subsystems orbiting as planets. Click one to inspect it: every figure in the panel is real, pulled live from this platform’s own data.',
     '8 subsystems'
   ));
 
@@ -20,13 +20,13 @@ RENDERERS.universe = async function(container){
   container.appendChild(wrap);
 
   if(typeof THREE === 'undefined'){
-    stage.appendChild(el('div',{class:'callout warn'}, 'The 3D engine did not load — try refreshing the page.'));
+    stage.appendChild(el('div',{class:'callout warn'}, 'The 3D engine did not load  -  try refreshing the page.'));
     return;
   }
 
   // ---- subsystem definitions: every load() fetches this platform's real data files ----
   const SUBSYSTEMS = [
-    { id:'pms', label:'PMS — Pavement Management', short:'PMS', icon:'🛣️', accent:'#0284C7',
+    { id:'pms', label:'PMS  -  Pavement Management', short:'PMS', icon:'🛣️', accent:'#0284C7',
       sectionId:'maintenance', sectionLabel:'Maintenance & Condition',
       radius:5.0, speed:0.16, size:0.62,
       load: async()=>{
@@ -38,7 +38,7 @@ RENDERERS.universe = async function(container){
         ], note:'Computed live from the platform’s GIS road-network inventory.' };
       }
     },
-    { id:'tis', label:'TIS — Traffic Information', short:'TIS', icon:'🚦', accent:'#ff00c8',
+    { id:'tis', label:'TIS  -  Traffic Information', short:'TIS', icon:'🚦', accent:'#ff00c8',
       sectionId:'map', sectionLabel:'National GIS Map',
       radius:6.2, speed:0.13, size:0.50,
       load: async()=>{
@@ -50,7 +50,7 @@ RENDERERS.universe = async function(container){
         ], note:comp.meta.note };
       }
     },
-    { id:'bms', label:'BMS — Bridge Management', short:'BMS', icon:'🌉', accent:'#9d00ff',
+    { id:'bms', label:'BMS  -  Bridge Management', short:'BMS', icon:'🌉', accent:'#9d00ff',
       sectionId:'structures', sectionLabel:'Bridges & Culverts',
       radius:7.4, speed:0.10, size:0.58,
       load: async()=>{
@@ -65,7 +65,7 @@ RENDERERS.universe = async function(container){
         ], note:'Bridges and major culverts are always reported as separate figures on this platform, never merged into one.' };
       }
     },
-    { id:'ducar', label:'DUCAR — District Roads', short:'DUCAR', icon:'🏘️', accent:'#16A34A',
+    { id:'ducar', label:'DUCAR  -  District Roads', short:'DUCAR', icon:'🏘️', accent:'#16A34A',
       sectionId:'ducar', sectionLabel:'DUCAR Network',
       radius:8.6, speed:0.085, size:0.54,
       load: async()=>{
@@ -90,7 +90,7 @@ RENDERERS.universe = async function(container){
         ], note:'From the Integrated Bank of Projects (Department of Finance, Planning and Economic Development) and the platform’s own asset-value model.' };
       }
     },
-    { id:'wim', label:'WIM — Weighbridge Compliance', short:'WIM', icon:'⚖️', accent:'#ff7a00',
+    { id:'wim', label:'WIM  -  Weighbridge Compliance', short:'WIM', icon:'⚖️', accent:'#ff7a00',
       sectionId:'map', sectionLabel:'National GIS Map',
       radius:11.0, speed:0.055, size:0.46,
       load: async()=>{
@@ -226,7 +226,7 @@ RENDERERS.universe = async function(container){
   function renderHud(def){
     hud.innerHTML = '';
     if(!def){
-      hud.appendChild(el('div',{class:'universe-hud-head'},[el('span',{class:'universe-hud-icon'},'☀️'), el('h3',{},'RMS — Road Management System')]));
+      hud.appendChild(el('div',{class:'universe-hud-head'},[el('span',{class:'universe-hud-icon'},'☀️'), el('h3',{},'RMS  -  Road Management System')]));
       const loading = el('div',{class:'muted'},'Loading live system snapshot…');
       hud.appendChild(loading);
       DataStore.msSummary().then(ms=>{

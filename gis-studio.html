@@ -9,15 +9,15 @@
   <title>Uganda Transport GIS | MoWT GIS Enterprise</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="vendor/leaflet.min.css">
-  <link rel="stylesheet" href="gis-studio.css?v=20261119-v112">
-  <link rel="stylesheet" href="gis-studio-map.css?v=20261119-v112">
-  <link rel="stylesheet" href="gis-studio-tabs.css?v=20261119-v112">
-  <link rel="stylesheet" href="transport-photos.css?v=20261119-v112">
-  <link rel="stylesheet" href="portal-motion.css?v=20261119-v112">
-  <link rel="stylesheet" href="portal-refresh.css?v=20261119-v112">
-  <link rel="stylesheet" href="transport-timeline.css?v=20261119-v112">
-  <link rel="stylesheet" href="map-workspace.css?v=20261119-v112">
-  <link rel="stylesheet" href="./apple-system.css?v=20261119-v112">
+  <link rel="stylesheet" href="gis-studio.css?v=20261123-v113">
+  <link rel="stylesheet" href="gis-studio-map.css?v=20261123-v113">
+  <link rel="stylesheet" href="gis-studio-tabs.css?v=20261123-v113">
+  <link rel="stylesheet" href="transport-photos.css?v=20261123-v113">
+  <link rel="stylesheet" href="portal-motion.css?v=20261123-v113">
+  <link rel="stylesheet" href="portal-refresh.css?v=20261123-v113">
+  <link rel="stylesheet" href="transport-timeline.css?v=20261123-v113">
+  <link rel="stylesheet" href="map-workspace.css?v=20261123-v113">
+  <link rel="stylesheet" href="./apple-system.css?v=20261123-v113">
 <style>
 /* v111: No wide margins - full-width responsive layout */
 body > .container, body > .wrapper, body > main, .page-shell, .app-container,
@@ -89,8 +89,7 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
             <div id="map-workspace-details" hidden><p id="workspace-feature-details">Select a road corridor, bridge, culvert, or station on the map to inspect its attributes.</p></div>
             <div id="map-workspace-basemaps" hidden>
               <button type="button" data-basemap="imagery" aria-pressed="true">Imagery Hybrid (Labels)</button>
-              <button type="button" data-basemap="topographic" aria-pressed="false">Topographic</button>
-              <button type="button" data-basemap="streets" aria-pressed="false">Streets</button>
+              
               <p>Imagery Hybrid with place labels and boundaries is the default basemap.</p>
             </div>
           </div>
@@ -132,7 +131,7 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
           <article id="condition-view" class="chart-card"><div class="chart-header"><h3>Condition (MOBICAP(Road condition assesment tool) &amp; ROMDAS(Roughness and rutting machine based testing))</h3><span>12,610.00 km Good · 7,844.00 km Fair · 848.00 km Poor</span></div><canvas id="condition-chart" role="img" aria-label="Road length by condition chart"></canvas></article>
           <article id="region-view" class="chart-card"><div class="chart-header"><h3>Maintenance Region</h3><span>Physical length (km)</span></div><canvas id="region-chart" role="img" aria-label="Region length chart"></canvas></article>
           <article id="class-view" class="chart-card"><div class="chart-header"><h3>Functional Class</h3><span>Class A, B, C &amp; Expressway (km)</span></div><canvas id="class-chart" role="img" aria-label="Road class length chart"></canvas></article>
-          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Traffic coverage (Vision 2040)</h3><span>Corridor length with AADT (km)</span></div><canvas id="traffic-chart" role="img" aria-label="Road length with AADT by class chart"></canvas><p class="chart-caveat">Traffic volumes synced weekly from the Unified SQL Database and projected to 2040 under Vision 2040.</p></article>
+          <article id="traffic-view" class="chart-card"><div class="chart-header"><h3>Mean AADT by Functional Class (Vision 2040)</h3><span>Length-weighted AADT (veh/day)</span></div><canvas id="traffic-chart" role="img" aria-label="Road length with AADT by class chart"></canvas><p class="chart-caveat">Traffic volumes synced weekly from the Unified SQL Database and projected to 2040 under Vision 2040.</p></article>
         </div>
         <p class="data-note">All road charts report physical length in kilometres (km) and percentages (%) across the 21,284.02 km National Road Network, evaluated with MOBICAP(Road condition assesment tool) and ROMDAS(Roughness and rutting machine based testing) and synced weekly from the Unified SQL Database.</p>
       </div>
@@ -148,26 +147,26 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
         </div>
         <p class="data-note" style="margin-top:8px;margin-bottom:20px;">All portal datasets are ingested automatically from the central <strong>Unified SQL Database</strong> (Central Enterprise Repository) on a weekly refresh schedule. Zero manual file uploads, zero user inputs, zero access-level gates, and zero administrative tools are required.</p>
         <div class="mindmap-container" role="img" aria-label="System Mind Map showing Unified SQL Database feeding National Road Network, Bridges, Major Culverts, Multi-Modal Transport, and Vision 2040 Analytics">
-          <svg viewBox="0 0 1120 420" class="mindmap-svg">
+          <svg viewBox="0 0 1240 468" class="mindmap-svg">
             <defs>
               <marker id="mm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M 0 1 L 10 5 L 0 9 z" fill="#0071E3"/>
               </marker>
             </defs>
             <!-- Connectors from Root to Core Pillars -->
-            <path d="M 270 210 C 330 210, 340 75, 400 75" fill="none" stroke="#0071E3" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
-            <path d="M 270 210 C 330 210, 340 165, 400 165" fill="none" stroke="#16A34A" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
-            <path d="M 270 210 C 330 210, 340 255, 400 255" fill="none" stroke="#D97706" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
-            <path d="M 270 210 C 330 210, 340 345, 400 345" fill="none" stroke="#7C3AED" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
+            <path d="M 270 234 C 325 234, 335 66, 385 66" fill="none" stroke="#0071E3" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
+            <path d="M 270 234 C 325 234, 335 174, 385 174" fill="none" stroke="#16A34A" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
+            <path d="M 270 234 C 325 234, 335 288, 385 288" fill="none" stroke="#D97706" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
+            <path d="M 270 234 C 325 234, 335 394, 385 394" fill="none" stroke="#7C3AED" stroke-width="2.5" marker-end="url(#mm-arrow)"/>
 
             <!-- Connectors from Core Pillars to Outputs -->
-            <path d="M 690 75 C 745 75, 755 110, 810 110" fill="none" stroke="#0071E3" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
-            <path d="M 690 165 C 745 165, 755 175, 810 175" fill="none" stroke="#16A34A" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
-            <path d="M 690 255 C 745 255, 755 245, 810 245" fill="none" stroke="#D97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
-            <path d="M 690 345 C 745 345, 755 315, 810 315" fill="none" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
+            <path d="M 795 66 C 840 66, 850 90, 895 90" fill="none" stroke="#0071E3" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
+            <path d="M 795 174 C 840 174, 850 184, 895 184" fill="none" stroke="#16A34A" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
+            <path d="M 795 288 C 840 288, 850 278, 895 278" fill="none" stroke="#D97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
+            <path d="M 795 394 C 840 394, 850 372, 895 372" fill="none" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#mm-arrow)"/>
 
             <!-- Root Node -->
-            <g data-node="root" transform="translate(20, 145)">
+            <g data-node="root" transform="translate(20, 169)">
               <rect width="250" height="130" rx="14" fill="#FFFFFF" stroke="#0071E3" stroke-width="2.5"/>
               <rect width="250" height="32" rx="14" fill="#0071E3"/>
               <text x="125" y="21" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700">UNIFIED SQL DATABASE</text>
@@ -178,64 +177,65 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
             </g>
 
             <!-- Pillar 1: National Road Network -->
-            <g data-node="roads" transform="translate(400, 35)">
-              <rect width="290" height="80" rx="12" fill="#FFFFFF" stroke="#0071E3" stroke-width="2"/>
-              <text x="16" y="26" fill="#0071E3" font-size="11" font-weight="700">1. NATIONAL ROAD NETWORK (21,284.02 km)</text>
-              <text x="16" y="46" fill="#0F172A" font-size="11">Paved: 6,406.69 km (30.10%) · Unpaved: 14,877.33 km (69.90%)</text>
-              <text x="16" y="64" fill="#334155" font-size="10.5">Class A: 2,604.65 · B: 2,845.27 · C: 15,689.54 · M: 144.56 km</text>
+            <g data-node="roads" transform="translate(385, 24)">
+              <rect width="410" height="84" rx="12" fill="#FFFFFF" stroke="#0071E3" stroke-width="2"/>
+              <text x="16" y="26" fill="#0071E3" font-size="11.5" font-weight="700">1. NATIONAL ROAD NETWORK (21,284.02 km)</text>
+              <text x="16" y="48" fill="#0F172A" font-size="11">Paved: 6,406.69 km (30.10%) · Unpaved: 14,877.33 km (69.90%)</text>
+              <text x="16" y="68" fill="#334155" font-size="10.5">Class A: 2,604.65 · B: 2,845.27 · C: 15,689.54 · M: 144.56 km</text>
             </g>
 
             <!-- Pillar 2: Pavement Condition -->
-            <g data-node="condition" transform="translate(400, 125)">
-              <rect width="290" height="80" rx="12" fill="#FFFFFF" stroke="#16A34A" stroke-width="2"/>
-              <text x="16" y="26" fill="#16A34A" font-size="11" font-weight="700">2. PAVEMENT CONDITION &amp; SURVEY TOOLS</text>
+            <g data-node="condition" transform="translate(385, 124)">
+              <rect width="410" height="102" rx="12" fill="#FFFFFF" stroke="#16A34A" stroke-width="2"/>
+              <text x="16" y="25" fill="#16A34A" font-size="11.5" font-weight="700">2. PAVEMENT CONDITION &amp; SURVEY TOOLS</text>
               <text x="16" y="46" fill="#0F172A" font-size="11">Good: 12,610.00 km (59.20%) · Fair: 7,844.00 km (36.82%)</text>
-              <text x="16" y="64" fill="#334155" font-size="10.5">Poor: 848.00 km (3.98%) · MOBICAP(Road condition assesment tool) &amp; ROMDAS(Roughness and rutting machine based testing)</text>
+              <text x="16" y="66" fill="#334155" font-size="10.5">Poor: 848.00 km (3.98%) · MOBICAP(Road condition assesment tool)</text>
+              <text x="16" y="85" fill="#334155" font-size="10.5">ROMDAS(Roughness and rutting machine based testing)</text>
             </g>
 
             <!-- Pillar 3: Structures -->
-            <g data-node="structures" transform="translate(400, 215)">
-              <rect width="290" height="80" rx="12" fill="#FFFFFF" stroke="#D97706" stroke-width="2"/>
-              <text x="16" y="26" fill="#D97706" font-size="11" font-weight="700">3. BRIDGES (552) &amp; MAJOR CULVERTS (452)</text>
-              <text x="16" y="46" fill="#0F172A" font-size="11">Bridges: 247 Good, 71 Sat, 162 Marg, 52 Poor, 13 Crit, 7 UC</text>
-              <text x="16" y="64" fill="#334155" font-size="10.5">Culverts: 403 Good, 39 Sat, 4 Marg, 1 Poor, 4 Crit, 1 UC</text>
+            <g data-node="structures" transform="translate(385, 244)">
+              <rect width="410" height="86" rx="12" fill="#FFFFFF" stroke="#D97706" stroke-width="2"/>
+              <text x="16" y="26" fill="#D97706" font-size="11.5" font-weight="700">3. BRIDGES (552) &amp; MAJOR CULVERTS (452)</text>
+              <text x="16" y="48" fill="#0F172A" font-size="11">Bridges: 247 Good, 71 Sat, 162 Marg, 52 Poor, 13 Crit, 7 UC</text>
+              <text x="16" y="68" fill="#334155" font-size="10.5">Culverts: 403 Good, 39 Sat, 4 Marg, 1 Poor, 4 Crit, 1 UC</text>
             </g>
 
             <!-- Pillar 4: Multi-Modal -->
-            <g data-node="multimodal" transform="translate(400, 305)">
-              <rect width="290" height="80" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
-              <text x="16" y="26" fill="#7C3AED" font-size="11" font-weight="700">4. MULTI-MODAL TRANSPORT INFRASTRUCTURE</text>
-              <text x="16" y="46" fill="#0F172A" font-size="11">Rail: 1,266.00 km MGR (269.00 Op, 997.00 Rehab) · 272.00 km SGR</text>
-              <text x="16" y="64" fill="#334155" font-size="10.5">298 Traffic Stations · 20 Ferries · 13 Aerodromes · 21 Weighbridges</text>
+            <g data-node="multimodal" transform="translate(385, 348)">
+              <rect width="410" height="88" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+              <text x="16" y="26" fill="#7C3AED" font-size="11.5" font-weight="700">4. MULTI-MODAL TRANSPORT INFRASTRUCTURE</text>
+              <text x="16" y="48" fill="#0F172A" font-size="11">Rail: 1,266.00 km MGR (269 Op, 997 Rehab) · 272.00 km SGR</text>
+              <text x="16" y="68" fill="#334155" font-size="10.5">298 Traffic Stations · 20 Ferries · 13 Aerodromes · 21 Weighbridges</text>
             </g>
 
             <!-- Output Nodes -->
-            <g data-node="cartography" transform="translate(810, 75)">
-              <rect width="290" height="68" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
-              <text x="16" y="25" fill="#0F172A" font-size="11.5" font-weight="700">Imagery Hybrid GIS Cartography</text>
-              <text x="16" y="44" fill="#334155" font-size="10.5">Solid Paved &amp; Dotted (0.58x) Unpaved Symbology</text>
-              <text x="16" y="59" fill="#0071E3" font-size="10">EPSG:4326 Decimal Degrees · Metric Units</text>
+            <g data-node="cartography" transform="translate(895, 50)">
+              <rect width="325" height="76" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+              <text x="16" y="27" fill="#0F172A" font-size="12" font-weight="700">Imagery Hybrid GIS Cartography</text>
+              <text x="16" y="47" fill="#334155" font-size="10.5">Solid Paved &amp; Dotted (0.58x) Unpaved Symbology</text>
+              <text x="16" y="64" fill="#0071E3" font-size="10" font-weight="600">EPSG:4326 Decimal Degrees · Metric Units</text>
             </g>
 
-            <g data-node="analytics" transform="translate(810, 155)">
-              <rect width="290" height="68" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
-              <text x="16" y="25" fill="#0F172A" font-size="11.5" font-weight="700">Interactive Analytics &amp; Cohorts</text>
-              <text x="16" y="44" fill="#334155" font-size="10.5">Multi-Tier Charts by Surface, Class &amp; Region</text>
-              <text x="16" y="59" fill="#16A34A" font-size="10">Downloadable PNG Charts &amp; CSV Schedules</text>
+            <g data-node="analytics" transform="translate(895, 144)">
+              <rect width="325" height="76" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+              <text x="16" y="27" fill="#0F172A" font-size="12" font-weight="700">Interactive Analytics &amp; Cohorts</text>
+              <text x="16" y="47" fill="#334155" font-size="10.5">Multi-Tier Charts by Surface, Class &amp; Region</text>
+              <text x="16" y="64" fill="#16A34A" font-size="10" font-weight="600">Downloadable PNG Charts &amp; CSV Schedules</text>
             </g>
 
-            <g data-node="registers" transform="translate(810, 235)">
-              <rect width="290" height="68" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
-              <text x="16" y="25" fill="#0F172A" font-size="11.5" font-weight="700">National Asset Register Schedules</text>
-              <text x="16" y="44" fill="#334155" font-size="10.5">Decoded Attributes · Separate Bridge &amp; Culvert Tables</text>
-              <text x="16" y="59" fill="#D97706" font-size="10">Issued 18/11/2026 (UK Date Standard)</text>
+            <g data-node="registers" transform="translate(895, 238)">
+              <rect width="325" height="76" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+              <text x="16" y="27" fill="#0F172A" font-size="12" font-weight="700">National Asset Register Schedules</text>
+              <text x="16" y="47" fill="#334155" font-size="10.5">Decoded Attributes · Separate Bridge &amp; Culvert Tables</text>
+              <text x="16" y="64" fill="#D97706" font-size="10" font-weight="600">Issued 23/11/2026 (UK Date Standard)</text>
             </g>
 
-            <g data-node="vision2040" transform="translate(810, 315)">
-              <rect width="290" height="68" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
-              <text x="16" y="25" fill="#0F172A" font-size="11.5" font-weight="700">Vision 2040 Strategic Projections</text>
-              <text x="16" y="44" fill="#334155" font-size="10.5">Traffic Growth, Axle Load &amp; Climate Resilience</text>
-              <text x="16" y="59" fill="#7C3AED" font-size="10">Automated Weekly Refresh · Zero Manual Input</text>
+            <g data-node="vision2040" transform="translate(895, 332)">
+              <rect width="325" height="76" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+              <text x="16" y="27" fill="#0F172A" font-size="12" font-weight="700">Vision 2040 Strategic Projections</text>
+              <text x="16" y="47" fill="#334155" font-size="10.5">Traffic Growth, Axle Load &amp; Climate Resilience</text>
+              <text x="16" y="64" fill="#7C3AED" font-size="10" font-weight="600">Automated Weekly Refresh · Zero Manual Input</text>
             </g>
           </svg>
         </div>
@@ -284,7 +284,7 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
   </main>
   <footer><span>Ministry of Works and Transport (MoWT), Department of National Roads · Unified SQL Database (Weekly Sync) · Issued 18/11/2026</span><a href="./">Return to enterprise portal</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Choose map download format" title="Choose map download format" aria-haspopup="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
-  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261119-v112" defer></script><script src="gis-studio.js?v=20261119-v112" defer></script><script src="transport-timeline.js?v=20261119-v112" defer></script><script src="floating-actions.js?v=20261119-v112" defer></script><script src="portal-motion.js?v=20261119-v112" defer></script><script src="transport-photos.js?v=20261119-v112" defer></script>
-  <script src="mindmap-interactive.js?v=20261119-v112" defer></script>
+  <script src="vendor/leaflet.min.js"></script><script src="vendor/chart.umd.min.js"></script><script src="transport-chart-gallery.js?v=20261123-v113" defer></script><script src="gis-studio.js?v=20261123-v113" defer></script><script src="transport-timeline.js?v=20261123-v113" defer></script><script src="floating-actions.js?v=20261123-v113" defer></script><script src="portal-motion.js?v=20261123-v113" defer></script><script src="transport-photos.js?v=20261123-v113" defer></script>
+  <script src="mindmap-interactive.js?v=20261123-v113" defer></script>
 </body>
 </html>

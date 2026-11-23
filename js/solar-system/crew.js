@@ -1,4 +1,4 @@
-// Crew rosters per subsystem planet. Roles only — no real staff names, matching the platform's
+// Crew rosters per subsystem planet. Roles only  -  no real staff names, matching the platform's
 // standing confidentiality rule. Status labels are presentational flavor (which planet is being
 // viewed), not a claim about real personnel activity.
 
@@ -6,12 +6,12 @@ const Crew = (() => {
   const ROLES_BY_PLANET = {
     pms:    ['Pavement Engineer', 'Defect Survey Technician', 'Reseal & Overlay Lead'],
     tis:    ['Traffic Engineer', 'Axle Load Analyst', 'Congestion Modeler'],
-    bms:    ['Bridge Engineer', 'Structural Inspector', 'Culvert Assessment Lead'],
+    bms:    ['Bridge Engineer', 'Structural Engineer', 'Culvert Assessment Lead'],
     socio:  ['Economist', 'Investment analyst', 'Corridor access analyst'],
     budget: ['Asset Valuation Analyst', 'LCCA Modeler', 'Budget Planning Officer'],
     lidar:  ['GIS Analyst', 'Remote Sensing Specialist', 'Point Cloud Technician'],
     piarc:  ['Standards Officer', 'Benchmarking Analyst', 'International Liaison'],
-    pims:   ['Projects Officer', 'Procurement Analyst', 'Contractor Performance Lead'],
+    pims:   ['Projects Officer', 'Procurement Analyst', 'Maintenance Team Performance Lead'],
   };
   const STATUSES = ['On site', 'Surveying', 'Reporting', 'Reviewing data'];
 

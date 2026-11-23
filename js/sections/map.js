@@ -1,4 +1,4 @@
-// National GIS Map — interactive Leaflet map of Uganda's road network with a
+// National GIS Map  -  interactive Leaflet map of Uganda's road network with a
 // toggleable "Reference Layers" panel. Every layer is real GeoJSON already
 // hosted on this platform; nothing here is simulated or placeholder data.
 // Layers are fetched (via DataStore, which caches) the first time they are
@@ -43,7 +43,7 @@ RENDERERS.map = async function(container){
     if(currentTiles) map.removeLayer(currentTiles);
     const b = BASEMAPS[key];
     const tileOpts = { attribution:b.attribution, maxZoom:b.maxZoom };
-    if(b.subdomains) tileOpts.subdomains = b.subdomains; // omit entirely when absent — passing subdomains:undefined overrides Leaflet's own default and crashes _getSubdomain
+    if(b.subdomains) tileOpts.subdomains = b.subdomains; // omit entirely when absent  -  passing subdomains:undefined overrides Leaflet's own default and crashes _getSubdomain
     currentTiles = L.tileLayer(b.url, tileOpts);
     currentTiles.addTo(map);
     [...basemapRow.children].forEach(btn => btn.classList.toggle('active', btn.dataset.key===key));
@@ -60,7 +60,7 @@ RENDERERS.map = async function(container){
   panel.appendChild(el('p',{class:'tiny-muted', style:'margin-bottom:6px;'}, 'Check a layer to fetch and draw its real features. Large layers are flagged and load on demand.'));
 
   // CARTO's anonymous basemap tiles now require an account API key (their tiles
-  // return a watermarked "API key required" image without one) — OpenStreetMap and
+  // return a watermarked "API key required" image without one)  -  OpenStreetMap and
   // Esri's public tile services have no such requirement, so those are used instead.
   setBasemap('light');
 
@@ -103,7 +103,7 @@ RENDERERS.map = async function(container){
     return `<div style="min-width:200px;max-width:280px;"><div style="font-weight:800;margin-bottom:6px;font-size:.85rem;">${esc(title)}</div><table style="border-collapse:collapse;width:100%;">${rows.join('')}</table></div>`;
   }
 
-  // Curated popup for a "major layer" — explicit real fields in a sensible order.
+  // Curated popup for a "major layer"  -  explicit real fields in a sensible order.
   function curatedPopupHtml(title, props, fields, linkMap){
     const rows = fields.map(([key,label,fmt])=>{
       let v = props[key];
@@ -166,7 +166,7 @@ RENDERERS.map = async function(container){
   ];
 
   // ---------------------------------------------------------------- catalog
-  // color: a NEON accent for this layer's line/marker style (cycled — 21
+  // color: a NEON accent for this layer's line/marker style (cycled  -  21
   // real layers share an 8-color accent palette by design).
   const LAYERS = [
     { id:'network', label:'National Road Network', unit:'links', loader: DataStore.network, type:'line', defaultOn:true, popup:'network' },
@@ -225,7 +225,7 @@ RENDERERS.map = async function(container){
       });
     } else if(def.type==='line'){
       if(def.id==='network'){
-        // Default-on national network: colored by Pavement Class (paved vs unpaved) —
+        // Default-on national network: colored by Pavement Class (paved vs unpaved)  - 
         // a simple, correct, real-data-driven style rather than a fancy scheme.
         opts.style = feature => ({
           color: feature.properties['Pavement Class']==='Paved' ? '#2979ff' : '#ff7a00',

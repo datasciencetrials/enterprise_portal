@@ -6,10 +6,10 @@ const NEON = ['#0284C7','#ff00c8','#9d00ff','#16A34A','#D97706','#ff7a00','#2979
 const INK  = ['#0089a8','#b8008f','#6d1fd1','#00944f','#93790a','#c85400','#1a56cc','#c30057'];
 
 function fmtNum(n, digits=0){
-  if(n===null || n===undefined || Number.isNaN(n)) return '—';
+  if(n===null || n===undefined || Number.isNaN(n)) return ' - ';
   return Number(n).toLocaleString('en-US', {maximumFractionDigits:digits, minimumFractionDigits:digits});
 }
-function fmtKm(n){ return n===null||n===undefined ? '—' : fmtNum(n,1) + ' km'; }
+function fmtKm(n){ return n===null||n===undefined ? ' - ' : fmtNum(n,1) + ' km'; }
 function esc(s){ return (s===null||s===undefined) ? '' : String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
 function el(tag, attrs={}, children=[]){
@@ -28,7 +28,7 @@ function el(tag, attrs={}, children=[]){
 }
 
 /* ---------------- searchable select (standing platform rule: every dropdown
-   is a search box, not a plain native <select> — restored after the light
+   is a search box, not a plain native <select>  -  restored after the light
    rebuild reverted table filters to plain selects) ---------------- */
 function searchableSelect(opts){
   // opts: {label, options:[string], onChange(value)}
@@ -122,7 +122,7 @@ function conditionBadge(cond){
   return el('span',{class:'badge '+cls}, cond);
 }
 
-/* ---------------- intervention-priority badge (Low/Moderate/High/Critical quartile band —
+/* ---------------- intervention-priority badge (Low/Moderate/High/Critical quartile band  - 
    a distinct scale from the pavement-condition badge above, never conflate the two) ---------------- */
 function priorityBadge(band){
   if(!band) return el('span',{class:'badge badge-neutral'}, 'Not scored');
@@ -220,7 +220,7 @@ function dataTable(opts){
       const tr = el('tr');
       opts.columns.forEach(col=>{
         const raw = r[col.key];
-        const content = col.render ? col.render(raw, r) : (col.fmt ? col.fmt(raw) : (raw===null||raw===undefined?'—':raw));
+        const content = col.render ? col.render(raw, r) : (col.fmt ? col.fmt(raw) : (raw===null||raw===undefined?' - ':raw));
         const td = el('td',{class: col.align==='num'?'num':''});
         if(content instanceof Node) td.appendChild(content); else td.innerHTML = content;
         tr.appendChild(td);

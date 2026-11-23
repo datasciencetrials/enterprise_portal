@@ -3,16 +3,16 @@ RENDERERS.maintenance = async function(container){
   const detail = await DataStore.msDetail();
   container.innerHTML = '';
 
-  // ---- local helpers (kept in this file only — no shared-component changes) ----
+  // ---- local helpers (kept in this file only  -  no shared-component changes) ----
   function accuracyBadge(band){
     const cls = { High:'badge-good', Moderate:'badge-fair', Low:'badge-poor', Indicative:'badge-neutral' }[band] || 'badge-neutral';
-    return el('span',{class:'badge '+cls}, band||'—');
+    return el('span',{class:'badge '+cls}, band||' - ');
   }
   function priorityBandBadge(band){
     const cls = { 'Priority 1':'badge-critical', 'Priority 2':'badge-poor', 'Priority 3':'badge-fair', 'Priority 4':'badge-good' }[band] || 'badge-neutral';
-    return el('span',{class:'badge '+cls}, band||'—');
+    return el('span',{class:'badge '+cls}, band||' - ');
   }
-  function ughsBn(v){ return v===null||v===undefined ? '—' : fmtNum(v,2)+' bn'; }
+  function ughsBn(v){ return v===null||v===undefined ? ' - ' : fmtNum(v,2)+' bn'; }
   // Small, non-paginated reference table (dataTable() is reserved for the browsable
   // 338-row register below, per the brief's "small table" wording for the others).
   function miniTable(cols, rows){
@@ -23,7 +23,7 @@ RENDERERS.maintenance = async function(container){
       const tr = el('tr');
       cols.forEach(c=>{
         const raw = r[c.key];
-        const content = c.render ? c.render(raw, r) : (c.fmt ? c.fmt(raw) : (raw===null||raw===undefined?'—':raw));
+        const content = c.render ? c.render(raw, r) : (c.fmt ? c.fmt(raw) : (raw===null||raw===undefined?' - ':raw));
         const td = el('td',{class:c.align==='num'?'num':''});
         if(content instanceof Node) td.appendChild(content); else td.innerHTML = content;
         tr.appendChild(td);
@@ -38,7 +38,7 @@ RENDERERS.maintenance = async function(container){
   const regional = ms.network_regional_breakdown;               // {region: {paved_km,unpaved_km,total_km}}
   const byClass = ms.network_by_class;                           // [{road_class,bituminous_km,unsealed_km,total_km,pct_total_network,description}]
   const vci = ms.vci_condition_distribution;                     // {category: count}
-  // ⚠ investment_plan_annual mixes in a "Total / Avg" row — always filter to real FY rows first.
+  // ⚠ investment_plan_annual mixes in a "Total / Avg" row  -  always filter to real FY rows first.
   const invYears = ms.investment_plan_annual.filter(y => /^FY\d/.test(y.financial_year));
   const interventionMix = ms.intervention_mix_summary;           // [{intervention,links_count,length_km,cost_bn_ushs,...}]
   const rateBenchmarks = ms.intervention_rate_benchmarks;        // [{surface_type,intervention,recommended_rate_bn_ushs_per_km,primary_basis,accuracy_band,...}]
@@ -48,8 +48,8 @@ RENDERERS.maintenance = async function(container){
 
   container.appendChild(pageHead(
     'Maintenance & Condition',
-    'The FY2025/26 National Roads Directorate maintenance-strategy plan for the classified road network — condition, 5-year investment programme, intervention mix, and the full priority-ranked link register. Bridges and major culverts are reported separately in Bridges & Culverts.',
-    fmtNum(kpi.total_network_km,0)+' km assessed · FY26/27–FY30/31 plan'
+    'The FY2025/26 National Roads Directorate maintenance-strategy plan for the classified road network  -  condition, 5-year investment programme, intervention mix, and the full priority-ranked link register. Bridges and major culverts are reported separately in Bridges & Culverts.',
+    fmtNum(kpi.total_network_km,0)+' km assessed · FY26/27 to FY30/31 plan'
   ));
 
   // ---- KPI strip ----
@@ -58,16 +58,16 @@ RENDERERS.maintenance = async function(container){
     { label:'Paved', value: fmtNum(kpi.paved_km,0), unit:'km', accent:'var(--neon-blue)', delta:(kpi.paved_km/kpi.total_network_km*100).toFixed(1)+'% of network' },
     { label:'Unpaved', value: fmtNum(kpi.unpaved_km,0), unit:'km', accent:'var(--neon-orange)', delta:(kpi.unpaved_km/kpi.total_network_km*100).toFixed(1)+'% of network' },
     { label:'Links in Strategy Register', value: fmtNum(detail.road_links.length), accent:'var(--neon-purple)' },
-    { label:'Priority-Planned Links', value: fmtNum(priorityLinks.length), accent:'var(--neon-green)', delta:'FY26/27–FY30/31 programme' },
+    { label:'Priority-Planned Links', value: fmtNum(priorityLinks.length), accent:'var(--neon-green)', delta:'FY26/27 to FY30/31 programme' },
   ]));
-  container.appendChild(el('p',{class:'footnote'}, 'National Roads Directorate maintenance-strategy planning workbooks, FY2025/26 cycle. Figures cover the ROAD network only — see Bridges & Culverts for the 521-bridge and 451-culvert registers.'));
+  container.appendChild(el('p',{class:'footnote'}, 'National Roads Directorate maintenance-strategy planning workbooks, FY2025/26 cycle. Figures cover the ROAD network only  -  see Bridges & Culverts for the 521-bridge and 451-culvert registers.'));
 
-  // ---- Derived insight strip (computed from the same real data above — no new source) ----
+  // ---- Derived insight strip (computed from the same real data above  -  no new source) ----
   const costliestIntervention = interventionMix.slice().sort((a,b)=>b.cost_bn_ushs-a.cost_bn_ushs)[0];
   const totalFundingGap = invYears.reduce((s,y)=>s+y.funding_gap_vs_baseline_bn_ushs,0);
   const insightGrid = el('div',{class:'grid-3'});
   [
-    { t:'5-year funding gap', d:`The FY26/27–FY30/31 programme carries a funding gap of ${ughsBn(totalFundingGap)} against baseline across all 5 years combined.`, a:'var(--neon-pink)' },
+    { t:'5-year funding gap', d:`The FY26/27 to FY30/31 programme carries a funding gap of ${ughsBn(totalFundingGap)} against baseline across all 5 years combined.`, a:'var(--neon-pink)' },
     { t:'Top-ranked priority link', d:`${esc(priorityLinks[0].link_name)} (${esc(priorityLinks[0].road_no)}) ranks #1 of 338, scheduled ${esc(priorityLinks[0].scheduled_fy)}, priority score ${fmtNum(priorityLinks[0].priority_score,1)}.`, a:'var(--neon-cyan)' },
     { t:'Costliest intervention type', d:`${esc(costliestIntervention.intervention)} carries the largest programme cost at ${ughsBn(costliestIntervention.cost_bn_ushs)} across ${fmtNum(costliestIntervention.links_count)} links.`, a:'var(--neon-orange)' },
   ].forEach(f=>{
@@ -79,7 +79,7 @@ RENDERERS.maintenance = async function(container){
 
   // ---- Network by Region ----
   const regionLabels = DataStore.REGIONS;
-  container.appendChild(sectionBlock('Network by Region', 'All 6 maintenance regions — paved and unpaved km, from the maintenance-strategy workbook.', el('div',{class:'grid-2'},[
+  container.appendChild(sectionBlock('Network by Region', 'All 6 maintenance regions  -  paved and unpaved km, from the maintenance-strategy workbook.', el('div',{class:'grid-2'},[
     miniTable(
       [
         {key:'region', label:'Region'},
@@ -99,7 +99,7 @@ RENDERERS.maintenance = async function(container){
   ])));
 
   // ---- Network by Functional Class ----
-  container.appendChild(sectionBlock('Network by Functional Class', 'Classes A/B/C/M (Trunk, National Trunk, Primary/District, Expressway) — bituminous vs unsealed km.', el('div',{class:'grid-2'},[
+  container.appendChild(sectionBlock('Network by Functional Class', 'Classes A/B/C/M (Trunk, National Trunk, Primary/District, Expressway)  -  bituminous vs unsealed km.', el('div',{class:'grid-2'},[
     miniTable(
       [
         {key:'road_class', label:'Class'},
@@ -122,7 +122,7 @@ RENDERERS.maintenance = async function(container){
   // ---- VCI Condition Distribution ----
   const vciCats = Object.keys(vci);
   const vciTotal = vciCats.reduce((s,k)=>s+vci[k],0);
-  container.appendChild(sectionBlock('VCI Condition Distribution', 'Visual Condition Index rating across all assessed links — every category shown, including "Not assessed".', el('div',{class:'grid-2'},[
+  container.appendChild(sectionBlock('VCI Condition Distribution', 'Visual Condition Index rating across all assessed links  -  every category shown, including "Not assessed".', el('div',{class:'grid-2'},[
     chartCard({ title:'Links by VCI Rating', type:'doughnut',
       labels: vciCats, datasets:[{ data: vciCats.map(k=>vci[k]), backgroundColor:NEON.slice(0,vciCats.length), borderWidth:0 }] }),
     miniTable(
@@ -144,7 +144,7 @@ RENDERERS.maintenance = async function(container){
   }), { links_count:0, programme_cost_bn_ushs:0, asset_value_at_risk_bn_ushs:0, funding_gap_vs_baseline_bn_ushs:0 });
   const invRows = invYears.map(y => ({ financial_year:y.financial_year, links_count:y.links_count, programme_cost_bn_ushs:y.programme_cost_bn_ushs, asset_value_at_risk_bn_ushs:y.asset_value_at_risk_bn_ushs, funding_gap_vs_baseline_bn_ushs:y.funding_gap_vs_baseline_bn_ushs }))
     .concat([{ financial_year:'Total (5 years)', links_count:invTotal.links_count, programme_cost_bn_ushs:invTotal.programme_cost_bn_ushs, asset_value_at_risk_bn_ushs:invTotal.asset_value_at_risk_bn_ushs, funding_gap_vs_baseline_bn_ushs:invTotal.funding_gap_vs_baseline_bn_ushs, isTotal:true }]);
-  container.appendChild(sectionBlock('5-Year Maintenance Investment Plan (FY26/27–FY30/31)', 'Programme cost, asset value at risk, and funding gap vs baseline, by scheduled year — the "Total" row is computed here by summing the 5 real fiscal-year rows, never plotted as a 6th year.', el('div',{class:'grid-2'},[
+  container.appendChild(sectionBlock('5-Year Maintenance Investment Plan (FY26/27 to FY30/31)', 'Programme cost, asset value at risk, and funding gap vs baseline, by scheduled year  -  the "Total" row is computed here by summing the 5 real fiscal-year rows, never plotted as a 6th year.', el('div',{class:'grid-2'},[
     miniTable(
       [
         {key:'financial_year', label:'Fiscal Year', render:(v,r)=> r.isTotal ? el('strong',{},v) : v},
@@ -161,7 +161,7 @@ RENDERERS.maintenance = async function(container){
   ])));
 
   // ---- Intervention Mix ----
-  container.appendChild(sectionBlock('Intervention Mix', 'All programmed intervention types across the 338 priority-planned links — full distribution, including zero-count types.', el('div',{class:'grid-2'},[
+  container.appendChild(sectionBlock('Intervention Mix', 'All programmed intervention types across the 338 priority-planned links  -  full distribution, including zero-count types.', el('div',{class:'grid-2'},[
     miniTable(
       [
         {key:'intervention', label:'Intervention'},
@@ -193,7 +193,7 @@ RENDERERS.maintenance = async function(container){
 
   // ---- Link Investment Priority Register ----
   const fyOptions = Array.from(new Set(priorityLinks.map(r=>r.scheduled_fy))).sort();
-  container.appendChild(sectionBlock('Link Investment Priority Register', 'All 338 priority-ranked links in the FY26/27–FY30/31 programme — searchable by link or road number, filterable by scheduled fiscal year.', dataTable({
+  container.appendChild(sectionBlock('Link Investment Priority Register', 'All 338 priority-ranked links in the FY26/27 to FY30/31 programme  -  searchable by link or road number, filterable by scheduled fiscal year.', dataTable({
     columns: [
       { key:'link_name', label:'Link' },
       { key:'road_no', label:'Road No.' },
@@ -213,6 +213,6 @@ RENDERERS.maintenance = async function(container){
   })));
 
   container.appendChild(el('p',{class:'footnote'},
-    'Source: National Roads Directorate maintenance-strategy planning workbooks, FY2025/26 cycle — network condition (VCI), the 5-year investment priority plan, intervention mix, and unit-rate benchmarks above. This page covers routine and periodic road MAINTENANCE funding only; new-construction capital investment (IBP/PIP) is reported separately in the Investment Plan section. Bridges and major culverts are always reported as their own registers — see Bridges & Culverts.'
+    'Source: National Roads Directorate maintenance-strategy planning workbooks, FY2025/26 cycle  -  network condition (VCI), the 5-year investment priority plan, intervention mix, and unit-rate benchmarks above. This page covers routine and periodic road MAINTENANCE funding only; new-construction capital investment (IBP/PIP) is reported separately in the Investment Plan section. Bridges and major culverts are always reported as their own registers  -  see Bridges & Culverts.'
   ));
 };

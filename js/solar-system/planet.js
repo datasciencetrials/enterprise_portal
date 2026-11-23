@@ -1,12 +1,12 @@
 // RMS Gravitational Sun Core + 8 orbiting subsystem planets.
 // Bi-directional particle streams: LRS data flows into the Sun, treatment allocations radiate back out.
 // Geometry/orbits are illustrative; every number shown in the HUD (js/solar-system/hud.js) comes from
-// DataStore, never from this file — this module only owns the 3D staging.
+// DataStore, never from this file  -  this module only owns the 3D staging.
 
 const SolarSystem = (() => {
   // feeds/receives: the bi-directional interlink narrative each subsystem exchanges with the RMS
   // Sun Core, as reported by National Roads Directorate engineering staff. Kept separate from the live-computed
-  // metrics rendered in js/sections/universe.js — those come straight from DataStore; these are
+  // metrics rendered in js/sections/universe.js  -  those come straight from DataStore; these are
   // stated subsystem context, not this platform's own live KPIs.
   const PLANETS = [
     { id:'pms',    name:'PMS',      full:'Pavement Management System',        body:'Mercury', color:0xFFB300, orbit:9.0,  size:0.62, speed:0.62, gravity:0.34, moon:null,

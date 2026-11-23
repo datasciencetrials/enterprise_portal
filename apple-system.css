@@ -372,8 +372,12 @@ svg {
   max-width: 100%;
 }
 
-svg text {
+svg:not(.mindmap-svg) text {
   fill: var(--apple-text);
+  font-family: Arial, sans-serif !important;
+}
+
+.mindmap-svg text {
   font-family: Arial, sans-serif !important;
 }
 
@@ -526,9 +530,13 @@ nav.floating-actions,
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: none !important;
 }
 
 .floating-actions button {
+  pointer-events: auto !important;
   background: #0071E3 !important;
   color: #FFFFFF !important;
   box-shadow: 0 4px 14px rgba(0, 113, 227, 0.35) !important;
@@ -536,6 +544,21 @@ nav.floating-actions,
 
 .floating-actions button:hover {
   background: #0077ED !important;
+}
+
+.brand-mark {
+  background: #0071E3 !important;
+  color: #FFFFFF !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+}
+
+.intro-aside-links,
+.workspace-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 16px !important;
+  align-items: center !important;
 }
 
 /* Force hero on top */

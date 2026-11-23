@@ -16,7 +16,7 @@ RENDERERS.analytics = async function(container){
 
   /* ============================================================
      Live aggregation helpers (region × condition, region × safety
-     band, priority-score histogram, etc. — none of this duplicates
+     band, priority-score histogram, etc.  -  none of this duplicates
      Overview visualisations, which cover condition-by-count, class,
      paved/unpaved-by-region and the investment-plan cost line only)
      ============================================================ */
@@ -63,7 +63,7 @@ RENDERERS.analytics = async function(container){
   }
   const aadtVals = feats.map(p=>p['Aadt 2026 Live']).filter(v=>v!==null && v!==undefined);
   const aadtEdges = [0,250,500,1000,1500,2000,Infinity];
-  const aadtLabels = ['0–250','250–500','500–1,000','1,000–1,500','1,500–2,000','2,000+'];
+  const aadtLabels = ['0 to 250','250 to 500','500 to 1,000','1,000 to 1,500','1,500 to 2,000','2,000+'];
   const aadtCounts = histogram(aadtVals, aadtEdges, aadtLabels);
 
   // Maintenance stations, all of them (23), by network km
@@ -74,11 +74,11 @@ RENDERERS.analytics = async function(container){
   // Surface material breakdown, km (real field, not yet surfaced anywhere else on the platform)
   const surfaceEntries = Object.entries(net.bySurface).sort((a,b)=> b[1]-a[1]);
 
-  // Paved road density by subregion — a real, separate National Roads Directorate workbook (land area, not link-level),
+  // Paved road density by subregion  -  a real, separate National Roads Directorate workbook (land area, not link-level),
   // sorted densest-first. Subregions are a finer breakdown than the platform's 6 maintenance regions.
   const densityRows = (density.by_subregion||[]).slice().sort((a,b)=> b.road_density_now_km_per_1000km2 - a.road_density_now_km_per_1000km2);
 
-  // Heavy-truck share of AADT by region — real per-link fields (Aadt Heavy Trucks / Aadt 2026 Live)
+  // Heavy-truck share of AADT by region  -  real per-link fields (Aadt Heavy Trucks / Aadt 2026 Live)
   const heavySum = {}, heavyTotal = {}; REGIONS.forEach(r=>{ heavySum[r]=0; heavyTotal[r]=0; });
   feats.forEach(p=>{
     const r = p['Region'], aadt = p['Aadt 2026 Live'], heavy = p['Aadt Heavy Trucks'];
@@ -86,22 +86,22 @@ RENDERERS.analytics = async function(container){
   });
   const heavySharePct = REGIONS.map(r=> heavyTotal[r] ? +(heavySum[r]/heavyTotal[r]*100).toFixed(1) : 0);
 
-  // Priority-score histogram + age vs priority scatter (link_investment_priority — 338 real rows)
+  // Priority-score histogram + age vs priority scatter (link_investment_priority  -  338 real rows)
   const lip = detail.link_investment_priority || [];
   const scoreVals = lip.map(r=>r.priority_score).filter(v=>v!==null && v!==undefined);
   const scoreEdges = [40,60,80,100,120,140,160];
-  const scoreLabels = ['40–60','60–80','80–100','100–120','120–140','140–160'];
+  const scoreLabels = ['40 to 60','60 to 80','80 to 100','100 to 120','120 to 140','140 to 160'];
   const scoreCounts = histogram(scoreVals, scoreEdges, scoreLabels);
   const scatterPts = lip.filter(r=> r.age_years!==null && r.age_years!==undefined && r.priority_score!==null && r.priority_score!==undefined)
     .map(r=> ({x:r.age_years, y:r.priority_score}));
 
-  // National traffic composition by vehicle class, 2025 — a real, separate National Roads Directorate traffic-model
+  // National traffic composition by vehicle class, 2025  -  a real, separate National Roads Directorate traffic-model
   // workbook (per-link vehicle counts), distinct from the AADT/heavy-truck fields already on
   // network.geojson. Sorted heaviest-first.
   const compEntries = Object.entries(trafficComp.national_composition_veh_per_day||{}).sort((a,b)=>b[1]-a[1]);
 
   // Network-wide Intervention Priority Band (this site's own composite: 40% condition +
-  // 35% traffic percentile + 25% safety risk, on network.geojson's own 1,015 links) —
+  // 35% traffic percentile + 25% safety risk, on network.geojson's own 21,284.02 km network)  - 
   // distinct scope from the 338-link paved 5-year backlog "Priority Score" charts above.
   const PRIORITY_BANDS = ['Low','Moderate','High','Critical'];
   const priorityBandCounts = {Low:0, Moderate:0, High:0, Critical:0};
@@ -112,7 +112,7 @@ RENDERERS.analytics = async function(container){
     else priorityUnscored++;
   });
 
-  // Weighbridge district-coverage register — separate real National Roads Directorate dataset (see data.js note)
+  // Weighbridge district-coverage register  -  separate real National Roads Directorate dataset (see data.js note)
   const wbRows = (wbCoverage.by_weighbridge||[]).slice();
 
   // Sealed vs unsealed by class (ms workbook)
@@ -123,7 +123,7 @@ RENDERERS.analytics = async function(container){
   const bridgesByRegion = REGIONS.map(r=> srsByRegion[r] ? srsByRegion[r].bridges_count : 0);
   const culvertsByRegion = REGIONS.map(r=> srsByRegion[r] ? srsByRegion[r].major_culverts_count : 0);
 
-  // Investment plan (valid FY rows only — the summary array mixes in a "Total / Avg" row)
+  // Investment plan (valid FY rows only  -  the summary array mixes in a "Total / Avg" row)
   const fyRows = (ms.investment_plan_annual||[]).filter(y=>/^FY\d/.test(y.financial_year));
 
   // Asset value trend, paved vs unpaved over time
@@ -149,7 +149,7 @@ RENDERERS.analytics = async function(container){
         {label:'Bituminous (sealed)', data: nbc.map(x=>Math.round(x.bituminous_km)), backgroundColor:'#2979ff', borderRadius:3},
         {label:'Unsealed', data: nbc.map(x=>Math.round(x.unsealed_km)), backgroundColor:'#ff7a00', borderRadius:3},
       ] }), 'network'),
-    tagged(chartCard({ title:'VCI Rating Distribution', subtitle:'Maintenance-strategy scale — distinct from the field-survey Condition above',
+    tagged(chartCard({ title:'VCI Rating Distribution', subtitle:'Maintenance-strategy scale  -  distinct from the field-survey Condition above',
       type:'doughnut', labels:Object.keys(ms.vci_condition_distribution), datasets:[{ data:Object.values(ms.vci_condition_distribution), backgroundColor:NEON, borderWidth:0 }] }), 'network'),
     tagged(chartCard({ title:'Network Length by Maintenance Station', tall:true,
       type:'bar', indexAxis:'y', labels: stationEntries.map(e=>e[0]), datasets:[{ data: stationEntries.map(e=>Math.round(e[1])), backgroundColor:'#0284C7', borderRadius:3 }] }), 'network'),
@@ -175,7 +175,7 @@ RENDERERS.analytics = async function(container){
       type:'bar', labels:REGIONS, datasets:[{ data:crAvg, backgroundColor:'#ff7a00', borderRadius:6 }] }), 'traffic'),
     tagged(chartCard({ title:'Heavy-Truck Share of Traffic by Region', subtitle:'% of AADT (Aadt Heavy Trucks ÷ Aadt 2026 Live)',
       type:'bar', labels:REGIONS, datasets:[{ data:heavySharePct, backgroundColor:'#ff00c8', borderRadius:6 }] }), 'traffic'),
-    tagged(chartCard({ title:'National Traffic Composition by Vehicle Class, 2025', subtitle:trafficComp.meta.linked_count+' of '+trafficComp.meta.total_links+' links carry a modelled figure — vehicles/day, summed', tall:true,
+    tagged(chartCard({ title:'National Traffic Composition by Vehicle Class, 2025', subtitle:trafficComp.meta.linked_count+' of '+trafficComp.meta.total_links+' links carry a modelled figure  -  vehicles/day, summed', tall:true,
       type:'bar', indexAxis:'y', labels: compEntries.map(e=>e[0]), datasets:[{ data: compEntries.map(e=>Math.round(e[1])), backgroundColor:'#D97706', borderRadius:3 }] }), 'traffic'),
 
     // ---- Structures ----
@@ -203,7 +203,7 @@ RENDERERS.analytics = async function(container){
       type:'bar', labels: fyRows.map(y=>y.financial_year), datasets:[{ data: fyRows.map(y=>Math.round(y.funding_gap_vs_baseline_bn_ushs||0)), backgroundColor:'#ff2d78', borderRadius:6 }] }), 'investment'),
     tagged(chartCard({ title:'Link Age vs Priority Score', type:'scatter',
       labels: null, datasets:[{ label:'Links', data:scatterPts, backgroundColor:'#9d00ff' }] }), 'investment'),
-    tagged(chartCard({ title:'Network-Wide Intervention Priority', subtitle:priorityScored+' of '+feats.length+' links scored — this site’s own composite (40% condition, 35% traffic, 25% safety risk), distinct from the 338-link paved backlog score above',
+    tagged(chartCard({ title:'Network-Wide Intervention Priority', subtitle:priorityScored+' of '+feats.length+' links scored  -  this site’s own composite (40% condition, 35% traffic, 25% safety risk), distinct from the 338-link paved backlog score above',
       type:'doughnut', labels:PRIORITY_BANDS, datasets:[{ data:PRIORITY_BANDS.map(b=>priorityBandCounts[b]), backgroundColor:['#00c853','#D97706','#ff7a00','#ff2d78'], borderWidth:0 }] }), 'investment'),
     tagged(chartCard({ title:'Weighbridge District Coverage', subtitle:'Districts assigned per enforcement station: national register, see Network Explorer footnote',
       type:'bar', indexAxis:'y', labels: wbRows.map(r=>r.weighbridge), datasets:[{ data: wbRows.map(r=>r.district_count), backgroundColor:'#0284C7', borderRadius:4 }] }), 'traffic'),
@@ -231,17 +231,17 @@ RENDERERS.analytics = async function(container){
     tabRow.appendChild(btn);
   });
 
-  container.appendChild(sectionBlock('Chart library', 'Filter by category — every chart is computed live from real fetched data.', el('div',{},[tabRow, grid])));
+  container.appendChild(sectionBlock('Chart library', 'Filter by category  -  every chart is computed live from real fetched data.', el('div',{},[tabRow, grid])));
 
   /* ============================================================
-     Priority Ranking Explorer — real, paginated, full 338-row set.
+     Priority Ranking Explorer  -  real, paginated, full 338-row set.
      priority_score is a genuine per-link output of the National Roads Directorate
      prioritisation model (verified non-tied: sample scores 77.7,
      100.9, 106.1, 104.5, 85.6, 82.4, 86.3, 81.3, 81.7 across the
-     first 10 rows) — not a fabricated "live calculator".
+     first top 10 corridors)  -  not a fabricated "live calculator".
      ============================================================ */
   const priorityRows = lip.slice().sort((a,b)=> (b.priority_score||0) - (a.priority_score||0));
-  container.appendChild(sectionBlock('Priority Ranking Explorer', 'All 338 links in the FY26/27–FY30/31 investment-priority register, ranked by the maintenance-strategy model’s real priority_score — search, filter and sort freely.',
+  container.appendChild(sectionBlock('Priority Ranking Explorer', 'All Paved network in the FY26/27 to FY30/31 investment-priority register, ranked by the maintenance-strategy model’s real priority_score  -  search, filter and sort freely.',
     dataTable({
       caption: 'priority-ranked links',
       pageSize: 25,
@@ -253,7 +253,7 @@ RENDERERS.analytics = async function(container){
         { key:'link_name', label:'Link' },
         { key:'road_class', label:'Class', render:(v)=> (DataStore.CLASS_LABELS[v]||v) },
         { key:'priority_score', label:'Priority Score', align:'num', fmt:v=>fmtNum(v,1) },
-        { key:'priority_band', label:'Band', render:(v)=> v || '—' },
+        { key:'priority_band', label:'Band', render:(v)=> v || ' - ' },
         { key:'age_years', label:'Age (yrs)', align:'num' },
         { key:'scheduled_fy', label:'Scheduled FY', render:(v)=> v || 'Unscheduled' },
         { key:'indicative_base_cost_bn_ushs', label:'Cost (UGX bn)', align:'num', fmt:v=>fmtNum(v,1) },
@@ -263,7 +263,7 @@ RENDERERS.analytics = async function(container){
   ));
 
   /* ============================================================
-     Curated findings — 15 real, computed findings distinct from
+     Curated findings  -  15 real, computed findings distinct from
      Overview's 8 (unsealed share, Class C share, Central vs North
      Eastern length, 338-link programme, total asset value, VCI
      poor+very-poor count, regional paving gap, average link length
@@ -308,19 +308,19 @@ RENDERERS.analytics = async function(container){
   const lowConfCount = confVals.filter(v=>v<70).length;
 
   const findings = [
-    { t:'Very little of the network is newly built', d:`Only ${(since2020Km/totalKm*100).toFixed(1)}% of classified network length (${fmtNum(since2020Km,0)} km) carries a completion year of 2020 or later — most of the network predates the current maintenance-strategy cycle.`, a:'var(--neon-cyan)' },
+    { t:'Very little of the network is newly built', d:`Only ${(since2020Km/totalKm*100).toFixed(1)}% of classified network length (${fmtNum(since2020Km,0)} km) carries a completion year of 2020 or later  -  most of the network predates the current maintenance-strategy cycle.`, a:'var(--neon-cyan)' },
     { t:`${highestAadtRegion} region carries the heaviest average traffic loading`, d:`${highestAadtRegion} links average ${fmtNum(aadtByRegionAvg[highestAadtRegion],0)} vehicles/day (2026 modelled AADT), against ${fmtNum(aadtByRegionAvg[lowestAadtRegion],0)} in ${lowestAadtRegion}, the lightest-loaded region.`, a:'var(--neon-purple)' },
-    { t:`${(notRoutine/roadLinks.length*100).toFixed(0)}% of assessed links need more than routine maintenance`, d:`Of ${fmtNum(roadLinks.length)} VCI-assessed links, ${fmtNum(notRoutine)} carry a recommended intervention beyond routine maintenance — periodic maintenance, rehabilitation or reconstruction.`, a:'var(--neon-orange)' },
+    { t:`${(notRoutine/roadLinks.length*100).toFixed(0)}% of assessed links need more than routine maintenance`, d:`Of ${fmtNum(roadLinks.length)} VCI-assessed links, ${fmtNum(notRoutine)} carry a recommended intervention beyond routine maintenance  -  periodic maintenance, rehabilitation or reconstruction.`, a:'var(--neon-orange)' },
     { t:`${(criticalKm/totalKm*100).toFixed(0)}% of the network sits in the Critical safety-risk band`, d:`${fmtNum(criticalKm,0)} km of classified network is flagged Critical on the road safety risk band; the remainder is rated Low or unassigned.`, a:'var(--neon-pink)' },
-    { t:`${(bridgePoorCrit/bridgeTotal*100).toFixed(0)}% of bridges are rated Poor or Critical`, d:`${fmtNum(bridgePoorCrit)} of ${fmtNum(bridgeTotal)} registered bridges are rated Poor or Critical condition — a distinct register from the road-link condition figures above.`, a:'var(--neon-magenta)' },
-    { t:`Peak-hour speeds fall to ${velAvg[slowestClassIdx]} km/h on Class ${CLASS_ORDER[slowestClassIdx]} roads`, d:`Average peak-hour speed ranges from ${velAvg[slowestClassIdx]} km/h on Class ${CLASS_ORDER[slowestClassIdx]} links up to ${velAvg[fastestClassIdx]} km/h on Class ${CLASS_ORDER[fastestClassIdx]} — a proxy for congestion by road hierarchy.`, a:'var(--neon-blue)' },
+    { t:`${(bridgePoorCrit/bridgeTotal*100).toFixed(0)}% of bridges are rated Poor or Critical`, d:`${fmtNum(bridgePoorCrit)} of ${fmtNum(bridgeTotal)} registered bridges are rated Poor or Critical condition  -  a distinct register from the road-link condition figures above.`, a:'var(--neon-magenta)' },
+    { t:`Peak-hour speeds fall to ${velAvg[slowestClassIdx]} km/h on Class ${CLASS_ORDER[slowestClassIdx]} roads`, d:`Average peak-hour speed ranges from ${velAvg[slowestClassIdx]} km/h on Class ${CLASS_ORDER[slowestClassIdx]} links up to ${velAvg[fastestClassIdx]} km/h on Class ${CLASS_ORDER[fastestClassIdx]}  -  a proxy for congestion by road hierarchy.`, a:'var(--neon-blue)' },
     { t:'Paved network asset value has more than doubled since FY17/18', d: pavedGrowthPct!==null ? `Paved network asset value rose from USD ${fmtNum(avtPavedFirst,0)} million in FY17/18 to USD ${fmtNum(avtPavedLast,0)} million in FY25/26, a ${pavedGrowthPct.toFixed(0)}% increase, per the asset-value trend workbook.` : 'Insufficient trend data.', a:'var(--neon-green)' },
-    { t:`The 5-year investment plan carries a UGX ${fmtNum(fundingGapSum,0)} billion funding gap`, d:`Summed across the FY26/27–FY30/31 programme years, the funding gap against baseline financing totals UGX ${fmtNum(fundingGapSum,0)} billion.`, a:'var(--neon-yellow)' },
+    { t:`The 5-year investment plan carries a UGX ${fmtNum(fundingGapSum,0)} billion funding gap`, d:`Summed across the FY26/27 to FY30/31 programme years, the funding gap against baseline financing totals UGX ${fmtNum(fundingGapSum,0)} billion.`, a:'var(--neon-yellow)' },
     { t:`${highestCrashRegion} region has the highest average crash rate`, d:`${highestCrashRegion} averages ${fmtNum(crAvg[REGIONS.indexOf(highestCrashRegion)],1)} crashes per 100m-veh-km, the highest of all 6 maintenance regions.`, a:'var(--neon-orange)' },
     { t:`${fmtNum(p1Count)} links are rated Priority 1, the most urgent tier`, d:`${(p1Count/lip.length*100).toFixed(0)}% of the 338 priority-ranked links (${fmtNum(p1Count)} links) fall in the Priority 1 band of the investment-priority model.`, a:'var(--neon-purple)' },
-    { t:`${topSurface[0]} is the dominant surface material`, d:`${fmtNum(topSurface[1],0)} km (${(topSurface[1]/totalKm*100).toFixed(0)}% of the classified network) is recorded as ${topSurface[0]} surface — the single largest of ${surfaceEntries.length} recorded materials.`, a:'var(--neon-cyan)' },
-    { t:`${REGIONS[heaviestTruckRegionIdx]} carries the heaviest freight-truck share`, d:`Heavy trucks make up ${heavySharePct[heaviestTruckRegionIdx]}% of AADT on ${REGIONS[heaviestTruckRegionIdx]} region's links, the highest heavy-vehicle share of any region — a proxy for freight-corridor loading and pavement-fatigue risk.`, a:'var(--neon-green)' },
-    { t:`Mean condition-rating confidence is ${avgConfidence.toFixed(0)}%`, d:`Across ${fmtNum(confVals.length)} field-surveyed links, ${fmtNum(lowConfCount)} (${(lowConfCount/confVals.length*100).toFixed(0)}%) carry a recorded condition confidence below 70% — flagged here rather than treated as equally certain as the rest.`, a:'var(--neon-pink)' },
+    { t:`${topSurface[0]} is the dominant surface material`, d:`${fmtNum(topSurface[1],0)} km (${(topSurface[1]/totalKm*100).toFixed(0)}% of the classified network) is recorded as ${topSurface[0]} surface  -  the single largest of ${surfaceEntries.length} recorded materials.`, a:'var(--neon-cyan)' },
+    { t:`${REGIONS[heaviestTruckRegionIdx]} carries the heaviest freight-truck share`, d:`Heavy trucks make up ${heavySharePct[heaviestTruckRegionIdx]}% of AADT on ${REGIONS[heaviestTruckRegionIdx]} region's links, the highest heavy-vehicle share of any region  -  a proxy for freight-corridor loading and pavement-fatigue risk.`, a:'var(--neon-green)' },
+    { t:`Mean condition-rating confidence is ${avgConfidence.toFixed(0)}%`, d:`Across ${fmtNum(confVals.length)} field-surveyed links, ${fmtNum(lowConfCount)} (${(lowConfCount/confVals.length*100).toFixed(0)}%) carry a recorded condition confidence below 70%  -  flagged here rather than treated as equally certain as the rest.`, a:'var(--neon-pink)' },
     { t:`${densityRows[0].subregion} has the densest paved network, ${densityRows[densityRows.length-1].subregion} the sparsest`, d:`${densityRows[0].subregion} carries ${densityRows[0].road_density_now_km_per_1000km2} km of paved road per 1,000 km² of land area, against ${densityRows[densityRows.length-1].road_density_now_km_per_1000km2} km in ${densityRows[densityRows.length-1].subregion}, a ${(densityRows[0].road_density_now_km_per_1000km2/densityRows[densityRows.length-1].road_density_now_km_per_1000km2).toFixed(1)}× gap, from the national road density workbook.`, a:'var(--neon-yellow)' },
     { t:`Motorcycles are the single largest vehicle class on the network`, d:`Motorcycles & scooters account for ${(compEntries[0][1]/trafficComp.meta.total_motorised_veh_per_day*100).toFixed(0)}% of modelled 2025 motorised traffic (${fmtNum(compEntries[0][1],0)} of ${fmtNum(trafficComp.meta.total_motorised_veh_per_day,0)} vehicles/day), more than double the next-largest class, from the national traffic model.`, a:'var(--neon-blue)' },
     { t:`${fmtNum(priorityBandCounts.Critical)} sections fall in the network-wide Critical priority band`, d:`Scoring all ${fmtNum(priorityScored)} of ${fmtNum(feats.length)} classified sections on condition, traffic loading and safety risk together, ${fmtNum(priorityBandCounts.Critical)} land in the top (Critical) quartile for intervention priority, see Network Explorer for the full per-corridor register.`, a:'var(--neon-pink)' },
@@ -332,9 +332,9 @@ RENDERERS.analytics = async function(container){
       el('h3',{}, f.t), el('p',{class:'muted', style:'margin-top:6px;'}, f.d)
     ]));
   });
-  container.appendChild(sectionBlock('What the deeper data shows', 'Seventeen additional findings, computed live from this page’s data — distinct from the Overview summary.', findGrid));
+  container.appendChild(sectionBlock('What the deeper data shows', 'Seventeen additional findings, computed live from this page’s data  -  distinct from the Overview summary.', findGrid));
 
   container.appendChild(el('p',{class:'footnote'},
-    net.source + ' Maintenance-strategy figures are drawn from the National Roads Directorate FY2025/26 maintenance-strategy workbooks. Where the two source systems describe similar-sounding totals differently, each figure keeps its own source rather than being merged into one number — see the Overview footnote for detail.'
+    net.source + ' Maintenance-strategy figures are drawn from the National Roads Directorate FY2025/26 maintenance-strategy workbooks. Where the two source systems describe similar-sounding totals differently, each figure keeps its own source rather than being merged into one number  -  see the Overview footnote for detail.'
   ));
 };

@@ -3,7 +3,7 @@ RENDERERS.socioeconomic = async function(container){
 
   container.appendChild(pageHead(
     'Socio-Economic & Climate',
-    'Economic geography and climate-sensitive land use — protected areas, forest reserves, wetlands, and planned investment corridors — overlaid on the road network for road-investment planning.'
+    'Economic geography and climate-sensitive land use  -  protected areas, forest reserves, wetlands, and planned investment corridors  -  overlaid on the road network for road-investment planning.'
   ));
 
   const body = el('div', {});
@@ -27,7 +27,7 @@ RENDERERS.socioeconomic = async function(container){
   // Category decode. Confirmed by cross-referencing this file's short codes
   // against the platform's paired gazetted-areas register, which spells out
   // CFR/LFR/NP/GR/DJM in full for the same features. HA, ENC and AS have no
-  // expanded form anywhere in the source data — they are shown exactly as
+  // expanded form anywhere in the source data  -  they are shown exactly as
   // recorded in the register rather than guessed at.
   // -----------------------------------------------------------------------
   const CAT_LABEL = { CFR:'Central Forest Reserve', LFR:'Local Forest Reserve', NP:'National Park', GR:'Game Reserve', DJM:'Degazetted / Joint Management Area' };
@@ -42,10 +42,10 @@ RENDERERS.socioeconomic = async function(container){
     );
   }
 
-  // ---- Forest reserves (766 named reserves — Forest Department register) ----
+  // ---- Forest reserves (766 named reserves  -  Forest Department register) ----
   const forestRows = frGeo.features.map(f=>{
     const p = f.properties;
-    return { name: p['Forest Reserve Name'] || 'Unnamed', fdCode: p['FD Code'] || '—', type: p['Gazettement Type'] || '—', areaHa: p['Area Ha'] || 0 };
+    return { name: p['Forest Reserve Name'] || 'Unnamed', fdCode: p['FD Code'] || ' - ', type: p['Gazettement Type'] || ' - ', areaHa: p['Area Ha'] || 0 };
   });
 
   // ---- Non-forest protected areas from the same register (National Parks, Game
@@ -61,19 +61,19 @@ RENDERERS.socioeconomic = async function(container){
     };
   });
 
-  // ---- Wetlands (2,710 mapped units — National Wetlands Inventory) ----
+  // ---- Wetlands (2,710 mapped units  -  National Wetlands Inventory) ----
   const wetlandRows = wetGeo.features.map(f=>{
     const p = f.properties;
     return {
       name: p['Wetland Name'] || 'Unnamed',
-      type: p['Wetland Type'] || '—',
-      region: p['Region'] || '—',
-      district: p['District'] || '—',
+      type: p['Wetland Type'] || ' - ',
+      region: p['Region'] || ' - ',
+      district: p['District'] || ' - ',
       areaHa: p['Area (Ha)'] || 0,
     };
   });
 
-  // ---- OPRC contract lots (132 links scoped for Output- and Performance-based Road Contracts) ----
+  // ---- OPRC contract lots (OPRC corridors scoped for Output- and Performance-based Road Contracts) ----
   const oprcRows = oprcGeo.features.map(f=>{
     const p = f.properties;
     return { lot: p.lot_name, region: p.region, roadNo: p.road_no, linkName: p.link_name, lengthKm: p.length_km, lotTotalKm: p.lot_total_km, status: p.status };
@@ -85,11 +85,11 @@ RENDERERS.socioeconomic = async function(container){
     return { project: p.project_name, component: p.component, region: p.region, roadNo: p.road_no, linkName: p.link_name, lengthKm: p.length_km, priority: p.priority, status: p.status, funder: p.funder };
   });
 
-  // ---- Towns / airports / ferry crossings (use geometry coordinates directly —
+  // ---- Towns / airports / ferry crossings (use geometry coordinates directly  - 
   // some source property Lat/Long fields are stale/zeroed for a subset of rows) ----
   const townRows = townsGeo.features.map(f=>{
     const p = f.properties; const c = f.geometry.coordinates;
-    return { name: p['Place Name'], cls: p['Status'] || '—', lat: c[1], lon: c[0] };
+    return { name: p['Place Name'], cls: p['Status'] || ' - ', lat: c[1], lon: c[0] };
   });
   const airportRows = airportsGeo.features.map(f=>{
     const p = f.properties; const c = f.geometry.coordinates;
@@ -98,7 +98,7 @@ RENDERERS.socioeconomic = async function(container){
   const cleanWaterBody = s => (s||'').replace(/^L\./,'Lake ').replace(/^R\./,'River ');
   const ferryRows = ferryGeo.features.map(f=>{
     const p = f.properties; const c = f.geometry.coordinates;
-    return { name: p.Ferry_cros || p.Remarks || 'Unnamed crossing', waterBody: cleanWaterBody(p.Water_body), status: p.Category || '—', lat: c[1], lon: c[0] };
+    return { name: p.Ferry_cros || p.Remarks || 'Unnamed crossing', waterBody: cleanWaterBody(p.Water_body), status: p.Category || ' - ', lat: c[1], lon: c[0] };
   });
 
   // -----------------------------------------------------------------------
@@ -142,10 +142,10 @@ RENDERERS.socioeconomic = async function(container){
       { label:'Local Forest Reserves', value: fmtNum(byTypeCount['Local Forest Reserve']||0), accent:'var(--neon-orange)' },
     ]));
     wrap.appendChild(el('p', {class:'footnote'},
-      'Source: Forest Department gazettement register (Forest Reserves Register), '+fmtNum(forestRows.length)+' named reserves. Road works within or adjacent to a Forest Reserve boundary typically require environmental clearance — this layer is provided for that screening purpose against planned road corridors.'
+      'Source: Forest Department gazettement register (Forest Reserves Register), '+fmtNum(forestRows.length)+' named reserves. Road works within or adjacent to a Forest Reserve boundary typically require environmental clearance  -  this layer is provided for that screening purpose against planned road corridors.'
     ));
 
-    wrap.appendChild(sectionBlock('Forest reserve area by gazettement type', 'All gazettement categories in the register — no subset.', chartGrid([
+    wrap.appendChild(sectionBlock('Forest reserve area by gazettement type', 'All gazettement categories in the register  -  no subset.', chartGrid([
       chartCard({ title:'Reserve count by type', type:'doughnut',
         labels: types, datasets:[{ data: types.map(t=>byTypeCount[t]), backgroundColor: types.map(t=>typeColor[t]||'#888'), borderWidth:0 }] }),
       chartCard({ title:'Gazetted area by type', subtitle:'Hectares', type:'bar',
@@ -196,10 +196,10 @@ RENDERERS.socioeconomic = async function(container){
       { label:'Game Reserves', value: fmtNum(byCatCount['Game Reserve']||0), accent:'var(--neon-orange)' },
     ]));
     wrap.appendChild(el('p', {class:'footnote'},
-      'Source: national Protected Areas Register, '+fmtNum(parkRows.length)+' non-forest gazetted units (National Parks, Game Reserves, and register categories HA, ENC and AS). Area computed from each polygon’s recorded geometry, cross-checked against the Forest Department’s own hectare figures for shared reserves. National Park, Game Reserve and Degazetted/Joint Management Area categories carry full names in the source register; the register does not spell out HA, ENC or AS beyond these codes, so they are shown as recorded rather than guessed at — this includes '+fmtNum(unnamed)+' unnamed “ENC” (encroachment-zone) polygons with no name field populated in the source.'
+      'Source: national Protected Areas Register, '+fmtNum(parkRows.length)+' non-forest gazetted units (National Parks, Game Reserves, and register categories HA, ENC and AS). Area computed from each polygon’s recorded geometry, cross-checked against the Forest Department’s own hectare figures for shared reserves. National Park, Game Reserve and Degazetted/Joint Management Area categories carry full names in the source register; the register does not spell out HA, ENC or AS beyond these codes, so they are shown as recorded rather than guessed at  -  this includes '+fmtNum(unnamed)+' unnamed “ENC” (encroachment-zone) polygons with no name field populated in the source.'
     ));
 
-    wrap.appendChild(sectionBlock('Protected area extent by category', 'All non-forest register categories — no subset.', chartGrid([
+    wrap.appendChild(sectionBlock('Protected area extent by category', 'All non-forest register categories  -  no subset.', chartGrid([
       chartCard({ title:'Count by category', type:'doughnut',
         labels: cats, datasets:[{ data: cats.map(c=>byCatCount[c]), backgroundColor: cats.map(c=>catColor[c]), borderWidth:0 }] }),
       chartCard({ title:'Area by category', subtitle:'Hectares', type:'bar',
@@ -256,8 +256,8 @@ RENDERERS.socioeconomic = async function(container){
       'Source: National Wetlands Inventory, '+fmtNum(wetlandRows.length)+' mapped wetland units, '+fmtNum(totalHa,0)+' ha total. Wetlands are a standing constraint on new road alignment and drainage design under national environmental regulations. The inventory’s own regional field (Central / Eastern / Northern / Western / South Western) is a separate classification from this platform’s 6 road-maintenance regions and is shown as recorded, not remapped onto the maintenance-region scheme.'
     ));
 
-    wrap.appendChild(sectionBlock('Wetland area by region and type', 'All regions and types recorded in the inventory — no subset.', chartGrid([
-      chartCard({ title:'Wetland area by inventory region', subtitle:'Hectares — inventory’s own regional classification, not maintenance regions', type:'bar',
+    wrap.appendChild(sectionBlock('Wetland area by region and type', 'All regions and types recorded in the inventory  -  no subset.', chartGrid([
+      chartCard({ title:'Wetland area by inventory region', subtitle:'Hectares  -  inventory’s own regional classification, not maintenance regions', type:'bar',
         labels: regions, datasets:[{ data: regions.map(r=>Math.round(byRegion[r])), backgroundColor:'#0284C7', borderRadius:6 }] }),
       chartCard({ title:'Wetland area by type', subtitle:'Hectares', type:'bar', indexAxis:'y',
         labels: types, datasets:[{ data: types.map(t=>Math.round(byType[t])), backgroundColor:NEON.slice(0,types.length), borderRadius:6 }] }),
@@ -276,7 +276,7 @@ RENDERERS.socioeconomic = async function(container){
       try{ map.fitBounds(layer.getBounds(), {padding:[20,20]}); }catch(e){}
     });
 
-    wrap.appendChild(sectionBlock('Wetland register', 'All '+fmtNum(wetlandRows.length)+' mapped wetland units — search or filter by region/type.', dataTable({
+    wrap.appendChild(sectionBlock('Wetland register', 'All '+fmtNum(wetlandRows.length)+' mapped wetland units  -  search or filter by region/type.', dataTable({
       columns:[
         { key:'name', label:'Wetland' },
         { key:'type', label:'Type' },
@@ -386,7 +386,7 @@ RENDERERS.socioeconomic = async function(container){
       'Sources: national place-name/town gazetteer ('+fmtNum(townRows.length)+' gazetted towns), national airfields register ('+fmtNum(airportRows.length)+' facilities), and the National Roads Directorate ferry-crossings register ('+fmtNum(ferryRows.length)+' crossings). Coordinates are taken from each layer’s mapped geometry. Town classification codes and ferry-crossing status are shown exactly as recorded in the respective source registers. Ferry crossings are last-mile links where the road network is discontinuous across a water body.'
     ));
 
-    wrap.appendChild(sectionBlock('Towns and airport classification', 'Full distribution recorded in each source register — no subset.', chartGrid([
+    wrap.appendChild(sectionBlock('Towns and airport classification', 'Full distribution recorded in each source register  -  no subset.', chartGrid([
       chartCard({ title:'Towns by classification', type:'bar',
         labels: classes, datasets:[{ data: classes.map(c=>byCls[c]), backgroundColor:'#0284C7', borderRadius:6 }] }),
       chartCard({ title:'Airports by category', type:'doughnut',

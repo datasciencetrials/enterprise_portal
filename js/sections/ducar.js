@@ -8,7 +8,7 @@ RENDERERS.ducar = async function(container){
   container.innerHTML = '';
 
   // ---------------------------------------------------------------------
-  // Real aggregates — computed live from the district-level DUCAR condition
+  // Real aggregates  -  computed live from the district-level DUCAR condition
   // survey (geo/ducar_district_condition_summary.geojson), 135 districts.
   // DUCAR = District, Urban and Community Access Roads (excludes national
   // roads, which are reported separately under Overview / Network Explorer).
@@ -28,7 +28,7 @@ RENDERERS.ducar = async function(container){
   const conditionAssessedKm = goodKm + fairKm + poorKm;
 
   // Supplementary: the digitized road-link geometry file (used elsewhere for
-  // interactive mapping in Network Explorer). DDUCAR-governed features only —
+  // interactive mapping in Network Explorer). DDUCAR-governed features only  - 
   // this file also carries ~1,011 national-road features mixed in, excluded here.
   const ducarLinks = ducarRoadsGeo.features.filter(f => f.properties.governance_department === 'DDUCAR National Roads Directorate');
   const ducarLinksKm = ducarLinks.reduce((s, f) => s + (Number(f.properties.length_km) || 0), 0);
@@ -39,8 +39,8 @@ RENDERERS.ducar = async function(container){
   });
 
   container.appendChild(pageHead(
-    'DUCAR Network — Condition & Traffic Modelling',
-    'Analysis and estimation tools for District, Urban and Community Access Roads — condition modelling and illustrative traffic context. For the full raw road-link inventory, see Network Explorer.',
+    'DUCAR Network  -  Condition & Traffic Modelling',
+    'Analysis and estimation tools for District, Urban and Community Access Roads  -  condition modelling and illustrative traffic context. For the full raw road-link inventory, see Network Explorer.',
     fmtNum(districts.length) + ' districts · ' + fmtNum(ducarTotalKm, 0) + ' km'
   ));
 
@@ -54,7 +54,7 @@ RENDERERS.ducar = async function(container){
     { label: 'Poor Condition', value: fmtNum(poorKm, 0), unit: 'km', accent: 'var(--neon-pink)', delta: (poorKm/conditionAssessedKm*100).toFixed(1)+'% of assessed' },
   ]));
   container.appendChild(el('p', { class: 'footnote' },
-    'DUCAR (District, Urban, Community Access Roads) totals computed live from the National Roads Directorate DUCAR district-level condition survey, all '+fmtNum(districts.length)+' districts ('+fmtNum(distKm,0)+' km district + '+fmtNum(urbKm,0)+' km urban + '+fmtNum(commKm,0)+' km community access roads). This is a separately-maintained source from the national road-network inventory shown on Overview — the two are not combined. The digitized DUCAR road-link map layer used in Network Explorer contains '+fmtNum(ducarLinks.length)+' mapped link features totalling '+fmtNum(ducarLinksKm,0)+' km — a partial, digitized subset used for mapping, not a substitute for the district condition-survey total above; the two figures are reported separately, not reconciled to a single number.'
+    'DUCAR (District, Urban, Community Access Roads) totals computed live from the National Roads Directorate DUCAR district-level condition survey, all '+fmtNum(districts.length)+' districts ('+fmtNum(distKm,0)+' km district + '+fmtNum(urbKm,0)+' km urban + '+fmtNum(commKm,0)+' km community access roads). This is a separately-maintained source from the national road-network inventory shown on Overview  -  the two are not combined. The digitized DUCAR road-link map layer used in Network Explorer contains '+fmtNum(ducarLinks.length)+' mapped link features totalling '+fmtNum(ducarLinksKm,0)+' km  -  a partial, digitized subset used for mapping, not a substitute for the district condition-survey total above; the two figures are reported separately, not reconciled to a single number.'
   ));
 
   // ---- Charts: condition distribution + network composition ----
@@ -77,7 +77,7 @@ RENDERERS.ducar = async function(container){
   ])));
 
   // -----------------------------------------------------------------------
-  // Pavement Condition Estimator — a transparent, documented formula.
+  // Pavement Condition Estimator  -  a transparent, documented formula.
   // Replaces the old site's "GPU Live Pavement Deterioration Inference
   // Simulator" (fake NVIDIA RTX 5060 / CUDA / "1.4ms GPU compute" branding
   // over what was always just an arithmetic formula). No hardware theater.
@@ -122,7 +122,7 @@ RENDERERS.ducar = async function(container){
   estimatorCard.appendChild(formRow);
 
   const resultRow = el('div', { style: 'display:flex; align-items:center; gap:20px; margin-top:20px; padding:16px; background:var(--bg-subtle); border-radius:var(--radius-md); flex-wrap:wrap;' });
-  const vciValueEl = el('div', { style: 'font-size:2.2rem; font-weight:800; color:var(--text-primary);' }, '—');
+  const vciValueEl = el('div', { style: 'font-size:2.2rem; font-weight:800; color:var(--text-primary);' }, ' - ');
   const vciBadgeSlot = el('div', {});
   const vciBreakdown = el('div', { class: 'muted', style: 'font-size:.8rem; line-height:1.6; flex:1; min-width:220px;' });
   resultRow.appendChild(el('div', {}, [el('div', { class: 'kpi-label', style: 'margin-bottom:6px;' }, 'Estimated VCI'), vciValueEl, vciBadgeSlot]));
@@ -162,7 +162,7 @@ RENDERERS.ducar = async function(container){
 
   // -----------------------------------------------------------------------
   // Honest traffic-data disclosure. No named DUCAR traffic-count-station
-  // history exists in the platform's data — National Roads Directorate's traffic-count
+  // history exists in the platform's data  -  National Roads Directorate's traffic-count
   // programme (geo/traffic_count_stations.geojson) covers only the
   // classified national road network. We say so plainly and show that real
   // national-network station data for illustration, rather than fabricating
@@ -175,10 +175,10 @@ RENDERERS.ducar = async function(container){
     const p = f.properties;
     const np = netById[p.Link_ID] || {};
     return {
-      station: p.STATION || p.TCS_NAME || '—',
+      station: p.STATION || p.TCS_NAME || ' - ',
       code: p.TCS_NAME,
-      link_name: p.Link_Name || (np['Link Name']) || '—',
-      region: REGION_MAP[p.REGION] || p.REGION || '—',
+      link_name: p.Link_Name || (np['Link Name']) || ' - ',
+      region: REGION_MAP[p.REGION] || p.REGION || ' - ',
       aadt: np['Aadt 2026 Live'] ?? null,
       heavy_aadt: np['Aadt Heavy Trucks'] ?? null,
     };
@@ -188,7 +188,7 @@ RENDERERS.ducar = async function(container){
 
   const trafficBlock = el('div', {});
   trafficBlock.appendChild(el('p', { class: 'muted', style: 'margin:0 0 12px;' },
-    fmtNum(stationRows.length) + ' stations with a matched current AADT figure · mean ' + fmtNum(avgAadt, 0) + ' vehicles/day across these stations. These are national-network counts (National Roads Directorate\'s traffic-count programme covers only the classified national network, not DUCAR roads) shown for illustration — not projected, extrapolated or averaged onto the DUCAR totals above.'));
+    fmtNum(stationRows.length) + ' stations with a matched current AADT figure · mean ' + fmtNum(avgAadt, 0) + ' vehicles/day across these stations. These are national-network counts (National Roads Directorate\'s traffic-count programme covers only the classified national network, not DUCAR roads) shown for illustration  -  not projected, extrapolated or averaged onto the DUCAR totals above.'));
   trafficBlock.appendChild(dataTable({
     caption: 'traffic count stations',
     pageSize: 25,
@@ -203,5 +203,5 @@ RENDERERS.ducar = async function(container){
     ],
     rows: stationRows,
   }));
-  container.appendChild(sectionBlock('Traffic count station data', 'National-network stations, shown for context — not a DUCAR traffic model.', trafficBlock));
+  container.appendChild(sectionBlock('Traffic count station data', 'National-network stations, shown for context  -  not a DUCAR traffic model.', trafficBlock));
 };

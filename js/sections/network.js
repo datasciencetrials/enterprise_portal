@@ -1,4 +1,4 @@
-// Network Explorer — a real raw-data browser over the platform's road-network
+// Network Explorer  -  a real raw-data browser over the platform's road-network
 // inventories, for engineers/analysts who need underlying records rather than
 // a dashboard. Replaces the old "Summary Tables" section (215-row mashed
 // table, no pagination, raw filenames leaking into the UI).
@@ -7,7 +7,7 @@ RENDERERS.network = async function(container){
   container.innerHTML = '';
   container.appendChild(pageHead(
     'Network Explorer',
-    'Raw, paginated, searchable inventory records for the national and DUCAR district road networks — the underlying data behind every chart on this site.',
+    'Raw, paginated, searchable inventory records for the national and DUCAR district road networks  -  the underlying data behind every chart on this site.',
     'Two full inventories'
   ));
 
@@ -61,12 +61,12 @@ RENDERERS.network = async function(container){
   crossTabHost.appendChild(buildCrossTabs(net.features));
   container.appendChild(sectionBlock(
     'Cross-Tab Reports',
-    'Pivot tables computed client-side from the live national road-network inventory (' + net.features.length + ' links) — real group-by sums, not precomputed figures.',
+    'Pivot tables computed client-side from the live national road-network inventory (' + net.features.length + ' links)  -  real group-by sums, not precomputed figures.',
     crossTabHost
   ));
 
   container.appendChild(el('p',{class:'footnote'},
-    'National Road Network: computed live from the platform’s GIS road-network inventory (' + net.features.length + ' links). DUCAR District Network: the platform’s district, urban and community-access roads inventory (DDUCAR/DNR, National Transport Network), fetched live. Raw source-file identifiers and link codes are never shown — records are identified by their real road/link names. Priority Score: a transparent weighted composite (40% pavement condition, 35% traffic loading percentile, 25% safety risk band) computed live from this table’s own real fields — renormalized when a link is missing one input, and banded into Low/Moderate/High/Critical by this network’s own quartiles, not fixed cutoffs. 6 links with no Condition, AADT or Risk Band on record are left unscored rather than defaulted.'
+    'National Road Network: computed live from the platform’s GIS road-network inventory (' + net.features.length + ' links). DUCAR District Network: the platform’s district, urban and community-access roads inventory (DDUCAR/DNR, National Transport Network), fetched live. Raw source-file identifiers and link codes are never shown  -  records are identified by their real road/link names. Priority Score: a transparent weighted composite (40% pavement condition, 35% traffic loading percentile, 25% safety risk band) computed live from this table’s own real fields  -  renormalized when a link is missing one input, and banded into Low/Moderate/High/Critical by this network’s own quartiles, not fixed cutoffs. Expressway corridors with no Condition, AADT or Risk Band on record are left unscored rather than defaulted.'
   ));
 };
 
@@ -76,8 +76,8 @@ function buildNationalTable(features){
     const p = f.properties;
     return {
       name: p['Link Name'] || '(unnamed link)',
-      roadNo: p['Road No 1'] || '—',
-      cls: DataStore.CLASS_LABELS[p['Road Cla 1']] || p['Road Cla 1'] || '—',
+      roadNo: p['Road No 1'] || ' - ',
+      cls: DataStore.CLASS_LABELS[p['Road Cla 1']] || p['Road Cla 1'] || ' - ',
       region: p['Region'],
       lengthKm: p['Length Km'],
       surface: p['Surface Material'],
@@ -116,12 +116,12 @@ function buildNationalTable(features){
       { key:'condition', label:'Condition', render:v=>conditionBadge(v) },
       { key:'aadt', label:'AADT 2026', align:'num', fmt:v=>fmtNum(v,0) },
       { key:'heavyTrucks', label:'Heavy Trucks/day', align:'num', fmt:v=>fmtNum(v,0) },
-      { key:'peakVelocity', label:'Peak Hr Velocity', align:'num', fmt:v=>v==null?'—':fmtNum(v,1)+' km/h' },
+      { key:'peakVelocity', label:'Peak Hr Velocity', align:'num', fmt:v=>v==null?' - ':fmtNum(v,1)+' km/h' },
       { key:'riskBand', label:'Safety Risk Band' },
       { key:'crashRate', label:'Crash Rate', align:'num', fmt:v=>fmtNum(v,1) },
-      { key:'completionYear', label:'Completion Year', align:'num', fmt:v=>v==null?'—':String(v) },
+      { key:'completionYear', label:'Completion Year', align:'num', fmt:v=>v==null?' - ':String(v) },
       { key:'station', label:'Maintenance Station' },
-      { key:'priorityScore', label:'Priority Score', align:'num', fmt:v=>v==null?'—':fmtNum(v,1) },
+      { key:'priorityScore', label:'Priority Score', align:'num', fmt:v=>v==null?' - ':fmtNum(v,1) },
       { key:'priorityBand', label:'Priority Band', render:v=>priorityBadge(v) },
     ],
   });
@@ -133,8 +133,8 @@ function buildDucarTable(features){
     const p = f.properties;
     return {
       name: p.road_name || '(unnamed road)',
-      functionalClass: p.functional_class || '—',
-      network: p.governance_department==='DDUCAR National Transport Network' ? 'District / Urban / Community Access' : (p.governance_department==='DNR National Transport Network' ? 'National (DNR)' : (p.governance_department||'—')),
+      functionalClass: p.functional_class || ' - ',
+      network: p.governance_department==='DDUCAR National Transport Network' ? 'District / Urban / Community Access' : (p.governance_department==='DNR National Transport Network' ? 'National (DNR)' : (p.governance_department||' - ')),
       surface: p.surface,
       pavement: p.pavement_class,
       lengthKm: p.length_km,
@@ -156,8 +156,8 @@ function buildDucarTable(features){
       { key:'name', label:'Road Name' },
       { key:'functionalClass', label:'Functional Class' },
       { key:'network', label:'Governing Network' },
-      { key:'surface', label:'Surface', render:v=> v==='Not recorded' ? el('span',{class:'muted'},'Not recorded') : (v||'—') },
-      { key:'pavement', label:'Pavement Class', render:v=> v==='Not recorded' ? el('span',{class:'muted'},'Not recorded') : (v||'—') },
+      { key:'surface', label:'Surface', render:v=> v==='Not recorded' ? el('span',{class:'muted'},'Not recorded') : (v||' - ') },
+      { key:'pavement', label:'Pavement Class', render:v=> v==='Not recorded' ? el('span',{class:'muted'},'Not recorded') : (v||' - ') },
       { key:'lengthKm', label:'Length', align:'num', fmt:v=>fmtNum(v,2)+' km' },
     ],
   });
@@ -187,7 +187,7 @@ function pivotTable(rowKeys, colKeys, cellFn, rowLabel, colLabels, valueFmt, tab
       const v = cellFn(rk, ck) || 0;
       rowTotal += v;
       colTotals[i] += v;
-      tr.appendChild(el('td',{class:'num'}, v ? valueFmt(v) : '—'));
+      tr.appendChild(el('td',{class:'num'}, v ? valueFmt(v) : ' - '));
     });
     grandTotal += rowTotal;
     tr.appendChild(el('td',{class:'num', style:'font-weight:600;'}, valueFmt(rowTotal)));

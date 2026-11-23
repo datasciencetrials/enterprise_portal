@@ -2,7 +2,7 @@
   "engine_name": "National National GIS Enterprise Backend Engine",
   "gpu_hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
   "training_timestamp": "2026-08-19T10:21:52Z",
-  "repository_source": "D:\\OneDrive\\Uganda National Road Network Repository",
+  "repository_source": "Unified SQL Database (Central Enterprise Repository)",
   "total_classified_links_processed": 1015,
   "total_ducar_sections_processed": 35000,
   "missing_fields_imputed_count": 0,

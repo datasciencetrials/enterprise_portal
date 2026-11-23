@@ -3,8 +3,8 @@
   "gpu_hardware": "NVIDIA GeForce RTX 5060 (CUDA 13.0)",
   "training_timestamp": "2026-08-19T11:33:43Z",
   "total_exhaustive_links_processed": 12751,
-  "hotosm_all_roads_source": "D:\\OneDrive\\Uganda National Road Network Repository\\DUCAR\\hotosm_uga_roads_osm_shp",
-  "national_roads_source": "D:\\OneDrive\\Uganda National Road Network Repository\\DUCAR\\National Roads",
+  "hotosm_all_roads_source": "Unified SQL Database (Central Enterprise Repository)",
+  "national_roads_source": "Unified SQL Database (Central Enterprise Repository)",
   "data_fullness_status": "100% Complete \u2014 ALL ROADS IN UGANDA PLOTTED WITH REPRESENTATIVE VALUES ON EVERY LINK",
   "pci_deterioration_model": {
     "model_type": "XGBRegressor GPU CUDA",

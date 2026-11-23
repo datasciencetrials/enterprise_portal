@@ -1,4 +1,4 @@
-// Investment Plan — consolidates the old site's IBP/PIP cross-reference and its
+// Investment Plan  -  consolidates the old site's IBP/PIP cross-reference and its
 // capital-project appraisal ("PIM") tool into one section. This page is about
 // CAPITAL / new-construction investment; routine & periodic maintenance funding
 // lives on the Maintenance & Condition page and is intentionally not repeated here.
@@ -12,7 +12,7 @@ RENDERERS.investment = async function(container){
 
   // One malformed row exists in the source (FY2015/16, code 1320): its agency/location
   // fields were parsed as the PDF's own column headers ("Responsible Officer:" /
-  // "Total Expenditure (UGX bn):") instead of real values. Excluded from every table —
+  // "Total Expenditure (UGX bn):") instead of real values. Excluded from every table  - 
   // this is a source-extraction artifact, not a real project attribute.
   function isCleanRow(r){ return r.agency !== 'Responsible Officer:'; }
   function displayAgency(row){ return { ...row, agency: String(row.agency || '').replace(/\bDepartment of National Roads\b/g, 'Former roads agency') }; }
@@ -181,7 +181,7 @@ RENDERERS.investment = async function(container){
   // ================= Tab 2: Project Appraisal (PIM) =================
   // No per-project EIRR/BCR/NPV appraisal data was found in any data file available to
   // this build (network.geojson, maintenance_strategy_summary.json,
-  // maintenance_strategy_detail.json, or the IBP register itself) — none carry
+  // maintenance_strategy_detail.json, or the IBP register itself)  -  none carry
   // cost-benefit or economic-appraisal fields. Rather than fabricate project names or
   // EIRR/BCR/NPV numbers (which the old site's "Deep Analytics" page appears to have
   // done), this tab is a transparent, clearly-labelled illustrative calculator: a
@@ -191,7 +191,7 @@ RENDERERS.investment = async function(container){
     const wrap = el('div',{});
 
     wrap.appendChild(el('p',{class:'footnote'},
-      'Illustrative planning tool, not project-level appraisal data. No real per-project EIRR/BCR/NPV appraisal dataset exists in the data available to this platform. This calculator instead demonstrates the standard HDM-4-style logic used in pavement investment planning — a documented, simplified deterioration model you can drive with your own assumptions below. It does not represent any specific road, project or approved budget.'
+      'Illustrative planning tool, not project-level appraisal data. No real per-project EIRR/BCR/NPV appraisal dataset exists in the data available to this platform. This calculator instead demonstrates the standard HDM-4-style logic used in pavement investment planning  -  a documented, simplified deterioration model you can drive with your own assumptions below. It does not represent any specific road, project or approved budget.'
     ));
 
     // ---- controls ----
@@ -216,14 +216,14 @@ RENDERERS.investment = async function(container){
         input
       ]);
     }
-    controlGrid.appendChild(sliderRow('Initial VCI (condition index, 0–100)', 'vci', 20, 100, 1, ''));
+    controlGrid.appendChild(sliderRow('Initial VCI (condition index, 0 to 100)', 'vci', 20, 100, 1, ''));
     controlGrid.appendChild(sliderRow('Annual ESAL / traffic-loading growth', 'growth', 0, 10, 0.5, '%'));
     controlGrid.appendChild(sliderRow('Planning horizon', 'horizon', 5, 30, 1, ' yrs'));
     wrap.appendChild(controls);
 
     // ---- chart card (built directly with Chart.js so we can update it live) ----
     const chartCardEl = el('div',{class:'card chart-card'});
-    chartCardEl.appendChild(el('h3',{},'Condition Over Time — Do-Minimum vs Preventive-Preservation'));
+    chartCardEl.appendChild(el('h3',{},'Condition Over Time  -  Do-Minimum vs Preventive-Preservation'));
     chartCardEl.appendChild(el('span',{class:'tiny-muted'},'Simulated Visual Condition Index (VCI), 100 = as-new. Recomputes live from the inputs above.'));
     const chartBox = el('div',{class:'chart-box tall'});
     const canvas = document.createElement('canvas');
@@ -236,7 +236,7 @@ RENDERERS.investment = async function(container){
     wrap.appendChild(statsHost);
 
     wrap.appendChild(el('p',{class:'footnote'},
-      'Illustrative model, not a validated HDM-4 run and not tied to any specific link. Each year, a loading multiplier is applied as (1 + growth rate)^year to represent accelerating pavement wear from traffic growth. Do-Minimum: VCI declines at a base rate of 3.2 pts/yr × the loading multiplier, with no action until VCI ≤ 40, at which point a full reconstruction is triggered (relative cost index 100, VCI resets to 100). Preventive-Preservation: VCI declines at a slower base rate of 2.4 pts/yr × the same loading multiplier (a maintained surface sheds load better), with a preventive treatment triggered whenever VCI ≤ 70 (relative cost index 15 per treatment, VCI restored by +30, capped at 100). Base rates, triggers and relative costs are simplified, documented assumptions for planning-level illustration — not derived from a per-project appraisal.'
+      'Illustrative model, not a validated HDM-4 run and not tied to any specific link. Each year, a loading multiplier is applied as (1 + growth rate)^year to represent accelerating pavement wear from traffic growth. Do-Minimum: VCI declines at a base rate of 3.2 pts/yr × the loading multiplier, with no action until VCI ≤ 40, at which point a full reconstruction is triggered (relative cost index 100, VCI resets to 100). Preventive-Preservation: VCI declines at a slower base rate of 2.4 pts/yr × the same loading multiplier (a maintained surface sheds load better), with a preventive treatment triggered whenever VCI ≤ 70 (relative cost index 15 per treatment, VCI restored by +30, capped at 100). Base rates, triggers and relative costs are simplified, documented assumptions for planning-level illustration  -  not derived from a per-project appraisal.'
     ));
 
     function simulate(vci0, growthPct, horizon){
@@ -300,7 +300,7 @@ RENDERERS.investment = async function(container){
       ]));
       statsHost.appendChild(el('p',{class:'footnote'},
         Number.isFinite(ratio)
-          ? `In this illustrative run, the Do-Minimum relative cost index (${fmtNum(r.costDM)}) is ${ratio.toFixed(1)}× the Preventive-Preservation relative cost index (${fmtNum(r.costPP)}) over the ${state.horizon}-year horizon — the standard pavement-engineering rationale for preservation-first programming.`
+          ? `In this illustrative run, the Do-Minimum relative cost index (${fmtNum(r.costDM)}) is ${ratio.toFixed(1)}× the Preventive-Preservation relative cost index (${fmtNum(r.costPP)}) over the ${state.horizon}-year horizon  -  the standard pavement-engineering rationale for preservation-first programming.`
           : `In this illustrative run, Do-Minimum required ${fmtNum(r.nDM)} full reconstruction(s) while Preventive-Preservation required none, over the ${state.horizon}-year horizon.`
       ));
     }

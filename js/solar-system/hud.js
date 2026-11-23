@@ -4,23 +4,23 @@
 
 const SolarHUD = (() => {
   const VCI_BANDS = [
-    { range: '85% – 100%', label: 'Good / Very Good', action: 'Routine Maintenance & Crack Sealing', color: 'var(--status-good)' },
-    { range: '70% – 84%',  label: 'Fair / Warning',     action: 'Fog Spray & Patching',                color: 'var(--status-fair)' },
-    { range: '50% – 69%',  label: 'Poor / Moderate Distress', action: 'Double Surface Dressing / Reseal', color: 'var(--neon-orange)' },
-    { range: '30% – 49%',  label: 'Very Poor / Severe Distress', action: 'Structural Asphalt Overlay (50mm)', color: 'var(--status-poor)' },
-    { range: '0% – 29%',   label: 'Critical / Failed',  action: 'Full Depth Reconstruction',          color: 'var(--status-critical)' },
+    { range: '85%  to  100%', label: 'Good / Very Good', action: 'Routine Maintenance & Crack Sealing', color: 'var(--status-good)' },
+    { range: '70%  to  84%',  label: 'Fair / Warning',     action: 'Fog Spray & Patching',                color: 'var(--status-fair)' },
+    { range: '50%  to  69%',  label: 'Poor / Moderate Distress', action: 'Double Surface Dressing / Reseal', color: 'var(--neon-orange)' },
+    { range: '30%  to  49%',  label: 'Very Poor / Severe Distress', action: 'Structural Asphalt Overlay (50mm)', color: 'var(--status-poor)' },
+    { range: '0%  to  29%',   label: 'Critical / Failed',  action: 'Full Depth Reconstruction',          color: 'var(--status-critical)' },
   ];
 
   function vciLegend(){
     const wrap = el('div', { class: 'card card-pad' });
-    wrap.appendChild(el('h3', {}, 'Visual Condition Index (VCI) — National Roads Directorate Visual Inspection Manual 2012'));
+    wrap.appendChild(el('h3', {}, 'Visual Condition Index (VCI)  -  National Roads Directorate Visual Inspection Manual 2012'));
     const table = el('table', { class: 'data-table', style: 'margin-top:10px;' });
     const thead = el('thead', {}, el('tr', {}, [
       el('th', {}, 'VCI Band'), el('th', {}, 'Condition'), el('th', {}, 'Standard Intervention'),
     ]));
     const tbody = el('tbody', {}, VCI_BANDS.map(b => el('tr', {}, [
       el('td', {}, el('span', { style: `display:inline-block;width:10px;height:10px;border-radius:50%;background:${b.color};margin-right:8px;` }), ),
-      el('td', {}, [document.createTextNode(b.range + ' — '), document.createTextNode(b.label)]),
+      el('td', {}, [document.createTextNode(b.range + '  -  '), document.createTextNode(b.label)]),
       el('td', {}, b.action),
     ])));
     table.appendChild(thead); table.appendChild(tbody);
@@ -44,7 +44,7 @@ const SolarHUD = (() => {
     });
     root.appendChild(tabs);
 
-    const metricsPanel = el('div', { class: 'card card-pad universe-metrics' }, 'Select a planet — in the scene or above — for its live subsystem metrics.');
+    const metricsPanel = el('div', { class: 'card card-pad universe-metrics' }, 'Select a planet  -  in the scene or above  -  for its live subsystem metrics.');
     root.appendChild(metricsPanel);
 
     const rosterPanel = el('div', { class: 'card card-pad universe-roster' });

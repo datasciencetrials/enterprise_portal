@@ -1,6 +1,6 @@
 // Humanoid astronaut crews standing on each planet's surface, suit-trimmed to that subsystem's
 // color, low-gravity hop locomotion (g < 0.8, rate ~ sqrt(g) per the platform spec). One shared
-// InstancedMesh per body part across every planet — cheap regardless of how many planets/crew exist.
+// InstancedMesh per body part across every planet  -  cheap regardless of how many planets/crew exist.
 
 const Astronauts = (() => {
   const CREW_PER_PLANET = 6;
@@ -9,7 +9,7 @@ const Astronauts = (() => {
 
   function buildGeometrySet(THREE){
     // CapsuleGeometry isn't available in the vendored three.js build (added upstream well after
-    // the revision this platform pins) — a rounded cylinder gives the same suited-torso silhouette
+    // the revision this platform pins)  -  a rounded cylinder gives the same suited-torso silhouette
     // for an instanced low-poly figure.
     return {
       body: new THREE.CylinderGeometry(0.1, 0.11, 0.34, 8, 1, false),
@@ -36,7 +36,7 @@ const Astronauts = (() => {
     const helmetMat = new THREE.MeshStandardMaterial({ color: 0xE8ECF2, roughness: 0.2, metalness: 0.3 });
     const visorMat = new THREE.MeshStandardMaterial({ vertexColors: true, emissiveIntensity: 1, roughness: 0.1 });
     visorMat.emissive = new THREE.Color(0xffffff);
-    // Vertex-colored emissive isn't native to MeshStandardMaterial — approximated via instanceColor
+    // Vertex-colored emissive isn't native to MeshStandardMaterial  -  approximated via instanceColor
     // above instead of a shader override, so onBeforeCompile is left at its default (three.js reads
     // it via .toString() to build the program cache key, so it must never be set to null/undefined).
 

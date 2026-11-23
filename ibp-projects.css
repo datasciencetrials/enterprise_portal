@@ -1,5 +1,5 @@
 /* ============================================================
-   IBP Uganda — National Road & Bridge Investment Projects panel
+   IBP Uganda  -  National Road & Bridge Investment Projects panel
    Loaded after the compiled app stylesheet. Reuses the site's own
    .glass-card / .kpi-card classes for the stat tiles so the look
    stays native; everything else here is scoped under #ibp-overlay.

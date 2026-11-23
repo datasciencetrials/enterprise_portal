@@ -1,5 +1,5 @@
 // Real data loaders. Every function fetches the SAME live data files this
-// platform already serves — no fabricated numbers are introduced here.
+// platform already serves  -  no fabricated numbers are introduced here.
 // Paths are relative (no leading slash) so they resolve correctly under
 // whatever subpath the site is deployed at.
 
@@ -42,7 +42,7 @@ const DataStore = (() => {
   async function weighbridgeDistrictCoverage(){ return getJSON('weighbridge_district_coverage.json'); }
 
   const REGIONS = ['Central','Eastern','North Eastern','Northern','Southern','Western'];
-  const CLASS_LABELS = {A:'Class A — International Trunk', B:'Class B — National Trunk', C:'Class C — Primary / District', M:'Expressway (Class M)'};
+  const CLASS_LABELS = {A:'Class A  -  International Trunk', B:'Class B  -  National Trunk', C:'Class C  -  Primary / District', M:'Expressway (Class M)'};
 
   // ---- canonical network stats, computed live from network.geojson (single source of truth) ----
   let _netStatsCache = null;

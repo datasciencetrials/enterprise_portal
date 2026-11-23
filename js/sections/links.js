@@ -21,11 +21,11 @@ RENDERERS.links = async function(container){
 
   // ---- This portal itself (self-link, kept distinct from the bot-project links below) ----
   const enterpriseLinks = [
-    { icon:'🛰️', label:'Uganda GIS Enterprise Portal', desc:'This platform — live national road-network GIS, maintenance analytics and investment dashboards.', url:'https://datasciencetrials.github.io/enterprise_portal/', a:'var(--neon-cyan)' },
+    { icon:'🛰️', label:'Uganda GIS Enterprise Portal', desc:'This platform  -  live national road-network GIS, maintenance analytics and investment dashboards.', url:'https://datasciencetrials.github.io/enterprise_portal/', a:'var(--neon-cyan)' },
   ];
   container.appendChild(sectionBlock('🚀 Live Verification & Enterprise Links', 'Live, publicly deployed National Roads Directorate enterprise systems.', linkCardGrid(enterpriseLinks)));
 
-  // ---- Bot / automation projects (separate GitHub account — priscananjehe1996/priezent) ----
+  // ---- Bot / automation projects (separate GitHub account  -  priscananjehe1996/priezent) ----
   const botResultLinks = [
     { icon:'⚙️', label:'Result Engine Dashboard', desc:'Automated results-tracking dashboard.', url:'https://priscananjehe1996.github.io/priezent/result_engine.html', a:'var(--neon-blue)' },
     { icon:'☀️', label:'3D Solar Agent App', desc:'Interactive 3D solar agent application.', url:'https://priscananjehe1996.github.io/priezent/', a:'var(--neon-orange)' },
@@ -34,7 +34,7 @@ RENDERERS.links = async function(container){
   container.appendChild(sectionBlock('🤖 Bot Results', 'Live, publicly deployed automation projects.', linkCardGrid(botResultLinks)));
 
   // ==========================================================================
-  // CREATIVE / DEMO CONTENT — pulled from the "Result Engine" bot-result pages
+  // CREATIVE / DEMO CONTENT  -  pulled from the "Result Engine" bot-result pages
   // above (priscananjehe1996/priezent). This is a personal creative project,
   // NOT verified National Roads Directorate engineering data. Every value below is illustrative
   // decorative content hardcoded into those pages, not computed from a real
@@ -62,7 +62,7 @@ RENDERERS.links = async function(container){
     [
       ['Model Checkpoint','pavement_cnn_defect_model.pth'],
       ['Survey Images Scanned','12.79 Million Images'],
-      ['Network Drives','W:\\, X:\\, Y:\\, Z:\\'],
+      ['Network Drives','Repository/, Repository/, Repository/, Repository/'],
       ['Training Final Loss','1.1907 (30 Epochs)'],
     ].forEach(([k,v])=> cnnFacts.appendChild(el('div',{class:'card card-pad'},[el('div',{class:'muted'},k), el('div',{style:'font-weight:700;margin-top:4px;'},v)])));
     const cnnTable = dataTable({
@@ -80,7 +80,7 @@ RENDERERS.links = async function(container){
       ],
     });
     return el('div',{},[
-      paneCaption('Illustrative content from the priezent Result Engine page — not a real trained model on this platform.'),
+      paneCaption('Illustrative content from the priezent Result Engine page  -  not a real trained model on this platform.'),
       cnnFacts, el('div',{style:'height:14px;'}), cnnTable,
     ]);
   }
@@ -108,7 +108,7 @@ RENDERERS.links = async function(container){
       ],
     });
     return el('div',{},[
-      paneCaption('5 of 1,022 sample link-level predictions shown on the priezent page — illustrative, not a real prediction run on this platform\'s network.geojson.'),
+      paneCaption('5 of 1,022 sample link-level predictions shown on the priezent page  -  illustrative, not a real prediction run on this platform\'s network.geojson.'),
       netKpis, el('div',{style:'height:14px;'}), netTable,
     ]);
   }
@@ -122,7 +122,7 @@ RENDERERS.links = async function(container){
       ['WB-04 Mbarara Western Station','98.9% Compliant'],
     ].forEach(([k,v])=> wimGrid.appendChild(el('div',{class:'card card-pad', style:'display:flex;justify-content:space-between;align-items:center;'},[el('span',{style:'font-weight:600;'},k), el('span',{style:'color:var(--neon-green);font-weight:700;'},v)])));
     return el('div',{},[
-      paneCaption('Illustrative station list from the priezent page — not the real weighbridge_district_coverage.json dataset used elsewhere on this platform.'),
+      paneCaption('Illustrative station list from the priezent page  -  not the real weighbridge_district_coverage.json dataset used elsewhere on this platform.'),
       wimGrid,
     ]);
   }
@@ -135,7 +135,7 @@ RENDERERS.links = async function(container){
       ['Pakwach Albert Nile Crossing','Joint Rating 8.4 / 10'],
     ].forEach(([k,v])=> bridgeGrid.appendChild(el('div',{class:'card card-pad'},[el('div',{style:'font-weight:700;'},k), el('div',{style:'margin-top:6px;color:var(--neon-green);'},v)])));
     return el('div',{},[
-      paneCaption('Illustrative bridge ratings from the priezent page — not the platform\'s real geo/bridges.geojson register (see Bridges & Culverts for that).'),
+      paneCaption('Illustrative bridge ratings from the priezent page  -  not the platform\'s real geo/bridges.geojson register (see Bridges & Culverts for that).'),
       bridgeGrid,
       el('p',{class:'footnote', style:'margin-top:12px;'},'Overall "Structural Health Index" shown on the source page: 96.2%.'),
     ]);
@@ -162,7 +162,7 @@ RENDERERS.links = async function(container){
       ],
     });
     return el('div',{},[
-      paneCaption('Explicitly a fictional/creative concept from the priezent project — no such workforce, agents or planetary operation exists. Shown here purely as a demo of the source page\'s content.'),
+      paneCaption('Explicitly a fictional/creative concept from the priezent project  -  no such workforce, agents or planetary operation exists. Shown here purely as a demo of the source page\'s content.'),
       worldsTable,
     ]);
   }
@@ -180,18 +180,18 @@ RENDERERS.links = async function(container){
       el('p',{class:'footnote', style:'margin-top:8px;'},'Subsurface moisture & embankment settlement radar monitoring (demo text).'),
     ]));
     return el('div',{},[
-      paneCaption('Illustrative content from the priezent page — this platform does not currently ingest satellite or LiDAR survey data.'),
+      paneCaption('Illustrative content from the priezent page  -  this platform does not currently ingest satellite or LiDAR survey data.'),
       satGrid,
     ]);
   }
 
   const demoTabs = [
-    { id:'cnn',       label:'🧠 Tab 1 — CNN Defect Model',       build: buildCnnPane },
-    { id:'network',   label:'🌍 Tab 2 — Network Predictions',    build: buildNetworkPane },
-    { id:'wim',       label:'⚖️ Tab 3 — WIM Weighbridges',       build: buildWimPane },
-    { id:'bridges',   label:'🌉 Tab 4 — UGNBMS Nile Bridges',    build: buildBridgesPane },
-    { id:'worlds',    label:'🪐 Tab 5 — Solar Worlds (fictional)', build: buildWorldsPane },
-    { id:'satellite', label:'🛰️ Tab 6 — Satellite & LiDAR',      build: buildSatellitePane },
+    { id:'cnn',       label:'🧠 Tab 1  -  CNN Defect Model',       build: buildCnnPane },
+    { id:'network',   label:'🌍 Tab 2  -  Network Predictions',    build: buildNetworkPane },
+    { id:'wim',       label:'⚖️ Tab 3  -  WIM Weighbridges',       build: buildWimPane },
+    { id:'bridges',   label:'🌉 Tab 4  -  UGNBMS Nile Bridges',    build: buildBridgesPane },
+    { id:'worlds',    label:'🪐 Tab 5  -  Solar Worlds (fictional)', build: buildWorldsPane },
+    { id:'satellite', label:'🛰️ Tab 6  -  Satellite & LiDAR',      build: buildSatellitePane },
   ];
   const demoTabRow = el('div',{class:'tab-row'});
   const demoPaneHost = el('div',{});
@@ -204,6 +204,6 @@ RENDERERS.links = async function(container){
     const btn = el('button',{class:'tab-btn', 'data-id':t.id, type:'button', onclick:()=>showDemoTab(t.id)}, t.label);
     demoTabRow.appendChild(btn);
   });
-  container.appendChild(sectionBlock('🎨 Result Engine Mirror — 6 Demo Tabs', 'Click a tab to switch panels. Every value below is illustrative content copied from the priezent Result Engine page, not verified National Roads Directorate engineering data.', el('div',{},[demoTabRow, demoPaneHost])));
+  container.appendChild(sectionBlock('🎨 Result Engine Mirror  -  6 Demo Tabs', 'Click a tab to switch panels. Every value below is illustrative content copied from the priezent Result Engine page, not verified National Roads Directorate engineering data.', el('div',{},[demoTabRow, demoPaneHost])));
   showDemoTab('cnn');
 };

@@ -1,5 +1,5 @@
-// Bridges & Culverts — FY2025/26 National Roads Directorate maintenance-strategy structures register.
-// Standing rule: bridges and major culverts are ALWAYS reported as separate figures/tables —
+// Bridges & Culverts  -  FY2025/26 National Roads Directorate maintenance-strategy structures register.
+// Standing rule: bridges and major culverts are ALWAYS reported as separate figures/tables  - 
 // this file never merges their rows into one shared table, even though both live on one page.
 
 const STRUCT_COND_ORDER = ['Good', 'Satisfactory', 'Fair', 'Marginal', 'Poor', 'Critical', 'Very Poor'];
@@ -28,10 +28,10 @@ function structCountBy(rows, key){
   return m;
 }
 function structFmtDate(v){
-  if (!v) return '—';
+  if (!v) return ' - ';
   return String(v).slice(0, 10);
 }
-// Uganda's real extent (with generous margin) — a handful of source records carry corrupted
+// Uganda's real extent (with generous margin)  -  a handful of source records carry corrupted
 // or lat/lon-swapped coordinates (e.g. a bridge recorded near Spain instead of Uganda). Rather
 // than plot those and let them blow out the map's auto-fit bounds, they're excluded from the
 // map (same treatment as missing coordinates) and disclosed separately; the table still shows
@@ -41,7 +41,7 @@ function inUgandaBounds(lat, lon){
 }
 
 // Build one full sub-view (KPI strip + map + table) for either bridges or major culverts.
-// Returns { node, mountMap } — mountMap() lazily creates the Leaflet map the first time
+// Returns { node, mountMap }  -  mountMap() lazily creates the Leaflet map the first time
 // its tab becomes visible (a map initialised inside a display:none container sizes to 0).
 function buildStructureView(cfg){
   const { rows, idLabel, idKey, nameKey, extraCols, caption, mapDivId, kind } = cfg;
@@ -115,14 +115,14 @@ function buildStructureView(cfg){
       const primaryLabel = kind === 'bridge' ? (r.bridge_name || r.bridge_number) : r.culvert_number;
       marker.bindPopup(
         '<strong>' + esc(primaryLabel) + '</strong><br>' +
-        'Link / road: ' + esc(r._link_name || '—') + '<br>' +
+        'Link / road: ' + esc(r._link_name || ' - ') + '<br>' +
         'Condition: ' + esc(r.condition || 'Not recorded') + '<br>' +
         'Last modified: ' + esc(structFmtDate(r.date_modified))
       );
       bounds.push([lat, lon]);
     });
     if (bounds.length) mapInstance.fitBounds(bounds, { padding: [20, 20] });
-    else mapInstance.setView([1.3733, 32.2903], 7); // Uganda fallback centre — no coordinates to fit
+    else mapInstance.setView([1.3733, 32.2903], 7); // Uganda fallback centre  -  no coordinates to fit
     setTimeout(() => mapInstance && mapInstance.invalidateSize(), 60);
     return mapInstance;
   }
@@ -135,8 +135,8 @@ function buildStructureView(cfg){
     { key: '_link_name', label: 'Road / Link (decoded)' },
     { key: 'condition', label: 'Condition', render: (v) => conditionBadge(v) },
     { key: 'date_modified', label: 'Last Modified', fmt: structFmtDate },
-    { key: 'coordinate_s', label: 'Lat', align: 'num', fmt: (v) => v == null ? '—' : Number(v).toFixed(4) },
-    { key: 'coordinate_e', label: 'Lon', align: 'num', fmt: (v) => v == null ? '—' : Number(v).toFixed(4) }
+    { key: 'coordinate_s', label: 'Lat', align: 'num', fmt: (v) => v == null ? ' - ' : Number(v).toFixed(4) },
+    { key: 'coordinate_e', label: 'Lon', align: 'num', fmt: (v) => v == null ? ' - ' : Number(v).toFixed(4) }
   ];
 
   const searchKeys = [idKey, '_link_name'];
@@ -145,7 +145,7 @@ function buildStructureView(cfg){
 
   node.appendChild(sectionBlock(
     'Full ' + caption + ' register',
-    'Paginated, sortable, searchable — every ' + caption.replace(/^\w/, c => c.toUpperCase()) + ' record in the FY2025/26 register, link/road decoded from its raw link code.',
+    'Paginated, sortable, searchable  -  every ' + caption.replace(/^\w/, c => c.toUpperCase()) + ' record in the FY2025/26 register, link/road decoded from its raw link code.',
     dataTable({
       columns,
       rows,
@@ -167,7 +167,7 @@ RENDERERS.structures = async function(container){
   const culverts = detail.major_culverts || [];
 
   // Critical fix vs the old site: decode every raw link_id to its real road/link name
-  // before it is ever shown — the old site rendered raw codes like "A002_Link11" directly.
+  // before it is ever shown  -  the old site rendered raw codes like "A002_Link11" directly.
   bridges.forEach(b => { b._link_name = DataStore.decodeLinkId(b.link_id, linkMap); });
   culverts.forEach(c => { c._link_name = DataStore.decodeLinkId(c.link_id, linkMap); });
 
@@ -208,7 +208,7 @@ RENDERERS.structures = async function(container){
   container.appendChild(bridgesView.node);
   container.appendChild(culvertsView.node);
 
-  // Bridges tab is shown first — mount its map now; the culverts map mounts lazily on first view.
+  // Bridges tab is shown first  -  mount its map now; the culverts map mounts lazily on first view.
   requestAnimationFrame(() => bridgesView.mountMap());
 
   container.appendChild(el('p', { class: 'footnote' },

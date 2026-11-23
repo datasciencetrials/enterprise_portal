@@ -110,8 +110,8 @@
         '<div class="ibp-panel">' +
           '<div class="ibp-header">' +
             '<div>' +
-              '<h2>IBP Uganda — National Road &amp; Bridge Investment Projects</h2>' +
-              '<div class="ibp-subtitle">Department of Finance, Planning and Economic Development — Integrated Bank of Projects (IBP), Public Investment Plan documents by fiscal year</div>' +
+              '<h2>IBP Uganda  -  National Road &amp; Bridge Investment Projects</h2>' +
+              '<div class="ibp-subtitle">Department of Finance, Planning and Economic Development  -  Integrated Bank of Projects (IBP), Public Investment Plan documents by fiscal year</div>' +
             '</div>' +
             '<button class="ibp-close" id="ibp-close" aria-label="Close">✕</button>' +
           '</div>' +

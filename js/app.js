@@ -72,7 +72,7 @@ async function mount(id){
   }catch(err){
     console.error(err);
     container.innerHTML = '';
-    container.appendChild(el('div',{class:'callout warn'}, 'This section could not load its live data ('+esc(err.message)+'). Try refreshing — the underlying data files are fetched directly from this site.'));
+    container.appendChild(el('div',{class:'callout warn'}, 'This section could not load its live data ('+esc(err.message)+'). Try refreshing  -  the underlying data files are fetched directly from this site.'));
   }
 }
 

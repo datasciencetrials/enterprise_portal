@@ -33,8 +33,6 @@
 
   const basemapServices = {
     imagery: { service: 'World_Imagery', attribution: 'Imagery Hybrid: Esri and contributors' },
-    topographic: { service: 'World_Topo_Map', attribution: 'Topographic map: Esri and contributors' },
-    streets: { service: 'World_Imagery', attribution: 'Street map: Esri and contributors' },
   };
   const basemapLayers = new Map(Object.entries(basemapServices).map(([key, config]) => [key,
     L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/${config.service}/MapServer/tile/{z}/{y}/{x}`, {
@@ -437,16 +435,22 @@
     const classLengths = tally(visible, p => category(p, 'Road Cla 1'), length);
     chart('class-chart', classes, classes.map(k => Number((classLengths.get(k) || 0).toFixed(2))), ['#DC2626', '#EA580C', '#0071E3', '#7C3AED'], false, 'bar', 'km');
 
-    const trafficGroups = new Map(classes.map(k => [k, 0]));
+    const trafficWeighted = new Map(classes.map(k => [k, { sum: 0, km: 0 }]));
     for (const item of visible) {
       const p = item.properties || {};
       const key = category(p, 'Road Cla 1');
       const aadt = recordedNumber(p, 'Aadt 2026 Live');
-      if (trafficGroups.has(key) && aadt !== null) {
-        trafficGroups.set(key, trafficGroups.get(key) + (length(p) || 0));
+      const len = length(p) || 0;
+      if (trafficWeighted.has(key) && aadt !== null && len > 0) {
+        const entry = trafficWeighted.get(key);
+        entry.sum += aadt * len;
+        entry.km += len;
       }
     }
-    chart('traffic-chart', classes, classes.map(k => Number((trafficGroups.get(k) || 0).toFixed(2))), '#16A34A', false, 'bar', 'km');
+    chart('traffic-chart', classes, classes.map(k => {
+      const e = trafficWeighted.get(k);
+      return e && e.km > 0 ? Math.round(e.sum / e.km) : 0;
+    }), '#16A34A', false, 'bar', 'veh/day');
     if (activeMode === 'roads') window.TransportChartGallery?.render('roads', roadItems, visible, item => length(item.properties || {}) || 0);
     if (activeMode === 'roads') window.dispatchEvent(new CustomEvent('transportdataready', { detail: { mode: 'roads', items: visible } }));
   }

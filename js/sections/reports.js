@@ -1,6 +1,6 @@
-// Executive Reports — a lightweight brief tool. Every figure on every tab is
+// Executive Reports  -  a lightweight brief tool. Every figure on every tab is
 // computed live from real DataStore calls (networkStats/msSummary, plus a
-// live pass over network.geojson for traffic aggregates) — nothing here is a
+// live pass over network.geojson for traffic aggregates)  -  nothing here is a
 // hardcoded or invented number. Each tab has a working CSV export of its own
 // stat rows (Blob + object URL + a temporary <a download>, no server round trip).
 
@@ -12,7 +12,7 @@ RENDERERS.reports = async function(container){
 
   container.appendChild(pageHead(
     'Executive Reports',
-    'Real, live-computed statistics summarized by topic — export any tab as CSV for offline briefing.',
+    'Real, live-computed statistics summarized by topic  -  export any tab as CSV for offline briefing.',
     ms.meta.regions.length + ' regions · FY2025/26 cycle'
   ));
 
@@ -58,10 +58,10 @@ RENDERERS.reports = async function(container){
       source: net.source,
       stats: () => [
         { label:'Road Links (network.geojson)', value: fmtNum(net.linkCount), accent:'var(--neon-cyan)', raw: net.linkCount },
-        { label:'Class A — International Trunk', value: fmtNum(net.byClass.A||0,0), unit:'km', accent:'var(--neon-blue)', raw: Math.round(net.byClass.A||0) },
-        { label:'Class B — National Trunk', value: fmtNum(net.byClass.B||0,0), unit:'km', accent:'var(--neon-purple)', raw: Math.round(net.byClass.B||0) },
-        { label:'Class C — Primary / District', value: fmtNum(net.byClass.C||0,0), unit:'km', accent:'var(--neon-green)', raw: Math.round(net.byClass.C||0) },
-        { label:'Class M — Expressway', value: fmtNum(net.byClass.M||0,0), unit:'km', accent:'var(--neon-pink)', raw: Math.round(net.byClass.M||0) },
+        { label:'Class A  -  International Trunk', value: fmtNum(net.byClass.A||0,0), unit:'km', accent:'var(--neon-blue)', raw: Math.round(net.byClass.A||0) },
+        { label:'Class B  -  National Trunk', value: fmtNum(net.byClass.B||0,0), unit:'km', accent:'var(--neon-purple)', raw: Math.round(net.byClass.B||0) },
+        { label:'Class C  -  Primary / District', value: fmtNum(net.byClass.C||0,0), unit:'km', accent:'var(--neon-green)', raw: Math.round(net.byClass.C||0) },
+        { label:'Class M  -  Expressway', value: fmtNum(net.byClass.M||0,0), unit:'km', accent:'var(--neon-pink)', raw: Math.round(net.byClass.M||0) },
       ],
       chart: () => chartCard({ title:'Network Length by Functional Class', subtitle:'km', type:'bar',
         labels:['A','B','C','M'], datasets:[{ data:[net.byClass.A||0,net.byClass.B||0,net.byClass.C||0,net.byClass.M||0].map(v=>Math.round(v)), backgroundColor:'#0284C7', borderRadius:6 }] }),
@@ -86,7 +86,7 @@ RENDERERS.reports = async function(container){
         { label:'Average AADT (2026)', value: fmtNum(avgAadt,0), unit:'veh/day', accent:'var(--neon-cyan)', raw: Math.round(avgAadt) },
         { label:'Average Heavy-Truck AADT', value: fmtNum(avgHeavyTruckAadt,0), unit:'veh/day', accent:'var(--neon-orange)', raw: Math.round(avgHeavyTruckAadt) },
         { label:'Average Peak-Hour Velocity', value: fmtNum(avgPeakVelocity,1), unit:'km/h', accent:'var(--neon-blue)', raw: Number(avgPeakVelocity.toFixed(1)) },
-        { label:'Links — Critical Safety Risk', value: fmtNum(criticalRiskLinks), accent:'var(--neon-pink)', delta:(criticalRiskLinks/net.linkCount*100).toFixed(0)+'% of network', raw: criticalRiskLinks },
+        { label:'Links  -  Critical Safety Risk', value: fmtNum(criticalRiskLinks), accent:'var(--neon-pink)', delta:(criticalRiskLinks/net.linkCount*100).toFixed(0)+'% of network', raw: criticalRiskLinks },
         { label:'Average Crash Rate', value: fmtNum(avgCrashRate,1), unit:'per 100m-veh-km', accent:'var(--neon-magenta)', raw: Number(avgCrashRate.toFixed(1)) },
       ],
       chart: () => chartCard({ title:'Road Safety Risk Band, National', subtitle:'Links assigned a Critical or Low band', type:'doughnut',
@@ -94,7 +94,7 @@ RENDERERS.reports = async function(container){
     },
     {
       id: 'investment', label: 'Investment',
-      source: ms.meta.source + ' — FY26/27 to FY30/31 investment plan.',
+      source: ms.meta.source + '  -  FY26/27 to FY30/31 investment plan.',
       stats: () => [
         { label:'Total Asset Value', value: fmtNum(ms.kpi_summary.total_asset_value_mn_usd,0), unit:'USD mn', accent:'var(--neon-green)', raw: Math.round(ms.kpi_summary.total_asset_value_mn_usd) },
         { label:'Priority-Planned Links', value: fmtNum(ms.counts.priority_planned_links), accent:'var(--neon-cyan)', raw: ms.counts.priority_planned_links },
@@ -148,7 +148,7 @@ RENDERERS.reports = async function(container){
     body.innerHTML = '';
 
     const head = el('div',{style:'display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px;'},[
-      el('h3',{}, tab.label + ' — key figures'),
+      el('h3',{}, tab.label + '  -  key figures'),
       el('button',{
         class:'export-csv-btn',
         style:'background:var(--neon-blue);color:#fff;border:none;padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:700;cursor:pointer;',
@@ -165,7 +165,7 @@ RENDERERS.reports = async function(container){
   renderTabRow();
   container.appendChild(sectionBlock(
     'Executive Report Builder',
-    'Pick a topic — every stat tile is computed live from the real network inventory and maintenance-strategy datasets, never hardcoded.',
+    'Pick a topic  -  every stat tile is computed live from the real network inventory and maintenance-strategy datasets, never hardcoded.',
     el('div',{}, [tabRow, body])
   ));
   renderBody();
