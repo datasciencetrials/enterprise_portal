@@ -74,7 +74,7 @@ RENDERERS.analytics = async function(container){
   // Surface material breakdown, km (real field, not yet surfaced anywhere else on the platform)
   const surfaceEntries = Object.entries(net.bySurface).sort((a,b)=> b[1]-a[1]);
 
-  // Paved road density by subregion  -  a real, separate National Roads Directorate workbook (land area, not link-level),
+  // Paved road density by subregion  -  a real, separate Regional Operations workbook (land area, not link-level),
   // sorted densest-first. Subregions are a finer breakdown than the platform's 6 maintenance regions.
   const densityRows = (density.by_subregion||[]).slice().sort((a,b)=> b.road_density_now_km_per_1000km2 - a.road_density_now_km_per_1000km2);
 
@@ -95,7 +95,7 @@ RENDERERS.analytics = async function(container){
   const scatterPts = lip.filter(r=> r.age_years!==null && r.age_years!==undefined && r.priority_score!==null && r.priority_score!==undefined)
     .map(r=> ({x:r.age_years, y:r.priority_score}));
 
-  // National traffic composition by vehicle class, 2025  -  a real, separate National Roads Directorate traffic-model
+  // National traffic composition by vehicle class, 2025  -  a real, separate Regional Operations traffic-model
   // workbook (per-link vehicle counts), distinct from the AADT/heavy-truck fields already on
   // network.geojson. Sorted heaviest-first.
   const compEntries = Object.entries(trafficComp.national_composition_veh_per_day||{}).sort((a,b)=>b[1]-a[1]);
@@ -112,7 +112,7 @@ RENDERERS.analytics = async function(container){
     else priorityUnscored++;
   });
 
-  // Weighbridge district-coverage register  -  separate real National Roads Directorate dataset (see data.js note)
+  // Weighbridge district-coverage register  -  separate real Regional Operations dataset (see data.js note)
   const wbRows = (wbCoverage.by_weighbridge||[]).slice();
 
   // Sealed vs unsealed by class (ms workbook)
@@ -235,7 +235,7 @@ RENDERERS.analytics = async function(container){
 
   /* ============================================================
      Priority Ranking Explorer  -  real, paginated, full 338-row set.
-     priority_score is a genuine per-link output of the National Roads Directorate
+     priority_score is a genuine per-link output of the Regional Operations
      prioritisation model (verified non-tied: sample scores 77.7,
      100.9, 106.1, 104.5, 85.6, 82.4, 86.3, 81.3, 81.7 across the
      first top 10 corridors)  -  not a fabricated "live calculator".
@@ -335,6 +335,6 @@ RENDERERS.analytics = async function(container){
   container.appendChild(sectionBlock('What the deeper data shows', 'Seventeen additional findings, computed live from this page’s data  -  distinct from the Overview summary.', findGrid));
 
   container.appendChild(el('p',{class:'footnote'},
-    net.source + ' Maintenance-strategy figures are drawn from the National Roads Directorate FY2025/26 maintenance-strategy workbooks. Where the two source systems describe similar-sounding totals differently, each figure keeps its own source rather than being merged into one number  -  see the Overview footnote for detail.'
+    net.source + ' Maintenance-strategy figures are drawn from the Regional Operations FY2025/26 maintenance-strategy workbooks. Where the two source systems describe similar-sounding totals differently, each figure keeps its own source rather than being merged into one number  -  see the Overview footnote for detail.'
   ));
 };

@@ -1,4 +1,4 @@
-// Bridges & Culverts  -  FY2025/26 National Roads Directorate maintenance-strategy structures register.
+// Bridges & Culverts  -  FY2025/26 Regional Operations maintenance-strategy structures register.
 // Standing rule: bridges and major culverts are ALWAYS reported as separate figures/tables  - 
 // this file never merges their rows into one shared table, even though both live on one page.
 
@@ -64,7 +64,7 @@ function buildStructureView(cfg){
     ...condKeys.map(k => ({ label: k, value: fmtNum(condCounts[k]), accent: structConditionColor(k) }))
   ]));
   node.appendChild(el('p', { class: 'footnote' },
-    fmtNum(rows.length) + ' ' + caption + ' from the FY2025/26 National Roads Directorate maintenance-strategy structures register. ' +
+    fmtNum(rows.length) + ' ' + caption + ' from the FY2025/26 Regional Operations maintenance-strategy structures register. ' +
     (missingCoords > 0 ? fmtNum(missingCoords) + ' record' + (missingCoords === 1 ? '' : 's') + ' without recorded coordinates' + (badCoords > 0 ? ', and ' : ' are') : '') +
     (badCoords > 0 ? fmtNum(badCoords) + ' record' + (badCoords === 1 ? '' : 's') + ' with coordinates recorded well outside Uganda (likely transposed or corrupted in the source register) are' : '') +
     (missingCoords > 0 || badCoords > 0 ? ' omitted from the map below (shown in the table with their recorded values).' : ' All records carry mapped coordinates.')
@@ -173,7 +173,7 @@ RENDERERS.structures = async function(container){
 
   container.appendChild(pageHead(
     'Bridges & Culverts',
-    'Real bridge and major-culvert condition registers from the FY2025/26 National Roads Directorate maintenance-strategy workbooks. Bridges and major culverts are structurally different assets and are always reported as separate figures and tables, never merged.',
+    'Real bridge and major-culvert condition registers from the FY2025/26 Regional Operations maintenance-strategy workbooks. Bridges and major culverts are structurally different assets and are always reported as separate figures and tables, never merged.',
     fmtNum(bridges.length) + ' bridges · ' + fmtNum(culverts.length) + ' major culverts'
   ));
 
@@ -212,6 +212,6 @@ RENDERERS.structures = async function(container){
   requestAnimationFrame(() => bridgesView.mountMap());
 
   container.appendChild(el('p', { class: 'footnote' },
-    'Source: National Roads Directorate maintenance-strategy structures register, FY2025/26 cycle. Link/road names are decoded from each record’s raw link code against the same road-link register used across this platform; a small number of records reference link codes outside the current network register and are shown with their original code where no decoded name exists.'
+    'Source: Regional Operations maintenance-strategy structures register, FY2025/26 cycle. Link/road names are decoded from each record’s raw link code against the same road-link register used across this platform; a small number of records reference link codes outside the current network register and are shown with their original code where no decoded name exists.'
   ));
 };

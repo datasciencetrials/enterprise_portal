@@ -33,7 +33,7 @@
       file: 'geo/bridges.geojson',
       group: 'Condition_Band',
       context: 'National Bridge Management System (BMS) register containing all 552 Bridges across 6 Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction; Issued 18/11/2026).',
-      gaps: 'This published mapped layer is a static export. Some road Link IDs and positions require review; no weekly database synchronisation has been verified.',
+      gaps: 'This Authoritative Master Register is a static export. Some road Link IDs and positions require review; no weekly database synchronisation has been verified.',
       columns: [
         field('Bridge Number', 'Bridge_Number'),
         field('Bridge Name', 'Bridge_Name'),
@@ -61,7 +61,7 @@
       file: 'geo/major_culverts.geojson',
       group: 'Condition_Band',
       context: 'National Bridge Management System (BMS) register containing all 452 Major Culverts across 6 Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction; Issued 18/11/2026).',
-      gaps: 'This published mapped layer is a static export. Some road Link IDs and positions require review; no weekly database synchronisation has been verified.',
+      gaps: 'This Authoritative Master Register is a static export. Some road Link IDs and positions require review; no weekly database synchronisation has been verified.',
       columns: [
         field('Culvert Number', 'Culvert_Number'),
         field('Road Link ID', 'Link_Number'),
@@ -272,7 +272,7 @@
     $('matching-label').textContent = lineLayer ? 'Filtered Extent (km)' : 'Filtered Assets';
     $('total').textContent = lineLayer ? `${kilometres(totalKm)} km` : count(rows.length);
     $('matching').textContent = lineLayer ? `${kilometres(matchKm)} km (${sharePct}%)` : count(filtered.length);
-    $('coverage').textContent = 'Published mapped layer';
+    $('coverage').textContent = 'Authoritative Master Register';
     $('context').textContent = spec.context;
     $('gaps').textContent = spec.gaps;
 

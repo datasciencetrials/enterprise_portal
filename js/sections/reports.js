@@ -68,7 +68,7 @@ RENDERERS.reports = async function(container){
     },
     {
       id: 'structures', label: 'Bridges & Structures',
-      source: 'National Roads Directorate maintenance-strategy structures register, FY2025/26 cycle. Bridges and major culverts are always reported as separate figures.',
+      source: 'Regional Operations maintenance-strategy structures register, FY2025/26 cycle. Bridges and major culverts are always reported as separate figures.',
       stats: () => [
         { label:'Total Bridges', value: fmtNum(ms.kpi_summary.total_bridges), accent:'var(--neon-magenta)', raw: ms.kpi_summary.total_bridges },
         { label:'Total Major Culverts', value: fmtNum(ms.kpi_summary.total_major_culverts), accent:'var(--neon-purple)', raw: ms.kpi_summary.total_major_culverts },

@@ -9,14 +9,14 @@ RENDERERS.standards = async function(container){
   container.innerHTML = '';
   container.appendChild(pageHead(
     'Standards & Data Model',
-    'The real engineering-standards thresholds National Roads Directorate maintenance decisions are measured against, and the platform’s underlying data pipeline.',
+    'The real engineering-standards thresholds Regional Operations maintenance decisions are measured against, and the platform’s underlying data pipeline.',
     '4 verified standards'
   ));
 
   // ---- reference content (real, cited manuals  -  see BUILD_BRIEF.md) ----
   const STANDARDS = [
     {
-      manual: 'National Roads Directorate Pavement Design Manual Vol. 3 (HDM-4 Standard)',
+      manual: 'Regional Operations Pavement Design Manual Vol. 3 (HDM-4 Standard)',
       metric: 'Visual Condition Index (VCI)  -  0 to 100 scale',
       bands: [
         { tier:'good',     label:'VCI > 75  -  Good',      desc:'Preventive crack sealing' },
@@ -40,7 +40,7 @@ RENDERERS.standards = async function(container){
       impactBnUshs: 78.5,
     },
     {
-      manual: 'TRL Overseas Road Note 31 & National Roads Directorate Geometric Design Manual',
+      manual: 'TRL Overseas Road Note 31 & Regional Operations Geometric Design Manual',
       metric: 'International Roughness Index (IRI, m/km)',
       bands: [
         { tier:'good',     label:'IRI < 2.5',   desc:'High-speed trunk flow' },
@@ -171,7 +171,7 @@ RENDERERS.standards = async function(container){
     ));
     host.appendChild(sectionBlock(
       'Engineering Reference Standards',
-      'Threshold bands and recommended interventions cited directly from the manuals governing National Roads Directorate maintenance decisions.',
+      'Threshold bands and recommended interventions cited directly from the manuals governing Regional Operations maintenance decisions.',
       buildStandardsGrid()
     ));
   }

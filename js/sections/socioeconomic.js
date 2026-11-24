@@ -383,7 +383,7 @@ RENDERERS.socioeconomic = async function(container){
       { label:'Ferry Crossings Operational', value: fmtNum(ferryOperational), accent:'var(--neon-magenta)', delta:(ferryOperational/ferryRows.length*100).toFixed(0)+'% of total' },
     ]));
     wrap.appendChild(el('p', {class:'footnote'},
-      'Sources: national place-name/town gazetteer ('+fmtNum(townRows.length)+' gazetted towns), national airfields register ('+fmtNum(airportRows.length)+' facilities), and the National Roads Directorate ferry-crossings register ('+fmtNum(ferryRows.length)+' crossings). Coordinates are taken from each layer’s mapped geometry. Town classification codes and ferry-crossing status are shown exactly as recorded in the respective source registers. Ferry crossings are last-mile links where the road network is discontinuous across a water body.'
+      'Sources: national place-name/town gazetteer ('+fmtNum(townRows.length)+' gazetted towns), national airfields register ('+fmtNum(airportRows.length)+' facilities), and the Regional Operations ferry-crossings register ('+fmtNum(ferryRows.length)+' crossings). Coordinates are taken from each layer’s mapped geometry. Town classification codes and ferry-crossing status are shown exactly as recorded in the respective source registers. Ferry crossings are last-mile links where the road network is discontinuous across a water body.'
     ));
 
     wrap.appendChild(sectionBlock('Towns and airport classification', 'Full distribution recorded in each source register  -  no subset.', chartGrid([

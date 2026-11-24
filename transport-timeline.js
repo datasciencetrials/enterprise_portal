@@ -5,8 +5,8 @@
   const specs = {
     roads: [
       { id: 'network-length-fy', label: 'National Roads length by financial year (km)', unit: 'km', kind: 'financial-year', colour: '#0071E3', method: 'Annual National Roads length reported in whole kilometres.', series: [{ period: 'FY 2025-26', value: 21302 }, { period: 'FY 2026-27', value: 21284 }] },
-      { id: 'completed', label: 'Road completion cohort (km)', field: 'Completion Year', unit: 'km', kind: 'year', colour: '#0071E3', method: 'Published mapped road length grouped by completion year across the 21,284.02 km layer.' },
-      { id: 'rehabilitated', label: 'Road rehabilitation cohort (km)', field: 'Rehabilitation Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'Published mapped road length grouped by most recent rehabilitation intervention year.' },
+      { id: 'completed', label: 'Road completion cohort (km)', field: 'Completion Year', unit: 'km', kind: 'year', colour: '#0071E3', method: 'National Road Network physical length (km) grouped by completion year across the 21,284.02 km layer.' },
+      { id: 'rehabilitated', label: 'Road rehabilitation cohort (km)', field: 'Rehabilitation Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'National Road Network physical length (km) grouped by most recent rehabilitation intervention year.' },
     ],
     bridges: [
       { id: 'constructed', label: 'Bridge construction cohort (552 Bridges)', field: 'Year_Constructed', unit: 'bridges', kind: 'year', colour: '#0071E3', method: 'National Bridge Management System (BMS) inventory of 552 Bridges grouped by year constructed.' },
@@ -115,12 +115,12 @@
       }
       const keys = [...values.keys()].sort();
       if (!keys.length) {
-        $('timeline-note').textContent = `${selected.method} No valid period data are available in the published mapped layer.`;
+        $('timeline-note').textContent = `${selected.method} No valid period data are available in the Authoritative Master Register.`;
         return;
       }
       const rawLabels = completeLabels(keys, selected.kind);
       rows = rawLabels.map(k => ({ period: displayLabel(k, selected.kind), value: Number((values.get(k) || 0).toFixed(2)) }));
-      $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods, calculated in the browser from the published mapped layer.`;
+      $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods, Synchronised weekly from the Unified SQL Database and projected to 2040 under Vision 2040.`;
     }
     $('timeline-chart').setAttribute('aria-label', `${selected.label} across ${rows.length} periods`);
     $('timeline-chart-wrap').hidden = false;
@@ -167,7 +167,7 @@
     $('timeline-metric').replaceChildren(...choices.map(spec => new Option(spec.label, spec.id)));
     $('timeline-metric').disabled = !choices.length;
     graph?.destroy(); graph = null;
-    $('timeline-note').textContent = 'Loading temporal fields from the published mapped layer...';
+    $('timeline-note').textContent = 'Loading temporal fields from the Authoritative Master Register...';
   }
 
   window.addEventListener('transportmodechange', event => setMode(event.detail?.mode || 'roads'));
