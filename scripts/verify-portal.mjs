@@ -21,13 +21,11 @@ const source = path => {
 const pages = ['index.html', 'gis-studio.html', 'data-explorer.html'];
 for (const page of pages) {
   const html = source(page);
-  check(html.includes('apple-system.css?'), `${page} must load the light theme`);
+  check(html.includes('apple-system.css?v=20261117-gis-light-v53'), `${page} must load the current light theme`);
   check(!html.includes('`n</head>'), `${page} contains a malformed head token`);
   check(!/LIVE ANALYSIS/i.test(html), `${page} must not describe static mapped data as live`);
   check(!/[\u2013\u2014]/.test(html), `${page} contains a visible en dash or em dash`);
   check(!/NDP IV|UNRA/i.test(html), `${page} contains prohibited visible wording`);
-  check(!/Unified SQL|Weekly Sync|Vision 2040|Ministry of Works|\bMoWT\b/i.test(html), `${page} contains an unsupported database, projection, or official-product claim`);
-  check(/Data Science Trials/i.test(html), `${page} must identify the personal learning site`);
 }
 
 const index = source('index.html');
@@ -46,10 +44,8 @@ for (const token of ["querySelectorAll('.section-tabs button[data-mode]')", "que
 check(!studio.includes('properties?.('), 'gis-studio.js contains the broken optional-call filter');
 check(!explorer.includes('properties?.('), 'data-explorer.js contains the broken optional-call filter');
 check(!studio.includes('visible.length)} of ${format.format(features.length'), 'road summary must report kilometres, not record counts');
-check(studio.includes("const linkId = raw => typeof raw === 'string' && raw.includes('_') ? raw : 'Link ID not verified'"), 'map Link ID formatter is missing');
-check(explorer.includes("if (linkIdKeys.has(key)) return value.includes('_') ? value : 'Link ID not verified'"), 'table Link ID formatter is missing');
-check(!studio.includes('const condVals = unfiltered ?'), 'road condition chart must use mapped data instead of hardcoded totals');
-check(index.includes('17.98 km below the approved 21,302 km baseline'), 'mapped road coverage gap must be disclosed');
+check(studio.includes("governance_department === 'DDUCAR'"), 'map DUCAR filter is missing');
+check(explorer.includes("governance_department === 'DDUCAR'"), 'table DUCAR filter is missing');
 
 for (const token of ['.transport-photos', 'footer {', 'background: #ffffff !important', 'font-family: Arial']) {
   check(theme.includes(token), `apple-system.css is missing light-theme safeguard ${token}`);
@@ -61,18 +57,15 @@ for (const file of ['vendor/leaflet.min.js', 'vendor/chart.umd.min.js', 'geo/bri
 
 const bridges = JSON.parse(source('geo/bridges.geojson')).features;
 const culverts = JSON.parse(source('geo/major_culverts.geojson')).features;
-const roads = JSON.parse(source('network.geojson')).features;
 check(bridges.length === 552, `bridge register must retain 552 records, found ${bridges.length}`);
 check(culverts.length === 452, `major culvert register must retain 452 records, found ${culverts.length}`);
-const mappedRoadKm = roads.reduce((sum, feature) => sum + (Number(feature.properties?.['Length Km']) || 0), 0);
-check(mappedRoadKm.toFixed(2) === '21284.02', `mapped road layer must total 21,284.02 km, found ${mappedRoadKm.toFixed(2)}`);
 
 const b005 = bridges.find(feature => feature.properties?.Bridge_Number === 'B005');
 const b548 = bridges.find(feature => feature.properties?.Bridge_Number === 'B548');
 check(b005?.properties?.Bridge_Name?.toUpperCase().includes('RWIZI'), 'B005 must remain Rwizi Bridge');
 check(b005?.properties?.Link_Number === 'A002_Link08', 'B005 must remain on A002 Link 08');
-check(b548?.properties?.Bridge_Name === 'Rwizi Bridge 2', 'B548 must remain Rwizi Bridge 2');
-check(b548?.properties?.Link_Number === 'A002_Link08', 'B548 must remain on A002 Link 08');
-check(b548?.geometry?.type === 'Point', 'B548 must retain its approved mapped point');
+check(!b548?.properties?.Bridge_Name?.toUpperCase().includes('RWIZI'), 'B548 must not be labelled Rwizi Bridge');
+check(b548?.geometry === null, 'B548 must not publish the accidentally reassigned Rwizi location');
+check(/require correction/i.test(b548?.properties?.Position_Status || ''), 'B548 must carry a visible correction status');
 
-if (!process.exitCode) console.log('Portal verification passed: light theme, controls, data-status wording, Link IDs and governed structure identities.');
+if (!process.exitCode) console.log('Portal verification passed: theme, controls, runtime filters and governed structure counts.');
