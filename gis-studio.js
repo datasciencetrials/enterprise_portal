@@ -524,7 +524,7 @@
   function updateIntro(key) {
     const heading = $('page-title');
     heading.textContent = tabHeadings[key];
-    $('intro-kicker').textContent = `MINISTRY OF WORKS AND TRANSPORT / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
+    $('intro-kicker').textContent = `UGANDA TRANSPORT GIS ENTERPRISE / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
     $('intro-note').textContent = key === 'roads'
       ? 'National Transport and Road Asset Management GIS Portal covering the 21,284.02 km National Road Network (6,406.69 km Paved, 14,877.33 km Unpaved), 552 Bridges, 452 Major Culverts, and multi-modal transport infrastructure across 6 Regions and 23 Stations.'
       : transportModes[key].description;

@@ -38,7 +38,7 @@
     },
     registers: {
       title: 'National Asset Register Schedules',
-      summary: 'Decoded MoWT Data Dictionary (FY 2026/27) schedules with separate registers for Bridges (552) and Major Culverts (452), formatted in UK dates (dd/mm/yyyy) and metric units.',
+      summary: 'Decoded National Road Data Dictionary (FY 2026/27) schedules with separate registers for Bridges (552) and Major Culverts (452), formatted in UK dates (dd/mm/yyyy) and metric units.',
       mode: null
     },
     vision2040: {

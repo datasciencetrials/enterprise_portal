@@ -15,7 +15,7 @@ RENDERERS.investment = async function(container){
   // "Total Expenditure (UGX bn):") instead of real values. Excluded from every table  - 
   // this is a source-extraction artifact, not a real project attribute.
   function isCleanRow(r){ return r.agency !== 'Responsible Officer:'; }
-  function displayAgency(row){ return { ...row, agency: String(row.agency || '').replace(/\bDepartment of National Roads\b/g, 'Former roads agency') }; }
+  function displayAgency(row){ return { ...row, agency: String(row.agency || '').replace(/\bNational Road Network Administration\b/g, 'Former roads agency') }; }
   function cleanRoads(fy){ return (byYear[fy]?.roads || []).filter(isCleanRow).map(displayAgency); }
   function cleanBridges(fy){ return (byYear[fy]?.bridges || []).filter(isCleanRow).map(displayAgency); }
 
