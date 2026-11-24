@@ -525,7 +525,7 @@
     heading.textContent = tabHeadings[key];
     $('intro-kicker').textContent = `DATA SCIENCE TRIALS / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
     $('intro-note').textContent = key === 'roads'
-      ? 'The National Roads Network register totals 21,284.02 km (6,406.69 km Paved [30.10%], 14,877.33 km Unpaved [69.90%]) with 552 Bridges and 452 Major Culverts, synchronised weekly from the Unified SQL Database and projected to 2040 under Vision 2040.'
+      ? 'The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27. The current mapped layer totals 21,284.02 km. Approved snapshots are checked weekly against a private governed source; database and schema access are not available to the browser.'
       : transportModes[key].description;
     const networkSeries = $('network-time-series');
     if (networkSeries) networkSeries.hidden = key !== 'roads';
@@ -648,7 +648,7 @@
       if (pointLayer) { map.removeLayer(pointLayer); pointLayer = null; }
       $('metric-kind').textContent = 'ROADS';
       $('metric-label').textContent = 'Mapped National Roads (km)';
-      $('metric-note').textContent = 'Authoritative Master Register.';
+      $('metric-note').textContent = 'Approved published snapshot.';
       if (!roadsLoaded && !roadLoadPromise) loadRoadFeatures().catch(() => {});
       update();
       showUgandaExtent();
@@ -690,7 +690,7 @@
         ? formatKm.format(items.reduce((sum, item) => sum + (Number(item.properties?.['Length Km']) || mappedLineKm(item.geometry)), 0))
         : formatCount.format(items.length);
       $('metric-label').textContent = spec.countLabel;
-      $('metric-note').textContent = 'Authoritative Master Register.';
+      $('metric-note').textContent = 'Approved published snapshot.';
     } catch (error) {
       if (activeMode !== key) return;
       $('map-status').textContent = 'Layer unavailable';

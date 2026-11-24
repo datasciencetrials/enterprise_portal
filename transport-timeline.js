@@ -115,12 +115,12 @@
       }
       const keys = [...values.keys()].sort();
       if (!keys.length) {
-        $('timeline-note').textContent = `${selected.method} No valid period data are available in the Authoritative Master Register.`;
+        $('timeline-note').textContent = `${selected.method} No valid period data are available in the approved published snapshot.`;
         return;
       }
       const rawLabels = completeLabels(keys, selected.kind);
       rows = rawLabels.map(k => ({ period: displayLabel(k, selected.kind), value: Number((values.get(k) || 0).toFixed(2)) }));
-      $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods, Synchronised weekly from the Unified SQL Database and projected to 2040 under Vision 2040.`;
+      $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods, calculated in the browser from the approved published snapshot.`;
     }
     $('timeline-chart').setAttribute('aria-label', `${selected.label} across ${rows.length} periods`);
     $('timeline-chart-wrap').hidden = false;
@@ -167,7 +167,7 @@
     $('timeline-metric').replaceChildren(...choices.map(spec => new Option(spec.label, spec.id)));
     $('timeline-metric').disabled = !choices.length;
     graph?.destroy(); graph = null;
-    $('timeline-note').textContent = 'Loading temporal fields from the Authoritative Master Register...';
+    $('timeline-note').textContent = 'Loading temporal fields from the approved published snapshot...';
   }
 
   window.addEventListener('transportmodechange', event => setMode(event.detail?.mode || 'roads'));

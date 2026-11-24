@@ -1,6 +1,6 @@
 {
   "meta": {
-    "source": "Regional Operations Road Density workbook (Unified SQL Database (National Road Network Administration)), subregion-level bituminous/unsealed network vs land area",
+    "source": "Approved published snapshot of subregion-level paved and unpaved road length and land area",
     "note": "Subregions are a finer geographic breakdown than this platform's 6 maintenance regions; land area figures include major water bodies where recorded in source."
   },
   "by_subregion": [

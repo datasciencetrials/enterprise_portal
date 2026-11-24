@@ -1,1 +1,1 @@
-/* View-only portal: all spatial layers are synchronised weekly from the Unified SQL Database. */
+/* View-only portal: browser code loads only approved published snapshots. */

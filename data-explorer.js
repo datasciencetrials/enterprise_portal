@@ -9,7 +9,7 @@
       files: ['network.geojson'],
       group: 'Surface Type',
       context: 'The current mapped National Roads layer totals 21,284.02 km: 6,406.69 km Paved and 14,877.33 km Unpaved. The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27.',
-      gaps: 'This is a static mapped export, not a verified live database query. The financial-year series must remain distinct from exact mapped-layer calculations, and modelled traffic fields must not be presented as live observations.',
+      gaps: 'This is an approved published snapshot from a private governed source. The financial-year series remains distinct from exact mapped-layer calculations, and modelled traffic fields are not presented as live observations. Database and schema access are not available to the browser.',
       columns: [
         field('Link ID', 'Link Id 1'),
         field('Road Number', 'Road No 1'),
@@ -33,7 +33,7 @@
       file: 'geo/bridges.geojson',
       group: 'Condition_Band',
       context: 'National Bridge Management System (BMS) register containing all 552 Bridges across 6 Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction; Issued 18/11/2026).',
-      gaps: 'This Authoritative Master Register is a static export. Some road Link IDs and positions require review; no weekly database synchronisation has been verified.',
+      gaps: 'This approved published snapshot is checked weekly against a private governed source. Some road Link IDs and positions require review. Database and schema access are not available to the browser.',
       columns: [
         field('Bridge Number', 'Bridge_Number'),
         field('Bridge Name', 'Bridge_Name'),
@@ -61,7 +61,7 @@
       file: 'geo/major_culverts.geojson',
       group: 'Condition_Band',
       context: 'National Bridge Management System (BMS) register containing all 452 Major Culverts across 6 Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction; Issued 18/11/2026).',
-      gaps: 'This Authoritative Master Register is a static export. Some road Link IDs and positions require review; no weekly database synchronisation has been verified.',
+      gaps: 'This approved published snapshot is checked weekly against a private governed source. Some road Link IDs and positions require review. Database and schema access are not available to the browser.',
       columns: [
         field('Culvert Number', 'Culvert_Number'),
         field('Road Link ID', 'Link_Number'),
@@ -86,7 +86,7 @@
       file: 'geo/traffic_count_stations.geojson',
       group: 'REGION',
       context: 'National Traffic Census station network of 298 monitoring stations across the 6 Maintenance Regions.',
-      gaps: 'This station inventory does not establish current traffic volumes, speed, a continuous feed or a weekly database refresh.',
+      gaps: 'This approved station snapshot does not establish current traffic volumes, speed or a continuous feed. Database and schema access are not available to the browser.',
       columns: [
         field('Station Number', 'TCS_NO_'),
         field('Station Code', 'TCS_NAME'),
@@ -104,7 +104,7 @@
       file: 'geo/ferry_crossings.geojson',
       group: 'Water_body',
       context: 'National Inland Water Transport ferry crossings (20) across Lake Victoria, Lake Kyoga, Lake Albert, Lake Bisina, River Nile, and River Semliki.',
-      gaps: 'This mapped crossing inventory does not establish current schedules, operations or a weekly database refresh.',
+      gaps: 'This approved mapped crossing snapshot does not establish current schedules or operations. Database and schema access are not available to the browser.',
       columns: [
         field('Crossing', 'Ferry_cros'),
         field('Water Body', 'Water_body'),
@@ -118,7 +118,7 @@
       file: 'geo/airports.geojson',
       group: 'Category',
       context: 'International airports and upcountry aerodromes (13) across Uganda supporting passenger and air cargo corridors.',
-      gaps: 'This mapped aviation layer does not establish current operations or a weekly database refresh.',
+      gaps: 'This approved mapped aviation snapshot does not establish current operations. Database and schema access are not available to the browser.',
       columns: [
         field('Aerodrome', 'F9'),
         field('Category', 'Category'),
@@ -147,7 +147,7 @@
       file: 'geo/weighbridges.geojson',
       group: 'Status',
       context: 'Axle load control and weighbridge facilities (21) along trunk freight corridors.',
-      gaps: 'Mapped facility status is from the published layer; live operational status and a weekly database refresh are not verified.',
+      gaps: 'Mapped facility status is from the approved published snapshot; live operational status is not inferred. Database and schema access are not available to the browser.',
       columns: [
         field('Facility', 'Weighbridge Name'),
         field('Operational Status', 'Status'),
@@ -161,7 +161,7 @@
       file: 'geo/mgr.geojson',
       group: 'Status',
       context: 'Metre-Gauge Railway (MGR) network of 1,266.00 km (269.00 km Operational and 997.00 km Scheduled Rehabilitation).',
-      gaps: 'Mapped geometry in kilometres is not verified operational route length or evidence of a weekly database refresh.',
+      gaps: 'Mapped geometry in kilometres is not verified operational route length. Database and schema access are not available to the browser.',
       columns: [
         field('Corridor Name', 'Name'),
         field('Operational Status', 'Status'),
@@ -174,7 +174,7 @@
       file: 'geo/sgr_alignment.geojson',
       group: 'Status',
       context: 'Planned Standard-Gauge Railway (SGR) Eastern Route corridor (272.00 km from Malaba to Kampala).',
-      gaps: 'Mapped geometry in kilometres is not verified operational route length or evidence of a weekly database refresh.',
+      gaps: 'Mapped geometry in kilometres is not verified operational route length. Database and schema access are not available to the browser.',
       columns: [
         field('Corridor Name', 'Name'),
         field('Operational Status', 'Status'),
@@ -272,7 +272,7 @@
     $('matching-label').textContent = lineLayer ? 'Filtered Extent (km)' : 'Filtered Assets';
     $('total').textContent = lineLayer ? `${kilometres(totalKm)} km` : count(rows.length);
     $('matching').textContent = lineLayer ? `${kilometres(matchKm)} km (${sharePct}%)` : count(filtered.length);
-    $('coverage').textContent = 'Authoritative Master Register';
+    $('coverage').textContent = 'Approved published snapshot';
     $('context').textContent = spec.context;
     $('gaps').textContent = spec.gaps;
 

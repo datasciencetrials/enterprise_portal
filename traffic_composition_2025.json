@@ -1,6 +1,6 @@
 {
   "meta": {
-    "source": "Regional Operations National Traffic Model 2025 estimate workbook (Unified SQL Database (National Road Network Administration)), per-link vehicle-class composition",
+    "source": "Approved published snapshot of modelled 2025 vehicle-class composition",
     "note": "Modelled network corridors carry a modelled 2025 traffic-composition figure; the rest are unassigned in the source workbook.",
     "linked_count": 886,
     "total_links": 1022,

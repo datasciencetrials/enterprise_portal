@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#F5F5F7">
-  <meta name="description" content="National Transport Asset Registers and Unified SQL Database Schedules.">
-  <title>National Transport Asset Registers | GIS Enterprise</title>
+  <meta name="description" content="Data Science Trials mapped Uganda transport asset registers.">
+  <title>Transport Asset Registers | Data Science Trials</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="data-explorer.css?v=20261123-v113">
   <link rel="stylesheet" href="data-explorer-layout.css?v=20261123-v113">
@@ -38,15 +38,15 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
     <nav aria-label="Primary">
       <a href="./">Main portal</a>
       <a href="./data-explorer.html" aria-current="page">Asset Registers</a>
-      <a href="#platform-mindmap">System Mind Map</a>
-      <a href="#platform-documentation">Platform Documentation</a>
+      <a href="#platform-mindmap">Data Coverage Map</a>
+      <a href="#platform-documentation">Portal Notes</a>
     </nav>
   </header>
   <main>
     <section class="hero">
-      <p class="eyebrow">NATIONAL TRANSPORT INFRASTRUCTURE GIS ENTERPRISE</p>
-      <h1>National Transport Asset Registers</h1>
-      <p>Comprehensive view-only registers covering the 21,284.02 km National Road Network (6,406.69 km Paved [30.10%], 14,877.33 km Unpaved [69.90%]; Good 12,610.00 km [59.20%], Fair 7,844.00 km [36.82%], Poor 848.00 km [3.98%]), 552 Bridges, 452 Major Culverts, and multi-modal infrastructure across 6 Regions and 23 Stations. Synchronised weekly from the Unified SQL Database with zero user inputs required and projected to 2040 as per Vision 2040.</p>
+      <p class="eyebrow">DATA SCIENCE TRIALS / UGANDA TRANSPORT GIS</p>
+      <h1>Mapped Transport Asset Registers</h1>
+      <p>Approved published snapshots support review of the current 21,284.02 km road layer, 552 Bridges and 452 Major Culverts. National Roads length is reported as a financial-year time series, not as a baseline shortfall. This is a personal learning site, not an official institutional product.</p>
       <dl class="network-time-series" aria-label="National Roads length time series in kilometres"><div><dt>FY 2025-26</dt><dd>21,302 km</dd></div><div><dt>FY 2026-27</dt><dd>21,284 km</dd></div></dl>
     </section>
     <section class="workspace" aria-label="Asset dataset browser">
@@ -60,11 +60,11 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
       <div class="summary">
         <div><span id="total-label">Total Network (km)</span><strong id="total">21,284.02 km</strong></div>
         <div><span id="matching-label">Filtered Extent (km)</span><strong id="matching">21,284.02 km (100.0%)</strong></div>
-        <div><span>Data status</span><strong id="coverage">Authoritative Master Register</strong></div>
+        <div><span>Data status</span><strong id="coverage">Approved published snapshot</strong></div>
       </div>
       <p id="context" class="context" role="status">Loading layer.</p>
       <section class="breakdown" aria-labelledby="breakdown-heading"><div class="section-heading"><h2 id="breakdown-heading">Category distribution</h2><p id="breakdown-field"></p></div><div id="breakdown-list" class="breakdown-list"></div></section>
-      <section id="schedule-table" class="records" aria-labelledby="records-heading"><div class="section-heading"><h2 id="records-heading">Mapped Asset Register Schedule</h2><p id="row-range"></p></div><div class="table-scroll" role="region" aria-label="Mapped asset schedule, scroll to browse" tabindex="0"><table><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div><p class="note">Rows render from the Authoritative Master Register. Not supplied and Link ID not verified are explicit data-quality states. No live database refresh or projected traffic series is claimed.</p></section>
+      <section id="schedule-table" class="records" aria-labelledby="records-heading"><div class="section-heading"><h2 id="records-heading">Mapped Asset Register Schedule</h2><p id="row-range"></p></div><div class="table-scroll" role="region" aria-label="Mapped asset schedule, scroll to browse" tabindex="0"><table><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div><p class="note">Rows render from the approved published snapshot. Not supplied and Link ID not verified are explicit data-quality states. Dated traffic fields are not presented as current observations.</p></section>
       <section class="schema" aria-labelledby="schema-heading"><div class="section-heading"><h2 id="schema-heading">Technical and Data Status Notes</h2></div><p id="gaps" class="note"></p></section>
       
       <section id="platform-mindmap" class="analysis-panel mindmap-section" aria-labelledby="mindmap-heading">
@@ -75,8 +75,8 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
           </div>
           <p class="sync-pill">Static mapped exports · Browser calculations · View only</p>
         </div>
-        <p class="data-note" style="margin-top:8px;margin-bottom:20px;">The portal loads published static mapped layers in the browser. The connected database currently has no governed public tables, so live database status and automated refresh are not claimed.</p>
-        <div class="mindmap-container" role="img" aria-label="System Mind Map showing National Road Network Layers for roads, bridges, major culverts and multi-modal transport">
+        <p class="data-note" style="margin-top:8px;margin-bottom:20px;">The portal loads approved published snapshots in the browser. The private governed source and its schema are not published or connected to browser code.</p>
+        <div class="mindmap-container" role="img" aria-label="Data coverage map showing published mapped layers for roads, bridges, major culverts and multi-modal transport">
           <svg viewBox="0 0 1240 468" class="mindmap-svg">
             <defs>
               <marker id="mm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -103,7 +103,7 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
               <text x="125" y="56" text-anchor="middle" fill="#0F172A" font-size="13" font-weight="700">Browser GIS and Asset Registers</text>
               <text x="125" y="78" text-anchor="middle" fill="#334155" font-size="11">Static Published Layers</text>
               <text x="125" y="98" text-anchor="middle" fill="#334155" font-size="11">View Only · Browser Calculations</text>
-              <text x="125" y="116" text-anchor="middle" fill="#0071E3" font-size="10" font-weight="700">Live Database Not Verified</text>
+              <text x="125" y="116" text-anchor="middle" fill="#0071E3" font-size="10" font-weight="700">Approved Data Snapshot</text>
             </g>
 
             <!-- Pillar 1: National Road Network -->
@@ -165,7 +165,7 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
               <rect width="325" height="76" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
               <text x="16" y="27" fill="#0F172A" font-size="12" font-weight="700">Coverage and Data Gaps</text>
               <text x="16" y="47" fill="#334155" font-size="10.5">Road series: FY 2025-26 21,302 km · FY 2026-27 21,284 km</text>
-              <text x="16" y="64" fill="#7C3AED" font-size="10" font-weight="600">Live Database and Current Traffic Not Verified</text>
+              <text x="16" y="64" fill="#7C3AED" font-size="10" font-weight="600">Approved Snapshot · Dated Traffic</text>
             </g>
           </svg>
         </div>
@@ -181,16 +181,16 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
       <section id="platform-documentation" class="analysis-panel docs-section" aria-labelledby="docs-heading">
         <div class="analysis-title">
           <div>
-            <p class="eyebrow">Platform Documentation AND STANDARDS</p>
+            <p class="eyebrow">PORTAL NOTES AND STANDARDS</p>
             <h2 id="docs-heading">Data Status, Survey Instrumentation and Mapping Standards</h2>
           </div>
-          <p class="sync-pill">Unified SQL Database · Synchronised Weekly · Projected to 2040</p>
+          <p class="sync-pill">Personal learning site · Private governed source · View only</p>
         </div>
         <div class="docs-grid">
           <article class="doc-card">
             <span class="doc-tag">DATA STATUS</span>
-            <h3>National Road Network Layers</h3>
-            <p>Spatial layers, condition schedules and recorded traffic fields load from static published exports. The connected database has no governed public tables, so the portal does not claim live data, current-second reporting or an automated weekly refresh.</p>
+            <h3>Published Mapped Layers</h3>
+            <p>Spatial layers, condition schedules and recorded traffic fields load from approved published snapshots. A controlled weekly check compares them with the private governed source. Database and schema access are not available to the browser, and dated traffic fields are not presented as current-second observations.</p>
           </article>
           <article class="doc-card">
             <span class="doc-tag">SURVEY INSTRUMENTATION</span>
@@ -212,7 +212,7 @@ body > .container, body > .wrapper, body > main, .page-shell, .app-container,
 
     </section>
   </main>
-  <footer><span>National Transport GIS Enterprise · Unified SQL Database · Synchronised Weekly · Projected to 2040</span><a href="./">Return to map</a></footer>
+  <footer><span>Data Science Trials GIS · Personal learning site · Private governed source</span><a href="./">Return to map</a></footer>
   <nav class="floating-actions" aria-label="Page actions"><button type="button" data-action="back" aria-label="Go back" title="Go back">←</button><button type="button" data-action="top" aria-label="Back to top" title="Back to top">↑</button><button type="button" data-action="download" aria-label="Download filtered CSV" title="Download filtered CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4"/></svg><span>Download</span></button></nav>
   <script src="data-explorer.js?v=20261124-fy-series" defer></script><script src="floating-actions.js?v=20261123-v113" defer></script><script src="portal-motion.js?v=20261123-v113" defer></script>
   <script src="mindmap-interactive.js?v=20261124-fy-series" defer></script>

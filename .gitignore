@@ -1,3 +1,7 @@
 .vercel
 **/.env
 **/.env.*
+*.db
+*.sqlite
+*.sqlite3
+*.sql
