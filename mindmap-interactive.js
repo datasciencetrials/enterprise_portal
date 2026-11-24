@@ -3,7 +3,7 @@
   const nodes = {
     root: {
       title: 'Published Mapped Exports',
-      summary: 'Approved published snapshots feed the browser map, charts and schedules. A controlled weekly check compares them with the private governed source. Database and schema access are not available to the browser.',
+      summary: 'Approved published snapshots feed the browser map, charts and schedules. A controlled weekly check compares them with the Unified SQL Database. Database and schema access are not available to the browser.',
       mode: null
     },
     roads: {

@@ -9,7 +9,7 @@
       files: ['network.geojson'],
       group: 'Surface Type',
       context: 'The current mapped National Roads layer totals 21,284.02 km: 6,406.69 km Paved and 14,877.33 km Unpaved. The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27.',
-      gaps: 'This is an approved published snapshot from a private governed source. The financial-year series remains distinct from exact mapped-layer calculations, and modelled traffic fields are not presented as live observations. Database and schema access are not available to the browser.',
+      gaps: 'This is an approved published snapshot from a Unified SQL Database. The financial-year series remains distinct from exact mapped-layer calculations, and modelled traffic fields are not presented as live observations. Database and schema access are not available to the browser.',
       columns: [
         field('Link ID', 'Link Id 1'),
         field('Road Number', 'Road No 1'),
@@ -33,7 +33,7 @@
       file: 'geo/bridges.geojson',
       group: 'Condition_Band',
       context: 'National Bridge Management System (BMS) register containing all 552 Bridges across 6 Maintenance Regions and 23 Maintenance Stations (247 Good, 71 Satisfactory, 162 Marginal, 52 Poor, 13 Critical, 7 Under Construction; Issued 18/11/2026).',
-      gaps: 'This approved published snapshot is checked weekly against a private governed source. Some road Link IDs and positions require review. Database and schema access are not available to the browser.',
+      gaps: 'This approved published snapshot is checked weekly against a Unified SQL Database. Some road Link IDs and positions require review. Database and schema access are not available to the browser.',
       columns: [
         field('Bridge Number', 'Bridge_Number'),
         field('Bridge Name', 'Bridge_Name'),
@@ -61,7 +61,7 @@
       file: 'geo/major_culverts.geojson',
       group: 'Condition_Band',
       context: 'National Bridge Management System (BMS) register containing all 452 Major Culverts across 6 Maintenance Regions and 23 Maintenance Stations (403 Good, 39 Satisfactory, 4 Marginal, 1 Poor, 4 Critical, 1 Under Construction; Issued 18/11/2026).',
-      gaps: 'This approved published snapshot is checked weekly against a private governed source. Some road Link IDs and positions require review. Database and schema access are not available to the browser.',
+      gaps: 'This approved published snapshot is checked weekly against a Unified SQL Database. Some road Link IDs and positions require review. Database and schema access are not available to the browser.',
       columns: [
         field('Culvert Number', 'Culvert_Number'),
         field('Road Link ID', 'Link_Number'),

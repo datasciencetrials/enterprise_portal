@@ -523,9 +523,9 @@
   function updateIntro(key) {
     const heading = $('page-title');
     heading.textContent = tabHeadings[key];
-    $('intro-kicker').textContent = `DATA SCIENCE TRIALS / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
+    $('intro-kicker').textContent = `NATIONAL TRANSPORT GIS ENTERPRISE / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
     $('intro-note').textContent = key === 'roads'
-      ? 'The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27. The current mapped layer totals 21,284.02 km. Approved snapshots are checked weekly against a private governed source; database and schema access are not available to the browser.'
+      ? 'The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27. The current mapped layer totals 21,284.02 km. Approved snapshots are checked weekly against a Unified SQL Database; database and schema access are not available to the browser.'
       : transportModes[key].description;
     const networkSeries = $('network-time-series');
     if (networkSeries) networkSeries.hidden = key !== 'roads';
