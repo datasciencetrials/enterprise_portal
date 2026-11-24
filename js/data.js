@@ -40,6 +40,16 @@ const DataStore = (() => {
   async function roadDensity(){ return getJSON('road_density_by_subregion.json'); }
   async function trafficComposition(){ return getJSON('traffic_composition_2025.json'); }
   async function weighbridgeDistrictCoverage(){ return getJSON('weighbridge_district_coverage.json'); }
+  async function hotAirports(){ return getJSON('data/unified/airports.geojson'); }
+  async function hotSeaPorts(){ return getJSON('data/unified/sea_ports.geojson'); }
+  async function hotRailways(){ return getJSON('data/unified/railways.geojson'); }
+  async function hotHealth(){ return getJSON('data/unified/health_facilities.geojson'); }
+  async function hotEducation(){ return getJSON('data/unified/education_facilities.geojson'); }
+  async function hotFinancial(){ return getJSON('data/unified/financial_services.geojson'); }
+  async function hotWaterways(){ return getJSON('data/unified/waterways.geojson'); }
+  async function hotMajorRoads(){ return getJSON('data/unified/hotosm_major_roads.geojson'); }
+  async function hotSummary(){ return getJSON('data/unified/hotosm_summary.json'); }
+  async function hotRoadsSummary(){ return getJSON('data/unified/hotosm_roads_summary.json'); }
 
   const REGIONS = ['Central','Eastern','North Eastern','Northern','Southern','Western'];
   const CLASS_LABELS = {A:'Class A  -  International Trunk', B:'Class B  -  National Trunk', C:'Class C  -  Primary / District', M:'Expressway (Class M)'};
@@ -93,6 +103,7 @@ const DataStore = (() => {
     msSummary, msDetail, ibpProjects, protectedAreas, forestReserves, wetlands, gazettedAreas,
     weighbridges, trafficStations, oprcContracts, ndpivProjects, towns, districts, airports,
     ferryCrossings, kampalaIncidents, fieldVerification, roadDensity, trafficComposition, weighbridgeDistrictCoverage, networkStats, linkNameMap, decodeLinkId,
+    hotAirports, hotSeaPorts, hotRailways, hotHealth, hotEducation, hotFinancial, hotWaterways, hotMajorRoads, hotSummary, hotRoadsSummary,
     REGIONS, CLASS_LABELS
   };
 })();

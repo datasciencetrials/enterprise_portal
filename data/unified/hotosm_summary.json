@@ -1,0 +1,92 @@
+{
+  "airports": {
+    "title": "Airports of Uganda",
+    "total_features": 898,
+    "mapped_points": 642,
+    "geometry_types": [
+      "Point",
+      "Polygon",
+      "LineString"
+    ]
+  },
+  "sea_ports": {
+    "title": "Inland Water Ports & Ferry Terminals of Uganda",
+    "total_features": 58,
+    "mapped_points": 58,
+    "geometry_types": [
+      "Point",
+      "Polygon"
+    ]
+  },
+  "railways": {
+    "title": "Railways of Uganda",
+    "total_features": 315,
+    "mapped_points": 23,
+    "geometry_types": [
+      "Point",
+      "Polygon",
+      "LineString"
+    ]
+  },
+  "health_facilities": {
+    "title": "Health Facilities of Uganda",
+    "total_features": 8237,
+    "mapped_points": 8237,
+    "geometry_types": [
+      "Point",
+      "Polygon"
+    ]
+  },
+  "education_facilities": {
+    "title": "Education Facilities of Uganda",
+    "total_features": 35726,
+    "mapped_points": 35726,
+    "geometry_types": [
+      "Point",
+      "Polygon",
+      "MultiPolygon"
+    ]
+  },
+  "financial_services": {
+    "title": "Financial Services of Uganda",
+    "total_features": 10978,
+    "mapped_points": 10978,
+    "geometry_types": [
+      "Point",
+      "Polygon"
+    ]
+  },
+  "populated_places": {
+    "title": "Populated Places of Uganda",
+    "total_features": 138943,
+    "mapped_points": 138941,
+    "geometry_types": [
+      "Point",
+      "Polygon",
+      "MultiPolygon",
+      "LineString"
+    ]
+  },
+  "cultural_places": {
+    "title": "Cultural Places of Uganda",
+    "total_features": 4778,
+    "mapped_points": 4776,
+    "geometry_types": [
+      "Point",
+      "Polygon",
+      "MultiPolygon",
+      "LineString"
+    ]
+  },
+  "waterways": {
+    "title": "Waterways of Uganda",
+    "total_features": 81218,
+    "mapped_points": 30445,
+    "geometry_types": [
+      "Point",
+      "Polygon",
+      "MultiPolygon",
+      "LineString"
+    ]
+  }
+}

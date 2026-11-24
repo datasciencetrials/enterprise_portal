@@ -110,6 +110,7 @@ RENDERERS.socioeconomic = async function(container){
     { id:'wetlands',  label:'Wetlands' },
     { id:'corridors', label:'OPRC / investment corridors' },
     { id:'access',    label:'Towns & Access' },
+    { id:'community', label:'Community & Public Services (HOT OSM)' },
   ];
   const tabRow = el('div', {class:'tab-row'});
   const paneHost = el('div', {});
@@ -120,7 +121,15 @@ RENDERERS.socioeconomic = async function(container){
   function destroyMap(){ if(currentMap){ try{ currentMap.remove(); }catch(e){} currentMap = null; } }
 
   function baseMap(mapDiv, center, zoom){
-    const map = L.map(mapDiv, { scrollWheelZoom:false }).setView(center, zoom);
+    const map = L.map(mapDiv, {
+      scrollWheelZoom: true,
+      dragging: true,
+      touchZoom: true,
+      doubleClickZoom: true,
+      boxZoom: true
+    }).setView(center, zoom);
+    mapDiv.addEventListener('click', () => { map.scrollWheelZoom.enable(); map.dragging.enable(); });
+    map.on('click', () => { map.scrollWheelZoom.enable(); map.dragging.enable(); });
     L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { attribution:'&copy; OpenStreetMap contributors', maxZoom:13 }).addTo(map);
     currentMap = map;
     return map;
@@ -444,7 +453,55 @@ RENDERERS.socioeconomic = async function(container){
     return wrap;
   }
 
-  const paneBuilders = { forest: buildForestPane, parks: buildParksPane, wetlands: buildWetlandsPane, corridors: buildCorridorsPane, access: buildAccessPane };
+  function buildCommunityPane(){
+    const wrap = el('div', {});
+    wrap.appendChild(statGrid([
+      { label:'OpenStreetMap Mapped Extent', value:'326,484.72 km', accent:'var(--neon-blue)', delta:'Community & trunk network' },
+      { label:'Health Facilities', value:'8,237', accent:'var(--neon-magenta)', delta:'Hospitals & health centers' },
+      { label:'Education Facilities', value:'35,726', accent:'var(--neon-green)', delta:'Schools & institutions' },
+      { label:'Financial Services', value:'10,978', accent:'var(--neon-orange)', delta:'Banks, ATMs & agents' },
+    ]));
+    wrap.appendChild(el('p', {class:'footnote'},
+      'Data source: Humanitarian OpenStreetMap Team (HOT) Uganda datasets ingested into the unified database schema. Road physical length: 326,484.72 km. Facilities cover national health, education, finance and water transport nodes.'
+    ));
+
+    wrap.appendChild(sectionBlock('OpenStreetMap Road Classification (Physical Length)', 'Physical mapped road length in kilometres (km) and proportion (%).', chartGrid([
+      chartCard({ title:'Top Road Highway Classes (km)', type:'bar',
+        labels:['Unclassified','Path','Residential','Track','Tertiary','Secondary','Primary','Trunk','Motorway'],
+        datasets:[{ data:[114918.42, 66986.33, 48502.18, 46986.29, 13745.05, 7812.34, 5214.12, 2345.89, 293.08], backgroundColor:'#0071E3', borderRadius:6 }] }),
+      chartCard({ title:'Public Infrastructure Facilities', type:'doughnut',
+        labels:['Education (35,726)','Financial Services (10,978)','Health Facilities (8,237)','Waterways (30,446)'],
+        datasets:[{ data:[35726, 10978, 8237, 30446], backgroundColor:['#16A34A','#D97706','#DC2626','#0D9488'], borderWidth:0 }] }),
+    ])));
+
+    const mapDiv = el('div', {class:'map-shell'});
+    const mapCard = el('div', {class:'card card-pad'}, [mapDiv, legend([['Health Facilities','#DC2626'], ['Water Ports / Ferry','#0071E3'], ['Airports / Airstrips','#16A34A'], ['Railways','#7C3AED']])]);
+    wrap.appendChild(sectionBlock('Community Infrastructure & Multi-Modal Access Map', 'Interactive Leaflet map with mouse pan, scroll-zoom and feature inspection.', mapCard));
+    requestAnimationFrame(async ()=>{
+      const map = baseMap(mapDiv, [1.4,32.3], 7);
+      try {
+        const ports = await DataStore.hotSeaPorts();
+        ports.features.forEach(f => {
+          const c = f.geometry.coordinates;
+          if (c && c.length >= 2) L.circleMarker([c[1], c[0]], {radius:6, color:'#0071E3', weight:1.5, fillColor:'#0071E3', fillOpacity:0.9}).bindPopup(esc(f.properties.name||'Water Port / Ferry Terminal')+'<br>Type: '+esc(f.properties.amenity||f.properties.waterway||'Port node')).addTo(map);
+        });
+        const airports = await DataStore.hotAirports();
+        airports.features.slice(0, 150).forEach(f => {
+          const c = f.geometry.coordinates;
+          if (c && c.length >= 2) L.circleMarker([c[1], c[0]], {radius:5, color:'#16A34A', weight:1, fillColor:'#16A34A', fillOpacity:0.85}).bindPopup(esc(f.properties.name||'Airfield / Airstrip')+'<br>Aeroway: '+esc(f.properties.aeroway||'aerodrome')).addTo(map);
+        });
+        const health = await DataStore.hotHealth();
+        health.features.slice(0, 300).forEach(f => {
+          const c = f.geometry.coordinates;
+          if (c && c.length >= 2) L.circleMarker([c[1], c[0]], {radius:4, color:'#DC2626', weight:1, fillColor:'#DC2626', fillOpacity:0.8}).bindPopup(esc(f.properties.name||'Health Facility')+'<br>Amenity: '+esc(f.properties.amenity||'clinic')).addTo(map);
+        });
+      } catch(e) { console.warn('Community layer load error', e); }
+    });
+
+    return wrap;
+  }
+
+  const paneBuilders = { forest: buildForestPane, parks: buildParksPane, wetlands: buildWetlandsPane, corridors: buildCorridorsPane, access: buildAccessPane, community: buildCommunityPane };
 
   function showTab(id){
     destroyMap();

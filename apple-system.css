@@ -830,3 +830,45 @@ tbody tr:hover {
   color: #B91C1C !important;
   border: 1px solid #FECACA !important;
 }
+
+/* 7. Interactive Map Pan, Scroll-Zoom and Mouse Dragging */
+.map::after,
+.map-shell::after,
+#gis-map::after {
+  display: none !important;
+  content: none !important;
+  pointer-events: none !important;
+}
+
+#gis-map,
+.map,
+.map-shell,
+.leaflet-container {
+  cursor: grab !important;
+  touch-action: pan-x pan-y !important;
+}
+
+#gis-map:active,
+.map:active,
+.leaflet-container:active,
+.leaflet-dragging,
+.leaflet-dragging .leaflet-container {
+  cursor: grabbing !important;
+}
+
+.leaflet-pane,
+.leaflet-tile-pane,
+.leaflet-overlay-pane {
+  pointer-events: auto !important;
+}
+
+.leaflet-control-container {
+  pointer-events: none !important;
+}
+
+.leaflet-control-container .leaflet-control,
+.leaflet-control-container .leaflet-bar,
+.leaflet-control-container button,
+.leaflet-control-container a {
+  pointer-events: auto !important;
+}

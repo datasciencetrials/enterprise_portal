@@ -4,7 +4,16 @@
   const formatKm = new Intl.NumberFormat('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const formatCount = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 0 });
   const filters = { search: '', region: '', surface: '', condition: '' };
-  const map = L.map('gis-map', { zoomControl: false, preferCanvas: true, scrollWheelZoom: false }).setView([1.3, 32.3], 7);
+  const map = L.map('gis-map', {
+    zoomControl: false,
+    preferCanvas: true,
+    scrollWheelZoom: true,
+    dragging: true,
+    touchZoom: true,
+    doubleClickZoom: true,
+    boxZoom: true,
+    keyboard: true
+  }).setView([1.3, 32.3], 7);
 
   function syncZoomScale() {
     const z = map.getZoom();
@@ -19,6 +28,26 @@
   map.on('zoomend', syncZoomScale);
 
   const mapContainer = map.getContainer();
+  // Ensure mouse pan, scroll-zoom and interaction activation on click, hover and focus
+  mapContainer.addEventListener('click', () => {
+    map.scrollWheelZoom.enable();
+    map.dragging.enable();
+    map.doubleClickZoom.enable();
+    map.boxZoom.enable();
+  });
+  mapContainer.addEventListener('mouseenter', () => {
+    map.scrollWheelZoom.enable();
+    map.dragging.enable();
+  });
+  map.on('click', () => {
+    map.scrollWheelZoom.enable();
+    map.dragging.enable();
+    map.doubleClickZoom.enable();
+  });
+  map.on('focus', () => {
+    map.scrollWheelZoom.enable();
+    map.dragging.enable();
+  });
   const ugandaExtent = L.latLngBounds([[-1.6, 29.4], [4.35, 35.2]]);
   const mapAspect = () => { const size = map.getSize(); return size.x / Math.max(1, size.y); };
   const showUgandaExtent = () => map.fitBounds(ugandaExtent, { padding: mapAspect() < .8 ? [12, 12] : [18, 18], maxZoom: 7, animate: false });

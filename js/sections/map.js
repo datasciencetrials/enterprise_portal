@@ -10,8 +10,8 @@ RENDERERS.map = async function(container){
 
   container.appendChild(pageHead(
     'National GIS Map',
-    'Uganda’s classified road network on a live basemap, with 22 toggleable reference layers fetched directly from the platform’s GIS file store.',
-    '22 reference layers'
+    'Uganda’s classified road network on a live basemap, with 30 toggleable reference layers fetched directly from the platform’s GIS file store.',
+    '30 reference layers'
   ));
 
   // ---------------------------------------------------------------- layout
@@ -191,10 +191,19 @@ RENDERERS.map = async function(container){
     { id:'kampala_incidents', label:'Kampala Traffic Incidents', unit:'incidents', loader: DataStore.kampalaIncidents, color:NEON[2], type:'point', radius:3, popup:'generic' },
     { id:'ducar_condition', label:'DUCAR District Condition Summary', unit:'districts', loader: DataStore.ducarConditionSummary, color:NEON[3], type:'polygon', popup:'generic' },
     { id:'field_verification', label:'Field Verification Points', unit:'site visits', loader: DataStore.fieldVerification, color:NEON[4], type:'point', radius:6, popup:'generic' },
+    { id:'hot_roads', label:'Major Road Corridors (OpenStreetMap)', unit:'corridors', loader: DataStore.hotMajorRoads, color:NEON[0], type:'line', weight:3.2, lazy:true, warn:'~6.2 MB', popup:'generic' },
+    { id:'hot_waterways', label:'River Basins & Waterways', unit:'waterways', loader: DataStore.hotWaterways, color:NEON[5], type:'line', weight:2, lazy:true, warn:'~5.5 MB', popup:'generic' },
+    { id:'hot_railways', label:'Railways & Sidings', unit:'railway sections', loader: DataStore.hotRailways, color:NEON[4], type:'line', weight:3.5, popup:'generic' },
+    { id:'hot_airports', label:'Airports & Airstrips (OSM)', unit:'airfields', loader: DataStore.hotAirports, color:NEON[1], type:'point', radius:6, popup:'generic' },
+    { id:'hot_ports', label:'Lake Ports & Ferry Terminals', unit:'water ports', loader: DataStore.hotSeaPorts, color:NEON[6], type:'point', radius:6, popup:'generic' },
+    { id:'hot_health', label:'Health Facilities (Hospitals & Clinics)', unit:'facilities', loader: DataStore.hotHealth, color:NEON[3], type:'point', radius:4, popup:'generic' },
+    { id:'hot_finance', label:'Financial Services (Banks & ATMs)', unit:'services', loader: DataStore.hotFinancial, color:NEON[2], type:'point', radius:4, popup:'generic' },
+    { id:'hot_education', label:'Education Facilities (Schools & Colleges)', unit:'institutions', loader: DataStore.hotEducation, color:NEON[7], type:'point', radius:4, lazy:true, warn:'~7.4 MB', popup:'generic' },
   ];
 
   const GROUPS = [
     { title:'Network & Structures', ids:['network','bridges','culverts','weighbridges','mowt_stations','ducar'] },
+    { title:'Humanitarian & Community Infrastructure (HOT OSM)', ids:['hot_roads','hot_waterways','hot_railways','hot_airports','hot_ports','hot_health','hot_finance','hot_education'] },
     { title:'Investment & Contracts', ids:['oprc','investment'] },
     { title:'Boundaries & Places', ids:['districts','maint_regions','parishes','towns'] },
     { title:'Land & Environment', ids:['protected_areas','forest_reserves','wetlands','gazetted'] },

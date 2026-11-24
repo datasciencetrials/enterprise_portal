@@ -1,0 +1,459 @@
+{
+  "total_osm_km": 326484.72,
+  "classes": [
+    {
+      "highway_class": "unclassified",
+      "length_km": 114918.42,
+      "share_pct": 35.2
+    },
+    {
+      "highway_class": "path",
+      "length_km": 66986.33,
+      "share_pct": 20.52
+    },
+    {
+      "highway_class": "residential",
+      "length_km": 48502.18,
+      "share_pct": 14.86
+    },
+    {
+      "highway_class": "track",
+      "length_km": 46986.29,
+      "share_pct": 14.39
+    },
+    {
+      "highway_class": "tertiary",
+      "length_km": 22300.28,
+      "share_pct": 6.83
+    },
+    {
+      "highway_class": "secondary",
+      "length_km": 11064.48,
+      "share_pct": 3.39
+    },
+    {
+      "highway_class": "footway",
+      "length_km": 7942.82,
+      "share_pct": 2.43
+    },
+    {
+      "highway_class": "primary",
+      "length_km": 3456.52,
+      "share_pct": 1.06
+    },
+    {
+      "highway_class": "service",
+      "length_km": 2898.35,
+      "share_pct": 0.89
+    },
+    {
+      "highway_class": "trunk",
+      "length_km": 1009.97,
+      "share_pct": 0.31
+    },
+    {
+      "highway_class": "motorway",
+      "length_km": 105.68,
+      "share_pct": 0.03
+    },
+    {
+      "highway_class": "road",
+      "length_km": 89.03,
+      "share_pct": 0.03
+    },
+    {
+      "highway_class": "living_street",
+      "length_km": 74.07,
+      "share_pct": 0.02
+    },
+    {
+      "highway_class": "construction",
+      "length_km": 65.21,
+      "share_pct": 0.02
+    },
+    {
+      "highway_class": "pedestrian",
+      "length_km": 22.18,
+      "share_pct": 0.01
+    },
+    {
+      "highway_class": "motorway_link",
+      "length_km": 18.65,
+      "share_pct": 0.01
+    },
+    {
+      "highway_class": "proposed",
+      "length_km": 10.67,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "cycleway",
+      "length_km": 9.71,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "steps",
+      "length_km": 4.93,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "primary_link",
+      "length_km": 4.26,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "trunk_link",
+      "length_km": 4.15,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "tertiary_link",
+      "length_km": 3.18,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "passing_place",
+      "length_km": 2.96,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "bridleway",
+      "length_km": 2.65,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "secondary_link",
+      "length_km": 1.75,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "crossing",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "toll_gantry",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "street_lamp",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "trailhead",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "stop",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "mini_roundabout",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "bus_stop",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "turning_circle",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "motorway_junction",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "traffic_mirror",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "services",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "traffic_signals",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "turning_loop",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "elevator",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "rest_area",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "give_way",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "milestone",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "Masaka - Mbarara Highway",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "speed_camera",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "cyclist_waiting_aid",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "highway_class": "platform",
+      "length_km": 0.0,
+      "share_pct": 0.0
+    }
+  ],
+  "regions": [
+    {
+      "region": "Northern",
+      "length_km": 98588.27,
+      "share_pct": 30.2
+    },
+    {
+      "region": "Central",
+      "length_km": 87942.66,
+      "share_pct": 26.94
+    },
+    {
+      "region": "Western",
+      "length_km": 87026.56,
+      "share_pct": 26.66
+    },
+    {
+      "region": "Eastern",
+      "length_km": 52222.87,
+      "share_pct": 16.0
+    },
+    {
+      "region": "Unspecified",
+      "length_km": 704.38,
+      "share_pct": 0.22
+    }
+  ],
+  "surfaces": [
+    {
+      "surface": "unrecorded",
+      "length_km": 241930.51,
+      "share_pct": 74.1
+    },
+    {
+      "surface": "unpaved",
+      "length_km": 67856.85,
+      "share_pct": 20.78
+    },
+    {
+      "surface": "ground",
+      "length_km": 6496.68,
+      "share_pct": 1.99
+    },
+    {
+      "surface": "asphalt",
+      "length_km": 4536.83,
+      "share_pct": 1.39
+    },
+    {
+      "surface": "dirt",
+      "length_km": 2360.48,
+      "share_pct": 0.72
+    },
+    {
+      "surface": "paved",
+      "length_km": 1121.22,
+      "share_pct": 0.34
+    },
+    {
+      "surface": "gravel",
+      "length_km": 981.24,
+      "share_pct": 0.3
+    },
+    {
+      "surface": "compacted",
+      "length_km": 888.26,
+      "share_pct": 0.27
+    },
+    {
+      "surface": "earth",
+      "length_km": 73.56,
+      "share_pct": 0.02
+    },
+    {
+      "surface": "sand",
+      "length_km": 68.45,
+      "share_pct": 0.02
+    },
+    {
+      "surface": "grass",
+      "length_km": 31.98,
+      "share_pct": 0.01
+    },
+    {
+      "surface": "soil",
+      "length_km": 31.47,
+      "share_pct": 0.01
+    },
+    {
+      "surface": "chipseal",
+      "length_km": 22.92,
+      "share_pct": 0.01
+    },
+    {
+      "surface": "concrete",
+      "length_km": 19.76,
+      "share_pct": 0.01
+    },
+    {
+      "surface": "dirt/sand",
+      "length_km": 9.43,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "cobblestone",
+      "length_km": 7.76,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "paving_stones",
+      "length_km": 6.15,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "tarmac",
+      "length_km": 5.52,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "pebblestone",
+      "length_km": 5.19,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "marum",
+      "length_km": 4.44,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "grass_paver",
+      "length_km": 4.42,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "mud",
+      "length_km": 3.63,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "wood",
+      "length_km": 3.11,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "clay",
+      "length_km": 2.79,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "murrum",
+      "length_km": 2.02,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "fine_gravel",
+      "length_km": 1.81,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "surface",
+      "length_km": 1.78,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "laterite",
+      "length_km": 1.73,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "metal",
+      "length_km": 1.68,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "sett",
+      "length_km": 0.79,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "unhewn_cobblestone",
+      "length_km": 0.45,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "g",
+      "length_km": 0.42,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "concrete:plates",
+      "length_km": 0.37,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "footway",
+      "length_km": 0.25,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "road",
+      "length_km": 0.23,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "ohne_stra\u00dfenbelag3",
+      "length_km": 0.2,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "1",
+      "length_km": 0.17,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "2",
+      "length_km": 0.11,
+      "share_pct": 0.0
+    },
+    {
+      "surface": "residential",
+      "length_km": 0.07,
+      "share_pct": 0.0
+    }
+  ]
+}

@@ -97,7 +97,15 @@ function buildStructureView(cfg){
     if (mapInstance) { mapInstance.invalidateSize(); return mapInstance; }
     const div = document.getElementById(mapDivId);
     if (!div) return null;
-    mapInstance = L.map(mapDivId, { scrollWheelZoom: false });
+    mapInstance = L.map(mapDivId, {
+      scrollWheelZoom: true,
+      dragging: true,
+      touchZoom: true,
+      doubleClickZoom: true,
+      boxZoom: true
+    });
+    div.addEventListener('click', () => { if (mapInstance) { mapInstance.scrollWheelZoom.enable(); mapInstance.dragging.enable(); } });
+    mapInstance.on('click', () => { mapInstance.scrollWheelZoom.enable(); mapInstance.dragging.enable(); });
     L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
       attribution: '&copy; Esri, HERE, Garmin, FAO, NOAA, USGS',
       maxZoom: 16
