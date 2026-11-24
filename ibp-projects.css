@@ -54,13 +54,13 @@
   font-weight:700;
 }
 .ibp-subtitle{
-  color:#a0aec0;
+  color:#475569;
   font-size:.85rem;
   max-width:900px;
 }
 .ibp-close{
   background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.1);
+  border:1px solid rgba(0,0,0,.08);
   color:#fff;
   width:36px;
   height:36px;
@@ -80,7 +80,7 @@
 }
 .ibp-kpi{ border-left-width:4px; border-left-style:solid; }
 .ibp-kpi-label{
-  color:#a0aec0;
+  color:#475569;
   font-size:.72rem;
   text-transform:uppercase;
   letter-spacing:.04em;
@@ -102,8 +102,8 @@
 }
 .ibp-year-btn{
   background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
-  color:#a0aec0;
+  border:1px solid rgba(0,0,0,.08);
+  color:#475569;
   padding:8px 16px;
   border-radius:999px;
   font-size:.83rem;
@@ -128,7 +128,7 @@
 .ibp-search{
   width:100%;
   background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
+  border:1px solid rgba(0,0,0,.08);
   border-radius:8px;
   color:#fff;
   padding:10px 14px;
@@ -150,7 +150,7 @@
   margin:22px 0 10px;
 }
 .ibp-section-title:first-child{ margin-top:0; }
-.ibp-count{ color:#a0aec0; font-weight:400; }
+.ibp-count{ color:#475569; font-weight:400; }
 
 .ibp-table-wrap{
   width:100%;
@@ -166,7 +166,7 @@
 }
 .ibp-table th{
   text-align:left;
-  color:#a0aec0;
+  color:#475569;
   font-weight:600;
   letter-spacing:.03em;
   padding:10px 14px;
@@ -184,7 +184,7 @@
 .ibp-table tr:last-child td{ border-bottom:none; }
 .ibp-name{ color:#fff; font-weight:500; min-width:220px; }
 .ibp-num{ font-variant-numeric:tabular-nums; color:#0284C7; }
-.ibp-years{ color:#a0aec0; font-size:.78rem; }
+.ibp-years{ color:#475569; font-size:.78rem; }
 .ibp-empty{ color:#6b7688; text-align:center; padding:20px !important; }
 
 .ibp-footnote{
