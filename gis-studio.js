@@ -525,8 +525,10 @@
     heading.textContent = tabHeadings[key];
     $('intro-kicker').textContent = `DATA SCIENCE TRIALS / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
     $('intro-note').textContent = key === 'roads'
-      ? 'The published mapped National Roads layer totals 21,284.02 km, which is 17.98 km below the approved 21,302 km baseline. This personal learning portal is not an official Ministry product and does not claim a live database refresh.'
+      ? 'The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27. The current mapped layer totals 21,284.02 km. This personal learning portal is not an official Ministry product and does not claim a live database refresh.'
       : transportModes[key].description;
+    const networkSeries = $('network-time-series');
+    if (networkSeries) networkSeries.hidden = key !== 'roads';
     $('intro-aside-title').textContent = key === 'roads' ? 'Interactive map and registers' : `${transportModes[key].title}: map & registers`;
     $('intro-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ roads: 'roads', bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
     $('intro-table-link').firstChild.textContent = `Open ${key === 'culverts' ? 'major culvert' : key} register `;

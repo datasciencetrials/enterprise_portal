@@ -8,7 +8,7 @@
     },
     roads: {
       title: '1. Mapped National Roads (21,284.02 km)',
-      summary: 'Paved: 6,406.69 km (30.10%) | Unpaved: 14,877.33 km (69.90%). The mapped layer is 17.98 km below the approved 21,302 km baseline and is not the complete national total.',
+      summary: 'Paved: 6,406.69 km (30.10%) | Unpaved: 14,877.33 km (69.90%). National Roads length is 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27; the current mapped layer totals 21,284.02 km.',
       mode: 'roads'
     },
     condition: {
@@ -43,7 +43,7 @@
     },
     gaps: {
       title: 'Coverage and Data Gaps',
-      summary: 'The mapped road layer is 17.98 km below the approved baseline. Live database tables, current traffic, speed, current operations and automated refresh are not verified.',
+      summary: 'National Roads length is reported as a financial-year time series: 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27. Live database tables, current traffic, speed, current operations and automated refresh are not verified.',
       mode: null
     }
   };

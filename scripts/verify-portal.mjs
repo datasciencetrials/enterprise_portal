@@ -49,7 +49,9 @@ check(!studio.includes('visible.length)} of ${format.format(features.length'), '
 check(studio.includes("const linkId = raw => typeof raw === 'string' && raw.includes('_') ? raw : 'Link ID not verified'"), 'map Link ID formatter is missing');
 check(explorer.includes("if (linkIdKeys.has(key)) return value.includes('_') ? value : 'Link ID not verified'"), 'table Link ID formatter is missing');
 check(!studio.includes('const condVals = unfiltered ?'), 'road condition chart must use mapped data instead of hardcoded totals');
-check(index.includes('17.98 km below the approved 21,302 km baseline'), 'mapped road coverage gap must be disclosed');
+check(index.includes('FY 2025-26</dt><dd>21,302 km'), 'FY 2025-26 National Roads length is missing');
+check(index.includes('FY 2026-27</dt><dd>21,284 km'), 'FY 2026-27 National Roads length is missing');
+check(!index.includes('17.98 km below'), 'financial-year observations must not be described as a baseline shortfall');
 
 for (const token of ['.transport-photos', 'footer {', 'background: #ffffff !important', 'font-family: Arial']) {
   check(theme.includes(token), `apple-system.css is missing light-theme safeguard ${token}`);
