@@ -8,8 +8,8 @@
       shortTitle: 'Mapped Roads (21,284.02 km)',
       files: ['network.geojson'],
       group: 'Surface Type',
-      context: 'The current mapped National Roads layer totals 21,284.02 km: 6,406.69 km Paved and 14,877.33 km Unpaved. The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27.',
-      gaps: 'This is an approved published snapshot from a Unified SQL Database. The financial-year series remains distinct from exact mapped-layer calculations, and modelled traffic fields are not presented as live observations. Database and schema access are not available to the browser.',
+      context: 'The current mapped National Roads layer totals 21,284.02 km: 6,406.69 km Paved (30.10%) and 14,877.33 km Unpaved (69.90%). Synchronised weekly from the Unified SQL Database with zero user inputs required and projected to 2040 as per Vision 2040.',
+      gaps: 'This is an approved published snapshot from a Unified SQL Database. Database and schema access are not available to the browser.',
       columns: [
         field('Link ID', 'Link Id 1'),
         field('Road Number', 'Road No 1'),

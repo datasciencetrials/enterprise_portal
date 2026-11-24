@@ -102,7 +102,7 @@
     if (!selected) return;
     if (Array.isArray(selected.series)) {
       rows = selected.series.map(row => ({ period: row.period, value: row.value }));
-      $('timeline-note').textContent = `${selected.method} FY 2025-26: 21,302 km. FY 2026-27: 21,284 km. These are separate annual observations, not a baseline shortfall or cumulative total.`;
+      $('timeline-note').textContent = `${selected.method} National Road Network extent totals 21,284.02 km (6,406.69 km Paved, 14,877.33 km Unpaved). Projected to 2040 as per Vision 2040.`;
     } else {
       const values = new Map();
       let totalMeasure = 0;

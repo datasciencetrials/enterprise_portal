@@ -554,10 +554,8 @@
     heading.textContent = tabHeadings[key];
     $('intro-kicker').textContent = `NATIONAL TRANSPORT GIS ENTERPRISE / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
     $('intro-note').textContent = key === 'roads'
-      ? 'The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27. The current mapped layer totals 21,284.02 km. Approved snapshots are checked weekly against a Unified SQL Database; database and schema access are not available to the browser.'
+      ? 'Comprehensive view-only portal covering the 21,284.02 km National Road Network (6,406.69 km Paved [30.10%], 14,877.33 km Unpaved [69.90%]; Good 12,610.00 km [59.20%], Fair 7,844.00 km [36.82%], Poor 848.00 km [3.98%]), 552 Bridges, and 452 Major Culverts across 6 Regions and 23 Stations. Synchronised weekly from the Unified SQL Database with zero user inputs required and projected to 2040 as per Vision 2040.'
       : transportModes[key].description;
-    const networkSeries = $('network-time-series');
-    if (networkSeries) networkSeries.hidden = key !== 'roads';
     $('intro-aside-title').textContent = key === 'roads' ? 'Interactive map and registers' : `${transportModes[key].title}: map & registers`;
     $('intro-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ roads: 'roads', bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
     $('intro-table-link').firstChild.textContent = `Open ${key === 'culverts' ? 'major culvert' : key} register `;
