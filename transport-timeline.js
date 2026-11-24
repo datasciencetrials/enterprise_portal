@@ -4,6 +4,7 @@
   const format = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 });
   const specs = {
     roads: [
+      { id: 'network-length-fy', label: 'National Roads length by financial year (km)', unit: 'km', kind: 'financial-year', colour: '#0071E3', method: 'Annual National Roads length reported in whole kilometres.', series: [{ period: 'FY 2025-26', value: 21302 }, { period: 'FY 2026-27', value: 21284 }] },
       { id: 'completed', label: 'Road completion cohort (km)', field: 'Completion Year', unit: 'km', kind: 'year', colour: '#0071E3', method: 'Published mapped road length grouped by completion year across the 21,284.02 km layer.' },
       { id: 'rehabilitated', label: 'Road rehabilitation cohort (km)', field: 'Rehabilitation Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'Published mapped road length grouped by most recent rehabilitation intervention year.' },
     ],
@@ -99,41 +100,47 @@
     rows = [];
     selected = (specs[activeMode] || []).find(spec => spec.id === $('timeline-metric').value) || (specs[activeMode] || [])[0];
     if (!selected) return;
-    const values = new Map();
-    let totalMeasure = 0;
-    for (const item of activeItems) {
-      const key = bucket(item.properties?.[selected.field], selected.kind);
-      const amount = weight(item, selected);
-      if (!key || amount === null) continue;
-      totalMeasure += amount;
-      values.set(key, (values.get(key) || 0) + amount);
+    if (Array.isArray(selected.series)) {
+      rows = selected.series.map(row => ({ period: row.period, value: row.value }));
+      $('timeline-note').textContent = `${selected.method} FY 2025-26: 21,302 km. FY 2026-27: 21,284 km. These are separate annual observations, not a baseline shortfall or cumulative total.`;
+    } else {
+      const values = new Map();
+      let totalMeasure = 0;
+      for (const item of activeItems) {
+        const key = bucket(item.properties?.[selected.field], selected.kind);
+        const amount = weight(item, selected);
+        if (!key || amount === null) continue;
+        totalMeasure += amount;
+        values.set(key, (values.get(key) || 0) + amount);
+      }
+      const keys = [...values.keys()].sort();
+      if (!keys.length) {
+        $('timeline-note').textContent = `${selected.method} No valid period data are available in the published mapped layer.`;
+        return;
+      }
+      const rawLabels = completeLabels(keys, selected.kind);
+      rows = rawLabels.map(k => ({ period: displayLabel(k, selected.kind), value: Number((values.get(k) || 0).toFixed(2)) }));
+      $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods, calculated in the browser from the published mapped layer.`;
     }
-    const keys = [...values.keys()].sort();
-    if (!keys.length) {
-      $('timeline-note').textContent = `${selected.method} No valid period data are available in the published mapped layer.`;
-      return;
-    }
-    const rawLabels = completeLabels(keys, selected.kind);
-    rows = rawLabels.map(k => ({ period: displayLabel(k, selected.kind), value: Number((values.get(k) || 0).toFixed(2)) }));
-    $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods, calculated in the browser from the published mapped layer.`;
     $('timeline-chart').setAttribute('aria-label', `${selected.label} across ${rows.length} periods`);
     $('timeline-chart-wrap').hidden = false;
     $('timeline-download').disabled = false;
     if (typeof Chart === 'undefined') return;
+    const isLine = selected.kind === 'month' || selected.kind === 'financial-year';
     graph = new Chart($('timeline-chart'), {
-      type: selected.kind === 'month' ? 'line' : 'bar',
+      type: isLine ? 'line' : 'bar',
       data: {
         labels: rows.map(r => r.period),
         datasets: [{
           label: selected.label,
           data: rows.map(row => row.value),
           borderColor: selected.colour,
-          backgroundColor: selected.kind === 'month' ? `${selected.colour}26` : selected.colour,
+          backgroundColor: isLine ? `${selected.colour}26` : selected.colour,
           borderWidth: 2,
           borderRadius: selected.kind === 'month' ? 0 : 5,
           fill: selected.kind === 'month',
           tension: .25,
-          pointRadius: selected.kind === 'month' ? 3 : 0,
+          pointRadius: isLine ? 4 : 0,
           maxBarThickness: 28
         }]
       },
@@ -147,7 +154,7 @@
         },
         scales: {
           x: { grid: { display: false }, ticks: { maxTicksLimit: 14, color: '#334155', font: { family: 'Arial', size: 10 } } },
-          y: { beginAtZero: true, grid: { color: '#E2E8F0' }, ticks: { color: '#334155', font: { family: 'Arial', size: 10 } } }
+          y: { beginAtZero: selected.kind !== 'financial-year', grid: { color: '#E2E8F0' }, ticks: { color: '#334155', font: { family: 'Arial', size: 10 } } }
         }
       },
     });

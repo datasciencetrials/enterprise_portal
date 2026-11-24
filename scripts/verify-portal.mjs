@@ -33,6 +33,7 @@ for (const page of pages) {
 const index = source('index.html');
 const studio = source('gis-studio.js');
 const explorer = source('data-explorer.js');
+const timeline = source('transport-timeline.js');
 const theme = source('apple-system.css');
 
 for (const token of ['data-mode="roads"', 'data-workspace-tab="catalogue"', 'data-workspace-tab="contents"', 'data-workspace-tab="details"', 'data-workspace-tab="basemaps"', 'data-map-tool="distance"', 'data-map-tool="area"']) {
@@ -52,6 +53,8 @@ check(!studio.includes('const condVals = unfiltered ?'), 'road condition chart m
 check(index.includes('FY 2025-26</dt><dd>21,302 km'), 'FY 2025-26 National Roads length is missing');
 check(index.includes('FY 2026-27</dt><dd>21,284 km'), 'FY 2026-27 National Roads length is missing');
 check(!index.includes('17.98 km below'), 'financial-year observations must not be described as a baseline shortfall');
+check(timeline.includes("id: 'network-length-fy'"), 'road financial-year time series is missing from the timeline control');
+check(timeline.includes("{ period: 'FY 2025-26', value: 21302 }") && timeline.includes("{ period: 'FY 2026-27', value: 21284 }"), 'road financial-year time series values are incorrect');
 
 for (const token of ['.transport-photos', 'footer {', 'background: #ffffff !important', 'font-family: Arial']) {
   check(theme.includes(token), `apple-system.css is missing light-theme safeguard ${token}`);
