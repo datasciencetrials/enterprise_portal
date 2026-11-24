@@ -38,6 +38,7 @@ check(!tracked.some(path => /\.(?:db|sqlite|sqlite3|sql)$/i.test(path)), 'databa
 for (const path of tracked.filter(path => /\.(?:html|js|json|css|md|py)$/i.test(path) && path !== 'scripts/verify-portal.mjs' && !path.startsWith('vendor/'))) {
   const content = source(path);
   check(!/G:\\|unified_mowt_transport_db|supabase|Unified SQL|Vision 2040/i.test(content), `${path} exposes a private database reference or unsupported projection claim`);
+  check(!/connected database currently has no governed public tables/i.test(content), `${path} contains the superseded public-database wording`);
 }
 
 const index = source('index.html');

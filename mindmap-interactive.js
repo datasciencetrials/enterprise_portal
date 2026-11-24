@@ -3,7 +3,7 @@
   const nodes = {
     root: {
       title: 'Published Mapped Exports',
-      summary: 'Static published layers feed the browser map, charts and schedules. The connected database currently has no governed public tables, so live data and automated refresh are not claimed.',
+      summary: 'Approved published snapshots feed the browser map, charts and schedules. A controlled weekly check compares them with the private governed source. Database and schema access are not available to the browser.',
       mode: null
     },
     roads: {
