@@ -26,7 +26,7 @@ for (const page of pages) {
   check(!/LIVE ANALYSIS/i.test(html), `${page} must not describe static mapped data as live`);
   check(!/[\u2013\u2014]/.test(html), `${page} contains a visible en dash or em dash`);
   check(!/NDP IV|UNRA/i.test(html), `${page} contains prohibited visible wording`);
-  check(!/Unified SQL|Weekly Sync|Vision 2040|Ministry of Works|\bMoWT\b/i.test(html), `${page} contains an unsupported database, projection, or official-product claim`);
+  check(!/Unified SQL|Weekly Sync|Vision 2040|Ministry|\bMoWT\b|\bDNR\b|\bDNE\b/i.test(html), `${page} contains an unsupported database, projection, or institutional identity claim`);
   check(/Data Science Trials/i.test(html), `${page} must identify the personal learning site`);
 }
 
