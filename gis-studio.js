@@ -556,7 +556,7 @@
     $('intro-note').textContent = key === 'roads'
       ? 'Approved published snapshots for a personal learning portal. Database and schema access are not available to the browser.'
       : transportModes[key].description;
-    $('network-time-series').hidden = key !== 'roads';
+    $('network-overview').hidden = key !== 'roads';
     $('intro-aside-title').textContent = key === 'roads' ? 'Interactive map and registers' : `${transportModes[key].title}: map & registers`;
     $('intro-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ roads: 'roads', bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
     $('intro-table-link').firstChild.textContent = `Open ${key === 'culverts' ? 'major culvert' : key} register `;
