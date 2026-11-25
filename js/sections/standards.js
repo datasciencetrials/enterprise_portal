@@ -81,8 +81,8 @@ RENDERERS.standards = async function(container){
         { title:'Traffic Counts (NTIS)', fields:['total_count', 'survey_year'] },
         { title:'Bridge Priority Index Algorithm', fields:['Condition + traffic → priority ranking'] },
     ]},
-    { stage:'Second derived layer', desc:'Forward-looking and risk models built on the derived layer', boxes:[
-        { title:'AADT Projection Model', fields:['Time-series traffic growth projected to 2040'] },
+    { stage:'Second derived layer', desc:'Risk summaries built from verified observations', boxes:[
+        { title:'Historical AADT Comparison', fields:['Source-reported traffic counts by survey year'] },
         { title:'Overloading Risk Engine', fields:['Weighbridge ESAL factors → pavement risk score'] },
     ]},
     { stage:'Terminal', desc:'Consolidated planning output', boxes:[

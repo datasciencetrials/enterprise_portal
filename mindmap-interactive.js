@@ -3,7 +3,7 @@
   const nodes = {
     root: {
       title: 'Published Mapped Exports',
-      summary: 'Approved published snapshots feed the browser map, charts and schedules. A controlled weekly check compares them with the Unified SQL Database. Database and schema access are not available to the browser.',
+      summary: 'Approved published snapshots feed the browser map, charts and schedules. A controlled weekly check compares them with the private governed source. Database and schema access are not available to the browser.',
       mode: null
     },
     roads: {
@@ -43,7 +43,7 @@
     },
     gaps: {
       title: 'Coverage and Data Gaps',
-      summary: 'National Road Network totals 21,284.02 km across 6 Regions and 23 Stations. Synchronised weekly from the Unified SQL Database.',
+      summary: 'National Roads length is reported as 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27. The current mapped layer totals 21,284.02 km.',
       mode: null
     }
   };
