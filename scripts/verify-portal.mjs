@@ -29,7 +29,7 @@ for (const page of ['index.html', 'data-explorer.html']) {
 }
 
 const redirect = source('gis-studio.html');
-check(/noindex/i.test(redirect) && /\.\/#explore/.test(redirect), 'legacy GIS workspace must redirect to the consolidated portal');
+check(/noindex/i.test(redirect) && /\.\/(?:\?deploy=[a-z0-9]+)?#explore/.test(redirect), 'legacy GIS workspace must redirect to the consolidated portal');
 
 const tracked = execFileSync('git', ['ls-files'], { encoding: 'utf8' }).split(/\r?\n/).filter(Boolean);
 check(!tracked.some(path => /(^|\/)supabase-migration(?:\/|$)/i.test(path)), 'obsolete Supabase migration material must not be published');
