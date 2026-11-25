@@ -82,10 +82,11 @@ function buildStructureView(cfg){
   const mapCard = el('div', { class: 'card card-pad' }, [
     el('h3', {}, 'Locations by condition'),
     el('span', { class: 'tiny-muted' }, fmtNum(plottedCount) + ' of ' + fmtNum(rows.length) + ' ' + caption + ' plotted at their recorded coordinates, coloured by condition.'),
-    el('div', { class: 'map-legend', style: 'display:flex;flex-wrap:wrap;gap:14px;margin:10px 0 12px;' },
-      condKeys.map(k => el('span', { style: 'display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--text-secondary);' }, [
-        el('span', { style: `width:10px;height:10px;border-radius:50%;background:${structConditionColor(k)};display:inline-block;` }),
-        k
+    el('div', { class: 'map-legend', style: 'display:flex;flex-wrap:wrap;gap:14px;margin:10px 0 12px;background:#FFFFFF;border:1px solid #E2E8F0;padding:10px 14px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05);' },
+      condKeys.map(k => el('span', { style: 'display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#0F172A;font-weight:600;' }, [
+        el('span', { style: `width:10px;height:10px;border-radius:50%;background:${structConditionColor(k)};display:inline-block;flex-shrink:0;` }),
+        el('strong', { style: 'color:#0F172A;' }, k),
+        el('span', { style: 'color:#64748B;font-weight:500;' }, ': ' + fmtNum(condCounts[k]) + ' (' + ((condCounts[k] / rows.length) * 100).toFixed(1) + '%)')
       ]))
     ),
     el('div', { class: 'map-shell', id: mapDivId })
