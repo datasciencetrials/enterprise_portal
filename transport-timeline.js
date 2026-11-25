@@ -2,6 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const format = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 });
+  const historical = window.TRANSPORT_TIME_SERIES_DATA || { roadFinancialYears: [], atcMonthly: [], trafficProjection: [] };
   const specs = {
     roads: [
       {
@@ -11,28 +12,13 @@
         kind: 'financial-year',
         colour: '#0071E3',
         method: 'Annual National Roads length reported in whole kilometres.',
-        series: [
-          { period: 'FY 2008-09', value: 10053 },
-          { period: 'FY 2009-10', value: 10430 },
-          { period: 'FY 2010-11', value: 20384 },
-          { period: 'FY 2011-12', value: 21000 },
-          { period: 'FY 2012-13', value: 21000 },
-          { period: 'FY 2013-14', value: 20544 },
-          { period: 'FY 2014-15', value: 20544 },
-          { period: 'FY 2015-16', value: 20544 },
-          { period: 'FY 2016-17', value: 20544 },
-          { period: 'FY 2017-18', value: 20544 },
-          { period: 'FY 2018-19', value: 20856 },
-          { period: 'FY 2019-20', value: 21010 },
-          { period: 'FY 2020-21', value: 21020 },
-          { period: 'FY 2021-22', value: 21120 },
-          { period: 'FY 2022-23', value: 21200 },
-          { period: 'FY 2023-24', value: 21288 },
-          { period: 'FY 2024-25', value: 21291 },
-          { period: 'FY 2025-26', value: 21302 },
-          { period: 'FY 2026-27', value: 21284 },
-        ],
+        series: historical.roadFinancialYears.map(row => ({ period: row.period, value: row.total })),
       },
+      { id: 'surface-length-fy', label: 'Paved and Unpaved length by financial year (km)', unit: 'km', kind: 'financial-year', method: 'Annual National Roads surface composition in kilometres.', seriesRows: historical.roadFinancialYears, datasets: [{ key: 'paved', label: 'Paved', colour: '#0E8A6A' }, { key: 'unpaved', label: 'Unpaved', colour: '#D97706' }] },
+      { id: 'surface-share-fy', label: 'Paved and Unpaved share by financial year (%)', unit: '%', kind: 'financial-year', method: 'Annual National Roads surface shares.', seriesRows: historical.roadFinancialYears, datasets: [{ key: 'pavedShare', label: 'Paved', colour: '#0E8A6A' }, { key: 'unpavedShare', label: 'Unpaved', colour: '#D97706' }] },
+      { id: 'network-change-fy', label: 'Annual network change (km)', unit: 'km', kind: 'financial-year', chartType: 'bar', colour: '#7C3AED', method: 'Annual change in reported National Roads length from the previous financial year.', series: historical.roadFinancialYears.filter(row => row.changeKm !== null).map(row => ({ period: row.period, value: row.changeKm })) },
+      { id: 'network-change-percent-fy', label: 'Annual network change (%)', unit: '%', kind: 'financial-year', chartType: 'bar', colour: '#C2415D', method: 'Annual percentage change in reported National Roads length from the previous financial year.', series: historical.roadFinancialYears.filter(row => row.changePercent !== null).map(row => ({ period: row.period, value: row.changePercent })) },
+      { id: 'network-density-fy', label: 'National Road Network density by financial year', unit: 'km per 1,000 km²', kind: 'financial-year', colour: '#1769AA', method: 'Annual National Road Network length per 1,000 square kilometres of land.', series: historical.roadFinancialYears.map(row => ({ period: row.period, value: row.totalDensity })) },
       { id: 'completed', label: 'Road completion cohort (km)', field: 'Completion Year', unit: 'km', kind: 'year', colour: '#0071E3', method: 'National Road Network physical length (km) grouped by completion year across the 21,284.02 km layer.' },
       { id: 'rehabilitated', label: 'Road rehabilitation cohort (km)', field: 'Rehabilitation Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'National Road Network physical length (km) grouped by most recent rehabilitation intervention year.' },
     ],
@@ -43,6 +29,11 @@
       { id: 'constructed', label: 'Major Culvert construction cohort (452 Culverts)', field: 'Year_Constructed', unit: 'major culverts', kind: 'year', colour: '#0891B2', method: 'National Bridge Management System (BMS) inventory of 452 Major Culverts grouped by year constructed.' },
     ],
     traffic: [
+      { id: 'atc-volume-monthly', label: 'Recorded ATC traffic by month', unit: 'vehicles', kind: 'month-series', method: 'Historical hourly vehicle observations aggregated by month. Coverage varies by active station and reporting period.', seriesRows: historical.atcMonthly, datasets: [{ key: 'vehicles', label: 'All vehicles', colour: '#1769AA' }, { key: 'light', label: 'Light vehicles', colour: '#0E8A6A' }, { key: 'heavy', label: 'Heavy vehicles', colour: '#D97706' }] },
+      { id: 'atc-speed-monthly', label: 'Recorded ATC speed by month (km/h)', unit: 'km/h', kind: 'month-series', method: 'Historical flow-weighted directional speed observations aggregated by month.', seriesRows: historical.atcMonthly, datasets: [{ key: 'averageSpeed', label: 'Average speed', colour: '#1769AA' }, { key: 'weightedP85Speed', label: 'Flow-weighted recorded 85th percentile speed', colour: '#C2415D' }] },
+      { id: 'atc-coverage-monthly', label: 'ATC reporting coverage by month', unit: 'count', kind: 'month-series', method: 'Historical monthly reporting coverage. Counts show active stations and calendar days with at least one recorded observation.', seriesRows: historical.atcMonthly, datasets: [{ key: 'activeSites', label: 'Active stations', colour: '#7C3AED' }, { key: 'reportingDays', label: 'Reporting days', colour: '#0E8A6A' }] },
+      { id: 'atc-records-monthly', label: 'ATC hourly records by month', unit: 'hourly records', kind: 'month-series', chartType: 'bar', colour: '#0891B2', method: 'Count of historical hourly ATC records available in each month.', series: historical.atcMonthly.map(row => ({ period: row.period, value: row.hourlyRows })) },
+      { id: 'aadt-modelled', label: 'Modelled length-weighted AADT, 2016-2035', unit: 'vehicles/day', kind: 'year-series', colour: '#7C3AED', method: 'Modelled length-weighted AADT series. Values are projections and are not live traffic observations.', series: historical.trafficProjection },
       { id: 'survey-year', label: 'Traffic station telemetry cohort', field: 'Survey_Year', unit: 'stations', kind: 'year', colour: '#D97706', method: 'National Traffic Census stations (298) grouped by baseline telemetry calibration year.' },
     ],
     ferries: [
@@ -68,6 +59,7 @@
   let graph = null;
   let rows = [];
   let selected = null;
+  let renderedDatasets = [];
 
   function year(value) {
     const number = Number(value);
@@ -126,11 +118,17 @@
   function render() {
     graph?.destroy(); graph = null;
     rows = [];
+    renderedDatasets = [];
     selected = (specs[activeMode] || []).find(spec => spec.id === $('timeline-metric').value) || (specs[activeMode] || [])[0];
     if (!selected) return;
-    if (Array.isArray(selected.series)) {
+    if (Array.isArray(selected.seriesRows) && Array.isArray(selected.datasets)) {
+      rows = selected.seriesRows.map(row => ({ ...row }));
+      renderedDatasets = selected.datasets.map(dataset => ({ ...dataset, unit: dataset.unit || selected.unit }));
+      $('timeline-note').textContent = `${selected.method} All ${rows.length} periods from ${rows[0].period} to ${rows.at(-1).period} are shown.`;
+    } else if (Array.isArray(selected.series)) {
       rows = selected.series.map(row => ({ period: row.period, value: row.value }));
-      $('timeline-note').textContent = `${selected.method} All ${rows.length} annual observations from ${rows[0].period} to ${rows.at(-1).period} are shown.`;
+      renderedDatasets = [{ key: 'value', label: selected.label, colour: selected.colour, unit: selected.unit }];
+      $('timeline-note').textContent = `${selected.method} All ${rows.length} periods from ${rows[0].period} to ${rows.at(-1).period} are shown.`;
     } else {
       const values = new Map();
       let totalMeasure = 0;
@@ -148,41 +146,45 @@
       }
       const rawLabels = completeLabels(keys, selected.kind);
       rows = rawLabels.map(k => ({ period: displayLabel(k, selected.kind), value: Number((values.get(k) || 0).toFixed(2)) }));
+      renderedDatasets = [{ key: 'value', label: selected.label, colour: selected.colour, unit: selected.unit }];
       $('timeline-note').textContent = `${selected.method} Total coverage: ${format.format(totalMeasure)} ${selected.unit} across ${rows.length} periods, calculated in the browser from the approved published snapshot.`;
     }
     $('timeline-chart').setAttribute('aria-label', `${selected.label} across ${rows.length} periods`);
     $('timeline-chart-wrap').hidden = false;
     $('timeline-download').disabled = false;
     if (typeof Chart === 'undefined') return;
-    const isLine = selected.kind === 'month' || selected.kind === 'financial-year';
+    const isTimeSeries = ['month', 'financial-year', 'month-series', 'year-series'].includes(selected.kind);
+    const chartType = selected.chartType || (isTimeSeries ? 'line' : 'bar');
     graph = new Chart($('timeline-chart'), {
-      type: isLine ? 'line' : 'bar',
+      type: chartType,
       data: {
         labels: rows.map(r => r.period),
-        datasets: [{
-          label: selected.label,
-          data: rows.map(row => row.value),
-          borderColor: selected.colour,
-          backgroundColor: isLine ? `${selected.colour}26` : selected.colour,
+        datasets: renderedDatasets.map(dataset => ({
+          label: dataset.label,
+          data: rows.map(row => row[dataset.key]),
+          borderColor: dataset.colour,
+          backgroundColor: chartType === 'line' ? `${dataset.colour}1F` : dataset.colour,
           borderWidth: 2,
-          borderRadius: selected.kind === 'month' ? 0 : 5,
-          fill: selected.kind === 'month',
+          borderRadius: chartType === 'line' ? 0 : 5,
+          fill: false,
           tension: .25,
-          pointRadius: isLine ? 4 : 0,
-          maxBarThickness: 28
-        }]
+          pointRadius: chartType === 'line' ? 3 : 0,
+          pointHoverRadius: chartType === 'line' ? 5 : 0,
+          maxBarThickness: 28,
+          unit: dataset.unit,
+        }))
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         animation: false,
         plugins: {
-          legend: { display: false },
-          tooltip: { backgroundColor: '#FFFFFF', titleColor: '#0F172A', bodyColor: '#334155', borderColor: '#E2E8F0', borderWidth: 1, padding: 10, cornerRadius: 8, callbacks: { label: context => `${format.format(context.parsed.y)} ${selected.unit}` } }
+          legend: { display: renderedDatasets.length > 1, position: 'bottom', labels: { color: '#334155', usePointStyle: true, boxWidth: 9, font: { family: 'Arial', size: 11 } } },
+          tooltip: { backgroundColor: '#FFFFFF', titleColor: '#0F172A', bodyColor: '#334155', borderColor: '#E2E8F0', borderWidth: 1, padding: 10, cornerRadius: 8, callbacks: { label: context => `${context.dataset.label}: ${format.format(context.parsed.y)} ${context.dataset.unit}` } }
         },
         scales: {
           x: { grid: { display: false }, ticks: { maxTicksLimit: 14, color: '#334155', font: { family: 'Arial', size: 10 } } },
-          y: { beginAtZero: selected.kind !== 'financial-year', grid: { color: '#E2E8F0' }, ticks: { color: '#334155', font: { family: 'Arial', size: 10 } } }
+          y: { beginAtZero: !['network-length-fy', 'network-density-fy', 'aadt-modelled'].includes(selected.id), max: selected.id === 'surface-share-fy' ? 100 : undefined, grid: { color: '#E2E8F0' }, ticks: { color: '#334155', font: { family: 'Arial', size: 10 } } }
         }
       },
     });
@@ -192,7 +194,7 @@
     activeMode = mode;
     activeItems = [];
     const choices = specs[mode] || [];
-    $('timeline-title').textContent = mode === 'roads' ? 'National Road Network time series' : 'Temporal distribution for this transport layer';
+    $('timeline-title').textContent = mode === 'roads' ? 'National Road Network time series' : mode === 'traffic' ? 'Traffic time series' : 'Temporal distribution for this transport layer';
     $('timeline-metric').replaceChildren(...choices.map(spec => new Option(spec.label, spec.id)));
     $('timeline-metric').disabled = !choices.length;
     graph?.destroy(); graph = null;
@@ -208,7 +210,10 @@
   $('timeline-metric').addEventListener('change', render);
   $('timeline-download').addEventListener('click', () => {
     if (!selected || !rows.length) return;
-    const lines = [['Period', selected.unit, 'Series', 'Methodology'], ...rows.map(row => [row.period, row.value, selected.label, selected.method])];
+    const lines = [
+      ['Period', ...renderedDatasets.map(dataset => `${dataset.label} (${dataset.unit})`), 'Methodology'],
+      ...rows.map(row => [row.period, ...renderedDatasets.map(dataset => row[dataset.key]), selected.method]),
+    ];
     const blob = new Blob(['\uFEFF', lines.map(row => row.map(csvCell).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a'); link.href = url; link.download = `data-science-trials-${activeMode}-${selected.id}-series.csv`; link.click();

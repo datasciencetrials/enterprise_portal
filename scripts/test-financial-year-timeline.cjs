@@ -50,6 +50,7 @@ const context = {
   },
 };
 
+vm.runInNewContext(fs.readFileSync('transport-timeseries-data.js', 'utf8'), context);
 vm.runInNewContext(fs.readFileSync('transport-timeline.js', 'utf8'), context);
 listeners.get('transportdataready')({ detail: { mode: 'roads', items: [] } });
 
@@ -59,6 +60,17 @@ const expectedLabels = ['FY 2008-09','FY 2009-10','FY 2010-11','FY 2011-12','FY 
 const expectedValues = [10053,10430,20384,21000,21000,20544,20544,20544,20544,20544,20856,21010,21020,21120,21200,21288,21291,21302,21284];
 if (chartConfig.data.labels.join('|') !== expectedLabels.join('|')) throw new Error('Complete financial-year chart labels are incorrect');
 if (chartConfig.data.datasets[0].data.join('|') !== expectedValues.join('|')) throw new Error('Complete financial-year chart values are incorrect');
-if (!element('timeline-note').textContent.includes('All 19 annual observations')) throw new Error('Complete financial-year interpretation note is missing');
+if (!element('timeline-note').textContent.includes('All 19 periods')) throw new Error('Complete financial-year interpretation note is missing');
+
+element('timeline-metric').value = 'surface-length-fy';
+element('timeline-metric').children.find(child => child.value === 'surface-length-fy');
+listeners.get('transportdataready')({ detail: { mode: 'roads', items: [] } });
+if (chartConfig.data.datasets.length !== 2) throw new Error('Surface time series must show Paved and Unpaved datasets');
+if (chartConfig.data.datasets[0].data.length !== 19 || chartConfig.data.datasets[1].data.length !== 19) throw new Error('Surface time series must include all 19 periods');
+
+listeners.get('transportmodechange')({ detail: { mode: 'traffic' } });
+listeners.get('transportdataready')({ detail: { mode: 'traffic', items: [] } });
+if (element('timeline-title').textContent !== 'Traffic time series') throw new Error('Traffic time-series title is missing');
+if (chartConfig.data.labels.length !== 8 || chartConfig.data.datasets.length !== 3) throw new Error('Recorded ATC monthly volume series is incomplete');
 
 console.log('Financial-year timeline test passed');

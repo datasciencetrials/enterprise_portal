@@ -44,6 +44,7 @@ const index = source('index.html');
 const studio = source('gis-studio.js');
 const explorer = source('data-explorer.js');
 const timeline = source('transport-timeline.js');
+const timelineData = source('transport-timeseries-data.js');
 const theme = source('apple-system.css');
 
 for (const token of ['data-mode="roads"', 'data-workspace-tab="catalogue"', 'data-workspace-tab="contents"', 'data-workspace-tab="details"', 'data-workspace-tab="basemaps"', 'data-map-tool="distance"', 'data-map-tool="area"']) {
@@ -62,8 +63,13 @@ check(explorer.includes("if (linkIdKeys.has(key)) return value.includes('_') ? v
 check(!index.includes('FY 2025-26</dt>') && !index.includes('FY 2026-27</dt>'), 'individual financial-year cards must not be shown');
 check(!index.includes('17.98 km below'), 'financial-year observations must not be described as a baseline shortfall');
 check(timeline.includes("id: 'network-length-fy'"), 'road financial-year time series is missing');
-check(timeline.includes("{ period: 'FY 2008-09', value: 10053 }") && timeline.includes("{ period: 'FY 2026-27', value: 21284 }"), 'complete road financial-year range is missing');
-check((timeline.match(/period: 'FY \d{4}-\d{2}'/g) || []).length === 19, 'road financial-year time series must contain all 19 annual observations');
+check(timelineData.includes("period: 'FY 2008-09'") && timelineData.includes("period: 'FY 2026-27'"), 'complete road financial-year range is missing');
+check((timelineData.match(/period: 'FY \d{4}-\d{2}'/g) || []).length === 19, 'road financial-year time series must contain all 19 annual observations');
+check(timeline.includes("id: 'surface-length-fy'") && timeline.includes("id: 'surface-share-fy'") && timeline.includes("id: 'network-change-fy'") && timeline.includes("id: 'network-density-fy'"), 'expanded road and surface time series are missing');
+check(timeline.includes("id: 'atc-volume-monthly'") && timeline.includes("id: 'atc-speed-monthly'") && timeline.includes("id: 'atc-coverage-monthly'") && timeline.includes("id: 'aadt-modelled'"), 'expanded traffic time series are missing');
+check((timelineData.match(/period: '\d{2}\/\d{4}'/g) || []).length === 8, 'recorded ATC monthly time series must contain all 8 periods');
+check((timelineData.match(/period: '\d{4}', value:/g) || []).length === 20, 'modelled AADT series must contain all 20 years');
+check(index.indexOf('transport-timeseries-data.js') < index.indexOf('transport-timeline.js'), 'time-series data must load before the timeline controller');
 
 for (const token of ['.transport-photos', 'footer {', 'background: #ffffff !important', 'font-family: Arial']) {
   check(theme.includes(token), `apple-system.css is missing light-theme safeguard ${token}`);
