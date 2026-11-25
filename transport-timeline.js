@@ -4,7 +4,35 @@
   const format = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 });
   const specs = {
     roads: [
-      { id: 'network-length-fy', label: 'National Roads length by financial year (km)', unit: 'km', kind: 'financial-year', colour: '#0071E3', method: 'Annual National Roads length reported in whole kilometres.', series: [{ period: 'FY 2025-26', value: 21302 }, { period: 'FY 2026-27', value: 21284 }] },
+      {
+        id: 'network-length-fy',
+        label: 'National Roads length by financial year (km)',
+        unit: 'km',
+        kind: 'financial-year',
+        colour: '#0071E3',
+        method: 'Annual National Roads length reported in whole kilometres.',
+        series: [
+          { period: 'FY 2008-09', value: 10053 },
+          { period: 'FY 2009-10', value: 10430 },
+          { period: 'FY 2010-11', value: 20384 },
+          { period: 'FY 2011-12', value: 21000 },
+          { period: 'FY 2012-13', value: 21000 },
+          { period: 'FY 2013-14', value: 20544 },
+          { period: 'FY 2014-15', value: 20544 },
+          { period: 'FY 2015-16', value: 20544 },
+          { period: 'FY 2016-17', value: 20544 },
+          { period: 'FY 2017-18', value: 20544 },
+          { period: 'FY 2018-19', value: 20856 },
+          { period: 'FY 2019-20', value: 21010 },
+          { period: 'FY 2020-21', value: 21020 },
+          { period: 'FY 2021-22', value: 21120 },
+          { period: 'FY 2022-23', value: 21200 },
+          { period: 'FY 2023-24', value: 21288 },
+          { period: 'FY 2024-25', value: 21291 },
+          { period: 'FY 2025-26', value: 21302 },
+          { period: 'FY 2026-27', value: 21284 },
+        ],
+      },
       { id: 'completed', label: 'Road completion cohort (km)', field: 'Completion Year', unit: 'km', kind: 'year', colour: '#0071E3', method: 'National Road Network physical length (km) grouped by completion year across the 21,284.02 km layer.' },
       { id: 'rehabilitated', label: 'Road rehabilitation cohort (km)', field: 'Rehabilitation Year', unit: 'km', kind: 'year', colour: '#16A34A', method: 'National Road Network physical length (km) grouped by most recent rehabilitation intervention year.' },
     ],
@@ -102,7 +130,7 @@
     if (!selected) return;
     if (Array.isArray(selected.series)) {
       rows = selected.series.map(row => ({ period: row.period, value: row.value }));
-      $('timeline-note').textContent = `${selected.method} FY 2025-26: 21,302 km. FY 2026-27: 21,284 km. These are separate annual observations, not a baseline shortfall or cumulative total.`;
+      $('timeline-note').textContent = `${selected.method} All ${rows.length} annual observations from ${rows[0].period} to ${rows.at(-1).period} are shown.`;
     } else {
       const values = new Map();
       let totalMeasure = 0;
@@ -164,6 +192,7 @@
     activeMode = mode;
     activeItems = [];
     const choices = specs[mode] || [];
+    $('timeline-title').textContent = mode === 'roads' ? 'National Road Network time series' : 'Temporal distribution for this transport layer';
     $('timeline-metric').replaceChildren(...choices.map(spec => new Option(spec.label, spec.id)));
     $('timeline-metric').disabled = !choices.length;
     graph?.destroy(); graph = null;

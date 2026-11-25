@@ -59,11 +59,11 @@ check(!explorer.includes('properties?.('), 'data-explorer.js contains the broken
 check(!studio.includes('visible.length)} of ${format.format(features.length'), 'road summary must report kilometres, not record counts');
 check(studio.includes("const linkId = raw => typeof raw === 'string' && raw.includes('_') ? raw : 'Link ID not verified'"), 'map Link ID formatter is missing');
 check(explorer.includes("if (linkIdKeys.has(key)) return value.includes('_') ? value : 'Link ID not verified'"), 'table Link ID formatter is missing');
-check(index.includes('FY 2025-26</dt><dd>21,302 km'), 'FY 2025-26 National Roads length is missing');
-check(index.includes('FY 2026-27</dt><dd>21,284 km'), 'FY 2026-27 National Roads length is missing');
+check(!index.includes('FY 2025-26</dt>') && !index.includes('FY 2026-27</dt>'), 'individual financial-year cards must not be shown');
 check(!index.includes('17.98 km below'), 'financial-year observations must not be described as a baseline shortfall');
 check(timeline.includes("id: 'network-length-fy'"), 'road financial-year time series is missing');
-check(timeline.includes("{ period: 'FY 2025-26', value: 21302 }") && timeline.includes("{ period: 'FY 2026-27', value: 21284 }"), 'road financial-year values are incorrect');
+check(timeline.includes("{ period: 'FY 2008-09', value: 10053 }") && timeline.includes("{ period: 'FY 2026-27', value: 21284 }"), 'complete road financial-year range is missing');
+check((timeline.match(/period: 'FY \d{4}-\d{2}'/g) || []).length === 19, 'road financial-year time series must contain all 19 annual observations');
 
 for (const token of ['.transport-photos', 'footer {', 'background: #ffffff !important', 'font-family: Arial']) {
   check(theme.includes(token), `apple-system.css is missing light-theme safeguard ${token}`);
