@@ -552,10 +552,11 @@
   function updateIntro(key) {
     const heading = $('page-title');
     heading.textContent = tabHeadings[key];
-    $('intro-kicker').textContent = `NATIONAL TRANSPORT GIS ENTERPRISE / ${key === 'culverts' ? 'MAJOR CULVERTS' : key.toUpperCase()}`;
+    $('intro-kicker').textContent = `National Transport GIS Enterprise / ${key === 'culverts' ? 'Major Culverts' : key.charAt(0).toUpperCase() + key.slice(1)}`;
     $('intro-note').textContent = key === 'roads'
-      ? 'The annual National Roads length series reports 21,302 km for FY 2025-26 and 21,284 km for FY 2026-27. The current mapped layer totals 21,284.02 km. Approved snapshots are checked weekly against a private governed source; database and schema access are not available to the browser.'
+      ? 'Approved published snapshots for a personal learning portal. Database and schema access are not available to the browser.'
       : transportModes[key].description;
+    $('network-time-series').hidden = key !== 'roads';
     $('intro-aside-title').textContent = key === 'roads' ? 'Interactive map and registers' : `${transportModes[key].title}: map & registers`;
     $('intro-table-link').href = `./data-explorer.html?dataset=${encodeURIComponent(({ roads: 'roads', bridges: 'bridges', culverts: 'culverts', traffic: 'stations', ferries: 'ferries', aviation: 'aviation', safety: 'safety', freight: 'freight', rail: 'mgr' })[key])}`;
     $('intro-table-link').firstChild.textContent = `Open ${key === 'culverts' ? 'major culvert' : key} register `;
